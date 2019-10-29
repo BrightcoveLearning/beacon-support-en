@@ -167,7 +167,7 @@ tr.head>th {
 
 .footer .row {
   padding-bottom: 1em;
-  align-content: space-between;
+  align-content: space-evenly;
   width: 100%;
 }
 
@@ -180,6 +180,12 @@ tr.head>th {
   color: #ffffff;
   text-align: center;
   width: 100%;
+}
+
+.footer-menu {
+  display: inline-block;
+  margin-right: 2em;
+  margin-left: 2em;
 }
 
 .footer a, .bcls-footer a {

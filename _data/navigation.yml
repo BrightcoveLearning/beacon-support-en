@@ -4,6 +4,10 @@
   docs:
     - name: Get Started Home
       url: /get-started/
+    - name: Learning Guide
+      url: /get-started/learning-guide-bc-beacon.html
+    - name: Implementation Phases
+      url: /get-started/implementation-phases.html
 - section: Video Cloud Sync
   docs:
     - name: Video Cloud Sync Home

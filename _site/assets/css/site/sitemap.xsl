@@ -41,7 +41,7 @@
               
                 <li><a href="/admin-console"></a></li>
               
-                <li><a href="/admin-console">references</a></li>
+                <li><a href="/admin-console">References</a></li>
               
                 <li><a href="/admin-console">Submitting Apps</a></li>
               
@@ -58,7 +58,7 @@
               
                 <li><a href="/get-started/"></a></li>
               
-                <li><a href="/get-started/">references</a></li>
+                <li><a href="/get-started/">References</a></li>
               
                 <li><a href="/get-started/">Submitting Apps</a></li>
               
@@ -75,7 +75,7 @@
               
                 <li><a href=""></a></li>
               
-                <li><a href="">references</a></li>
+                <li><a href="">References</a></li>
               
                 <li><a href="">Submitting Apps</a></li>
               
@@ -83,7 +83,7 @@
               
             </ul>
       
-          <h5 class="submenu-header">references</h5>
+          <h5 class="submenu-header">References</h5>
             <ul class="sidenav-submenu">
               
                 <li><a href="">Admin Console</a></li>
@@ -92,7 +92,7 @@
               
                 <li><a href=""></a></li>
               
-                <li><a href="">references</a></li>
+                <li><a href="">References</a></li>
               
                 <li><a href="">Submitting Apps</a></li>
               
@@ -109,7 +109,7 @@
               
                 <li><a href=""></a></li>
               
-                <li><a href="">references</a></li>
+                <li><a href="">References</a></li>
               
                 <li><a href="">Submitting Apps</a></li>
               
@@ -126,7 +126,7 @@
               
                 <li><a href="/video-cloud-sync/"></a></li>
               
-                <li><a href="/video-cloud-sync/">references</a></li>
+                <li><a href="/video-cloud-sync/">References</a></li>
               
                 <li><a href="/video-cloud-sync/">Submitting Apps</a></li>
               
@@ -461,7 +461,7 @@ URL
 
 <hr>
 <div style="text-align: center;font-size: smaller;">
-  Page last updated on 2019-10-30 13:05:10 -0400
+  Page last updated on 2019-10-30 15:26:19 -0400
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

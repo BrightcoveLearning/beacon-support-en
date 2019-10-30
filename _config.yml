@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: TODO Your Title Here
+title: Brightcove Beacon Documentation
 email: training@brightcove.com
 description: >- # this means to ignore newlines until "baseurl:"
   TODO Your Description here
@@ -37,6 +37,15 @@ defaults:
       type: "pages"
     values:
       layout: "page"
+# you should have a collection corresponding to each folder of docs
+collections:
+  getting_started:
+    output: true
+    title: Getting Started
+    path: /get-started/
+    pages:
+      home:
+        filename: index.html
 
 # Exclude from processing.
 # The following items will not be processed, by default.

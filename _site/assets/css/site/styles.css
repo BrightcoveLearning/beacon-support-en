@@ -328,6 +328,9 @@ figcaption {
   .list-none {
       list-style-type: none;
   }
+  .list-none li {
+      margin-left: -1em;
+  }
   /**** general element styles and classes *********= */
   img {
       margin-top: 1rem;
@@ -648,7 +651,7 @@ footer nav li {
 
 <hr>
 <div style="text-align: center;font-size: smaller;">
-  Page last updated on 2019-10-30 08:46:18 -0400
+  Page last updated on 2019-10-30 10:58:22 -0400
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

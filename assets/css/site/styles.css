@@ -281,6 +281,9 @@ figcaption {
   .list-none {
       list-style-type: none;
   }
+  .list-none li {
+      margin-left: -1em;
+  }
   /**** general element styles and classes *********= */
   img {
       margin-top: 1rem;

@@ -1,0 +1,729 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/site/styles.css">
+  <link rel="stylesheet" href="/assets/css/site/prism.css">
+  <script src="https://kit.fontawesome.com/9e0492656a.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <a href="/"><img class="image-logo" src="/assets/images/site/bc-logo.png" alt="Brightcove Logo"></a><p class="secondary-nav"><a href="https://support.brightcove.com/contact-support">Contact Support</a> | <a href="https://status.brightcove.com/">System Status</a></p>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="/assets/images/site/product-logos/beacon-logo-ondark.png" alt="product logo"></a>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+      
+      <li class="breadcrumb-item active" aria-current="page"></li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <nav class="sidenav">
+        
+          
+          <h5><a href="/">Home</a></h5>
+        
+      
+          
+          <h5><a href="/release-notes/product-updates.html">Release Notes</a></h5>
+        
+      
+          
+          <h5><a href="/known-issues/known-issues.html">Known Issues</a></h5>
+        
+      
+    </nav>
+  </div>
+  <div class="col-sm-9">
+<!-- bootstrap layout -->
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+/* site styles */
+body {
+  font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+
+/**** color classes ********* */
+
+.bcl-white {
+  color: #ffffff
+}
+
+.bcl-green {
+  color: #9eb84e
+}
+
+.bcl-green-back {
+  background-color: #9eb84e
+}
+
+.bcl-teal {
+  color: #64aab2
+}
+
+.bcl-teal-back {
+  background-color: #D0E0E3
+}
+
+.bcl-orange {
+  color: #f3951d
+}
+
+.bcl-orange-back {
+  background-color: #f3951d
+}
+
+.bcl-red {
+  color: #cc0000
+}
+
+.bcl-red-back {
+  background-color: #F4CCCC
+}
+
+
+.bcl-highlight,
+.bcls-highlight {
+  background-color: #FFFF00;
+}
+
+
+/*buttons*/
+
+button.bcls-button,
+.BCL-btn,
+.BCLbutton,
+span.bcls-button,
+.bcls-button {
+  padding: 5px;
+  margin: 10px !important;
+  border-radius: 5px !important;
+  background-color: #333333 !important;
+  white-space: nowrap;
+  font-size: small;
+  font-weight: bold;
+  color: #FFFFFF !important;
+  cursor: pointer;
+}
+
+p span.bcls-button {
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #333333;
+  white-space: nowrap;
+  font-size: small;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+input.gsc-search-button.gsc-search-button-v2 {
+  background-image: url(http://docs.brightcove.com/en/images/search_box_icon.png) !important;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: #666;
+}
+
+h2#expanderHead:before {
+  content: '+';
+  font-size: .6em;
+  width: .7em;
+  height: .5em;
+  padding-bottom: .2em;
+  padding-left: .35em;
+  padding-right: .35em;
+  padding-top: 0;
+  margin-left: -1.5em;
+  margin-right: .5em;
+  color: #FFF;
+  background-color: #DD712E;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+h2#expanderHead.changed:before {
+  content: '-';
+  font-size: .7em;
+  width: .7em;
+  height: .4em;
+  padding-bottom: .2em;
+  padding-left: .4em;
+  padding-right: .4em;
+  padding-top: 0;
+  margin-left: -1.5em;
+  margin-right: .5em;
+  color: #FFF;
+  background-color: #DD712E;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+
+
+/*show/hide*/
+
+.bcls-show {
+  left: 0
+}
+
+.bcls-hide {
+  left: -9999px
+}
+
+.inline {
+  display: inline
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block
+}
+
+/* .side-nav li>a {
+  font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  padding: 3px;
+  max-width: 150px;
+  overflow: hidden;
+} */
+
+th.head,
+tr.head>th {
+  background-color: #666666;
+  color: #f5f5f5;
+}
+
+
+/* footer */
+
+.footer .row {
+  padding-bottom: 1em;
+  align-content: space-evenly;
+  width: 100%;
+}
+
+.footer, .bcls-footer {
+  background-color: #626365;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  line-height: 1.7rem;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-menu {
+  display: inline-block;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+
+.footer a, .bcls-footer a {
+  color: #ffffff;
+}
+.field--item {
+  font-size: smaller;
+}
+ul.menu {
+  margin-left: -1em;
+}
+
+.bcls-copyright, .gf-links-cols {
+  display: inline-block;
+}
+img {
+  margin-top: 1em;
+  margin-bottom: 1rem;
+  border: 1px #cccccc solid;
+}
+.no-border {
+  border: none;
+}
+figcaption {
+  font-size: .7em;
+}
+
+
+@media only screen and (min-width: 64.063em) {
+  /* .sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+  } */
+  table.profile-data th,
+  table.profile-data td {
+      font-size: .9em !important;
+      text-align: center;
+  }
+  /* content styles */
+  .notes>p {
+      padding-top: 100px;
+      margin-top: -90px;
+  }
+  .section table {
+      margin-top: 40px
+  }
+  .wide-table th,
+  .wide-table td {
+      font-size: .75rem
+  }
+  /***** specific to docs home page ******/
+  /**** content wrapper ********* */
+  .section {
+      clear: both
+  }
+  .subsection {
+      margin-left: 10%;
+  }
+  /**** show/hide & inline ****/
+  .height-zero {
+      height: 0;
+      max-height: 0;
+      margin-left: -9999px;
+  }
+  .height-auto {
+      height: auto;
+      max-height: auto;
+      margin-left: auto;
+  }
+  .bcls-show {
+      left: 0;
+  }
+  .bcls-hide {
+      left: -9999px;
+  }
+  .inline {
+      display: inline
+  }
+  .inline-block {
+      display: inline-block;
+  }
+  .display-none {
+      display: none;
+  }
+  .display-block {
+      display: block;
+  }
+  .display-unset {
+      display: auto;
+  }
+  /* for list without bullets */
+  .list-none {
+      list-style-type: none;
+  }
+  /**** general element styles and classes *********= */
+  img {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border: 1px #cccccc solid;
+  }
+  .no-border {
+      border: none;
+  }
+  figcaption {
+      font-size: .7em;
+  }
+  video,
+  object,
+  div.video-js {
+      margin-bottom: 1rem
+  }
+  ol.integer {
+      list-style-type: none;
+      counter-reset: li;
+  }
+  ol.integer>li::before {
+      content: counter(li);
+      counter-increment: li;
+      margin-right: .7em;
+      font-weight: bold;
+  }
+  pre,
+  code,
+  .code-area {
+      font-family: Hack, source-code-pro, Menlo, monospace
+  }
+  pre {
+      background-color: #F1EFEE;
+      font-size: .8em;
+      margin-bottom: 1.3rem;
+      padding: .5rem;
+      padding-left: 1rem;
+      margin-top: 1rem;
+      border-left: 5px solid rgb(99, 99, 99);
+      -webkit-box-shadow: 5px 5px 10px rgba(192, 192, 192, 1.000);
+      -moz-box-shadow: 5px 5px 10px rgba(192, 192, 192, 1.000);
+      box-shadow: 5px 5px 10px rgba(192, 192, 192, 1.000);
+  }
+  code {
+      color: #AF4020;
+      background-color: #F1EFEE;
+      font-weight: bold;
+      border: none;
+  }
+  pre>code {
+      font-weight: normal;
+  }
+  .BCL-aside code {
+      background-color: #DFDFDF
+  }
+  a code {
+      text-decoration: underline;
+      font-weight: bold;
+  }
+  dd {
+      margin-left: 2rem
+  }
+  .code-area {
+      /*border: #666666 1px solid;*/
+      background-color: #F5F5F5;
+      border-radius: 5px;
+      font-size: .9rem;
+      margin-bottom: 1rem;
+      padding: 5px;
+      width: 100%;
+      min-width: 20rem;
+  }
+  fieldset {
+      border-radius: 5px;
+      border: 1px rgb(39, 138, 152) solid;
+  }
+  select[multiple] {
+      min-height: 200px
+  }
+  table {
+      /* max-width: 90%; */
+      font-size: .875rem;
+  }
+  td,
+  td ul li,
+  td ol li,
+  td p {
+      font-size: .875rem
+  }
+  caption {
+      font-weight: bold;
+      text-align: left;
+  }
+  th.once-green-back {
+      text-align: center
+  }
+  td.subhead {
+      background-color: rgb(230, 235, 235)
+  }
+  a:hover {
+      text-decoration: underline
+  }
+  /* FAQ Styles */
+  .bcls-question {
+      color: #2346b7;
+      cursor: pointer;
+      font-size: 1em;
+  }
+  .bcls-question:hover {
+      text-decoration: underline;
+  }
+  .bcls-answer {
+      display: none;
+  }
+  /**** bcl doc styles **********= */
+  .smaller {
+      font-size: .7em
+  }
+  .text-warning,
+  .alert-warning,
+  .BCL-aside,
+  .BCL_aside {
+      background-color: #F1EFEE;
+      border-radius: .5em;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      padding-left: 1em;
+      padding-right: 1em;
+  }
+  .text-info {
+      padding: 5px;
+      border: 1px #3A87AD solid;
+      border-radius: 5px;
+  }
+  .text-error {
+      padding: 5px;
+      border: 1px #BB4945 solid;
+      border-radius: 5px;
+  }
+  .bcls-float-left {
+      float: left;
+      clear: left !important;
+  }
+  .bcls-float-right {
+      float: right
+  }
+  .bcl-left {
+      text-align: left
+  }
+  .bcl-right {
+      text-align: right
+  }
+  .bcl-center {
+      text-align: center
+  }
+  /**
+   * iframe for spapi samples
+   */
+  .bcls-iframe {
+      background-color: #F5F5F5;
+      width: 100%;
+      border: 1px #999 solid;
+      border-radius: 10px;
+      margin: 0;
+      padding: 10px;
+  }
+  /*for codepens embedded as iframes*/
+  #result-iframe {
+      border: 1px solid #CCCCCC;
+  }
+
+  #expanderHead {
+      text-decoration: underline;
+      cursor: pointer;
+  }
+  #expanderSign {
+      color: #333333;
+      text-decoration: none;
+  }
+  .gist .line-data {
+      line-height: 1.4
+  }
+}
+
+
+/* Jekyll layout styles */
+.div-header {
+  background-color: rgb(39, 138, 152);
+  clear: both;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  /* padding: .4rem; */
+}
+
+.product-logo {
+  border: none;
+  margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.secondary-nav {
+  text-align; center;
+  margin-left: 40%;
+  font-size: smaller;
+}
+
+.bcls-active {
+  color: white;
+  background-color: #333;
+}
+
+.image-header {
+  width: 100%;
+}
+
+.image-logo {
+  float: left;
+  border: none;
+  margin-left: 1em;
+}
+
+.sidenav {
+  overflow-y: scroll;
+  font-size: smaller;
+}
+
+.sidenav h5 {
+  font-size: 1rem;
+  padding: 2px;
+}
+
+.sidenav h5.submenu-header {
+color: rgb(14, 129, 255)}
+
+.sidenav h5.submenu-header::after {
+  content: ' +';
+  font-weight: bold;
+  color: rgb(14, 129, 255);
+}
+
+.sidenav ul {
+  list-style: none;
+}
+.sidenav ul li {
+  margin-left: -1.5em;
+  font-size: 1rem;
+  padding-left: 2px;
+}
+
+.gf-links-cols {
+  color: #f5f5f5;
+  text-align: right;
+  font-size: 2rem;
+  margin-right: 40%;
+}
+
+.fab {
+  margin-left: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  position: relative;
+}
+
+h1 {
+  color: rgb(39, 138, 152);
+}
+
+header {
+  min-width: 100%;
+}
+
+footer {
+  margin-top: 2em;
+  background-color: #515151;
+  bottom: 0;
+  color: #f5f5f5;
+  font-size: smaller;
+  padding: 1em;
+  padding-left: 4em;
+  position: relative;
+  min-width: 100%;
+}
+
+footer h2 {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+footer a {
+  color: #f5f5f5;
+}
+
+footer nav, div.bcls-copyright {
+  vertical-align: top;
+  display: inline-block;
+  margin-bottom: 1em;
+  margin-left: 2em;
+}
+
+footer nav li {
+  display: block;
+  margin-left: -2.5em;
+}
+
+<!-- complete bootstrap layou -->
+</div>
+</div>
+</div>
+
+<hr>
+<div style="text-align: center;font-size: smaller;">
+  Page last updated on 2019-10-29 16:51:58 -0400
+</div>
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Brightcove Support</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">System Status</a>
+          </li>
+          <li>
+            <a href="https://help.brightcove.com/en/contact/create">Contact Support</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">Documentation</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Training</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="/online-training-courses" data-drupal-link-system-path="node/18286">Online Courses</a>
+          </li>
+          <li>
+            <a href="/register-training" data-drupal-link-system-path="node/18270">Register for a course</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">Brightcove.com</a>
+          </li>
+          <li>
+            <a href="https://help.brightcove.com/en/contact" data-drupal-link-system-path="node/18330">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12" style="padding-left: 24%;">
+      <div class="bcls-copyright footer-menu">
+
+        <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item"> Brightcove Inc. All rights reserved.</div>
+
+        <div class="field field--name-field-legal-links field--type-link field--label-hidden field--items">
+          <div class="field--item"><a href="https://www.brightcove.com/en/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></div>
+        </div>
+      </div>
+      <div style="display: inline-block;width: 5px;"></div>
+      <div class="gf-links-cols footer-menu">
+        <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.8rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.8rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.8rem;"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="/assets/js/site/setDate.js"></script>
+  <script src="/assets/js/site/prism.js"></script>
+  <script src="/assets/js/site/site.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+  output: true
+  title: Video Cloud Sync
+  path: /video-cloud-sync/
+  pages:
+    home:
+      title: Video Cloud Sync Home
+      filename: index.html

@@ -41,47 +41,61 @@ defaults:
 collections:
   getting_started:
     output: true
+    order:
+      - index.html
     title: Getting Started
-    path: /get-started/
-    pages:
+    relative_directory: /get-started
+    docs:
       home:
-        filename: index.html
+        relative_path: /get-started/index.html
   video_cloud_sync:
     output: true
+    order:
+      - index.html
     title: Video Cloud Sync
-    path: /video-cloud-sync/
-    pages:
+    relative_directory: /video-cloud-sync
+    docs:
       home:
         title: Video Cloud Sync Home
-        filename: index.html
+        relative_path: /video-cloud-sync/index.html
   admin_console:
     output: true
+    order:
+      - index.html
     title: Admin Console
-    path: /admin-console
-    pages:
+    relative_directory: /admin-console
+    docs:
       home:
         title: Admin Console Home
-        filename: index.html
+        relative_path: /admin-console/index.html
   submitting_apps:
     output: true
+    order:
+      - index.html
     title: Submitting Apps
-    pages:
+    relative_directory: /submitting_apps
+    docs:
       home:
         title: Submitting Apps Home
-        filename: index.html
+        relative_path: /submitting_apps/index.html
   references:
     output: true
+    order:
+      - index.html
+      - product-updates.html
+      - known-issues.html
     title: References
-    pages:
+    relative_directory: /references
+    docs:
       home:
         title: References Home
-        filename: index.html
+        relative_path: /references/index.html
       Product Updates:
         title: Product Updates
-        filename: product-updates.html
+        relative_path: /references/product-updates.html
       known_issues:
         title: Known Issues
-        filename: known-issues.html
+        relative_path: /references/known-issues.html
 
 
 # Exclude from processing.

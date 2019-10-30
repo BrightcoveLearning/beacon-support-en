@@ -1,0 +1,6 @@
+  output: true
+  title: Getting Started
+  path: /get-started/
+  pages:
+    home:
+      filename: index.html

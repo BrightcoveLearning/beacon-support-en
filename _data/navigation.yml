@@ -1,16 +1,26 @@
-- name: Home
-  link: /
-- name: Release Notes
-  link: /release-notes/product-updates.html
-# Commented lines below provide a model for doc navigation items
-# - name: Get Started
-#   subfolderitems:
-#     - name: Get Started Home
-#       link: /get-started/
-#     - name: Get Started with Trial
-#       link: /get-started/getting-started-corp-comm-trial.html
-#     - name: Get Started with App
-#       link: /get-started/getting-started-corp-comm-app.html
-# Let's keep known issues at the bottom of the nav
-- name: Known Issues
-  link: /known-issues/known-issues.html
+- section: Home
+  url: /
+- section: Get Started
+  docs:
+    - name: Get Started Home
+      url: /get-started/
+- section: Video Cloud Sync
+  docs:
+    - name: Video Cloud Sync Home
+      url: /video-cloud-sync/
+- section: Admin Console
+  docs:
+    - name: Admin Console Home
+      url: /admin-console/
+- section: Submitting Apps
+  docs:
+    - name: Submitting Apps Home
+      url: /submitting-apps/
+- section: References
+  docs:
+    - name: References Home
+      url: /references/
+    - name: Product Updates
+      url: /references/product-updates.html
+    - name: Known Issues
+      url: /references/known-issues.html

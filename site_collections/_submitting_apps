@@ -1,0 +1,6 @@
+  output: true
+  title: Submitting Apps
+  pages:
+    home:
+      title: Submitting Apps Home
+      filename: index.html

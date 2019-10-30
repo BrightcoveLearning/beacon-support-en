@@ -1,0 +1,12 @@
+  output: true
+  title: References
+  pages:
+    home:
+      title: References Home
+      filename: index.html
+    Product Updates:
+      title: Product Updates
+      filename: product-updates.html
+    known_issues:
+      title: Known Issues
+      filename: known-issues.html

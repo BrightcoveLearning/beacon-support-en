@@ -46,6 +46,43 @@ collections:
     pages:
       home:
         filename: index.html
+  video_cloud_sync:
+    output: true
+    title: Video Cloud Sync
+    path: /video-cloud-sync/
+    pages:
+      home:
+        title: Video Cloud Sync Home
+        filename: index.html
+  admin_console:
+    output: true
+    title: Admin Console
+    path: /admin-console
+    pages:
+      home:
+        title: Admin Console Home
+        filename: index.html
+  submitting_apps:
+    output: true
+    title: Submitting Apps
+    pages:
+      home:
+        title: Submitting Apps Home
+        filename: index.html
+  references:
+    output: true
+    title: References
+    pages:
+      home:
+        title: References Home
+        filename: index.html
+      Product Updates:
+        title: Product Updates
+        filename: product-updates.html
+      known_issues:
+        title: Known Issues
+        filename: known-issues.html
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

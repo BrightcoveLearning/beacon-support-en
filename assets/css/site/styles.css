@@ -282,7 +282,7 @@ figcaption {
       list-style-type: none;
   }
   .list-none li {
-      margin-left: -1em;
+      margin-left: -2em;
   }
   /**** general element styles and classes *********= */
   img {

@@ -328,8 +328,8 @@ ul.menu {
   display: inline-block;
 }
 img {
-  margin-top: 1em;
-  margin-bottom: 1rem;
+  /* margin-top: 1em;
+  margin-bottom: 1rem; */
   border: 1px #cccccc solid;
 }
 .no-border {
@@ -411,14 +411,6 @@ figcaption {
       margin-left: -2em;
   }
   /**** general element styles and classes *********= */
-  img {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      border: 1px #cccccc solid;
-  }
-  .no-border {
-      border: none;
-  }
   figcaption {
       font-size: .7em;
   }

@@ -383,7 +383,7 @@ figcaption {
       list-style-type: none;
   }
   .list-none li {
-      margin-left: -1em;
+      margin-left: -2em;
   }
   /**** general element styles and classes *********= */
   img {
@@ -713,7 +713,7 @@ footer nav li {
 
 <hr>
 <div style="text-align: center;font-size: smaller;">
-  Page last updated on 2019-10-31 11:54:26 -0400
+  Page last updated on 2019-10-31 13:55:27 -0400
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

@@ -1,0 +1,27 @@
+---
+title: Admin Console Home
+parent: Admin Console
+section: Admin Console
+---
+
+<article class="landing-page-wrapper">
+  <h1>{{ site.product }} Home</h1>
+  <section class="landing-page-header" id="landing_page_header">
+    <p>The topics in this section will help you get started using {{ site.product }}</p>
+  </section>
+  <br>
+  <section class="landing-page-body-wrapper" id="landing_page_wrapper">
+    {% for item in site.data.navigation %}
+      {% if item.section == page.section %}
+      <section class="landing-page-section">
+        <h6 class="landing-page-item-header">{{ item.section }} Topics</h6>
+        <ul class="landing-page-item list-none">
+          {% for entry in item.docs %}
+            <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
+          {% endfor %}
+        </ul>
+  </section>
+      {% endif %}
+    {% endfor %}
+  </section>
+</article>

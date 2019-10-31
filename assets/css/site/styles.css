@@ -166,18 +166,18 @@ tr.head>th {
 /* footer */
 
 .footer .row {
-  padding-bottom: 1em;
+  /* padding-bottom: 1em; */
   align-content: space-evenly;
   width: 100%;
 }
 
 .footer, .bcls-footer {
   background-color: #626365;
-  position: fixed;
   bottom: 0;
-  left: 0;
-  line-height: 1.7rem;
   color: #ffffff;
+  left: 0;
+  margin-top: 2em;;
+  position: relative;
   text-align: center;
   width: 100%;
 }
@@ -188,7 +188,7 @@ tr.head>th {
   margin-left: 2em;
 }
 
-.footer a, .bcls-footer a {
+footer i.fab, .footer a, .bcls-footer a {
   color: #ffffff;
 }
 .field--item {
@@ -515,7 +515,7 @@ figcaption {
 }
 
 .sidenav h5 {
-  font-size: 1rem;
+  font-size: .9rem;
   padding: 2px;
 }
 
@@ -533,7 +533,7 @@ color: rgb(14, 129, 255)}
 }
 .sidenav ul li {
   margin-left: -1.5em;
-  font-size: 1rem;
+  font-size: .9rem;
   padding-left: 2px;
 }
 
@@ -548,6 +548,14 @@ color: rgb(14, 129, 255)}
   margin-left: 1rem;
   margin-right: 2rem;
   margin-bottom: 1rem;
+}
+
+h5.landing-page-item-header {
+  font-size: 1rem;
+}
+
+.landing-page-item li {
+  font-size: .9rem;
 }
 
 body {

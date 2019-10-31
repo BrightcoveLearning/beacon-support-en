@@ -8,10 +8,14 @@
       url: /get-started/learning-guide-bc-beacon.html
     - name: Implementation Phases
       url: /get-started/implementation-phases.html
+    - name: Creating Your Sitemap
+      url: /get-started/creating-your-site-map.html
 - section: Video Cloud Sync
   docs:
     - name: Video Cloud Sync Home
       url: /video-cloud-sync/
+    - name: Video Cloud Custom Fields
+      url: /video-cloud-sync/vc-custom-fields.html
 - section: Admin Console
   docs:
     - name: Admin Console Home
@@ -20,11 +24,15 @@
   docs:
     - name: Submitting Apps Home
       url: /submitting-apps/
+    - name: Submitting Apps to Device Stores
+      url: /submitting-apps/submitting-device-apps-stores.html
 - section: References
   docs:
     - name: References Home
       url: /references/
     - name: Product Updates
       url: /references/product-updates.html
+    - name: Glossary
+      url: /references/glossary.html
     - name: Known Issues
       url: /references/known-issues.html

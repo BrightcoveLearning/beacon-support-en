@@ -46,6 +46,8 @@
               
                 <li><a href="/get-started/implementation-phases.html">Implementation Phases</a></li>
               
+                <li><a href="/get-started/creating-your-site-map.html">Creating Your Sitemap</a></li>
+              
             </ul>
         
       
@@ -54,6 +56,8 @@
             <ul class="sidenav-submenu">
               
                 <li><a href="/video-cloud-sync/">Video Cloud Sync Home</a></li>
+              
+                <li><a href="/video-cloud-sync/vc-custom-fields.html">Video Cloud Custom Fields</a></li>
               
             </ul>
         
@@ -73,6 +77,8 @@
               
                 <li><a href="/submitting-apps/">Submitting Apps Home</a></li>
               
+                <li><a href="/submitting-apps/submitting-device-apps-stores.html">Submitting Apps to Device Stores</a></li>
+              
             </ul>
         
       
@@ -83,6 +89,8 @@
                 <li><a href="/references/">References Home</a></li>
               
                 <li><a href="/references/product-updates.html">Product Updates</a></li>
+              
+                <li><a href="/references/glossary.html">Glossary</a></li>
               
                 <li><a href="/references/known-issues.html">Known Issues</a></li>
               
@@ -416,7 +424,7 @@ URL
 
 <hr>
 <div style="text-align: center;font-size: smaller;">
-  Page last updated on 2019-10-31 10:26:14 -0400
+  Page last updated on 2019-10-31 11:54:26 -0400
 </div>
 
 <footer class="bcls-footer" role="contentinfo">
@@ -492,7 +500,6 @@ URL
   <script src="/assets/js/site/setDate.js"></script>
   <script src="/assets/js/site/prism.js"></script>
   <script src="/assets/js/site/site.js"></script>
-  <script src="/assets/js/site/landing-page.js"></script>
   <script src="/assets/js/site/tabs.js"></script>
 </body>
 

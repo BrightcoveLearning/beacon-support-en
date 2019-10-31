@@ -46,6 +46,8 @@
               
                 <li><a href="/get-started/implementation-phases.html">Implementation Phases</a></li>
               
+                <li><a href="/get-started/creating-your-site-map.html">Creating Your Sitemap</a></li>
+              
             </ul>
         
       
@@ -54,6 +56,8 @@
             <ul class="sidenav-submenu">
               
                 <li><a href="/video-cloud-sync/">Video Cloud Sync Home</a></li>
+              
+                <li><a href="/video-cloud-sync/vc-custom-fields.html">Video Cloud Custom Fields</a></li>
               
             </ul>
         
@@ -73,6 +77,8 @@
               
                 <li><a href="/submitting-apps/">Submitting Apps Home</a></li>
               
+                <li><a href="/submitting-apps/submitting-device-apps-stores.html">Submitting Apps to Device Stores</a></li>
+              
             </ul>
         
       
@@ -83,6 +89,8 @@
                 <li><a href="/references/">References Home</a></li>
               
                 <li><a href="/references/product-updates.html">Product Updates</a></li>
+              
+                <li><a href="/references/glossary.html">Glossary</a></li>
               
                 <li><a href="/references/known-issues.html">Known Issues</a></li>
               
@@ -608,7 +616,7 @@ figcaption {
 }
 
 .sidenav h5 {
-  font-size: 1rem;
+  font-size: .9rem;
   padding: 2px;
 }
 
@@ -626,7 +634,7 @@ color: rgb(14, 129, 255)}
 }
 .sidenav ul li {
   margin-left: -1.5em;
-  font-size: 1rem;
+  font-size: .9rem;
   padding-left: 2px;
 }
 
@@ -641,6 +649,14 @@ color: rgb(14, 129, 255)}
   margin-left: 1rem;
   margin-right: 2rem;
   margin-bottom: 1rem;
+}
+
+h5.landing-page-item-header {
+  font-size: 1rem;
+}
+
+.landing-page-item li {
+  font-size: .9rem;
 }
 
 body {
@@ -697,7 +713,7 @@ footer nav li {
 
 <hr>
 <div style="text-align: center;font-size: smaller;">
-  Page last updated on 2019-10-31 10:26:14 -0400
+  Page last updated on 2019-10-31 11:54:26 -0400
 </div>
 
 <footer class="bcls-footer" role="contentinfo">
@@ -773,7 +789,6 @@ footer nav li {
   <script src="/assets/js/site/setDate.js"></script>
   <script src="/assets/js/site/prism.js"></script>
   <script src="/assets/js/site/site.js"></script>
-  <script src="/assets/js/site/landing-page.js"></script>
   <script src="/assets/js/site/tabs.js"></script>
 </body>
 

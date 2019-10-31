@@ -5,6 +5,13 @@
 
     
     <url>
+        <loc>/admin-console/advertisement.html</loc>
+        <lastmod>2019-10-31</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>/get-started/creating-your-site-map.html</loc>
         <lastmod>2019-10-31</lastmod>
         <changefreq>daily</changefreq>
@@ -26,6 +33,20 @@
     </url>
     
     <url>
+        <loc>/references/</loc>
+        <lastmod>2019-10-31</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/video-cloud-sync/</loc>
+        <lastmod>2019-10-31</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>/admin-console/</loc>
         <lastmod>2019-10-31</lastmod>
         <changefreq>daily</changefreq>
@@ -40,13 +61,6 @@
     </url>
     
     <url>
-        <loc>/</loc>
-        <lastmod>2019-10-31</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>/get-started/</loc>
         <lastmod>2019-10-31</lastmod>
         <changefreq>daily</changefreq>
@@ -54,14 +68,7 @@
     </url>
     
     <url>
-        <loc>/video-cloud-sync/</loc>
-        <lastmod>2019-10-31</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>/references/</loc>
+        <loc>/</loc>
         <lastmod>2019-10-31</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -76,6 +83,13 @@
     
     <url>
         <loc>/get-started/learning-guide-bc-beacon.html</loc>
+        <lastmod>2019-10-31</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/admin-console/playlists.html</loc>
         <lastmod>2019-10-31</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

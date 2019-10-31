@@ -166,18 +166,18 @@ tr.head>th {
 /* footer */
 
 .footer .row {
-  padding-bottom: 1em;
+  /* padding-bottom: 1em; */
   align-content: space-evenly;
   width: 100%;
 }
 
 .footer, .bcls-footer {
   background-color: #626365;
-  position: fixed;
   bottom: 0;
-  left: 0;
-  line-height: 1.7rem;
   color: #ffffff;
+  left: 0;
+  margin-top: 2em;;
+  position: relative;
   text-align: center;
   width: 100%;
 }
@@ -188,7 +188,7 @@ tr.head>th {
   margin-left: 2em;
 }
 
-.footer a, .bcls-footer a {
+footer i.fab, .footer a, .bcls-footer a {
   color: #ffffff;
 }
 .field--item {

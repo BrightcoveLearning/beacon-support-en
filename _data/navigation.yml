@@ -20,6 +20,10 @@
   docs:
     - name: Admin Console Home
       url: /admin-console/
+    - name: Creating a Playlist
+      url: /admin-console/playlists.html
+    - name: Create Ad Config
+      url: /admin-console/advertisement.html
 - section: Submitting Apps
   docs:
     - name: Submitting Apps Home

@@ -1,7 +1,0 @@
-  output: true
-  title: Admin Console
-  path: /admin-console
-  pages:
-    home:
-      title: Admin Console Home
-      filename: index.html

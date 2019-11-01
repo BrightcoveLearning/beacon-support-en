@@ -131,6 +131,13 @@
     </url>
     
     <url>
+        <loc>/admin-console/vc-ad-config-id.html</loc>
+        <lastmod>2019-11-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>/video-cloud-sync/vc-custom-fields.html</loc>
         <lastmod>2019-11-01</lastmod>
         <changefreq>daily</changefreq>

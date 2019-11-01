@@ -3,8 +3,6 @@
 - section: Get Started
   url: /get-started/
   docs:
-    - name: Get Started Home
-      url: /get-started/
     - name: Learning Guide
       url: /get-started/learning-guide-bc-beacon.html
     - name: Implementation Phases
@@ -14,15 +12,11 @@
 - section: Video Cloud Sync
   url: /video-cloud-sync/
   docs:
-    - name: Video Cloud Sync Home
-      url: /video-cloud-sync/
     - name: Video Cloud Custom Fields
       url: /video-cloud-sync/vc-custom-fields.html
 - section: Admin Console
   url: /admin-console/
   docs:
-    - name: Admin Console Home
-      url: /admin-console/
     - name: Creating a Playlist
       url: /admin-console/playlists.html
     - name: Create Ad Config
@@ -32,15 +26,11 @@
 - section: Submitting Apps
   url: /submitting-apps/
   docs:
-    - name: Submitting Apps Home
-      url: /submitting-apps/
     - name: Submitting Apps to Device Stores
       url: /submitting-apps/submitting-device-apps-stores.html
 - section: References
   url: /references/
   docs:
-    - name: References Home
-      url: /references/
     - name: Product Updates
       url: /references/product-updates.html
     - name: Glossary

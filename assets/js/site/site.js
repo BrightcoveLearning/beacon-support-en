@@ -1,73 +1,27 @@
 var BCLS_site = ( function (window, document) {
-  var sidenav_headers = document.querySelectorAll('.sidenav h5'),
-    sidenav_links = document.querySelectorAll('h5>a'),
-    sidenav_submenus = document.querySelectorAll('.sidenav ul'),
-    all_sidenav_links = document.querySelectorAll('.sidenav a'),
+  var all_sidenav_links = document.querySelectorAll('.sidenav a'),
+    href = window.location.pathname,
     i,
-    iMax;
-
-    function show_submenu(header) {
-      console.log(header);
+    iMax,
+    p1,
+    p2,
+    pSib,
+    pChild;
       
-      // first hide all
-      iMax = sidenav_submenus.length;
-      for (i = 0; i < iMax; i++) {
-        if (sidenav_submenus[i].previousElementSibling.firstChild.textContent === header) {
-          sidenav_submenus[i].removeAttribute('style');
-        } else {
-          sidenav_submenus[i].setAttribute('style', 'display:none;');
-        }
+  iMax = all_sidenav_links.length;
+  for (i = 0; i < iMax; i++) {
+    if (all_sidenav_links[i].getAttribute('href') === href) {
+      all_sidenav_links[i].setAttribute('class', 'bcls-active');
+      all_sidenav_links[i].parentElement.setAttribute('class', 'bcls-active');
+      p1 = all_sidenav_links[i].parentNode;
+      pSib = p1.nextSibling;
+      pChild = p1.firstChild;
+      if (p1.nodeName === 'LI') {
+        p2 = p1.parentNode;
+        p2.setAttribute('style', 'display:block');
+      } else if (pSib.nodeName === 'H5') {
+
       }
     }
-
-    
-    function init() {
-      var href = window.location.pathname;
-      
-      iMax = sidenav_submenus.length;
-      for (i = 0; i < iMax; i++) {
-        sidenav_submenus[i].setAttribute('style', 'display:none;');
-      }
-      
-      iMax = all_sidenav_links.length;
-      for (i = 0; i < iMax; i++) {
-        var p1, p2;
-        if (all_sidenav_links[i].getAttribute('href') === href) {
-          all_sidenav_links[i].setAttribute('class', 'bcls-active');
-          all_sidenav_links[i].parentElement.setAttribute('class', 'bcls-active');
-          p1 = all_sidenav_links[i].parentNode;
-          if (p1.nodeName === 'LI') {
-            p2 = p1.parentNode;
-            p2.removeAttribute('style');
-          }
-        }
-      }
-      iMax = sidenav_headers.length;
-      for (i = 0; i < iMax; i++) {
-        sidenav_headers[i].addEventListener('click', function(e) {
-          var j, 
-            jMax,
-            txt = this.textContent;
-          jMax = sidenav_headers.length;
-          for (j = 0; j < jMax; j++) {
-            if (sidenav_headers[j].textContent === txt) {
-              sidenav_headers[j].setAttribute('class', 'bcls-active');
-            } else {
-              sidenav_headers[j].removeAttribute('class')
-            }
-          }
-          jMax = sidenav_links.length;
-          for (j = 0; j < jMax; j++) {
-            if (sidenav_links[j].textContent === txt) {
-              sidenav_links[j].setAttribute('class', 'active');
-            }
-          }
-          
-          show_submenu(txt);
-        });
-      }
-      
-    }
-
-    init();
+  }
 })(window, document);

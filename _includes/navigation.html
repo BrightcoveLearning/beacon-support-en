@@ -6,7 +6,8 @@
           {% if item.docs == nil %}
           <h5><a href="{{ item.url: }}">{{ item.section }}</a></h5>
           {% else %}
-          <h5 class="submenu-header"><a href="{{ item.url: }}">{{ item.section }}</a></h5>            <ul class="sidenav-submenu list-none">
+          <h5 class="submenu-header"><a href="{{ item.url: }}">{{ item.section }}</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               {% for entry in item.docs %}
                 <li><a href="{{ entry.url: }}">{{ entry.name }}</a></li>
               {% endfor %}

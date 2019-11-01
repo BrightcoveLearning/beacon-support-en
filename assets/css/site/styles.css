@@ -634,8 +634,13 @@ figcaption {
 }
 
 .bcls-active {
-  color: white;
-  background-color: #333;
+  color: rgb(51, 51, 51) !important;
+  background-color: rgb(206, 206, 206);
+}
+
+.bcls-active a, .bcls-active a ::visited {
+  color: inherit;
+  background-color: rgb(206, 206, 206);
 }
 
 .image-header {
@@ -651,30 +656,37 @@ figcaption {
 .sidenav {
   overflow-y: scroll;
   font-size: smaller;
+  color: rgb(206, 206, 206);
 }
 
 .sidenav h5 {
   font-size: .9rem;
   padding: 2px;
+  color: inherit;
+}
+.sidenav h5 a {
+  font-size: .9rem;
+  padding: 2px;
+  color: inherit;
 }
 
 .sidenav h5.submenu-header {
-color: rgb(206, 206, 206);
+color: inherit;
 }
 
 .sidenav h5.submenu-header::after {
   content: ' +';
   font-weight: bold;
-  color: rgb(206, 206, 206);
+  color: inherit;
 }
 .sidenav a ::visited {
-  color: rgb(206, 206, 206);
+  color: inherit;
 }
 .sidenav-submenu a ::visited {
-  color: rgb(206, 206, 206);
+  color: inherit;
 }
 .sidenav-submenu a {
-  color: rgb(206, 206, 206);
+  color: inherit;
 }
 
 .sidenav ul {

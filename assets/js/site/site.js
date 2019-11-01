@@ -33,7 +33,8 @@ var BCLS_site = ( function (window, document) {
       for (i = 0; i < iMax; i++) {
         var p1, p2;
         if (all_sidenav_links[i].getAttribute('href') === href) {
-          all_sidenav_links[i].parentElement.setAttribute('style', 'background-color:rgb(43, 122, 131);');
+          all_sidenav_links[i].setAttribute('class', 'bcls-active');
+          all_sidenav_links[i].parentElement.setAttribute('class', 'bcls-active');
           p1 = all_sidenav_links[i].parentNode;
           if (p1.nodeName === 'LI') {
             p2 = p1.parentNode;
@@ -50,15 +51,15 @@ var BCLS_site = ( function (window, document) {
           jMax = sidenav_headers.length;
           for (j = 0; j < jMax; j++) {
             if (sidenav_headers[j].textContent === txt) {
-              sidenav_headers[j].setAttribute('style', 'background-color:rgb(206, 206, 206);');
+              sidenav_headers[j].setAttribute('class', 'bcls-active');
             } else {
-              sidenav_headers[j].removeAttribute('style')
+              sidenav_headers[j].removeAttribute('class')
             }
           }
           jMax = sidenav_links.length;
           for (j = 0; j < jMax; j++) {
             if (sidenav_links[j].textContent === txt) {
-              sidenav_links[j].setAttribute('style', 'background-color:rgb(206, 206, 206);');
+              sidenav_links[j].setAttribute('class', 'active');
             }
           }
           

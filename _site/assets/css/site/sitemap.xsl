@@ -33,12 +33,12 @@
     <div class="col-sm-2 left-side-bar">
       <nav class="sidenav">
         
+          
           <h5><a href="/">Home</a></h5>
           
         
-          <h5><a href="/get-started/">Get Started</a></h5>
           
-            <ul class="sidenav-submenu list-none">
+          <h5 class="submenu-header"><a href="/get-started/">Get Started</a></h5>            <ul class="sidenav-submenu list-none">
               
                 <li><a href="/get-started/">Get Started Home</a></li>
               
@@ -51,9 +51,8 @@
             </ul>
           
         
-          <h5><a href="/video-cloud-sync/">Video Cloud Sync</a></h5>
           
-            <ul class="sidenav-submenu list-none">
+          <h5 class="submenu-header"><a href="/video-cloud-sync/">Video Cloud Sync</a></h5>            <ul class="sidenav-submenu list-none">
               
                 <li><a href="/video-cloud-sync/">Video Cloud Sync Home</a></li>
               
@@ -62,9 +61,8 @@
             </ul>
           
         
-          <h5><a href="/admin-console/">Admin Console</a></h5>
           
-            <ul class="sidenav-submenu list-none">
+          <h5 class="submenu-header"><a href="/admin-console/">Admin Console</a></h5>            <ul class="sidenav-submenu list-none">
               
                 <li><a href="/admin-console/">Admin Console Home</a></li>
               
@@ -77,9 +75,8 @@
             </ul>
           
         
-          <h5><a href="/submitting-apps/">Submitting Apps</a></h5>
           
-            <ul class="sidenav-submenu list-none">
+          <h5 class="submenu-header"><a href="/submitting-apps/">Submitting Apps</a></h5>            <ul class="sidenav-submenu list-none">
               
                 <li><a href="/submitting-apps/">Submitting Apps Home</a></li>
               
@@ -88,9 +85,8 @@
             </ul>
           
         
-          <h5><a href="/references/">References</a></h5>
           
-            <ul class="sidenav-submenu list-none">
+          <h5 class="submenu-header"><a href="/references/">References</a></h5>            <ul class="sidenav-submenu list-none">
               
                 <li><a href="/references/">References Home</a></li>
               
@@ -430,7 +426,7 @@ URL
 
 <hr>
 <div style="text-align: center;font-size: smaller;">
-  Page last updated on 2019-11-01 11:10:42 -0400
+  Page last updated on 2019-11-01 11:17:56 -0400
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

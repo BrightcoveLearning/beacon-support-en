@@ -38,9 +38,8 @@
           
         
           
-          <h5 class="submenu-header"><a href="/get-started/">Get Started</a></h5>            <ul class="sidenav-submenu list-none">
-              
-                <li><a href="/get-started/">Get Started Home</a></li>
+          <h5 class="submenu-header"><a href="/get-started/">Get Started</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               
                 <li><a href="/get-started/learning-guide-bc-beacon.html">Learning Guide</a></li>
               
@@ -52,9 +51,8 @@
           
         
           
-          <h5 class="submenu-header"><a href="/video-cloud-sync/">Video Cloud Sync</a></h5>            <ul class="sidenav-submenu list-none">
-              
-                <li><a href="/video-cloud-sync/">Video Cloud Sync Home</a></li>
+          <h5 class="submenu-header"><a href="/video-cloud-sync/">Video Cloud Sync</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               
                 <li><a href="/video-cloud-sync/vc-custom-fields.html">Video Cloud Custom Fields</a></li>
               
@@ -62,9 +60,8 @@
           
         
           
-          <h5 class="submenu-header"><a href="/admin-console/">Admin Console</a></h5>            <ul class="sidenav-submenu list-none">
-              
-                <li><a href="/admin-console/">Admin Console Home</a></li>
+          <h5 class="submenu-header"><a href="/admin-console/">Admin Console</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               
                 <li><a href="/admin-console/playlists.html">Creating a Playlist</a></li>
               
@@ -76,9 +73,8 @@
           
         
           
-          <h5 class="submenu-header"><a href="/submitting-apps/">Submitting Apps</a></h5>            <ul class="sidenav-submenu list-none">
-              
-                <li><a href="/submitting-apps/">Submitting Apps Home</a></li>
+          <h5 class="submenu-header"><a href="/submitting-apps/">Submitting Apps</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               
                 <li><a href="/submitting-apps/submitting-device-apps-stores.html">Submitting Apps to Device Stores</a></li>
               
@@ -86,9 +82,8 @@
           
         
           
-          <h5 class="submenu-header"><a href="/references/">References</a></h5>            <ul class="sidenav-submenu list-none">
-              
-                <li><a href="/references/">References Home</a></li>
+          <h5 class="submenu-header"><a href="/references/">References</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               
                 <li><a href="/references/product-updates.html">Product Updates</a></li>
               
@@ -426,7 +421,7 @@ URL
 
 <hr>
 <div style="text-align: center;font-size: smaller;">
-  Page last updated on 2019-11-01 11:17:56 -0400
+  Page last updated on 2019-11-01 15:22:45 -0400
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

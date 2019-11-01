@@ -75,6 +75,13 @@
     </url>
     
     <url>
+        <loc>/index_for_launch.html</loc>
+        <lastmod>2019-11-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>/references/known-issues.html</loc>
         <lastmod>2019-11-01</lastmod>
         <changefreq>daily</changefreq>

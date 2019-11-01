@@ -27,6 +27,8 @@
       url: /admin-console/playlists.html
     - name: Create Ad Config
       url: /admin-console/advertisement.html
+    - name: Ad Configuration ID
+      url: /admin-console/vc-ad-config-id.html
 - section: Submitting Apps
   url: /submitting-apps/
   docs:

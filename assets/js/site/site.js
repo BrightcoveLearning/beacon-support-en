@@ -4,6 +4,7 @@ var BCLS_site = (function(window, document) {
     i,
     iMax,
     currentLink,
+    parentNodeName,
     p1,
     p2,
     pSib,
@@ -17,13 +18,16 @@ var BCLS_site = (function(window, document) {
       currentLink.parentElement.setAttribute("class", "bcls-active");
       if (currentLink.getAttribute("href") !== "/") {
         p1 = currentLink.parentElement;
-        pSib = p1.previousElementSibling;
-        pNextSib = pSib.previousElementSibling;
-        if (p1.nodeName === "LI") {
-          p2 = p1.parentNode;
-          p2.setAttribute("style", "display:block");
-        } else if (pSib.nodeName === "H5") {
-          pNextSib.setAttribute("style", "display:block");
+        parentNodeName = p1.nodeName;
+        switch (parentNodeName) {
+          case 'H5':
+            pNextSib = p1.nextElementSibling;
+            pNextSib.removeAttribute('style');
+            break;
+          case 'LI':
+            p2 = p1.parentElement;
+            p2.removeAttribute('style');
+            break;
         }
       }
     }

@@ -96,7 +96,7 @@
         
     </nav>
   </div>
-  <div class="col-lg-10" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <div class="col-lg-8" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
 <!-- bootstrap layout -->
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
@@ -121,6 +121,8 @@ article, .bcls-article {
 div.container {
   padding-left: 1em;;
   margin-left: 0;
+  padding-right: 1em;
+  margin-right: -3em;
 }
 
 .bcls-section {
@@ -796,6 +798,35 @@ color: inherit;
   padding-left: 2px;
 }
 
+.right-side-bar {
+  color: rgb(51, 51, 51);
+  background-color: white;
+  margin-top: -1em;
+  margin-bottom: -1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.right-side-nav {
+  padding: .2em;
+  background-color: rgb(239, 251, 255);
+  color: inherit;
+}
+
+.right-side-nav h6 {
+  font-size: small;
+  margin-left: 1em;
+}
+
+.right-side-nav li>a, .right-side-nav li>a::visited {
+  color: rgb(51, 51, 51) !important;
+}
+
+.right-side-nav li {
+  color: rgb(51, 51, 51);
+  font-size: small;
+}
+
 .gf-links-cols {
   color: #f5f5f5;
   text-align: right;
@@ -901,14 +932,20 @@ right-side-bar {
   color: rgb(11, 155, 179);
 }
 
-<!-- complete bootstrap layou -->
-</div>
-</div>
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      <nav class="right-side-nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+    </div>
+  </div>
 </div>
 
 <hr>
 <div style="text-align: center;font-size: smaller;">
-  Page last updated on 2019-11-02 09:02:41 -0400
+  Page last updated on 2019-11-02 11:21:19 -0400
 </div>
 
 <footer class="bcls-footer" role="contentinfo">
@@ -985,6 +1022,7 @@ right-side-bar {
   <script src="/assets/js/site/prism.js"></script>
   <script src="/assets/js/site/site.js"></script>
   <script src="/assets/js/site/tabs.js"></script>
+  <script src="/assets/js/site/toc.js"></script>
 </body>
 
 </html>

@@ -23,6 +23,8 @@ article, .bcls-article {
 div.container {
   padding-left: 1em;;
   margin-left: 0;
+  padding-right: 1em;
+  margin-right: -3em;
 }
 
 .bcls-section {
@@ -696,6 +698,35 @@ color: inherit;
   margin-left: -1.5em;
   font-size: .9rem;
   padding-left: 2px;
+}
+
+.right-side-bar {
+  color: rgb(51, 51, 51);
+  background-color: white;
+  margin-top: -1em;
+  margin-bottom: -1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.right-side-nav {
+  padding: .2em;
+  background-color: rgb(239, 251, 255);
+  color: inherit;
+}
+
+.right-side-nav h6 {
+  font-size: small;
+  margin-left: 1em;
+}
+
+.right-side-nav li>a, .right-side-nav li>a::visited {
+  color: rgb(51, 51, 51) !important;
+}
+
+.right-side-nav li {
+  color: rgb(51, 51, 51);
+  font-size: small;
 }
 
 .gf-links-cols {

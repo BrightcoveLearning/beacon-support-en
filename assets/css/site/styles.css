@@ -588,6 +588,12 @@ ul.menu {
   /* padding: .4rem; */
 }
 
+.search-bar {
+  margin-top: -1em;
+  padding-bottom: .8em;
+  padding-left: 16.7%;
+}
+
 .product-logo {
   border: none;
   margin-left: 1rem;

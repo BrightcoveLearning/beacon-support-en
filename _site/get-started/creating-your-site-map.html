@@ -15,9 +15,10 @@
 <body class="body">
 
 <header>
-  <a href="/"><img class="image-logo" src="/assets/images/site/bc-logo.png" alt="Brightcove Logo"></a><p class="secondary-nav"><a href="https://support.brightcove.com/contact-support">Contact Support</a> | <a href="https://status.brightcove.com/">System Status</a></p>
+
   <div class="div-header">
     <a href="/"><img class="product-logo" src="/assets/images/site/product-logos/beacon-logo-ondark.png" alt="product logo"></a>
+    <span class="secondary-nav"><a href="https://support.brightcove.com/contact-support">Contact Support</a> | <a href="https://status.brightcove.com/">System Status</a></span>
   </div>
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -30,21 +31,23 @@
       <li class="breadcrumb-item active" aria-current="page">Creating Your Site Map</li>
     </ol>
   </nav>
+  <div id="search_bar" class="search-bar">
+    <!-- TODO - cx value below must be changed for each site -->
+    <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:9ybe0wftqs0"></script>
+    <div class="gcse-search"></div>
 </header>
 <div class="container">
   <div class="row">
-    <div class="col-lg-3 left-side-bar">
+    <div class="col-sm-2 left-side-bar">
       <nav class="sidenav">
         
           
           <h5><a href="/">Home</a></h5>
-        
-      
           
-          <h5 class="submenu-header">Get Started</h5>
-            <ul class="sidenav-submenu">
-              
-                <li><a href="/get-started/">Get Started Home</a></li>
+        
+          
+          <h5 class="submenu-header"><a href="/get-started/">Get Started</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               
                 <li><a href="/get-started/learning-guide-bc-beacon.html">Learning Guide</a></li>
               
@@ -53,48 +56,42 @@
                 <li><a href="/get-started/creating-your-site-map.html">Creating Your Sitemap</a></li>
               
             </ul>
-        
-      
           
-          <h5 class="submenu-header">Video Cloud Sync</h5>
-            <ul class="sidenav-submenu">
-              
-                <li><a href="/video-cloud-sync/">Video Cloud Sync Home</a></li>
+        
+          
+          <h5 class="submenu-header"><a href="/video-cloud-sync/">Video Cloud Sync</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               
                 <li><a href="/video-cloud-sync/vc-custom-fields.html">Video Cloud Custom Fields</a></li>
               
             </ul>
-        
-      
           
-          <h5 class="submenu-header">Admin Console</h5>
-            <ul class="sidenav-submenu">
-              
-                <li><a href="/admin-console/">Admin Console Home</a></li>
+        
+          
+          <h5 class="submenu-header"><a href="/admin-console/">Admin Console</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               
                 <li><a href="/admin-console/playlists.html">Creating a Playlist</a></li>
               
                 <li><a href="/admin-console/advertisement.html">Create Ad Config</a></li>
               
-            </ul>
-        
-      
-          
-          <h5 class="submenu-header">Submitting Apps</h5>
-            <ul class="sidenav-submenu">
+                <li><a href="/admin-console/vc-ad-config-id.html">Ad Configuration ID</a></li>
               
-                <li><a href="/submitting-apps/">Submitting Apps Home</a></li>
+            </ul>
+          
+        
+          
+          <h5 class="submenu-header"><a href="/submitting-apps/">Submitting Apps</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               
                 <li><a href="/submitting-apps/submitting-device-apps-stores.html">Submitting Apps to Device Stores</a></li>
               
             </ul>
-        
-      
           
-          <h5 class="submenu-header">References</h5>
-            <ul class="sidenav-submenu">
-              
-                <li><a href="/references/">References Home</a></li>
+        
+          
+          <h5 class="submenu-header"><a href="/references/">References</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               
                 <li><a href="/references/product-updates.html">Product Updates</a></li>
               
@@ -103,42 +100,16 @@
                 <li><a href="/references/known-issues.html">Known Issues</a></li>
               
             </ul>
+          
         
-      
     </nav>
   </div>
-  <div class="col-sm-9">
+  <div class="col-lg-8" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
 <!-- bootstrap layout -->
-
-  <style media="screen">
-    .image_display {
-      vertical-align: top;
-      display: inline-block;
-      width: 45%;
-      border: 1px solid black;
-      margin: 5px;
-    }
-
-    .small_image {
-      vertical-align: top;
-      display: inline-block;
-      border: 1px solid black;
-      margin: 5px;
-    }
-
-    .series_details {
-      vertical-align: top;
-      display: inline-block;
-      /* width: 35%;
-      min-height: 500px; */
-      border: 1px solid black;
-      margin: 5px;
-    }
-  </style>
 
 <article class="bcls-article">
 
-  <h1>Brightcove Beacon Creating Your Site Map</h1>
+  <h1>Creating Your Site Map</h1>
   <summary>In this topic, you will answer a series of questions, recording answers in a spreadsheet, that will lead you to the look of your Brightcove Beacon Experience "site map".</summary>
         <section class="bcls-section">
           <h2 id="Introduction">Introduction</h2>
@@ -309,7 +280,7 @@
         </section>
 
         <section class="bcls-section">
-          <h2 id="section-name">Choosing site layout options</h2>
+          <h2 id="Choosing_site_layout_options">Choosing site layout options</h2>
           <p>The following provide layout options for different parts of your app. Review the options for the particular layout, then record your selection in the spreadsheet.</p>
           <h3>Landing page</h3>
           <p>The landing page is optional. If you wish to have a landing page choose your layout, otherwise choose <strong>None</strong>. Note, there is no landing page on the web app.</p>
@@ -494,14 +465,20 @@
 
 </article>
 
-<!-- complete bootstrap layou -->
-</div>
-</div>
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      <nav class="right-side-nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+    </div>
+  </div>
 </div>
 
 <hr>
 <div style="text-align: center;font-size: smaller;">
-  Page last updated on 2019-10-31 15:58:03 -0400
+  Page last updated on 2019-11-04 08:39:21 -0500
 </div>
 
 <footer class="bcls-footer" role="contentinfo">
@@ -578,6 +555,7 @@
   <script src="/assets/js/site/prism.js"></script>
   <script src="/assets/js/site/site.js"></script>
   <script src="/assets/js/site/tabs.js"></script>
+  <script src="/assets/js/site/toc.js"></script>
 </body>
 
 </html>

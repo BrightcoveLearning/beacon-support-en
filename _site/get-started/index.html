@@ -15,9 +15,10 @@
 <body class="body">
 
 <header>
-  <a href="/"><img class="image-logo" src="/assets/images/site/bc-logo.png" alt="Brightcove Logo"></a><p class="secondary-nav"><a href="https://support.brightcove.com/contact-support">Contact Support</a> | <a href="https://status.brightcove.com/">System Status</a></p>
+
   <div class="div-header">
     <a href="/"><img class="product-logo" src="/assets/images/site/product-logos/beacon-logo-ondark.png" alt="product logo"></a>
+    <span class="secondary-nav"><a href="https://support.brightcove.com/contact-support">Contact Support</a> | <a href="https://status.brightcove.com/">System Status</a></span>
   </div>
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -30,21 +31,23 @@
       <li class="breadcrumb-item active" aria-current="page">Getting Started Home</li>
     </ol>
   </nav>
+  <div id="search_bar" class="search-bar">
+    <!-- TODO - cx value below must be changed for each site -->
+    <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:9ybe0wftqs0"></script>
+    <div class="gcse-search"></div>
 </header>
 <div class="container">
   <div class="row">
-    <div class="col-lg-3 left-side-bar">
+    <div class="col-sm-2 left-side-bar">
       <nav class="sidenav">
         
           
           <h5><a href="/">Home</a></h5>
-        
-      
           
-          <h5 class="submenu-header">Get Started</h5>
-            <ul class="sidenav-submenu">
-              
-                <li><a href="/get-started/">Get Started Home</a></li>
+        
+          
+          <h5 class="submenu-header"><a href="/get-started/">Get Started</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               
                 <li><a href="/get-started/learning-guide-bc-beacon.html">Learning Guide</a></li>
               
@@ -53,48 +56,42 @@
                 <li><a href="/get-started/creating-your-site-map.html">Creating Your Sitemap</a></li>
               
             </ul>
-        
-      
           
-          <h5 class="submenu-header">Video Cloud Sync</h5>
-            <ul class="sidenav-submenu">
-              
-                <li><a href="/video-cloud-sync/">Video Cloud Sync Home</a></li>
+        
+          
+          <h5 class="submenu-header"><a href="/video-cloud-sync/">Video Cloud Sync</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               
                 <li><a href="/video-cloud-sync/vc-custom-fields.html">Video Cloud Custom Fields</a></li>
               
             </ul>
-        
-      
           
-          <h5 class="submenu-header">Admin Console</h5>
-            <ul class="sidenav-submenu">
-              
-                <li><a href="/admin-console/">Admin Console Home</a></li>
+        
+          
+          <h5 class="submenu-header"><a href="/admin-console/">Admin Console</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               
                 <li><a href="/admin-console/playlists.html">Creating a Playlist</a></li>
               
                 <li><a href="/admin-console/advertisement.html">Create Ad Config</a></li>
               
-            </ul>
-        
-      
-          
-          <h5 class="submenu-header">Submitting Apps</h5>
-            <ul class="sidenav-submenu">
+                <li><a href="/admin-console/vc-ad-config-id.html">Ad Configuration ID</a></li>
               
-                <li><a href="/submitting-apps/">Submitting Apps Home</a></li>
+            </ul>
+          
+        
+          
+          <h5 class="submenu-header"><a href="/submitting-apps/">Submitting Apps</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               
                 <li><a href="/submitting-apps/submitting-device-apps-stores.html">Submitting Apps to Device Stores</a></li>
               
             </ul>
-        
-      
           
-          <h5 class="submenu-header">References</h5>
-            <ul class="sidenav-submenu">
-              
-                <li><a href="/references/">References Home</a></li>
+        
+          
+          <h5 class="submenu-header"><a href="/references/">References</a></h5>            
+          <ul class="sidenav-submenu list-none" style="display:none;">
               
                 <li><a href="/references/product-updates.html">Product Updates</a></li>
               
@@ -103,17 +100,17 @@
                 <li><a href="/references/known-issues.html">Known Issues</a></li>
               
             </ul>
+          
         
-      
     </nav>
   </div>
-  <div class="col-sm-9">
+  <div class="col-lg-8" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
 <!-- bootstrap layout -->
 
 <article class="landing-page-wrapper">
-  <h1>Brightcove Beacon Home</h1>
+  <h1>Getting Started Home</h1>
   <section class="landing-page-header" id="landing_page_header">
-    <p>The topics in this section will help you get started using Brightcove Beacon</p>
+    <p>This section provides guides to help you get started with Brightcove Beacon</p>
   </section>
   <br>
   <section class="landing-page-body-wrapper" id="landing_page_wrapper">
@@ -124,8 +121,6 @@
       <section class="landing-page-section">
         <h6 class="landing-page-item-header">Get Started Topics</h6>
         <ul class="landing-page-item list-none">
-          
-            <li><a href="/get-started/">Get Started Home</a></li>
           
             <li><a href="/get-started/learning-guide-bc-beacon.html">Learning Guide</a></li>
           
@@ -148,14 +143,20 @@
   </section>
 </article>
 
-<!-- complete bootstrap layou -->
-</div>
-</div>
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      <nav class="right-side-nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+    </div>
+  </div>
 </div>
 
 <hr>
 <div style="text-align: center;font-size: smaller;">
-  Page last updated on 2019-10-31 15:58:03 -0400
+  Page last updated on 2019-11-04 08:39:21 -0500
 </div>
 
 <footer class="bcls-footer" role="contentinfo">
@@ -232,6 +233,7 @@
   <script src="/assets/js/site/prism.js"></script>
   <script src="/assets/js/site/site.js"></script>
   <script src="/assets/js/site/tabs.js"></script>
+  <script src="/assets/js/site/toc.js"></script>
 </body>
 
 </html>

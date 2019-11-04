@@ -2,7 +2,6 @@
 layout: null
 search: exclude
 ---
-
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="/assets/css/site/sitemap.css"?>
 <?xml-stylesheet type="text/xsl" href="/assets/css/site/sitemap.xsl"?>

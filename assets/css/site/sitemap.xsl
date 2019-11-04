@@ -187,7 +187,6 @@ XML Sitemap<xsl:if test="sm:sitemapindex"> Index</xsl:if>
 <xsl:if test="not(sm:sitemapindex)"> - <span><xsl:value-of select="sm:urlset/sm:url/sm:loc"/></span></xsl:if>
 		</nav>
 <h3>
-<span><a href="https://pro-sitemaps.com">PRO-Sitemaps.com</a></span>
 <xsl:choose>
 <xsl:when  test="sm:sitemapindex"> 
 Total sitemap files listed in this index: <xsl:value-of select="count(sm:sitemapindex/sm:sitemap)"/>

@@ -814,6 +814,8 @@ button.gsc-search-button
   background-color: rgb(206, 206, 206);
 }
 
+/* docs header */
+
 .image-header {
   width: 100%;
 }
@@ -823,6 +825,8 @@ button.gsc-search-button
   border: none;
   margin-left: 1em;
 }
+
+/* left nav */
 
 .sidenav {
   overflow-y: scroll;
@@ -1028,7 +1032,7 @@ right-side-bar {
 
 <hr>
 <div style="text-align: center;font-size: smaller;">
-  Page last updated on 2019-11-04 12:04:16 -0500
+  Page last updated on 2019-11-04 14:25:44 -0500
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

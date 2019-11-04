@@ -713,6 +713,8 @@ button.gsc-search-button
   background-color: rgb(206, 206, 206);
 }
 
+/* docs header */
+
 .image-header {
   width: 100%;
 }
@@ -722,6 +724,8 @@ button.gsc-search-button
   border: none;
   margin-left: 1em;
 }
+
+/* left nav */
 
 .sidenav {
   overflow-y: scroll;

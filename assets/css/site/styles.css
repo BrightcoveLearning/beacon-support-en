@@ -351,6 +351,12 @@ h2#expanderHead.changed:before {
   display: block
 }
 
+/* last updated */
+.last-updated {
+  text-align: center;
+  font-size: smaller;
+}
+
 
 /* footer */
 .footer .row {

@@ -353,6 +353,7 @@ h2#expanderHead.changed:before {
 
 /* last updated */
 .last-updated {
+  color: seashell;
   text-align: center;
   font-size: smaller;
 }

@@ -904,6 +904,10 @@ button.gsc-search-button
   margin-top: .5em;
 }
 
+.right-side-nav {
+  margin-top: 5.5em;
+}
+
 #in_page_nav li {
   margin-bottom:.5em;
 }
@@ -950,7 +954,6 @@ body {
 
 h1 {
   color: rgb(51, 51, 51);
-  margin-top: .5em;
 }
 
 header {
@@ -1044,7 +1047,7 @@ right-side-bar {
 
 <hr>
 <div style="text-align: center;font-size: smaller;">
-  Page last updated on 2019-11-04 16:48:44 -0500
+  Page last updated on 2019-11-05 14:09:34 -0500
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

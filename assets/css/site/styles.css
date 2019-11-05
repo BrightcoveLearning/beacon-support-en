@@ -801,6 +801,10 @@ button.gsc-search-button
   margin-top: .5em;
 }
 
+.right-side-nav {
+  margin-top: 5.5em;
+}
+
 #in_page_nav li {
   margin-bottom:.5em;
 }
@@ -847,7 +851,6 @@ body {
 
 h1 {
   color: {{ site.color }};
-  margin-top: .5em;
 }
 
 header {

@@ -801,6 +801,14 @@ button.gsc-search-button
   margin-top: .5em;
 }
 
+#in_page_nav li {
+  margin-bottom:.5em;
+}
+
+#in_page_nav a {
+  color:rgb(11, 155, 179);
+}
+
 .right-side-nav li>a, .right-side-nav li>a::visited {
   color: {{ site.color }} !important;
 }

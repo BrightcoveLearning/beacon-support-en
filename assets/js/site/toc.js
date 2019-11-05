@@ -13,10 +13,8 @@ var BCLS_toc = ( function (window, document) {
       h2 = h2s[i];
       if (h2.id) {
         li = document.createElement('li');
-        li.setAttribute('style', 'margin-bottom:.5em;')
         link = document.createElement('a');
         link.setAttribute('href', '#' + h2.id);
-        link.setAttribute('style', 'color:rgb(11, 155, 179);');
         link.textContent = h2.textContent;
         li.appendChild(link);
         frag.appendChild(li);

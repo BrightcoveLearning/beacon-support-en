@@ -33,7 +33,7 @@ div.container {
 
 /* page sections */
 .bcls-section {
-  margin-top: 3em;
+  margin-top: 2.5em;
   padding-top: .5em;
   border-top: 1px #CCC solid;
 }
@@ -793,6 +793,8 @@ button.gsc-search-button
   padding: .2em;
   background-color: rgb(239, 251, 255);
   color: inherit;
+  margin-top:13em;
+
 }
 
 .right-side-nav h6 {
@@ -801,9 +803,6 @@ button.gsc-search-button
   margin-top: .5em;
 }
 
-.right-side-nav {
-  margin-top: 5.5em;
-}
 
 #in_page_nav li {
   margin-bottom:.5em;

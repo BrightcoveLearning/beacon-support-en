@@ -869,22 +869,22 @@ button.gsc-search-button
 }
 
 .sidenav h5 {
-  font-size: .9rem;
+  font-size: .8rem;
   padding: 2px;
   color: inherit;
 }
 
 .sidenav h5 a {
-  font-size: .9rem;
+  font-size: .8rem;
   padding: 2px;
   color: inherit;
 }
 
-.sidenav h5.submenu-header {
+.sidenav h5.submenu-header, .sidenav li.submenu-header {
   color: inherit;
 }
 
-.sidenav h5.submenu-header::after {
+.sidenav h5.submenu-header::after, .sidenav li.submenu-header::after {
   content: ' +';
   font-weight: bold;
   color: inherit;
@@ -892,6 +892,14 @@ button.gsc-search-button
 
 .sidenav a ::visited {
   color: inherit;
+}
+
+ul.sidenav-submenu {
+  list-style: none;
+}
+
+ul.sidenav-subsubmenu {
+  list-style-type: disc;
 }
 
 .sidenav-submenu a ::visited {
@@ -903,12 +911,12 @@ button.gsc-search-button
 }
 
 .sidenav ul {
-  list-style: none;
+  /* list-style: none; */
 }
 
 .sidenav ul li {
-  margin-left: -1.5em;
-  font-size: .9rem;
+  margin-left: -2.5em;
+  font-size: .8rem;
   padding-left: 2px;
 }
 

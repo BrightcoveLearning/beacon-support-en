@@ -37,58 +37,80 @@
           
         
           
-          <h5 class="submenu-header"><a href="/get-started/">Get Started</a></h5>            
-          <ul class="sidenav-submenu list-none" style="display:none;">
+            <h5 class="submenu-header"><a href="/get-started/">Get Started</a></h5>            
+            <ul class="sidenav-submenu" style="display:none;">
               
-                <li><a href="/get-started/learning-guide-bc-beacon.html">Learning Guide</a></li>
+                
+                  <li><a href="/get-started/learning-guide-bc-beacon.html">Learning Guide</a></li>
+                
               
-                <li><a href="/get-started/implementation-phases.html">Implementation Phases</a></li>
+                
+                  <li><a href="/get-started/implementation-phases.html">Implementation Phases</a></li>
+                
               
-                <li><a href="/get-started/creating-your-site-map.html">Creating Your Sitemap</a></li>
-              
-            </ul>
-          
-        
-          
-          <h5 class="submenu-header"><a href="/video-cloud-sync/">Video Cloud Sync</a></h5>            
-          <ul class="sidenav-submenu list-none" style="display:none;">
-              
-                <li><a href="/video-cloud-sync/vc-custom-fields.html">Video Cloud Custom Fields</a></li>
+                
+                  <li><a href="/get-started/creating-your-site-map.html">Creating Your Sitemap</a></li>
+                
               
             </ul>
           
         
           
-          <h5 class="submenu-header"><a href="/admin-console/">Admin Console</a></h5>            
-          <ul class="sidenav-submenu list-none" style="display:none;">
+            <h5 class="submenu-header"><a href="/video-cloud-sync/">Video Cloud Sync</a></h5>            
+            <ul class="sidenav-submenu" style="display:none;">
               
-                <li><a href="/admin-console/playlists.html">Creating a Playlist</a></li>
-              
-                <li><a href="/admin-console/advertisement.html">Create Ad Config</a></li>
-              
-                <li><a href="/admin-console/vc-ad-config-id.html">Ad Configuration ID</a></li>
+                
+                  <li><a href="/video-cloud-sync/vc-custom-fields.html">Video Cloud Custom Fields</a></li>
+                
               
             </ul>
           
         
           
-          <h5 class="submenu-header"><a href="/submitting-apps/">Submitting Apps</a></h5>            
-          <ul class="sidenav-submenu list-none" style="display:none;">
+            <h5 class="submenu-header"><a href="/admin-console/">Admin Console</a></h5>            
+            <ul class="sidenav-submenu" style="display:none;">
               
-                <li><a href="/submitting-apps/submitting-device-apps-stores.html">Submitting Apps to Device Stores</a></li>
+                
+                  <li><a href="/admin-console/playlists.html">Creating a Playlist</a></li>
+                
+              
+                
+                  <li><a href="/admin-console/advertisement.html">Create Ad Config</a></li>
+                
+              
+                
+                  <li><a href="/admin-console/vc-ad-config-id.html">Ad Configuration ID</a></li>
+                
               
             </ul>
           
         
           
-          <h5 class="submenu-header"><a href="/references/">References</a></h5>            
-          <ul class="sidenav-submenu list-none" style="display:none;">
+            <h5 class="submenu-header"><a href="/submitting-apps/">Submitting Apps</a></h5>            
+            <ul class="sidenav-submenu" style="display:none;">
               
-                <li><a href="/references/product-updates.html">Product Updates</a></li>
+                
+                  <li><a href="/submitting-apps/submitting-device-apps-stores.html">Submitting Apps to Device Stores</a></li>
+                
               
-                <li><a href="/references/glossary.html">Glossary</a></li>
+            </ul>
+          
+        
+          
+            <h5 class="submenu-header"><a href="/references/">References</a></h5>            
+            <ul class="sidenav-submenu" style="display:none;">
               
-                <li><a href="/references/known-issues.html">Known Issues</a></li>
+                
+                  <li><a href="/references/product-updates.html">Product Updates</a></li>
+                
+              
+                
+                  <li><a href="/references/glossary.html">Glossary</a></li>
+                
+              
+                
+                  <li><a href="/references/known-issues.html">Known Issues</a></li>
+                
               
             </ul>
           

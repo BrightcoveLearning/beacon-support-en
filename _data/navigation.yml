@@ -1,16 +1,16 @@
 - section: Home
   url: /
-- section: Get Started
-  url: /get-started/
+- section: Getting Started
+  url: /getting-started/
   docs:
     - name: Application Design Considerations
-      url: /get-started/app-design-considerations.html
+      url: /getting-started/app-design-considerations.html
     - name: Creating Your Sitemap
-      url: /get-started/creating-your-site-map.html
+      url: /getting-started/creating-your-site-map.html
     - name: Implementation Phases
-      url: /get-started/implementation-phases.html
+      url: /getting-started/implementation-phases.html
     - name: Learning Guide
-      url: /get-started/learning-guide-bc-beacon.html
+      url: /getting-started/learning-guide-bc-beacon.html
 - section: Video Cloud Sync
   url: /video-cloud-sync/
   docs:

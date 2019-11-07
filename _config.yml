@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -31,7 +31,7 @@ site_url: "https://beacon.support.brightcove.com"
 product: Brightcove Beacon
 color: rgb(51, 51, 51)
 defaults:
-  - 
+  -
     scope:
       path: ""
       type: "pages"
@@ -44,10 +44,10 @@ collections:
     order:
       - index.html
     title: Getting Started
-    relative_directory: /get-started
+    relative_directory: /getting-started
     docs:
       home:
-        relative_path: /get-started/index.html
+        relative_path: /getting-started/index.html
   video_cloud_sync:
     output: true
     order:

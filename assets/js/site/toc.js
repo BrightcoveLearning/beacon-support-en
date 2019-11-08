@@ -6,7 +6,9 @@ var BCLS_toc = ( function (window, document) {
     link,
     i,
     iMax,
-    frag = document.createDocumentFragment();
+    frag = document.createDocumentFragment(),
+    parent,
+    grandparent;
 
     iMax = h2s.length;
     for (i = 0; i < iMax; i++) {
@@ -20,5 +22,12 @@ var BCLS_toc = ( function (window, document) {
         frag.appendChild(li);
       }
     }
-    in_page_nav.appendChild(frag);''
+    console.log('frag', frag.firstChild);
+    if (frag.firstChild) {
+      in_page_nav.appendChild(frag);''
+    } else {
+      parent = in_page_nav.parentNode;
+      grandparent = parent.parentNode;
+      grandparent.removeChild(parent);
+    }
 })(window, document);

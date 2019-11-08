@@ -795,20 +795,23 @@ ul.sidenav-subsubmenu {
 }
 
 .right-side-bar {
-  color: {{ site.color }};
   background-color: white;
   margin-top: -1em;
   margin-bottom: -1em;
   padding-top: 1em;
   padding-bottom: 1em;
+  position: relative;
+  color: {{ site.color }};
 }
 
 .right-side-nav {
   padding: .2em;
   background-color: rgb(239, 251, 255);
   color: inherit;
-  margin-top:13em;
-
+  /* margin-top:13em; */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20em;
 }
 
 .right-side-nav h6 {

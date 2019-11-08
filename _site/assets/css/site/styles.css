@@ -719,8 +719,12 @@ ul.menu {
   /* padding: .4rem; */
 }
 /* search */
+
+.gsc-control-wrapper-cse {
+  margin-top: 0;
+}
 .search-bar {
-  margin-top: -.5em;
+  margin-top: .5em;
   margin-bottom: 1em;
   /* padding-bottom: .8em; */
   /* background-color: white; */
@@ -888,11 +892,6 @@ button.gsc-search-button
   color: inherit;
 }
 
-.sidenav h5.submenu-header::after, .sidenav li.submenu-header::after {
-  content: ' +';
-  font-weight: bold;
-  color: inherit;
-}
 
 .sidenav a ::visited {
   color: inherit;
@@ -1074,13 +1073,31 @@ right-side-bar {
   color: rgb(11, 155, 179);
 }
 
+/* fontawesome */
+
+.fa-stack {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.stacked-icons {
+  margin-top: 20px;
+  text-align: center;
+}
+.fa-stack + .fa-stack {
+  margin-left: .3em;
+}
+.fa-stack {
+  margin-bottom: 20px;
+}
+
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
+      
       <nav class="right-side-nav">
         <h6 class="toc">Page Contents</h6>
         <ul id="in_page_nav" class="list-none"></ul>
       </nav>
+      
     </div>
   </div>
 </div>
@@ -1164,7 +1181,9 @@ right-side-bar {
   <script src="/assets/js/site/prism.js"></script>
   <script src="/assets/js/site/site.js"></script>
   <script src="/assets/js/site/tabs.js"></script>
+  
   <script src="/assets/js/site/toc.js"></script>
+  
 </body>
 
 </html>

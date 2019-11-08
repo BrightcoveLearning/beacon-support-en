@@ -590,8 +590,12 @@ ul.menu {
   /* padding: .4rem; */
 }
 /* search */
+
+.gsc-control-wrapper-cse {
+  margin-top: 0;
+}
 .search-bar {
-  margin-top: -.5em;
+  margin-top: .5em;
   margin-bottom: 1em;
   /* padding-bottom: .8em; */
   /* background-color: white; */
@@ -759,11 +763,6 @@ button.gsc-search-button
   color: inherit;
 }
 
-.sidenav h5.submenu-header::after, .sidenav li.submenu-header::after {
-  content: ' +';
-  font-weight: bold;
-  color: inherit;
-}
 
 .sidenav a ::visited {
   color: inherit;
@@ -943,4 +942,20 @@ left-side-bar {
 right-side-bar {
   background-color: rgb(239, 251, 255);
   color: rgb(11, 155, 179);
+}
+
+/* fontawesome */
+
+.fa-stack {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.stacked-icons {
+  margin-top: 20px;
+  text-align: center;
+}
+.fa-stack + .fa-stack {
+  margin-left: .3em;
+}
+.fa-stack {
+  margin-bottom: 20px;
 }

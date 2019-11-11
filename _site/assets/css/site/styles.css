@@ -22,7 +22,7 @@
     <span class="secondary-nav"><a href="https://support.brightcove.com/contact-support">Contact Support</a> <span style="vertical-align: top;">|</span> <a href="https://status.brightcove.com/">System Status</a></span>
   </div>
   <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
+    <ol class="breadcrumb arr-right">
       
       
       <li class="breadcrumb-item active" aria-current="page"></li>
@@ -1095,6 +1095,20 @@ right-side-bar {
   margin-bottom: 20px;
 }
 
+/* breadcrumb divider */
+.arr-right .breadcrumb-item+.breadcrumb-item::before {
+ 
+  content: "›";
+ 
+  vertical-align:top;
+ 
+  color: rgb(16, 155, 246);
+ 
+  font-size:35px;
+ 
+  line-height:18px;
+ 
+}
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -1110,7 +1124,7 @@ right-side-bar {
 
 <hr>
 <div class="last-updated">
-  Page last updated on 08 November 2019
+  Page last updated on 11 November 2019
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

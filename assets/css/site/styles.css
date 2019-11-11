@@ -963,3 +963,18 @@ right-side-bar {
 .fa-stack {
   margin-bottom: 20px;
 }
+
+/* breadcrumb divider */
+.arr-right .breadcrumb-item+.breadcrumb-item::before {
+ 
+  content: "›";
+ 
+  vertical-align:top;
+ 
+  color: rgb(16, 155, 246);
+ 
+  font-size:35px;
+ 
+  line-height:18px;
+ 
+}

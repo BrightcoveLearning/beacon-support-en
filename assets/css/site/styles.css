@@ -11,6 +11,12 @@ body, .body {
   color: white;
 }
 
+body {
+  margin: 0;
+  position: relative;
+}
+
+
 .body {
   background-color: {{ site.color }};
   color: white;
@@ -19,6 +25,11 @@ body, .body {
 /* article should contain all content that we edit */
 article, .bcls-article {
   padding: 1em;
+  /* max-width: 1000px; */
+}
+article > i, .bcls-article > i {
+  float: left;
+  margin-right: .2em;
   /* max-width: 1000px; */
 }
 
@@ -859,11 +870,6 @@ h5.landing-page-item-header {
   font-size: .9rem;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  position: relative;
-}
 
 h1 {
   color: {{ site.color }};
@@ -929,10 +935,6 @@ footer nav li {
   min-height: 500px; */
   border: 1px solid black;
   margin: 5px;
-}
-
-body {
-  counter-reset: figure 0 table 0 step 0;
 }
 
 /* side nav */

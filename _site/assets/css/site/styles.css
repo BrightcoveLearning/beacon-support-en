@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/assets/css/site/styles.css">
   <link rel="stylesheet" href="/assets/css/site/prism.css">
   <link rel="stylesheet" href="/assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="/assets/css/site/tabs.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/9e0492656a.js" crossorigin="anonymous"></script>
@@ -63,41 +64,41 @@
           
         
           
-            <h5 class="submenu-header"><a href="/video-cloud-sync/">Video Cloud Sync</a></h5>            
+            <h5 class="submenu-header"><a href="/syncing-with-video-cloud/">Syncing with Video Cloud</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
-                  <li><a href="/video-cloud-sync/vc-custom-fields.html">Video Cloud Custom Fields</a></li>
+                  <li><a href="/syncing-with-video-cloud/vc-custom-fields.html">Video Cloud Custom Fields</a></li>
                 
               
             </ul>
           
         
           
-            <h5 class="submenu-header"><a href="/admin-console/">Admin Console</a></h5>            
+            <h5 class="submenu-header"><a href="/using-brightcove-beacon/">Using Brightcove Beacon</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
-                  <li><a href="/admin-console/playlists.html">Creating a Playlist</a></li>
+                  <li><a href="/using-brightcove-beacon/playlists.html">Creating a Playlist</a></li>
                 
               
                 
-                  <li><a href="/admin-console/advertisement.html">Create Ad Config</a></li>
+                  <li><a href="/using-brightcove-beacon/advertisement.html">Create Ad Config</a></li>
                 
               
                 
-                  <li><a href="/admin-console/vc-ad-config-id.html">Ad Configuration ID</a></li>
+                  <li><a href="/using-brightcove-beacon/vc-ad-config-id.html">Ad Configuration ID</a></li>
                 
               
             </ul>
           
         
           
-            <h5 class="submenu-header"><a href="/submitting-apps/">Submitting Apps</a></h5>            
+            <h5 class="submenu-header"><a href="/creating-your-apps/">Creating Your Apps</a></h5>            
             <ul class="sidenav-submenu" style="display:none;">
               
                 
-                  <li><a href="/submitting-apps/submitting-device-apps-stores.html">Submitting Apps to Device Stores</a></li>
+                  <li><a href="/creating-your-apps/submitting-device-apps-stores.html">Submitting Device Apps to Stores</a></li>
                 
               
             </ul>
@@ -143,6 +144,12 @@ body, .body {
   color: white;
 }
 
+body {
+  margin: 0;
+  position: relative;
+}
+
+
 .body {
   background-color: rgb(51, 51, 51);
   color: white;
@@ -151,6 +158,11 @@ body, .body {
 /* article should contain all content that we edit */
 article, .bcls-article {
   padding: 1em;
+  /* max-width: 1000px; */
+}
+article > i, .bcls-article > i {
+  float: left;
+  margin-right: .2em;
   /* max-width: 1000px; */
 }
 
@@ -991,11 +1003,6 @@ h5.landing-page-item-header {
   font-size: .9rem;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  position: relative;
-}
 
 h1 {
   color: rgb(51, 51, 51);
@@ -1063,10 +1070,6 @@ footer nav li {
   margin: 5px;
 }
 
-body {
-  counter-reset: figure 0 table 0 step 0;
-}
-
 /* side nav */
 
 left-side-bar {
@@ -1097,31 +1100,45 @@ right-side-bar {
 
 /* landing page sections */
 .bcls-card {
-  padding: 5%;
+  padding: 4%;
   box-shadow: 0px 5px 15px 0 RGB(204, 204, 204);
   -webkit-transition: -webkit-box-shadow 0.3s ease-in;
-  transition: -webkit-box-shadow 0.3s ease-in;
-  transition: box-shadow 0.3s ease-in;
-  transition: box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
-  width: 43%;
+  cursor: pointer;
   display: inline-block;
   margin-right: 1em;
   margin-bottom: 1em;
   min-height: 275px;
   max-height: 350px;
+  position: relative;
+  transition: -webkit-box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
   vertical-align: top;
+  width: 46%;
+}
+
+
+
+.bcls-card::hover {
+  box-shadow: 0px 10px 20px 0 RGB(51, 204, 204);
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in;
+  transition: -webkit-box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
 }
 
 .bcls-card-wide {
   padding: 5%;
   box-shadow: 0px 5px 15px 0 RGB(204, 204, 204);
   -webkit-transition: -webkit-box-shadow 0.3s ease-in;
+  cursor: pointer;
+  display: block;
+  height: 12em;;
+  margin-bottom: 1.5em;
+  position: relative;
   transition: -webkit-box-shadow 0.3s ease-in;
   transition: box-shadow 0.3s ease-in;
   transition: box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
-  display: block;
-  margin-bottom: 1.5em;
-  height: 12em;;
 }
 
 .bcls-card i, .bcls-card-wide span {
@@ -1134,7 +1151,8 @@ right-side-bar {
 }
 
 .bcls-card h2, .bcls-card-wide h2 {
-  padding-left: .5em;
+  margin-left: 20%;
+  margin-bottom: 1em;
 }
 
 .bcls-card p, .bcls-card-wide p {

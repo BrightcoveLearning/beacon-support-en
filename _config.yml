@@ -48,16 +48,16 @@ collections:
     docs:
       home:
         relative_path: /getting-started/index.html
-  video_cloud_sync:
+  syncing_with_video_cloud:
     output: true
     order:
       - index.html
-    title: Video Cloud Sync
-    relative_directory: /video-cloud-sync
+    title: Syncing with Video Cloud
+    relative_directory: /syncing-with-video-cloud
     docs:
       home:
-        title: Video Cloud Sync Home
-        relative_path: /video-cloud-sync/index.html
+        title: Syncing with Video Cloud Home
+        relative_path: /syncing-with-video-cloud/index.html
   using_brightcove_beacon:
     output: true
     order:

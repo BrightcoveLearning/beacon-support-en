@@ -11,11 +11,11 @@
       url: /getting-started/implementation-phases.html
     - name: Learning Guide
       url: /getting-started/learning-guide-bc-beacon.html
-- section: Video Cloud Sync
-  url: /video-cloud-sync/
+- section: Syncing with Video Cloud
+  url: /syncing-with-video-cloud/
   docs:
     - name: Video Cloud Custom Fields
-      url: /video-cloud-sync/vc-custom-fields.html
+      url: /syncing-with-video-cloud/vc-custom-fields.html
 - section: Using Brightcove Beacon
   url: /using-brightcove-beacon/
   docs:

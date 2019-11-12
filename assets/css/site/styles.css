@@ -965,31 +965,45 @@ right-side-bar {
 
 /* landing page sections */
 .bcls-card {
-  padding: 5%;
+  padding: 4%;
   box-shadow: 0px 5px 15px 0 RGB(204, 204, 204);
   -webkit-transition: -webkit-box-shadow 0.3s ease-in;
-  transition: -webkit-box-shadow 0.3s ease-in;
-  transition: box-shadow 0.3s ease-in;
-  transition: box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
-  width: 43%;
+  cursor: pointer;
   display: inline-block;
   margin-right: 1em;
   margin-bottom: 1em;
   min-height: 275px;
   max-height: 350px;
+  position: relative;
+  transition: -webkit-box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
   vertical-align: top;
+  width: 46%;
+}
+
+
+
+.bcls-card::hover {
+  box-shadow: 0px 10px 20px 0 RGB(51, 204, 204);
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in;
+  transition: -webkit-box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
 }
 
 .bcls-card-wide {
   padding: 5%;
   box-shadow: 0px 5px 15px 0 RGB(204, 204, 204);
   -webkit-transition: -webkit-box-shadow 0.3s ease-in;
+  cursor: pointer;
+  display: block;
+  height: 12em;;
+  margin-bottom: 1.5em;
+  position: relative;
   transition: -webkit-box-shadow 0.3s ease-in;
   transition: box-shadow 0.3s ease-in;
   transition: box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
-  display: block;
-  margin-bottom: 1.5em;
-  height: 12em;;
 }
 
 .bcls-card i, .bcls-card-wide span {
@@ -1002,7 +1016,8 @@ right-side-bar {
 }
 
 .bcls-card h2, .bcls-card-wide h2 {
-  padding-left: .5em;
+  margin-left: 20%;
+  margin-bottom: 1em;
 }
 
 .bcls-card p, .bcls-card-wide p {

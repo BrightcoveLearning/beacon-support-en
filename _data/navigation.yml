@@ -16,15 +16,15 @@
   docs:
     - name: Video Cloud Custom Fields
       url: /video-cloud-sync/vc-custom-fields.html
-- section: Admin Console
-  url: /admin-console/
+- section: Using Brightcove Beacon
+  url: /using-brightcove-beacon/
   docs:
     - name: Creating a Playlist
-      url: /admin-console/playlists.html
+      url: /using-brightcove-beacon/playlists.html
     - name: Create Ad Config
-      url: /admin-console/advertisement.html
+      url: /using-brightcove-beacon/advertisement.html
     - name: Ad Configuration ID
-      url: /admin-console/vc-ad-config-id.html
+      url: /using-brightcove-beacon/vc-ad-config-id.html
 - section: Creating Your Apps
   url: /creating-your-apps/
   docs:

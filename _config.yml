@@ -58,16 +58,16 @@ collections:
       home:
         title: Video Cloud Sync Home
         relative_path: /video-cloud-sync/index.html
-  admin_console:
+  using_brightcove_beacon:
     output: true
     order:
       - index.html
-    title: Admin Console
-    relative_directory: /admin-console
+    title: Using Brightcove Beacon
+    relative_directory: /using-brightcove-beacon
     docs:
       home:
-        title: Admin Console Home
-        relative_path: /admin-console/index.html
+        title: Using Brightcove Beacon Home
+        relative_path: /using-brightcove-beacon/index.html
   creating_your_apps:
     output: true
     order:

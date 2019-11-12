@@ -68,16 +68,16 @@ collections:
       home:
         title: Admin Console Home
         relative_path: /admin-console/index.html
-  submitting_apps:
+  creating_your_apps:
     output: true
     order:
       - index.html
-    title: Submitting Apps
-    relative_directory: /submitting_apps
+    title: Creating Your Apps
+    relative_directory: /creating-your-apps
     docs:
       home:
-        title: Submitting Apps Home
-        relative_path: /submitting_apps/index.html
+        title: Creating Your Apps Home
+        relative_path: /creating-your-apps/index.html
   references:
     output: true
     order:

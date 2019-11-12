@@ -25,11 +25,11 @@
       url: /admin-console/advertisement.html
     - name: Ad Configuration ID
       url: /admin-console/vc-ad-config-id.html
-- section: Submitting Apps
-  url: /submitting-apps/
+- section: Creating Your Apps
+  url: /creating-your-apps/
   docs:
-    - name: Submitting Apps to Device Stores
-      url: /submitting-apps/submitting-device-apps-stores.html
+    - name: Submitting Device Apps to Stores
+      url: /creating-your-apps/submitting-device-apps-stores.html
 - section: References
   url: /references/
   docs:

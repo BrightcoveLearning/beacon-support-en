@@ -19,9 +19,9 @@
 - section: Using Brightcove Beacon
   url: /using-brightcove-beacon/
   docs:
-    - name: Creating a Playlist
-      url: /using-brightcove-beacon/playlists.html
-    - name: Create Ad Config
+    #- name: Creating a Playlist
+    #  url: /using-brightcove-beacon/playlists.html
+    - name: Create an Ad Config
       url: /using-brightcove-beacon/advertisement.html
     - name: Ad Configuration ID
       url: /using-brightcove-beacon/vc-ad-config-id.html

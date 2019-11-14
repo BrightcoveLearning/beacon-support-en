@@ -374,12 +374,14 @@
               </tr>
               <tr>
                 <td>beacon.shortDescription</td>
+                <td>beacon_shortdescription</td>
                 <td>Allows to provide a short description tailored for Beacon - if this value is not set it uses the text set in the video short description field</td>
                 <td>No</td>
                 <td>Custom field</td>
               </tr>
               <tr>
                 <td>beacon.longDescription</td>
+                <td>beacon_longdescription</td>
                 <td>Allows to provide a long description tailored for Beacon - if this value is not set it uses the text set in the video long description field</td>
                 <td>No</td>
                 <td>Custom field</td>
@@ -387,6 +389,7 @@
 
               <tr>
                 <td>beacon.viewerScore</td>
+                <td>beacon_viewerscore</td>
                 <td>Allow to set an initial score for the viewer ratings (either coming from some other system or to set the initial value). This will only be used if the video asset is new in Beacon and will be ignored for any subsequent updates of
                   this asset in Beacon - this so that we do not override the values that are set by users in Beacon. Possible values are from 0 to 100.</td>
                 <td>No</td>
@@ -394,12 +397,14 @@
               </tr>
               <tr>
                 <td>beacon.trailer.id</td>
+                <td>beacon_trailer_id</td>
                 <td>Points to another video asset in video cloud that will be used as a trailer for the asset where this field is set. The asset being pointed to will be discarded as a Movie or Episode</td>
                 <td>No</td>
                 <td>Custom field</td>
               </tr>
               <tr>
                 <td>beacon.ingest</td>
+                <td>beacon_ingest</td>
                 <td>If this field is not present, then it will default to ingest. If you do not want some specific asset to not be synched, then this should be set to No</td>
                 <td>No</td>
                 <td>Custom field</td>
@@ -417,6 +422,7 @@
             <thead class="bcls-table__head">
               <tr>
                 <th>Video Cloud Field</th>
+                <th>Internal<br>Name</th>
                 <th>Notes</th>
                 <th>Required</th>
                 <th>Default Value</th>
@@ -426,6 +432,7 @@
             <tbody class="bcls-table__body">
               <tr>
                 <td>beacon.rights.&lt;counter&gt;.type</td>
+                <td>beacon_rights_<br>&lt;counter&gt;_type</td>
                 <td>Identifies if the type of monetization for the asset - possible values are: <strong>FREE</strong>, <strong>AVOD</strong>, <strong>SVOD</strong> and <strong>INHERIT</strong>; <strong>INHERIT</strong> is only applicable to <em>Episode</em> assets</td>
                 <td>No</td>
                 <td>FREE</td>
@@ -433,6 +440,7 @@
               </tr>
               <tr>
                 <td>beacon.rights.&lt;counter&gt;.startDate</td>
+                <td>beacon_rights_<br>&lt;counter&gt;_startDate</td>
                 <td>Date when the asset should be exposed under the access restrictions and monetization options in this particular set</td>
                 <td>No</td>
                 <td>If not set, defaults to video availability start date</td>
@@ -440,6 +448,7 @@
               </tr>
               <tr>
                 <td>beacon.rights.&lt;counter&gt;.endDate</td>
+                <td>beacon_rights_<br>&lt;counter&gt;_endDate</td>
                 <td>Date when the asset should be no longer exposed under the access restrictions and monetization options in this particular set</td>
                 <td>No</td>
                 <td>If not set defaults to video Availability end date</td>
@@ -447,6 +456,7 @@
               </tr>
               <tr>
                 <td>beacon.rights.&lt;counter&gt;.devices</td>
+                <td>beacon_rights_<br>&lt;counter&gt;_devices</td>
                 <td>Comma separated list of devices supported in Beacon to which the asset should be exposed under the access restrictions and monetization options in this particular set.Possible values are: iOS, Android, web, Roku, STV, Fire TV,
                   LGTV, Samsung, Apple TV, Android TV and Panasonic</td>
                 <td>No</td>
@@ -455,6 +465,7 @@
               </tr>
               <tr>
                 <td>beacon.rights.&lt;counter&gt;.locationsPermit</td>
+                <td>beacon_rights_<br>&lt;counter&gt;_locationspermit</td>
                 <td>Comma separated list of locations defined in Beacon to which the asset should be exposed under the access restrictions and monetization options in this particular set</td>
                 <td>No</td>
                 <td>If not set defaults to all locations supported in Beacon</td>
@@ -462,6 +473,7 @@
               </tr>
               <tr>
                 <td>beacon.rights.&lt;counter&gt;.locationsDeny</td>
+                <td>beacon_rights_<br>&lt;counter&gt;_locationsdeny</td>
                 <td></td>
                 <td>No</td>
                 <td></td>
@@ -469,6 +481,7 @@
               </tr>
               <tr>
                 <td>beacon.rights.&lt;counter&gt;.packageName</td>
+                <td>beacon_rights_<br>&lt;counter&gt;_packageName</td>
                 <td></td>
                 <td>Yes if the type is set to SVOD</td>
                 <td></td>
@@ -476,6 +489,7 @@
               </tr>
               <tr>
                 <td>beacon.rights.&lt;counter&gt;.adConfiguration</td>
+                <td>beacon_rights_<br>&lt;counter&gt;_adConfiguration</td>
                 <td>Identifier of an ad configuration in Beacon</td>
                 <td>Yes if the type is set as AVOD</td>
                 <td>Custom field</td>
@@ -490,6 +504,7 @@
             <thead class="bcls-table__head">
               <tr>
                 <th>Video Cloud Field</th>
+                <th>Internal<br>Name</th>
                 <th>Notes</th>
                 <th>Required</th>
                 <th>Type</th>
@@ -497,19 +512,22 @@
             </thead>
             <tbody class="bcls-table__body">
               <tr>
-                <td>beacon.episode.seriesName</td>
+                <td>beacon.episode.<br>seriesName</td>
+                <td>beacon_episode_<br>seriesName</td>
                 <td>Should point to the series identifier in Beacon under which an episode belongs (series need to be created directly in Beacon)</td>
                 <td>Yes for episode assets; No otherwise</td>
                 <td>Custom field</td>
               </tr>
               <tr>
-                <td>beacon.episode.seasonNumber</td>
+                <td>beacon.episode.<br>seasonNumber</td>
+                <td>beacon_episode_<br>seasonnumber</td>
                 <td>Should point to the series number in Beacon under which an episode belongs (seasons need to be created directly in Beacon)</td>
                 <td>Yes for episode assets; No otherwise</td>
                 <td>Custom field</td>
               </tr>
               <tr>
-                <td>beacon.episode.number</td>
+                <td>beacon.episode.<br>number</td>
+                <td>beacon_episode_<br>number</td>
                 <td>Identifies the episode number within the season</td>
                 <td>Yes for episode assets; No otherwise</td>
                 <td>Custom field</td>

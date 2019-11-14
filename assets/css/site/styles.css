@@ -12,6 +12,7 @@ body, .body {
 }
 
 body {
+  counter-reset: figure 0 table 0 step 0;
   margin: 0;
   position: relative;
 }
@@ -592,15 +593,6 @@ ul.menu {
 }
 
 /* Jekyll layout styles */
-.div-header {
-  background-color: {{ site.color }};
-  clear: both;
-  margin-left: 0;
-  margin-right: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  /* padding: .4rem; */
-}
 /* search */
 
 .gsc-control-wrapper-cse {
@@ -707,25 +699,6 @@ button.gsc-search-button
 	background-color: rgb(11, 155, 179) !important;
 }
 
-.product-logo {
-  border: none;
-  margin-left: 1rem;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.secondary-nav {
-  float: right;
-  margin-right: 2em;
-  vertical-align: top;
-  color: rgb(206, 206, 206);
-  font-size: smaller;
-}
-
-.secondary-nav a {
-  vertical-align: top;
-  color: rgb(206, 206, 206);
-}
 
 .bcls-active {
   color: {{ site.color }} !important;
@@ -739,15 +712,50 @@ button.gsc-search-button
 
 /* docs header */
 
-.image-header {
-  width: 100%;
+.div-header {
+  background-color: {{ site.color }};
+  clear: both;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 4em;
+  text-align: right;
+  /* padding: .4rem; */
 }
 
-.image-logo {
+
+.div-header {
+}
+
+
+.product-logo {
   float: left;
   border: none;
-  margin-left: 1em;
+  margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
+
+.secondary-nav {
+  margin-top: 1.3em;
+  margin-right: 2em;
+  vertical-align: top;
+  color: rgb(206, 206, 206);
+  font-size: .9rem;
+  line-height: 1.6em;
+}
+
+.secondary-nav img {
+  vertical-align: text-bottom;
+  padding-top: .2em;
+}
+
+.secondary-nav a {
+  vertical-align: top;
+  color: rgb(206, 206, 206);
+}
+
 
 /* left nav */
 
@@ -801,8 +809,8 @@ ul.sidenav-subsubmenu {
 
 .sidenav ul li {
   margin-left: -2.5em;
-  font-size: .8rem;
-  padding-left: 2px;
+  font-size: .9rem;
+  padding: 2px;
 }
 
 .right-side-bar {
@@ -931,7 +939,6 @@ footer nav li {
 .series_details {
   vertical-align: top;
   display: inline-block;
-  /* width: 35%;
   min-height: 500px; */
   border: 1px solid black;
   margin: 5px;
@@ -939,9 +946,12 @@ footer nav li {
 
 /* side nav */
 
-left-side-bar {
+
+
+.left-side-bar {
   background-color: {{ site.color }};
   color: rgb(206, 206, 206);
+  max-width: 425px;
 }
 
 right-side-bar {
@@ -974,14 +984,14 @@ right-side-bar {
   display: inline-block;
   margin-right: 1em;
   margin-bottom: 1em;
-  min-height: 275px;
+  min-height: 350px;
   max-height: 350px;
   position: relative;
   transition: -webkit-box-shadow 0.3s ease-in;
   transition: box-shadow 0.3s ease-in;
   transition: box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
   vertical-align: top;
-  width: 46%;
+  width: 47%;
 }
 
 

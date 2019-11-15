@@ -6,7 +6,7 @@ parent: Syncing with Video Cloud
 <article class="bcls-article">
 
   <h1>{{ site.product }}: Video Cloud Custom Fields</h1>
-  <summary>In this topic, you will see the Video Cloud custom fields needed for syncronization into Brightcove Beacon.</summary>
+  <summary>In this topic, you will see the Video Cloud custom fields needed for synchronization into Brightcove Beacon.</summary>
         <section class="bcls-section">
           <h2 id="Introduction">Introduction</h2>
           <p>Videos that will be imported into Brightcove Beacon from Video Cloud must have an enriched set of metadata defined for proper use in Brightcove Beacon. In this document you will see how to create new custom fields in Studio. In
@@ -133,14 +133,14 @@ parent: Syncing with Video Cloud
               </tr>
               <tr>
                 <td>images.wideBanner.src</td>
-                <td>images_wideBanner_src</td>
+                <td>images_widebanner_src</td>
                 <td><strong>Coming soon</strong> - In the meantime defaults to <code>images.poster.src</code></td>
                 <td>Yes</td>
                 <td>Standard</td>
               </tr>
               <tr>
                 <td>images.portraitPoster.src</td>
-                <td>images_portraitPoster_src</td>
+                <td>images_portraitposter_src</td>
                 <td><strong>Coming soon</strong> - In the meantime defaults to <code>images.poster.src</code></td>
                 <td>Yes</td>
                 <td>Standard</td>
@@ -309,7 +309,7 @@ parent: Syncing with Video Cloud
               </tr>
               <tr>
                 <td>beacon.rights.&lt;counter&gt;.startDate</td>
-                <td>beacon_rights_<br>&lt;counter&gt;_startDate</td>
+                <td>beacon_rights_<br>&lt;counter&gt;_startdate</td>
                 <td>Date when the asset should be exposed under the access restrictions and monetization options in this particular set</td>
                 <td>No</td>
                 <td>If not set, defaults to video availability start date</td>
@@ -317,7 +317,7 @@ parent: Syncing with Video Cloud
               </tr>
               <tr>
                 <td>beacon.rights.&lt;counter&gt;.endDate</td>
-                <td>beacon_rights_<br>&lt;counter&gt;_endDate</td>
+                <td>beacon_rights_<br>&lt;counter&gt;_enddate</td>
                 <td>Date when the asset should be no longer exposed under the access restrictions and monetization options in this particular set</td>
                 <td>No</td>
                 <td>If not set defaults to video Availability end date</td>
@@ -350,7 +350,7 @@ parent: Syncing with Video Cloud
               </tr>
               <tr>
                 <td>beacon.rights.&lt;counter&gt;.packageName</td>
-                <td>beacon_rights_<br>&lt;counter&gt;_packageName</td>
+                <td>beacon_rights_<br>&lt;counter&gt;_packagename</td>
                 <td></td>
                 <td>Yes if the type is set to SVOD</td>
                 <td></td>
@@ -358,9 +358,10 @@ parent: Syncing with Video Cloud
               </tr>
               <tr>
                 <td>beacon.rights.&lt;counter&gt;.adConfiguration</td>
-                <td>beacon_rights_<br>&lt;counter&gt;_adConfiguration</td>
+                <td>beacon_rights_<br>&lt;counter&gt;_adconfiguration</td>
                 <td>Identifier of an ad configuration in Beacon</td>
                 <td>Yes if the type is set as AVOD</td>
+                <td></td>
                 <td>Custom field</td>
               </tr>
             </tbody>
@@ -382,7 +383,7 @@ parent: Syncing with Video Cloud
             <tbody class="bcls-table__body">
               <tr>
                 <td>beacon.episode.<br>seriesName</td>
-                <td>beacon_episode_<br>seriesName</td>
+                <td>beacon_episode_<br>seriesname</td>
                 <td>Should point to the series identifier in Beacon under which an episode belongs (series need to be created directly in Beacon)</td>
                 <td>Yes for episode assets; No otherwise</td>
                 <td>Custom field</td>

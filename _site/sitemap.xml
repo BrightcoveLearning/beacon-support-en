@@ -160,6 +160,13 @@
     </url>
     
     <url>
+        <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/tools.html</loc>
+        <lastmod>2019-11-18</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/vc-ad-config-id.html</loc>
         <lastmod>2019-11-18</lastmod>
         <changefreq>daily</changefreq>

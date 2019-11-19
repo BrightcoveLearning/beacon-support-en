@@ -9,8 +9,8 @@
       url: /getting-started/implementation-phases.html
     - name: Application Design Considerations
       url: /getting-started/app-design-considerations.html
-    - name: Creating Your Sitemap
-      url: /getting-started/creating-your-site-map.html
+    - name: Creating Your Application Design
+      url: /getting-started/creating-your-app-design.html
 - section: Syncing with Video Cloud
   url: /syncing-with-video-cloud/
   docs:

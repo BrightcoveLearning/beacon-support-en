@@ -134,42 +134,43 @@
     </div>
 <!-- bootstrap layout -->
 
+<style media="screen">
+  .bcls-card-small {
+    height: 225px;
+  }
+</style>
+
 <article class="landing-page-wrapper">
   <h1>Getting Started Home</h1>
   <section class="landing-page-header" id="landing_page_header">
     <p>This section provides guides to help you get started with Brightcove Beacon</p>
   </section>
   <br>
-  <section class="landing-page-body-wrapper" id="landing_page_wrapper">
-    
-      
-    
-      
-      <section class="landing-page-section">
-        <h6 class="landing-page-item-header">Getting Started Topics</h6>
-        <ul class="landing-page-item list-none">
-          
-            <li><a href="/getting-started/learning-guide-bc-beacon.html">Learning Guide</a></li>
-          
-            <li><a href="/getting-started/implementation-phases.html">Implementation Phases</a></li>
-          
-            <li><a href="/getting-started/app-design-considerations.html">Application Design Considerations</a></li>
-          
-            <li><a href="/getting-started/creating-your-app-design.html">Creating Your Application Design</a></li>
-          
-        </ul>
+
+  <section onclick="window.location.pathname = '/getting-started/learning-guide-bc-beacon.html';" class="bcls-card-small">
+    <i class="fad fa-money-check-edit fa-3x" style="color: limegreen;"></i>
+    <h3 id="learning-guide">Learning Guide</h3>
+    <p>Explains Brightcove Beacon</p>
   </section>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+
+  <section onclick="window.location.pathname = '/getting-started/implementation-phases.html';" class="bcls-card-small">
+    <i class="fad fa-money-check-edit fa-3x" style="color: limegreen;"></i>
+    <h3 id="implementation-phases">Implementation Phases</h3>
+    <p>Details the implementation process</p>
   </section>
+
+  <section onclick="window.location.pathname = '/getting-started/app-design-considerations.html';" class="bcls-card-small">
+    <i class="fad fa-money-check-edit fa-3x" style="color: limegreen;"></i>
+    <h3 id="app-design-considerations">Application Design Considerations</h3>
+    <p>Provides examples and tips for your application design</p>
+  </section>
+
+  <section onclick="window.location.pathname = '/getting-started/creating-your-app-design.html';" class="bcls-card-small">
+    <i class="fad fa-money-check-edit fa-3x" style="color: limegreen;"></i>
+    <h3 id="create-app-design">Creating Your Application Design</h3>
+    <p>Walks you through alternatives for your application design</p>
+  </section>
+
 </article>
 
 <!-- complete bootstrap layout -->

@@ -9,16 +9,16 @@ title: Brightcove Beacon Home
   <br>
   <section class="landing-page-body-wrapper" id="landing_page_wrapper">
     {% for item in site.data.navigation %}
-      {% if item.docs != nil %}
-      <section class="landing-page-section">
-        <h6 class="landing-page-item-header">{{ item.section }}</h6>
-        <ul class="landing-page-item list-none">
-          {% for entry in item.docs %}
-            <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
-          {% endfor %}
-        </ul>
-  </section>
-      {% endif %}
+    {% if item.docs != nil %}
+    <section class="landing-page-section">
+      <h6 class="landing-page-item-header">{{ item.section }}</h6>
+      <ul class="landing-page-item list-none">
+        {% for entry in item.docs %}
+        <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
     {% endfor %}
   </section>
 </article>

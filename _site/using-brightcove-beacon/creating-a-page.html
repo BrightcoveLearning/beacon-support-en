@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Using the Tools</title>
+  <title>Creating a New Page</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/styles.css">
   <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/prism.css">
@@ -31,7 +31,7 @@
       
       <li class="breadcrumb-item"><a href="/using-brightcove-beacon/">Using Brightcove Beacon</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Using the Tools</li>
+      <li class="breadcrumb-item active" aria-current="page">Creating a New Page</li>
     </ol>
   </nav>
 </header>
@@ -146,42 +146,159 @@
     </div>
 <!-- bootstrap layout -->
 
+<h1>Creating a New Page</h1>
+<summary>In this topic, you will learn how to create a new Brightcove Beacon Page.</summary>
+
 <article class="bcls-article">
-
-  <h1>Using the Tools</h1>
-  <summary>In this topic, you will learn the functionality of the options in the tools section of Brightcove Beacon.</summary>
-
   <section class="bcls-section">
-    <h2 id="Tools">Introducing the Tools</h2>
-    <p>In Brightcove Beacon the <strong>wrench</strong> icon (labeled 1) represents a set of tools. The options for the tools are <strong>Ingestion</strong> and <strong>Cache</strong> (2). This document explores the two options.</p>
+    <h2 id="Overview">Overview</h2>
+    <p>The Brightcove Beacon page is where users select and watch your video content. Carousels display a group of videos or playlists that you have defined in Video Cloud Studio. Using the Brightcove Beacon Administrative Console, you can create a new page with a content carousel.</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/tools/icon-and-options.png" alt="icon-and-options">
+      <img class="bcls-image--no-border" width="350" src="/assets/images/pages/adding-page/home-page.png" alt="Home with carousel">
+      <figcaption class="bcls-caption--image">Home with carousel</figcaption>
     </figure>
   </section>
 
   <section class="bcls-section">
-    <h2 id="Ingestion">Ingestion</h2>
-    <p>In the Ingestion group you have three tools:</p>
-    <ul>
-      <li><strong>Update Brightcove Videos</strong>: If you have added videos to your Video Cloud catalog, or altered existing videos, this button syncs the newly added or updated videos to Brightcove Beacon.</li>
-      <li><strong>Update Brightcove Playlists</strong>: If you have added playlists to your Video Cloud catalog, or altered existing playlists, this button syncs the newly added or updated playlists to Brightcove Beacon.</li>
-      <li><strong>XML EPG - Fetch XML from Folder</strong>: When your EPG (Electronic Programming Guide) needs to be updated, this button retrieves the updated XML file via FTP. The path to the XML file is set during the onboarding process.</li>
-    </ul>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/tools/ingestion.png" alt="ingestion">
-    </figure>
-  </section>
+    <h2 id="Creating_a_page">Creating a page</h2>
+    <p>To create a new page, follow these steps:</p>
 
+    <ol class="bcls-tasklist">
+      <li>Login to Brightcove Beacon.</li>
+      <li>
+        <p>
+          In the top navigation, select <strong>Pages</strong>.
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" width="850" src="/assets/images/pages/top-navigation.png" alt="Top navigation">
+          <figcaption class="bcls-caption--image">Top navigation</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          You can use the <strong>Add new page</strong> button to create a new page. Since pages should already be set up for you, we will walk through the process of adding a carousel to an existing page. Select the page that you want to update. Here, we are selecting the link for the <strong>Home</strong> page.
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" width="850" src="/assets/images/pages/select-page.png" alt="Select an existing page">
+          <figcaption class="bcls-caption--image">Select an existing page</figcaption>
+        </figure>
+      </li>
+      <li>
+        Notice that the <strong>Basic Data</strong> is already populated.
+      </li>
+      <li>
+        <p>
+          Select the <strong>Add Block</strong> button.
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" width="650" src="/assets/images/pages/add-block-button.png" alt="Add Block button">
+          <figcaption class="bcls-caption--image">Add Block button</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          Choose the type of block that you want. In this case, we are choosing the <strong>list-block</strong>. Select the <strong>Add Block</strong> button associated with the block that you want.
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" width="650" src="/assets/images/pages/add-list-block.png" alt="Add list block">
+          <figcaption class="bcls-caption--image">Add list block</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          Choose the type of layout that you want, whether it is Featured, Carousel or Grid. In this example, we are selecting the <strong>Carousel Landscape Labels In</strong> layout.
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" width="650" src="/assets/images/pages/add-carousel-layout.png" alt="Add carousel layout">
+          <figcaption class="bcls-caption--image"Add carousel layout</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          Now that you have the container defined for the carousel, you are ready to add content. From the list-block item, select the <strong>Add Playlist</strong> button.
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" width="650" src="/assets/images/pages/add-carousel-layout.png" alt="Add carousel layout">
+          <figcaption class="bcls-caption--image"Add carousel layout</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          Choose a playlist. In this example, we are selecting the <strong>Add Playlist</strong> button associated with the <strong>Humor</strong> playlist.
+        </p>
+        <p>
+          You create playlists using Video Cloud Studio. They will appear here once you sync to your Video Cloud account.
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" width="650" src="/assets/images/pages/add-humor-playlist.png" alt="Add Humor playlist">
+          <figcaption class="bcls-caption--image"Add Humor playlist</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          We can see that the <strong>Humor</strong> playlist has been added to our carousel. You can drag and drop to re-order the items. Select the <strong>Update Page</strong> button to add the new carousel to the page.
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" width="650" src="/assets/images/pages/update-page.png" alt="Update Page button">
+          <figcaption class="bcls-caption--image"Update Page button</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          You are all set. You should see the new carousel on your Brightcove Beacon page. See the following sections for details about field values.
+        </p>
+      </li>
+    </ol>
+  </section>
   <section class="bcls-section">
-    <h2 id="Cache">Cache</h2>
-    <p>In the Cache group you have two tools:</p>
-    <ul>
-      <li><strong>Cache Purge</strong>: When you make changes in Brightcove Beacon, click this button to roll those changes into the current configuration. This option pulls all changes EXCEPT images into the current configuration.</li>
-      <li><strong>Image Cache</strong>: If you update any images in Brightcove Beacon, click this button to roll the image changes into the current configuration.</li>
-    </ul>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/tools/cache.png" alt="cache">
-    </figure>
+    <h2 id="Basic_Data">Basic Data</h2>
+    <p>The <strong>Basic Data</strong> section allows you to define the content and layout for your page. </p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Field</th>
+          <th>Required</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>System Title</td>
+          <td>Yes</td>
+          <td>Internal name for your page</td>
+        </tr>
+        <tr>
+          <td>Order</td>
+          <td>Yes</td>
+          <td>Page order on your site</td>
+        </tr>
+        <tr>
+          <td>Level Type</td>
+          <td>Yes</td>
+          <td>Master or Child</td>
+        </tr>
+        <tr>
+          <td>Page Type</td>
+          <td>Yes</td>
+          <td>screen is a common type to use</td>
+        </tr>
+        <tr>
+          <td>Presentation Type</td>
+          <td>Yes</td>
+          <td>Icontext, Icon, Text</td>
+        </tr>
+        <tr>
+          <td>Screen Layout</td>
+          <td>Yes</td>
+          <td>Specify whether the layout is titled or not</td>
+        </tr>
+        <tr>
+          <td>Is it home?</td>
+          <td>No</td>
+          <td>Select if this is the home page</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 </article>
 

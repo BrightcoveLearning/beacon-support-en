@@ -14,8 +14,10 @@
 - section: Syncing with Video Cloud
   url: /syncing-with-video-cloud/
   docs:
-    - name: Video Cloud Custom Fields
+    - name: Creating Video Cloud Custom Fields
       url: /syncing-with-video-cloud/vc-custom-fields.html
+    - name: Forcing a Sync
+      url: /syncing-with-video-cloud/forcing-a-sync.html
 - section: Using Brightcove Beacon
   url: /using-brightcove-beacon/
   docs:

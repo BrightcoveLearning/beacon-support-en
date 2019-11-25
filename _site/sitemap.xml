@@ -34,7 +34,21 @@
     </url>
     
     <url>
+        <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/creating-a-page.html</loc>
+        <lastmod>2019-11-25</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://beacon.support.brightcove.com/getting-started/creating-your-app-design.html</loc>
+        <lastmod>2019-11-25</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://beacon.support.brightcove.com/syncing-with-video-cloud/forcing-a-sync.html</loc>
         <lastmod>2019-11-25</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Using the Tools</title>
+  <title>Forcing a Sync</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/styles.css">
   <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/prism.css">
@@ -29,9 +29,9 @@
       
       
       
-      <li class="breadcrumb-item"><a href="/using-brightcove-beacon/">Using Brightcove Beacon</a></li>
+      <li class="breadcrumb-item"><a href="/syncing-with-video-cloud/">Syncing with Video Cloud</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Using the Tools</li>
+      <li class="breadcrumb-item active" aria-current="page">Forcing a Sync</li>
     </ol>
   </nav>
 </header>
@@ -148,39 +148,21 @@
 
 <article class="bcls-article">
 
-  <h1>Using the Tools</h1>
-  <summary>In this topic, you will learn the functionality of the options in the tools section of Brightcove Beacon.</summary>
+  <h1>Forcing a Sync</h1>
+  <summary>In this topic, you will learn how to force Brightcove Beacon to sync with the Video Cloud catalog.</summary>
 
   <section class="bcls-section">
-    <h2 id="Tools">Introducing the Tools</h2>
-    <p>In Brightcove Beacon the <strong>wrench</strong> icon (labeled 1) represents a set of tools. The options for the tools are <strong>Ingestion</strong> and <strong>Cache</strong> (2). This document explores the two options.</p>
+    <h2 id="Syncing_options">Syncing options</h2>
+    <p>In the <strong>Tools</strong> section of Brightcove Beacon you have two options for syncing Brightcove Beacon with the Video Cloud catalog. To get to the tools, click on the <strong>wrench</strong> icon in the top menu, then the <strong>Ingestion</strong> option on the left menu:</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/tools/icon-and-options.png" alt="icon-and-options">
-    </figure>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Ingestion">Ingestion</h2>
-    <p>In the Ingestion group you have three tools:</p>
+  <img class="bcls-image" src="/assets/images/syncing-with-vc/force-sync.png" alt="force-sync">
+    <p>Here you have two tools with which to direct a sync. They are:</p>
     <ul>
       <li><strong>Update Brightcove Videos</strong>: If you have added videos to your Video Cloud catalog, or altered existing videos, this button syncs the newly added or updated videos to Brightcove Beacon.</li>
       <li><strong>Update Brightcove Playlists</strong>: If you have added playlists to your Video Cloud catalog, or altered existing playlists, this button syncs the newly added or updated playlists to Brightcove Beacon.</li>
-      <li><strong>XML EPG - Fetch XML from Folder</strong>: When your EPG (Electronic Programming Guide) needs to be updated, this button retrieves the updated XML file via FTP. The path to the XML file is set during the onboarding process.</li>
     </ul>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/tools/ingestion.png" alt="ingestion">
-    </figure>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Cache">Cache</h2>
-    <p>In the Cache group you have two tools:</p>
-    <ul>
-      <li><strong>Cache Purge</strong>: When you make changes in Brightcove Beacon, click this button to roll those changes into the current configuration. This option pulls all changes EXCEPT images into the current configuration.</li>
-      <li><strong>Image Cache</strong>: If you update any images in Brightcove Beacon, click this button to roll the image changes into the current configuration.</li>
-    </ul>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/tools/cache.png" alt="cache">
+      <img class="bcls-image" src="/assets/images/syncing-with-vc/sync-buttons.png" alt="sync-buttons">
     </figure>
   </section>
 </article>

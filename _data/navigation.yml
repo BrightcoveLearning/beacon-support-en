@@ -21,7 +21,9 @@
   docs:
     #- name: Creating a Playlist
     #  url: /using-brightcove-beacon/playlists.html
-    - name: Create an Ad Config
+    - name: Adding a Carousel to a Page
+      url: /using-brightcove-beacon/adding-to-page.html
+    - name: Creating an Ad Configuration
       url: /using-brightcove-beacon/advertisement.html
     - name: Ad Configuration ID
       url: /using-brightcove-beacon/vc-ad-config-id.html

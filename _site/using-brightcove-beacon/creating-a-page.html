@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- remember to remove the following line when the site is ready to go live -->
+  <meta name="robots" content="noindex" />
   <title>Creating a New Page</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/styles.css">
@@ -13,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/9e0492656a.js" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/google-analytics.js"></script>
 </head>
 
 <body class="body">
@@ -176,22 +179,81 @@
       </li>
       <li>
         <p>
-          You can use the <strong>Add new page</strong> button to create a new page. Since pages should already be set up for you, we will walk through the process of adding a carousel to an existing page. Select the page that you want to update. Here, we are selecting the link for the <strong>Home</strong> page.
+          Select the <strong>Add new page</strong> button to create a new page.
         </p>
         <figure class="bcls-figure">
-          <img class="bcls-image--no-border" width="850" src="/assets/images/pages/select-page.png" alt="Select an existing page">
-          <figcaption class="bcls-caption--image">Select an existing page</figcaption>
+          <img class="bcls-image--no-border" width="850" src="/assets/images/pages/adding-page/add-new-page.png" alt="Add new page button">
+          <figcaption class="bcls-caption--image">Add new page button</figcaption>
         </figure>
       </li>
       <li>
-        Notice that the <strong>Basic Data</strong> is already populated.
+        <p>
+          For the <strong>Basic Data</strong> tab, enter the following field values:
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" width="850" src="/assets/images/pages/adding-page/basic-data.png" alt="Basic Data">
+          <figcaption class="bcls-caption--image">Basic Data</figcaption>
+        </figure>
+        <ul>
+          <li>
+            <strong>System Title</strong> - Internal system page name. This will not be displayed to users, but is used to generate a friendly URL. You will enter a viewable title in a later step.
+          </li>
+          <li>
+            <strong>Order</strong> - Page order on your home page
+          </li>
+          <li>
+            <strong>Genre Type</strong> - Values:
+            <ul>
+              <li>
+                <strong>Master</strong> - Main page
+              </li>
+              <li>
+                <strong>Child</strong> - Subordinate page
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Navigation Type</strong> - Select from a list of page templates
+          </li>
+          <li>
+            <strong>Presentation Type</strong> - Values:
+            <ul>
+              <li>
+                <strong>icontext</strong> - Display an icon with text inside of it
+              </li>
+              <li>
+                <strong>icon</strong> - Display an icon
+              </li>
+              <li>
+                <strong>text</strong> - Display text
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Screen Layout</strong> - Values: (not every Navigation Type will have a Screen Layout)
+            <ul>
+              <li>
+                <strong>Screen Layout Titled</strong> - Layout with titles
+              </li>
+              <li>
+                <strong>Screen Layout Without Title</strong> - Layout with no titles
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Is it home?</strong> - Select if this is the home page
+          </li>
+        </ul>
+      </li>
+      <li>
+        Next, we will add a block to the page. Blocks are containers for your playlists. Some Navigation Types do not have blocks, such as sign-in and logout types. We have selected a <strong>Navigation Type</strong> with a value of <strong>screen</strong>.
       </li>
       <li>
         <p>
-          Select the <strong>Add Block</strong> button.
+          Select the <strong>Add Block</strong> button. When you select the button, the block types will appear on the right side.
         </p>
         <figure class="bcls-figure">
-          <img class="bcls-image--no-border" width="650" src="/assets/images/pages/add-block-button.png" alt="Add Block button">
+          <img class="bcls-image--no-border" width="850" src="/assets/images/pages/adding-page/add-block-button.png" alt="Add Block button">
           <figcaption class="bcls-caption--image">Add Block button</figcaption>
         </figure>
       </li>
@@ -206,6 +268,15 @@
       </li>
       <li>
         <p>
+          Select the <strong>Add Layout</strong> button. When you select the button, the layout types will appear on the right side.
+        </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" width="850" src="/assets/images/pages/adding-page/add-layout-button.png" alt="Add Layout button">
+          <figcaption class="bcls-caption--image">Add Layout button</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
           Choose the type of layout that you want, whether it is Featured, Carousel or Grid. In this example, we are selecting the <strong>Carousel Landscape Labels In</strong> layout.
         </p>
         <figure class="bcls-figure">
@@ -215,11 +286,11 @@
       </li>
       <li>
         <p>
-          Now that you have the container defined for the carousel, you are ready to add content. From the list-block item, select the <strong>Add Playlist</strong> button.
+          Select the <strong>Add Playlist</strong> button. When you select the button, the playlist types will appear on the right side.
         </p>
         <figure class="bcls-figure">
-          <img class="bcls-image--no-border" width="650" src="/assets/images/pages/add-carousel-layout.png" alt="Add carousel layout">
-          <figcaption class="bcls-caption--image"Add carousel layout</figcaption>
+          <img class="bcls-image--no-border" width="850" src="/assets/images/pages/adding-page/add-playlist-button.png" alt="Add Playlist button">
+          <figcaption class="bcls-caption--image">Add Playlist button</figcaption>
         </figure>
       </li>
       <li>
@@ -227,7 +298,7 @@
           Choose a playlist. In this example, we are selecting the <strong>Add Playlist</strong> button associated with the <strong>Humor</strong> playlist.
         </p>
         <p>
-          You create playlists using Video Cloud Studio. They will appear here once you sync to your Video Cloud account.
+          You create playlists using Video Cloud Studio, and they will appear here once you sync to your Video Cloud account.
         </p>
         <figure class="bcls-figure">
           <img class="bcls-image--no-border" width="650" src="/assets/images/pages/add-humor-playlist.png" alt="Add Humor playlist">
@@ -236,7 +307,7 @@
       </li>
       <li>
         <p>
-          We can see that the <strong>Humor</strong> playlist has been added to our carousel. You can drag and drop to re-order the items. Select the <strong>Update Page</strong> button to add the new carousel to the page.
+          We can see that the <strong>Humor</strong> playlist has been added to our carousel. You can drag and drop to re-order the items. Select the <strong>Create New Page</strong> button to add the new carousel to the page.
         </p>
         <figure class="bcls-figure">
           <img class="bcls-image--no-border" width="650" src="/assets/images/pages/update-page.png" alt="Update Page button">
@@ -244,62 +315,16 @@
         </figure>
       </li>
       <li>
+        Select the <strong>Textual Data</strong> tab and fill in the fields. 
+      </li>
+      <li>
         <p>
-          You are all set. You should see the new carousel on your Brightcove Beacon page. See the following sections for details about field values.
+          You are all set. You should see the new carousel on your Brightcove Beacon page.
         </p>
       </li>
     </ol>
   </section>
-  <section class="bcls-section">
-    <h2 id="Basic_Data">Basic Data</h2>
-    <p>The <strong>Basic Data</strong> section allows you to define the content and layout for your page. </p>
-    <table class="bcls-table">
-      <thead class="bcls-table__head">
-        <tr>
-          <th>Field</th>
-          <th>Required</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody class="bcls-table__body">
-        <tr>
-          <td>System Title</td>
-          <td>Yes</td>
-          <td>Internal name for your page</td>
-        </tr>
-        <tr>
-          <td>Order</td>
-          <td>Yes</td>
-          <td>Page order on your site</td>
-        </tr>
-        <tr>
-          <td>Level Type</td>
-          <td>Yes</td>
-          <td>Master or Child</td>
-        </tr>
-        <tr>
-          <td>Page Type</td>
-          <td>Yes</td>
-          <td>screen is a common type to use</td>
-        </tr>
-        <tr>
-          <td>Presentation Type</td>
-          <td>Yes</td>
-          <td>Icontext, Icon, Text</td>
-        </tr>
-        <tr>
-          <td>Screen Layout</td>
-          <td>Yes</td>
-          <td>Specify whether the layout is titled or not</td>
-        </tr>
-        <tr>
-          <td>Is it home?</td>
-          <td>No</td>
-          <td>Select if this is the home page</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+
 </article>
 
 <!-- complete bootstrap layout -->
@@ -317,7 +342,7 @@
 
 <hr>
 <div class="last-updated">
-  Page last updated on 25 November 2019
+  Page last updated on 27 November 2019
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

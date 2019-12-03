@@ -41,13 +41,6 @@
     </url>
     
     <url>
-        <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/creating-standard-pages.html</loc>
-        <lastmod>2019-12-03</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://beacon.support.brightcove.com/getting-started/creating-your-app-design.html</loc>
         <lastmod>2019-12-03</lastmod>
         <changefreq>daily</changefreq>
@@ -70,6 +63,13 @@
     
     <url>
         <loc>https://beacon.support.brightcove.com/getting-started/implementation-phases.html</loc>
+        <lastmod>2019-12-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/including-non-customizable-pages.html</loc>
         <lastmod>2019-12-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

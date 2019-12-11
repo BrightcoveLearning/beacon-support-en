@@ -10,7 +10,113 @@ parent: Using Brightcove Beacon
 
   <section class="bcls-section">
     <h2 id="Types_of_pages">Types of pages</h2>
-    <p></p>
+    <p>When you create or edit a page, the <strong>Page Type</strong> selection offers the following:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/using-bcb/non-configurable/page-types.png" alt="page-types">
+    </figure>
+    <p>The following table displays the non-configurable page types, including a description and its use.</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Page Type</th>
+          <th>Description</th>
+          <th style="text-align:center">Add Blocks in the UI<br>(Yes/No)</th>
+          <th style="text-align:center">Use<br>(Required/Recommended/Optional)</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>custom-downloads</td>
+          <td>Not supported</td>
+          <td>No</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>custom-exit</td>
+          <td>Provides functionality to quit an app.</td>
+          <td>No</td>
+          <td>Required on some platforms, mainly smart TV.</td>
+        </tr>
+        <tr>
+          <td>custom-logout</td>
+          <td>Provides functionality to logout of an app. After logout, the user is left on the landing page or makes the user an anonymous user.</td>
+          <td>No</td>
+          <td>Required if you have registered users, as would be the case for most mobile platforms.</td>
+        </tr>
+        <tr>
+          <td>custom-settings</td>
+          <td>Provides access to settings.</td>
+          <td>No</td>
+          <td>Highly recommended</td>
+        </tr>
+        <tr>
+          <td>custom-signin</td>
+          <td>Provides registered user login</td>
+          <td>No</td>
+          <td>Required for registered users; not needed if you allow anonymous browsing</td>
+        </tr>
+        <tr>
+          <td>custom-signup</td>
+          <td>Provides a way for users to register</td>
+          <td>No</td>
+          <td>Required if app uses registered users; not needed if you allow anonymous browsing</td>
+        </tr>
+        <tr>
+          <td>epg-</td>
+          <td>Electronic Program Guide (EPG) displays the program guide for live TV</td>
+          <td>No</td>
+          <td>Required is app uses live channels</td>
+        </tr>
+        <tr>
+          <td>liveTV-player</td>
+          <td>Plays live video. Not recommended for </td>
+          <td>No</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>liveTV-preview</td>
+          <td></td>
+          <td>No</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>my_stuff-all</td>
+          <td>Provides a page with two tabs, one of which displays <strong>Recently Watched</strong> and the other tab displays <strong>Favorites</strong>. This would just be a blank page with a message saying you need to use <strong>Recently Watched</strong> and <strong>Favorites</strong>.</td>
+          <td>No</td>
+          <td>Optional</td>
+        </tr>
+        <tr>
+          <td>my_stuff-favourites</td>
+          <td>Contains the videos marked by the user as a favorite</td>
+          <td>No</td>
+          <td>Recommended</td>
+        </tr>
+        <tr>
+          <td>my_stuff-recently_watched</td>
+          <td>Contains the last 20 videos watched, chronologically listed.</td>
+          <td>No</td>
+          <td>Recommended</td>
+        </tr>
+        <tr>
+          <td>screen-</td>
+          <td>Displays the grouped videos in carousels or tabs. Used to organize the contents of your app.</td>
+          <td>Yes</td>
+          <td>Required</td>
+        </tr>
+        <tr>
+          <td>screen-auto_play</td>
+          <td>Not supported</td>
+          <td>Yes</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>search-</td>
+          <td>Provides input screen with an input field where you can search the content, and then presented the results.</td>
+          <td>No</td>
+          <td>Highly recommended</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <section class="bcls-section">
@@ -28,7 +134,7 @@ parent: Using Brightcove Beacon
     <p></p>
   </section>
 
-  
+
 <!--
   <section class="bcls-section">
     <h2 id=""></h2>

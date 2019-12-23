@@ -27,6 +27,8 @@
       url: /using-brightcove-beacon/creating-a-page.html
     - name: Adding a Carousel to a Page
       url: /using-brightcove-beacon/adding-to-page.html
+    - name: Common Page Config Settings
+      url: /using-brightcove-beacon/page-settings.html
     - name: Ad Configuration ID
       url: /using-brightcove-beacon/vc-ad-config-id.html
     - name: Creating an Ad Configuration

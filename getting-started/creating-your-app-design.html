@@ -4,9 +4,18 @@ parent: Getting Started
 ---
 
 <style media="screen">
-.small_image p {
-  color: red;
-}
+  .small_image p {
+    color: red;
+  }
+</style>
+
+<link href="/assets/css/splide.min.css" rel="stylesheet">
+
+<style media="screen">
+  .splide {
+    background-color: #bce8f7;
+    padding: 1em;
+  }
 </style>
 
 <article class="bcls-article">
@@ -187,12 +196,16 @@ parent: Getting Started
     <h2 id="Choosing_site_layout_options">Choosing site layout options</h2>
     <p>The following provide layout options for different parts of your app.The images shown, and from which you will choose your preference, are from a mobile app. Of course, the screens for TV or web will look slightly different. For instance,
       shown first below is a movie details screen from a mobile app, followed by the same movie details screen from the Apple TV app.</p>
+
+
     <figure class="bcls-figure">
       <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/movie-details-a-mobile.png" alt="movie details a mobile">
     </figure>
     <figure class="bcls-figure">
       <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/movie-details-a-appletv.png" alt="movie details a apple tv">
     </figure>
+
+
 
     <p>Now it is your time to start choosing options. The following provide layout options for different parts of your app. Review the options for the particular layout, then record your selection in the spreadsheet.</p>
 
@@ -209,51 +222,99 @@ parent: Getting Started
     </div>
 
     <h3>Movie details page</h3>
-    <p>The movie details page displays details for a particular movie, and a list of related movies.</p>
-
-    <div class="small_image">
-      <p>Movie Details A</p>
-      <img src="/assets/images/getting-started/creating-app-design/movies_details_A.png" alt="movies_details_A">
+    <p>The movie details page displays details for a particular movie, and a list of related movies. There are four options from which to choose.</p>
+    <div class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="small_image">
+              <p>Movie Details A</p>
+              <img src="/assets/images/getting-started/creating-app-design/movies_details_A.png" alt="movies_details_A">
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="small_image">
+              <p>Movie Details F</p>
+              <img src="/assets/images/getting-started/creating-app-design/movies_details_F.png" alt="movies_details_F">
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="small_image">
+              <p>Movie Details G</p>
+              <img src="/assets/images/getting-started/creating-app-design/movie_details_G.png" alt="movie_details_G">
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="small_image">
+              <p>Movie Details H</p>
+              <img src="/assets/images/getting-started/creating-app-design/movie_details_H.png" alt="movie_details_H">
+            </div>
+          </li>
+      </div>
     </div>
-
-    <div class="small_image">
-      <p>Movie Details F</p>
-      <img src="/assets/images/getting-started/creating-app-design/movies_details_F.png" alt="movies_details_F">
-    </div>
-
-    <div class="small_image">
-      <p>Movie Details G</p>
-      <img src="/assets/images/getting-started/creating-app-design/movie_details_G.png" alt="movie_details_G">
-    </div>
-
-    <div class="small_image">
-      <p>Movie Details H</p>
-      <img src="/assets/images/getting-started/creating-app-design/movie_details_H.png" alt="movie_details_H">
-    </div>
-
 
     <h3>Series details page</h3>
-    <p>The series details page displays details for a particular series, and a list of related movies.</p>
+    <p>The series details page displays details for a particular series, and a list of related movies. There are four options from which to choose.</p>
 
-    <div class="small_image">
-      <p>Series Details A</p>
-      <img src="/assets/images/getting-started/creating-app-design/series_details_A.png" alt="series_details_A">
+    <div class="splide2">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="small_image">
+              <p>Movie Details A</p>
+              <img src="/assets/images/getting-started/creating-app-design/movies_details_A.png" alt="movies_details_A">
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="small_image">
+              <p>Movie Details F</p>
+              <img src="/assets/images/getting-started/creating-app-design/movies_details_F.png" alt="movies_details_F">
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="small_image">
+              <p>Movie Details G</p>
+              <img src="/assets/images/getting-started/creating-app-design/movie_details_G.png" alt="movie_details_G">
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="small_image">
+              <p>Movie Details H</p>
+              <img src="/assets/images/getting-started/creating-app-design/movie_details_H.png" alt="movie_details_H">
+            </div>
+          </li>
+      </div>
     </div>
-
-    <div class="small_image">
-      <p>Series Details F</p>
-      <img src="/assets/images/getting-started/creating-app-design/series_details_F.png" alt="series_details_F">
-    </div>
-
-    <div class="small_image">
-      <p>Series Details G</p>
-      <img src="/assets/images/getting-started/creating-app-design/series_details_G.png" alt="series_details_G">
-    </div>
-
-    <div class="small_image">
-      <p>Series Details H</p>
-      <img src="/assets/images/getting-started/creating-app-design/series_details_H.png" alt="series_details_H">
-    </div>
+    <!-- <div class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="small_image">
+              <p>Series Details A</p>
+              <img src="/assets/images/getting-started/creating-app-design/series_details_A.png" alt="series_details_A">
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="small_image">
+              <p>Series Details F</p>
+              <img src="/assets/images/getting-started/creating-app-design/series_details_F.png" alt="series_details_F">
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="small_image">
+              <p>Series Details G</p>
+              <img src="/assets/images/getting-started/creating-app-design/series_details_G.png" alt="series_details_G">
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="small_image">
+              <p>Series Details H</p>
+              <img src="/assets/images/getting-started/creating-app-design/series_details_H.png" alt="series_details_H">
+            </div>
+          </li>
+          </ul>
+      </div>
+    </div> -->
 
     <h3>Live TV</h3>
     <p>The customer can check what is playing now and what will play next on the selected channel.</p>
@@ -378,3 +439,20 @@ parent: Getting Started
   </section>
 
 </article>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@1.2.5/dist/js/splide.min.js"></script>
+
+<script>
+  var mySplide = new Splide('.splide', {
+    width: '60%',
+    perPage: 2,
+    perMove: 1
+  });
+  mySplide.mount();
+  var mySplide2 = new Splide('.splide2', {
+    width: '60%',
+    perPage: 2,
+    perMove: 1
+  });
+  mySplide2.mount();
+</script>

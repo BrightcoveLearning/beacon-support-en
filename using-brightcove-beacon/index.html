@@ -4,7 +4,16 @@ parent: Using Brightcove Beacon
 section: Using Brightcove Beacon
 description: This section provides guides to using the Brightcove Beacon
 ---
-
+<style>
+  h1 i.fal, h1 i.fab, h1 i.fas, h1 i.far {
+    font-size: 3rem;
+    color:{{site.product_color}};
+    margin-right: 1rem;
+  }
+  .card-icon I {
+    color: {{site.product_color}};
+  }
+</style>
 <article class="landing-page-wrapper">
   <h1>{{ page.title }}</h1>
   <section class="landing-page-header" id="landing_page_header">
@@ -18,7 +27,7 @@ description: This section provides guides to using the Brightcove Beacon
           <img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/beacon-nut.svg">
         </div>
         <div class="card-content">
-          <h3 class="landing-page-item-header">{{ item.section }} Topics</h3>
+          <h2 class="landing-page-item-header">{{ item.section }} Topics</h2>
           <ul class="landing-page-item list-none">
             {% for entry in item.docs %}
               <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>

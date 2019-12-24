@@ -4,7 +4,16 @@ parent: Syncing with Video Cloud
 section: Syncing with Video Cloud
 description: These topics cover synchronizing Video Cloud data with the Brightcove Beacon Experience
 ---
-
+<style>
+  h1 i.fal, h1 i.fab, h1 i.fas, h1 i.far {
+    font-size: 3rem;
+    color:{{site.product_color}};
+    margin-right: 1rem;
+  }
+  .card-icon I {
+    color: {{site.product_color}};
+  }
+</style>
 <article class="landing-page-wrapper">
   <h1>{{ page.title }}</h1>
   <section class="landing-page-header" id="landing_page_header">
@@ -17,8 +26,8 @@ description: These topics cover synchronizing Video Cloud data with the Brightco
         <div class="card-icon">
           <i class="far fa-sync"></i>
         </div>
-        <h3 class="landing-page-item-header">{{ item.section }} Topics</h3>
         <div class="card-content">
+          <h2 class="landing-page-item-header">{{ item.section }} Topics</h2>
           <ul class="landing-page-item list-none">
             {% for entry in item.docs %}
               <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>

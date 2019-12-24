@@ -10,17 +10,21 @@ description: This section provides guides to using the Brightcove Beacon
   <section class="landing-page-header" id="landing_page_header">
     <p>{{ page.description }}</p>
   </section>
-  <br>
-  <section class="landing-page-body-wrapper" id="landing_page_wrapper">
+  <section class="card-wrapper">
     {% for item in site.data.navigation %}
       {% if item.section == page.section %}
-      <section class="landing-page-section">
-        <h6 class="landing-page-item-header">{{ item.section }} Topics</h6>
-        <ul class="landing-page-item list-none">
-          {% for entry in item.docs %}
-            <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
-          {% endfor %}
-        </ul>
+      <section class="bcls-card">
+        <div class="card-icon">
+          <img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/beacon-nut.svg">
+        </div>
+        <div class="card-content">
+          <h3 class="landing-page-item-header">{{ item.section }} Topics</h3>
+          <ul class="landing-page-item list-none">
+            {% for entry in item.docs %}
+              <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
   </section>
       {% endif %}
     {% endfor %}

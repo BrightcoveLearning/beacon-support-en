@@ -2,6 +2,7 @@
   url: /
 - section: Getting Started
   url: /getting-started/
+  icon: '<i class="far fa-location-arrow"></i>'
   docs:
     - name: Learning Guide
       url: /getting-started/learning-guide-bc-beacon.html
@@ -12,6 +13,7 @@
     - name: Creating Your Application Design
       url: /getting-started/creating-your-app-design.html
 - section: Syncing with Video Cloud
+  icon: '<i class="far fa-sync"></i>'
   url: /syncing-with-video-cloud/
   docs:
     - name: Creating Video Cloud Custom Fields
@@ -20,6 +22,7 @@
       url: /syncing-with-video-cloud/forcing-a-sync.html
 - section: Using Brightcove Beacon
   url: /using-brightcove-beacon/
+  icon: '<img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/beacon-nut.svg">'
   docs:
     #- name: Creating a Playlist
     #  url: /using-brightcove-beacon/playlists.html
@@ -37,11 +40,13 @@
       url: /using-brightcove-beacon/tools.html
 - section: Creating Your Apps
   url: /creating-your-apps/
+  icon: '<i class="fal fa-rocket-launch"></i>'
   docs:
     - name: Submitting Device Apps to Stores
       url: /creating-your-apps/submitting-device-apps-stores.html
 - section: References
   url: /references/
+  icon: '<i class="fal fa-books"></i>'
   docs:
     - name: Glossary
       url: /references/glossary.html

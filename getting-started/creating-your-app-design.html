@@ -13,7 +13,7 @@ parent: Getting Started
 
 <style media="screen">
   .splide {
-    background-color: #bce8f7;
+    background-color: #dcf3fb;
     padding: 1em;
   }
 </style>
@@ -162,7 +162,7 @@ parent: Getting Started
     <p>Now that you have determined your categories, you will enter them into the spreadsheet. Enter them IN THE ORDER IN WHICH YOU WANT THEM TO APPEAR in the app. In the spreadsheet, enter your ordered categories starting in cell B1, then B2,
       etc. A simple example appears as:</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="//learning-services-media.brightcove.com/doc-assets/beacon/site-map/spreadsheet-1.png" alt="">
+      <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/spreadsheet-1.png" alt="">
     </figure>
 
   </section>
@@ -185,9 +185,10 @@ parent: Getting Started
 
   <section class="bcls-section">
     <h2 id="Do_you_want_to_feature_a_video_or_videos">Do you want to feature a video or videos?</h2>
-    <p>You can feature a video or a set of videos. The featured video(s) appear at the top of your app. Here you see an app with a set of five videos featured (you can tell the number of videos by the dots below the carousel):</p>
+    <p>You can feature a video or a set of videos. The featured video(s) appear at the top of your app and the thumbnail for the video(s) is larger. Here you see an app with a set of six videos featured (you can tell the number of videos by the dots
+      below the carousel):</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="//learning-services-media.brightcove.com/doc-assets/beacon/site-map/featured-videos.png" alt="">
+      <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/featured-videos.png" alt="featured videos">
     </figure>
     <p>In the spreadsheet, locate the <strong>What do you want featured, if anything?</strong> cell. In the cell to the right of that question detail what you would like featured, if anything.</p>
   </section>
@@ -211,14 +212,25 @@ parent: Getting Started
 
     <h3>Landing page</h3>
     <p>The landing page is optional. If you wish to have a landing page choose your layout, otherwise choose <strong>None</strong>. Note, there is no landing page on the web app. There are <strong>two</strong> options from which to choose.</p>
-    <div class="small_image">
-      <p>Landing A</p>
-      <img src="/assets/images/getting-started/creating-app-design/landing_A.png" alt="landing_A">
-    </div>
+    <div class="splide7">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
 
-    <div class="small_image">
-      <p>Landing Carousel</p>
-      <img src="/assets/images/getting-started/creating-app-design/landing_carousel.png" alt="landing_carousel">
+            <div class="small_image">
+              <p>Landing A</p>
+              <img src="/assets/images/getting-started/creating-app-design/landing_A.png" alt="landing_A">
+            </div>
+          </li>
+          <li class="splide__slide">
+
+            <div class="small_image">
+              <p>Landing Carousel</p>
+              <img src="/assets/images/getting-started/creating-app-design/landing_carousel.png" alt="landing_carousel">
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <h3>Movie details page</h3>
@@ -250,6 +262,7 @@ parent: Getting Started
               <img src="/assets/images/getting-started/creating-app-design/movie_details_H.png" alt="movie_details_H">
             </div>
           </li>
+        </ul>
       </div>
     </div>
 
@@ -373,33 +386,30 @@ parent: Getting Started
     </div>
     <h3>Customer Settings</h3>
     <p>Displays the customers' settings options. There are <strong>three</strong> options from which to choose.</p>
-<div class="splide6">
-  <div class="splide__track">
-    <ul class="splide__list">
-      <li class="splide__slide">
-
-    <div class="small_image">
-      <p>Settings A</p>
-      <img src="/assets/images/getting-started/creating-app-design/settings_A.png" alt="settings_A">
+    <div class="splide6">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="small_image">
+              <p>Settings A</p>
+              <img src="/assets/images/getting-started/creating-app-design/settings_A.png" alt="settings_A">
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="small_image">
+              <p>Settings Carousel</p>
+              <img src="/assets/images/getting-started/creating-app-design/settings_carousel.png" alt="settings_carousel">
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="small_image">
+              <p>Settings Grid</p>
+              <img src="/assets/images/getting-started/creating-app-design/settings_grid.png" alt="settings_grid">
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-      </li>
-      <li class="splide__slide">
-
-    <div class="small_image">
-      <p>Settings Carousel</p>
-      <img src="/assets/images/getting-started/creating-app-design/settings_carousel.png" alt="settings_carousel">
-    </div>
-      </li>
-      <li class="splide__slide">
-
-    <div class="small_image">
-      <p>Settings Grid</p>
-      <img src="/assets/images/getting-started/creating-app-design/settings_grid.png" alt="settings_grid">
-    </div>
-      </li>
-    </ul>
-  </div>
-</div>
   </section>
 
   <section class="bcls-section">
@@ -424,7 +434,7 @@ parent: Getting Started
     <p>Determine if you wish to use an About screen.</p>
 
     <div class="small_image">
-      <img src="../assets/images/getting-started/creating-app-design/about.png" alt="about">
+      <img src="/assets/images/getting-started/creating-app-design/about.png" alt="about">
     </div>
 
   </section>
@@ -474,7 +484,8 @@ parent: Getting Started
   var mySplide3 = new Splide('.splide3', {
     width: '90%',
     perPage: 2,
-    perMove: 1
+    perMove: 1,
+    arrows: false
   });
   mySplide3.mount();
 
@@ -499,6 +510,12 @@ parent: Getting Started
   });
   mySplide6.mount();
 
-
+  var mySplide7 = new Splide('.splide7', {
+    width: '60%',
+    perPage: 2,
+    perMove: 1,
+    arrows: false
+  });
+  mySplide7.mount();
 
 </script>

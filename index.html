@@ -13,7 +13,7 @@ title: Brightcove Beacon Home
     <section class="bcls-card" onclick="window.location.pathname={{item.url}}">
       <div class="card-icon">{{item.icon}}</div>
       <div class="card-content">
-        <h2 class="landing-page-item-header">{{ item.section }}</h2>
+        <h2 class="landing-page-item-header">{{ item.name }}</h2>
         <ul class="landing-page-item list-none">
           {% for entry in item.docs %}
           <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>

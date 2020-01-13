@@ -1,6 +1,8 @@
-- section: Home
+- section: 
+  name: Home
   url: /
-- section: Getting Started
+- section: 
+  name: Getting Started
   url: /getting-started/
   icon: '<i class="far fa-location-arrow"></i>'
   docs:
@@ -12,7 +14,8 @@
       url: /getting-started/app-design-considerations.html
     - name: Creating Your Application Design
       url: /getting-started/creating-your-app-design.html
-- section: Syncing with Video Cloud
+- section: 
+  name: Syncing with Video Cloud
   icon: '<i class="far fa-sync"></i>'
   url: /syncing-with-video-cloud/
   docs:
@@ -20,7 +23,8 @@
       url: /syncing-with-video-cloud/vc-custom-fields.html
     - name: Forcing a Sync
       url: /syncing-with-video-cloud/forcing-a-sync.html
-- section: Using Brightcove Beacon
+- section: 
+  name: Using Brightcove Beacon
   url: /using-brightcove-beacon/
   icon: '<img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/beacon-nut.svg">'
   docs:
@@ -38,13 +42,15 @@
       url: /using-brightcove-beacon/advertisement.html
     - name: Using the Tools
       url: /using-brightcove-beacon/tools.html
-- section: Creating Your Apps
+- section: 
+  name: Creating Your Apps
   url: /creating-your-apps/
   icon: '<i class="fal fa-rocket-launch"></i>'
   docs:
     - name: Submitting Device Apps to Stores
       url: /creating-your-apps/submitting-device-apps-stores.html
-- section: References
+- section: 
+  name: References
   url: /references/
   icon: '<i class="fal fa-books"></i>'
   docs:

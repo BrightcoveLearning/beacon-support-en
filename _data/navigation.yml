@@ -1,7 +1,7 @@
-- section: 
+- section:
   name: Home
   url: /
-- section: 
+- section:
   name: Getting Started
   url: /getting-started/
   icon: '<i class="far fa-location-arrow"></i>'
@@ -14,7 +14,7 @@
       url: /getting-started/app-design-considerations.html
     - name: Creating Your Application Design
       url: /getting-started/creating-your-app-design.html
-- section: 
+- section:
   name: Syncing with Video Cloud
   icon: '<i class="far fa-sync"></i>'
   url: /syncing-with-video-cloud/
@@ -23,33 +23,35 @@
       url: /syncing-with-video-cloud/vc-custom-fields.html
     - name: Forcing a Sync
       url: /syncing-with-video-cloud/forcing-a-sync.html
-- section: 
+- section:
   name: Using Brightcove Beacon
   url: /using-brightcove-beacon/
   icon: '<img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/beacon-nut.svg">'
   docs:
     #- name: Creating a Playlist
     #  url: /using-brightcove-beacon/playlists.html
-    - name: Creating a New Page
-      url: /using-brightcove-beacon/creating-a-page.html
     - name: Adding a Carousel to a Page
       url: /using-brightcove-beacon/adding-to-page.html
-    - name: Common Page Config Settings
-      url: /using-brightcove-beacon/page-settings.html
-    - name: Ad Configuration ID
-      url: /using-brightcove-beacon/vc-ad-config-id.html
+    - name: Creating a New Page
+      url: /using-brightcove-beacon/creating-a-page.html
     - name: Creating an Ad Configuration
       url: /using-brightcove-beacon/advertisement.html
+    - name: Creating an Ad Configuration ID
+      url: /using-brightcove-beacon/vc-ad-config-id.html
+    - name: Common Page Config Settings
+      url: /using-brightcove-beacon/page-settings.html
+    - name: Including Non-Configurable Pages
+      url: /using-brightcove-beacon/including-non-configurable-pages.html
     - name: Using the Tools
       url: /using-brightcove-beacon/tools.html
-- section: 
+- section:
   name: Creating Your Apps
   url: /creating-your-apps/
   icon: '<i class="fal fa-rocket-launch"></i>'
   docs:
     - name: Submitting Device Apps to Stores
       url: /creating-your-apps/submitting-device-apps-stores.html
-- section: 
+- section:
   name: References
   url: /references/
   icon: '<i class="fal fa-books"></i>'

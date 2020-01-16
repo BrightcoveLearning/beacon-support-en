@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 var fby = fby || [];
 fby.push(['showTab', {id: '14941', position: 'right', color: '{{ site.product_color }}'}]);
 (function () {

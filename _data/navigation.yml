@@ -14,6 +14,8 @@
       url: /getting-started/app-design-considerations.html
     - name: Creating Your Application Design
       url: /getting-started/creating-your-app-design.html
+    - name: Introducing Pages
+      url: /getting-started/introducing-pages.html
 - section:
   name: Syncing with Video Cloud
   icon: '<i class="far fa-sync"></i>'

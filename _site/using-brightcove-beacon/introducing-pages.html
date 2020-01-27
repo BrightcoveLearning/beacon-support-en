@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Getting Started Home</title>
+  <title>Introducing Pages</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,9 +38,9 @@
       
       
       
-      <li class="breadcrumb-item"><a href="/getting-started/">Getting Started</a></li>
+      <li class="breadcrumb-item"><a href="/using-brightcove-beacon/">Using Brightcove Beacon</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Getting Started Home</li>
+      <li class="breadcrumb-item active" aria-current="page">Introducing Pages</li>
     </ol>
   </nav>
 </header>
@@ -172,69 +172,195 @@
   <div id="search_box" class="gcse-search"></div>
 </div>
 
-<style>
-  h1 i.fal, h1 i.fab, h1 i.fas, h1 i.far {
-    font-size: 3rem;
-    color:rgb(28, 185, 213);
-    margin-right: 1rem;
-  }
-  .card-icon I {
-    color: rgb(28, 185, 213);
-  }
-</style>
-<article class="landing-page-wrapper">
-  <h1>Getting Started Home</h1>
-  <section class="landing-page-header" id="landing_page_header">
-    <p>This section provides guides to help you get started with Brightcove Beacon</p>
-  </section>
-  <br>
-  
-<section class="card-wrapper">
-  <section onclick="window.location.pathname = '/getting-started/learning-guide-bc-beacon.html';" class="bcls-card">
-    <div class="card-icon">
-      <i class="far fa-book-reader"></i>
-    </div>
-    <div class="card-content">
-      <h2 id="learning-guide">Learning Guide</h2>
-      <p>Explains Brightcove Beacon</p>
-    </div>
+<article class="bcls-article">
+
+  <h1>Introducing Pages</h1>
+  <summary>In this topic, you will be provided an overview of the use of <strong>Pages</strong> in a Brightcove Beacon app. Pages contain the functionality and video content app users will see.</summary>
+
+  <section class="bcls-section">
+    <h2 id="Types_of_pages">Types of pages</h2>
+    <p>When you create or edit a page, the <strong>Page Type</strong> selection offers the following:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/using-bcb/non-configurable/page-types.png" alt="page-types">
+    </figure>
+    <h3>Page categories</h3>
+    <p>The page types can be grouped into two categories. The categories and details for each follow:</p>
+    <ul>
+      <li>Non-configurable
+        <ul>
+          <li>A page you choose to include in your app, or not.</li>
+          <li>The document <a href="/using-bcb/including-non-configurable-pages.html">Including Non-Configurable Pages</a> provides further details, including how to add one of these types of pages to your app.</li>
+          <li>Examples of non-configurable pages are <strong>Settings</strong> and <strong>Sign Up</strong>, shown here:
+          <div class="row">
+            <div class="column">
+              <figure class="bcls-figure">
+                <img class="bcls-image" width="250" height="430" src="/assets/images/using-bcb/introducing-pages/settings.png" alt="featured videos">
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="bcls-figure">
+                <img class="bcls-image" width="250" height="430" src="/assets/images/using-bcb/introducing-pages/sign-up.png" alt="featured videos">
+              </figure>
+            </div>
+          </div>
+          </li>
+        </ul>
+        </>
+      <li>Screen</li>
+      <ul>
+        <li>A page that holds your video content, in carousels, lists, etc.</li>
+        <li>Highly configurable using <strong>blocks</strong>, <strong>layouts</strong> and <strong>playlists</strong>. Two examples are show here:
+          <div class="row">
+            <div class="column">
+              <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/featured-videos.png" alt="featured videos">
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/using-bcb/introducing-pages/beacon-layout-title-out.png" alt="featured videos">
+              </figure>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </ul>
+
+    <h3>Page type definitions</h3>
+    <p>The following table displays the page types, including a description and its use.</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Page Type</th>
+          <th>Description</th>
+          <th style="text-align:center">Add Blocks in the UI<br>(Yes/No)</th>
+          <th style="text-align:center">Use<br>(Required/Recommended/Optional)</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>custom-downloads</td>
+          <td>Not supported</td>
+          <td>No</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>custom-exit</td>
+          <td>Provides functionality to quit an app.</td>
+          <td>No</td>
+          <td>Required on some platforms, mainly smart TV.</td>
+        </tr>
+        <tr>
+          <td>custom-logout</td>
+          <td>Provides functionality to logout of an app. After logout, the user is left on the landing page or makes the user an anonymous user.</td>
+          <td>No</td>
+          <td>Required if you have registered users, as would be the case for most mobile platforms.</td>
+        </tr>
+        <tr>
+          <td>custom-settings</td>
+          <td>Provides access to settings.</td>
+          <td>No</td>
+          <td>Highly recommended</td>
+        </tr>
+        <tr>
+          <td>custom-signin</td>
+          <td>Provides registered user login</td>
+          <td>No</td>
+          <td>Required for registered users; not needed if you allow anonymous browsing</td>
+        </tr>
+        <tr>
+          <td>custom-signup</td>
+          <td>Provides a way for users to register</td>
+          <td>No</td>
+          <td>Required if app uses registered users; not needed if you allow anonymous browsing</td>
+        </tr>
+        <tr>
+          <td>epg-</td>
+          <td>Electronic Program Guide (EPG) displays the program guide for live TV</td>
+          <td>No</td>
+          <td>Required is app uses live channels</td>
+        </tr>
+        <tr>
+          <td>liveTV-player</td>
+          <td>Plays live video and automatically will change the orientation to landscape.</td>
+          <td>No</td>
+          <td>If you do play live TV, it is recommended to use the <strong>liveTV-preview</strong> screen, as that presents a player to the user, then on click/tap will change the orientation to landscape and play the video.</td>
+        </tr>
+        <tr>
+          <td>liveTV-preview</td>
+          <td>Plays live video with player as part of a larger page, then on click/tap will play video in landscape orientation.</td>
+          <td>No</td>
+          <td>Recommended for use over <strong>liveTV-player</strong></td>
+        </tr>
+        <tr>
+          <td>my_stuff-all</td>
+          <td>Provides a page with two tabs, one of which displays <strong>Recently Watched</strong> and the other tab displays <strong>Favorites</strong>. This would just be a blank page with a message saying you need to use <strong>Recently
+              Watched</strong> and <strong>Favorites</strong>.</td>
+          <td>No</td>
+          <td>Optional</td>
+        </tr>
+        <tr>
+          <td>my_stuff-favourites</td>
+          <td>Contains the videos marked by the user as a favorite</td>
+          <td>No</td>
+          <td>Recommended</td>
+        </tr>
+        <tr>
+          <td>my_stuff-recently_watched</td>
+          <td>Contains the last 20 videos watched, chronologically listed.</td>
+          <td>No</td>
+          <td>Recommended</td>
+        </tr>
+        <tr>
+          <td>screen-</td>
+          <td>Displays the grouped videos in carousels or tabs. Used to organize the contents of your app.</td>
+          <td>Yes</td>
+          <td>Required</td>
+        </tr>
+        <tr>
+          <td>search-</td>
+          <td>Provides input screen with an input field where you can search the content, and then presented the results.</td>
+          <td>No</td>
+          <td>Highly recommended</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
-  <section onclick="window.location.pathname = '/getting-started/implementation-phases.html';" class="bcls-card">
-    <div class="card-icon">
-      <i class="fal fa-project-diagram"></i>
-    </div>
-    <div class="card-content">
-      <h2 id="implementation-phases">Implementation Phases</h2>
-      <p>Details the implementation process</p>
-    </div>
+  <section class="bcls-section">
+    <h2 id="Common_page_configuration_settings">Common page configuration settings</h2>
+    <p>In Brightcove Beacon when you are creating a new page or editing an existing page, you will see the following tabs:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/using-bcb/introducing-pages/pages-tabs.png" alt="Page option tabs">
+    </figure>
+    <p>The <strong>Basic Data</strong> tab is where you choose your page type, as well as configure <strong>screen</strong> pages. The other tabs are the same for all page types. The <a href="/using-brightcove-beacon/page-settings.html">Common Page
+        Configuration Settings</a> document details the needed information on the <strong>Textual Data</strong>, <strong>Non-Textual Data</strong>, <strong>Tags</strong> and <strong>Rights & Scheduling</strong> tabs.</p>
   </section>
 
-  <section onclick="window.location.pathname = '/getting-started/app-design-considerations.html';" class="bcls-card">
-    <div class="card-icon">
-      <i class="far fa-pencil-ruler"></i>
-    </div>
-    <div class="card-content">
-      <h2 id="app-design-considerations">Application Design Considerations</h2>
-      <p>Provides examples and tips for your application design</p>
-    </div>
+  <!-- <section class="bcls-section">
+    <h2 id="Application_design_versus_Brightcove_Beacon_configuration">Application design versus Brightcove Beacon configuration</h2>
+    <p></p>
   </section>
 
-  <section onclick="window.location.pathname = '/getting-started/creating-your-app-design.html';" class="bcls-card">
-    <div class="card-icon">
-      <i class="far fa-edit"></i>
-    </div>
-    <div class="card-content">
-      <h2 id="create-app-design">Creating Your Application Design</h2>
-      <p>Walks you through alternatives for your application design</p>
-    </div>
-  </section>
-</section>
+  <section class="bcls-section">
+    <h2 id="Example_images_of_page_types">Example images of page types</h2>
+    <p></p>
+  </section> -->
+
+
+
+
+
 </article>
 
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
       
     </div>
   </div>
@@ -242,7 +368,7 @@
 
 <hr>
 <div class="last-updated">
-  Page last updated on 22 Jan 2020
+  Page last updated on 16 Jan 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">
@@ -327,6 +453,8 @@ layout: null
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/prism.js"></script>
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/site.js"></script>
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/tabs.js"></script>
+  
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc.js"></script>
   
   <script src="/assets/js/feedback-beacon.js"></script>
   <script src="/assets/js/local.js"></script>

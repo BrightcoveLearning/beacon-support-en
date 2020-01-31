@@ -31,7 +31,9 @@ site_url: "https://beacon.support.brightcove.com"
 product: Brightcove Beacon
 color: rgb(51, 51, 51)
 product_color: rgb(28, 185, 213)
-search_id: 017969773216783359937:6sd3di5mwuw
+product_icon: "Beacon-1.svg"
+search_id: "017969773216783359937:6sd3di5mwuw"
+feedbackify_id: "14941"
 defaults:
   -
     scope:

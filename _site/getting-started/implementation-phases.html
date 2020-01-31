@@ -28,7 +28,25 @@
 
 <header>
   <div class="div-header">
-    <a href="/"><img class="product-logo" src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/Beacon-1.svg" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
+    <!-- TODO - change logo to current product -->
+    <a href="/"><img class="product-logo" src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/" alt="product logo" style="height:90px; padding-top:10px; padding-bottom:10px"></a>
+    <!-- GTranslate: https://gtranslate.io/ -->
+    <select onchange="doGTranslate(this);" style="margin-right: 1rem;">
+      <option value="">Select a language</option>
+      <option value="en|en">English</option>
+      <option value="en|zh-TW">繁體中文</option>
+      <option value="en|fr">Français</option>
+      <option value="en|de">Deutsch</option>
+      <option value="en|ja">日本語</option>
+      <option value="en|ko">한국어</option>
+      <option value="en|es">Español</option>
+    </select>
+
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+    /* ]]> */
+    </script>
 
 
 <select id="site_select" style="margin-right: 1rem;">
@@ -57,6 +75,7 @@
 </select>
 
 
+
     <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?language=en_US"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/support.png" alt="support"> Contact Support</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/status.png" alt="system status"> System Status</a></span>
   </div>
   <nav aria-label="breadcrumb">
@@ -66,12 +85,14 @@
       
       
       
+      
       <li class="breadcrumb-item"><a href="/getting-started/">Getting Started</a></li>
       
       <li class="breadcrumb-item active" aria-current="page">Implementation Phases</li>
     </ol>
   </nav>
 </header>
+
 <div class="container">
     <div class="row">
       <div class="col-sm-3 left-side-bar">
@@ -424,10 +445,6 @@
     </div>
   </div>
 </footer>
----
-layout: null
----
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -440,7 +457,7 @@ layout: null
   <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc.js"></script>
   
   <script src="/assets/js/sites_nav.js"></script>
-  <script src="/assets/js/feedback-beacon.js"></script>
+  <script src="/assets/js/feedback.js"></script>
   <script src="/assets/js/local.js"></script>
   <script src="/assets/js/search.js"></script>
   <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:6sd3di5mwuw"></script>

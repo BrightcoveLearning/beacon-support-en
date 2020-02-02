@@ -4,6 +4,9 @@
 - Beacon:
   name: Brightcove Beacon
   url: 'https://beacon.support.brightcove.com' 
+- Audience:
+  name: Brightcove Audience
+  url: 'https://audience.support.brightcove.com' 
 - Campaign:
   name: Brightcove Campaign
   url: 'https://campaign.support.brightcove.com' 

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Adding a Carousel to an Existing Page</title>
+  <title>Viewing System Status</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -90,9 +90,9 @@
       
       
       
-      <li class="breadcrumb-item"><a href="/using-brightcove-beacon/">Using Brightcove Beacon</a></li>
+      <li class="breadcrumb-item"><a href="/support/">Support</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Adding a Carousel to an Existing Page</li>
+      <li class="breadcrumb-item active" aria-current="page">Viewing System Status</li>
     </ol>
   </nav>
 </header>
@@ -225,120 +225,71 @@
   <div id="search_box" class="gcse-search"></div>
 </div>
 
-<h1>Adding a Carousel to an Existing Page</h1>
-<summary>In this topic, you will learn how to add a group of videos in a carousel to a Brightcove Beacon Page.</summary>
-
 <article class="bcls-article">
+  <h1>Viewing the Brightcove System Status Page</h1>
+  <summary>In this topic you will view the Brightcove System Status page for updates on Brightcove services and applications.</summary>
   <section class="bcls-section">
-    <h2 id="Overview">Overview</h2>
-    <p>The Brightcove Beacon page is where users select and watch your video content. Carousels display a group of videos or playlists that you have defined in Video Cloud Studio. Using the Brightcove Beacon Administrative Console, you can add carousels to an existing page.</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image--no-border" width="350" src="/assets/images/pages/home-example.png" alt="Home with carousels">
-      <figcaption class="bcls-caption--image">Home with carousels</figcaption>
-    </figure>
+    <p>Brightcove continuously monitors the status of all Brightcove Services and applications. If there are any interruptions in service, a note will be posted on the System Status Page. All scheduled maintenance notices will also be posted on this page.</p>
+    <p>To access the System Status Page, visit <a href="https://status.brightcove.com">https://status.brightcove.com</a> or from the  navigation header, click the Support icon (<img class="bcls-image--no-border" alt="" src="/assets/images/support/question-icon.png" />) and then &nbsp;<strong>System Status</strong>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/support/system-status.png" /></figure>
+    <p>All posted notifications will include the following information:</p>
+    <ul>
+      <li>Incident Status
+        <ul>
+          <li>Operational (Green)</li>
+          <li>Notification (Blue - systems are currently in operation but affected by delays or intermittent outages)</li>
+          <li>Partial Service Disruption (Yellow)</li>
+          <li>Full Service Disruption (Red)</li>
+        </ul>
+      </li>
+      <li>Components - Service or area affected</li>
+      <li>Locations
+        <ul>
+          <li>APAC</li>
+          <li>Americas</li>
+          <li>EMEA</li>
+          <li>Japan</li>
+        </ul>
+      </li>
+      <li>Current State and status. States include:
+        <ul>
+          <li>Investigating - Engineers are looking into the issue</li>
+          <li>Identified - Engineers have identified the issue and are looking to correct</li>
+          <li>Monitoring - Issue resolved and Engineering monitoring to ensure all is healthy</li>
+          <li>Resolved - Issue resolved</li>
+        </ul>
+      </li>
+    </ul>
+    <p>All posted messages will be in English and the time used is Eastern Standard Time (GMT-5).</p>
   </section>
-
   <section class="bcls-section">
-    <h2 id="Adding_a_carousel">Adding a carousel</h2>
-    <p>To add a carousel to an existing page, follow these steps:</p>
-
-
-
-    <ol class="bcls-tasklist">
-      <li>Login to Brightcove Beacon.</li>
-      <li>
-        <p>
-          In the top navigation, select <strong>Pages</strong>.
-        </p>
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" width="850" src="/assets/images/pages/top-navigation.png" alt="Top navigation">
-          <figcaption class="bcls-caption--image">Top navigation</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>
-          You can use the <strong>Add new page</strong> button to create a new page. Once you have pages defined, you can easily add a carousel to an existing page. Select the page that you want to update. Here, we are selecting the link for the <strong>Home</strong> page.
-        </p>
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" width="850" src="/assets/images/pages/select-page.png" alt="Select an existing page">
-          <figcaption class="bcls-caption--image">Select an existing page</figcaption>
-        </figure>
-      </li>
-      <li>
-        Notice that the <strong>Basic Data</strong> is already populated.
-      </li>
-      <li>
-        <p>
-          Select the <strong>Add Block</strong> button.
-        </p>
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" width="650" src="/assets/images/pages/add-block-button.png" alt="Add Block button">
-          <figcaption class="bcls-caption--image">Add Block button</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>
-          Choose the type of block that you want. In this case, we are choosing the <strong>list-block</strong>. Select the <strong>Add Block</strong> button associated with the block that you want.
-        </p>
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" width="650" src="/assets/images/pages/add-list-block.png" alt="Add list block">
-          <figcaption class="bcls-caption--image">Add list block</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>
-          Select the <strong>Add Layout</strong> button.
-        </p>
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" width="650" src="/assets/images/pages/add-layout-button.png" alt="Add Layout button">
-          <figcaption class="bcls-caption--image">Add Layout button</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>
-          Choose the type of layout that you want, whether it is Featured, Carousel or Grid. In this example, we are selecting the <strong>Carousel Landscape Labels In</strong> layout.
-        </p>
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" width="650" src="/assets/images/pages/add-carousel-layout.png" alt="Add carousel layout">
-          <figcaption class="bcls-caption--image"Add carousel layout</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>
-          Now that you have the container defined for the carousel, you are ready to add content. From the list-block item, select the <strong>Add Playlist</strong> button.
-        </p>
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" width="650" src="/assets/images/pages/add-playlist-button.png" alt="Add Playlist button">
-          <figcaption class="bcls-caption--image"Add Playlist button</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>
-          Choose a playlist. In this example, we are selecting the <strong>Add Playlist</strong> button associated with the <strong>Humor</strong> playlist.
-        </p>
-        <p>
-          You create playlists using Video Cloud Studio. They will appear here once you sync to your Video Cloud account.
-        </p>
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" width="650" src="/assets/images/pages/add-humor-playlist.png" alt="Add Humor playlist">
-          <figcaption class="bcls-caption--image"Add Humor playlist</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>
-          We can see that the <strong>Humor</strong> playlist has been added to our carousel. You can drag and drop to re-order the items. Select the <strong>Update Page</strong> button to add the new carousel to the page.
-        </p>
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" width="650" src="/assets/images/pages/update-page.png" alt="Update Page button">
-          <figcaption class="bcls-caption--image"Update Page button</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>
-          You are all set. You should see the new carousel on your Brightcove Beacon page. See the following sections for details about field values.
-        </p>
-      </li>
-    </ol>
+    <h2 id="history">Viewing the system status history</h2>
+    <p>To view the System Status history, click the <strong>History</strong> link at the bottom of the page.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/support/system-status-history.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="subscribe">Subscribing to system status changes</h2>
+    <p>You can sign up to be notified when the system status changes. This section is organized as follows:</p>
+    <ul>
+      <li><a href="#email">Subscribing to email</a></li>
+      <li><a href="#webhook">Subscribing to webhook</a></li>
+      <li><a href="#manage">Managing your subscription</a></li>
+    </ul>
+    <h3 id="email">Subscribing to email</h3>
+    <p>To receive notifications by email, click the <strong>SUBSCRIBE</strong> button, enter your email address and then click <strong>Subscribe</strong>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/support/system-status-subscribe.png" /></figure>
+    <h3 id="webhook">Subscribing to webhook</h3>
+    <p>A webhook is a defined callback made with HTTP POST. You specify a URL where the callback will post a JSON object when there is a status update.</p>
+    <p>To sign up to be notified when the system status changes, select the <strong>SUBSCRIBE</strong> button. Then enter a URL to receive the JSON payload along with your email address.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="webhook subscribe" src="/assets/images/support/system-status-webhook-subscribe.png" /></figure>
+    <p>When you subscribe, you should see a subscription confirmation similar to this:</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="webhook status" src="/assets/images/support/system-status-webhook-status.png" /></figure>
+    <p>When system status changes are sent, your webhook address should receive a JSON object similar to this:</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="webhook json" src="/assets/images/support/system-status-webhook-json.png" /></figure>
+    <h3 id="manage">Managing your subscription</h3>
+    <p>After you have subscribed, you will receive an email with a link to a Manage Subscription page that allows you to manage your subscription. You can choose the components/products/regions you are interested in receiving notifications for. Make your selections and then click <strong>Save Subscription</strong>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/support/system-status-manage-sub.png" /></figure>
+    <p>To unsubscribe, click the <strong>Unsubscribe</strong> link at the bottom of the Manage Subscription page.</p>
   </section>
 </article>
 
@@ -357,7 +308,7 @@
 
 <hr>
 <div class="last-updated">
-  Page last updated on 05 Feb 2020
+  Page last updated on 04 Feb 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

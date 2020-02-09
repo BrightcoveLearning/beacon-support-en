@@ -41,6 +41,20 @@
     </url>
     
     <url>
+        <loc>https://beacon.support.brightcove.com/getting-started/creating-your-app-design-info-architecture.html</loc>
+        <lastmod>2020-02-09</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://beacon.support.brightcove.com/getting-started/creating-your-app-design-layout-options.html</loc>
+        <lastmod>2020-02-09</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://beacon.support.brightcove.com/getting-started/creating-your-app-design.html</loc>
         <lastmod>2020-02-09</lastmod>
         <changefreq>daily</changefreq>
@@ -147,13 +161,6 @@
     
     <url>
         <loc>https://beacon.support.brightcove.com/index_old.html</loc>
-        <lastmod>2020-02-09</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://beacon.support.brightcove.com/getting-started/introducing-pages.html</loc>
         <lastmod>2020-02-09</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

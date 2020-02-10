@@ -12,8 +12,10 @@
       url: /getting-started/implementation-phases.html
     - name: Application Design Considerations
       url: /getting-started/app-design-considerations.html
-    - name: Creating Your Application Design
-      url: /getting-started/creating-your-app-design.html
+    - name: Creating Your Application Design - Information Architecture
+      url: /getting-started/creating-your-app-design-info-architecture.html
+    - name: Creating Your Application Design - Layout Options
+      url: /getting-started/creating-your-app-design-layout-options.html
 - section:
   name: Syncing with Video Cloud
   icon: '<i class="far fa-sync"></i>'

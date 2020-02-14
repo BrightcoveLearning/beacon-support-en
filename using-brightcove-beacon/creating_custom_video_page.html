@@ -1,0 +1,180 @@
+---
+title: Creating a Customized Video Display Page
+parent: Using Brightcove Beacon
+---
+
+<article class="bcls-article">
+  <h2>This page is under development</h2>
+  <!--   <h1>Introducing Pages</h1>
+  <summary>In this topic, you will be provided an overview of the use of <strong>Pages</strong> in a Brightcove Beacon app. Pages contain the functionality and video content app users will see.</summary>
+
+  <section class="bcls-section">
+    <h2 id="Types_of_pages">Types of pages</h2>
+    <p>When you create or edit a page, the <strong>Page Type</strong> selection offers the following:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/using-bcb/non-configurable/page-types.png" alt="page-types">
+    </figure>
+    <h3>Page categories</h3>
+    <p>The page types can be grouped into two categories. The categories and details for each follow:</p>
+    <ul>
+      <li>Non-configurable
+        <ul>
+          <li>A page you choose to include in your app, or not.</li>
+          <li>The document <a href="/using-bcb/including-non-configurable-pages.html">Including Non-Configurable Pages</a> provides further details, including how to add one of these types of pages to your app.</li>
+          <li>Examples of non-configurable pages are <strong>Settings</strong> and <strong>Sign Up</strong>, shown here:
+          <div class="row">
+            <div class="column">
+              <figure class="bcls-figure">
+                <img class="bcls-image" width="250" height="430" src="/assets/images/using-bcb/introducing-pages/settings.png" alt="featured videos">
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="bcls-figure">
+                <img class="bcls-image" width="250" height="430" src="/assets/images/using-bcb/introducing-pages/sign-up.png" alt="featured videos">
+              </figure>
+            </div>
+          </div>
+          </li>
+        </ul>
+        </>
+      <li>Screen</li>
+      <ul>
+        <li>A page that holds your video content, in carousels, lists, etc.</li>
+        <li>Highly configurable using <strong>blocks</strong>, <strong>layouts</strong> and <strong>playlists</strong>. Two examples are show here:
+          <div class="row">
+            <div class="column">
+              <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/featured-videos.png" alt="featured videos">
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/using-bcb/introducing-pages/beacon-layout-title-out.png" alt="featured videos">
+              </figure>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </ul>
+
+    <h3>Page type definitions</h3>
+    <p>The following table displays the page types, including a description and its use.</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Page Type</th>
+          <th>Description</th>
+          <th style="text-align:center">Add Blocks in the UI<br>(Yes/No)</th>
+          <th style="text-align:center">Use<br>(Required/Recommended/Optional)</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>custom-downloads</td>
+          <td>Not supported</td>
+          <td>No</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>custom-exit</td>
+          <td>Provides functionality to quit an app.</td>
+          <td>No</td>
+          <td>Required on some platforms, mainly smart TV.</td>
+        </tr>
+        <tr>
+          <td>custom-logout</td>
+          <td>Provides functionality to logout of an app. After logout, the user is left on the landing page or makes the user an anonymous user.</td>
+          <td>No</td>
+          <td>Required if you have registered users, as would be the case for most mobile platforms.</td>
+        </tr>
+        <tr>
+          <td>custom-settings</td>
+          <td>Provides access to settings.</td>
+          <td>No</td>
+          <td>Highly recommended</td>
+        </tr>
+        <tr>
+          <td>custom-signin</td>
+          <td>Provides registered user login</td>
+          <td>No</td>
+          <td>Required for registered users; not needed if you allow anonymous browsing</td>
+        </tr>
+        <tr>
+          <td>custom-signup</td>
+          <td>Provides a way for users to register</td>
+          <td>No</td>
+          <td>Required if app uses registered users; not needed if you allow anonymous browsing</td>
+        </tr>
+        <tr>
+          <td>epg-</td>
+          <td>Electronic Program Guide (EPG) displays the program guide for live TV</td>
+          <td>No</td>
+          <td>Required is app uses live channels</td>
+        </tr>
+        <tr>
+          <td>liveTV-player</td>
+          <td>Plays live video and automatically will change the orientation to landscape.</td>
+          <td>No</td>
+          <td>If you do play live TV, it is recommended to use the <strong>liveTV-preview</strong> screen, as that presents a player to the user, then on click/tap will change the orientation to landscape and play the video.</td>
+        </tr>
+        <tr>
+          <td>liveTV-preview</td>
+          <td>Plays live video with player as part of a larger page, then on click/tap will play video in landscape orientation.</td>
+          <td>No</td>
+          <td>Recommended for use over <strong>liveTV-player</strong></td>
+        </tr>
+        <tr>
+          <td>my_stuff-all</td>
+          <td>Provides a page with two tabs, one of which displays <strong>Recently Watched</strong> and the other tab displays <strong>Favorites</strong>. This would just be a blank page with a message saying you need to use <strong>Recently
+              Watched</strong> and <strong>Favorites</strong>.</td>
+          <td>No</td>
+          <td>Optional</td>
+        </tr>
+        <tr>
+          <td>my_stuff-favourites</td>
+          <td>Contains the videos marked by the user as a favorite</td>
+          <td>No</td>
+          <td>Recommended</td>
+        </tr>
+        <tr>
+          <td>my_stuff-recently_watched</td>
+          <td>Contains the last 20 videos watched, chronologically listed.</td>
+          <td>No</td>
+          <td>Recommended</td>
+        </tr>
+        <tr>
+          <td>screen-</td>
+          <td>Displays the grouped videos in carousels or tabs. Used to organize the contents of your app.</td>
+          <td>Yes</td>
+          <td>Required</td>
+        </tr>
+        <tr>
+          <td>search-</td>
+          <td>Provides input screen with an input field where you can search the content, and then presented the results.</td>
+          <td>No</td>
+          <td>Highly recommended</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Common_page_configuration_settings">Common page configuration settings</h2>
+    <p>In Brightcove Beacon when you are creating a new page or editing an existing page, you will see the following tabs:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/using-bcb/introducing-pages/pages-tabs.png" alt="Page option tabs">
+    </figure>
+    <p>The <strong>Basic Data</strong> tab is where you choose your page type, as well as configure <strong>screen</strong> pages. The other tabs are the same for all page types. The <a href="/using-brightcove-beacon/page-settings.html">Common Page
+        Configuration Settings</a> document details the needed information on the <strong>Textual Data</strong>, <strong>Non-Textual Data</strong>, <strong>Tags</strong> and <strong>Rights & Scheduling</strong> tabs.</p>
+  </section> -->
+
+  <!-- <section class="bcls-section">
+    <h2 id="Application_design_versus_Brightcove_Beacon_configuration">Application design versus Brightcove Beacon configuration</h2>
+    <p></p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Example_images_of_page_types">Example images of page types</h2>
+    <p></p>
+  </section> -->
+</article>

@@ -48,7 +48,7 @@
     </url>
     
     <url>
-        <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/create-commerce-package.html</loc>
+        <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/create-sales-package.html</loc>
         <lastmod>2020-03-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -132,28 +132,14 @@
     </url>
     
     <url>
-        <loc>https://beacon.support.brightcove.com/references/</loc>
-        <lastmod>2020-03-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://beacon.support.brightcove.com/support/</loc>
-        <lastmod>2020-03-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>https://beacon.support.brightcove.com/getting-started/</loc>
-        <lastmod>2020-03-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/</loc>
+        <lastmod>2020-03-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://beacon.support.brightcove.com/syncing-with-video-cloud/</loc>
         <lastmod>2020-03-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -167,7 +153,21 @@
     </url>
     
     <url>
-        <loc>https://beacon.support.brightcove.com/syncing-with-video-cloud/</loc>
+        <loc>https://beacon.support.brightcove.com/getting-started/</loc>
+        <lastmod>2020-03-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://beacon.support.brightcove.com/support/</loc>
+        <lastmod>2020-03-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://beacon.support.brightcove.com/references/</loc>
         <lastmod>2020-03-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

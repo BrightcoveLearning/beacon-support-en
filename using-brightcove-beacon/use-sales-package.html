@@ -49,6 +49,57 @@ parent: Using Brightcove Beacon
       <li>beacon.rights.&lt;counter&gt;.packageName</li>
       <li>beacon.rights.&lt;counter&gt;.adConfiguration</li>
     </ul>
+    <p>
+      First consider the
+      <strong>&lt;counter&gt;</strong>
+      part of each name. This is included as you may wish to create multiple
+      sets of rights management fields, and the
+      <strong>&lt;counter&gt;</strong>
+      is utilized so you can use array type syntax to group associated fields.
+    </p>
+    <p>
+      For instance, say you wanted to create sales packages around the holidays
+      and have packages for:
+    </p>
+    <ul>
+      <li>Thanksgiving</li>
+      <li>Christmas</li>
+      <li>New Years</li>
+    </ul>
+    <p>
+      You must go into Video Cloud and create three sets of rights management
+      fields, using counter values of 0-2 (or 1-3 if you prefer) that would
+      appear as shown here:
+    </p>
+    <figure class="bcls-figure">
+      <img
+        class="bcls-image"
+        src="/assets/images/using-bcb/use-sales-package/index-of-rights-fields.png"
+        alt="index of rights fields"
+      />
+    </figure>
+    <p>
+      This would allow you to assign videos to one or more of the sales
+      packages.
+    </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Assigning_a_video_to_a_package">Assigning a video to a package</h2>
+    <p>
+      You place the name of the sales package created in Brightcove Beacon in
+      the
+      <code>beacon.rights.&lt;counter&gt;.packageName</code>
+      field. If you are using a package, you MUST set the
+      <code>beacon.rights.&lt;counter&gt;.type</code>
+      to
+      <strong>SVOD</strong>
+      .
+    </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Ingesting_the_videos_into_Brightcove_Beacon">
+      Ingesting the videos into Brightcove Beacon
+    </h2>
     <p></p>
   </section>
 </article>

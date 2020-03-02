@@ -38,8 +38,6 @@
       url: /using-brightcove-beacon/creating-a-page.html
     - name: Creating a Sales Package
       url: /using-brightcove-beacon/create-sales-package.html
-    - name: Creating an Ad Configuration
-      url: /using-brightcove-beacon/advertisement.html
     - name: Creating an Ad Configuration ID
       url: /using-brightcove-beacon/vc-ad-config-id.html
     - name: Common Page Config Settings

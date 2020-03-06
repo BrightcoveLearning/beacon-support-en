@@ -55,19 +55,19 @@
   docs:
     - name: Common Required Information
       url: /creating-your-apps/common-required-info.html
-    - name: Submitting iOS and tvOS Apps
+    - name: Submitting to the Apple Store
       url: /creating-your-apps/submitting-to-apple.html
-    - name: Submitting Android Apps
+    - name: Submitting to the Android Store
       url: /creating-your-apps/submitting-to-android.html
-    - name: Submitting Roku Apps
+    - name: Submitting to the Roku Store
       url: /creating-your-apps/submitting-to-roku.html
-    - name: Submitting Samsung Apps
+    - name: Submitting to the Samsung Store
       url: /creating-your-apps/submitting-to-samsung.html
-    - name: Submitting LG & WebOS Apps
+    - name: Submitting to the LG (WebOS) Store
       url: /creating-your-apps/submitting-to-lg.html
-    - name: Submitting Amazon Apps
+    - name: Submitting to the Amazon Store
       url: /creating-your-apps/submitting-to-amazon.html
-    - name: Submitting Panasonic Apps
+    - name: Submitting to the Panasonic Store
       url: /creating-your-apps/submitting-to-panasonic.html
 - section:
   name: References

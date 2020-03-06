@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Including Non-Configurable Pages</title>
+  <title>Submitting Apps to the Roku Store</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -85,9 +85,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/using-brightcove-beacon/">Using Brightcove Beacon</a></li>
+      <li class="breadcrumb-item"><a href="/creating-your-apps/">Creating Your Apps</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Including Non-Configurable Pages</li>
+      <li class="breadcrumb-item active" aria-current="page">Submitting Apps to the Roku Store</li>
     </ol>
   </nav>
 </header>
@@ -253,123 +253,205 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <article class="bcls-article">
+  <h1>Submitting Apps to the Roku Store</h1>
+  <summary>In this topic, you will learn how to submit your device app to the Roku store.</summary>
 
-  <h1>Including Non-Configurable Pages</h1>
-  <summary>In this topic, you will learn how to include non-configurable pages in your application design. Examples of non-configurable pages are <strong>Search</strong>, <strong>Settings</strong>, <strong>Register</strong>, etc.</summary>
+    <section class="bcls-section">
+      <h2 id="Overview">Introduction</h2>
+      <p>The Brightcove Beacon page is where users will select and watch your video content. Carousels display a group of videos or playlists that you have defined in Video Cloud Studio. Using the Brightcove Beacon Administrative Console, you can add carousels to an existing page.</p>
+      <ul>
+      <li>
+        Store details:
+        <a href="https://developer.roku.com/overview">
+          https://developer.roku.com/overview
+        </a>
+      </li>
+      <li>
+        Developer Account Setup:
+        <a href="https://my.roku.com/signup">https://my.roku.com/signup</a>
+      </li>
+      <li>Suggested lead time for approval: Three weeks</li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--warning language-editable">
+      Note that it can take up to 48 hours after publishing for your channel
+      to be searchable on all devices. From the Roku site:
+      <a
+        href="https://partnersuccess.roku.com/hc/en-us/articles/360007222714"
+        target="_blank"
+      >
+        My channel was just published, why can't I find it with Search?
+      </a>
+    </aside>
+    <h3>Required information for Roku:</h3>
+    <ul>
+      <li>
+        Poster and screenshot requirements
+        <ul>
+          <li>Channel Poster (540x405)</li>
+          <li>Screenshots up to 1920x1080</li>
+        </ul>
+      </li>
+      <li>Developer Email</li>
+      <li>Preferred URL for more information</li>
+      <li>Administrative Contact (Name / Phone / Email)</li>
+      <li>Technical Contact (Name / Phone / Email)</li>
+      <li>Client to set up App logins for QA in store</li>
+    </ul>
+      <!-- <figure class="bcls-figure">
+        <img class="bcls-image--no-border" width="350" src="//beacon.support.brightcove.com/assets/images/pages/home-example.png" alt="Home with carousels">
+        <figcaption class="bcls-caption--image">Home with carousels</figcaption>
+      </figure> -->
+    </section>
 
-  <section class="bcls-section">
-    <h2 id="Tools">Understanding non-configurable pages</h2>
-    <p>There are some pages which you either must, should or can include that you cannot customize inside Brightcove Beacon. You either choose to include the page or not. You may have chosen a specific layout over others for these pages when you <a
-        href="/getting-started/creating-your-app-design.html">created your application design</a>. For instance, following are the three layouts from which you selected one for the <strong>Settings</strong> page:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/non-configurable/settings-layouts.png" alt="settings-layouts">
-    </figure>
-    <p>When you create a page that displays the settings, which is the <strong>Page Type</strong> named <code>custom-settings</code>, you see you cannot add other content to the page:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/non-configurable/no-blocks.png" alt="no-blocks">
-    </figure>
-    <p>When you create or edit a page, the <strong>Page Type</strong> selection offers the following:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/non-configurable/page-types.png" alt="page-types">
-    </figure>
-    <p>The following table displays the non-configurable page types, including a description and its use.</p>
-    <table class="bcls-table">
-      <thead class="bcls-table__head">
-        <tr>
-          <th>Page Type</th>
-          <th>Description</th>
-          <th style="text-align:center">Use<br>(Required/Recommended/Optional)</th>
-        </tr>
-      </thead>
-      <tbody class="bcls-table__body">
-        <tr>
-          <td>custom-downloads</td>
-          <td>Not supported</td>
-          <td>N/A</td>
-        </tr>
-        <tr>
-          <td>custom-exit</td>
-          <td>Provides functionality to quit an app.</td>
-          <td>Required on some platforms, mainly smart TV.</td>
-        </tr>
-        <tr>
-          <td>custom-logout</td>
-          <td>Provides functionality to logout of an app. After logout, the user is left on the landing page or makes the user an anonymous user.</td>
-          <td>Required if you have registered users, as would be the case for most mobile platforms.</td>
-        </tr>
-        <tr>
-          <td>custom-settings</td>
-          <td>Provides access to settings.</td>
-          <td>Highly recommended</td>
-        </tr>
-        <tr>
-          <td>custom-signin</td>
-          <td>Provides registered user login</td>
-          <td>Required for registered users; not needed if you allow anonymous browsing</td>
-        </tr>
-        <tr>
-          <td>custom-signup</td>
-          <td>Provides a way for users to register</td>
-          <td>Required if app uses registered users; not needed if you allow anonymous browsing</td>
-        </tr>
-        <tr>
-          <td>epg-</td>
-          <td>Electronic Program Guide (EPG) displays the program guide for live TV</td>
-          <td>Required is app uses live channels</td>
-        </tr>
-        <tr>
-          <td>liveTV-player</td>
-          <td>Plays live video and automatically will change the orientation to landscape.</td>
-          <td>If you do play live TV, it is recommended to use the <strong>liveTV-preview</strong> screen, as that presents a player to the user, then on click/tap will change the orientation to landscape and play the video.</td>
-        </tr>
-        <tr>
-          <td>liveTV-preview</td>
-          <td>Plays live video with player as part of a larger page, then on click/tap will play video in landscape orientation.</td>
-          <td>Recommended for use over <strong>liveTV-player</strong></td>
-        </tr>
-        <tr>
-          <td>my_stuff-all</td>
-          <td>Provides a page with two tabs, one of which displays <strong>Recently Watched</strong> and the other tab displays <strong>Favorites</strong>. This would just be a blank page with a message saying you need to use <strong>Recently
-              Watched</strong> and <strong>Favorites</strong>.</td>
-          <td>Optional</td>
-        </tr>
-        <tr>
-          <td>my_stuff-favourites</td>
-          <td>Contains the videos marked by the user as a favorite</td>
-          <td>Recommended</td>
-        </tr>
-        <tr>
-          <td>my_stuff-recently_watched</td>
-          <td>Contains the last 20 videos watched, chronologically listed.</td>
-          <td>Recommended</td>
-        </tr>
-        <tr>
-          <td>screen-</td>
-          <td>Displays the grouped videos in carousels or tabs. Used to organize the contents of your app.</td>
-          <td>Required</td>
-        </tr>
-        <tr>
-          <td>search-</td>
-          <td>Provides input screen with an input field where you can search the content, and then presented the results.</td>
-          <td>Highly recommended</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Adding_a_non-configurable_page_to_your_app">Adding a non-configurable page to your app</h2>
-    <p>Adding a non-configurable page to your app is rather straight forward since there is little configuration that needs to be done. At a high level the process is:</p>
-    <ol class="bcls-tasklist">
-      <li>In Brightcove Beacon create a new page.</li>
-      <li>Add basic data, choosing the page you wish from the <strong>Navigation Type</strong> dropdown. You will NOT be allowed to add any blocks and/or layouts.</li>
-      <li>Provide the rest of the data for the page, as shown in the <a href="/using-brightcove-beacon/page-settings.html">Common Page Configuration Settings</a> document.</li>
-    </ol>
-    <p>For instance, if you wish to add a search page to your app, you would create a new page, in the <strong>Basic Data</strong> form you would select <strong>search-</strong> for the <strong>Navigation Type</strong>, and then complete the rest of the basic data. That form is shown here:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/non-configurable/basic-data-form.png" alt="Select search page">
-    </figure>
-    <p>That's it, your search page will be added to your app.</p>
-  </section>
+    <section class="bcls-section">
+      <h2 id="Getting_started">Getting started</h2>
+      <p>To add a carousel to an existing page, follow these steps:</p>
+
+      <ol class="bcls-tasklist-restart">
+        <li>
+          <p>
+            In a browser, navigate to the <a href="https://my.roku.com/index">Roku Sign in</a> page.
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/roku/roku-login.png" alt="Roku sign in">
+            <figcaption class="bcls-caption--image">Roku sign in</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>
+            Either login with your account or create a new account.
+          </p>
+        </li>
+      </ol>
+    </section>
+    <section class="bcls-section">
+      <h2 id="Adding_a_channel">Adding a channel</h2>
+      <p>Learn how to add a channel.</p>
+
+      <ol class="bcls-tasklist-restart">
+        <li>
+          <p>
+            From the top navigation, select the <strong>Dashboard</strong> link.
+          </p>
+        </li>
+        <li>
+          <p>
+            From the dashboard, you can manage your channels. Select the <strong>Add Channel</strong> button.
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/roku/add-channel-button.png" alt="Manage Channels">
+            <figcaption class="bcls-caption--image">Manage Channels</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>
+            When the <strong>Developer SDK</strong> option is chosen, you will see options for a public or a non-certified channel.
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/roku/developer-sdk-channel.png" alt="Developer SDK Channel">
+            <figcaption class="bcls-caption--image">Developer SDK Channel</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>
+            Select <strong>Public</strong> when you want the channel to go to the store. Select <strong>Non-certified</strong> when you want to create a testing channel.
+          </p>
+          <aside class="bcls-aside bcls-aside--warning">The channel name must be unique across both <strong>Public</strong> and <strong>Non-certified</strong> channels.</aside>
+          <p>
+            We recommend the following:
+          </p>
+          <ul>
+            <li>
+              Create your <strong>Public</strong> channel name, for example <strong>Destinations</strong>.
+            </li>
+            <li>
+              <p>
+                Create a <strong>Non-certified</strong> testing channel with a suffix of <strong>QA</strong>. So, in this case it would be named <strong>Destinations QA</strong>.
+              </p>
+            </li>
+          </ul>
+          <p>
+            First, we are creating the public channel.
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/roku/channel-public.png" alt="Public channel">
+            <figcaption class="bcls-caption--image">Public channel</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>
+            Next, we are creating the testing channel.
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/roku/channel-qa.png" alt="Testing channel">
+            <figcaption class="bcls-caption--image">Testing channel</figcaption>
+          </figure>
+        </li>
+      </ol>
+    </section>
+
+    <section class="bcls-section">
+      <h2 id="Managing_properties">Managing properties</h2>
+      <p>Properties are associated with each channel.</p>
+
+      <ol class="bcls-tasklist-restart">
+        <li>
+          <p>
+            Return to your Developer Dashboard and select the <strong>Manage My Channels</strong> link.
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/roku/manage-properties.png" alt="Manage Properties">
+            <figcaption class="bcls-caption--image">Manage Properties</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>
+            For your channel, select the <strong>Preview and Update</strong> button.
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/roku/update-properties.png" alt="Update Properties">
+            <figcaption class="bcls-caption--image">Update Properties</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>
+            Expand the <strong>Preview and Publish</strong> dropdown menu, and select <strong>Properties</strong>. 
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" width="75%" src="/assets/images/creating-your-apps/roku/properties-dropdown.png" alt="Properties dropdown menu">
+            <figcaption class="bcls-caption--image">Properties dropdown menu</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>
+            You should see a list of channel properties. On the left side, you will see a list of Channel Store countries where your channel will appear. For testing, you can select all countries. For your live channel, choose the countries where you want your channel to be seen. 
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" width="75%" src="/assets/images/creating-your-apps/roku/countries.png" alt="Channel Store countries">
+            <figcaption class="bcls-caption--image">Channel Store countries</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>
+            For accessibility features and compliance, select <strong>Yes</strong>. All Brightcove Beacon apps meet these requirements. 
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" width="75%" src="/assets/images/creating-your-apps/roku/accessibility.png" alt="Accessibility">
+            <figcaption class="bcls-caption--image">Accessibility</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>
+            Based on your content, choose the appropriate content rating.
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" width="75%" src="/assets/images/creating-your-apps/roku/content-rating.png" alt="Content rating">
+            <figcaption class="bcls-caption--image">Content rating</figcaption>
+          </figure>
+        </li>
+        
+      </ol>
+    </section>
 
 </article>
 
@@ -388,7 +470,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 13 Jan 2020
+  Page last updated on 06 Mar 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

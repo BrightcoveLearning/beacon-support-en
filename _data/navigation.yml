@@ -49,12 +49,26 @@
     - name: Using the Tools
       url: /using-brightcove-beacon/tools.html
 - section:
-  name: Creating Your Apps
+  name: Creating Your Device Apps
   url: /creating-your-apps/
   icon: '<i class="fal fa-rocket-launch"></i>'
   docs:
-    - name: Submitting Device Apps to Stores
-      url: /creating-your-apps/submitting-device-apps-stores.html
+    - name: Common Required Information
+      url: /creating-your-apps/common-required-info.html
+    - name: Submitting iOS and tvOS Apps
+      url: /creating-your-apps/submitting-to-apple.html
+    - name: Submitting Android Apps
+      url: /creating-your-apps/submitting-to-android.html
+    - name: Submitting Roku Apps
+      url: /creating-your-apps/submitting-to-roku.html
+    - name: Submitting Samsung Apps
+      url: /creating-your-apps/submitting-to-samsung.html
+    - name: Submitting LG & WebOS Apps
+      url: /creating-your-apps/submitting-to-lg.html
+    - name: Submitting Amazon Apps
+      url: /creating-your-apps/submitting-to-amazon.html
+    - name: Submitting Panasonic Apps
+      url: /creating-your-apps/submitting-to-panasonic.html
 - section:
   name: References
   url: /references/

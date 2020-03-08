@@ -4,32 +4,80 @@ parent: Using Brightcove Beacon
 ---
 
 <article class="bcls-article">
-
   <h1>Including Non-Configurable Pages</h1>
-  <summary>In this topic, you will learn how to include non-configurable pages in your application design. Examples of non-configurable pages are <strong>Search</strong>, <strong>Settings</strong>, <strong>Register</strong>, etc.</summary>
+  <summary>
+    In this topic, you will learn how to include non-configurable pages in your
+    application design. Examples of non-configurable pages are
+    <strong>Search</strong>
+    ,
+    <strong>Settings</strong>
+    ,
+    <strong>Register</strong>
+    , etc.
+  </summary>
 
   <section class="bcls-section">
     <h2 id="Tools">Understanding non-configurable pages</h2>
-    <p>There are some pages which you either must, should or can include that you cannot customize inside Brightcove Beacon. You either choose to include the page or not. You may have chosen a specific layout over others for these pages when you <a
-        href="/getting-started/creating-your-app-design.html">created your application design</a>. For instance, following are the three layouts from which you selected one for the <strong>Settings</strong> page:</p>
+    <p>
+      There are some pages which you either must, should or can include that you
+      cannot customize inside Brightcove Beacon. You either choose to include
+      the page or not. You may have chosen a specific layout over others for
+      these pages when you worked through the document
+      <a href="/getting-started/creating-your-app-design-layout-options.html">
+        Creating Your Application Design - Layout Options
+      </a>
+      . For instance, following are the three layouts from which you selected
+      one for the
+      <strong>Settings</strong>
+      page:
+    </p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/non-configurable/settings-layouts.png" alt="settings-layouts">
+      <img
+        class="bcls-image"
+        src="/assets/images/using-bcb/non-configurable/settings-layouts.png"
+        alt="settings-layouts"
+      />
     </figure>
-    <p>When you create a page that displays the settings, which is the <strong>Page Type</strong> named <code>custom-settings</code>, you see you cannot add other content to the page:</p>
+    <p>
+      When you create a page that displays the settings, which is the
+      <strong>Page Type</strong>
+      named
+      <code>custom-settings</code>
+      , you see you cannot add other content to the page:
+    </p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/non-configurable/no-blocks.png" alt="no-blocks">
+      <img
+        class="bcls-image"
+        src="/assets/images/using-bcb/non-configurable/no-blocks.png"
+        alt="no-blocks"
+      />
     </figure>
-    <p>When you create or edit a page, the <strong>Page Type</strong> selection offers the following:</p>
+    <p>
+      When you create or edit a page, the
+      <strong>Page Type</strong>
+      selection offers the following:
+    </p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/non-configurable/page-types.png" alt="page-types">
+      <img
+        class="bcls-image"
+        src="/assets/images/using-bcb/non-configurable/page-types.png"
+        alt="page-types"
+      />
     </figure>
-    <p>The following table displays the non-configurable page types, including a description and its use.</p>
+    <p>
+      The following table displays the non-configurable page types, including a
+      description and its use.
+    </p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
           <th>Page Type</th>
           <th>Description</th>
-          <th style="text-align:center">Use<br>(Required/Recommended/Optional)</th>
+          <th style="text-align:center">
+            Use
+            <br />
+            (Required/Recommended/Optional)
+          </th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
@@ -45,8 +93,14 @@ parent: Using Brightcove Beacon
         </tr>
         <tr>
           <td>custom-logout</td>
-          <td>Provides functionality to logout of an app. After logout, the user is left on the landing page or makes the user an anonymous user.</td>
-          <td>Required if you have registered users, as would be the case for most mobile platforms.</td>
+          <td>
+            Provides functionality to logout of an app. After logout, the user
+            is left on the landing page or makes the user an anonymous user.
+          </td>
+          <td>
+            Required if you have registered users, as would be the case for most
+            mobile platforms.
+          </td>
         </tr>
         <tr>
           <td>custom-settings</td>
@@ -56,32 +110,65 @@ parent: Using Brightcove Beacon
         <tr>
           <td>custom-signin</td>
           <td>Provides registered user login</td>
-          <td>Required for registered users; not needed if you allow anonymous browsing</td>
+          <td>
+            Required for registered users; not needed if you allow anonymous
+            browsing
+          </td>
         </tr>
         <tr>
           <td>custom-signup</td>
           <td>Provides a way for users to register</td>
-          <td>Required if app uses registered users; not needed if you allow anonymous browsing</td>
+          <td>
+            Required if app uses registered users; not needed if you allow
+            anonymous browsing
+          </td>
         </tr>
         <tr>
           <td>epg-</td>
-          <td>Electronic Program Guide (EPG) displays the program guide for live TV</td>
+          <td>
+            Electronic Program Guide (EPG) displays the program guide for live
+            TV
+          </td>
           <td>Required is app uses live channels</td>
         </tr>
         <tr>
           <td>liveTV-player</td>
-          <td>Plays live video and automatically will change the orientation to landscape.</td>
-          <td>If you do play live TV, it is recommended to use the <strong>liveTV-preview</strong> screen, as that presents a player to the user, then on click/tap will change the orientation to landscape and play the video.</td>
+          <td>
+            Plays live video and automatically will change the orientation to
+            landscape.
+          </td>
+          <td>
+            If you do play live TV, it is recommended to use the
+            <strong>liveTV-preview</strong>
+            screen, as that presents a player to the user, then on click/tap
+            will change the orientation to landscape and play the video.
+          </td>
         </tr>
         <tr>
           <td>liveTV-preview</td>
-          <td>Plays live video with player as part of a larger page, then on click/tap will play video in landscape orientation.</td>
-          <td>Recommended for use over <strong>liveTV-player</strong></td>
+          <td>
+            Plays live video with player as part of a larger page, then on
+            click/tap will play video in landscape orientation.
+          </td>
+          <td>
+            Recommended for use over
+            <strong>liveTV-player</strong>
+          </td>
         </tr>
         <tr>
           <td>my_stuff-all</td>
-          <td>Provides a page with two tabs, one of which displays <strong>Recently Watched</strong> and the other tab displays <strong>Favorites</strong>. This would just be a blank page with a message saying you need to use <strong>Recently
-              Watched</strong> and <strong>Favorites</strong>.</td>
+          <td>
+            Provides a page with two tabs, one of which displays
+            <strong>Recently Watched</strong>
+            and the other tab displays
+            <strong>Favorites</strong>
+            . This would just be a blank page with a message saying you need to
+            use
+            <strong>Recently Watched</strong>
+            and
+            <strong>Favorites</strong>
+            .
+          </td>
           <td>Optional</td>
         </tr>
         <tr>
@@ -96,30 +183,64 @@ parent: Using Brightcove Beacon
         </tr>
         <tr>
           <td>screen-</td>
-          <td>Displays the grouped videos in carousels or tabs. Used to organize the contents of your app.</td>
+          <td>
+            Displays the grouped videos in carousels or tabs. Used to organize
+            the contents of your app.
+          </td>
           <td>Required</td>
         </tr>
         <tr>
           <td>search-</td>
-          <td>Provides input screen with an input field where you can search the content, and then presented the results.</td>
+          <td>
+            Provides input screen with an input field where you can search the
+            content, and then presented the results.
+          </td>
           <td>Highly recommended</td>
         </tr>
       </tbody>
     </table>
   </section>
   <section class="bcls-section">
-    <h2 id="Adding_a_non-configurable_page_to_your_app">Adding a non-configurable page to your app</h2>
-    <p>Adding a non-configurable page to your app is rather straight forward since there is little configuration that needs to be done. At a high level the process is:</p>
+    <h2 id="Adding_a_non-configurable_page_to_your_app">
+      Adding a non-configurable page to your app
+    </h2>
+    <p>
+      Adding a non-configurable page to your app is rather straight forward
+      since there is little configuration that needs to be done. At a high level
+      the process is:
+    </p>
     <ol class="bcls-tasklist">
       <li>In Brightcove Beacon create a new page.</li>
-      <li>Add basic data, choosing the page you wish from the <strong>Navigation Type</strong> dropdown. You will NOT be allowed to add any blocks and/or layouts.</li>
-      <li>Provide the rest of the data for the page, as shown in the <a href="/using-brightcove-beacon/page-settings.html">Common Page Configuration Settings</a> document.</li>
+      <li>
+        Add basic data, choosing the page you wish from the
+        <strong>Navigation Type</strong>
+        dropdown. You will NOT be allowed to add any blocks and/or layouts.
+      </li>
+      <li>
+        Provide the rest of the data for the page, as shown in the
+        <a href="/using-brightcove-beacon/page-settings.html">
+          Common Page Configuration Settings
+        </a>
+        document.
+      </li>
     </ol>
-    <p>For instance, if you wish to add a search page to your app, you would create a new page, in the <strong>Basic Data</strong> form you would select <strong>search-</strong> for the <strong>Navigation Type</strong>, and then complete the rest of the basic data. That form is shown here:</p>
+    <p>
+      For instance, if you wish to add a search page to your app, you would
+      create a new page, in the
+      <strong>Basic Data</strong>
+      form you would select
+      <strong>search-</strong>
+      for the
+      <strong>Navigation Type</strong>
+      , and then complete the rest of the basic data. That form is shown here:
+    </p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/non-configurable/basic-data-form.png" alt="Select search page">
+      <img
+        class="bcls-image"
+        src="/assets/images/using-bcb/non-configurable/basic-data-form.png"
+        alt="Select search page"
+      />
     </figure>
     <p>That's it, your search page will be added to your app.</p>
   </section>
-
 </article>

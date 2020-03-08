@@ -88,8 +88,8 @@ parent: Using Brightcove Beacon
       Assigning a single video to a package
     </h2>
     <p>
-      To assign a video to a package you must use Video Cloud Studio. Use the
-      following steps:
+      To assign a video to a package you must use Video Cloud Studio. Perform
+      the following steps:
     </p>
     <ol class="bcls-tasklist">
       <li>
@@ -98,33 +98,106 @@ parent: Using Brightcove Beacon
         module.
       </li>
       <li>
-        If adding a single video to the package, click on that video's title
-        then scroll down until you see the
+        Click on the video's title you are adding to the package to see that
+        video's properties.
+      </li>
+      <li>
+        Scroll down until you see the
         <strong>Custom Fields</strong>
-        section and click the
+        section on the right hand side and click the
         <strong>Edit</strong>
         button.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/use-sales-package/single-video-edit-fields.png"
+            alt="index of rights fields"
+          />
+        </figure>
       </li>
-      <li>If adding multiple videos to the package,</li>
-      <li></li>
-      <li></li>
+      <li>
+        Place the name of the sales package created in Brightcove Beacon in the
+        <code>beacon.rights.&lt;counter&gt;.packageName</code>
+        field.
+      </li>
+      <li>
+        Since you are using a package, you MUST set the
+        <code>beacon.rights.&lt;counter&gt;.type</code>
+        to
+        <strong>SVOD</strong>
+        .
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/use-sales-package/custom-fields.png"
+            alt="index of rights fields"
+          />
+        </figure>
+      </li>
+      <li>
+        Scroll to the bottom of the list of custom fields and click the
+        <strong>Save</strong>
+        button.
+      </li>
     </ol>
-    <p>
-      You place the name of the sales package created in Brightcove Beacon in
-      the
-      <code>beacon.rights.&lt;counter&gt;.packageName</code>
-      field. If you are using a package, you MUST set the
-      <code>beacon.rights.&lt;counter&gt;.type</code>
-      to
-      <strong>SVOD</strong>
-      .
-    </p>
   </section>
   <section class="bcls-section">
     <h2 id="Assigning_a_single_video_to_a_package">
       Assigning multiple videos to a package
     </h2>
-    <p></p>
+    <p>
+      To assign multiple videos to a package you must use Video Cloud Studio.
+      Perform the following steps:
+    </p>
+    <ol class="bcls-tasklist">
+      <li>
+        In Studio, navigate to the
+        <strong>Media</strong>
+        module.
+      </li>
+      <li>
+        Click on the video's title you are adding to the package to see that
+        video's properties.
+      </li>
+      <li>
+        Scroll down until you see the
+        <strong>Custom Fields</strong>
+        section on the right hand side and click the
+        <strong>Edit</strong>
+        button.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/use-sales-package/single-video-edit-fields.png"
+            alt="index of rights fields"
+          />
+        </figure>
+      </li>
+      <li>
+        Place the name of the sales package created in Brightcove Beacon in the
+        <code>beacon.rights.&lt;counter&gt;.packageName</code>
+        field.
+      </li>
+      <li>
+        Since you are using a package, you MUST set the
+        <code>beacon.rights.&lt;counter&gt;.type</code>
+        to
+        <strong>SVOD</strong>
+        .
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/use-sales-package/custom-fields.png"
+            alt="index of rights fields"
+          />
+        </figure>
+      </li>
+      <li>
+        Scroll to the bottom of the list of custom fields and click the
+        <strong>Save</strong>
+        button.
+      </li>
+    </ol>
   </section>
 
   <section class="bcls-section">
@@ -132,19 +205,5 @@ parent: Using Brightcove Beacon
       Ingesting the videos into Brightcove Beacon
     </h2>
     <p></p>
-    <figure class="bcls-figure">
-      <img
-        class="bcls-image"
-        src="/assets/images/using-bcb/use-sales-package/custom-fields.png"
-        alt="index of rights fields"
-      />
-    </figure>
-    <figure class="bcls-figure">
-      <img
-        class="bcls-image"
-        src="/assets/images/using-bcb/use-sales-package/single-video-edit-fields.png"
-        alt="index of rights fields"
-      />
-    </figure>
   </section>
 </article>

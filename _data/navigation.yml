@@ -49,26 +49,26 @@
     - name: Using the Tools
       url: /using-brightcove-beacon/tools.html
 - section:
-  name: Creating Your Device Apps
-  url: /creating-your-apps/
+  name: 'Creating Your Device Apps'
   icon: '<i class="fal fa-rocket-launch"></i>'
+  url: '/creating-your-apps/'
   docs:
-    - name: Common Required Information
-      url: /creating-your-apps/common-required-info.html
-    - name: Submitting to the Apple Store
-      url: /creating-your-apps/submitting-to-apple.html
-    - name: Submitting to the Android Store
-      url: /creating-your-apps/submitting-to-android.html
-    - name: Submitting to the Roku Store
-      url: /creating-your-apps/submitting-to-roku.html
-    - name: Submitting to the Samsung Store
-      url: /creating-your-apps/submitting-to-samsung.html
-    - name: Submitting to the LG (WebOS) Store
-      url: /creating-your-apps/submitting-to-lg.html
-    - name: Submitting to the Amazon Store
-      url: /creating-your-apps/submitting-to-amazon.html
-    - name: Submitting to the Panasonic Store
-      url: /creating-your-apps/submitting-to-panasonic.html
+    - name: 'Common Required Information'
+      url: '/creating-your-apps/common-required-info.html'
+    - name: 'Submitting to the Apple Store'
+      url: '/creating-your-apps/submitting-to-apple.html'
+    - name: 'Submitting to the Android Store'
+      url: '/creating-your-apps/submitting-to-android.html'
+    - name: 'Submitting to the Roku Store'
+      url: '/creating-your-apps/submitting-to-roku.html'
+    - name: 'Submitting to the Samsung Store'
+      url: '/creating-your-apps/submitting-to-samsung.html'
+    - name: 'Submitting to the LG (WebOS) Store'
+      url: '/creating-your-apps/submitting-to-lg.html'
+    - name: 'Submitting to the Amazon Store'
+      url: '/creating-your-apps/submitting-to-amazon.html'
+    - name: 'Submitting to the Panasonic Store'
+      url: '/creating-your-apps/submitting-to-panasonic.html'
 - section:
   name: References
   url: /references/

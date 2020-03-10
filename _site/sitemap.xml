@@ -146,13 +146,6 @@
     </url>
     
     <url>
-        <loc>https://beacon.support.brightcove.com/creating-your-apps/</loc>
-        <lastmod>2020-03-09</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
         <loc>https://beacon.support.brightcove.com/getting-started/</loc>
         <lastmod>2020-03-09</lastmod>
         <changefreq>daily</changefreq>
@@ -174,14 +167,21 @@
     </url>
     
     <url>
-        <loc>https://beacon.support.brightcove.com/support/</loc>
+        <loc>https://beacon.support.brightcove.com/</loc>
         <lastmod>2020-03-09</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
-        <loc>https://beacon.support.brightcove.com/</loc>
+        <loc>https://beacon.support.brightcove.com/creating-your-apps/</loc>
+        <lastmod>2020-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://beacon.support.brightcove.com/support/</loc>
         <lastmod>2020-03-09</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
@@ -294,6 +294,13 @@
     
     <url>
         <loc>https://beacon.support.brightcove.com/creating-your-apps/submitting-to-panasonic.html</loc>
+        <lastmod>2020-03-09</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://beacon.support.brightcove.com/creating-your-apps/submitting-to-roku-orig.html</loc>
         <lastmod>2020-03-09</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>

@@ -49,7 +49,7 @@
     - name: Using the Tools
       url: /using-brightcove-beacon/tools.html
 - section:
-  name: 'Creating Your Device Apps'
+  name: 'Creating Your Apps Home'
   icon: '<i class="fal fa-rocket-launch"></i>'
   url: '/creating-your-apps/'
   docs:

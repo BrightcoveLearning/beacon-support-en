@@ -1,13 +1,14 @@
 ---
 title: Using Brightcove Beacon Home
-parent: Using Brightcove Beacon
+parent: Home
 section: Using Brightcove Beacon
 description: This section provides guides to using the Brightcove Beacon
 ---
+
 <style>
   .card-wrapper {
-  justify-content: start;
-}
+    justify-content: start;
+  }
 </style>
 <article class="landing-page-wrapper">
   <h1>{{ page.title }}</h1>
@@ -15,22 +16,22 @@ description: This section provides guides to using the Brightcove Beacon
     <p>{{ page.description }}</p>
   </section>
   <section class="card-wrapper">
-    {% for item in site.data.navigation %}
-      {% if item.name == page.section %}
-      <section class="bcls-card">
-        <div class="card-icon">
-          <img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/beacon-nut.svg">
-        </div>
-        <div class="card-content">
-          <h2 class="landing-page-item-header">{{ item.name }} Topics</h2>
-          <ul class="landing-page-item list-none">
-            {% for entry in item.docs %}
-              <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
-  </section>
-      {% endif %}
-    {% endfor %}
+    {% for item in site.data.navigation %} {% if item.name == page.section %}
+    <section class="bcls-card">
+      <div class="card-icon">
+        <img
+          src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/beacon-nut.svg"
+        />
+      </div>
+      <div class="card-content">
+        <h2 class="landing-page-item-header">{{ item.name }} Topics</h2>
+        <ul class="landing-page-item list-none">
+          {% for entry in item.docs %}
+          <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+    {% endif %} {% endfor %}
   </section>
 </article>

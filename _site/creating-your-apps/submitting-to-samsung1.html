@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Submitting Apps to the Roku Store</title>
+  <title>Submitting Apps to the Samsung Store</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -87,7 +87,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       <li class="breadcrumb-item"><a href="/creating-your-apps/">Creating Your Apps</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Submitting Apps to the Roku Store</li>
+      <li class="breadcrumb-item active" aria-current="page">Submitting Apps to the Samsung Store</li>
     </ol>
   </nav>
 </header>
@@ -253,54 +253,75 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <article class="bcls-article">
-  <h1>Submitting Apps to the Roku Store</h1>
-  <summary>In this topic, you will learn how to submit your device app to the Roku store.</summary>
+  <h1>Submitting Apps to the Samsung Store</h1>
+  <summary>In this topic, you will learn how to submit your device app to the Samsung store.</summary>
 
     <section class="bcls-section">
       <h2 id="Overview">Introduction</h2>
       <p>The Brightcove Beacon page is where users will select and watch your video content. Carousels display a group of videos or playlists that you have defined in Video Cloud Studio. Using the Brightcove Beacon Administrative Console, you can add carousels to an existing page.</p>
-      <ul>
-      <li>
-        Store details:
-        <a href="https://developer.roku.com/overview">
-          https://developer.roku.com/overview
-        </a>
-      </li>
-      <li>
-        Developer Account Setup:
-        <a href="https://my.roku.com/signup">https://my.roku.com/signup</a>
-      </li>
-      <li>Suggested lead time for approval: Three weeks</li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--warning language-editable">
-      Note that it can take up to 48 hours after publishing for your channel
-      to be searchable on all devices. From the Roku site:
-      <a
-        href="https://partnersuccess.roku.com/hc/en-us/articles/360007222714"
-        target="_blank"
-      >
-        My channel was just published, why can't I find it with Search?
-      </a>
-    </aside>
-    <h3>Required information for Roku:</h3>
-    <ul>
-      <li>
-        Poster and screenshot requirements
+      <h2>Samsung</h2>
         <ul>
-          <li>Channel Poster (540x405)</li>
-          <li>Screenshots up to 1920x1080</li>
+          <li>
+            Store details:
+            <a href="http://seller.samsungapps.com/tv/app/registration/list">
+              http://seller.samsungapps.com/tv/app/registration/list
+            </a>
+          </li>
+          <li>
+            Developer Overview:
+            <a href="https://developer.samsung.com/galaxy-store">
+              https://developer.samsung.com/galaxy-store
+          </li>
+          <li>
+            Developer Account Setup:
+            <a href="https://program.developer.samsung.com/sign-in/">
+              https://program.developer.samsung.com/sign-in/
+            </a>
+          </li>
+          <li>Suggested lead time for approval: Three weeks</li>
         </ul>
-      </li>
-      <li>Developer Email</li>
-      <li>Preferred URL for more information</li>
-      <li>Administrative Contact (Name / Phone / Email)</li>
-      <li>Technical Contact (Name / Phone / Email)</li>
-      <li>Client to set up App logins for QA in store</li>
-    </ul>
-      <!-- <figure class="bcls-figure">
-        <img class="bcls-image--no-border" width="350" src="//beacon.support.brightcove.com/assets/images/pages/home-example.png" alt="Home with carousels">
-        <figcaption class="bcls-caption--image">Home with carousels</figcaption>
-      </figure> -->
+        <h3>Required information for Samsung:</h3>
+        <ul>
+          <li>
+            Applications
+            <ul>
+              <li>Tizen – Widget file</li>
+            </ul>
+          </li>
+          <li>Description</li>
+          <li>Icons for 16 Model Group</li>
+          <li>
+            Logo Asset
+            <ul>
+              <li>With Transparency</li>
+              <li>1920x1080 pixel 32 bit</li>
+              <li>PNG (RGBA) with 300kb</li>
+            </ul>
+          </li>
+          <li>
+            Background Image
+            <ul>
+              <li>1920x1080 pixel 24 bit</li>
+              <li>PNG (RGBA) with 300kb</li>
+            </ul>
+          </li>
+          <li>Icon For Legacy Model Group</li>
+          <li>
+            Icon
+            <ul>
+              <li>512x423 pixel</li>
+              <li>300kb</li>
+            </ul>
+          </li>
+          <li>Screenshot images (x4)</li>
+          <li>1280x720 or 1920x1080 pixel, 500kb</li>
+          <li>Description</li>
+          <li>
+            PowerPoint submission document – Needs to be uploaded on the portal
+            when submitting
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="bcls-section">
@@ -688,7 +709,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <ul>
             <li><strong>Channel Version</strong> - Specify the version of your app, starting with version 1.0.</li>
             <li><strong>Minimum Firmware</strong> - Select the Roku firmware version. The package will only run on devices that support the minimum firmware version or higher. The latest stable build version that we recommend is Roku v9.2 bl. </li>
-            <li><strong>Package File</strong> - The package file can be uploaded by you or by Brightcove. This file will have a similar name to: Beacon_1.0.6138.pkg. </li> 
+            <li><strong>Package File</strong> - The package file can be uploaded by you or by Brightcove. This file will have a similar name to: Beacon_1.0.6138.pkg. </li>
           </ul>
         </li>
         <li>
@@ -801,7 +822,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 09 Mar 2020
+  Page last updated on 10 Mar 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

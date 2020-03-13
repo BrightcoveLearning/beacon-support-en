@@ -252,6 +252,46 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <div id="search_box" class="gcse-search"></div>
 </div>
 
+<style>
+  #overridevc th {
+    width: 16%;
+  }
+  #overridein th {
+    width: 16%;
+  }
+  #overriden th {
+    width: 16%;
+  }
+  #overrider th {
+    width: 16%;
+  }
+  #overridedv th {
+    width: 16%;
+  }
+  #overridet th {
+    width: 16%;
+  }
+
+  #overridevc td {
+    width: 16%;
+  }
+  #overridein td {
+    width: 16%;
+  }
+  #overriden td {
+    width: 16%;
+  }
+  #overrider td {
+    width: 16%;
+  }
+  #overridedv td {
+    width: 16%;
+  }
+  #overridet td {
+    width: 16%;
+  }
+</style>
+
 <article class="bcls-article">
   <h1>Creating Video Cloud Custom Fields</h1>
   <summary>
@@ -621,9 +661,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>beacon.longDescription</td>
           <td>beacon_longdescription</td>
           <td>
-            Allows to provide a long description tailored for Brightcove Beacon
-            - if this value is not set it uses the text set in the video long
-            description field
+            Allows to provide a long description tailored for Beacon - if this
+            value is not set it uses the text set in the video long description
+            field
           </td>
           <td>No</td>
           <td>Custom field</td>
@@ -634,10 +674,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>
             Allow to set an initial score for the viewer ratings (either coming
             from some other system or to set the initial value). This will only
-            be used if the video asset is new in Brightcove Beacon and will be
-            ignored for any subsequent updates of this asset in Brightcove
-            Beacon - this so that we do not override the values that are set by
-            users in Brightcove Beacon. Possible values are from 0 to 100.
+            be used if the video asset is new in Beacon and will be ignored for
+            any subsequent updates of this asset in Beacon - this so that we do
+            not override the values that are set by users in Beacon. Possible
+            values are from 0 to 100.
           </td>
           <td>No</td>
           <td>Custom field</td>
@@ -684,36 +724,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>Video Cloud<br />Field</th>
-          <th>Internal <br />Name</th>
-          <th>Notes</th>
-          <th>Required</th>
-          <th>Default<br />Value</th>
-          <th>Data<br />Type</th>
+          <th id="overridevc">Video Cloud<br />Field</th>
+          <th id="overridein">Internal <br />Name</th>
+          <th id="overriden">Notes</th>
+          <th id="overrider">Required</th>
+          <th id="overridedv">Default<br />Value</th>
+          <th id="overridet">Data<br />type</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td>beacon.rights.&lt;counter&gt;.type</td>
-          <td>beacon_rights_ <br />&lt;counter&gt;_type</td>
-          <td>
-            Identifies if the type of monetization for the asset
+          <td id="overridevc">beacon.rights.&lt;counter&gt;.type</td>
+          <td id="overridein">beacon_rights_ <br />&lt;counter&gt;_type</td>
+          <td id="overriden">
+            Identifies if the type of monetization for the asset - possible
+            values are: <strong>FREE</strong>, <strong>AVOD</strong>,
+            <strong>SVOD</strong> and <strong>INHERIT</strong>;
+            <strong>INHERIT</strong> is only applicable to
+            <em>Episode</em> assets
           </td>
-          <td>No</td>
-          <td>FREE</td>
-          <td>
-            One of:
-            <ul>
-              <li>FREE</li>
-              <li>AVOD</li>
-              <li>SVOD</li>
-              <li>INHERIT</li>
-            </ul>
-            <p>
-              Note: <strong>INHERIT</strong> is only applicable to
-              <em>Episode</em> assets
-            </p>
-          </td>
+          <td id="overrider">No</td>
+          <td id="overridedv">FREE</td>
+          <td id="overridet">Custom field</td>
         </tr>
         <tr>
           <td>beacon.rights.&lt;counter&gt;.startDate</td>
@@ -727,7 +759,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
           <td>No</td>
           <td>If not set, defaults to video availability start date</td>
-          <td>Date</td>
+          <td>Custom field</td>
         </tr>
         <tr>
           <td>beacon.rights.&lt;counter&gt;.endDate</td>
@@ -740,8 +772,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             restrictions and monetization options in this particular set
           </td>
           <td>No</td>
-          <td>If not set, defaults to video Availability end date</td>
-          <td>Date</td>
+          <td>If not set defaults to video Availability end date</td>
+          <td>Custom field</td>
         </tr>
         <tr>
           <td>beacon.rights.&lt;counter&gt;.devices</td>
@@ -750,16 +782,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             &lt;counter&gt;_devices
           </td>
           <td>
-            Comma separated list of devices supported in Brightcove Beacon to
-            which the asset should be exposed under the access restrictions and
-            monetization options in this particular set
-          </td>
-          <td>No</td>
-          <td>
-            If not set, defaults to all devices supported in Brightcove Beacon
-          </td>
-          <td>
-            Comma separated list of:Possible values are:
+            Comma separated list of devices supported in Beacon to which the
+            asset should be exposed under the access restrictions and
+            monetization options in this particular set. Possible values are:
             <ul>
               <li>iOS</li>
               <li>Android</li>
@@ -774,6 +799,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
               <li>panasonic</li>
             </ul>
           </td>
+          <td>No</td>
+          <td>If not set defaults to all devices supported in Beacon</td>
+          <td>Custom field</td>
         </tr>
         <tr>
           <td>beacon.rights.&lt;counter&gt;.locationsPermit</td>
@@ -782,15 +810,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             &lt;counter&gt;_locationspermit
           </td>
           <td>
-            Comma separated list of locations defined in Brightcove Beacon to
-            which the asset should be exposed under the access restrictions and
+            Comma separated list of locations defined in Beacon to which the
+            asset should be exposed under the access restrictions and
             monetization options in this particular set
           </td>
           <td>No</td>
-          <td>
-            If not set, defaults to all locations supported in Brightcove Beacon
-          </td>
-          <td>Comma separated list of geographies</td>
+          <td>If not set defaults to all locations supported in Beacon</td>
+          <td>Custom field</td>
         </tr>
         <tr>
           <td>beacon.rights.&lt;counter&gt;.locationsDeny</td>
@@ -798,14 +824,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             beacon_rights_ <br />
             &lt;counter&gt;_locationsdeny
           </td>
-          <td>
-            Comma separated list of locations defined in Brightcove Beacon to
-            which the asset should NOT be exposed under the access restrictions
-            and monetization options in this particular set
-          </td>
+          <td></td>
           <td>No</td>
-          <td>None</td>
-          <td>Comma separated list of geographies</td>
+          <td></td>
+          <td>Custom field</td>
         </tr>
         <tr>
           <td>beacon.rights.&lt;counter&gt;.packageName</td>
@@ -813,7 +835,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             beacon_rights_ <br />
             &lt;counter&gt;_packagename
           </td>
-          <td>Package name as defined in Brightcove Beacon</td>
+          <td></td>
           <td>Yes if the type is set to SVOD</td>
           <td></td>
           <td>Custom field</td>

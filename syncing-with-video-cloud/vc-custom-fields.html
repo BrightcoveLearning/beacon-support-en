@@ -200,8 +200,8 @@ parent: Syncing with Video Cloud
         <tr>
           <td>duration</td>
           <td>
-            Used by Beacon to show percentage watched and duration in details
-            screens
+            Used by Brightcove Beacon to show percentage watched and duration in
+            details screens
           </td>
           <td>Yes</td>
         </tr>
@@ -233,14 +233,14 @@ parent: Syncing with Video Cloud
         </tr>
         <tr>
           <td>name</td>
-          <td>Used by Beacon as the title of the asset</td>
+          <td>Used by Brightcove Beacon as the title of the asset</td>
           <td>Yes</td>
         </tr>
         <tr>
           <td>tags</td>
           <td>
-            Not displayed in applications, but rather used by Beacon to create
-            playlists
+            Not displayed in applications, but rather used by Brightcove Beacon
+            to create playlists
           </td>
           <td>No</td>
         </tr>
@@ -350,9 +350,9 @@ parent: Syncing with Video Cloud
             should be in the form of <strong>key=value</strong> pairs separated
             by commas, where the key is the country code (like
             <strong>us</strong> ) and the value is the age rating appropriate
-            for that country code supported by Beacon. If this value is not set,
-            the most permissive rating for the default country age rating system
-            set in Beacon will be used.
+            for that country code supported by Brightcove Beacon . If this value
+            is not set, the most permissive rating for the default country age
+            rating system set in Brightcove Beacon will be used.
           </td>
           <td>No</td>
           <td>Custom field</td>
@@ -361,9 +361,9 @@ parent: Syncing with Video Cloud
           <td>beacon.shortDescription</td>
           <td>beacon_shortdescription</td>
           <td>
-            Allows to provide a short description tailored for Beacon - if this
-            value is not set it uses the text set in the video short description
-            field
+            Allows to provide a short description tailored for Brightcove Beacon
+            - if this value is not set it uses the text set in the video short
+            description field
           </td>
           <td>No</td>
           <td>Custom field</td>
@@ -467,10 +467,15 @@ parent: Syncing with Video Cloud
           </td>
         </tr>
         <tr>
-          <td>beacon.rights.&lt;counter&gt;.startDate</td>
+          <td>
+            beacon.rights.<br />
+            &lt;counter&gt;.<br />
+            startDate
+          </td>
           <td>
             beacon_rights_ <br />
-            &lt;counter&gt;_startdate
+            &lt;counter&gt;_<br />
+            startdate
           </td>
           <td>
             Date when the asset should be exposed under the access restrictions
@@ -478,7 +483,7 @@ parent: Syncing with Video Cloud
           </td>
           <td>No</td>
           <td>If not set, defaults to video availability start date</td>
-          <td>Date</td>
+          <td>Date<br />(yyyy-mm-dd)</td>
         </tr>
         <tr>
           <td>beacon.rights.&lt;counter&gt;.endDate</td>
@@ -491,8 +496,8 @@ parent: Syncing with Video Cloud
             restrictions and monetization options in this particular set
           </td>
           <td>No</td>
-          <td>If not set, defaults to video Availability end date</td>
-          <td>Date</td>
+          <td>If not set, defaults to video availability end date</td>
+          <td>Date<br />(yyyy-mm-dd)</td>
         </tr>
         <tr>
           <td>beacon.rights.&lt;counter&gt;.devices</td>
@@ -510,7 +515,7 @@ parent: Syncing with Video Cloud
             If not set, defaults to all devices supported in Brightcove Beacon
           </td>
           <td>
-            Comma separated list of:Possible values are:
+            Comma separated list of:
             <ul>
               <li>iOS</li>
               <li>Android</li>
@@ -527,10 +532,15 @@ parent: Syncing with Video Cloud
           </td>
         </tr>
         <tr>
-          <td>beacon.rights.&lt;counter&gt;.locationsPermit</td>
+          <td>
+            beacon.rights.<br />
+            &lt;counter&gt;.<br />
+            locationsPermit
+          </td>
           <td>
             beacon_rights_ <br />
-            &lt;counter&gt;_locationspermit
+            &lt;counter&gt;_<br />
+            locationspermit
           </td>
           <td>
             Comma separated list of locations defined in Brightcove Beacon to
@@ -544,10 +554,14 @@ parent: Syncing with Video Cloud
           <td>Comma separated list of geographies</td>
         </tr>
         <tr>
-          <td>beacon.rights.&lt;counter&gt;.locationsDeny</td>
+          <td>
+            beacon.rights.&lt;counter&gt;.<br />
+            locationsDeny
+          </td>
           <td>
             beacon_rights_ <br />
-            &lt;counter&gt;_locationsdeny
+            &lt;counter&gt;_<br />
+            locationsdeny
           </td>
           <td>
             Comma separated list of locations defined in Brightcove Beacon to
@@ -559,26 +573,42 @@ parent: Syncing with Video Cloud
           <td>Comma separated list of geographies</td>
         </tr>
         <tr>
-          <td>beacon.rights.&lt;counter&gt;.packageName</td>
+          <td>
+            beacon.rights.<br />
+            &lt;counter&gt;.<br />
+            packageName
+          </td>
           <td>
             beacon_rights_ <br />
-            &lt;counter&gt;_packagename
+            &lt;counter&gt;_<br />
+            packagename
           </td>
           <td>Package name as defined in Brightcove Beacon</td>
-          <td>Yes if the type is set to SVOD</td>
-          <td></td>
-          <td>Custom field</td>
+          <td>Yes, if the type is set to SVOD</td>
+          <td>None</td>
+          <td>
+            Name of the subscription package, e.g. <em>Premium Sports</em>;
+            required for SVOD Type
+          </td>
         </tr>
         <tr>
-          <td>beacon.rights.&lt;counter&gt;.adConfiguration</td>
+          <td>
+            beacon.rights.<br />
+            &lt;counter&gt;.<br />
+            adConfiguration
+          </td>
           <td>
             beacon_rights_ <br />
-            &lt;counter&gt;_adconfiguration
+            &lt;counter&gt;_<br />
+            adconfiguration
           </td>
-          <td>Identifier of an ad configuration in Beacon</td>
-          <td>Yes if the type is set as AVOD</td>
-          <td></td>
-          <td>Custom field</td>
+          <td>Identifier of an ad configuration in Brightcove Beacon</td>
+          <td>Yes, if the type is set as AVOD</td>
+          <td>None</td>
+          <td>
+            Name of advertising configuration, e.g. <em>Google Ad Manager</em>;
+            required for AVOD Type
+          </td>
         </tr>
       </tbody>
     </table>
@@ -587,8 +617,71 @@ parent: Syncing with Video Cloud
     <h2 id="Episode_fields">Episode fields</h2>
     <p>
       The following will need to be completed for videos that are episodes of a
-      series.
+      series. The following diagram shows the relationship between a serie and
+      its seasons and episodes.
     </p>
+    <figure class="bcls-figure">
+      <img
+        class="bcls-image"
+        src="/assets/images/syncing-with-vc/vc-custom-fields/beacon-series-season-episode.png"
+        alt=""
+      />
+    </figure>
+    <p>
+      Based on the diagram, the following would be the required fields for the
+      six videos in the series.
+    </p>
+    <ul>
+      <li>
+        Video 1
+        <ul>
+          <li>beacon.episode.serieName: Adventures on the Oregon Coast</li>
+          <li>beacon.episode.seasonNumber: 1</li>
+          <li>beacon.episode.number: 1</li>
+        </ul>
+      </li>
+      <li>
+        Video 2
+        <ul>
+          <li>beacon.episode.serieName: Adventures on the Oregon Coast</li>
+          <li>beacon.episode.seasonNumber: 1</li>
+          <li>beacon.episode.number: 2</li>
+        </ul>
+      </li>
+      <li>
+        Video 3
+        <ul>
+          <li>beacon.episode.serieName: Adventures on the Oregon Coast</li>
+          <li>beacon.episode.seasonNumber: 1</li>
+          <li>beacon.episode.number: 3</li>
+        </ul>
+      </li>
+      <li>
+        Video 4
+        <ul>
+          <li>beacon.episode.serieName: Adventures on the Oregon Coast</li>
+          <li>beacon.episode.seasonNumber: 2</li>
+          <li>beacon.episode.number: 1</li>
+        </ul>
+      </li>
+      <li>
+        Video 5
+        <ul>
+          <li>beacon.episode.serieName: Adventures on the Oregon Coast</li>
+          <li>beacon.episode.seasonNumber: 2</li>
+          <li>beacon.episode.number: 2</li>
+        </ul>
+      </li>
+      <li>
+        Video 6
+        <ul>
+          <li>beacon.episode.serieName: Adventures on the Oregon Coast</li>
+          <li>beacon.episode.seasonNumber: 2</li>
+          <li>beacon.episode.number: 3</li>
+        </ul>
+      </li>
+    </ul>
+
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
@@ -613,11 +706,15 @@ parent: Syncing with Video Cloud
             seriename
           </td>
           <td>
-            Should point to the series identifier in Beacon under which an
-            episode belongs (series need to be created directly in Beacon)
+            Should point to the series identifier in Brightcove Beacon under
+            which an episode belongs (series need to be created directly in
+            Brightcove Beacon )
           </td>
           <td>Yes for episode assets; No otherwise</td>
-          <td>Custom field</td>
+          <td>
+            Name of the Series, e.g. using the example
+            <em>Adventures on the Oregon Coast</em>
+          </td>
         </tr>
         <tr>
           <td>
@@ -629,11 +726,15 @@ parent: Syncing with Video Cloud
             seasonnumber
           </td>
           <td>
-            Should point to the series number in Beacon under which an episode
-            belongs (seasons need to be created directly in Beacon)
+            Should point to the series number in Brightcove Beacon under which
+            an episode belongs (seasons need to be created directly in
+            Brightcove Beacon)
           </td>
           <td>Yes for episode assets; No otherwise</td>
-          <td>Custom field</td>
+          <td>
+            The integer number referring to the season number to which the video
+            belongs
+          </td>
         </tr>
         <tr>
           <td>
@@ -646,7 +747,7 @@ parent: Syncing with Video Cloud
           </td>
           <td>Identifies the episode number within the season</td>
           <td>Yes for episode assets; No otherwise</td>
-          <td>Custom field</td>
+          <td>The integer number referring to the video's episode number</td>
         </tr>
       </tbody>
     </table>

@@ -321,7 +321,7 @@ parent: Syncing with Video Cloud
           </td>
           <td>No</td>
           <td>
-            Director(s) name(s), e.g. <em>Steven Spielberg, Woody Allen</em>
+            Director(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
           </td>
         </tr>
         <tr>
@@ -329,14 +329,14 @@ parent: Syncing with Video Cloud
           <td>beacon_cast_singer</td>
           <td>Comma separated list of names of singers</td>
           <td>No</td>
-          <td>Singer(s) name(s), e.g. <em>Sting, Rihanna</em></td>
+          <td>Singer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em></td>
         </tr>
         <tr>
           <td>beacon.cast.actor</td>
           <td>beacon_cast_actor</td>
           <td>Comma separated list of names of actors</td>
           <td>No</td>
-          <td>Actors names, e.g. <em>Jennifer Aniston, Brad Pitt</em></td>
+          <td>Actor(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em></td>
         </tr>
         <tr>
           <td>
@@ -349,7 +349,9 @@ parent: Syncing with Video Cloud
           </td>
           <td>Comma separated list of names of composers</td>
           <td>No</td>
-          <td>Custom field</td>
+          <td>
+            Composer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
+          </td>
         </tr>
         <tr>
           <td>
@@ -362,14 +364,16 @@ parent: Syncing with Video Cloud
           </td>
           <td>Comma separated list of names of songwriters</td>
           <td>No</td>
-          <td>Custom field</td>
+          <td>
+            Songwriter(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
+          </td>
         </tr>
         <tr>
           <td>beacon.cast.writer</td>
           <td>beacon_cast_writer</td>
           <td>Comma separated list of names of writers</td>
           <td>No</td>
-          <td>Custom field</td>
+          <td>Writer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em></td>
         </tr>
         <tr>
           <td>beacon.ageRating</td>
@@ -384,7 +388,7 @@ parent: Syncing with Video Cloud
             rating system set in Brightcove Beacon will be used.
           </td>
           <td>No</td>
-          <td>Custom field</td>
+          <td>key=value,key=value, e.g. <em>us=TV-Y, us=TV-M</em>)</td>
         </tr>
         <tr>
           <td>
@@ -401,7 +405,7 @@ parent: Syncing with Video Cloud
             description field
           </td>
           <td>No</td>
-          <td>Custom field</td>
+          <td>Text</td>
         </tr>
         <tr>
           <td>
@@ -418,7 +422,7 @@ parent: Syncing with Video Cloud
             description field
           </td>
           <td>No</td>
-          <td>Custom field</td>
+          <td>Text</td>
         </tr>
         <tr>
           <td>
@@ -434,11 +438,11 @@ parent: Syncing with Video Cloud
             from some other system or to set the initial value). This will only
             be used if the video asset is new in Brightcove Beacon and will be
             ignored for any subsequent updates of this asset in Brightcove
-            Beacon - this so that we do not override the values that are set by
-            users in Brightcove Beacon. Possible values are from 0 to 100.
+            Beacon - this so that the values set by users in Brightcove Beacon
+            are not overridden. Possible values are from 0 to 100.
           </td>
           <td>No</td>
-          <td>Custom field</td>
+          <td>Interger value 0-100</td>
         </tr>
         <tr>
           <td>beacon.trailer.id</td>
@@ -449,7 +453,7 @@ parent: Syncing with Video Cloud
             pointed to will be discarded as a Movie or Episode
           </td>
           <td>No</td>
-          <td>Custom field</td>
+          <td>A Video Cloud video ID, e.g. <em>6140603191001</em></td>
         </tr>
         <tr>
           <td>beacon.ingest</td>
@@ -460,7 +464,10 @@ parent: Syncing with Video Cloud
             be set to No
           </td>
           <td>No</td>
-          <td>Custom field</td>
+          <td>
+            Add this field and set the value to <em>No</em> if you do not want
+            the video synced with Brightcove Beacon
+          </td>
         </tr>
       </tbody>
     </table>

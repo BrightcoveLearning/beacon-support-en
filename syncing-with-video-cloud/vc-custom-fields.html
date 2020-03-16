@@ -183,7 +183,7 @@ parent: Syncing with Video Cloud
     </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="Standard_required_fields">Standard, required fields</h2>
+    <h2 id="Standard_fields">Standard fields</h2>
     <p>
       The following table displays the standard Video Cloud fields, meaning they
       exist by default, that require a value for Brightcove Beacon to properly
@@ -285,12 +285,14 @@ parent: Syncing with Video Cloud
           <td>
             Genre for the asset - will show up in details page and will be used
             to organize assets in different screens. If this value is not set,
-            then <strong>No Genre</strong> will be shown in the user interface.
-            Not setting this value will have an impact on
+            then
+            <strong>No Genre</strong> will be shown in the user interface. Not
+            setting this value will have an impact on
             <strong>Related Content</strong> functionality.
           </td>
           <td>No</td>
           <td>
+            Data type: <strong>String</strong>;<br />
             One of the genres as defined in Brightcove Beacon, e.g.
             <em>Action</em> or <em>Adventure</em> for movies
           </td>
@@ -305,7 +307,10 @@ parent: Syncing with Video Cloud
             Year of production of the asset - will show up in details pages
           </td>
           <td>No</td>
-          <td>A four digit integer</td>
+          <td>
+            Data type: <strong>String</strong>;<br />
+            A four digit integer
+          </td>
         </tr>
         <tr>
           <td>
@@ -316,11 +321,10 @@ parent: Syncing with Video Cloud
             beacon_cast_<br />
             director
           </td>
-          <td>
-            Comma separated list of names of directors
-          </td>
+          <td>Comma separated list of names of directors</td>
           <td>No</td>
           <td>
+            Data type: <strong>List</strong>;<br />
             Director(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
           </td>
         </tr>
@@ -329,14 +333,20 @@ parent: Syncing with Video Cloud
           <td>beacon_cast_singer</td>
           <td>Comma separated list of names of singers</td>
           <td>No</td>
-          <td>Singer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em></td>
+          <td>
+            Data type: <strong>List</strong>;<br />
+            Singer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
+          </td>
         </tr>
         <tr>
           <td>beacon.cast.actor</td>
           <td>beacon_cast_actor</td>
           <td>Comma separated list of names of actors</td>
           <td>No</td>
-          <td>Actor(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em></td>
+          <td>
+            Data type: <strong>List</strong>;<br />
+            Actor(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
+          </td>
         </tr>
         <tr>
           <td>
@@ -350,6 +360,7 @@ parent: Syncing with Video Cloud
           <td>Comma separated list of names of composers</td>
           <td>No</td>
           <td>
+            Data type: <strong>List</strong>;<br />
             Composer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
           </td>
         </tr>
@@ -365,6 +376,7 @@ parent: Syncing with Video Cloud
           <td>Comma separated list of names of songwriters</td>
           <td>No</td>
           <td>
+            Data type: <strong>List</strong>;<br />
             Songwriter(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
           </td>
         </tr>
@@ -373,7 +385,10 @@ parent: Syncing with Video Cloud
           <td>beacon_cast_writer</td>
           <td>Comma separated list of names of writers</td>
           <td>No</td>
-          <td>Writer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em></td>
+          <td>
+            Data type: <strong>List</strong>;<br />
+            Writer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
+          </td>
         </tr>
         <tr>
           <td>beacon.ageRating</td>
@@ -388,7 +403,10 @@ parent: Syncing with Video Cloud
             rating system set in Brightcove Beacon will be used.
           </td>
           <td>No</td>
-          <td>key=value,key=value, e.g. <em>us=TV-Y, us=TV-M</em>)</td>
+          <td>
+            Data type: <strong>List</strong>;<br />
+            key=value,key=value, e.g. <em>us=TV-Y, us=TV-M</em>)
+          </td>
         </tr>
         <tr>
           <td>
@@ -405,7 +423,10 @@ parent: Syncing with Video Cloud
             description field
           </td>
           <td>No</td>
-          <td>Text</td>
+          <td>
+            Data type: <strong>String</strong>;<br />
+            Text
+          </td>
         </tr>
         <tr>
           <td>
@@ -422,7 +443,10 @@ parent: Syncing with Video Cloud
             description field
           </td>
           <td>No</td>
-          <td>Text</td>
+          <td>
+            Data type: <strong>String</strong>;<br />
+            Text
+          </td>
         </tr>
         <tr>
           <td>
@@ -442,7 +466,10 @@ parent: Syncing with Video Cloud
             are not overridden. Possible values are from 0 to 100.
           </td>
           <td>No</td>
-          <td>Integer value 0-100</td>
+          <td>
+            Data type: <strong>String</strong>;<br />
+            Integer value 0-100
+          </td>
         </tr>
         <tr>
           <td>beacon.trailer.id</td>
@@ -453,7 +480,10 @@ parent: Syncing with Video Cloud
             pointed to will be discarded as a Movie or Episode
           </td>
           <td>No</td>
-          <td>A Video Cloud video ID, e.g. <em>6140603191001</em></td>
+          <td>
+            Data type: <strong>String</strong>;<br />
+            A Video Cloud video ID, e.g. <em>6140603191001</em>
+          </td>
         </tr>
         <tr>
           <td>beacon.ingest</td>
@@ -465,6 +495,7 @@ parent: Syncing with Video Cloud
           </td>
           <td>No</td>
           <td>
+            Data type: <strong>String</strong>;<br />
             Add this field and set the value to <em>No</em> if you do not want
             the video synced with Brightcove Beacon
           </td>
@@ -481,6 +512,15 @@ parent: Syncing with Video Cloud
       multiple sets of customer fields. In each instance's name a counter is
       used to differentiate between them. The first instance should use the
       counter to 0.
+    </p>
+    <p>
+      For an example of using rights management fields, specifically when using
+      a subscription package, see the
+      <a
+        href="/using-brightcove-beacon/use-subscription-package.html#Understanding_the_rights_management_custom_fields"
+        >Understanding the rights management custom fields</a
+      >
+      section of the <strong>Using a Subscription Package</strong> document.
     </p>
     <p>
       The following table displays custom Video Cloud fields that you MAY have
@@ -507,6 +547,7 @@ parent: Syncing with Video Cloud
           <td>No</td>
           <td>FREE</td>
           <td>
+            Data type: <strong>String</strong>;<br />
             One of:
             <ul>
               <li>FREE</li>
@@ -537,7 +578,10 @@ parent: Syncing with Video Cloud
           </td>
           <td>No</td>
           <td>If not set, defaults to video availability start date</td>
-          <td>Date<br />(yyyy-mm-dd)</td>
+          <td>
+            Data type: <strong>String</strong>;<br />
+            Date<br />(yyyy-mm-dd)
+          </td>
         </tr>
         <tr>
           <td>beacon.rights.&lt;counter&gt;.endDate</td>
@@ -551,7 +595,10 @@ parent: Syncing with Video Cloud
           </td>
           <td>No</td>
           <td>If not set, defaults to video availability end date</td>
-          <td>Date<br />(yyyy-mm-dd)</td>
+          <td>
+            Data type: <strong>String</strong>;<br />
+            Date<br />(yyyy-mm-dd)
+          </td>
         </tr>
         <tr>
           <td>beacon.rights.&lt;counter&gt;.devices</td>
@@ -569,6 +616,7 @@ parent: Syncing with Video Cloud
             If not set, defaults to all devices supported in Brightcove Beacon
           </td>
           <td>
+            Data type: <strong>List</strong>;<br />
             Comma separated list of:
             <ul>
               <li>iOS</li>
@@ -605,7 +653,10 @@ parent: Syncing with Video Cloud
           <td>
             If not set, defaults to all locations supported in Brightcove Beacon
           </td>
-          <td>Comma separated list of geographies</td>
+          <td>
+            Data type: <strong>List</strong>;<br />
+            Comma separated list of geographies
+          </td>
         </tr>
         <tr>
           <td>
@@ -624,7 +675,10 @@ parent: Syncing with Video Cloud
           </td>
           <td>No</td>
           <td>None</td>
-          <td>Comma separated list of geographies</td>
+          <td>
+            Data type: <strong>List</strong>;<br />
+            Comma separated list of geographies
+          </td>
         </tr>
         <tr>
           <td>
@@ -641,6 +695,7 @@ parent: Syncing with Video Cloud
           <td>Yes, if the type is set to SVOD</td>
           <td>None</td>
           <td>
+            Data type: <strong>String</strong>;<br />
             Name of the subscription package, e.g. <em>Premium Sports</em>;
             required for SVOD Type
           </td>
@@ -660,6 +715,7 @@ parent: Syncing with Video Cloud
           <td>Yes, if the type is set as AVOD</td>
           <td>None</td>
           <td>
+            Data type: <strong>String</strong>;<br />
             Name of advertising configuration, e.g. <em>Google Ad Manager</em>;
             required for AVOD Type
           </td>
@@ -766,6 +822,7 @@ parent: Syncing with Video Cloud
           </td>
           <td>Yes for episode assets; No otherwise</td>
           <td>
+            Data type: <strong>String</strong>;<br />
             Name of the Series, e.g. using the example
             <em>Adventures on the Oregon Coast</em>
           </td>
@@ -786,6 +843,7 @@ parent: Syncing with Video Cloud
           </td>
           <td>Yes for episode assets; No otherwise</td>
           <td>
+            Data type: <strong>String</strong>;<br />
             The integer number referring to the season number to which the video
             belongs
           </td>
@@ -801,7 +859,10 @@ parent: Syncing with Video Cloud
           </td>
           <td>Identifies the episode number within the season</td>
           <td>Yes for episode assets; No otherwise</td>
-          <td>The integer number referring to the video's episode number</td>
+          <td>
+            Data type: <strong>String</strong>;<br />
+            The integer number referring to the video's episode number
+          </td>
         </tr>
       </tbody>
     </table>

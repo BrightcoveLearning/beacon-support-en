@@ -438,11 +438,42 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       exist by default, and are used by Brightcove Beacon to properly import the
       video with which the metadata is associated.
     </p>
+    <p>Just a quick reminder from step 6 above about character limits:</p>
+    <ul>
+      <li>
+        String - Can contain up to 1024 single-byte characters (or 512
+        double-byte characters).
+      </li>
+      <li>
+        List - Can have no more than 150 possible values and each value in the
+        list can be no more than 100 characters long.
+      </li>
+    </ul>
+
+    <aside class="bcls-aside bcls-aside--warning language-editable">
+      Note: Please pay close attention to the definitions for the
+      <strong>images.poster.src </strong> and
+      <strong>images.thumbnail.src </strong> as you will supply images different
+      from those asked for in the Studio UI. You will add images using the UI
+      shown here, but following the guidelines in the table, not in the UI:
+      <figure class="bcls-figure">
+        <img
+          class="bcls-image"
+          src="/assets/images/syncing-with-vc/vc-custom-fields/editing-images.png"
+          alt=""
+        />
+      </figure>
+    </aside>
+
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
           <th>Video Cloud Field</th>
-          <th>Notes</th>
+          <th>Description</th>
+          <th>
+            Where/How<br />
+            Populated
+          </th>
           <th>Required</th>
         </tr>
       </thead>
@@ -451,18 +482,55 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>duration</td>
           <td>
             Used by Brightcove Beacon to show percentage watched and duration in
-            details screens, automatically populated by Video Cloud
+            details screens
           </td>
+          <td>Automatically populated by Video Cloud</td>
           <td>Yes</td>
         </tr>
         <tr>
           <td>images.poster.src</td>
-          <td>Landscape image</td>
+          <td>
+            Landscape image (16:9):
+            <table>
+              <tr>
+                <td>Minimum</td>
+                <td>Width: 1000px</td>
+                <td>Height: 563px</td>
+              </tr>
+              <tr>
+                <td>Maximum</td>
+                <td>Width: 4000px</td>
+                <td>Height: 2250px</td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            Edit the <strong>IMAGES > Poster</strong> section of the video's
+            properties and browse for the location of locally saved image.
+          </td>
           <td>Yes</td>
         </tr>
         <tr>
           <td>images.thumbnail.src</td>
-          <td>Thumbnail to be used</td>
+          <td>
+            Poster image (2:3)
+            <table>
+              <tr>
+                <td>Minimum</td>
+                <td>Width: 1000px</td>
+                <td>Height: 563px</td>
+              </tr>
+              <tr>
+                <td>Maximum</td>
+                <td>Width: 4000px</td>
+                <td>Height: 2250px</td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            Edit the <strong>IMAGES > Thumbnail</strong> section of the video's
+            properties and browse for the location of locally saved image.
+          </td>
           <td>Yes</td>
         </tr>
         <tr>
@@ -471,7 +539,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <strong>Coming soon</strong> - In the meantime defaults to
             <code>images.poster.src</code>
           </td>
-          <td>Yes</td>
+          <td></td>
+          <td></td>
         </tr>
         <tr>
           <td>images.portraitPoster.src</td>
@@ -479,11 +548,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <strong>Coming soon</strong> - In the meantime defaults to
             <code>images.poster.src</code>
           </td>
-          <td>Yes</td>
+          <td></td>
+          <td></td>
         </tr>
         <tr>
           <td>name</td>
           <td>Used by Brightcove Beacon as the title of the asset</td>
+          <td>
+            Edit the <strong>VIDEO INFORMATION </strong> section of the video's
+            properties and enter a <em>Name</em>
+          </td>
           <td>Yes</td>
         </tr>
         <tr>
@@ -491,6 +565,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>
             Not displayed in applications, but rather used by Brightcove Beacon
             to create playlists
+          </td>
+          <td>
+            Edit the <strong>VIDEO INFORMATION </strong> section of the video's
+            properties and enter <em>Tags</em>
           </td>
           <td>No</td>
         </tr>
@@ -940,13 +1018,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             &lt;counter&gt;_<br />
             packagename
           </td>
-          <td>Package name as defined in Brightcove Beacon</td>
+          <td>
+            A comma separated list of package names, as defined in Brightcove
+            Beacon
+          </td>
           <td>Yes, if the type is set to SVOD</td>
           <td>None</td>
           <td>
-            Data type: <strong>String</strong>;<br />
-            Name of the subscription package, e.g. <em>Premium Sports</em>;
-            required for SVOD Type
+            Data type: <strong>List</strong>;<br />
+            Names of the subscription packages, e.g.
+            <em>Premium Sports,Action Movies,Christmas Movies</em>; required for
+            SVOD Type
           </td>
         </tr>
         <tr>

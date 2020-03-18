@@ -310,6 +310,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         alt="ingestion"
       />
     </figure>
+    <h3>Caveats for ingestion</h3>
+    <p>
+      Note that not all data that is entered about a particular video in Studio
+      is automatically ingested into Beacon. For instance, the following are not
+      ingested into Beacon from Video Cloud:
+    </p>
+    <ul>
+      <li>
+        <strong>Availability dates and times</strong>: Scheduling information
+        set in the <em>AVAILABILITY</em> section of the video's properties are
+        not ingested into Brightcove Beacon.
+      </li>
+      <li>
+        <strong>Geo Filtering</strong>: Geo filtering information set in the
+        <em>AVAILABILITY</em> section of the video's properties are not ingested
+        into Brightcove Beacon.
+      </li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--tip language-editable">
+      The issues listed above can be remedied by creating a
+      <strong>Package</strong> in Brightcove Beacon the assigning the video to
+      that package at ingestion via custom fields. See the
+      <a href="/using-brightcove-beacon/create-subscription-package.html"
+        >Creating a Subscription Package
+      </a>
+      and
+      <a href="/using-brightcove-beacon/use-subscription-package.html"
+        >Using a Subscription Package
+      </a>
+      documents for further information.
+    </aside>
+    <p>
+      Also note that not every field mentioned in Brightcove Beacon has an
+      associated custom field. For instance
+      <em>Production Country</em> and <em>Sub-Genre</em> do not have
+      corresponding custom fields associated with them.
+    </p>
   </section>
 
   <section class="bcls-section">

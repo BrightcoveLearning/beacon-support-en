@@ -344,18 +344,21 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       Package and custom field conflicts
     </h2>
     <p>
-      Some of the custom fields to which you can assign data and have applied to
-      a video when ingested are the same as some of the fields when creating
-      your package. The rule of thumb is this, you can further restrict the
-      package, but you cannot change values that expand the functionality of the
-      package. Consider these scenarios:
+      Some of the custom fields to which you can assign data, and have applied
+      to a video when ingested, are the same as some of the fields when creating
+      your package in Brightcove Beacon. Examples are
+      <em>beacon.rights.&lt;counter&gt;.locationsPermit</em> and
+      <em>beacon.rights.&lt;counter&gt;.devices</em>. The rule of thumb is this,
+      you can further restrict the package, but you cannot change values that
+      expand the functionality of the package. Consider these scenarios:
     </p>
     <ul>
       <li>
         An end date in the <em>beacon.rights.&lt;counter&gt;.endDate</em> custom
-        field is later than the end date of the package itself. This has no
-        effect. The package does not exist since the end date has passed, so you
-        can no longer use that package.
+        field is later than the end date of the package itself. In this case,
+        setting the end date in the custom field passed the package end date has
+        no effect. The package does not exist since the end date has passed, so
+        you can no longer use that package.
       </li>
       <li>
         A package is created that has permitted locations of US, Canada and

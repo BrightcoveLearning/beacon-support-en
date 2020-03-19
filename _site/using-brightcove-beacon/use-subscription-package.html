@@ -175,6 +175,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
+                    <li><a href="/using-brightcove-beacon/use-subscription-package.html">Using a Subscription Package</a></li>
+                  
+                
+                  
                     <li><a href="/using-brightcove-beacon/tools.html">Using the Tools</a></li>
                   
                 
@@ -331,6 +335,41 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       "counter" set of rights management fields.
     </p>
   </section>
+  <section class="bcls-section">
+    <h2 id="Package_and_custom_field_conflicts">
+      Package and custom field conflicts
+    </h2>
+    <p>
+      Some of the custom fields to which you can assign data and have applied to
+      a video when ingested are the same as some of the fields when creating
+      your package. The rule of thumb is this, you can further restrict the
+      package, but you cannot change values that expand the functionality of the
+      package. Consider these scenarios:
+    </p>
+    <ul>
+      <li>
+        An end date in the <em>beacon.rights.&lt;counter&gt;.endDate</em> custom
+        field is later than the end date of the package itself. This has no
+        effect. The package does not exist since the end date has passed, so you
+        can no longer use that package.
+      </li>
+      <li>
+        A package is created that has permitted locations of US, Canada and
+        Mexico. In the custom fields UK is added in the
+        <em>beacon.rights.&lt;counter&gt;.locationsPermit</em> custom field. The
+        package will NOT function in the UK as this expands the functionality of
+        the package.
+      </li>
+      <li>
+        A package is created that has permitted locations of US, Canada and
+        Mexico. In the custom fields US and Canada are added in the
+        <em>beacon.rights.&lt;counter&gt;.locationsDeny</em> custom field. The
+        package will ONLY function in Mexico as this restricts the functionality
+        of the package.
+      </li>
+    </ul>
+  </section>
+
   <section class="bcls-section">
     <h2 id="Assigning_a_single_video_to_a_package">
       Assigning a single video to a package

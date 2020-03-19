@@ -86,43 +86,56 @@ parent: Using Brightcove Beacon
       "counter" set of rights management fields.
     </p>
   </section>
-  <!--   <section class="bcls-section">
-    <h2 id="Package_and_custom_field_conflicts">
-      Package and custom field conflicts
+  <section class="bcls-section">
+    <h2 id="Package_and_custom_field_similar_rights">
+      Package and custom field similar rights
     </h2>
     <p>
-      Some of the custom fields to which you can assign data, and have applied
-      to a video when ingested, are the same as some of the fields when creating
-      your package in Brightcove Beacon. Examples are
-      <em>beacon.rights.&lt;counter&gt;.locationsPermit</em> and
-      <em>beacon.rights.&lt;counter&gt;.devices</em>. The rule of thumb is this,
-      you can further restrict the package, but you cannot change values that
-      expand the functionality of the package. Consider these scenarios:
+      Some custom fields to which you can assign data, and have applied to a
+      video when ingested, can seem the same as form fields when creating your
+      package in Brightcove Beacon. For example, the custom field
+      <em>beacon.rights.&lt;counter&gt;.locationsDeny</em> and the package's
+      <strong>Denied locations</strong> form field may seem like they could be
+      in conflict. Remember, when considering these "conflicts" there are two
+      different questions being asked, those being:
+    </p>
+
+    <ul>
+      <li>Do the rights on the video allow it to play?</li>
+      <li>Is a user allowed to subscribe to the package?</li>
+    </ul>
+    <p>
+      Consider these scenarios:
     </p>
     <ul>
       <li>
         An end date in the <em>beacon.rights.&lt;counter&gt;.endDate</em> custom
-        field is later than the end date of the package itself. In this case,
-        setting the end date in the custom field passed the package end date has
-        no effect. The package does not exist since the end date has passed, so
-        you can no longer use that package.
+        field is later than the end date of the package itself. This means the
+        video's rights would allow it to be viewed until the custom field end
+        date, but the user could not subscribe to the package that may have, for
+        example, lowered the cost of viewing the video.
       </li>
       <li>
         A package is created that has permitted locations of US, Canada and
-        Mexico. In the custom fields UK is added in the
+        Mexico, and that package is assigned to the video in the custom field
+        <em>beacon.rights.&lt;counter&gt;.packageName</em>. Also in the video's
+        custom fields, UK is placed in the
         <em>beacon.rights.&lt;counter&gt;.locationsPermit</em> custom field. The
-        package will NOT function in the UK as this expands the functionality of
-        the package.
+        package is assigned to the video, but the package cannot be purchased in
+        the UK. The video would be able to play in the UK, but it would could
+        not be part of the package for a UK customer.
       </li>
       <li>
         A package is created that has permitted locations of US, Canada and
-        Mexico. In the custom fields US and Canada are added in the
-        <em>beacon.rights.&lt;counter&gt;.locationsDeny</em> custom field. The
-        package will ONLY function in Mexico as this restricts the functionality
-        of the package.
+        Mexico. In the custom fields US and Canada are added in the video's
+        <em>beacon.rights.&lt;counter&gt;.locationsDeny</em> custom field. Here
+        the customers in US, Canada and Mexico could subscribe to the package,
+        but the specific video where US and Canada are denied locations means
+        the video could not be viewed by customers in those locations even
+        though the video is in the package.
       </li>
     </ul>
-  </section> -->
+  </section>
 
   <section class="bcls-section">
     <h2 id="Assigning_a_single_video_to_a_package">

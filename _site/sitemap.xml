@@ -195,6 +195,13 @@
     </url>
     
     <url>
+        <loc>https://beacon.support.brightcove.com/creating-your-apps/install-test-builds.html</loc>
+        <lastmod>2020-03-19</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/introducing-pages.html</loc>
         <lastmod>2020-03-19</lastmod>
         <changefreq>daily</changefreq>

@@ -57,6 +57,8 @@
   docs:
     - name: 'Common Required Information'
       url: '/creating-your-apps/common-required-info.html'
+    - name: 'Device Apps Validation Guide'
+      url: '/creating-your-apps/device-apps-validation-guide.html'
     - name: 'Submitting to the Apple Store'
       url: '/creating-your-apps/submitting-to-apple.html'
     - name: 'Submitting to the Android Store'

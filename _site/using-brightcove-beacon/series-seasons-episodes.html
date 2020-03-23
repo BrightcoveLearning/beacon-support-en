@@ -271,12 +271,47 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       of the process is:
     </p>
     <ol>
-      <li>In Brightcove Beacon create the series. This involves not only naming the series, but also images to be use for the series in the app, dates the series can be viewed, etc.</li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>
+        In Brightcove Beacon create the series. This involves not only naming
+        the series, but also providing information such as images to be used for
+        the series in the app, dates the series can be viewed, etc.
+      </li>
+      <li>
+        In Brightcove Beacon create the seasons related to the series. You will
+        provide information similar to the series, with the addition of
+        selecting the series to which the season belongs.
+      </li>
+      <li>
+        In Video Cloud Studio you will assign the actual video episodes to the
+        corresponding season via values supplied to custom fields, then ingest
+        those videos into the Brightcove Beacon experience. The fields to be
+        assign data include:
+        <ul>
+          <li>beacon.episode.number</li>
+          <li>beacon.episode.seasonName</li>
+          <li>beacon.episode.seasonNumber</li>
+          <li>beacon.episode.serieName</li>
+        </ul>
+      </li>
     </ol>
+    <p>
+      The rest of this document will provide details for each of these steps.
+    </p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Creating_a_series">Creating a series</h2>
+    <p></p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Creating_seasons">Creating seasons</h2>
+    <p></p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Ingesting_episodes">Ingesting episodes</h2>
+    <p></p>
   </section>
 </article>
 

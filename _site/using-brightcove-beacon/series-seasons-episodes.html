@@ -435,6 +435,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             </tr>
           </tbody>
         </table>
+        <aside class="bcls-aside bcls-aside--information language-editable">
+          Note that you can have different images for English, French and
+          German.
+        </aside>
       </li>
       <li>
         The information on the <strong>Tags</strong> tab is not used at this
@@ -585,11 +589,291 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         the data entered on this form.
       </li>
     </ol>
+    <p>
+      You have now created your series. The next step is to create one or more
+      seasons that belong to this series. The next section leads you through
+      that process.
+    </p>
   </section>
 
   <section class="bcls-section">
     <h2 id="Creating_seasons">Creating seasons</h2>
-    <p></p>
+    <p>To create a season, follow these steps:</p>
+    <ol class="bcls-tasklist">
+      <li>Log in to Brightcove Beacon and select <strong>Programs</strong>.</li>
+      <li>In the left navigation, select <strong>Seasons</strong>.</li>
+      <li>Click the <strong>Add new season</strong> button.</li>
+      <li>
+        On the <strong>Basic Data</strong> tab fill in the following:
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th>Form Field Name</th>
+              <th>Description / Requirements</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td>Select a Series</td>
+              <td>
+                The dropdown will be populated with the series you have created.
+                Choose the series to which this season belongs.
+              </td>
+            </tr>
+            <tr>
+              <td>Name</td>
+              <td>
+                Enter a name for the season. You can enter a name like
+                <em>Season 1</em>, but if a series has topics for distinct
+                seasons that may be a better choice. For instance, a series on
+                the continents where each season focuses on a continent, good
+                names for the seasons would be <em>Europe</em>, <em>Africa</em>,
+                <em>Asia</em>, etc.
+              </td>
+            </tr>
+            <tr>
+              <td>Season Number</td>
+              <td>
+                This must be an integer number representing the season sequence
+                in the series. This number will be used when ingesting episode
+                videos from Video Cloud.
+              </td>
+            </tr>
+            <tr>
+              <td>Production Year</td>
+              <td>
+                The year the series was produced; this information will appear
+                in the the <strong>More Info</strong> screen
+              </td>
+            </tr>
+            <tr>
+              <td>Production Country</td>
+              <td>
+                The country where the series is produced; this information will
+                appear in the the <strong>More Info</strong> screen
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        Be sure to click the <strong>Create New Season</strong> button to save
+        the data entered on this form.
+      </li>
+      <li>Click on the <strong>Textual Data</strong> tab.</li>
+      <li>
+        For each language your apps are supporting, fill in the <em>Title</em>,
+        <em>Description</em> and <em>Synopsis</em>. This data will be displayed
+        on your season information page.
+      </li>
+      <li>
+        Be sure to click the <strong>Create New Season</strong> button to save
+        the data entered on this form.
+      </li>
+      <li>Click on the <strong>Non-Textual Data</strong> tab.</li>
+      <li>
+        Supply an image for the <strong>Portrait Poster</strong> and
+        <strong>Landscape Poster</strong> matching the requirements below. You
+        DO NOT need to supply images for <strong>Thumbnail</strong> and
+        <strong>Wide banner</strong>.
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th>Image</th>
+              <th>Requirements</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td>Portrait Poster</td>
+              <td>
+                Poster image (2:3)
+                <table>
+                  <tr>
+                    <td>Minimum</td>
+                    <td>Width: 1000px</td>
+                    <td>Height: 563px</td>
+                  </tr>
+                  <tr>
+                    <td>Maximum</td>
+                    <td>Width: 4000px</td>
+                    <td>Height: 2250px</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td>Landscape Poster</td>
+              <td>
+                Landscape image (16:9):
+                <table>
+                  <tr>
+                    <td>Minimum</td>
+                    <td>Width: 1000px</td>
+                    <td>Height: 563px</td>
+                  </tr>
+                  <tr>
+                    <td>Maximum</td>
+                    <td>Width: 4000px</td>
+                    <td>Height: 2250px</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <aside class="bcls-aside bcls-aside--information language-editable">
+          Note that you can have different images for English, French and
+          German.
+        </aside>
+      </li>
+      <li>
+        The information on the <strong>Tags</strong> tab is not used at this
+        time, so do not enter information on this tab.
+      </li>
+      <li>
+        The information on the <strong>Metadata</strong> tab is not used at this
+        time, so do not enter information on this tab.
+      </li>
+      <li>
+        Click on the <strong>Streams</strong> tab, where you will select a
+        trailer for the season.
+      </li>
+      <li>
+        Select your <strong>Provider</strong>. You will most likely only have
+        one provider, which references your Brightcove Video Cloud account.
+      </li>
+      <li>Click the <strong>Add new stream</strong> button.</li>
+      <li>
+        For the <strong>Stream Video ID</strong>, obtain the video ID for the
+        trailer from Studio and place it in the text box.
+      </li>
+      <li>
+        Be sure the <strong>Stream Type</strong> is set to <em>Trailer</em>.
+      </li>
+      <li>
+        Note that the <strong>DRM Type</strong> and
+        <strong>Stream Format</strong> values do not need to be altered.
+      </li>
+      <li>
+        Be sure to click the <strong>Create New Season</strong> button to save
+        the data entered on this form.
+      </li>
+      <li>
+        Click on the <strong>Rights & Scheduling</strong> tab, as shown here.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/series-seasons-episodes/rights-scheduling-tab-season.png"
+            alt="Rights and Scheduling"
+          />
+        </figure>
+      </li>
+      <li>
+        <p>
+          Add values for the following fields:
+        </p>
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th>Field</th>
+              <th>Required</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td>Status</td>
+              <td>Yes</td>
+              <td>
+                Select one of the following types:
+                <ul>
+                  <li>
+                    Published
+                  </li>
+                  <li>
+                    Unpublished
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Rights Type</td>
+              <td>Yes</td>
+              <td>
+                Choose the appropriate value for your series, from the options:
+                <ul>
+                  <li>Advertising - AVOD</li>
+                  <li>Free</li>
+                  <li>Subscription - SVOD</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Start Time</td>
+              <td>Yes</td>
+              <td>Schedule a starting date your series will be available</td>
+            </tr>
+            <tr>
+              <td>End Time</td>
+              <td>Yes</td>
+              <td>
+                Schedule an ending date when your series will no longer be
+                available
+              </td>
+            </tr>
+            <tr>
+              <td>Max Streams</td>
+              <td>Yes</td>
+              <td>
+                The maximum number of streams that can be watching the series
+                from the same account
+              </td>
+            </tr>
+            <tr>
+              <td>Devices to publish</td>
+              <td>Yes</td>
+              <td>
+                Add the devices you wish to publish to. Select the
+                <strong>Select / Unselect All Devices</strong>
+                to see a list of available devices.
+              </td>
+            </tr>
+            <tr>
+              <td>Permitted locations</td>
+              <td>Yes</td>
+              <td>
+                Select the locations where you want to stream your content.
+              </td>
+            </tr>
+            <tr>
+              <td>Denied locations</td>
+              <td>No</td>
+              <td>
+                Select the locations where you DO NOT want to stream your
+                content. Enter <em>World</em> if you have no restrictions.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <aside class="bcls-aside bcls-aside--tip">
+          To add or edit geographic locations, navigate to
+          <strong>Settings</strong>
+          and then
+          <strong>Locations</strong>.
+        </aside>
+      </li>
+      <li>
+        Be sure to click the <strong>Create New Season</strong> button to save
+        the data entered on this form.
+      </li>
+    </ol>
+    <p>
+      You have now created one of your seasons. If needed, create more seasons
+      for the series. The next step is to ingest episode videos from Video Cloud
+      into Brightcove Beacon. The next section leads you through that process.
+    </p>
   </section>
 
   <section class="bcls-section">

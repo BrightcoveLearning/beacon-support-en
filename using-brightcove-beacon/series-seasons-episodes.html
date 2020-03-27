@@ -308,24 +308,25 @@ parent: Using Brightcove Beacon
               <td>Max Streams</td>
               <td>Yes</td>
               <td>
-                The maximum number of streams that can be watching the series
-                from the same account
+                Set the maximum number of streams that can be watching the
+                series from the same account
               </td>
             </tr>
             <tr>
               <td>Devices to publish</td>
               <td>Yes</td>
               <td>
-                Add the devices you wish to publish to. Select the
+                Add the devices to which you wish to publish. Select the
                 <strong>Select / Unselect All Devices</strong>
-                to see a list of available devices.
+                to see a list of available devices
               </td>
             </tr>
             <tr>
               <td>Permitted locations</td>
               <td>Yes</td>
               <td>
-                Select the locations where you want to stream your content.
+                Select the locations where you want to stream your content, if
+                no restrictions enter <em>World</em>
               </td>
             </tr>
             <tr>
@@ -333,7 +334,7 @@ parent: Using Brightcove Beacon
               <td>No</td>
               <td>
                 Select the locations where you DO NOT want to stream your
-                content. Enter <em>World</em> if you have no restrictions.
+                content
               </td>
             </tr>
           </tbody>
@@ -366,7 +367,7 @@ parent: Using Brightcove Beacon
       <li>In the left navigation, select <strong>Seasons</strong>.</li>
       <li>Click the <strong>Add new season</strong> button.</li>
       <li>
-        On the <strong>Basic Data</strong> tab fill in the following:
+        On the <strong>Basic Data</strong> tab, fill in the following:
         <table class="bcls-table">
           <thead class="bcls-table__head">
             <tr>
@@ -404,15 +405,15 @@ parent: Using Brightcove Beacon
             <tr>
               <td>Production Year</td>
               <td>
-                The year the series was produced; this information will appear
-                in the the <strong>More Info</strong> screen
+                The year the season was produced; this information will appear
+                in the the <strong>More Info</strong> screen.
               </td>
             </tr>
             <tr>
               <td>Production Country</td>
               <td>
-                The country where the series is produced; this information will
-                appear in the the <strong>More Info</strong> screen
+                The country where the season is produced; this information will
+                appear in the the <strong>More Info</strong> screen.
               </td>
             </tr>
           </tbody>
@@ -425,8 +426,8 @@ parent: Using Brightcove Beacon
       <li>Click on the <strong>Textual Data</strong> tab.</li>
       <li>
         For each language your apps are supporting, fill in the <em>Title</em>,
-        <em>Description</em> and <em>Synopsis</em>. This data will be displayed
-        on your season information page.
+        <em>Description</em> and <em>Synopsis</em> for the season. This data
+        will be displayed on your season information page.
       </li>
       <li>
         Be sure to click the <strong>Create New Season</strong> button to save
@@ -434,7 +435,8 @@ parent: Using Brightcove Beacon
       </li>
       <li>Click on the <strong>Non-Textual Data</strong> tab.</li>
       <li>
-        Supply an image for the <strong>Portrait Poster</strong> and
+        For the season, supply an image for the
+        <strong>Portrait Poster</strong> and
         <strong>Landscape Poster</strong> matching the requirements below. You
         DO NOT need to supply images for <strong>Thumbnail</strong> and
         <strong>Wide banner</strong>.
@@ -563,24 +565,29 @@ parent: Using Brightcove Beacon
               <td>Rights Type</td>
               <td>Yes</td>
               <td>
-                Choose the appropriate value for your series, from the options:
+                Choose the appropriate value for your season, from the options:
                 <ul>
                   <li>Advertising - AVOD</li>
                   <li>Free</li>
+                  <li>Inherit</li>
                   <li>Subscription - SVOD</li>
                 </ul>
+                <p>
+                  <em>Inherit</em> means that the rights will be inherited from
+                  the series to which this season belongs.
+                </p>
               </td>
             </tr>
             <tr>
               <td>Start Time</td>
               <td>Yes</td>
-              <td>Schedule a starting date your series will be available</td>
+              <td>Schedule a starting date this season will be available</td>
             </tr>
             <tr>
               <td>End Time</td>
               <td>Yes</td>
               <td>
-                Schedule an ending date when your series will no longer be
+                Schedule an ending date when this season will no longer be
                 available
               </td>
             </tr>
@@ -588,7 +595,7 @@ parent: Using Brightcove Beacon
               <td>Max Streams</td>
               <td>Yes</td>
               <td>
-                The maximum number of streams that can be watching the series
+                The maximum number of streams that can be watching the season
                 from the same account
               </td>
             </tr>
@@ -672,7 +679,7 @@ parent: Using Brightcove Beacon
       </li>
       <li>Click the <strong>Edit</strong> button.</li>
       <li>
-        Locate the custom fields that are associated with episodes.
+        Locate the three custom fields that are associated with episodes.
         <figure class="bcls-figure">
           <img
             class="bcls-image"
@@ -682,8 +689,8 @@ parent: Using Brightcove Beacon
         </figure>
       </li>
       <li>
-        For the episode video, enter the series name, season number and episode
-        number in the corresponding custom field.
+        For the episode video, enter the episode number, season number and
+        series name, in the corresponding custom fields.
       </li>
       <li>
         Be sure to click the <strong>Save</strong> button after entering the
@@ -707,8 +714,8 @@ parent: Using Brightcove Beacon
       </li>
       <li>
         <p>
-          To make the videos immediately available in your apps, clear the
-          Brightcove Beacon Experience cache by clicking on the
+          To make the videos immediately available in your apps, clear
+          Brightcove Beacon's cache by clicking on the
           <strong>Cache</strong> option in the left navigation, then click the
           <strong>Cache Purge</strong> button.
         </p>
@@ -719,5 +726,9 @@ parent: Using Brightcove Beacon
         </aside>
       </li>
     </ol>
+    <p>
+      This concludes information on creating series and its associated seasons
+      and episodes.
+    </p>
   </section>
 </article>

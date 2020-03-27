@@ -16,20 +16,26 @@ parent: Using Brightcove Beacon
     </p>
     <ol>
       <li>
-        In Brightcove Beacon create the series. This involves not only naming
-        the series, but also providing information such as images to be used for
-        the series in the app, dates the series can be viewed, etc.
+        <strong>In Brightcove Beacon, create the series.</strong> This involves
+        not only naming the series, but also providing information such as
+        images to be used for the series in the app, dates the series can be
+        viewed, etc.
       </li>
       <li>
-        In Brightcove Beacon create the seasons related to the series. You will
-        provide information similar to the series, with the addition of
+        <strong
+          >In Brightcove Beacon, create the seasons related to the
+          series.</strong
+        >
+        You will provide information similar to the series, with the addition of
         selecting the series to which the season belongs.
       </li>
       <li>
-        In Video Cloud Studio you will assign the actual video episodes to the
-        corresponding season via values supplied to custom fields, then ingest
-        those videos into the Brightcove Beacon experience. The fields to be
-        assign data include:
+        <strong
+          >In Video Cloud Studio, you will assign the video episodes to the
+          corresponding season via values supplied to custom fields.</strong
+        >
+        You will then ingest those videos into the Brightcove Beacon experience.
+        The fields to be assigned data are:
         <ul>
           <li>beacon.episode.number</li>
           <li>beacon.episode.seasonNumber</li>
@@ -38,16 +44,8 @@ parent: Using Brightcove Beacon
       </li>
     </ol>
     <p>
-      The rest of this document will provide details for each of these steps.
-    </p>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Understanding_the_process">Understanding the process</h2>
-    <p>
-      The following will need to be completed for videos that are episodes of a
-      series. The following diagram shows the relationship between a series and
-      its seasons and episodes.
+      The following diagram shows the relationship between a series and its
+      seasons and episodes.
     </p>
     <figure class="bcls-figure">
       <img
@@ -57,59 +55,9 @@ parent: Using Brightcove Beacon
       />
     </figure>
     <p>
-      Based on the diagram, the following would be the required fields for the
-      six videos in the series.
+      The rest of this document will provide details on how to complete each of
+      the three steps mentioned above.
     </p>
-    <ul>
-      <li>
-        Video 1
-        <ul>
-          <li>beacon.episode.serieName: Adventures on the Oregon Coast</li>
-          <li>beacon.episode.seasonNumber: 1</li>
-          <li>beacon.episode.number: 1</li>
-        </ul>
-      </li>
-      <li>
-        Video 2
-        <ul>
-          <li>beacon.episode.serieName: Adventures on the Oregon Coast</li>
-          <li>beacon.episode.seasonNumber: 1</li>
-          <li>beacon.episode.number: 2</li>
-        </ul>
-      </li>
-      <li>
-        Video 3
-        <ul>
-          <li>beacon.episode.serieName: Adventures on the Oregon Coast</li>
-          <li>beacon.episode.seasonNumber: 1</li>
-          <li>beacon.episode.number: 3</li>
-        </ul>
-      </li>
-      <li>
-        Video 4
-        <ul>
-          <li>beacon.episode.serieName: Adventures on the Oregon Coast</li>
-          <li>beacon.episode.seasonNumber: 2</li>
-          <li>beacon.episode.number: 1</li>
-        </ul>
-      </li>
-      <li>
-        Video 5
-        <ul>
-          <li>beacon.episode.serieName: Adventures on the Oregon Coast</li>
-          <li>beacon.episode.seasonNumber: 2</li>
-          <li>beacon.episode.number: 2</li>
-        </ul>
-      </li>
-      <li>
-        Video 6
-        <ul>
-          <li>beacon.episode.serieName: Adventures on the Oregon Coast</li>
-          <li>beacon.episode.seasonNumber: 2</li>
-          <li>beacon.episode.number: 3</li>
-        </ul>
-      </li>
-    </ul>
   </section>
 
   <section class="bcls-section">
@@ -120,7 +68,7 @@ parent: Using Brightcove Beacon
       <li>In the left navigation, select <strong>Series</strong>.</li>
       <li>Click the <strong>Add new series</strong> button.</li>
       <li>
-        On the <strong>Basic Data</strong> tab fill in the following:
+        <p>On the <strong>Basic Data</strong> tab, fill in the following:</p>
         <table class="bcls-table">
           <thead class="bcls-table__head">
             <tr>

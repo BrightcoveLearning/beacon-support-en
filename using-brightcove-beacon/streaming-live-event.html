@@ -52,11 +52,8 @@ parent: Live Module
   </section>
 
   <section class="bcls-section">
-    <h2 id="create">Create a Live event in Beacon:</h2>
-    <p>
-      In the Brightcove Beacon platform, click on the
-      <strong>Events</strong> tab to start the set-up of an Event:
-    </p>
+    <h2 id="create">Create a Live event in Beacon</h2>
+    <p>Follow these steps to create an Event in Brightcove Beacon:</p>
 
     <aside class="bcls-aside bcls-aside--information">
       Only activated accounts with <strong>Brightcove Beacon Live</strong> will
@@ -65,8 +62,12 @@ parent: Live Module
       have them activated.
     </aside>
     <ol class="bcls-tasklist-restart">
-      <li class="language-editable">
-        Click on <strong>Add a new Event</strong>:
+      <li>
+        In Brightcove Beacon, click on the <strong>Events</strong> tab to start
+        the set-up of an Event.
+      </li>
+      <li>
+        Click on <strong>Add a new Event</strong>.
         <figure class="bcls-figure">
           <img
             class="bcls-image--no-border"
@@ -75,9 +76,9 @@ parent: Live Module
           />
         </figure>
       </li>
-      <li class="language-editable">
+      <li>
         Give the Live event a <strong>Name</strong>, and an
-        <strong>Event Start Date</strong>:
+        <strong>Event Start Date</strong>.
         <figure class="bcls-figure">
           <img
             class="bcls-image--no-border"
@@ -86,8 +87,8 @@ parent: Live Module
           />
         </figure>
       </li>
-      <li class="language-editable">
-        In the <strong>Textual Data</strong> tab, fill your event information:
+      <li>
+        In the <strong>Textual Data</strong> tab, fill your event information.
         <figure class="bcls-figure">
           <img
             class="bcls-image--no-border"
@@ -96,55 +97,65 @@ parent: Live Module
           />
         </figure>
       </li>
-      <li class="language-editable">
-        In the <strong>Non-Textual Data</strong> tab, pick an Image Poster for
-        your Event:
-        <p>
-          You can select the type of poster you would like for your event
-          between Portrait, Landscape, Thumbnail, and Wide banner.
-        </p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt=""
-            src="/assets/images/using-bcb/streaming-live-event/4-beacon-nontextual-data.png"
-          />
-        </figure>
+      <li>Click on the <strong>Non-Textual Data</strong> tab.</li>
+      <li>
+        Supply an image for the <strong>Portrait Poster</strong> and
+        <strong>Landscape Poster</strong> matching the requirements below. You
+        DO NOT need to supply images for <strong>Thumbnail</strong> and
+        <strong>Wide banner</strong>.
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th>Image</th>
+              <th>Requirements</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td>Portrait Poster</td>
+              <td>
+                Poster image (2:3)
+                <table>
+                  <tr>
+                    <td>Minimum</td>
+                    <td>Width: 1000px</td>
+                    <td>Height: 563px</td>
+                  </tr>
+                  <tr>
+                    <td>Maximum</td>
+                    <td>Width: 4000px</td>
+                    <td>Height: 2250px</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td>Landscape Poster</td>
+              <td>
+                Landscape image (16:9):
+                <table>
+                  <tr>
+                    <td>Minimum</td>
+                    <td>Width: 1000px</td>
+                    <td>Height: 563px</td>
+                  </tr>
+                  <tr>
+                    <td>Maximum</td>
+                    <td>Width: 4000px</td>
+                    <td>Height: 2250px</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <aside class="bcls-aside bcls-aside--information language-editable">
+          Note that you can have different images for English, French and
+          German.
+        </aside>
       </li>
-      <li class="language-editable">
-        In the <strong>Rights & Scheduling</strong> tab, you will be able to set
-        the <strong>Availability details</strong> as:
-        <ul>
-          <li class="language-editable">
-            <strong>Rights Type:</strong> Choose the type of rights between
-            Advertising, Subscription or Free.
-          </li>
-          <li class="language-editable">
-            <strong>Start Time:</strong> The start time of your event
-          </li>
-          <li class="language-editable">
-            <strong>End Time:</strong> The end time of your event, these times
-            are created to generate limits within the App.
-          </li>
-          <li class="language-editable">
-            <strong>Max Streams:</strong> Is the max number of streams allowed
-            in the App. The default number is 0 (zero).
-          </li>
-          <li class="language-editable">
-            <strong>Devices Details:</strong> Here you can add the different
-            number of devices you want your stream to be published on. (Example:
-            iOS, Android, Roku, Samsung etc)
-          </li>
-          <li class="language-editable">
-            <strong>Geo-Location Details:</strong> List of countries where you
-            want your app to be enabled. You can choose “World” in case you
-            don’t want to restrict any country.
-          </li>
-          <li class="language-editable">
-            <strong>Denied Locations:</strong> List of regions with denied
-            access to your content.
-          </li>
-        </ul>
+      <li>
+        Click the <strong>Rights & Scheduling</strong> tab, as shown here:
         <figure class="bcls-figure">
           <img
             class="bcls-image--no-border"
@@ -153,8 +164,40 @@ parent: Live Module
           />
         </figure>
       </li>
+      <li>
+        Add values for the following fields:
+        <ul>
+          <li>
+            <strong>Rights Type:</strong> Choose the type of rights between
+            <em>Advertising</em>, <em>Subscription</em> or <em>Free</em>.
+          </li>
+          <li><strong>Start Time:</strong> The start time of your event</li>
+          <li>
+            <strong>End Time:</strong> The end time of your event, these times
+            are created to generate limits within the App.
+          </li>
+          <li>
+            <strong>Max Streams:</strong> Is the max number of streams allowed
+            in the App. The default number is 0 (zero).
+          </li>
+          <li>
+            <strong>Devices Details:</strong> Here you can add the different
+            number of devices you want your stream to be published on. (Example:
+            iOS, Android, Roku, Samsung etc)
+          </li>
+          <li>
+            <strong>Geo-Location Details:</strong> List of countries where you
+            want your app to be enabled. You can choose “World” in case you
+            don’t want to restrict any country.
+          </li>
+          <li>
+            <strong>Denied Locations:</strong> List of regions with denied
+            access to your content.
+          </li>
+        </ul>
+      </li>
 
-      <li class="language-editable">
+      <li>
         Click in the button below: <strong>Create new event</strong>
         <figure class="bcls-figure">
           <img
@@ -184,7 +227,7 @@ parent: Live Module
     </figure>
 
     <ol class="bcls-tasklist-restart">
-      <li class="language-editable">
+      <li>
         Click on the <strong>Add new playlist</strong> button and create one.
         <aside class="bcls-aside bcls-aside--warning">
           You need to create a playlist in Brightcove Beacon that will contain
@@ -201,7 +244,7 @@ parent: Live Module
         </figure>
       </li>
 
-      <li class="language-editable">
+      <li>
         In <strong>Playlists</strong>, from the content type tabs, select the
         <strong>Events</strong> tab:
         <figure class="bcls-figure">
@@ -213,7 +256,7 @@ parent: Live Module
         </figure>
       </li>
 
-      <li class="language-editable">
+      <li>
         Look for your event in the contents module and click on the (+) button
         to add it to the left playlist. You can position the order of the events
         in the way you want them to be displayed in the App.
@@ -226,7 +269,7 @@ parent: Live Module
         </figure>
       </li>
 
-      <li class="language-editable">
+      <li>
         Adjust the settings of your playlist (time, devices, location, etc ...)
         As you did with your event.
         <figure class="bcls-figure">
@@ -234,7 +277,7 @@ parent: Live Module
         </figure>
       </li>
 
-      <li class="language-editable">
+      <li>
         Click on the <strong>Save changes in Playlist</strong> button.
         <figure class="bcls-figure">
           <img
@@ -247,7 +290,7 @@ parent: Live Module
         </figure>
       </li>
 
-      <li class="language-editable">
+      <li>
         Click on the tool button in the upper right of the screen to clear the
         Cache, so everything is displayed correctly in the App.
         <figure class="bcls-figure">
@@ -296,42 +339,42 @@ parent: Live Module
           />
         </figure>
       </li>
-      <li class="language-editable">
+      <li>
         Enter the event details:
         <ul>
-          <li class="language-editable">
+          <li>
             <strong>Event Name</strong> - Name for the event; this name will
             also appear in the Media module if the video is saved as a video
             asset (max 255 characters)
           </li>
-          <li class="language-editable">
+          <li>
             <strong>Short Description</strong> - Description of the event (max
             250 characters)
           </li>
-          <li class="language-editable">
+          <li>
             <strong>Tags</strong> - Tags to associate with the event; tags will
             be assigned to the video if the video is saved as a video asset (max
             128 characters and 1200 tags)
           </li>
-          <li class="language-editable">
+          <li>
             <strong>Reference ID</strong> - Reference ID for the event; must be
             unique (max 150 characters)
           </li>
         </ul>
       </li>
 
-      <li class="language-editable">
+      <li>
         Any required custom fields for the account will be displayed. Assign
         values to the custom fields.
       </li>
-      <li class="language-editable">
+      <li>
         Setting <strong>Streaming to Social Media</strong> to
         <strong>Allowed</strong> will make the event available for streaming to
         social media platforms. This can be done
         <a href="#social">once the event has started streaming</a> or by using
         the <a href="/node/18749">Social module</a>.
       </li>
-      <li class="language-editable">
+      <li>
         Select a <strong>Live Ingest Profile</strong>. The dropdown list will
         list all Live ingest profiles. The ingest profile will control the
         quality and number of live renditions that are created. Clicking the
@@ -343,19 +386,19 @@ parent: Live Module
         <aside class="bcls-aside bcls-aside--information">
           The bitrate and billing details of the three tiers are as follows:
           <ul>
-            <li class="language-editable">
+            <li>
               Tier 1 allows up to 5,500 Kbps and is charged at 1.0x hours
             </li>
-            <li class="language-editable">
+            <li>
               Tier 2 allows up to 10,000 Kbps and is charged at 1.5x hours
             </li>
-            <li class="language-editable">
+            <li>
               Tier 3 allows up to 20,000 Kbps and is charged at 2.0x hours
             </li>
           </ul>
         </aside>
       </li>
-      <li class="language-editable">
+      <li>
         Select <strong>Convert event to video asset when complete</strong> to
         save a VOD version of the live video to your Video Cloud account. When
         this option is selected, the highest quality rendition from the selected
@@ -371,14 +414,14 @@ parent: Live Module
           Note: This option is not supported when using a recurring event.
         </aside>
       </li>
-      <li class="language-editable">
+      <li>
         Click ADVANCED OPTIONS and configure the advanced options.
         <aside class="bcls-aside bcls-aside--information">
           Note: For Beacon Live work, you have to enable Stream Status
           Notifications checkbox in the Advanced options.
         </aside>
       </li>
-      <li class="language-editable">
+      <li>
         Enable stream status notifications
         <p>
           Add the notifications URL from Beacon CMS (this URL will be provided
@@ -392,7 +435,7 @@ parent: Live Module
           />
         </figure>
       </li>
-      <li class="language-editable">
+      <li>
         Click <strong>Create Event</strong> to start the live event. The Control
         Room page will open with details about the live event including the
         <strong>Streaming Endpoint (RTMP URL)</strong> and
@@ -419,7 +462,7 @@ parent: Live Module
           </p>
         </aside>
       </li>
-      <li class="language-editable">
+      <li>
         In the <strong>Control Room</strong> copy the
         <strong>“Job Id”</strong> and the <strong>“Video ID”</strong> from the
         <strong>Test Event</strong> panel, we will need both to configure the
@@ -432,7 +475,7 @@ parent: Live Module
           />
         </figure>
       </li>
-      <li class="language-editable">
+      <li>
         Next, go back to Beacon and click in the Event tab, go to the event we
         previously created there, and in the Basic Data settings paste the Job
         ID of your Live event.
@@ -451,13 +494,13 @@ parent: Live Module
         </p>
         <p>Fill in the following information:</p>
         <ul>
-          <li class="language-editable">
+          <li>
             Select the number of devices in which you can publish your video.
           </li>
-          <li class="language-editable">
+          <li>
             Change the <strong>Stream Type</strong> to: <strong>Live</strong>
           </li>
-          <li class="language-editable">
+          <li>
             And click the <strong>“Update event”</strong> button before leaving
             the page:
           </li>
@@ -471,7 +514,7 @@ parent: Live Module
         </figure>
       </li>
 
-      <li class="language-editable">
+      <li>
         Clear your cache.
         <p>
           Go to the Brightcove Beacon App and Select your playlist and event.
@@ -517,7 +560,7 @@ parent: Live Module
     </p>
 
     <ol class="bcls-tasklist-restart">
-      <li class="language-editable">
+      <li>
         In the Live module go to the <strong>Create Clip</strong> tab in the
         left panel
         <figure class="bcls-figure">
@@ -528,12 +571,12 @@ parent: Live Module
           />
         </figure>
       </li>
-      <li class="language-editable">
+      <li>
         Using the clipping buttons or shortcut keys, set the start and endpoints
         for the clip. Or just click on the <strong>Save button</strong> to keep
         the entire video.
       </li>
-      <li class="language-editable">
+      <li>
         Enter the clip video properties.
         <ul>
           <li><strong>Clip Name</strong> - Name of the clip</li>
@@ -557,7 +600,7 @@ parent: Live Module
           />
         </figure>
       </li>
-      <li class="language-editable">
+      <li>
         Click <strong>Create Clip</strong>. The transcoding process for the clip
         will begin. Clips are transcoded using the default ingest profile for
         the account.
@@ -577,7 +620,7 @@ parent: Live Module
     </h2>
 
     <ol class="bcls-tasklist-restart">
-      <li class="language-editable">
+      <li>
         Take the number <strong>ID</strong> of your created clip:
         <figure class="bcls-figure">
           <img
@@ -587,7 +630,7 @@ parent: Live Module
           />
         </figure>
       </li>
-      <li class="language-editable">
+      <li>
         In the Beacon platform, go to the <strong>Events</strong> tab and select
         the <strong>Streams</strong> menu, change the
         <strong>Stream Type</strong> in the dropdown from Live to Stream, and in
@@ -603,7 +646,7 @@ parent: Live Module
         </figure>
       </li>
 
-      <li class="language-editable">
+      <li>
         Click in the <strong>Basic Data</strong> tab and change the
         <strong>Status</strong> from <strong>Ended</strong> to
         <strong>Finished</strong>. Before leaving click the
@@ -654,7 +697,7 @@ parent: Live Module
       <strong>Create Event</strong>.
     </p>
     <ol class="bcls-tasklist-restart">
-      <li class="language-editable">
+      <li>
         In the Live Platform <strong>Create a new Event</strong>. For more
         information in how to create an event please read the following
         <a
@@ -662,7 +705,7 @@ parent: Live Module
           >documentation</a
         >.
       </li>
-      <li class="language-editable">
+      <li>
         Expand the <strong>Advanced Options</strong>, and enable the
         <strong
           >“Create this as a recurring event using a Static Entry Point
@@ -682,7 +725,7 @@ parent: Live Module
         </figure>
       </li>
 
-      <li class="language-editable">
+      <li>
         When you already have a SEP event, click on the
         <strong>Standby</strong> tab, and you will be able to
         <strong>activate/deactivate</strong> it from the Live Control Room.
@@ -694,7 +737,7 @@ parent: Live Module
           />
         </figure>
       </li>
-      <li class="language-editable">
+      <li>
         Copy your <strong>Live Job ID</strong>
         <figure class="bcls-figure">
           <img
@@ -715,7 +758,7 @@ parent: Live Module
           />
         </figure>
       </li>
-      <li class="language-editable">
+      <li>
         The date and time of your event must be in the following format:
         <figure class="bcls-figure">
           <img
@@ -727,9 +770,7 @@ parent: Live Module
           />
         </figure>
       </li>
-      <li class="language-editable">
-        Click in the <strong>Update event</strong> button.
-      </li>
+      <li>Click in the <strong>Update event</strong> button.</li>
     </ol>
     <p>
       You can perform this process with all the event channels you want in the

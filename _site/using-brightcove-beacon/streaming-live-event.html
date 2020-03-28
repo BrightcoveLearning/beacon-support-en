@@ -1,0 +1,1108 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- remember to remove the following line when the site is ready to go live -->
+  <!-- <meta name="robots" content="noindex" /> -->
+  <title>Stream a Live event to the Beacon App</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/assets/css/site/bc-icons.css"> -->
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://learning-services-media.brightcove.com/doc-assets/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/google-analytics.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/loco-bc-beacon.svg" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);" style="margin-right: 1rem;">
+  <option value="">Select a language</option>
+  <option value="en|en">English</option>
+  <option value="en|fr">Français</option>
+  <option value="en|de">Deutsch</option>
+  <option value="en|ja">日本語</option>
+  <option value="en|ko">한국어</option>
+  <option value="en|es">Español</option>
+</select>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+<select id="site_select" style="margin-right: 1rem;">
+  <option value="">Other Brightcove Documentation</option>
+  
+    
+      <option value="https://support.brightcove.com">Documentation Home</option>
+    
+  
+    
+      <option value="https://beacon.support.brightcove.com">Brightcove Beacon</option>
+    
+  
+    
+      <option value="https://audience.support.brightcove.com">Brightcove Audience</option>
+    
+  
+    
+      <option value="https://campaign.support.brightcove.com">Brightcove Campaign</option>
+    
+  
+    
+      <option value="https://gallery.support.brightcove.com">Gallery</option>
+    
+  
+    
+      <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+    
+  
+</select>
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?language=en_US"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/support.png" alt="support"> Contact Support</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/status.png" alt="system status"> System Status</a></span>
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/using-brightcove-beacon/">Live Module</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Stream a Live event to the Beacon App</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3 left-side-bar">
+        <nav class="sidenav">
+          
+            
+            <h5><a href="/">Home</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/getting-started/">Getting Started <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/getting-started/learning-guide-bc-beacon.html">Learning Guide</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/implementation-phases.html">Implementation Phases</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/app-design-considerations.html">Application Design Considerations</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/creating-your-app-design-info-architecture.html">App Design - Info Architecture</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/creating-your-app-design-layout-options.html">App Design - Layout Options</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/syncing-with-video-cloud/">Syncing with Video Cloud <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a></li>
+                  
+                
+                  
+                    <li><a href="/syncing-with-video-cloud/forcing-a-sync.html">Forcing a Sync</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/using-brightcove-beacon/">Using Brightcove Beacon <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/using-brightcove-beacon/adding-to-page.html">Adding a Carousel to a Page</a></li>
+                  
+                
+                  
+                    <li><a href="/using-brightcove-beacon/creating-a-page.html">Creating a New Page</a></li>
+                  
+                
+                  
+                    <li><a href="/using-brightcove-beacon/creating-subscription-package.html">Creating a Subscription Package</a></li>
+                  
+                
+                  
+                    <li><a href="/using-brightcove-beacon/vc-ad-config-id.html">Creating an Ad Configuration ID</a></li>
+                  
+                
+                  
+                    <li><a href="/using-brightcove-beacon/page-settings.html">Common Page Config Settings</a></li>
+                  
+                
+                  
+                    <li><a href="/using-brightcove-beacon/including-non-configurable-pages.html">Including Non-Configurable Pages</a></li>
+                  
+                
+                  
+                    <li><a href="/using-brightcove-beacon/introducing-pages.html">Introducing Pages</a></li>
+                  
+                
+                  
+                    <li><a href="/using-brightcove-beacon/using-subscription-package.html">Using a Subscription Package</a></li>
+                  
+                
+                  
+                    <li><a href="/using-brightcove-beacon/tools.html">Using the Tools</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/creating-your-apps/">Creating Your Apps <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/creating-your-apps/common-required-info.html">Common Required Information</a></li>
+                  
+                
+                  
+                    <li><a href="/creating-your-apps/device-apps-validation-guide.html">Device Apps Validation Guide</a></li>
+                  
+                
+                  
+                    <li><a href="/creating-your-apps/submitting-to-apple.html">Submitting to the Apple Store</a></li>
+                  
+                
+                  
+                    <li><a href="/creating-your-apps/submitting-to-android.html">Submitting to the Android Store</a></li>
+                  
+                
+                  
+                    <li><a href="/creating-your-apps/submitting-to-roku.html">Submitting to the Roku Store</a></li>
+                  
+                
+                  
+                    <li><a href="/creating-your-apps/submitting-to-samsung.html">Submitting to the Samsung Store</a></li>
+                  
+                
+                  
+                    <li><a href="/creating-your-apps/submitting-to-lg.html">Submitting to the LG (WebOS) Store</a></li>
+                  
+                
+                  
+                    <li><a href="/creating-your-apps/submitting-to-amazon.html">Submitting to the Amazon Store</a></li>
+                  
+                
+                  
+                    <li><a href="/creating-your-apps/submitting-to-panasonic.html">Submitting to the Panasonic Store</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/references/">References <strong>+</strong></a></h5>            
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/references/glossary.html">Glossary</a></li>
+                  
+                
+                  
+                    <li><a href="/references/known-issues.html">Known Issues</a></li>
+                  
+                
+                  
+                    <li><a href="/references/product-updates.html">Product Updates</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+
+<!-- bootstrap layout -->
+<div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+
+<!-- search bar -->
+<div id="search_bar" class="search-bar">
+  <!-- TODO - cx value below must be changed for each site and new GCS instance set up-->
+  <!-- <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:6sd3di5mwuw"></script> -->
+  <div id="search_box" class="gcse-search"></div>
+</div>
+
+<style>
+  ol li {
+    padding-bottom: 5px;
+  }
+</style>
+<article class="bcls-article">
+  <h1>Stream a Live event to the Beacon App</h1>
+  <summary
+    >In this topic you will learn how to stream a Live event to the Beacon
+    App.</summary
+  >
+
+  <section class="bcls-section">
+    <h2 id="overview">Overview</h2>
+
+    <p>
+      To stream a Live event to your Application, you must follow a series of
+      steps to connect your Video Cloud Live account and Brightcove Beacon.
+    </p>
+    <p>A high-level view of the process is:</p>
+    <ol>
+      <li>
+        The first is step is create an Event and a Playlist in Brightcove
+        Beacon. This event will become available in the App as a place holder
+        for your video.
+      </li>
+      <li>
+        Go to your Video Cloud account and access Live to create your event and
+        obtain the Job ID that will work as an identifier.
+      </li>
+      <li>
+        Back in Brightcove Beacon, you will be able to connect your Live
+        streaming putting the Job ID generated in Live platform under the Events
+        section of the platform.
+      </li>
+      <li>
+        Wait for the connection and the Live video will start streaming in the
+        Beacon App.
+      </li>
+      <li>
+        In the last section, you will see the steps to create a different type
+        of event in Live by a Static Entry Point.
+      </li>
+    </ol>
+
+    <p>
+      The rest of this document will provide details for each of these steps.
+    </p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="create">Create a Live event in Beacon:</h2>
+    <p>
+      In the Brightcove Beacon platform, click on the
+      <strong>Events</strong> tab to start the set-up of an Event:
+    </p>
+
+    <aside class="bcls-aside bcls-aside--information">
+      Only activated accounts with <strong>Brightcove Beacon Live</strong> will
+      have the <strong>Playlists</strong> and <strong>Events</strong> available
+      in the tabs section. Please contact Brightcove Support in case you don't
+      have them activated.
+    </aside>
+    <ol class="bcls-tasklist-restart">
+      <li class="language-editable">
+        Click on <strong>Add a new Event</strong>:
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/1-add-new-event.png"
+          />
+        </figure>
+      </li>
+      <li class="language-editable">
+        Give the Live event a <strong>Name</strong>, and an
+        <strong>Event Start Date</strong>:
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/2-beacon-basic-data.png"
+          />
+        </figure>
+      </li>
+      <li class="language-editable">
+        In the <strong>Textual Data</strong> tab, fill your event information:
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/3-beacon-textual-data.png"
+          />
+        </figure>
+      </li>
+      <li class="language-editable">
+        In the <strong>Non-Textual Data</strong> tab, pick an Image Poster for
+        your Event:
+        <p>
+          You can select the type of poster you would like for your event
+          between Portrait, Landscape, Thumbnail, and Wide banner.
+        </p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/4-beacon-nontextual-data.png"
+          />
+        </figure>
+      </li>
+      <li class="language-editable">
+        In the <strong>Rights & Scheduling</strong> tab, you will be able to set
+        the <strong>Availability details</strong> as:
+        <ul>
+          <li class="language-editable">
+            <strong>Rights Type:</strong> Choose the type of rights between
+            Advertising, Subscription or Free.
+          </li>
+          <li class="language-editable">
+            <strong>Start Time:</strong> The start time of your event
+          </li>
+          <li class="language-editable">
+            <strong>End Time:</strong> The end time of your event, these times
+            are created to generate limits within the App.
+          </li>
+          <li class="language-editable">
+            <strong>Max Streams:</strong> Is the max number of streams allowed
+            in the App. The default number is 0 (zero).
+          </li>
+          <li class="language-editable">
+            <strong>Devices Details:</strong> Here you can add the different
+            number of devices you want your stream to be published on. (Example:
+            iOS, Android, Roku, Samsung etc)
+          </li>
+          <li class="language-editable">
+            <strong>Geo-Location Details:</strong> List of countries where you
+            want your app to be enabled. You can choose “World” in case you
+            don’t want to restrict any country.
+          </li>
+          <li class="language-editable">
+            <strong>Denied Locations:</strong> List of regions with denied
+            access to your content.
+          </li>
+        </ul>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/5-beacon-right-schedualing.png"
+          />
+        </figure>
+      </li>
+
+      <li class="language-editable">
+        Click in the button below: <strong>Create new event</strong>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            width="300"
+            height="200"
+            src="/beacon-live/beaconimg/6-create-event-button.png"
+          />
+        </figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Playlist">Add the Beacon event to a Playlist</h2>
+    <p>
+      Once we create an event, go to the <strong>Playlists</strong> tab at the
+      upper menu. We need to add the event to a Playlist before we can stream
+      something.
+    </p>
+    <figure class="bcls-figure">
+      <img
+        class="bcls-image--no-border"
+        alt=""
+        src="/beacon-live/beaconimg/7-playlist-menu.png"
+      />
+    </figure>
+
+    <ol class="bcls-tasklist-restart">
+      <li class="language-editable">
+        Click on the <strong>Add new playlist</strong> button and create one.
+        <aside class="bcls-aside bcls-aside--warning">
+          You need to create a playlist in Brightcove Beacon that will contain
+          your Live events. <strong>Do not</strong> use a playlist from Video
+          Cloud, using a Video Cloud playlist may overwrite and delete your
+          Beacon Live recordings.
+        </aside>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/8-playlist.png"
+          />
+        </figure>
+      </li>
+
+      <li class="language-editable">
+        In <strong>Playlists</strong>, from the content type tabs, select the
+        <strong>Events</strong> tab:
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/9-playlist-events.png"
+          />
+        </figure>
+      </li>
+
+      <li class="language-editable">
+        Look for your event in the contents module and click on the (+) button
+        to add it to the left playlist. You can position the order of the events
+        in the way you want them to be displayed in the App.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/10-playlist-select-event.png"
+          />
+        </figure>
+      </li>
+
+      <li class="language-editable">
+        Adjust the settings of your playlist (time, devices, location, etc ...)
+        As you did with your event.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="" />
+        </figure>
+      </li>
+
+      <li class="language-editable">
+        Click on the <strong>Save changes in Playlist</strong> button.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            width="300"
+            height="200"
+            src="/beacon-live/beaconimg/11-save-playlist-button.png"
+          />
+        </figure>
+      </li>
+
+      <li class="language-editable">
+        Click on the tool button in the upper right of the screen to clear the
+        Cache, so everything is displayed correctly in the App.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/12-clear-cache.png"
+          />
+        </figure>
+      </li>
+    </ol>
+
+    <p>
+      At this point, your event will be created as a container in the Brightcove
+      Beacon App, but to actually start streaming a Live video we will need to
+      set up our transmission in the Video Cloud Live Platform.
+    </p>
+    <figure class="bcls-figure">
+      <img
+        class="bcls-image--no-border"
+        alt=""
+        src="/beacon-live/beaconimg/13-beacon-apps-white.png"
+      />
+    </figure>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Live">Create a Live event in Studio</h2>
+
+    <p>
+      To access the Live module, login to Video Cloud Studio and click Live in
+      the navigation header.
+    </p>
+
+    <ol class="bcls-tasklist-restart">
+      <li>
+        From the Manage Events page, click <strong>Create Event</strong>. The
+        Create Live Event or Create Live Channel page will open. The properties
+        when creating events and channels are the same. The screenshot in this
+        document covers creating an event.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/15-live-event.png"
+          />
+        </figure>
+      </li>
+      <li class="language-editable">
+        Enter the event details:
+        <ul>
+          <li class="language-editable">
+            <strong>Event Name</strong> - Name for the event; this name will
+            also appear in the Media module if the video is saved as a video
+            asset (max 255 characters)
+          </li>
+          <li class="language-editable">
+            <strong>Short Description</strong> - Description of the event (max
+            250 characters)
+          </li>
+          <li class="language-editable">
+            <strong>Tags</strong> - Tags to associate with the event; tags will
+            be assigned to the video if the video is saved as a video asset (max
+            128 characters and 1200 tags)
+          </li>
+          <li class="language-editable">
+            <strong>Reference ID</strong> - Reference ID for the event; must be
+            unique (max 150 characters)
+          </li>
+        </ul>
+      </li>
+
+      <li class="language-editable">
+        Any required custom fields for the account will be displayed. Assign
+        values to the custom fields.
+      </li>
+      <li class="language-editable">
+        Setting <strong>Streaming to Social Media</strong> to
+        <strong>Allowed</strong> will make the event available for streaming to
+        social media platforms. This can be done
+        <a href="#social">once the event has started streaming</a> or by using
+        the <a href="/node/18749">Social module</a>.
+      </li>
+      <li class="language-editable">
+        Select a <strong>Live Ingest Profile</strong>. The dropdown list will
+        list all Live ingest profiles. The ingest profile will control the
+        quality and number of live renditions that are created. Clicking the
+        <strong>Manage Profiles</strong> link will open the ingest profile
+        editor in another browser tab. Note that you must be an account
+        administrator to access the ingest profile editor. Click the
+        <strong>RENDITIONS</strong> link to view the renditions that will be
+        created using the selected ingest profile.
+        <aside class="bcls-aside bcls-aside--information">
+          The bitrate and billing details of the three tiers are as follows:
+          <ul>
+            <li class="language-editable">
+              Tier 1 allows up to 5,500 Kbps and is charged at 1.0x hours
+            </li>
+            <li class="language-editable">
+              Tier 2 allows up to 10,000 Kbps and is charged at 1.5x hours
+            </li>
+            <li class="language-editable">
+              Tier 3 allows up to 20,000 Kbps and is charged at 2.0x hours
+            </li>
+          </ul>
+        </aside>
+      </li>
+      <li class="language-editable">
+        Select <strong>Convert event to video asset when complete</strong> to
+        save a VOD version of the live video to your Video Cloud account. When
+        this option is selected, the highest quality rendition from the selected
+        <strong>Live Ingest Profile</strong> is used as the source for the VOD
+        video. The default ingest profile for the account is used when creating
+        renditions.
+        <strong
+          >Note that the VOD version is not available as soon as the live event
+          ends, the video will be available once the ingestion process is
+          complete.</strong
+        >
+        <aside class="bcls-aside bcls-aside--information">
+          Note: This option is not supported when using a recurring event.
+        </aside>
+      </li>
+      <li class="language-editable">
+        Click ADVANCED OPTIONS and configure the advanced options.
+        <aside class="bcls-aside bcls-aside--information">
+          Note: For Beacon Live work, you have to enable Stream Status
+          Notifications checkbox in the Advanced options.
+        </aside>
+      </li>
+      <li class="language-editable">
+        Enable stream status notifications
+        <p>
+          Add the notifications URL from Beacon CMS (this URL will be provided
+          by Brightcove Support)
+        </p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/16-enable-notifications.png"
+          />
+        </figure>
+      </li>
+      <li class="language-editable">
+        Click <strong>Create Event</strong> to start the live event. The Control
+        Room page will open with details about the live event including the
+        <strong>Streaming Endpoint (RTMP URL)</strong> and
+        <strong>Stream Name</strong> which will be used by your encoder.
+        <p>It will take about a minute to process your streams.</p>
+        <aside class="bcls-aside bcls-aside--information">
+          To start streaming in the Live platform, you will need an Encoder, for
+          information on how to use an encoder please read the following the
+          documentation:
+          <p>
+            <a
+              href="https://live.support.brightcove.com/get-started/step-step-using-live-module-telestream-wirecast.html"
+              target="_blank"
+              >Step-by-Step: Using the Live Module with Telestream Wirecast</a
+            >
+          </p>
+          <p>
+            <a
+              href="https://live.support.brightcove.com/get-started/step-step-using-live-module-open-broadcaster-software-obs.html"
+              target="_blank"
+              >Step-by-Step: Using the Live Module with Open Broadcaster
+              Software (OBS)</a
+            >
+          </p>
+        </aside>
+      </li>
+      <li class="language-editable">
+        In the <strong>Control Room</strong> copy the
+        <strong>“Job Id”</strong> and the <strong>“Video ID”</strong> from the
+        <strong>Test Event</strong> panel, we will need both to configure the
+        Live event in the Beacon platform settings.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/16.2-control-room.png"
+          />
+        </figure>
+      </li>
+      <li class="language-editable">
+        Next, go back to Beacon and click in the Event tab, go to the event we
+        previously created there, and in the Basic Data settings paste the Job
+        ID of your Live event.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/17-beacon-job-id.png"
+          />
+        </figure>
+        <p>
+          Then go to the <strong>Streams</strong> tab and create a new Stream,
+          in the <strong>Stream Video ID</strong>, paste the
+          <strong>Video ID</strong> from the Video Cloud Event we created
+          before.
+        </p>
+        <p>Fill in the following information:</p>
+        <ul>
+          <li class="language-editable">
+            Select the number of devices in which you can publish your video.
+          </li>
+          <li class="language-editable">
+            Change the <strong>Stream Type</strong> to: <strong>Live</strong>
+          </li>
+          <li class="language-editable">
+            And click the <strong>“Update event”</strong> button before leaving
+            the page:
+          </li>
+        </ul>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/18-beacon-stream-id.png"
+          />
+        </figure>
+      </li>
+
+      <li class="language-editable">
+        Clear your cache.
+        <p>
+          Go to the Brightcove Beacon App and Select your playlist and event.
+          Click on <strong>Play</strong>.
+        </p>
+        <p>
+          You should be able now to see your Live streaming from Video Cloud in
+          the Beacon App.
+        </p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            width="400"
+            height="700"
+            src="/beacon-live/beaconimg/19-app-play.png"
+          />
+        </figure>
+        <p>
+          Once your event ends, you can save it as a clip to transmit it later
+          as a VOD on Beacon.
+        </p>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Clip">Create a Clip from your Beacon Live event</h2>
+    <aside class="bcls-aside bcls-aside--information">
+      You have to create a clip of your Live Beacon event if you want to keep
+      the video for streaming later on as a VOD recorded video.
+    </aside>
+    <p>
+      The Live module provides the ability to create video clips from completed
+      events. Clips can also be created while a live event is in progress.
+    </p>
+    <p>
+      For a complete Clipping feature list, please review the
+      <a
+        href="https://live.support.brightcove.com/live-module/creating-video-clip-using-live-module.html"
+        >Creating a Video Clip Using the Live Module</a
+      >
+      documentation.
+    </p>
+
+    <ol class="bcls-tasklist-restart">
+      <li class="language-editable">
+        In the Live module go to the <strong>Create Clip</strong> tab in the
+        left panel
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/20-create-clip.png"
+          />
+        </figure>
+      </li>
+      <li class="language-editable">
+        Using the clipping buttons or shortcut keys, set the start and endpoints
+        for the clip. Or just click on the <strong>Save button</strong> to keep
+        the entire video.
+      </li>
+      <li class="language-editable">
+        Enter the clip video properties.
+        <ul>
+          <li><strong>Clip Name</strong> - Name of the clip</li>
+          <li><strong>Short Description</strong> - Description of the clip</li>
+          <li><strong>Tags</strong> - Tags to associate with the clip</li>
+          <li>
+            <strong>Reference ID</strong> - Reference ID to assign to the clip
+          </li>
+          <li>
+            <strong>Remove Source Ad Break Content</strong> - This option
+            removes ad breaks triggered within the clip, keeping only program
+            content. Note: The Remove Source Ad Break checkbox will only appear
+            when the stream is SSAI enabled.
+          </li>
+        </ul>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/21-create-clip-menu.png"
+          />
+        </figure>
+      </li>
+      <li class="language-editable">
+        Click <strong>Create Clip</strong>. The transcoding process for the clip
+        will begin. Clips are transcoded using the default ingest profile for
+        the account.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/22-clip-name.png"
+          />
+        </figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="ClipToBeacon">
+      Add your Clip to Beacon as a playable stream video.
+    </h2>
+
+    <ol class="bcls-tasklist-restart">
+      <li class="language-editable">
+        Take the number <strong>ID</strong> of your created clip:
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/23-control-room-id.png"
+          />
+        </figure>
+      </li>
+      <li class="language-editable">
+        In the Beacon platform, go to the <strong>Events</strong> tab and select
+        the <strong>Streams</strong> menu, change the
+        <strong>Stream Type</strong> in the dropdown from Live to Stream, and in
+        the <strong>Stream Video ID</strong> option, paste the
+        <strong>ID </strong> number you just copied from your Clip event in the
+        Live platform.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/24-beacon-stream-id.png"
+          />
+        </figure>
+      </li>
+
+      <li class="language-editable">
+        Click in the <strong>Basic Data</strong> tab and change the
+        <strong>Status</strong> from <strong>Ended</strong> to
+        <strong>Finished</strong>. Before leaving click the
+        <strong>Update Event</strong> button at the bottom of the page, this
+        will make the <strong>Play</strong> button available in the App to see
+        the recording of the event.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            width="400"
+            height="700"
+            src="/beacon-live/beaconimg/25-beacon-app-play-button.png"
+          />
+        </figure>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="SEP">(Static Entry Point) SEP Live events</h2>
+    <p>
+      SEP are recurring events that you can let activated/deactivated when your
+      event starts over and over again as for a weekly program, for example.
+      This event can be used as a one for all <strong>Live Job ID</strong> that
+      can be transmitted to several channels in the Beacon App.
+    </p>
+
+    <aside class="bcls-aside bcls-aside--information">
+      <ul>
+        <li>
+          Note that when you create a recurring event, a video is automatically
+          created for it in the Media module. Do not delete this video, as it
+          will be needed every time the event recurs.
+        </li>
+        <li>
+          The recurring event should be activated before the encoder is started.
+        </li>
+      </ul>
+    </aside>
+
+    <p>
+      To create a recurring event, select the
+      <strong
+        >Create this as a recurring event using a Static Entry Point
+        (SEP)</strong
+      >
+      option when creating a live event and then click
+      <strong>Create Event</strong>.
+    </p>
+    <ol class="bcls-tasklist-restart">
+      <li class="language-editable">
+        In the Live Platform <strong>Create a new Event</strong>. For more
+        information in how to create an event please read the following
+        <a
+          href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html"
+          >documentation</a
+        >.
+      </li>
+      <li class="language-editable">
+        Expand the <strong>Advanced Options</strong>, and enable the
+        <strong
+          >“Create this as a recurring event using a Static Entry Point
+          (SEP)”</strong
+        >
+        option. For more information in SEP click
+        <a
+          href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html#work_recurring"
+          >here.</a
+        >
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/26-sep.png"
+          />
+        </figure>
+      </li>
+
+      <li class="language-editable">
+        When you already have a SEP event, click on the
+        <strong>Standby</strong> tab, and you will be able to
+        <strong>activate/deactivate</strong> it from the Live Control Room.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/27-control-room-activate.png"
+          />
+        </figure>
+      </li>
+      <li class="language-editable">
+        Copy your <strong>Live Job ID</strong>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/28-control-room-jobid.png"
+          />
+        </figure>
+      </li>
+      <li>
+        Return to the Brightcove Beacon platform and configure your events
+        giving them a name and a scheduled time.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/beacon-live/beaconimg/29-beacon-calendar.png"
+          />
+        </figure>
+      </li>
+      <li class="language-editable">
+        The date and time of your event must be in the following format:
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            width="300"
+            height="200"
+            src="/beacon-live/beaconimg/30-date-format.png"
+          />
+        </figure>
+      </li>
+      <li class="language-editable">
+        Click in the <strong>Update event</strong> button.
+      </li>
+    </ol>
+    <p>
+      You can perform this process with all the event channels you want in the
+      Brightcove Beacon platform, and all of them will be streaming from the
+      same Live event transmission, but each one with the different date and
+      time that you adjusted in each of its event settings.
+    </p>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page last updated on 28 Mar 2020
+</div>
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Brightcove Support</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">System Status</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US">Contact Support</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">Documentation</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Training</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://support.brightcove.com/online-training-courses">Online Courses</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/register-training">Register for a course</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">Brightcove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?language=en_US" data-drupal-link-system-path="node/18330">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/https-fix.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/setDate.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/prism.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/site.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/tabs.js"></script>
+  
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/toc.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://learning-services-media.brightcove.com/doc-assets/site-assets/js/site/bcls-utils.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  <script src="/assets/js/search.js"></script>
+  <script async src="https://cse.google.com/cse.js?cx=017969773216783359937:9ybe0wftqs0"></script>
+</body>
+
+</html>

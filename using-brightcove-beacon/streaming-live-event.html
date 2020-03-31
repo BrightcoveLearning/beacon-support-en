@@ -29,7 +29,7 @@ parent: Using Brightcove Beacon
         Video Cloud.
       </li>
       <li>
-        The Live video will start streaming in the Beacon App.
+        The Live video will start streaming in the Brightcove Beacon App.
       </li>
     </ol>
     <p>
@@ -45,8 +45,8 @@ parent: Using Brightcove Beacon
   </section>
 
   <section class="bcls-section">
-    <h2 id="create">Create a Live event in Beacon</h2>
-    <p>Follow these steps to create an Event in Brightcove Beacon:</p>
+    <h2 id="create">Creating a Live event in Brightcove Beacon</h2>
+    <p>Follow these steps to create an Event in Brightcove Beacon.</p>
 
     <aside class="bcls-aside bcls-aside--information">
       Only activated accounts with <strong>Brightcove Beacon Live</strong> will
@@ -195,7 +195,7 @@ parent: Using Brightcove Beacon
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="Playlist">Add the Beacon event to a playlist</h2>
+    <h2 id="Playlist">Adding the Brightcove Beacon event to a playlist</h2>
     <p>
       Once you create an event, the next task is to add the event to a Playlist.
       The following steps lead you through that process:
@@ -217,7 +217,7 @@ parent: Using Brightcove Beacon
           You need to create a playlist in Brightcove Beacon that will contain
           your Live events. <strong>Do not</strong> use a playlist from Video
           Cloud, using a Video Cloud playlist may overwrite and delete your
-          Beacon Live recordings.
+          Brightcove Beacon Live recordings.
         </aside>
         <figure class="bcls-figure">
           <img
@@ -254,10 +254,10 @@ parent: Using Brightcove Beacon
       </li>
 
       <li>
-        Adjust the settings of your playlist (time, devices, location, etc.), as
+        Adjust the settings of your playlist (time, devices, location, etc.) in the <strong>Rights & Scheduling</strong> tab, as
         you did with your event.
         <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" src="" />
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/streaming-live-event/10.2-scheduling-playlist.png" />
         </figure>
       </li>
 
@@ -276,9 +276,9 @@ parent: Using Brightcove Beacon
       </li>
     </ol>
     <p>
-      At this point, your event will be created as a container in the Brightcove
-      Beacon app, but to actually start streaming a Live video you will need to
-      set up our transmission in the Video Cloud Live Platform.
+      At this point, your event is created as a container in the Brightcove
+      Beacon app as shown in the left image (the event names and pictures on the image are for example purposes only), click on your event, and you will see something similar to the image on the right. To actually start streaming a Live video, you will need to
+      set up your transmission in the Video Cloud Live Platform.
     </p>
     <figure class="bcls-figure">
       <img
@@ -290,7 +290,7 @@ parent: Using Brightcove Beacon
   </section>
 
   <section class="bcls-section">
-    <h2 id="Live">Create a Live event in Studio</h2>
+    <h2 id="Live">Creating a Live event in Studio</h2>
     <p>
       Follow these steps to create the actual live event that will be streamed
       to Brightcove Beacon:
@@ -344,7 +344,7 @@ parent: Using Brightcove Beacon
         values to the custom fields.
       </li>
       <li>
-        Click Allowed if you wish to enable the live event to be streamed to
+        Click <strong>Allowed</strong> if you wish to enable the live event to be streamed to
         social media platforms, otherwise click <strong>Not allowed</strong>.
         This can be done
         <a href="#social">once the event has started streaming</a> or by using
@@ -394,16 +394,12 @@ parent: Using Brightcove Beacon
         Click <strong>ADVANCED OPTIONS</strong> and configure the advanced
         options.
         <aside class="bcls-aside bcls-aside--information">
-          Note: For Beacon Live work, you have to enable Stream Status
+          Note: For Brightcove Beacon Live work, you have to enable Stream Status
           Notifications checkbox in the Advanced options.
         </aside>
       </li>
-      <li>
-        Enable stream status notifications.
-        <p>
-          Add the notifications URL from Beacon CMS (this URL will be provided
-          by Brightcove Support)
-        </p>
+      <li>Click in the <strong>Enable stream status notifications</strong> option and add the notifications URL from Brightcove Beacon CMS (your Brightcove Support representative will provide this URL).
+        
         <figure class="bcls-figure">
           <img
             class="bcls-image--no-border"
@@ -443,7 +439,7 @@ parent: Using Brightcove Beacon
         In the <strong>Control Room</strong> copy the
         <strong>Job Id</strong> and the <strong>Video ID</strong> from the
         <strong>Test Event</strong> panel, you will need both to configure the
-        Live event in the Beacon platform settings.
+        Live event in the Brightcove Beacon platform settings.
         <figure class="bcls-figure">
           <img
             class="bcls-image--no-border"
@@ -453,8 +449,8 @@ parent: Using Brightcove Beacon
         </figure>
       </li>
       <li>
-        Next, go back to Beacon and click in the <strong>Event</strong> tab. Go
-        to the event you previously created there, and in the
+        Next, go back to Brightcove Beacon and click in the <strong>Event</strong> tab, select
+         the event you previously created there, and in the
         <strong>Basic Data</strong> settings paste the <em>Job ID</em> of your
         Live event.
         <figure class="bcls-figure">
@@ -464,12 +460,14 @@ parent: Using Brightcove Beacon
             src="/assets/images/using-bcb/streaming-live-event/17-beacon-job-id.png"
           />
         </figure>
+      </li>
+      <li>
         <p>
-          Then go to the <strong>Streams</strong> tab and create a new Stream,
-          in the <strong>Stream Video ID</strong>, paste the
+          Go to the <strong>Streams</strong> tab and create a new stream by clicking in the <strong> + Add new stream</strong> button.</p>
+          <p>In the <strong>Stream Video ID</strong> field, paste the
           <strong>Video ID</strong> from the Video Cloud Event you created
-          before.
-        </p>
+          before.</p>
+        
         <p>Fill in the following information:</p>
         <ul>
           <li>
@@ -479,7 +477,7 @@ parent: Using Brightcove Beacon
             Change the <strong>Stream Type</strong> to: <strong>Live</strong>
           </li>
           <li>
-            And click the <strong>“Update event”</strong> button before leaving
+            And click the <strong>Update event</strong> button before leaving
             the page:
           </li>
         </ul>
@@ -493,15 +491,32 @@ parent: Using Brightcove Beacon
       </li>
 
       <li>
-        Clear your cache.
-        <p>
-          Go to the Brightcove Beacon App and Select your playlist and event.
-          Click on <strong>Play</strong>.
-        </p>
-        <p>
-          You should be able now to see your Live streaming from Video Cloud in
-          the Beacon App.
-        </p>
+        Click on the <strong>Tools</strong> (wrench) button in the upper right
+        of the screen. Then clear the cache.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/assets/images/using-bcb/streaming-live-event/12-clear-cache.png"
+          />
+        </figure>
+      </li>
+
+      <li>Open your Brightcove Beacon App and select your event (the event names and pictures on the image are for example purposes only).
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            width="400"
+            height="700"
+            src="/assets/images/using-bcb/streaming-live-event/18.5-app-event.png"
+          />
+        </figure>
+      </li>
+      
+      <li>Click on the <strong>Play</strong> button, and you should be able now to see your Live streaming from Video Cloud in
+        the Brightcove Beacon App.
+        
         <figure class="bcls-figure">
           <img
             class="bcls-image--no-border"
@@ -511,18 +526,18 @@ parent: Using Brightcove Beacon
             src="/assets/images/using-bcb/streaming-live-event/19-app-play.png"
           />
         </figure>
-        <p>
-          Once your event ends, you can save it as a clip to transmit it later
-          as a VOD on Beacon.
-        </p>
       </li>
     </ol>
+    <p>
+      Once your event ends, you can save it as a clip to transmit it later
+      as a VOD (Video On Demand) on Brightcove Beacon.
+    </p>
   </section>
 
   <section class="bcls-section">
-    <h2 id="Clip">Create a Clip from your Beacon Live event</h2>
+    <h2 id="Clip">Creating a Clip from your Live event</h2>
     <aside class="bcls-aside bcls-aside--information">
-      You have to create a clip of your Live Beacon event if you want to keep
+      You have to create a clip of your Brightcove Beacon Live event if you want to keep
       the video for streaming later on as a VOD recorded video.
     </aside>
     <p>
@@ -595,7 +610,7 @@ parent: Using Brightcove Beacon
   </section>
   <section class="bcls-section">
     <h2 id="ClipToBeacon">
-      Add your Clip to Beacon as a playable stream video.
+      Adding your Clip to Brightcove Beacon as a playable stream video.
     </h2>
 
     <ol class="bcls-tasklist-restart">
@@ -610,7 +625,7 @@ parent: Using Brightcove Beacon
         </figure>
       </li>
       <li>
-        In the Beacon platform, go to the <strong>Events</strong> tab and select
+        In the Brightcove Beacon platform, go to the <strong>Events</strong> tab and select
         the <strong>Streams</strong> menu, change the
         <strong>Stream Type</strong> in the dropdown from Live to Stream, and in
         the <strong>Stream Video ID</strong> option, paste the
@@ -650,7 +665,7 @@ parent: Using Brightcove Beacon
       SEP are recurring events that you can let activated/deactivated when your
       event starts over and over again as for a weekly program, for example.
       This event can be used as a one for all <strong>Live Job ID</strong> that
-      can be transmitted to several channels in the Beacon App.
+      can be transmitted to several channels in the Brightcove Beacon App.
     </p>
 
     <aside class="bcls-aside bcls-aside--information">
@@ -687,8 +702,8 @@ parent: Using Brightcove Beacon
       <li>
         Expand the <strong>Advanced Options</strong>, and enable the
         <strong
-          >“Create this as a recurring event using a Static Entry Point
-          (SEP)”</strong
+          >Create this as a recurring event using a Static Entry Point
+          (SEP)</strong
         >
         option. For more information in SEP click
         <a

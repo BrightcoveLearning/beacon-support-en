@@ -78,11 +78,11 @@
   url: /references/
   icon: '<i class="fal fa-books"></i>'
   docs:
-    - name: Glossary
+    - name: 'Glossary'
       url: /references/glossary.html
-    - name: Known Issues
+    - name: 'Known Issues'
       url: /references/known-issues.html
-    - name: Product Updates
+    - name: 'Product Updates'
       url: /references/product-updates.html
     - name: 'Images and Their Specifications'
       url: /references/image-requirements.html

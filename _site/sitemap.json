@@ -35,6 +35,11 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/configuring-server-side-ad-settings.html",
+      "oldURL": "/configuring-server-side-ad-settings"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/creating-a-page.html",
       "oldURL": "/creating-a-page"
   },
@@ -110,12 +115,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/support/",
+      "newURL": "https://beacon.support.brightcove.com/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/",
+      "newURL": "https://beacon.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
@@ -232,11 +237,6 @@
   {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/using-subscription-package.html",
       "oldURL": "/using-subscription-package"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/vc-ad-config-id.html",
-      "oldURL": "/vc-ad-config-id"
   },
 
   {

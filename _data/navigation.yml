@@ -38,8 +38,8 @@
       url: /using-brightcove-beacon/creating-a-page.html
     - name: Creating a Subscription Package
       url: /using-brightcove-beacon/creating-subscription-package.html
-    - name: Creating an Ad Configuration ID
-      url: /using-brightcove-beacon/vc-ad-config-id.html
+    - name: Configuring Server-Side Ad Settings
+      url: /using-brightcove-beacon/configuring-server-side-ad-settings.html
     - name: Common Page Config Settings
       url: /using-brightcove-beacon/page-settings.html
     - name: Including Non-Configurable Pages

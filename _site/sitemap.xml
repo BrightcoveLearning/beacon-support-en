@@ -286,6 +286,13 @@
     </url>
     
     <url>
+        <loc>https://beacon.support.brightcove.com/sitemap.json</loc>
+        <lastmod>2020-04-02</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
         <loc>https://beacon.support.brightcove.com/sitemap.xml</loc>
         <lastmod>2020-04-02</lastmod>
         <changefreq>daily</changefreq>

@@ -38,6 +38,8 @@
       url: /using-brightcove-beacon/creating-a-page.html
     - name: Creating a Subscription Package
       url: /using-brightcove-beacon/creating-subscription-package.html
+    - name: 'Creating Series/Seasons/Episodes'
+      url: /using-brightcove-beacon/series-seasons-episodes.html
     - name: Configuring Server-Side Ad Settings
       url: /using-brightcove-beacon/configuring-server-side-ad-settings.html
     - name: Common Page Config Settings

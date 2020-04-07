@@ -105,7 +105,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/references/",
+      "newURL": "https://beacon.support.brightcove.com/getting-started/",
       "oldURL": "/index"
   },
 
@@ -115,22 +115,22 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/getting-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/",
       "oldURL": "/index"
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
@@ -157,6 +157,11 @@
   {
       "newURL": "https://beacon.support.brightcove.com/getting-started/learning-guide-bc-beacon.html",
       "oldURL": "/learning-guide-bc-beacon"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/live-ssai.html",
+      "oldURL": "/live-ssai"
   },
 
   {

@@ -318,9 +318,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
     <p>
-      This topic is a compilation of all the fields that you will see when working with your app in Brightcove Beacon. In other documents, while completing tasks, you will also find details for these configuration settings.  
+      This topic is a compilation of the common configuration settings associated with your Brightcove Beacon app. You will also find these settings in other documentation related to completing specific tasks in Brightcove Beacon.  
     </p>
-    <p>For details about defining your content relationships, see the <a href="/using-brightcove-beacon/series-seasons-episodes.html">Creating Series/Seasons/Episodes</a> document.</p>
+    <!-- <p>For details about defining your content relationships, see the <a href="/using-brightcove-beacon/series-seasons-episodes.html">Creating Series/Seasons/Episodes</a> document.</p> -->
   </section>
 
   <section class="bcls-section">
@@ -328,102 +328,90 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>
       The
       <strong>Rights & Scheduling</strong>
-      section is where you set the publish status and select scheduling, devices
-      and locations.
+      section lets you define playback permissions and set publishing schedules for your app.
     </p>
-    <ol class="bcls-tasklist__restart">
-      <li>
-        <p>
-          Select the
-          <strong>Rights & Scheduling</strong>
-          tab.
-        </p>
-        <figure class="bcls-figure">
+    <p>Here is an example of the <strong>Rights & Scheduling</strong> tab for adding or editing Pages:</p>
+    <figure class="bcls-figure">
           <img
             class="bcls-image--no-border"
             width="850"
-            src="/assets/images/pages/settings/scheduling.png"
+            src="/assets/images/pages/settings/scheduling1.png"
             alt="Rights & Scheduling"
           />
           <figcaption class="bcls-caption--image">
             Rights & Scheduling
           </figcaption>
         </figure>
-      </li>
-      <li>
-        <p>
-          Add values for the following fields:
-        </p>
-        <table class="bcls-table">
-          <thead class="bcls-table__head">
-            <tr>
-              <th>Field</th>
-              <th>Required</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody class="bcls-table__body">
-            <tr>
-              <td>Status</td>
-              <td>Yes</td>
-              <td>
-                Select one of the following types:
-                <ul>
-                  <li>
-                    Published
-                  </li>
-                  <li>
-                    Unpublished
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>Rights Start date</td>
-              <td>Yes</td>
-              <td>Schedule a starting time for your page</td>
-            </tr>
-            <tr>
-              <td>Rights End Date</td>
-              <td>Yes</td>
-              <td>Schedule an end time for your page</td>
-            </tr>
-            <tr>
-              <td>Devices to publish</td>
-              <td>Yes</td>
-              <td>
-                Add the devices you wish to publish to. Select the
-                <strong>Select / Unselect All Devices</strong>
-                to see a list of available devices.
-              </td>
-            </tr>
-            <tr>
-              <td>Permitted locations</td>
-              <td>Yes</td>
-              <td>
-                Select the locations where you want to stream your content.
-              </td>
-            </tr>
-            <tr>
-              <td>Denied locations</td>
-              <td>No</td>
-              <td>
-                Select the locations where you DO NOT want to stream your
-                content.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <br />
-        <aside class="bcls-aside bcls-aside--tip">
-          To add or edit geographic locations, navigate to
-          <strong>Settings</strong>
-          and then
-          <strong>Locations</strong>
-          .
-        </aside>
-      </li>
-    </ol>
+
+    <p>
+      This table is a compilation of the common configuration fields:
+    </p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Field</th>
+          <th>Required</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><strong>Status</strong></td>
+          <td>Yes</td>
+          <td>
+            Select one of the following types:
+            <ul>
+              <li>
+                Published
+              </li>
+              <li>
+                Unpublished
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Rights Start date</strong></td>
+          <td>Yes</td>
+          <td>Set the starting date and time for your app</td>
+        </tr>
+        <tr>
+          <td><strong>Rights End Date</strong></td>
+          <td>Yes</td>
+          <td>Set the ending date and time for your app</td>
+        </tr>
+        <tr>
+          <td><strong>Devices to publish</strong></td>
+          <td>Yes</td>
+          <td>
+            Add the devices you wish to publish to. Select the
+            <strong>Select / Unselect All Devices</strong>
+            to see a list of available devices.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Permitted locations</strong></td>
+          <td>Yes</td>
+          <td>
+            Select the geographic locations where you want to allow users to view your content. Click inside the <strong>Permitted locations</strong> box to see a list of locations.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Denied locations</strong></td>
+          <td>No</td>
+          <td>
+            Select the geographic locations where you DO NOT want to allow users to view your content. Click inside the <strong>Denied locations</strong> box to see a list of locations.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <aside class="bcls-aside bcls-aside--tip">
+      To add or edit geographic locations, navigate to
+      <strong>Settings</strong>
+      and then
+      <strong>Locations</strong>.
+    </aside>
   </section>
 
   <section class="bcls-section">

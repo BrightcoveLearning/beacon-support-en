@@ -13,9 +13,18 @@ parent: References
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
     <p>
-      This topic is a compilation of the common configuration settings associated with your Brightcove Beacon app. You will also find these settings in other documentation related to completing specific tasks in Brightcove Beacon.  
+      This topic is a compilation of the common configuration settings associated with your Brightcove Beacon app. You will find these settings in other documentation related to completing specific tasks in Brightcove Beacon, including the following tab sections:  
     </p>
-    <!-- <p>For details about defining your content relationships, see the <a href="/using-brightcove-beacon/series-seasons-episodes.html">Creating Series/Seasons/Episodes</a> document.</p> -->
+    <ul>
+      <li>Layout</li>
+      <li>Pages</li>
+      <li>Channels</li>
+      <li>Movies</li>
+      <li>Playlists</li>
+      <li>Programs / Series</li>
+      <li>Events</li>
+      <li>Commerce / Package / Streams / Advanced</li>
+    </ul>
   </section>
 
   <section class="bcls-section">
@@ -45,15 +54,13 @@ parent: References
       <thead class="bcls-table__head">
         <tr>
           <th>Field</th>
-          <th>Type</th>
           <th>Required</th>
           <th>Description</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><strong>Status</strong></td>
-          <td>Selected value</td>
+          <td>Status</td>
           <td>Yes</td>
           <td>
             Select one of the following types:
@@ -68,10 +75,9 @@ parent: References
           </td>
         </tr>
         <tr>
-          <td><strong>Rights Type</strong></td>
-          <td>Selected value</td>
+          <td>Rights Type</td>
           <td>Yes</td>
-          <td>Specify if your channel will support advertising. Values:
+          <td>Specify if your channel will support advertising from the following values:
             <ul>
               <li>
                 Free
@@ -82,24 +88,24 @@ parent: References
               <li>
                 Advertising - SVOD (Subscription Video-On-Demand)
               </li>
+              <li>
+                Inherit - This means that the rights will be inherited from the series to which this season belongs.
+              </li>
             </ul>
           </td>
         </tr>
         <tr>
-          <td><strong>Rights Start date</strong></td>
-          <td>Date and time</td>
+          <td>Rights Start date></td>
           <td>Yes</td>
           <td>Set the starting date and time for your app. (Also, <strong>Start Time</strong>)</td>
         </tr>
         <tr>
-          <td><strong>Rights End Date</strong></td>
-          <td>Date and time</td>
+          <td>Rights End Date</td>
           <td>Yes</td>
           <td>Set the ending date and time for your app. (Also, <strong>End Time</strong>)</td>
         </tr>
         <tr>
-          <td><strong>Devices to publish</strong></td>
-          <td>Selected value</td>
+          <td>Devices to publish</td>
           <td>Yes</td>
           <td>
             Add the devices you wish to publish to. Select the
@@ -108,44 +114,50 @@ parent: References
           </td>
         </tr>
         <tr>
-          <td><strong>Permitted locations</strong></td>
-          <td>Selected value</td>
+          <td>Permitted locations</td>
           <td>Yes</td>
           <td>
             Select the geographic locations where you want to allow users to view your content. Click inside the <strong>Permitted locations</strong> box to see a list of locations.
           </td>
         </tr>
         <tr>
-          <td><strong>Denied locations</strong></td>
-          <td>Selected value</td>
+          <td>Denied locations</td>
           <td>No</td>
           <td>
             Select the geographic locations where you DO NOT want to allow users to view your content. Click inside the <strong>Denied locations</strong> box to see a list of locations.
           </td>
         </tr>
         <tr>
-          <td><strong>Max Streams</strong></td>
-          <td>Integer</td>
+          <td>Max Devices</td>
           <td>No</td>
           <td>
-            Set the maximum number of connected devices that can stream at the same time. Integer value.
+            Set the maximum number of active connected devices for an account. Integer value.
           </td>
         </tr>
         <tr>
-          <td><strong>Advertisement Configuration</strong></td>
+          <td>Max Streams</td>
+          <td>No</td>
+          <td>
+            Set the maximum number of streams that can be watching from the same account. Integer value.
+          </td>
+        </tr>
+        <!-- <tr>
+          <td>Advertisement Configuration</td>
           <td>Selected value</td>
           <td>No</td>
           <td>For server-side ads (SSAI), select an advertising configuration that you have defined in Video Cloud. For details, see the <a href="/using-brightcove-beacon/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a> document.
           </td>
-        </tr>
+        </tr> -->
       </tbody>
     </table>
     <br />
     <aside class="bcls-aside bcls-aside--tip">
-      To add or edit geographic locations, navigate to
-      <strong>Settings</strong>
-      and then
-      <strong>Locations</strong>.
+      Notes:
+      <ul>
+        <li>To add or edit geographic locations, navigate to <strong>Settings</strong> and then <strong>Locations</strong>.</li>
+        <li>Example of setting <strong>Max Streams</strong> to <code>4</code> and <strong>Max Devices</strong> to <code>6</code>: This means that 4 people can stream (streams) video, but you can have 6 people connected (devices).</li>
+      </ul>
+      
     </aside>
   </section>
 
@@ -154,7 +166,7 @@ parent: References
     <p>
       The
       <strong>Textual Data</strong>
-      section allows you to add displayable text for your page.
+      section allows you to add displayable text. This is the name that appears in your app.
     </p>
     <ol class="bcls-tasklist__restart">
       <li>

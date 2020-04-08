@@ -28,7 +28,7 @@
 
 <header>
   <div class="div-header">
-    <a href="/"><img class="product-logo" src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/beacon.svg" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
+    <a href="/"><img class="product-logo" src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/loco-bc-beacon.svg" alt="product logo" style="max-height: 100px;max-width: 232px;"></a>
 <!-- GTranslate: https://gtranslate.io/ -->
 <select onchange="doGTranslate(this);" style="margin-right: 1rem;">
   <option value="">Select a language</option>
@@ -326,6 +326,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Create a Live event with SSAI enabled.</li>
       <li>Publish the Live event to Brightcove Beacon.</li>
     </ol>
+    <aside class="bcls-aside bcls-aside--information">This document is complementary to the <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/streaming-live-event.html" target="_blank">Streaming a Live Event</a> documentation to guide you into add SSAI to your live events. For detailed information on how to create an event, please see the section on <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/streaming-live-event.html#create" target="_blank">Creating a live event in Brightcove Beacon</a>.</aside>
+
     <p>SSAI provides these main features during Live events:</p>
     <ul>
       <li>
@@ -416,6 +418,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <li><strong>DFP (Ad Rules)</strong></li>
           <li><strong>Smart XML</strong></li>
         </ul>
+        <aside class="bcls-aside bcls-aside--information">Please check with your ad operations manager for the correct value to select.</aside>
       </li>
       <li>Enter the <strong>Ad Tag (server URL)</strong>.</li>
       <li>Click the <strong>Save</strong> button.</li>
@@ -531,7 +534,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <strong>Streaming Endpoint (RTMP URL)</strong> and
         <strong>Stream Name</strong>. These values will be used by the encoder.
       </li>
-      <li>Configure your encoder and start the Live stream.</li>
+      <li>Configure your encoder and start the Live stream.
+        <aside class="bcls-aside bcls-aside--information">
+          To start streaming in the Live platform, you will need an Encoder, for
+          information on how to use an encoder please read the following the
+          documentation:
+          <p>
+            <a
+              href="https://live.support.brightcove.com/get-started/step-step-using-live-module-telestream-wirecast.html"
+              target="_blank"
+              >Step-by-Step: Using the Live Module with Telestream Wirecast</a
+            >
+          </p>
+          <p>
+            <a
+              href="https://live.support.brightcove.com/get-started/step-step-using-live-module-open-broadcaster-software-obs.html"
+              target="_blank"
+              >Step-by-Step: Using the Live Module with Open Broadcaster
+              Software (OBS)</a
+            >
+          </p>
+        </aside>
+      </li>
       <li>
         By default, the <strong>Control Room</strong> preview player shows the
         ad-free stream. Ads will not be shown in the

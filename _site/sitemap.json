@@ -30,6 +30,11 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/references/common-configuration-settings.html",
+      "oldURL": "/common-configuration-settings"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/common-required-info.html",
       "oldURL": "/common-required-info"
   },
@@ -100,17 +105,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/",
       "oldURL": "/index"
   },
 
@@ -126,6 +121,16 @@
 
   {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
       "oldURL": "/index"
   },
 

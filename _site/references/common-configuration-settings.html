@@ -350,6 +350,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <thead class="bcls-table__head">
         <tr>
           <th>Field</th>
+          <th>Type</th>
           <th>Required</th>
           <th>Description</th>
         </tr>
@@ -357,6 +358,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <tbody class="bcls-table__body">
         <tr>
           <td><strong>Status</strong></td>
+          <td>Selected value</td>
           <td>Yes</td>
           <td>
             Select one of the following types:
@@ -371,17 +373,38 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </td>
         </tr>
         <tr>
-          <td><strong>Rights Start date</strong></td>
+          <td><strong>Rights Type</strong></td>
+          <td>Selected value</td>
           <td>Yes</td>
-          <td>Set the starting date and time for your app</td>
+          <td>Specify if your channel will support advertising. Values:
+            <ul>
+              <li>
+                Free
+              </li>
+              <li>
+                Advertising - AVOD (Advertising Video-On-Demand)
+              </li>
+              <li>
+                Advertising - SVOD (Subscription Video-On-Demand)
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Rights Start date</strong></td>
+          <td>Date and time</td>
+          <td>Yes</td>
+          <td>Set the starting date and time for your app. (Also, <strong>Start Time</strong>)</td>
         </tr>
         <tr>
           <td><strong>Rights End Date</strong></td>
+          <td>Date and time</td>
           <td>Yes</td>
-          <td>Set the ending date and time for your app</td>
+          <td>Set the ending date and time for your app. (Also, <strong>End Time</strong>)</td>
         </tr>
         <tr>
           <td><strong>Devices to publish</strong></td>
+          <td>Selected value</td>
           <td>Yes</td>
           <td>
             Add the devices you wish to publish to. Select the
@@ -391,6 +414,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
         <tr>
           <td><strong>Permitted locations</strong></td>
+          <td>Selected value</td>
           <td>Yes</td>
           <td>
             Select the geographic locations where you want to allow users to view your content. Click inside the <strong>Permitted locations</strong> box to see a list of locations.
@@ -398,9 +422,25 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
         <tr>
           <td><strong>Denied locations</strong></td>
+          <td>Selected value</td>
           <td>No</td>
           <td>
             Select the geographic locations where you DO NOT want to allow users to view your content. Click inside the <strong>Denied locations</strong> box to see a list of locations.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Max Streams</strong></td>
+          <td>Integer</td>
+          <td>No</td>
+          <td>
+            Set the maximum number of connected devices that can stream at the same time. Integer value.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Advertisement Configuration</strong></td>
+          <td>Selected value</td>
+          <td>No</td>
+          <td>For server-side ads (SSAI), select an advertising configuration that you have defined in Video Cloud. For details, see the <a href="/using-brightcove-beacon/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a> document.
           </td>
         </tr>
       </tbody>

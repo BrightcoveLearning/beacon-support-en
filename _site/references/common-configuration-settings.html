@@ -205,10 +205,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/using-brightcove-beacon/page-settings.html">Common Page Config Settings</a></li>
-                  
-                
-                  
                     <li><a href="/using-brightcove-beacon/including-non-configurable-pages.html">Including Non-Configurable Pages</a></li>
                   
                 
@@ -287,6 +283,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
+                    <li><a href="/references/common-configuration-settings.html">Common Configuration Settings</a></li>
+                  
+                
+                  
                     <li><a href="/references/image-requirements.html">Images and Their Specifications</a></li>
                   
                 
@@ -341,7 +341,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <strong>Rights & Scheduling</strong>
       section lets you define playback permissions and set publishing schedules for your app.
     </p>
-    <p>Here is an example of the <strong>Rights & Scheduling</strong> tab for adding or editing Pages:</p>
+    <p>Here is an example when adding or editing Pages:</p>
     <figure class="bcls-figure">
           <img
             class="bcls-image--no-border"
@@ -355,7 +355,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </figure>
 
     <p>
-      This table is a compilation of the common configuration fields:
+      This table contains the fields you will find in the <strong>Rights & Scheduling</strong> tab: 
     </p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
@@ -475,45 +475,35 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <strong>Textual Data</strong>
       section allows you to add displayable text. This is the name that appears in your app.
     </p>
-    <ol class="bcls-tasklist__restart">
-      <li>
-        <p>
-          Select the
-          <strong>Textual Data</strong>
-          tab.
-        </p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            width="850"
-            src="/assets/images/pages/settings/textual-data.png"
-            alt="Textual Data"
-          />
-          <figcaption class="bcls-caption--image">Textual Data</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>
-          Add values for the following fields:
-        </p>
-        <table class="bcls-table">
-          <thead class="bcls-table__head">
-            <tr>
-              <th>Field</th>
-              <th>Required</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody class="bcls-table__body">
-            <tr>
-              <td>English Title</td>
-              <td>Yes</td>
-              <td>The displayed title for your page</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-    </ol>
+    <p>Here is an example when adding or editing Pages:</p>
+    <figure class="bcls-figure">
+      <img
+        class="bcls-image--no-border"
+        width="850"
+        src="/assets/images/pages/settings/textual-data.png"
+        alt="Textual Data"
+      />
+      <figcaption class="bcls-caption--image">Textual Data</figcaption>
+    </figure>
+    <p>
+      This table contains the fields you will find in the <strong>Textual Data</strong> tab: 
+    </p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Field</th>
+          <th>Required</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>Title</td>
+          <td>Yes</td>
+          <td>The displayed title for your app. You will find an input field for each language you have defined.</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <section class="bcls-section">
@@ -521,49 +511,59 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>
       The
       <strong>Non-Textual Data</strong>
-      section allows you to upload icon images for your page.
+      section allows you to upload background and icon images for your app.
     </p>
-    <ol class="bcls-tasklist__restart">
-      <li>
-        <p>
-          Select the
-          <strong>Non-Textual Data</strong>
-          tab.
-        </p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            width="850"
-            src="/assets/images/pages/settings/non-textual-data.png"
-            alt="Non-Textual Data"
-          />
-          <figcaption class="bcls-caption--image">Non-Textual Data</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>
-          Choose images from your computer to be used as page icon images.
-        </p>
-        <ul>
-          <li>
-            Icon
-          </li>
-          <li>
-            Hover Icon
-          </li>
-          <li>
-            Horizontal Background
-          </li>
-          <li>
-            Vertical Background
-          </li>
-        </ul>
-        <br />
-        <aside class="bcls-aside bcls-aside--information">
-          The maximum allowed upload size is 500 KB.
-        </aside>
-      </li>
-    </ol>
+    <p>Here is an example when adding or editing Pages:</p>
+    <figure class="bcls-figure">
+      <img
+        class="bcls-image--no-border"
+        width="850"
+        src="/assets/images/pages/settings/non-textual-data.png"
+        alt="Non-Textual Data"
+      />
+      <figcaption class="bcls-caption--image">Non-Textual Data</figcaption>
+    </figure>
+    <p>
+      This table contains the fields you will find in the <strong>Non-Textual Data</strong> tab. Note that you can upload images for each language you have defined. 
+    </p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Field</th>
+          <th>Required</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>Icon</td>
+          <td>Yes</td>
+          <td>The image that you want to represent your page.</td>
+        </tr>
+        <tr>
+          <td>Hover Icon</td>
+          <td>Yes</td>
+          <td>This image is displayed when the user hovers over the icon image.</td>
+        </tr>
+        <tr>
+          <td>Horizontal Background</td>
+          <td>Yes</td>
+          <td>The background image displayed when the users device is in landscape mode.</td>
+        </tr>
+        <tr>
+          <td>Vertical Background</td>
+          <td>Yes</td>
+          <td>The background image displayed when the users device is in portrait mode.</td>
+        </tr>
+      </tbody>
+    </table>
+    <br/>
+    <aside class="bcls-aside bcls-aside--information">
+      The maximum allowed upload size is 500 KB.
+    </aside>
+    <aside class="bcls-aside bcls-aside--tip">
+      For details about uploading images within Brightcove Beacon, see the <a href="/references/image-requirements.html">Images and Their Specifications</a> document.
+    </aside>
   </section>
 
   <section class="bcls-section">

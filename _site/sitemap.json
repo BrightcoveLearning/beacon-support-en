@@ -50,6 +50,11 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/references/creating-stripe-account.html",
+      "oldURL": "/creating-stripe-account"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/creating-subscription-package.html",
       "oldURL": "/creating-subscription-package"
   },

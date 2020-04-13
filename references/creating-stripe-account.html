@@ -1,6 +1,8 @@
 ---
 title: Creating a Stripe Account
-description: In this topic, you will learn how to create a Stripe account for payments.
+description:
+  In this topic, you will learn how to create a Stripe account for payments and associate it with your Brightcove Beacon
+  Experience.
 parent: References
 ---
 
@@ -10,10 +12,25 @@ parent: References
 
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
-    <p>A Stripe account is needed to ...</p>
     <p>
-      The following step provide an overview of the process of creating a Stripe
-      account:
+      A Stripe account is needed to allow payments from customers for the
+      following platforms:
+    </p>
+    <ul>
+      <li>Web</li>
+      <li>LG Smart TV</li>
+      <li>Panasonic Smart TV</li>
+      <li>Samsung Smart TV</li>
+      <li>Sony Smart TV</li>
+      <li>Toshiba Smart TV</li>
+    </ul>
+    <p>
+      This means that Stripe is needed for the web app and all Smart TV apps
+      <em>other than</em> Android TV and Fire TV.
+    </p>
+    <p>
+      The following steps provide an overview of the process of using Stripe
+      with Brightcove Beacon:
     </p>
     <ol>
       <li>
@@ -23,12 +40,18 @@ parent: References
       <li>
         Activate your account by providing information about your business.
       </li>
-      <li>Connect the Stripe account to Brightcove Beacon.</li>
+      <li>Retrieve your Stripe API keys.</li>
+      <li>
+        Supply Brightcove personnel the API keys so they can be added to the
+        Brightcove Beacon Experience.
+      </li>
     </ol>
   </section>
 
   <section class="bcls-section">
-    <h2 id="Creating_the_Stripe_account">Creating the Stripe account</h2>
+    <h2 id="Creating_the_Stripe_account">
+      Creating and activating the Stripe account
+    </h2>
     <p></p>
     <ol class="bcls-tasklist">
       <li>Browse to the <a href="https://stripe.com/">Stripe home page</a>.</li>
@@ -57,7 +80,7 @@ parent: References
       <li>Click the <strong>Start now</strong> button to begin the process.</li>
       <li>You will need to verify your email address.</li>
       <li>
-        After verifying your email address you will see the form to fill out to
+        After verifying your email address, you will see the form to fill out to
         activate your account. Highlighted in yellow are the major sections of
         the form.
         <figure class="bcls-figure">
@@ -72,14 +95,33 @@ parent: References
         After completing the form, click the
         <strong>Submit application</strong> button.
       </li>
-      <li></li>
     </ol>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="section-name">Getting your Stripe API keys</h2>
+    <p>
+      The connection between your Stripe account and Brightcove Beacon is done
+      via the Stripe API Keys. From the screenshot of the Dashboard shown above,
+      you see a link to <strong>Get your live API keys</strong>. Note that until
+      an account is activated you can only get test API keys.
+    </p>
+    <p>
+      In the dashboard, click the <strong>Get your live API keys</strong> and
+      follow the instructions to download them.
+    </p>
   </section>
 
   <section class="bcls-section">
     <h2 id="Connecting_Stripe_to_Brightcove_Beacon">
       Connecting Stripe to Brightcove Beacon
     </h2>
-    <p></p>
+    <p>
+      Once you have your Stripe API keys, you will give them to Brightcove
+      personnel who are configuring your Brightcove Beacon Experience. They will
+      associate your Stripe API keys with your Brightcove Beacon Experience so
+      that when you configure Stripe to be used in your apps it is associated
+      with your account.
+    </p>
   </section>
 </article>

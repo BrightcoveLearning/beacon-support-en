@@ -78,13 +78,15 @@
   url: /references/
   icon: '<i class="fal fa-books"></i>'
   docs:
+    - name: Common Configuration Settings
+      url: /references/common-configuration-settings.html
+    - name: Creating a Stripe Account
+      url: /references/creating-stripe-account.html
     - name: 'Glossary'
       url: '/references/glossary.html'
+    - name: 'Images and Their Specifications'
+      url: '/references/image-requirements.html'
     - name: 'Known Issues'
       url: '/references/known-issues.html'
     - name: 'Product Updates'
       url: '/references/product-updates.html'
-    - name: Common Configuration Settings
-      url: /references/common-configuration-settings.html
-    - name: 'Images and Their Specifications'
-      url: '/references/image-requirements.html'

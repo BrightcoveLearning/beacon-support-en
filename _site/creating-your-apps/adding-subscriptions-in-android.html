@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Creating an Android Service Account</title>
+  <title>Adding Subscriptions to Android</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -117,7 +117,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       <li class="breadcrumb-item"><a href="/creating-your-apps/">Creating Your Apps</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Creating an Android Service Account</li>
+      <li class="breadcrumb-item active" aria-current="page">Adding Subscriptions to Android</li>
     </ol>
   </nav>
 </header>
@@ -310,147 +310,228 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <article class="bcls-article">
-  <h1>Creating an Android Service Account</h1>
-  <summary>In this topic, you will learn how to create a Google Play service account.</summary>
+  <h1>Adding Subscriptions to Android</h1>
+  <summary>In this topic, you will learn how to subscriptions and Google Play service accounts for testing subscriptions.</summary>
 
-    <section class="bcls-section">
-      <h2 id="Introduction">Introduction</h2>
-      <p>A service account allows us to update your Brightcove Beacon app on the Google Play Store. Below, you will find steps to create a service account and generate the file needed for Google Play server to server subscriptions. </p>
-    </section>
+  <section class="bcls-section">
+    <h2 id="Introduction">Introduction</h2>
+    <p>
+      A service account allows us to update your Brightcove Beacon app on the
+      Google Play Store. Below, you will find steps to create a service account
+      and generate the file needed for Google Play server to server
+      subscriptions.
+    </p>
+  </section>
 
-    <section class="bcls-section">
-      <h2 id="Steps">Steps</h2>
-      <p>To create a Google Play server account, follow these steps:</p>
+<section class="bcls-section">
+  <h2 id="Adding a subscription">Adding a subscription</h2>
+  <p>Creating a subscription in Android requires you to have the information about the subscriptions you created in Brightcove Beacon
+. Follow these steps to create a subscription.</p>
+<ul>
+  <li>You need to move into the <strong>Subscriptions</strong> section in the </li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
 
-      <ol class="bcls-tasklist-restart">
-        <li>
-          <p>
-            In a browser, log into the <a href="https://play.google.com/apps/publish/signup/">Google Play Developer Console</a>.
-          </p>
-          <figure class="bcls-figure">
-            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/google-play/play-console.png" alt="Google Play Console">
-            <figcaption class="bcls-caption--image">Google Play Console</figcaption>
-          </figure>
-        </li>
-        <li>
-          <p>
-            In the left navigation, select <strong>Settings</strong>.
-          </p>
-        </li>
-        <li>
-          <p>
-            In the left navigation, under <strong>Developer account</strong>, select <strong>API access</strong>.
-          </p>
-          <figure class="bcls-figure">
-            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/google-play/api-access.png" alt="Create a service account">
-            <figcaption class="bcls-caption--image">Create a service account</figcaption>
-          </figure>
-        </li>
-        <li>
-          Select the <strong>+CREATE SERVICE ACCOUNT</strong> button.
-        </li>
-        <li>
-          <p>
-            In the <strong>Create Service Account</strong> dialog, select the <strong>Google API Console</strong> link in step 1.
-          </p>
-          <figure class="bcls-figure">
-            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/google-play/account-dialog.png" alt="Account dialog">
-            <figcaption class="bcls-caption--image">Account dialog</figcaption>
-          </figure>
-        </li>
-        <li>
-          You will be directed to the Google API Console.
-        </li>
-        <li>
-          <p>
-            In the left navigation, <strong>Service Accounts</strong> will already be selected. Below the blue header bar, select the <strong>Create Service Account</strong> button.
-          </p>
-          <figure class="bcls-figure">
-            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/google-play/api-console.png" alt="Google API Console">
-            <figcaption class="bcls-caption--image">Google API Console</figcaption>
-          </figure>
-        </li>
-        <li>
-          Enter a name for the service account. The <strong>Service account ID</strong> will be automatically populated. Add a description. Select the <strong>Create</strong> button.
-        </li>
-        <li>
-          <p>
-            In the <strong>Service account permissions</strong> screen, expand the <strong>Select a role</strong> dropdown menu and select <strong>Owner</strong>.
-          </p>
-          <figure class="bcls-figure">
-            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/google-play/owner-role.png" alt="Owner role">
-            <figcaption class="bcls-caption--image">Owner role</figcaption>
-          </figure>
-        </li>
-        <li>
-          Select <strong>Continue</strong>.
-        </li>
-        <li>
-          <p>
-            Next, you will create a key that can be used by Brightcove. Select the <strong>+CREATE KEY</strong> button.
-          </p>
-          <figure class="bcls-figure">
-            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/google-play/create-key.png" alt="Create key">
-            <figcaption class="bcls-caption--image">Create key</figcaption>
-          </figure>
-        </li>
-        <li>
-          <p>
-            In the side panel, leave the default <strong>Key type</strong> as <strong>JSON</strong>. Select the <strong>CREATE</strong> button.
-          </p>
-          <figure class="bcls-figure">
-            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/google-play/key-format.png" alt="Key format">
-            <figcaption class="bcls-caption--image">Key format</figcaption>
-          </figure>
-        </li>
-        <li>
-          <p>
-            Download the private key file to your computer and select the <strong>CLOSE</strong> button.
-          </p>
-          <figure class="bcls-figure">
-            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/google-play/download-key.png" alt="Download key">
-            <figcaption class="bcls-caption--image">Download key</figcaption>
-          </figure>
-        </li>
-        <li>
-          Send the downloaded private key file to Brightcove.
-        </li>
-        <li>
-          Select <strong>DONE</strong>.
-        </li>
-        <li>
-          <p>
-            You should see the following screen with your own values. Close this browser tab and return to the Google Play Console.
-          </p>
-          <figure class="bcls-figure">
-            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/google-play/service-account-final.png" alt="Service account created">
-            <figcaption class="bcls-caption--image">Service account created</figcaption>
-          </figure>
-        </li>
-        <li>
-          <p>
-            In the Google Play Console, select the <strong>GRANT ACCESS</strong> button.
-          </p>
-          <figure class="bcls-figure">
-            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/google-play/grant-access.png" alt="Grant access">
-            <figcaption class="bcls-caption--image">Grant access</figcaption>
-          </figure>
-        </li>
-        <li>
-          <p>
-            In the <strong>Add a new user</strong> dialog, make sure the <strong>FINANCIAL DATA</strong> buttons are checked. Select the <strong>ADD USER</strong> button.
-          </p>
-          <figure class="bcls-figure">
-            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/google-play/add-user.png" alt="Add new user">
-            <figcaption class="bcls-caption--image">Add new user</figcaption>
-          </figure>
-        </li>
-        <li>
-          You have successfully created a Google Play service account.
-        </li>
-      </ol>
-    </section>
+</section>
 
+
+  <section class="bcls-section">
+    <h2 id="Steps">Steps</h2>
+    <p>To create a Google Play server account, follow these steps:</p>
+
+    <ol class="bcls-tasklist-restart">
+      <li>
+        <p>
+          In a browser, log into the
+          <a href="https://play.google.com/apps/publish/signup/"
+            >Google Play Developer Console</a
+          >.
+        </p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            src="/assets/images/creating-your-apps/google-play/play-console.png"
+            alt="Google Play Console"
+          />
+          <figcaption class="bcls-caption--image">
+            Google Play Console
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>In the left navigation, select <strong>Settings</strong>.</p>
+      </li>
+      <li>
+        <p>
+          In the left navigation, under <strong>Developer account</strong>,
+          select <strong>API access</strong>.
+        </p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            src="/assets/images/creating-your-apps/google-play/api-access.png"
+            alt="Create a service account"
+          />
+          <figcaption class="bcls-caption--image">
+            Create a service account
+          </figcaption>
+        </figure>
+      </li>
+      <li>Select the <strong>+CREATE SERVICE ACCOUNT</strong> button.</li>
+      <li>
+        <p>
+          In the <strong>Create Service Account</strong> dialog, select the
+          <strong>Google API Console</strong> link in step 1.
+        </p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            src="/assets/images/creating-your-apps/google-play/account-dialog.png"
+            alt="Account dialog"
+          />
+          <figcaption class="bcls-caption--image">Account dialog</figcaption>
+        </figure>
+      </li>
+      <li>
+        You will be directed to the Google API Console.
+      </li>
+      <li>
+        <p>
+          In the left navigation, <strong>Service Accounts</strong> will already
+          be selected. Below the blue header bar, select the
+          <strong>Create Service Account</strong> button.
+        </p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            src="/assets/images/creating-your-apps/google-play/api-console.png"
+            alt="Google API Console"
+          />
+          <figcaption class="bcls-caption--image">
+            Google API Console
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        Enter a name for the service account. The
+        <strong>Service account ID</strong> will be automatically populated. Add
+        a description. Select the <strong>Create</strong> button.
+      </li>
+      <li>
+        <p>
+          In the <strong>Service account permissions</strong> screen, expand the
+          <strong>Select a role</strong> dropdown menu and select
+          <strong>Owner</strong>.
+        </p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            src="/assets/images/creating-your-apps/google-play/owner-role.png"
+            alt="Owner role"
+          />
+          <figcaption class="bcls-caption--image">Owner role</figcaption>
+        </figure>
+      </li>
+      <li>Select <strong>Continue</strong>.</li>
+      <li>
+        <p>
+          Next, you will create a key that can be used by Brightcove. Select the
+          <strong>+CREATE KEY</strong> button.
+        </p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            src="/assets/images/creating-your-apps/google-play/create-key.png"
+            alt="Create key"
+          />
+          <figcaption class="bcls-caption--image">Create key</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          In the side panel, leave the default <strong>Key type</strong> as
+          <strong>JSON</strong>. Select the <strong>CREATE</strong> button.
+        </p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            src="/assets/images/creating-your-apps/google-play/key-format.png"
+            alt="Key format"
+          />
+          <figcaption class="bcls-caption--image">Key format</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          Download the private key file to your computer and select the
+          <strong>CLOSE</strong> button.
+        </p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            src="/assets/images/creating-your-apps/google-play/download-key.png"
+            alt="Download key"
+          />
+          <figcaption class="bcls-caption--image">Download key</figcaption>
+        </figure>
+      </li>
+      <li>
+        Send the downloaded private key file to Brightcove.
+      </li>
+      <li>Select <strong>DONE</strong>.</li>
+      <li>
+        <p>
+          You should see the following screen with your own values. Close this
+          browser tab and return to the Google Play Console.
+        </p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            src="/assets/images/creating-your-apps/google-play/service-account-final.png"
+            alt="Service account created"
+          />
+          <figcaption class="bcls-caption--image">
+            Service account created
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          In the Google Play Console, select the
+          <strong>GRANT ACCESS</strong> button.
+        </p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            src="/assets/images/creating-your-apps/google-play/grant-access.png"
+            alt="Grant access"
+          />
+          <figcaption class="bcls-caption--image">Grant access</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          In the <strong>Add a new user</strong> dialog, make sure the
+          <strong>FINANCIAL DATA</strong> buttons are checked. Select the
+          <strong>ADD USER</strong> button.
+        </p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            src="/assets/images/creating-your-apps/google-play/add-user.png"
+            alt="Add new user"
+          />
+          <figcaption class="bcls-caption--image">Add new user</figcaption>
+        </figure>
+      </li>
+      <li>
+        You have successfully created a Google Play service account.
+      </li>
+    </ol>
+  </section>
 </article>
 
 <!-- complete bootstrap layout -->

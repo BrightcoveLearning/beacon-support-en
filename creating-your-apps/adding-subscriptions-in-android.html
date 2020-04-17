@@ -1,6 +1,6 @@
 ---
 title: Adding Subscriptions to Android
-description: In this topic, you will learn how to subscriptions and Google Play service accounts for testing subscriptions.
+description: In this topic, you will learn how to create subscriptions and Google Play service accounts used for testing those subscriptions.
 parent: Creating Your Apps
 ---
 
@@ -10,11 +10,26 @@ parent: Creating Your Apps
 
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
+    <p>This document focuses on two topics:</p>
+    <ul>
+      <li>Creating a subscription</li>
+      <li>Creating a service account</li>
+    </ul>
     <p>
-      A service account allows us to update your Brightcove Beacon app on the
-      Google Play Store. Below, you will find steps to create a service account
-      and generate the file needed for Google Play server to server
-      subscriptions.
+      Subscriptions need to be created in Brightcove Beacon, then referenced in
+      the <em>Google Play Console</em>. Instructions for creating a subscription
+      in Brightcove Beacon are detailed in the
+      <a href="/using-brightcove-beacon/creating-subscription-package.html"
+        >Creating a Subscription Package</a
+      >
+      document. This document details how to create the corresponding
+      subscription for Android.
+    </p>
+    <p>
+      A service account allows you to update your Brightcove Beacon app on the
+      Google Play Store, which is especially helpful when testing subscriptions.
+      Later in this document you will find steps to create a service account and
+      generate the file needed for Google Play server to server subscriptions.
     </p>
   </section>
 
@@ -123,7 +138,7 @@ parent: Creating Your Apps
         <strong>Default price</strong>. These values MUST match the subscription
         created in Brightcove Beacon. If the values don't match, the subscriber
         will see one price in the Brightcove Beacon app, but be charged a
-        different price in the Play Store.
+        different price in the Google Play Store.
         <figure class="bcls-figure">
           <img
             class="bcls-image"
@@ -151,9 +166,8 @@ parent: Creating Your Apps
   </section>
 
   <section class="bcls-section">
-    <h2 id="Steps">Steps</h2>
+    <h2 id="Creating_a_service_account">Creating a service account</h2>
     <p>To create a Google Play server account, follow these steps:</p>
-
     <ol class="bcls-tasklist-restart">
       <li>
         <p>

@@ -105,22 +105,22 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/getting-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/",
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/getting-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -135,7 +135,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/",
+      "newURL": "https://beacon.support.brightcove.com/references/",
       "oldURL": "/index"
   },
 
@@ -200,12 +200,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/submitting-to-android.html",
+      "newURL": "https://beacon.support.brightcove.com/drafts/submitting-to-android.html",
       "oldURL": "/submitting-to-android"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/drafts/submitting-to-android.html",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/submitting-to-android.html",
       "oldURL": "/submitting-to-android"
   },
 
@@ -245,8 +245,8 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/updating-apps-bcb-in-android.html",
-      "oldURL": "/updating-apps-bcb-in-android"
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/updating-android-apps-to-bcb.html",
+      "oldURL": "/updating-android-apps-to-bcb"
   },
 
   {

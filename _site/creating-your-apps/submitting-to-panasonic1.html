@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- remember to remove the following line when the site is ready to go live -->
   <!-- <meta name="robots" content="noindex" /> -->
-  <title>Using the Tools</title>
+  <title>Submitting Apps to the Panasonic Store</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -115,9 +115,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/using-brightcove-beacon/">Using Brightcove Beacon</a></li>
+      <li class="breadcrumb-item"><a href="/creating-your-apps/">Creating Your Apps</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Using the Tools</li>
+      <li class="breadcrumb-item active" aria-current="page">Submitting Apps to the Panasonic Store</li>
     </ol>
   </nav>
 </header>
@@ -308,126 +308,146 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 </div>
 
 <article class="bcls-article">
-  <h1>Using the Tools</h1>
-  <summary
-    >In this topic, you will learn the functionality of the options in the
-    <strong>Tools</strong> section of Brightcove Beacon.</summary
-  >
+  <h1>Submitting Apps to the Panasonic Store</h1>
+  <summary>In this topic, you will learn how to submit your device app to the Panasonic store.</summary>
 
-  <section class="bcls-section">
-    <h2 id="Tools">Introducing the Tools</h2>
-    <p>
-      In Brightcove Beacon the <strong>wrench</strong> icon (labeled 1)
-      represents a set of tools. The options for the tools are
-      <strong>Ingestion</strong> and <strong>Cache</strong> (2). This document
-      explores the two options.
-    </p>
-    <figure class="bcls-figure">
-      <img
-        class="bcls-image"
-        src="/assets/images/using-bcb/tools/icon-and-options.png"
-        alt="icon-and-options"
-      />
-    </figure>
+
+    <section class="bcls-section">
+      <h2 id="Introduction">Introduction</h2>
+        <p>With Brightcove Beacon, you will receive a generated device app which can be added to the Panasonic Store.</p>
+        <ul>
+          <li>
+            Store details:
+            <a href="https://developer.vieraconnect.com/">
+              https://developer.vieraconnect.com/
+            </a>
+          </li>
+          <li>Suggested lead time for approval: Three weeks</li>
+        </ul>
+
+        <h3>Required information for Panasonic:</h3>
+        <ul>
+          <li>
+            Application
+            <ul>
+              <li>Application URL and Application Staging URL</li>
+            </ul>
+          </li>
+          <li>
+            Description
+            <ul>
+              <li>Maximum 1024 characters</li>
+              <li>Maximum 26 lines</li>
+              <li>
+                Each line consisting of maximum 85 characters (or 44 Asian
+                characters)
+              </li>
+              <li>Please insert line breaks wherever appropriate</li>
+            </ul>
+          </li>
+          <li>
+            Icons
+            <ul>
+              <li>
+                Four icon images are needed:
+                <ul>
+                  <li>160x112 (PNG)</li>
+                  <li>Banner style icon 256x60 (PNG)</li>
+                  <li>360x252 (PNG)</li>
+                  <li>Round circle icon diameter 336x336 (PNG)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Screenshot
+            <ul>
+              <li>At least one is needed</li>
+              <li>480w x 270h PNG</li>
+              <li>
+                They are displayed on the application detail page in the Market
+              </li>
+            </ul>
+          </li>
+        </ul>
   </section>
 
   <section class="bcls-section">
-    <h2 id="Ingestion">Ingestion</h2>
-    <p>In the Ingestion group you have three tools:</p>
-    <ul>
-      <li>
-        <strong>Update Brightcove Videos</strong>: If you have added videos to
-        your Video Cloud catalog, or altered existing videos, this button syncs
-        the newly added or updated videos to Brightcove Beacon.
-      </li>
-      <li>
-        <strong>Update Brightcove Playlists</strong>: If you have added
-        playlists to your Video Cloud catalog, or altered existing playlists,
-        this button syncs the newly added or updated playlists to Brightcove
-        Beacon.
-      </li>
-      <li>
-        <strong>XML EPG - Fetch XML from Folder</strong>: When your EPG
-        (Electronic Programming Guide) needs to be updated, this button
-        retrieves the updated XML file. You will be provided an S3 account in
-        which to drop the file.
-      </li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--tip language-editable">
-      You can also work with Brightcove support personnel to create a schedule
-      to automatically perform ingestion.
-    </aside>
+      <h2 id="Getting_started">Getting started</h2>
+      <p>To access the Panasonic developer pages, follow these steps:</p>
 
-    <figure class="bcls-figure">
-      <img
-        class="bcls-image"
-        src="/assets/images/using-bcb/tools/ingestion.png"
-        alt="ingestion"
-      />
-    </figure>
-    <h3>Caveats for ingestion</h3>
-    <p>
-      Note that not all data that is entered about a particular video in Studio
-      is automatically ingested into Beacon. For instance, the following are not
-      ingested into Beacon from Video Cloud:
-    </p>
-    <ul>
-      <li>
-        <strong>Availability times</strong>: Scheduling times set in the
-        <em>AVAILABILITY</em> section of the video's properties are not ingested
-        into Brightcove Beacon. The dates will be, but not the times.
-      </li>
-      <li>
-        <strong>Geo Filtering</strong>: Geo filtering information set in the
-        <em>AVAILABILITY</em> section of the video's properties are not ingested
-        into Brightcove Beacon.
-      </li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--tip language-editable">
-      The issues listed above can be remedied by creating a
-      <strong>Package</strong> in Brightcove Beacon the assigning the video to
-      that package at ingestion via custom fields. See the
-      <a href="/using-brightcove-beacon/creating-subscription-package.html"
-        >Creating a Subscription Package
-      </a>
-      and
-      <a href="/using-brightcove-beacon/using-subscription-package.html"
-        >Using a Subscription Package
-      </a>
-      documents for further information.
-    </aside>
-    <p>
-      Also note that not every field mentioned in Brightcove Beacon has an
-      associated custom field. For instance
-      <em>Production Country</em> and <em>Sub-Genre</em> do not have
-      corresponding custom fields associated with them.
-    </p>
-  </section>
+      <ol class="bcls-tasklist-restart">
+        <li>
+          <p>
+            In a browser, navigate to the <a href="https://developer.vieraconnect.com/developers/login">Panasonic developer login</a> page.
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/panasonic/panasonic-login.png" alt="Panasonic developer login">
+            <figcaption class="bcls-caption--image">Panasonic developer login</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>
+            Either sign in with your account or create a new account.
+          </p>
+        </li>
+        <li>
+          <p>
+            When you log in, you should see the control panel.
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/panasonic/control-panel.png" alt="Control panel">
+            <figcaption class="bcls-caption--image">Control panel</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>
+            Read the note which is to the right of the <strong>Submit new application</strong> button. Select the <strong>home page</strong> link.
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/panasonic/home-link.png" alt="Home page link">
+            <figcaption class="bcls-caption--image">Home page link</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>
+            Review the app requirements. Don't worry, Brightcove will create the app with the needed technology.
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/panasonic/html5.png" alt="HTML5 requirements">
+            <figcaption class="bcls-caption--image">HTML5 requirements</figcaption>
+          </figure>
+        </li>
+      </ol>
+    </section>
 
-  <section class="bcls-section">
-    <h2 id="Cache">Cache</h2>
-    <p>In the Cache group you have two tools:</p>
-    <ul>
-      <li>
-        <strong>Cache Purge</strong>: When you make changes in Brightcove
-        Beacon, click this button to roll those changes into the current
-        configuration. This option pulls all changes EXCEPT images into the
-        current configuration.
-      </li>
-      <li>
-        <strong>Image Cache</strong>: If you update any images in Brightcove
-        Beacon, click this button to roll the image changes into the current
-        configuration.
-      </li>
-    </ul>
-    <figure class="bcls-figure">
-      <img
-        class="bcls-image"
-        src="/assets/images/using-bcb/tools/cache.png"
-        alt="cache"
-      />
-    </figure>
-  </section>
+    <section class="bcls-section">
+      <h2 id="Application_Info">Application Info</h2>
+      <p>The <strong>Application Info</strong> section is where you will enter basic app information.</p>
+
+      <ol class="bcls-tasklist-restart">
+        <li>
+          <p>
+            From the control panel, select the <strong>Submit new application</strong> button.
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/panasonic/new-app-button.png" alt="New application button">
+            <figcaption class="bcls-caption--image">New application button</figcaption>
+          </figure>
+        </li>
+        <li>
+          <p>
+            You should see an input form like this:
+          </p>
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" src="/assets/images/creating-your-apps/panasonic/application-info.png" alt="Application info">
+            <figcaption class="bcls-caption--image">Application info</figcaption>
+          </figure>
+        </li>
+        
+      </ol>
+    </section>
+
 </article>
 
 <!-- complete bootstrap layout -->
@@ -445,7 +465,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 22 Apr 2020
+  Page last updated on 21 Apr 2020
 </div>
 
 <footer class="bcls-footer" role="contentinfo">

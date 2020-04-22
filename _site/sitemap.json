@@ -105,22 +105,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/",
       "oldURL": "/index"
   },
 
@@ -130,12 +120,22 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/",
+      "newURL": "https://beacon.support.brightcove.com/references/",
       "oldURL": "/index"
   },
 
@@ -222,11 +222,6 @@
   {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/submitting-to-panasonic.html",
       "oldURL": "/submitting-to-panasonic"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/submitting-to-panasonic1.html",
-      "oldURL": "/submitting-to-panasonic1"
   },
 
   {

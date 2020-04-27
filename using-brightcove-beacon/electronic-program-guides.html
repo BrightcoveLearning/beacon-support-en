@@ -48,25 +48,44 @@ parent: Using Brightcove Beacon
         <p>XML Structure Example:</p>
         <pre class="line-numbers"> 
             <code class="language-xml">
-                
-                <ChannelsList>
-                < channel id="your-video-id">
-                < program id="3394" time="2020-04-22T01:25:00Z" duration="PT01H45M" 
-                delete="false" pvrEnabled="false" stovEnabled="false" catchUpEnabled="false">
-                < title>Video Title< /title>
-                < description>
-                <![CDATA[
-                Description of your video asset. 
-                ]]>
-                < /description>
-                < /program>
-                < /channel>
-                < /ChannelsList>
+
+
+            &lt;RiGHTvEPG xmlns=&quot;http://www.orca.tv/RiGHTv/7.0/EPG&quot; 
+            xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+            version=&quot;1.0&quot; language=&quot;en&quot; xsi:schemaLocation=&quot;http://www.orca.tv/RiGHTv/7.0/EPG 
+            RiGHTvEPG.xsd&quot;&gt;    
+              &lt;ChannelsList&gt;
+                &lt;channel id=&ldquo;your-video-id&rdquo;&gt;
+                  &lt;program id=&ldquo;3394 &quot; time=&ldquo;2020-04-22T01:25:00Z&rdquo; duration=&ldquo;PT01H45M&rdquo;
+                  delete=&ldquo;false&rdquo; pvrEnabled=&ldquo;false&rdquo; stovEnabled=&ldquo;false&rdquo; catchUpEnabled=&ldquo;false&rdquo;&gt;
+                    &lt;title&gt;Video Title&lt;/title&gt;
+                    &lt;description&gt;
+                    &lt;![CDATA[
+                    Description of your video asset.
+                    ]]&gt;
+                    &lt;/description&gt;
+                  &lt;/program&gt;
+                &lt;/channel&gt;
+              &lt;/ChannelsList&gt;
             
         </code>
         </pre>
 
-        <p>Important XML tags and metadata:</p>
+        <p>For the head of the XML file you can use the following code:</p>
+        <pre class="line-numbers"> 
+          <code class="language-xml">
+
+            &lt;RiGHTvEPG xmlns=&quot;http://www.orca.tv/RiGHTv/7.0/EPG&quot; 
+            xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+            version=&quot;1.0&quot; language=&quot;en&quot; xsi:schemaLocation=&quot;http://www.orca.tv/RiGHTv/7.0/EPG 
+            RiGHTvEPG.xsd&quot;&gt;
+
+            </code>
+            </pre>
+
+            <p>The <em>RiGHTvEPG.xsd</em> file contains <em>XML Schemas</em> that describe the structure of the XML document, and the file is hosted by Brightcove. You can validate your XML and the XSD file schema in an <a href="https://www.freeformatter.com/xml-validator-xsd.html" target="_blank">XML Validator</a>. </p>
+
+         <p>Important XML tags and metadata:</p>
 
         <table class="bcls-table">
             <thead class="bcls-table__head">
@@ -115,16 +134,16 @@ parent: Using Brightcove Beacon
                 <tr>
                     <td><strong>title</strong></td>
                     <td>The title of your video event.</td>
-                    <td>< title>Your video title< /title></td>
+                    <td>&lt;title&gt;Your video title&lt;/title&gt;</td>
                 </tr>
                 <tr>
                     <td><strong>description</strong></td>
                     <td>The description of your video event.</td>
-                    <td> < description>
-                        < ![CDATA[
-                        The video description goes here. 
-                        ]]>
-                        < /description>
+                    <td> &lt;description&gt;
+                      &lt;![CDATA[
+                      The video description goes here. 
+                      ]]&gt;
+                      &lt;/description&gt;
                         </td>
                 </tr>
 

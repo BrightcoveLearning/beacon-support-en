@@ -1,0 +1,233 @@
+---
+title: Creating an Electronic Program Guide (EPG)
+description: In this topic, you will learn how to create an Electronic Program Guide for Brightcove Beacon.
+parent: Using Brightcove Beacon
+---
+
+<article class="bcls-article">
+    <h1>{{ page.title }}</h1>
+    <summary>{{ page.description }}</summary>
+    <section class="bcls-section">
+      <h2 id="overview">Overview</h2>
+      <p>
+        An Electronic Program Guide (EPG) is a set of metadata linked to a video for a time-lapse with the objective of list current and scheduled programs that are or will be available on each Brightcove Beacon channel.
+      </p>
+      <p>This document will teach you how to structure your XML file and upload it as an Electronic Program Guide (EPG)  to Brightcove Beacon. </p>
+      <p>A high-level view of the process is:</p>
+    <ol>
+      <li>Create an XML file with your video metadata.</li>
+      <li>Drop the XML files in the Brightcove Beacon S3 bucket.</li>
+      <li>
+        After the steps above are completed, the file will automatically be ingested into Brightcove Beacon, and the information will be displayed in the Channels section of the platform and the Brightcove Beacon App.  
+      </li>
+    </ol>
+    <p>The rest of this document will provide details for each of the steps above.</p>
+
+    </section>
+    <section class="bcls-section">
+        <h2 id="information_epg">Required information for EPG</h2>
+            <ul>
+              <li>An XML file with the video metadata. This file can be created manually or automatically via a Cron job.</li>
+              <li>
+                The customer must provide an RSA public key to Brightcove. </li>
+                  <li>
+                    An S3 account (bucket name & URL path) provided by Brightcove.
+                  </li>
+            </ul>
+    </section>
+    <section class="bcls-section">
+        <h2 id="generating_rsa-public-key">Generating the RSA public key</h2>
+        <p>The RSA public key is an authentication credential just like a password and is widely used for secure data transmission.</p>
+        <p>For EPG able to be set, the first step is to generate an RSA public key and send it to your Brightcove representative. 
+        Generating an <a href="https://www.ssh.com/ssh/keygen/" target="_blank">RSA public key</a> can be done in different ways, please contact your technical staff for more information on the best way to do it.</p>
+        <p>Once you created and sent the RSA public key to your Brightcove representative, Brightcove will be able to provide you with the S3 bucket URL to drop your XML files.</p>
+    </section>
+    <section class="bcls-section">
+        <h2 id="xml_structure">XML File Structure</h2>
+        <p>To generate an Electronic Program Guide (EPG) for Brightcove Beacon, you will need to create and upload an XML file to the S3 bucket with all the metadata information of your channels as video titles, descriptions, and duration. </p>
+        <p>XML Structure Example:</p>
+        <pre class="line-numbers"> 
+            <code class="language-xml">
+                
+                <ChannelsList>
+                < channel id="your-video-id">
+                < program id="3394" time="2020-04-22T01:25:00Z" duration="PT01H45M" 
+                delete="false" pvrEnabled="false" stovEnabled="false" catchUpEnabled="false">
+                < title>Video Title< /title>
+                < description>
+                <![CDATA[
+                Description of your video asset. 
+                ]]>
+                < /description>
+                < /program>
+                < /channel>
+                < /ChannelsList>
+            
+        </code>
+        </pre>
+
+        <p>Important XML tags and metadata:</p>
+
+        <table class="bcls-table">
+            <thead class="bcls-table__head">
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Example</th>
+                </tr>
+            </thead>
+            <tbody class="bcls-table__body">
+                <tr>
+                <td><strong>id</strong></td>
+                <td>Unique Identifier for your video asset.</td>
+                <td>id=“3344”</td>
+                </tr>
+                <tr>
+                <td><strong>time</strong></td>
+                <td> Is the scheduled transmission time for your video. The times should be in UTC format, and all will be converted to the local time of each location that displays your content.</td>
+                <td>time=“2020-04-22T01:25:00Z”</td>
+                </tr>
+                <tr>
+                    <td><strong>delete</strong></td>
+                    <td>Required for EPG format, please always set to false.</td>
+                    <td>delete="false"</td>
+                </tr>
+                <tr>
+                    <td><strong>pvrEnabled</strong></td>
+                    <td>Required for EPG format, please always set to false.</td>
+                    <td>pvrEnabled="false"</td>
+                </tr>
+                <tr>
+                    <td><strong>stovEnabled</strong></td>
+                    <td>Required for EPG format, please always set to false.</td>
+                    <td>stovEnabled="false"</td>
+                </tr>
+                <tr>
+                    <td><strong>catchUpEnabled</strong></td>
+                    <td>Required for EPG format, please always set to false.</td>
+                    <td>catchUpEnabled="false"</td>
+                </tr>
+                <tr>
+                    <td><strong>duration</strong></td>
+                    <td>Is the duration of your video event. The duration format is defined following the <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank" >ISO 8601 standard</a>.</td>
+                    <td>duration=“PT01H45M” In this format the (PT) represents the Period Time of 1 hour (H) and 45 minutes (M).</td>
+                </tr>
+                <tr>
+                    <td><strong>title</strong></td>
+                    <td>The title of your video event.</td>
+                    <td>< title>Your video title< /title></td>
+                </tr>
+                <tr>
+                    <td><strong>description</strong></td>
+                    <td>The description of your video event.</td>
+                    <td> < description>
+                        < ![CDATA[
+                        The video description goes here. 
+                        ]]>
+                        < /description>
+                        </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+        <p></p>
+        <aside class="bcls-aside bcls-aside--information">
+            <ul>
+                <li>The XML file should have the programming metadata for the time-lapse you decide. For example, add the schedule times of seven days before, and seven days after the day the file was uploaded.</li>
+                <li>It is up to every client to define how often to replace the information and upload a new XML file to the S3 bucket. Example: daily, weekly, etc.</li> 
+            </ul>
+        </aside>
+        <p>Once your XML is ready, you can upload it to the S3 bucket server by the URL that Brightcove provided you.</p>
+    </section>
+
+    <section class="bcls-section">
+        <h2 id="reviewing-schedule">Reviewing the Schedule in Brightcove Beacon</h2>
+        <p>In this section, you will be able to review if your EPG was set correctly on the Brightcove Beacon channel’s schedule.</p>
+
+        <ol class="bcls-tasklist">
+            <li>
+                Go to Brightcove Beacon and in the upper menu, click in the <strong>Channels</strong> tab.
+            </li>
+            <li>In the left menu, click in the <strong>EPG</strong> section.
+                <figure class="bcls-figure">
+                    <img
+                      class="bcls-image--no-border"
+                      alt=""
+                      src="/assets/images/using-bcb/epg/1-epg-section.png"
+                    />
+                  </figure>
+            </li>
+            <li>In the <strong>Schedule</strong> section, you will see all your available channels.
+                <figure class="bcls-figure">
+                    <img
+                      class="bcls-image--no-border"
+                      alt=""
+                      src="/assets/images/using-bcb/epg/2-available-channels.png"
+                    />
+                  </figure>
+            </li>
+            <li>Click in the blue button with the arrow to display all the schedules that were submitted by the XML file for the selected channel.
+            <aside class="bcls-aside bcls-aside--information">All the dates and times are presented in the UTC format.</aside>
+            <figure class="bcls-figure">
+                <img
+                  class="bcls-image--no-border"
+                  alt=""
+                  src="/assets/images/using-bcb/epg/4-schedule-info.png"
+                />
+              </figure>
+
+            </li>
+            <li>The <strong>Start Time</strong> and <strong>End Time</strong> data are in UTC time. 
+                <figure class="bcls-figure">
+                    <img
+                      class="bcls-image--no-border"
+                      alt=""
+                      src="/assets/images/using-bcb/epg/5-start-times.png"
+                    />
+                  </figure>
+            
+            
+            </li>
+            <li>If there are any empty spaces in your XML programming schedule, the Brightcove Beacon system will fill those empty spaces with a label in the channel schedule.</li>
+            <li>Go to the Brightcove Beacon App, and in the upper menu click in the <strong>Program Guide</strong> tab.
+                <figure class="bcls-figure">
+                    <img
+                      class="bcls-image--no-border"
+                      alt=""
+                      src="/assets/images/using-bcb/epg/6-program-guide.png"
+                    />
+                  </figure>
+            </li>
+            <li>Here you will be able to review the EPG of your channels. </li>
+            <li>To choose the EPG schedule for another day, select the day of your preference on the menu.
+            <figure class="bcls-figure">
+                    <img
+                      class="bcls-image--no-border"
+                      alt=""
+                      src="/assets/images/using-bcb/epg/7-day-preference.png"
+                    />
+                  </figure>
+            </li>
+
+
+
+
+
+
+
+        </ol>
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+    </article>
+

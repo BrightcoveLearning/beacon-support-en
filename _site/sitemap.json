@@ -75,6 +75,11 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/electronic-program-guides.html",
+      "oldURL": "/electronic-program-guides"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/forcing-a-sync.html",
       "oldURL": "/forcing-a-sync"
   },

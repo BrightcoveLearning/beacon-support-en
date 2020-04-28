@@ -110,12 +110,17 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
+      "newURL": "https://beacon.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://beacon.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
       "oldURL": "/index"
   },
 
@@ -126,11 +131,6 @@
 
   {
       "newURL": "https://beacon.support.brightcove.com/getting-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
@@ -237,11 +237,6 @@
   {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/submitting-to-roku.html",
       "oldURL": "/submitting-to-roku"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/submitting-to-samsung-orig.html",
-      "oldURL": "/submitting-to-samsung-orig"
   },
 
   {

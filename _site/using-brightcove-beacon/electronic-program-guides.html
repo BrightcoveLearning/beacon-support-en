@@ -324,7 +324,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Create an XML file with your video metadata.</li>
       <li>Drop the XML files in the Brightcove Beacon S3 bucket.</li>
       <li>
-        After the steps above are completed, the file will automatically be ingested into Brightcove Beacon, and the information will be displayed in the Channels section of the platform and the Brightcove Beacon App.  
+        After the steps above are completed, the file will automatically be ingested into Brightcove Beacon, and the information will be displayed in the <strong>Channels</strong> section of the platform and the Brightcove Beacon App.  
       </li>
     </ol>
     <p>The rest of this document will provide details for each of the steps above.</p>
@@ -337,7 +337,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
               <li>
                 The customer must provide an RSA public key to Brightcove. </li>
                   <li>
-                    An S3 account (bucket name & URL path) provided by Brightcove.
+                    An S3 account (bucket name and URL path) provided by Brightcove.
                   </li>
             </ul>
     </section>
@@ -346,7 +346,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>The RSA public key is an authentication credential just like a password and is widely used for secure data transmission.</p>
         <p>For EPG able to be set, the first step is to generate an RSA public key and send it to your Brightcove representative. 
         Generating an <a href="https://www.ssh.com/ssh/keygen/" target="_blank">RSA public key</a> can be done in different ways, please contact your technical staff for more information on the best way to do it.</p>
-        <p>Once you created and sent the RSA public key to your Brightcove representative, Brightcove will be able to provide you with the S3 bucket URL to drop your XML files.</p>
+        <p>Once you created and sent the RSA public key to your Brightcove representative, Brightcove will be able to provide you with the S3 bucket name and URL to drop your XML files.</p>
     </section>
     <section class="bcls-section">
         <h2 id="xml_structure">XML File Structure</h2>
@@ -389,7 +389,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             </code>
             </pre>
 
-            <p>The <em>RiGHTvEPG.xsd</em> file contains <em>XML Schemas</em> that describe the structure of the XML document, and the file is hosted by Brightcove. You can validate your XML and the XSD file schema in an <a href="https://www.freeformatter.com/xml-validator-xsd.html" target="_blank">XML Validator</a>. </p>
+            <p>The <em>RiGHTvEPG.xsd</em> file contains <em>XML Schemas</em> that describe the structure of the XML document, and the file is hosted by Brightcove. You can validate your XML and the XSD file schema in an <a href="https://www.freeformatter.com/xml-validator-xsd.html" target="_blank">XML validator</a>. </p>
 
          <p>Important XML tags and metadata:</p>
 
@@ -463,7 +463,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 <li>It is up to every client to define how often to replace the information and upload a new XML file to the S3 bucket. Example: daily, weekly, etc.</li> 
             </ul>
         </aside>
-        <p>Once your XML is ready, you can upload it to the S3 bucket server by the URL that Brightcove provided you.</p>
+        <p>Once your XML is ready, you can upload it to the S3 bucket server with the URL that Brightcove provided you.</p>
     </section>
 
     <section class="bcls-section">
@@ -472,7 +472,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
         <ol class="bcls-tasklist">
             <li>
-                Go to Brightcove Beacon and in the upper menu, click in the <strong>Channels</strong> tab.
+                Go to the Brightcove Beacon platform and in the upper menu, click in the <strong>Channels</strong> tab.
             </li>
             <li>In the left menu, click in the <strong>EPG</strong> section.
                 <figure class="bcls-figure">
@@ -514,7 +514,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
             
             </li>
-            <li>If there are any empty spaces in your XML programming schedule, the Brightcove Beacon system will fill those empty spaces with a label in the channel schedule.</li>
             <li>Go to the Brightcove Beacon App, and in the upper menu click in the <strong>Program Guide</strong> tab.
                 <figure class="bcls-figure">
                     <img
@@ -525,6 +524,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   </figure>
             </li>
             <li>Here you will be able to review the EPG of your channels. </li>
+            <li>If there are any empty spaces in your XML programming schedule, the Brightcove Beacon system will fill those empty spaces with a label in the channel schedule.</li>
             <li>To choose the EPG schedule for another day, select the day of your preference on the menu.
             <figure class="bcls-figure">
                     <img

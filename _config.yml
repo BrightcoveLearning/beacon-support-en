@@ -24,6 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Brightcove Beacon provides video providers the environment for their customers to view videos without having a cable provider subscription.
 # baseurl: "" # the subpath of your site, e.g. /blog
 site_url: "https://beacon.support.brightcove.com"
+site_domain: "beacon.support.brightcove.com"
 
 # Build settings
 # theme: minima

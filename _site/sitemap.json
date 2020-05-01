@@ -110,7 +110,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
+      "newURL": "https://beacon.support.brightcove.com/getting-started/",
       "oldURL": "/index"
   },
 
@@ -120,17 +120,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/getting-started/",
+      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
       "oldURL": "/index"
   },
 
@@ -140,7 +130,17 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/",
       "oldURL": "/index"
   },
 

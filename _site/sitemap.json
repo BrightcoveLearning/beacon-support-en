@@ -115,22 +115,27 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/getting-started/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/references/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
+      "newURL": "https://beacon.support.brightcove.com/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/getting-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
       "oldURL": "/index"
   },
 
@@ -141,11 +146,6 @@
 
   {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -185,6 +185,11 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/support/online-training-courses.html",
+      "oldURL": "/online-training-courses"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/support/opening-case-with-brightcove-support.html",
       "oldURL": "/opening-case-with-brightcove-support"
   },
@@ -192,6 +197,11 @@
   {
       "newURL": "https://beacon.support.brightcove.com/references/product-updates.html",
       "oldURL": "/product-updates"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/support/register-training.html",
+      "oldURL": "/register-training"
   },
 
   {

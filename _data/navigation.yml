@@ -16,6 +16,8 @@
       url: /getting-started/creating-your-app-design-info-architecture.html
     - name: App Design - Layout Options
       url: /getting-started/creating-your-app-design-layout-options.html
+    - name: Design Best Practices
+      url: /getting-started/design-best-practices.html
 - section:
   name: Syncing with Video Cloud
   icon: '<i class="far fa-sync"></i>'

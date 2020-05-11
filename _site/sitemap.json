@@ -120,17 +120,22 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/getting-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/getting-started/",
       "oldURL": "/index"
   },
 
@@ -145,11 +150,6 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/references/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/",
       "oldURL": "/index"
   },
@@ -160,16 +160,6 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/install-test-apps.html",
-      "oldURL": "/install-test-apps"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/install-test-builds.html",
-      "oldURL": "/install-test-builds"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/installing-fire-tv-test-build.html",
       "oldURL": "/installing-fire-tv-test-build"
   },
@@ -177,6 +167,11 @@
   {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/installing-ios-test-build.html",
       "oldURL": "/installing-ios-test-build"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/installing-roku-test-build.html",
+      "oldURL": "/installing-roku-test-build"
   },
 
   {

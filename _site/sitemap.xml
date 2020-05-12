@@ -225,6 +225,166 @@
       
         <url>
           
+            <loc>https://beacon.support.brightcove.com/creating-your-apps/android/</loc>
+          
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
+              <loc>https://beacon.support.brightcove.com/creating-your-apps/android/submitting-to-android.html</loc>
+            
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/creating-your-apps/fire-tv/</loc>
+          
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
+              <loc>https://beacon.support.brightcove.com/creating-your-apps/fire-tv/installing-fire-tv-test-build.html</loc>
+            
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://beacon.support.brightcove.com/creating-your-apps/fire-tv/submitting-to-amazon.html</loc>
+            
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/</loc>
+          
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
+              <loc>https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/installing-ios-test-build.html</loc>
+            
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/submitting-to-apple.html</loc>
+            
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/creating-your-apps/lg/</loc>
+          
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
+              <loc>https://beacon.support.brightcove.com/creating-your-apps/lg/submitting-to-lg.html</loc>
+            
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/creating-your-apps/panasonic/</loc>
+          
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
+              <loc>https://beacon.support.brightcove.com/creating-your-apps/panasonic/submitting-to-panasonic.html</loc>
+            
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/creating-your-apps/roku/</loc>
+          
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
+              <loc>https://beacon.support.brightcove.com/creating-your-apps/roku/installing-roku-test-build.html</loc>
+            
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://beacon.support.brightcove.com/creating-your-apps/roku/submitting-to-roku.html</loc>
+            
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/creating-your-apps/samsung/</loc>
+          
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+          <url>
+            
+              <loc>https://beacon.support.brightcove.com/creating-your-apps/samsung/submitting-to-samsung.html</loc>
+            
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+      
+        <url>
+          
             <loc>https://beacon.support.brightcove.com/creating-your-apps/common-required-info.html</loc>
           
             <lastmod>2020-05-12</lastmod>
@@ -236,76 +396,6 @@
         <url>
           
             <loc>https://beacon.support.brightcove.com/creating-your-apps/device-apps-validation-guide.html</loc>
-          
-            <lastmod>2020-05-12</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://beacon.support.brightcove.com/creating-your-apps/submitting-to-apple.html</loc>
-          
-            <lastmod>2020-05-12</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://beacon.support.brightcove.com/creating-your-apps/submitting-to-android.html</loc>
-          
-            <lastmod>2020-05-12</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://beacon.support.brightcove.com/creating-your-apps/submitting-to-roku.html</loc>
-          
-            <lastmod>2020-05-12</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://beacon.support.brightcove.com/creating-your-apps/submitting-to-samsung.html</loc>
-          
-            <lastmod>2020-05-12</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://beacon.support.brightcove.com/creating-your-apps/submitting-to-lg.html</loc>
-          
-            <lastmod>2020-05-12</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://beacon.support.brightcove.com/creating-your-apps/submitting-to-amazon.html</loc>
-          
-            <lastmod>2020-05-12</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://beacon.support.brightcove.com/creating-your-apps/submitting-to-panasonic.html</loc>
           
             <lastmod>2020-05-12</lastmod>
             <changefreq>daily</changefreq>

@@ -6,47 +6,38 @@ parent: 'Roku'
 grandparent: 'Creating Your Apps'
 ---
 <style>
-  h1 i.fal, h1 i.fab, h1 i.fas, h1 i.far {
-    font-size: 3rem;
-    color:{{site.product_color}};
-    margin-right: .5rem;
-  }
-  .card-icon i {
-    color: {{site.product_color}};
-  }
-  .card-wrapper {
-  justify-content: start;
-  }
-  .bcls-card ul li {
-    font-size: small;
+    h1 i.fal, h1 i.fab, h1 i.fas, h1 i.far {
+      font-size: 3rem;
+      color:{{site.product_color}};
+      margin-right: 1rem;
+    }
+    .card-icon I {
+      color: {{site.product_color}};
+    }
+    .card-wrapper {
+    justify-content: start;
   }
 </style>
-
-<article class="bcls-article">
-  <h1>{{ page.icon }} {{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
+<article class="landing-page-wrapper">
+  <h1>{{ page.title }}</h1>
+  <section class="landing-page-header" id="landing_page_header">
+    <p>{{ page.description }}</p>
+  </section>
   <section class="card-wrapper">
+    {% for item in site.data.navigation %} {% if item.name == page.section %}
     <section class="bcls-card">
+      <div class="card-icon">
+        <i class="far fa-sync"></i>
+      </div>
       <div class="card-content">
-        <h2 id="Topics_in_this_section">Topics in this section</h2>
-        <ul>
-        {% for item in site.data.navigation %}
-        {% if item.name == page.title %}
-              {% for entry in item.docs %}
-                <li><a href="{{ entry.url }}">{{ entry.name }}</a>
-                {% if entry.docs %}
-                  <ul>
-                    {% for subentry in entry.docs %}
-                      <li><a href="{{ subentry.url }}">{{ subentry.name }}</a></li>
-                    {% endfor %}
-                  </ul>
-                {% endif %}
-                </li>
-              {% endfor %}
-        {% endif %}
-      {% endfor %}
-  
+        <h2 class="landing-page-item-header">{{ item.name }} Topics</h2>
+        <ul class="landing-page-item list-none">
+          {% for entry in item.docs %}
+          <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
+          {% endfor %}
+        </ul>
       </div>
     </section>
+    {% endif %} {% endfor %}
   </section>
 </article>

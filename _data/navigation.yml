@@ -64,6 +64,10 @@
       docs:
         - name: 'Submitting New Apps to the Android Store'
           url: '/creating-your-apps/android/submitting-to-android.html'
+        - name: 'Updating Android Apps to Brightcove Beacon'
+          url: '/creating-your-apps/android/updating-android-apps-to-bcb.html'
+        - name: 'Adding Subscriptions to Android'
+          url: '/creating-your-apps/android/adding-subscriptions-in-android.html'
     - name: 'Fire TV'
       url: '/creating-your-apps/fire-tv/'
       docs:

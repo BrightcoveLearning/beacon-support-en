@@ -241,6 +241,24 @@
             <priority>0.5</priority>
           </url>
         
+          <url>
+            
+              <loc>https://beacon.support.brightcove.com/creating-your-apps/android/updating-android-apps-to-bcb.html</loc>
+            
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
+              <loc>https://beacon.support.brightcove.com/creating-your-apps/android/adding-subscriptions-in-android.html</loc>
+            
+            <lastmod>2020-05-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
       
         <url>
           

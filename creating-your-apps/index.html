@@ -1,9 +1,10 @@
 ---
-title: Creating Your Apps 
+title: Creating Your Apps
 parent: Home
 description: This section provides guidance on submitting your apps to the app stores.
-icon: '<i class="far fa-location-arrow"></i>'
+icon: '<i class="fal fa-rocket-launch"></i>'
 ---
+
 <style>
   h1 i.fal, i.fa, h1 i.fab, h1 i.fas, h1 i.far {
     font-size: 3rem;
@@ -15,29 +16,28 @@ icon: '<i class="far fa-location-arrow"></i>'
     list-style: none;
     margin-left: -3em;
   }
-
 </style>
 
 <article class="bcls-article">
   <h1>{{ page.icon }} {{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
-  
+
   <section class="card-wrapper">
-    {% for item in site.data.navigation %}
-      {% if item.name == page.title %}
-        {% for subsection in item.docs %}
-            <section class="bcls-card-small" onclick="window.location.href='{{subsection.url}}'">
-              <div class="card-content">
-                <h2>{{ subsection.name }}</h2>
-                <ul>
-                  {% for doc in subsection.docs %}
-                        <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </section>
-        {% endfor %}
-      {% endif %}
-    {% endfor %}
+    {% for item in site.data.navigation %} {% if item.name == page.title %} {%
+    for subsection in item.docs %}
+    <section
+      class="bcls-card-small"
+      onclick="window.location.href='{{subsection.url}}'"
+    >
+      <div class="card-content">
+        <h2>{{ subsection.name }}</h2>
+        <ul>
+          {% for doc in subsection.docs %}
+          <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+    {% endfor %} {% endif %} {% endfor %}
   </section>
 </article>

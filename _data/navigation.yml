@@ -50,6 +50,8 @@
       url: /using-brightcove-beacon/including-non-configurable-pages.html
     - name: Introducing Pages
       url: /using-brightcove-beacon/introducing-pages.html
+    - name: Streaming a Live Event
+      url: /using-brightcove-beacon/streaming-live-event.html
     - name: Understanding Monetization Options
       url: /using-brightcove-beacon/monetization-options.html
     - name: Using a Subscription Package

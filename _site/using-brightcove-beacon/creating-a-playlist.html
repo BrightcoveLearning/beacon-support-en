@@ -441,8 +441,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </li>
       <li>
         <p>
-          From the <strong>Basic Data</strong> tab, you will define the type of
-          playlist that you want and add content.
+          From the <strong>Basic Data</strong> tab, you will define the name and
+          display type of playlist, then add content.
         </p>
         <figure class="bcls-figure">
           <img
@@ -455,19 +455,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </li>
       <li>
         In the <strong>Name</strong> field, add an internal system name for your
-        playlist. This is also the name use for ananlytics. Note that you will
+        playlist. This is also the name use for analytics. Note that you will
         add the viewable title in a later step.
-      </li>
-      <li>
-        If you want a dynamic playlist, check <strong>Dynamic playlist</strong>.
-        When selected, video content that matches the tags you select will be
-        automatically added to your playlist.
       </li>
       <li>
         <p>
           Select a layout from <strong>View All Playlist Layout</strong>. This
           is the layout used when viewers click the
-          <strong>View All</strong> button in the apps. As a best practice to
+          <strong>View All</strong> button in the apps. As a best practice
           choose a grid of some kind.
         </p>
         <!--         <p>Options include:
@@ -493,7 +488,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>
           Select a <strong>View all menu type</strong>. If the playlist is long,
           and only a few videos are displayed at a time, you can give users the
-          ability to view all. Options include:
+          ability to view all <em>based on genres</em>. Options include:
         </p>
         <ul>
           <li><strong>None</strong> - No option to view all videos</li>
@@ -508,7 +503,20 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>Select a <strong>Playlist Reference</strong>.</p>
         <ul>
           <li><strong>No Reference</strong> - default</li>
+          <li><strong>Child Navigation</strong> - default</li>
+          <li><strong>Movies Sub Page</strong> - default</li>
         </ul>
+        <aside class="bcls-aside bcls-aside--tip language-editable">
+          This is used to allow multilevel navigation. In the apps, when users
+          press <strong>View All</strong> on the playlists that have a
+          <strong>Playlist Reference</strong>, instead of the viewing the normal
+          page to view all, users are taken to the selected type from this
+          selection.
+        </aside>
+      </li>
+      <li>
+        Neither <strong>Dynamic</strong> nor <strong>Special</strong> playlists
+        are functional at this time, so do not check either checkbox.
       </li>
     </ol>
   </section>
@@ -735,30 +743,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="Non_Textual_Data">Non-Textual Data</h2>
     <p>
-      The <strong>Non-Textual Data</strong> section allows you to upload icon
-      images for your playlist.
+      The <strong>Non-Textual Data</strong> tab is not functional at this time.
     </p>
-    <ol class="bcls-tasklist__restart">
-      <li>
-        <p>Select the <strong>Non-Textual Data</strong> tab.</p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/playlists/non-textual-data.png"
-            alt="Non-Textual Data"
-          />
-          <figcaption class="bcls-caption--image">Non-Textual Data</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>
-          Choose images from your computer to be used as playlist icon images.
-        </p>
-        <aside class="bcls-aside bcls-aside--information">
-          The maximum allowed upload size is 500 KB.
-        </aside>
-      </li>
-    </ol>
   </section>
 
   <section class="bcls-section">
@@ -1110,7 +1096,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <ul>
           <li>
             <strong>Yes</strong> - Select an ad configuration from the
-            <strong>Advertisment Configuration</strong> dropdown menu.
+            <strong>Advertisement Configuration</strong> dropdown menu.
           </li>
           <li><strong>No</strong> - No ads.</li>
         </ul>

@@ -72,6 +72,8 @@
           url: '/creating-your-apps/android/updating-android-apps-to-bcb.html'
         - name: 'Adding Subscriptions to Android'
           url: '/creating-your-apps/android/adding-subscriptions-in-android.html'
+        - name: 'Installing an Android Test Build'
+          url: '/creating-your-apps/android/installing-android-test-build.html'
     - name: 'Fire TV'
       url: '/creating-your-apps/fire-tv/'
       docs:

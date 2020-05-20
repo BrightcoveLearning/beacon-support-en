@@ -410,6 +410,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
+<style>
+  .imageWithText {
+    width: auto;
+    vertical-align: text-bottom;
+    height: 1.5em;
+  }
+</style>
 <article class="bcls-article">
   <h1>Creating a Playlist</h1>
   <summary>In this topic, you will learn how to create a playlist using the Playlists tab for Brightcove Beacon.</summary>
@@ -455,12 +462,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>
           From the <strong>Basic Data</strong> tab, you will define the name and
           display type of playlist, then add content. Note that most of the
-          functionality in this section is not usable at this time.
+          functionality in this section is not usable at this time. Of course,
+          the steps below will only address the usable items.
         </p>
         <figure class="bcls-figure">
           <img
             class="bcls-image--no-border"
-            src="/assets/images/using-bcb/creating-playlists/not-usable=basic-data.png"
+            src="/assets/images/using-bcb/creating-playlists/not-usable-basic-data.png"
             alt="Basic Data"
           />
           <figcaption class="bcls-caption--image">Basic Data</figcaption>
@@ -482,228 +490,39 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </aside>
       </li>
       <li>
-        <p>
-          Select a layout from <strong>View All Playlist Layout</strong>. This
-          is the layout used when viewers click the
-          <strong>View All</strong> button in the apps. As a best practice
-          choose a grid of some kind.
-        </p>
-        <!--         <p>Options include:
-        </p>
-        <ul>
-          <li>
-            <strong>Carousel Posters 5 Columns</strong> - A carousel of poster
-            images which is 5 columns wide and can be scrolled left or right
-          </li>
-          <li>
-            <strong>Carousel Landscape In</strong> - A carousel with 16 x 9
-            poster images
-          </li>
-          <li>
-            <strong>Grid 4 Columns Landscape Labels In</strong> - A 4 column
-            wide carousel with 16 x 9 poster images. Labels will display over
-            the poster image.
-          </li>
-        </ul>
- -->
+        Select a layout from <strong>View All Playlist Layout</strong>. This is
+        the layout used when viewers click the <strong>View All</strong> button
+        in the apps. As a best practice choose a grid of some kind.
       </li>
       <li>
-        <p>
-          Select a <strong>View all menu type</strong>. If the playlist is long,
-          and only a few videos are displayed at a time, you can give users the
-          ability to view all <em>based on genres</em>. Options include:
-        </p>
-        <ul>
-          <li><strong>None</strong> - No option to view all videos</li>
-          <li><strong>Tab</strong> - Tabbed list of all videos</li>
-          <li>
-            <strong>Combobox</strong> - A dropdown menu where you can view the
-            titles of all the videos
-          </li>
-        </ul>
-      </li>
-      <li>
-        <p>Select a <strong>Playlist Reference</strong>.</p>
-        <ul>
-          <li><strong>No Reference</strong> - default</li>
-          <li><strong>Child Navigation</strong> - default</li>
-          <li><strong>Movies Sub Page</strong> - default</li>
-        </ul>
-        <aside class="bcls-aside bcls-aside--tip language-editable">
-          This is used to allow multilevel navigation. In the apps, when users
-          press <strong>View All</strong> on the playlists that have a
-          <strong>Playlist Reference</strong>, instead of the viewing the normal
-          page to view all, users are taken to the selected type from this
-          selection.
+        To begin the process of adding content to your playlist, click the
+        <strong>Assets</strong> tab. You see you have six asset types to choose
+        from.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            src="/assets/images/using-bcb/creating-playlists/asset-types.png"
+            alt="Basic Data"
+          />
+          <figcaption class="bcls-caption--image">Asset Types</figcaption>
+        </figure>
+        <aside class="bcls-aside bcls-aside--information language-editable">
+          You are now at the point where you see playlist options, those being
+          <strong>Events</strong>, <strong>Series</strong>,
+          <strong>Seasons</strong>, <strong>Events</strong> and
+          <strong>Channels</strong>, that you cannot choose in Video Cloud
+          Studio. These types are NOT accessible in Video Cloud Studio, so you
+          must create the playlist in Brightcove Beacon.
         </aside>
       </li>
       <li>
-        Neither <strong>Dynamic</strong> nor <strong>Special</strong> playlists
-        are functional at this time, so do not check either checkbox.
-      </li>
-    </ol>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Use_Builder_to_add_content">Use Builder to add content</h2>
-    <p>
-      The Builder tab and functionality allows you to add content to your
-      playlist based on a set of rules that you define.
-    </p>
-    <ol class="bcls-tasklist__restart">
-      <li>
-        <p>
-          By selecting <strong>Special playlist</strong> you will have to option
-          to choose a special type of playlist.
-        </p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/playlists/special-playlist.png"
-            alt="Special playlist"
-          />
-          <figcaption class="bcls-caption--image">Special playlist</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>Select a <strong>Special Type</strong> of playlist.</p>
-        <ul>
-          <li><strong>Most Watched</strong> - Most watched videos playlist</li>
-          <li>
-            <strong>Recommendations</strong> - Recommended videos playlist
-          </li>
-          <li>
-            <strong>Builder</strong> - Use the <strong>Builder</strong> tab
-            below to create your playlist content
-          </li>
-        </ul>
-      </li>
-      <li>
-        If you choose <strong>Builder</strong> as special type, then you can use
-        the Builder functionality to add content to your playlist.
-      </li>
-      <li>
-        <p>
-          Select the builder options and select the <strong>Add</strong> button.
-          Then, select the <strong>Update List</strong> button to see content
-          added to your playlist on the left.
-        </p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/playlists/builder.png"
-            alt="Builder type playlist"
-          />
-          <figcaption class="bcls-caption--image">
-            Builder type playlist
-          </figcaption>
-        </figure>
-      </li>
-    </ol>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Manually_add_content">Manually add content</h2>
-    <p>
-      When the <strong>Special playlist</strong> option is not selected, you can
-      use the other tabs to add content to your playlist.
-    </p>
-    <ol class="bcls-tasklist__restart">
-      <li>
-        <p>Make sure <strong>Special playlist</strong> is not selected.</p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/playlists/manual-playlist.png"
-            alt="Manual playlist"
-          />
-          <figcaption class="bcls-caption--image">Manual playlist</figcaption>
-        </figure>
-      </li>
-      <li>
-        The <strong>Assets</strong> tab allows you to add content from your
-        library of movies, series, seasons, episodes, channels and
-        advertisements.
-      </li>
-      <li>
-        <p>
-          In the <strong>Actions</strong> column, use the add icon
-          <img
-            width="40"
-            alt="Add action"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/playlists/add-action.png"
-          />
-          to add an item to your playlist.
-        </p>
-        <p>
-          Use the remove icon
-          <img
-            width="40"
-            alt="Add action"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/playlists/remove-icon.png"
-          />
-          to remove an item from your playlist.
-        </p>
-      </li>
-      <li>
-        <p>
-          The <strong>Seo-Tags</strong> tab allows you to choose content that
-          has tag information associated with it.
-        </p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/playlists/seo-tags.png"
-            alt="Seo-Tags"
-          />
-          <figcaption class="bcls-caption--image">Seo-Tags</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>
-          The <strong>Cast</strong> tab allows you to choose content based on
-          actors, directors, music composers, singers song writers and writers.
-        </p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/playlists/cast-tab.png"
-            alt="Cast tab"
-          />
-          <figcaption class="bcls-caption--image">Cast tab</figcaption>
-        </figure>
-      </li>
-      <li>
-        The <strong>Categories</strong> tab allows you to choose content based
-        on categories that you have defined.
-      </li>
-      <li>
-        <p>
-          The <strong>Genres</strong> tab allows you to choose content based on
-          genres and sub-genres.
-        </p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/playlists/genre-tab.png"
-            alt="Cast tab"
-          />
-          <figcaption class="bcls-caption--image">Cast tab</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>
-          Select <strong>Newest first</strong> to order your playlist by asset
-          creation date.
-        </p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/playlists/newest-sort.png"
-            alt="Newest first"
-          />
-          <figcaption class="bcls-caption--image">Newest first</figcaption>
-        </figure>
+        You can now select the desired asset type, go into the list of those
+        assets, and click the
+        <img
+          class="imageWithText"
+          src="/assets/images/using-bcb/creating-playlists/plus-action.png"
+          alt="plus button"
+        />
       </li>
     </ol>
   </section>

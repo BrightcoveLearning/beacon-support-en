@@ -1,7 +1,7 @@
 ---
 title: Creating a Playlist
 description: 'In this topic, you will learn how to create a playlist using the Playlists tab
-for Brightcove Beacon.'
+in Brightcove Beacon.'
 parent: Using Brightcove Beacon
 ---
 
@@ -19,20 +19,25 @@ parent: Using Brightcove Beacon
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
     <p>
-      Playlists are a collection of videos that are created one of two ways in
-      Brightcove Beacon:
+      Playlists are a collection of videos and other entities that are created
+      one of two ways for Brightcove Beacon:
     </p>
     <ul>
-      <li>Imported into Brightcove Beacon from your Video Cloud library.</li>
+      <li>
+        Imported into Brightcove Beacon from your Video Cloud library. In this
+        case, the items in the playlist will ONLY be videos.
+      </li>
       <li>
         Created in Brightcove Beacon using the <strong>Playlists</strong> tab.
-        This method is the focus of this document.
+        This method is the focus of this document. In this case, the items in
+        the playlist includes videos, but also other entities like movies,
+        series, seasons and events.
       </li>
     </ul>
     <aside class="bcls-aside bcls-aside--warning language-editable">
       Not all the functionality shown in the <strong>Playlists</strong> tab is
-      usable at this time. It is made clear in this document what should NOT be
-      used.
+      usable at this time. It is made clear in this document what form items you
+      should complete.
     </aside>
   </section>
 
@@ -119,10 +124,6 @@ parent: Using Brightcove Beacon
           alt="plus button"
         />
       </li>
-      <li>
-        Be sure to click the <strong>Create New Playlist</strong> button to save
-        your work.
-      </li>
     </ol>
   </section>
 
@@ -205,7 +206,7 @@ parent: Using Brightcove Beacon
         <figure class="bcls-figure">
           <img
             class="bcls-image--no-border"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/playlists/rights-and-scheduling.png"
+            src="/assets/images/using-bcb/creating-playlists/rights-and-scheduling.png"
             alt="Rights & Scheduling"
           />
           <figcaption class="bcls-caption--image">
@@ -214,48 +215,12 @@ parent: Using Brightcove Beacon
         </figure>
       </li>
       <li>
-        Be sure the status is set to <strong>Published</strong> for your
-        playlists.
+        Be sure the <strong>Status</strong> is set to
+        <strong>Published</strong> for your playlists.
       </li>
       <li>
-        <p>
-          In the <strong>Availability Rights</strong> section, select a payment
-          method:
-        </p>
-        <ul>
-          <li>
-            <strong>No Payment</strong>
-          </li>
-          <li>
-            <strong>Stripe</strong>
-          </li>
-          <li>
-            <strong>Roku Store</strong>
-          </li>
-          <li>
-            <strong>Apple Store</strong>
-          </li>
-          <li>
-            <strong>Google Play Store</strong>
-          </li>
-          <li>
-            <strong>Amazon</strong>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <p>
-          When <strong>No Payment</strong> is selected, enter values for the
-          following fields:
-        </p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/playlists/no-payment.png"
-            alt="No payment"
-          />
-          <figcaption class="bcls-caption--image">No payment</figcaption>
-        </figure>
+        For the <strong>Availability Details</strong>, use the following as a
+        guide to complete the information:
         <table class="bcls-table">
           <thead class="bcls-table__head">
             <tr>
@@ -268,21 +233,9 @@ parent: Using Brightcove Beacon
             <tr>
               <td>Rights Type</td>
               <td>Yes</td>
-              <td>
-                Select one of the following types:
-                <ul>
-                  <li>
-                    Free - Free content
-                  </li>
-                  <li>
-                    Advertising - AVOD
-                  </li>
-                  <li>
-                    Subscription - SVOD
-                  </li>
-                </ul>
-              </td>
+              <td>Select <strong>Free</strong>.</td>
             </tr>
+            Free
             <tr>
               <td>Start Time</td>
               <td>Yes</td>
@@ -295,8 +248,8 @@ parent: Using Brightcove Beacon
             </tr>
             <tr>
               <td>Max Streams</td>
-              <td>Yes</td>
-              <td>The maximum number of streams per user.</td>
+              <td>N/A</td>
+              <td>Not functional at this time.</td>
             </tr>
             <tr>
               <td>Devices to publish</td>
@@ -331,156 +284,8 @@ parent: Using Brightcove Beacon
         </aside>
       </li>
       <li>
-        <p>
-          When a payment option is selected, enter values for the following
-          fields:
-        </p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/playlists/payment.png"
-            alt="Payment"
-          />
-          <figcaption class="bcls-caption--image">Payment</figcaption>
-        </figure>
-        <table class="bcls-table">
-          <thead class="bcls-table__head">
-            <tr>
-              <th>Field</th>
-              <th>Required</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody class="bcls-table__body">
-            <tr>
-              <td>Rights Type</td>
-              <td>Yes</td>
-              <td>
-                Select one of the following types:
-                <ul>
-                  <li>
-                    Free - Free content
-                  </li>
-                  <li>
-                    Advertising - AVOD
-                  </li>
-                  <li>
-                    Subscription - SVOD
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>Start Time</td>
-              <td>Yes</td>
-              <td>Schedule a starting time for your playlist.</td>
-            </tr>
-            <tr>
-              <td>End Time</td>
-              <td>Yes</td>
-              <td>Schedule an end time for your playlist.</td>
-            </tr>
-            <tr>
-              <td>Max Streams</td>
-              <td>Yes</td>
-              <td>The maximum number of streams per user.</td>
-            </tr>
-            <tr>
-              <td>Devices to publish</td>
-              <td>Yes</td>
-              <td>
-                Add the devices you wish to publish to. Select the
-                <strong>Select/ Unselect All Devices</strong> to see a list of
-                available devices.
-              </td>
-            </tr>
-            <tr>
-              <td>Permitted locations</td>
-              <td>Yes</td>
-              <td>
-                Select the locations where you want to stream your content.
-              </td>
-            </tr>
-            <tr>
-              <td>Denied locations</td>
-              <td>No</td>
-              <td>
-                Select the locations where you DO NOT want to stream your
-                content.
-              </td>
-            </tr>
-            <tr>
-              <td>Price</td>
-              <td>Yes</td>
-              <td>Enter the currency amount.</td>
-            </tr>
-            <tr>
-              <td>Currency</td>
-              <td>Yes</td>
-              <td>
-                The currency type. Use the <strong>Add Currency</strong> button
-                to add other currencies.
-              </td>
-            </tr>
-            <tr>
-              <td>Vendor ID</td>
-              <td>Yes</td>
-              <td>
-                Enter your vendor ID. In this example, it is your Amazon ID.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <br />
-        <aside class="bcls-aside bcls-aside--tip">
-          To add or edit geographic locations, navigate to
-          <strong>Settings</strong> and then <strong>Locations</strong>.
-        </aside>
-      </li>
-    </ol>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Advertisement">Advertisement</h2>
-    <p>
-      The <strong>Advertisement</strong> section allows you to link an ad
-      configuration to your playlist.
-    </p>
-    <ol class="bcls-tasklist__restart">
-      <li>
-        <p>Select the <strong>Advertisement</strong> tab.</p>
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/playlists/advertisement.png"
-            alt="Advertisement"
-          />
-          <figcaption class="bcls-caption--image">Advertisement</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>
-          Choose whether you want ads associated with your playlist:
-        </p>
-        <ul>
-          <li>
-            <strong>Yes</strong> - Select an ad configuration from the
-            <strong>Advertisement Configuration</strong> dropdown menu.
-          </li>
-          <li><strong>No</strong> - No ads.</li>
-        </ul>
-        <br />
-        <aside class="bcls-aside bcls-aside--tip">
-          The advertisement configurations displayed in the dropdown menu are
-          created in the Advertisement Configuration section. For details, see
-          the
-          <a
-            target="_blank"
-            href="https://docs.brightcove.com/en/staging/beacon-drafts/advertisement.html"
-            >Brightcove Beacon Advertisement Configuration</a
-          >
-          document.
-        </aside>
+        Be sure to click the <strong>Create New Playlist</strong> button to save
+        your work.
       </li>
     </ol>
   </section>

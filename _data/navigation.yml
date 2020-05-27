@@ -32,14 +32,14 @@
   url: /using-brightcove-beacon/
   icon: '<img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/beacon-nut.svg">'
   docs:
-    - name: Creating a Playlist
-      url: /using-brightcove-beacon/creating-a-playlist.html
     - name: Adding a Carousel to a Page
       url: /using-brightcove-beacon/adding-to-page.html
     - name: Creating an Electronic Program Guide (EPG)
       url: /using-brightcove-beacon/electronic-program-guides.html
     - name: Creating a New Page
       url: /using-brightcove-beacon/creating-a-page.html
+    - name: Creating a Playlist
+      url: /using-brightcove-beacon/creating-a-playlist.html
     - name: Creating a Subscription Package
       url: /using-brightcove-beacon/creating-subscription-package.html
     - name: 'Creating Series/Seasons/Episodes'

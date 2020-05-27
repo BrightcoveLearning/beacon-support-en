@@ -32,8 +32,8 @@
   url: /using-brightcove-beacon/
   icon: '<img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/beacon-nut.svg">'
   docs:
-    #- name: Creating a Playlist
-    #  url: /using-brightcove-beacon/playlists.html
+    - name: Creating a Playlist
+      url: /using-brightcove-beacon/creating-a-playlist.html
     - name: Adding a Carousel to a Page
       url: /using-brightcove-beacon/adding-to-page.html
     - name: Creating an Electronic Program Guide (EPG)
@@ -88,11 +88,11 @@
           url: '/creating-your-apps/ios-tvos/installing-ios-test-build.html'
         - name: 'Submitting to the Apple Store'
           url: '/creating-your-apps/ios-tvos/submitting-to-apple.html'
-    - name: 'LG'
-      url: '/creating-your-apps/lg/'
-      docs:
-        - name: 'Submitting to the LG (webOS) Store'
-          url: '/creating-your-apps/lg/submitting-to-lg.html'
+#    - name: 'LG'
+#      url: '/creating-your-apps/lg/'
+#      docs:
+#        - name: 'Submitting to the LG (webOS) Store'
+#          url: '/creating-your-apps/lg/submitting-to-lg.html'
     - name: 'Panasonic'
       url: '/creating-your-apps/panasonic/'
       docs:

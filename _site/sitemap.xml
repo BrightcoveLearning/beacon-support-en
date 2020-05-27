@@ -117,6 +117,16 @@
       
         <url>
           
+            <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/creating-a-playlist.html</loc>
+          
+            <lastmod>2020-05-27</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/adding-to-page.html</loc>
           
             <lastmod>2020-05-27</lastmod>
@@ -338,25 +348,6 @@
           <url>
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/submitting-to-apple.html</loc>
-            
-            <lastmod>2020-05-27</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-      
-        <url>
-          
-            <loc>https://beacon.support.brightcove.com/creating-your-apps/lg/</loc>
-          
-            <lastmod>2020-05-27</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-          <url>
-            
-              <loc>https://beacon.support.brightcove.com/creating-your-apps/lg/submitting-to-lg.html</loc>
             
             <lastmod>2020-05-27</lastmod>
             <changefreq>daily</changefreq>

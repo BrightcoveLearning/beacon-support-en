@@ -46,6 +46,8 @@
       url: /using-brightcove-beacon/series-seasons-episodes.html
     - name: Configuring Server-Side Ad Settings
       url: /using-brightcove-beacon/configuring-server-side-ad-settings.html
+    - name: Implementing VOD SSAI
+      url: /using-brightcove-beacon/vod-ssai.html
     - name: Including Non-Configurable Pages
       url: /using-brightcove-beacon/including-non-configurable-pages.html
     - name: Introducing Pages
@@ -133,14 +135,14 @@
       url: "/references/known-issues.html"
     - name: "Product Updates"
       url: "/references/product-updates.html"
-- section: 
-  name: 'Support'
-  url: '/support/'
+- section:
+  name: "Support"
+  url: "/support/"
   icon: '<i class="far fa-question-circle"></i>'
   docs:
-    - name: 'Opening a Support Case'
-      url: '/support/opening-case-with-brightcove-support.html'
-    - name: 'Viewing the Brightcove System Status Page'
-      url: '/support/viewing-brightcove-system-status-page.html'
-    - name: 'Brightcove Answers'
-      url: '/support/brightcove-answer.html'
+    - name: "Opening a Support Case"
+      url: "/support/opening-case-with-brightcove-support.html"
+    - name: "Viewing the Brightcove System Status Page"
+      url: "/support/viewing-brightcove-system-status-page.html"
+    - name: "Brightcove Answers"
+      url: "/support/brightcove-answer.html"

@@ -406,19 +406,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
     <p>
-      Undoubtedly, when you launch your Brightcove Beacon apps you will want to know what viewers are watching. To accomplish this you will use Google Analytics. The data provided
-      to Google Analytics is setup by Brightcove. For instance, for <strong>Movies</strong> events are dispatched when a movie played and when time watched can be calculated.
-      Therefore, in Google Analytics you can see the "most watched" movies by both how many times viewers played the movie and total time watched.
+      Undoubtedly, when you launch your Brightcove Beacon apps you will want to know what viewers are watching. To accomplish this you will use Google Analytics. The data provided to Google Analytics is setup by Brightcove. For instance, for <strong>Movies</strong> events are dispatched when a movie played and when time watched can be calculated. Therefore, in Google Analytics you can see the "most watched" movies by both how many times viewers played the movie and total time watched.
     </p>
-    <p>Brightcove configures the building blocks for your analytics reports, those being dimensions and metrics. The following explains both terms:</p>
-    <ul>
+
+    <!--     <ul>
       <li>
         <strong><em>Dimensions</em></strong> - A descriptive attribute or characteristic of your data.
         <ul>
           <li>General example: For your website, you may want to track usage of your website by city. So <strong>city</strong> is a dimension of your web site data.</li>
           <li>
-            Brightcove Beacon example: For your Brightcove Beacon content you have assigned genres to your video content. So <strong>genre</strong> is a dimension of your
-            Brightcove Beacon analytics data.
+            Brightcove Beacon example: For your Brightcove Beacon content you have assigned genres to your video content. So <strong>genre</strong> is a dimension of your Brightcove Beacon analytics data.
           </li>
         </ul>
       </li>
@@ -426,18 +423,33 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <strong><em>Metrics</em></strong> - Values that is used to measure one of the characteristics of a dimension.
         <ul>
           <li>
-            General example: For your <strong>city</strong> dimension, you track the <strong>sessions</strong> by particular city. This means that <strong>sessions</strong> is a
-            characteristic of your city data, therefore a metric.
+            General example: For your <strong>city</strong> dimension, you track the <strong>sessions</strong> by particular city. This means that <strong>sessions</strong> is a characteristic of your city data, therefore a metric.
           </li>
           <li>
-            Brightcove Beacon example: For your Brightcove Beacon video assets you track the amount of time each genre is watched. This means that <strong>Time Watched</strong> is
-            a characteristic of your genre data, therefore a metric.
+            Brightcove Beacon example: For your Brightcove Beacon video assets you track the amount of time each genre is watched. This means that <strong>Time Watched</strong> is a characteristic of your genre data, therefore a metric.
           </li>
         </ul>
       </li>
     </ul>
-    Note that the dimensions and metrics are NOT the same for each type of Brightcove Beacon app. For instance, the iOS mobile data has 16 metrics, whereas the web site app has 20
-    metrics. You will see how to view and use the dimensions and metrics in the rest of this document.
+ -->
+
+    <section class="bcls-section">
+      <h2 id="Viewing_dimensions_and_metrics">Viewing dimensions and metrics</h2>
+      <p>Brightcove configures the building blocks for your analytics reports, those being dimensions and metrics, which are needed values for your reports. Note that dimensions and metrics are NOT the same for each type of Brightcove Beacon app. For instance, the iOS mobile data has 16 metrics, whereas the web site app has 20 metrics. You will see how to view the dimensions and metrics in this section of the document. To see a list of the dimensions and metrics you can do so in the Google Analytics UI. Follow these steps:</p>
+      <ol class="bcls-tasklist-restart">
+        <li>Log in to <a href="https://analytics.google.com">Google Analytics</a>.</li>
+        <li>Click on the dropdown (highlighted in yellow in the screenshot) to see all your Google Analytics accounts.        
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/click-accounts.png" alt="Beacon analytics app groups" />
+          </figure>
+        </li>
+      </ol>
+
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/app-groups.png" alt="Beacon analytics app groups" />
+      </figure>
+    </section>
+
     <figure class="bcls-figure">
       <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/app-groups.png" alt="Beacon analytics app groups" />
     </figure>
@@ -459,7 +471,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 12 Jun 2020
+  Page last updated on 18 Jun 2020
 </div>
 
 

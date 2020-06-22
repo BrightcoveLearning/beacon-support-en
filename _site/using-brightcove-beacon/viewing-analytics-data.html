@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic, you will learn what analytics data is available to you for your Brightcove Beacon apps and how to examine that data in Google Analytics">
+  <meta name="description" content="In this topic, you will learn what analytics data is available to you for your Brightcove Beacon apps and how to examine that data in Google Analytics.">
   
   <title>Using Beacon Analytics</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -402,16 +402,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <h1>Using Beacon Analytics</h1>
 <article class="bcls-article">
-    <summary>In this topic, you will learn what analytics data is available to you for your Brightcove Beacon apps and how to examine that data in Google Analytics</summary>
+    <summary>In this topic, you will learn what analytics data is available to you for your Brightcove Beacon apps and how to examine that data in Google Analytics.</summary>
     <section class="bcls-section">
         <h2 id="Introduction">Introduction</h2>
-        <p>Undoubtedly, when you launch your Brightcove Beacon apps you will want to know what viewers are watching. To accomplish this you will use Google Analytics. The data provided to Google Analytics is setup by Brightcove. For instance, for <strong>Movies</strong> events
-            are dispatched when a movie played and when time watched can be calculated. Therefore, in Google Analytics you can see the "most watched" movies by both how many times viewers played the movie and total time watched.</p>
+        <p>Undoubtedly, you will want to know what viewers are watching in your Brightcove Beacon apps. To accomplish this you will use Google Analytics. In addition to the standard analytics data gathered by Google, Brightcove adds other entities, detailed later in this doc. For instance, <strong>Movies</strong> events are dispatched when a movie is played, a default Google analytics measure, and time watched is calculated, a measure added by Brightcove. Therefore, in Google Analytics you can see the "most watched" movies by both how many times viewers played the movie and total time watched.</p>
     </section>
     <section class="bcls-section">
         <h2 id="Viewing_dimensions_and_metrics">Viewing dimensions and metrics</h2>
-        <p>Brightcove configures the building blocks for your analytics reports, those being dimensions and metrics, which are needed values for your reports. Note that dimensions and metrics are NOT the same for each type of Brightcove Beacon app. For instance,
-            the iOS mobile data has 16 metrics, whereas the web site app has 20 metrics. You will see how to view the dimensions and metrics in this section of the document. To see a list of the dimensions and metrics you can do so in the Google Analytics UI.
+        <p>Brightcove adds functionality to the default Google measures for your analytics reports. You can use the default Google Analytics dimensions and metrics, the building blocks of analytics reports, as well as numerous dimensions and one metric added by Brightcove. Note that dimensions and metrics added by Brightcove are NOT the same for each type of Brightcove Beacon app. For instance, the iOS mobile data has 16 custom metrics added, whereas the web site app has 20 custom metrics added. You will see how to view the custom dimensions and metric in this section of the document. To see a list of the dimensions and metric you can do so in the Google Analytics UI.
             Follow these steps:</p>
         <ol class="bcls-tasklist-restart">
             <li>Log in to <a href="https://analytics.google.com">Google Analytics</a>.</li>
@@ -459,7 +457,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
         <h2 id="Report_examples">Report examples</h2>
-        <p>This document is to make you aware of the dimensions and metric added by Brightcove Beacon to your Google Analytics. It is NOT the intention of this document to be a complete instructional guide on how to use Google Analytics. That being said, this section of the document will detail how to see a few commonly requested reports about your Brightcove Beacon apps.</p>
+        <p>This document is to make you aware of information you can use from Google Analytics. It is NOT the intention of this document to be a complete instructional guide on how to use Google Analytics with your Brightcove Beacon apps. That being said, the next section of the document will detail how to see a few commonly requested reports about your Brightcove Beacon apps.</p>
     </section>
     <section class="bcls-section">
         <h2 id="Audience_information">Audience information</h2>
@@ -480,7 +478,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
         <h2 id="Screen_views_information">Screen views information</h2>
-        <p>Of course you will want to see what your viewers are doing in your apps. The option for this is <strong>Behavior</strong>. Follow these steps to see metrics screen views:</p>
+        <p>Of course you will want to see what your viewers are doing in your apps. The option for this is <strong>Behavior</strong>. Follow these steps to see screen views information:</p>
         <ol class="bcls-tasklist-restart">
             <li>In the left side navigation, first click <strong>Behavior</strong> then <strong>Screens</strong>.
                 <p></p>
@@ -510,7 +508,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/play-movies-details.png" alt="play movies details" />
                 </figure>
             </li>
-            <li>Note that you can see information on one of your custom dimensions by adding the appropriate column to the table. To do this, click the down arrow for the <strong>Secondary dimension</strong> dropdown, where you can see the <strong>Custom Dimensions</strong> group.
+            <li>Note that you can see information on one or more of your custom dimensions by adding the appropriate column to the table. To do this, click the down arrow for the <strong>Secondary dimension</strong> dropdown, where you can see the <strong>Custom Dimensions</strong> group.
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/secondary-dimension-dropdown.png" alt="secondary dimension dropdown" />
                 </figure>
@@ -530,7 +528,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
         <h2 id="Google_Analytics_learning_resources">Google Analytics learning resources</h2>
-        <p>You have just scratched the surface of Google Analytics in this document. You can put together custom reports with daily or weekly summary information on selected assets, etc. A good place to start could be the <a href="https://analytics.google.com/analytics/academy/">Google Analytics Academy</a> and <a href="https://developers.google.com/analytics">Google Analytics documentation</a>.</p>
+        <p>You have just scratched the surface of Google Analytics in this document. You can put together custom reports with daily or weekly summary information on selected assets, etc. A good place to start your journey of learning more about Google Analytics could be the <a href="https://analytics.google.com/analytics/academy/">Google Analytics Academy</a> and/or the <a href="https://developers.google.com/analytics">Google Analytics documentation</a>.</p>
     </section>
 </article>
 <!-- complete bootstrap layout -->

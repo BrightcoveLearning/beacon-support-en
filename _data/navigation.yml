@@ -112,6 +112,8 @@
     - name: "Samsung"
       url: "/creating-your-apps/samsung/"
       docs:
+        - name: "Becoming a Samsung Partner"
+          url: "/creating-your-apps/samsung/samsung-partner.html"
         - name: "Submitting to the Samsung Store"
           url: "/creating-your-apps/samsung/submitting-to-samsung.html"
     - name: "Common Required Information"

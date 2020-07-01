@@ -42,10 +42,12 @@
       url: /using-brightcove-beacon/creating-a-playlist.html
     - name: Creating a Subscription Package
       url: /using-brightcove-beacon/creating-subscription-package.html
-    - name: "Creating Series/Seasons/Episodes"
+    - name: 'Creating Series/Seasons/Episodes'
       url: /using-brightcove-beacon/series-seasons-episodes.html
     - name: Configuring Server-Side Ad Settings
       url: /using-brightcove-beacon/configuring-server-side-ad-settings.html
+    - name: Implementing Live SSAI
+      url: /using-brightcove-beacon/live-ssai.html
     - name: Implementing VOD SSAI
       url: /using-brightcove-beacon/vod-ssai.html
     - name: Including Non-Configurable Pages
@@ -61,65 +63,65 @@
     - name: Using the Tools
       url: /using-brightcove-beacon/tools.html
 - section:
-  name: "Creating Your Apps"
+  name: 'Creating Your Apps'
   icon: '<i class="fal fa-rocket-launch"></i>'
-  url: "/creating-your-apps/"
+  url: '/creating-your-apps/'
   docs:
-    - name: "Android"
-      url: "/creating-your-apps/android/"
+    - name: 'Android'
+      url: '/creating-your-apps/android/'
       docs:
-        - name: "Submitting New Apps to the Android Store"
-          url: "/creating-your-apps/android/submitting-to-android.html"
-        - name: "Updating Android Apps to Brightcove Beacon"
-          url: "/creating-your-apps/android/updating-android-apps-to-bcb.html"
-        - name: "Adding Subscriptions to Android"
-          url: "/creating-your-apps/android/adding-subscriptions-in-android.html"
-        - name: "Improving Search Relevance in the Android Play Store"
-          url: "/creating-your-apps/android/improving-relevance-android.html"
-        - name: "Installing an Android Test Build"
-          url: "/creating-your-apps/android/installing-android-test-build.html"
-    - name: "Fire TV"
-      url: "/creating-your-apps/fire-tv/"
+        - name: 'Submitting New Apps to the Android Store'
+          url: '/creating-your-apps/android/submitting-to-android.html'
+        - name: 'Updating Android Apps to Brightcove Beacon'
+          url: '/creating-your-apps/android/updating-android-apps-to-bcb.html'
+        - name: 'Adding Subscriptions to Android'
+          url: '/creating-your-apps/android/adding-subscriptions-in-android.html'
+        - name: 'Improving Search Relevance in the Android Play Store'
+          url: '/creating-your-apps/android/improving-relevance-android.html'
+        - name: 'Installing an Android Test Build'
+          url: '/creating-your-apps/android/installing-android-test-build.html'
+    - name: 'Fire TV'
+      url: '/creating-your-apps/fire-tv/'
       docs:
-        - name: "Installing a Fire TV Test Build"
-          url: "/creating-your-apps/fire-tv/installing-fire-tv-test-build.html"
-        - name: "Submitting to the Amazon Store"
-          url: "/creating-your-apps/fire-tv/submitting-to-amazon.html"
-    - name: "iOS/tvOS"
-      url: "/creating-your-apps/ios-tvos/"
+        - name: 'Installing a Fire TV Test Build'
+          url: '/creating-your-apps/fire-tv/installing-fire-tv-test-build.html'
+        - name: 'Submitting to the Amazon Store'
+          url: '/creating-your-apps/fire-tv/submitting-to-amazon.html'
+    - name: 'iOS/tvOS'
+      url: '/creating-your-apps/ios-tvos/'
       docs:
-        - name: "Installing an iOS/tvOS Test Build"
-          url: "/creating-your-apps/ios-tvos/installing-ios-test-build.html"
-        - name: "Submitting to the Apple Store"
-          url: "/creating-your-apps/ios-tvos/submitting-to-apple.html"
+        - name: 'Installing an iOS/tvOS Test Build'
+          url: '/creating-your-apps/ios-tvos/installing-ios-test-build.html'
+        - name: 'Submitting to the Apple Store'
+          url: '/creating-your-apps/ios-tvos/submitting-to-apple.html'
     #    - name: 'LG'
     #      url: '/creating-your-apps/lg/'
     #      docs:
     #        - name: 'Submitting to the LG (webOS) Store'
     #          url: '/creating-your-apps/lg/submitting-to-lg.html'
-    - name: "Panasonic"
-      url: "/creating-your-apps/panasonic/"
+    - name: 'Panasonic'
+      url: '/creating-your-apps/panasonic/'
       docs:
-        - name: "Submitting to the Panasonic Store"
-          url: "/creating-your-apps/panasonic/submitting-to-panasonic.html"
-    - name: "Roku"
-      url: "/creating-your-apps/roku/"
+        - name: 'Submitting to the Panasonic Store'
+          url: '/creating-your-apps/panasonic/submitting-to-panasonic.html'
+    - name: 'Roku'
+      url: '/creating-your-apps/roku/'
       docs:
-        - name: "Installing a Roku Test Build"
-          url: "/creating-your-apps/roku/installing-roku-test-build.html"
-        - name: "Submitting to the Roku Store"
-          url: "/creating-your-apps/roku/submitting-to-roku.html"
-    - name: "Samsung"
-      url: "/creating-your-apps/samsung/"
+        - name: 'Installing a Roku Test Build'
+          url: '/creating-your-apps/roku/installing-roku-test-build.html'
+        - name: 'Submitting to the Roku Store'
+          url: '/creating-your-apps/roku/submitting-to-roku.html'
+    - name: 'Samsung'
+      url: '/creating-your-apps/samsung/'
       docs:
-        - name: "Becoming a Samsung Partner"
-          url: "/creating-your-apps/samsung/samsung-partner.html"
-        - name: "Submitting to the Samsung Store"
-          url: "/creating-your-apps/samsung/submitting-to-samsung.html"
-    - name: "Common Required Information"
-      url: "/creating-your-apps/common-required-info.html"
-    - name: "Device Apps Validation Guide"
-      url: "/creating-your-apps/device-apps-validation-guide.html"
+        - name: 'Becoming a Samsung Partner'
+          url: '/creating-your-apps/samsung/samsung-partner.html'
+        - name: 'Submitting to the Samsung Store'
+          url: '/creating-your-apps/samsung/submitting-to-samsung.html'
+    - name: 'Common Required Information'
+      url: '/creating-your-apps/common-required-info.html'
+    - name: 'Device Apps Validation Guide'
+      url: '/creating-your-apps/device-apps-validation-guide.html'
 - section:
   name: References
   url: /references/
@@ -129,22 +131,22 @@
       url: /references/common-configuration-settings.html
     - name: Creating a Stripe Account
       url: /references/creating-stripe-account.html
-    - name: "Glossary"
-      url: "/references/glossary.html"
-    - name: "Images and Their Specifications"
-      url: "/references/image-requirements.html"
-    - name: "Known Issues"
-      url: "/references/known-issues.html"
-    - name: "Product Updates"
-      url: "/references/product-updates.html"
+    - name: 'Glossary'
+      url: '/references/glossary.html'
+    - name: 'Images and Their Specifications'
+      url: '/references/image-requirements.html'
+    - name: 'Known Issues'
+      url: '/references/known-issues.html'
+    - name: 'Product Updates'
+      url: '/references/product-updates.html'
 - section:
-  name: "Support"
-  url: "/support/"
+  name: 'Support'
+  url: '/support/'
   icon: '<i class="far fa-question-circle"></i>'
   docs:
-    - name: "Opening a Support Case"
-      url: "/support/opening-case-with-brightcove-support.html"
-    - name: "Viewing the Brightcove System Status Page"
-      url: "/support/viewing-brightcove-system-status-page.html"
-    - name: "Brightcove Answers"
-      url: "/support/brightcove-answer.html"
+    - name: 'Opening a Support Case'
+      url: '/support/opening-case-with-brightcove-support.html'
+    - name: 'Viewing the Brightcove System Status Page'
+      url: '/support/viewing-brightcove-system-status-page.html'
+    - name: 'Brightcove Answers'
+      url: '/support/brightcove-answer.html'

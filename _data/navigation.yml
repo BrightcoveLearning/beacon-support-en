@@ -107,6 +107,8 @@
     - name: 'Roku'
       url: '/creating-your-apps/roku/'
       docs:
+        - name: 'Configuring In-Channel Products in Roku'
+          url: '/creating-your-apps/roku/configuring-inchannel-products.html'
         - name: 'Installing a Roku Test Build'
           url: '/creating-your-apps/roku/installing-roku-test-build.html'
         - name: 'Submitting to the Roku Store'

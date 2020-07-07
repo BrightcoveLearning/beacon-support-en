@@ -12,12 +12,36 @@ layout: 'staging'
     <section class="bcls-section">
         <aside class="bcls-aside bcls-aside--information language-editable">Brightcove Beacon does NOT send full analytics back to Video Cloud. Only video starts are reported back to Video Cloud Analytics.</aside>
         <h2 id="Introduction">Introduction</h2>
-        <p>>Undoubtedly you will want to know what viewers are watching in your Brightcove Beacon apps. To accomplish this you will use Google Analytics. Brightcove will load a customized Dashboard and a customized Google Data Studio report into your Google Analytics account. Both of these tools provide great insight into how your customers are using your Brightcove Beacon apps.</p>
+        <p>Undoubtedly you will want to know what viewers are watching in your Brightcove Beacon apps. To accomplish this you will use Google Analytics. Brightcove will load a customized Dashboard and a customized Google Data Studio report into your Google Analytics account. Both of these tools provide great insight into how your customers are using your Brightcove Beacon apps.</p>
         <p>In addition to the customized reports, you can use the standard analytics tools in Google Analytics to view customer behavior. You can use the standard analytics data gathered by Google, and in addition Brightcove adds other entities to use, detailed later in this doc. For instance, <strong>Movies</strong> events are dispatched when a movie is played, a default Google analytics measure, and time watched is calculated, a measure added by Brightcove. Therefore, in Google Analytics you can see the "most watched" movies by both how many times viewers played the movie and total time watched. These entities added by Brightcove are used extensively in the customized reports mentioned in the previous paragraph.</p>
     </section>
     <section class="bcls-section">
         <h2 id="Viewing_the_Dashboard">Viewing the Dashboard</h2>
-        <p></p>
+        <p>To view the Dashboard, and more importantly the data the dashboard displays, follow these steps:</p>
+        <ol class="bcls-tasklist-restart">
+            <li>Log in to <a href="https://analytics.google.com">Google Analytics</a>.</li>
+            <li>Click on the dropdown (highlighted in yellow in the screenshot) to see all your Google Analytics accounts.
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/click-accounts.png" alt="Beacon analytics accounts" />
+                </figure>
+            </li>
+            <li>From the three-paneled dropdown, select:
+                <ol type="a">
+                    <li>Your Brightcove Beacon account</li>
+                    <li>Your app for which you want analytics</li>
+                    <li>Your view (you will only have one view per app)</li>
+                </ol>
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/app-groups.png" alt="Beacon analytics app groups" />
+                </figure>
+            </li>
+
+            <li>In the left navigation, click on the <strong>Customization</strong> option, then on <strong>Dashboards</strong> to see the customized dashboard for your current view.
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/select-dashboards.png" alt="select dashboards">
+                </figure>
+            </li>
+        </ol>
         <figure class="bcls-figure">
             <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/dashboard.png" alt="Dashboard">
         </figure>

@@ -415,7 +415,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <aside class="bcls-aside bcls-aside--information language-editable">Brightcove Beacon does NOT send full analytics back to Video Cloud. Only video starts are reported back to Video Cloud Analytics.</aside>
         <h2 id="Introduction">Introduction</h2>
         <p>Undoubtedly you will want to know what viewers are watching in your Brightcove Beacon apps. To accomplish this you will use Google Analytics. Brightcove will load a customized Dashboard and a customized Google Data Studio report into your Google Analytics account. Both of these tools provide great insight into how your customers are using your Brightcove Beacon apps.</p>
-        <p>In addition to the customized reports, you can use the standard analytics tools in Google Analytics to view customer behavior. You can use the standard analytics data gathered by Google, and in addition Brightcove adds other entities to use, detailed later in this doc. For instance, <strong>Movies</strong> events are dispatched when a movie is played, a default Google analytics measure, and time watched is calculated, a measure added by Brightcove. Therefore, in Google Analytics you can see the "most watched" movies by both how many times viewers played the movie and total time watched. These entities added by Brightcove are used extensively in the customized reports mentioned in the previous paragraph.</p>
+        <p>In addition to the customized dashboard and report, you can use the standard analytics tools in Google Analytics to view customer behavior. You can use the standard analytics data gathered by Google, and in addition Brightcove adds other entities to use, detailed later in this document. For instance, <strong>Movies</strong> events are dispatched when a movie is played, a default Google analytics measure, and time watched is calculated, a measure added by Brightcove. Therefore, in Google Analytics you can see the "most watched" movies by both how many times viewers played the movie and total time watched. These entities added by Brightcove are used extensively in the customized dashboard and report mentioned in the previous paragraph.</p>
     </section>
     <section class="bcls-section">
         <h2 id="Viewing_the_Dashboard">Viewing the Dashboard</h2>
@@ -451,7 +451,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
         <h2 id="Viewing_the_Data_Studio_report">Viewing the Data Studio report</h2>
-        <p>To view the customized Google Data Studio report installed by Brightcove follow these steps:</p>
+        <p>To view the customized Google Data Studio report installed by Brightcove, follow these steps:</p>
         <ol class="bcls-tasklist-restart">
             <li>Log in to <a href="https://analytics.google.com">Google Data Studio (datastudio.google.com)</a>.</li>
             <li>You will see a list of report(s) listed on the landing page (highlighted in yellow):
@@ -460,7 +460,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 </figure>
             </li>
             <li>Click on the report name to open it.</li>
-            <li>The first page of an example report is shown here. Note in the top right corner of the report (highlighted in yellow) is the navigation to see the other pages.
+            <li>The first page of an example report is shown here. Note in the top right corner of the report is the navigation (highlighted in yellow) to see the other pages.
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/data-studio-report.png" alt="data studio report">
                 </figure>
@@ -469,8 +469,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
         <h2 id="Viewing_dimensions_and_metrics">Viewing dimensions and metrics</h2>
-        <p>Brightcove adds functionality to the default Google measures for your analytics reports. You can use the default Google Analytics dimensions and metrics, the building blocks of analytics reports, as well as numerous dimensions and one metric added by Brightcove. These addtional dimensions and the one metric are used in the dashboard and Data Studio report shown in the first two sections of this document. Note that dimensions and metric added by Brightcove are NOT the same for each type of Brightcove Beacon app. For instance, the iOS mobile data has 16 custom metrics added, whereas the web site app has 20 custom metrics added. You will see how to view the custom dimensions and metric in this section of the document. To see a list of the dimensions and metric you can do so in the Google Analytics UI.
-            Follow these steps:</p>
+        <p>Brightcove adds functionality to the default Google measures for your analytics reports. You can use the default Google Analytics dimensions and metrics, the building blocks of analytics reports, as well as numerous dimensions and one metric added by Brightcove. These additional dimensions and the one metric are used in the dashboard and Data Studio report shown in the first two sections of this document.</p>
+        <p> Note that the dimensions and metric added by Brightcove are NOT the same for each type of Brightcove Beacon app. For instance, the iOS mobile data has 16 custom metrics added, whereas the web site app has 20 custom metrics added. To see a list of the dimensions and metric in the Google Analytics UI, follow these steps:</p>
         <ol class="bcls-tasklist-restart">
             <li>Log in to <a href="https://analytics.google.com">Google Analytics</a>.</li>
             <li>Click on the dropdown (highlighted in yellow in the screenshot) to see all your Google Analytics accounts.
@@ -521,8 +521,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
         <h2 id="Audience_information">Audience information</h2>
-        <p>After choosing your app (step 3 above) you can view analytics on your audience by following these steps:</p>
+        <p>You can view analytics on your audience by following these steps:</p>
         <ol class="bcls-tasklist-restart">
+            <li>Choose your app/view by following the first three steps from any of the sections above.</li>
             <li>In the left side navigation, first click <strong>Audience</strong> then <strong>Overview</strong>.
                 <p></p>
                 <figure class="bcls-figure">
@@ -538,7 +539,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
         <h2 id="Screen_views_information">Screen views information</h2>
-        <p>Of course, you will want to see what your viewers are doing in your apps. The option for this is <strong>Behavior</strong>. Follow these steps to see screen views information:</p>
+        <p>Of course, you will want to see what your viewers are doing in your apps. The option for this is <strong>Behavior</strong>. Follow these steps to see <strong>screen views</strong> information:</p>
         <ol class="bcls-tasklist-restart">
             <li>In the left side navigation, first click <strong>Behavior</strong> then <strong>Screens</strong>.
                 <p></p>
@@ -555,7 +556,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
         <h2 id="Played_and_time_watched_information">Played and time watched information</h2>
-        <p>Still in the <strong>Behavior</strong> option you can see the number of times a video asset has had the play button clicked for it, and also how long the asset was actually watched. Follow these steps for that info:</p>
+        <p>Still in the <strong>Behavior</strong> option, you can see the number of times a video asset has had the play button clicked for it, and also how long the asset was actually watched. Follow these steps for that info:</p>
         <ol class="bcls-tasklist-restart">
             <li>While still in the <strong>Behavior</strong> option, click <strong>Events > Top Events</strong>.</li>
             <li>In the <strong>Event Category</strong> list, click <strong>Play movies</strong>

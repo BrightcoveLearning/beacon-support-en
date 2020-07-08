@@ -62,6 +62,8 @@
       url: /using-brightcove-beacon/using-subscription-package.html
     - name: Using the Tools
       url: /using-brightcove-beacon/tools.html
+    - name: Viewing Analytics Data
+      url: /using-brightcove-beacon/viewing-analytics-data.html
 - section:
   name: 'Creating Your Apps'
   icon: '<i class="fal fa-rocket-launch"></i>'

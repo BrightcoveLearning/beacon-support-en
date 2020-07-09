@@ -446,7 +446,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <section class="bcls-section">
         <h2 id="overview">Description</h2>
-        <p>Channels are created to stream 24/7 Live events just like a regular TV channel will do, and its content can be generated through a set of VODs that will broadcast for as long as the channel is available or by transmitting a Live direct event. For more information on how to create Live events, please visit the <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/streaming-live-event.html#Live" target="_blank">Brightcove Beacon Live Documentation</a>.</p>
+        <p>Channels are created to stream 24/7 Live events just like a regular TV channel will do. The channel's content can be generated through a set of VODs that will broadcast for as long as the channel is available or by transmitting a Live event directly. For more information on how to create Live events, please visit the <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/streaming-live-event.html#Live" target="_blank">Brightcove Beacon Live Documentation</a>.</p>
 
 
     </section>
@@ -501,9 +501,55 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <section class="bcls-section">
         <h2 id="non-textual-data">Non-Textual Data</h2>
-        <p>The <strong>Non-Textual Data</strong> section allows you to add Portrait and Landscape images for your Channel.</p>
+        <p>The <strong>Non-Textual Data</strong> section allows you to add Portrait and Landscape images for your Channel. You will be supplying portrait and landscape images. Be sure the images meet these requirements:
+            <table class="bcls-table">
+                <thead class="bcls-table__head">
+                    <tr>
+                        <th>Image</th>
+                        <th>Requirements</th>
+                    </tr>
+                </thead>
+                <tbody class="bcls-table__body">
+                    <tr>
+                        <td>Portrait Poster</td>
+                        <td>
+                            Poster image (2:3)
+                            <table>
+                                <tr>
+                                    <td>Minimum</td>
+                                    <td>Width: 1000px</td>
+                                    <td>Height: 563px</td>
+                                </tr>
+                                <tr>
+                                    <td>Maximum</td>
+                                    <td>Width: 4000px</td>
+                                    <td>Height: 2250px</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Landscape Poster</td>
+                        <td>
+                            Landscape image (16:9):
+                            <table>
+                                <tr>
+                                    <td>Minimum</td>
+                                    <td>Width: 1000px</td>
+                                    <td>Height: 563px</td>
+                                </tr>
+                                <tr>
+                                    <td>Maximum</td>
+                                    <td>Width: 4000px</td>
+                                    <td>Height: 2250px</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
         <ol class="bcls-tasklist-restart">
-
             <li>Select the <strong>Non-Textual Data</strong> tab.</li>
             <li>Add a <strong>Portrait Poster</strong> image for your Channel by dragging and dropping the image in the box section.
                 <figure class="bcls-figure">
@@ -511,59 +557,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 </figure>
             </li>
             <li>Add a <strong>Landscape Poster</strong> image for your Channel by dragging and dropping the image in the box section.</li>
-            <li>
-
-                <table class="bcls-table">
-                    <thead class="bcls-table__head">
-                        <tr>
-                            <th>Image</th>
-                            <th>Requirements</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bcls-table__body">
-                        <tr>
-                            <td>Portrait Poster</td>
-                            <td>
-                                Poster image (2:3)
-                                <table>
-                                    <tr>
-                                        <td>Minimum</td>
-                                        <td>Width: 1000px</td>
-                                        <td>Height: 563px</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Maximum</td>
-                                        <td>Width: 4000px</td>
-                                        <td>Height: 2250px</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Landscape Poster</td>
-                            <td>
-                                Landscape image (16:9):
-                                <table>
-                                    <tr>
-                                        <td>Minimum</td>
-                                        <td>Width: 1000px</td>
-                                        <td>Height: 563px</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Maximum</td>
-                                        <td>Width: 4000px</td>
-                                        <td>Height: 2250px</td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <aside class="bcls-aside bcls-aside--information">You can add a different Portrait and Landscape set of images for every different language you will use in your channel just by selecting the desired language tab.
-                </aside>
-            </li>
-
         </ol>
+        <aside class="bcls-aside bcls-aside--information">You can add a different Portrait and Landscape set of images for every different language you will use in your channel just by selecting the desired language tab.
     </section>
     <section class="bcls-section">
         <h2 id="tags">Tags</h2>
@@ -631,12 +626,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                             <td>Rights Type</td>
                             <td>Yes</td>
                             <td>Select depending on your monetization model:
-                              <ul>
-                              <li><strong>Free</strong></li>
-                              <li><strong>Advertising - AVOD </strong>: For Channels monetized with advertising.</li>
-                              <li><strong>Subscription - SVOD</strong>: For Channels monetized with a subscription.</li>
-                              
-                            </ul>
+                                <ul>
+                                    <li><strong>Free</strong></li>
+                                    <li><strong>Advertising - AVOD </strong>: For Channels monetized with advertising.</li>
+                                    <li><strong>Subscription - SVOD</strong>: For Channels monetized with a subscription.</li>
+
+                                </ul>
                             </td>
                         </tr>
                         <tr>
@@ -697,13 +692,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
 
     <section class="bcls-section">
-      <h2 id="Add-Channel-to-EPG">Adding your Channel to an Electronic Program Guide (EPG)</h2>
+        <h2 id="Add-Channel-to-EPG">Adding your Channel to an Electronic Program Guide (EPG)</h2>
 
-      <p>Once your channel has been created, the last step will be to add it to the Brightcove Beacon EPG schedule. For information on how to do this, please visit the <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/electronic-program-guides.html" target="_blank">Creating an Electronic Program Guide (EPG)</a> documentation. </p>
+        <p>Once your channel has been created, the last step will be to add it to the Brightcove Beacon EPG schedule. For information on how to do this, please visit the <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/electronic-program-guides.html" target="_blank">Creating an Electronic Program Guide (EPG)</a> documentation. </p>
 
 
 
-      </section>
+    </section>
 
 </article>
 <!-- complete bootstrap layout -->

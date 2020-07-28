@@ -14,7 +14,7 @@ parent: Using Brightcove Beacon
         <p>A high-level view of the process is:</p>
 
         <ol>
-        <li>Create an XML video feed of your desired videos with the Social Media API.  </li>
+        <li>Create the XML video feed of your desired videos with the Social Media API.  </li>
         <li>Send your XML video feed file to your third party Cloud Streaming partner.</li>
         <li>Create a Remote Video in the Media module with the URL provided by your Cloud streaming partner.</li>
         <li>Connect the Remove Video with Brightcove Beacon via the video ID.</li>
@@ -28,7 +28,7 @@ parent: Using Brightcove Beacon
 
     <section>
         <h2 id="creating-video-feed">Creating the XML Video Feed with the Social Media API</h2>
-        <p>The first thing you will need to do to stream your set of VODs as a Live stream, is to create a Video Feed XML file with all the information of the videos you will like to stream since it is a requirement for any third party Video Cloud partner.</p>
+        <p>The first thing you will need to do to stream your set of VODs as a Live stream, is to create a Video Feed XML file with all the information of the videos you will like to stream since it is a requirement for any third party Cloud Streaming partner as Frequency, Veset, or Amagi .</p>
         <ol class="bcls-tasklist">
             <li>Go to Video Cloud, and click the <strong>Media</strong> module to manage your content.
                 <figure class="bcls-figure">
@@ -85,12 +85,28 @@ parent: Using Brightcove Beacon
                 <li>Authentication for most platform APIs is via a temporary OAuth2 access token. A few APIs use a permanent API key or policy key instead. See the <a href="https://apis.support.brightcove.com/social-syndication/getting-started/public-syndication-api-overview.html" target="_blank">documentation</a> on the individual APIs for details.</li>
         </ul></aside>
         <li>Go to your API client tool. I will be using Postman for this example.</li>
-                <li>Select <strong>POST</strong> from the call type dropmenu.</li>
+                <li>Select <strong>POST</strong> from the call type dropmenu.
+                    <figure class="bcls-figure">
+                        <img
+                          class="bcls-image--no-border"
+                          alt=""
+                          src="/assets/images/using-bcb/vod-to-channels/5.5-post-call.png"
+                        />
+                      </figure>
+                </li>
                 <li>Copy the Social API call: 
                     <pre class="line-numbers"><code class="language-http">https://social.api.brightcove.com/v1/accounts/your-account-id/mrss/syndications</code></pre>
                  </li> 
                  <li>Paste the Social API call in the URL field and, change the URL data with your own account ID information.</li>
-                 <li>Select the <strong>Body</strong> tab in your API client.</li>
+                 <li>Select the <strong>Body</strong> tab in your API client.
+                    <figure class="bcls-figure">
+                        <img
+                          class="bcls-image--no-border"
+                          alt=""
+                          src="/assets/images/using-bcb/vod-to-channels/6.5-body-call.png"
+                        />
+                      </figure>
+                </li>
             <li>Copy the following Syndication Resource template:
    <pre class="line-numbers"><code class="language-json">
 {
@@ -116,7 +132,7 @@ parent: Using Brightcove Beacon
  } </code></pre>
                 </li>
                 <li>Paste the Syndication Resource template in the <strong>Body</strong> text field. </li>
-                <li>Edit the Syndication Resource template data with your own information for <strong>name</strong>, <strong>type</strong> and the other fields. </li>
+                <li>Edit the Syndication Resource template data with your own information. </li>
                 <li>Remember to add the Tag you created previously in Video Cloud, in the <strong>"include_filter": "tags: YourTag"</strong> field. 
                 </li>
                 <li>Click the <strong>Send</strong> button in your API client to make the <strong>POST</strong> call. 
@@ -165,7 +181,7 @@ parent: Using Brightcove Beacon
                       </figure>
                 </li>
                 <li>Copy the API response <strong>id</strong>.</li>
-                <li>The next step is to add a template for the data and make a <strong>PUT</strong> call adding the <strong>id</strong> response in the URL petition. As shown in the URL in the picture. 
+                <li>The next step is to add a template for the data. From the dropdown menu select <strong>PUT</strong>.
                     <figure class="bcls-figure">
                         <img
                           class="bcls-image--no-border"
@@ -174,7 +190,8 @@ parent: Using Brightcove Beacon
                         />
                       </figure>
                 </li>
-                <li>Click the <strong>Body</strong> tab, select the <strong>Raw</strong> option in your API Development tool, and paste one of the <a href="https://apis.support.brightcove.com/social-syndication/getting-started/sample-templates-universal-syndication.html" target="_blank">XML templates provided for Universal Syndication</a>.
+                <li>Add the <strong>id</strong> response from the last API call in the URL petition. </li>
+                <li>Click the <strong>Body</strong> tab.
                     <figure class="bcls-figure">
                         <img
                           class="bcls-image--no-border"
@@ -183,6 +200,8 @@ parent: Using Brightcove Beacon
                         />
                       </figure>
                 </li>
+                <li>Select the <strong>raw</strong> option.</li>
+                <li>Paste one of the <a href="https://apis.support.brightcove.com/social-syndication/getting-started/sample-templates-universal-syndication.html" target="_blank">XML templates provided for Universal Syndication</a> in the text section. </li>
                 <li>Click the <strong>Send</strong> button to make the <strong>PUT</strong> API call.
                     <aside class="bcls-aside bcls-aside--information">Remember that you will need to have a valid token in your <strong>Authorization > Manage Access Token</strong> section for the API calls work correctly. 
                         For more information on how to create the OAuth 2.0 token please read the <a href="https://apis.support.brightcove.com/oauth/index.html" target="_blank">OAuth API documentation</a>.

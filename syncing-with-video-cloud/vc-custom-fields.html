@@ -617,18 +617,10 @@ parent: Syncing with Video Cloud
                         &lt;counter&gt;_<br />
                         locationspermit
                     </td>
+                    <td>List</td>
                     <td>
-                        Comma separated list of locations defined in Brightcove Beacon to
-                        which the asset should be exposed under the access restrictions and
-                        monetization options in this particular set
-                    </td>
-                    <td>No</td>
-                    <td>
-                        If not set, defaults to all locations supported in Brightcove Beacon
-                    </td>
-                    <td>
-                        Data type: <strong>List</strong>;<br />
-                        Comma separated list of geographies
+                        * Comma separated list of locations defined in Brightcove Beacon to which the asset should be exposed under the access restrictions and monetization options in this particular set<br>
+                        * Default value: If not set, defaults to all locations supported in Brightcove Beacon
                     </td>
                 </tr>
                 <tr>
@@ -641,16 +633,10 @@ parent: Syncing with Video Cloud
                         &lt;counter&gt;_<br />
                         locationsdeny
                     </td>
+                    <td>List</td>
                     <td>
-                        Comma separated list of locations defined in Brightcove Beacon to
-                        which the asset should NOT be exposed under the access restrictions
-                        and monetization options in this particular set
-                    </td>
-                    <td>No</td>
-                    <td>None</td>
-                    <td>
-                        Data type: <strong>List</strong>;<br />
-                        Comma separated list of geographies
+                        * Comma separated list of locations defined in Brightcove Beacon to which the asset should NOT be exposed under the access restrictions and monetization options in this particular set<br>
+                        * No default value
                     </td>
                 </tr>
                 <tr>
@@ -664,16 +650,12 @@ parent: Syncing with Video Cloud
                         &lt;counter&gt;_<br />
                         packagename
                     </td>
+                    <td>List</td>
                     <td>
-                        A comma separated list of package names, as defined in Brightcove
-                        Beacon
-                    </td>
-                    <td>Yes, if the type is set to SVOD</td>
-                    <td>None</td>
-                    <td>
-                        Data type: <strong>List</strong>;<br />
-                        Names of the subscription packages, e.g.
-                        <em>Premium Sports, Action Movies, Earth Day Movies</em>; required for SVOD Type
+                        * A value for this field MUST be entered if the <strong>beacon.rights.<counter>.type</strong> field value is set to <strong>SVOD</strong><br>
+                        * A comma separated list of package names, as defined in Brightcove Beacon<br>
+                        * Examples: <em>Premium Sports, Action Movies, Earth Day Movies</em><br>
+                        * No default value
                     </td>
                 </tr>
                 <tr>
@@ -687,219 +669,11 @@ parent: Syncing with Video Cloud
                         &lt;counter&gt;_<br />
                         adconfiguration
                     </td>
-                    <td>Identifier of an ad configuration in Brightcove Beacon</td>
-                    <td>Yes, if the type is set as AVOD</td>
-                    <td>None</td>
+                    <td>Text</td>
                     <td>
-                        Data type: <strong>Text</strong>;<br />
-                        Name of advertising configuration, e.g. <em>Google Ad Manager</em>;
-                        required for AVOD Type
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-
-
-
-
-
-        <table class="bcls-table">
-            <thead class="bcls-table__head">
-                <tr>
-                    <th>Display Name</th>
-                    <th>Internal Name</th>
-                    <th>Type</th>
-                    <th>Notes</th>
-                    <th>Required</th>
-                    <th>Default<br />Value</th>
-                    <th>Data Type and/or<br />Example</th>
-                </tr>
-            </thead>
-            <tbody class="bcls-table__body">
-                <tr>
-                    <td>beacon.rights.&lt;counter&gt;.type</td>
-                    <td>beacon_rights_ <br />&lt;counter&gt;_type</td>
-                    <td>
-                        Identifies if the type of monetization for the asset
-                    </td>
-                    <td>No</td>
-                    <td>FREE</td>
-                    <td>
-                        Data type: <strong>Text</strong>;<br />
-                        One of:
-                        <ul>
-                            <li>FREE</li>
-                            <li>AVOD</li>
-                            <li>SVOD</li>
-                            <li>INHERIT</li>
-                        </ul>
-                        <p>
-                            Note: <strong>INHERIT</strong> is only applicable to
-                            <em>Episode</em> assets
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        beacon.rights.<br />
-                        &lt;counter&gt;.<br />
-                        startDate
-                    </td>
-                    <td>
-                        beacon_rights_ <br />
-                        &lt;counter&gt;_<br />
-                        startdate
-                    </td>
-                    <td>
-                        Date when the asset should be exposed under the access restrictions
-                        and monetization options in this particular set
-                    </td>
-                    <td>No</td>
-                    <td>If not set, defaults to video availability start date</td>
-                    <td>
-                        Data type: <strong>Text</strong>;<br />
-                        Date<br />(yyyy-mm-dd)
-                    </td>
-                </tr>
-                <tr>
-                    <td>beacon.rights.&lt;counter&gt;.endDate</td>
-                    <td>
-                        beacon_rights_ <br />
-                        &lt;counter&gt;_enddate
-                    </td>
-                    <td>
-                        Date when the asset should be no longer exposed under the access
-                        restrictions and monetization options in this particular set
-                    </td>
-                    <td>No</td>
-                    <td>If not set, defaults to video availability end date</td>
-                    <td>
-                        Data type: <strong>Text</strong>;<br />
-                        Date<br />(yyyy-mm-dd)
-                    </td>
-                </tr>
-                <tr>
-                    <td>beacon.rights.&lt;counter&gt;.devices</td>
-                    <td>
-                        beacon_rights_ <br />
-                        &lt;counter&gt;_devices
-                    </td>
-                    <td>
-                        Comma separated list of devices supported in Brightcove Beacon to
-                        which the asset should be exposed under the access restrictions and
-                        monetization options in this particular set
-                    </td>
-                    <td>No</td>
-                    <td>
-                        If not set, defaults to all devices supported in Brightcove Beacon
-                    </td>
-                    <td>
-                        Data type: <strong>List</strong>;<br />
-                        Comma separated list of:
-                        <ul>
-                            <li>iOS</li>
-                            <li>Android</li>
-                            <li>web</li>
-                            <li>Roku</li>
-                            <li>STV</li>
-                            <li>Firetv</li>
-                            <li>LGTV</li>
-                            <li>Samsung</li>
-                            <li>appletv</li>
-                            <li>androidtv</li>
-                            <li>panasonic</li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        beacon.rights.<br />
-                        &lt;counter&gt;.<br />
-                        locationsPermit
-                    </td>
-                    <td>
-                        beacon_rights_ <br />
-                        &lt;counter&gt;_<br />
-                        locationspermit
-                    </td>
-                    <td>
-                        Comma separated list of locations defined in Brightcove Beacon to
-                        which the asset should be exposed under the access restrictions and
-                        monetization options in this particular set
-                    </td>
-                    <td>No</td>
-                    <td>
-                        If not set, defaults to all locations supported in Brightcove Beacon
-                    </td>
-                    <td>
-                        Data type: <strong>List</strong>;<br />
-                        Comma separated list of geographies
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        beacon.rights.&lt;counter&gt;.<br />
-                        locationsDeny
-                    </td>
-                    <td>
-                        beacon_rights_ <br />
-                        &lt;counter&gt;_<br />
-                        locationsdeny
-                    </td>
-                    <td>
-                        Comma separated list of locations defined in Brightcove Beacon to
-                        which the asset should NOT be exposed under the access restrictions
-                        and monetization options in this particular set
-                    </td>
-                    <td>No</td>
-                    <td>None</td>
-                    <td>
-                        Data type: <strong>List</strong>;<br />
-                        Comma separated list of geographies
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        beacon.rights.<br />
-                        &lt;counter&gt;.<br />
-                        packageName
-                    </td>
-                    <td>
-                        beacon_rights_ <br />
-                        &lt;counter&gt;_<br />
-                        packagename
-                    </td>
-                    <td>
-                        A comma separated list of package names, as defined in Brightcove
-                        Beacon
-                    </td>
-                    <td>Yes, if the type is set to SVOD</td>
-                    <td>None</td>
-                    <td>
-                        Data type: <strong>List</strong>;<br />
-                        Names of the subscription packages, e.g.
-                        <em>Premium Sports, Action Movies, Earth Day Movies</em>; required for SVOD Type
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        beacon.rights.<br />
-                        &lt;counter&gt;.<br />
-                        adConfiguration
-                    </td>
-                    <td>
-                        beacon_rights_ <br />
-                        &lt;counter&gt;_<br />
-                        adconfiguration
-                    </td>
-                    <td>Identifier of an ad configuration in Brightcove Beacon</td>
-                    <td>Yes, if the type is set as AVOD</td>
-                    <td>None</td>
-                    <td>
-                        Data type: <strong>Text</strong>;<br />
-                        Name of advertising configuration, e.g. <em>Google Ad Manager</em>;
-                        required for AVOD Type
+                        * A value for this field MUST be entered if the <strong>beacon.rights.<counter>.type</strong> field value is set to <strong>AVOD</strong><br>
+                        * Identifier of an ad configuration in Brightcove Beacon<br>
+                        * No default value
                     </td>
                 </tr>
             </tbody>

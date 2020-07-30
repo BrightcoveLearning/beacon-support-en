@@ -979,7 +979,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <th>Display Name</th>
                     <th>Internal Name</th>
                     <th>Type</th>
-                    <th>Notes</th>
+                    <th>Notes / Examples</th>
                 </tr>
             </thead>
             <tbody class="bcls-table__body">
@@ -1198,14 +1198,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <table class="bcls-table">
             <thead class="bcls-table__head">
                 <tr>
-                    <th>Video Cloud Field</th>
+                    <th>Display Name</th>
                     <th>
-                        Internal <br />
-                        Name
+                        Internal Name
                     </th>
-                    <th>Notes</th>
-                    <th>Required</th>
-                    <th>Data Type and/or<br />Example</th>
+                    <td>Type</td>
+                    <th>Notes / Examples</th>
                 </tr>
             </thead>
             <tbody class="bcls-table__body">
@@ -1218,16 +1216,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                         beacon_episode_ <br />
                         seriename
                     </td>
+                    <td>Text</td>
                     <td>
-                        Should point to the series identifier in Brightcove Beacon under
-                        which an episode belongs (series need to be created directly in
-                        Brightcove Beacon )
-                    </td>
-                    <td>Yes for episode assets; No otherwise</td>
-                    <td>
-                        Data type: <strong>Text</strong>;<br />
-                        Name of the Series, e.g. using the example
-                        <em>Adventures on the Oregon Coast</em>
+                        * A value for this field MUST be entered if this is an episode asset, otherwise no value required<br>
+                        * Value points to the series identifier in Brightcove Beacon under which an episode belongs (series need to be created directly in Brightcove Beacon)<br>
+                        * Example: Name of the Series, <em>Adventures on the Oregon Coast</em>
                     </td>
                 </tr>
                 <tr>
@@ -1239,16 +1232,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                         beacon_episode_ <br />
                         seasonnumber
                     </td>
+                    <td>Test</td>
                     <td>
-                        Should point to the series number in Brightcove Beacon under which
-                        an episode belongs (seasons need to be created directly in
-                        Brightcove Beacon)
-                    </td>
-                    <td>Yes for episode assets; No otherwise</td>
-                    <td>
-                        Data type: <strong>Text</strong>;<br />
-                        The integer number referring to the season number to which the video
-                        belongs
+                        * A value for this field MUST be entered if this is an episode asset, otherwise no value required<br>
+                        * Identifies the series number in Brightcove Beacon under which an episode belongs (seasons need to be created directly in Brightcove Beacon)<br>
+                        * Format: The integer number referring to the season number to which the video belongs
                     </td>
                 </tr>
                 <tr>
@@ -1260,11 +1248,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                         beacon_episode_ <br />
                         number
                     </td>
-                    <td>Identifies the episode number within the season</td>
-                    <td>Yes for episode assets; No otherwise</td>
-                    <td>
-                        Data type: <strong>Text</strong>;<br />
-                        The integer number referring to the video's episode number
+                    <td>Text</td>
+                    <td>* A value for this field MUST be entered if this is an episode asset, otherwise no value required<br>
+                        * Identifies the episode number within the season
+                        * Format: The integer number referring to the video's episode number
                     </td>
                 </tr>
             </tbody>

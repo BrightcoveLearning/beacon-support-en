@@ -467,7 +467,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             have an enriched set of metadata defined for proper use in Brightcove
             Beacon. In this document you will see how to create new custom fields in
             Studio. In addition, the needed fields for Brightcove Beacon are defined.
-        </p>
     </section>
     <section class="bcls-section">
         <h2 id="Creating_custom_fields">Creating custom fields</h2>
@@ -508,7 +507,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 Select a <strong>Type</strong> for the field.
                 <ul>
                     <li>
-                        <strong>String</strong> - The user can type anything into the field
+                        <strong>Text</strong> - The user can type anything into the field
                         up to 1024 single-byte characters (or 512 double-byte characters).
                     </li>
                     <li>
@@ -600,9 +599,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>
             In the table below you find a number of customer fields you must create.
             As shown above, when creating a custom field you choose the data type to
-            be either <strong>String</strong> or <strong>List</strong>. It may ease
+            be either <strong>Text</strong> or <strong>List</strong>. It may ease
             the burden on video content curators if they can select from a list rather
-            than having to enter a string. Also, it will invariably help to keep data
+            than having to enter text. Also, it will invariably help to keep data
             entry more consistent if values can be selected from a list rather than
             typed in.
         </p>
@@ -628,7 +627,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>Just a quick reminder from step 6 above about character limits:</p>
         <ul>
             <li>
-                String - Can contain up to 1024 single-byte characters (or 512
+                Text - Can contain up to 1024 single-byte characters (or 512
                 double-byte characters).
             </li>
             <li>
@@ -772,26 +771,242 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <section class="bcls-section">
         <h2 id="General_custom_fields">General, custom fields</h2>
         <p>
-            The following table displays custom Video Cloud fields that you MAY have
-            to create based on your implementation.
+            The following table displays custom Video Cloud fields that you MAY have to create based on your implementation. Note that no fields you create will need to have the <strong>Make this Field Required</strong> checkbox checked.
         </p>
         <table class="bcls-table">
             <thead class="bcls-table__head">
                 <tr>
-                    <th>Video Cloud Field</th>
+                    <th>Display Name</th>
                     <th>
                         Internal <br />
                         Name
                     </th>
-                    <th>Notes</th>
-                    <th>Required</th>
-                    <th>Data Type and/or<br />Example</th>
+                    <th>Type</th>
+                    <th>Notes / Examples</th>
                 </tr>
             </thead>
             <tbody class="bcls-table__body">
                 <tr>
                     <td>beacon.genre</td>
                     <td>beacon_genre</td>
+                    <td>Text</td>
+                    <td>
+                        * Genre for the asset
+                        * Appears in details page and will be used to organize assets in different screens. If this value is not set, then <strong>No Genre</strong> will be shown in the user interface<br>
+                        * Not setting this value will have an impact on <strong>Related Content</strong> functionality<br>
+                        * Example: One of the genres as defined in Brightcove Beacon, e.g. <em>Action</em> or <em>Adventure</em> for movies
+                    </td>
+                </tr>
+                <tr>
+                    <td>beacon.<br />productionYear</td>
+                    <td>
+                        beacon_<br />
+                        productionyear
+                    </td>
+                    <td>
+                        Text
+                    </td>
+                    <td>
+                        * Year of production of the asset - will show up in details pages<br>
+                        * A four digit integer
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        beacon.cast.<br />
+                        director
+                    </td>
+                    <td>
+                        beacon_cast_<br />
+                        director
+                    </td>
+                    <td>List</td>
+                    <td>* Comma separated list of names of directors<br>
+                        * Example: Director(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>beacon.cast.singer</td>
+                    <td>beacon_cast_singer</td>
+                    <td>List</td>
+                    <td>
+                        * Comma separated list of names of singers<br>
+                        * Example: Singer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>beacon.cast.actor</td>
+                    <td>beacon_cast_actor</td>
+                    <td>Comma separated list of names of actors</td>
+                    <td>
+                        Data type: <strong>List</strong>;<br />
+                        Actor(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        beacon.cast.<br />
+                        composer
+                    </td>
+                    <td>
+                        beacon_cast_<br />
+                        composer
+                    </td>
+                    <td>Comma separated list of names of composers</td>
+                    <td>
+                        Data type: <strong>List</strong>;<br />
+                        Composer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        beacon.cast.<br />
+                        songWriter
+                    </td>
+                    <td>
+                        beacon_cast_<br />
+                        songwriter
+                    </td>
+                    <td>Comma separated list of names of songwriters</td>
+                    <td>
+                        Data type: <strong>List</strong>;<br />
+                        Songwriter(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>beacon.cast.writer</td>
+                    <td>beacon_cast_writer</td>
+                    <td>Comma separated list of names of writers</td>
+                    <td>
+                        Data type: <strong>List</strong>;<br />
+                        Writer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>beacon.ageRating</td>
+                    <td>beacon_agerating</td>
+                    <td>
+                        Provides the age rating for the asset. The value in this field
+                        should be in the form of <strong>key=value</strong> pairs separated
+                        by commas, where the key is the country code (like
+                        <strong>us</strong> ) and the value is the age rating appropriate
+                        for that country code supported by Brightcove Beacon . If this value
+                        is not set, the most permissive rating for the default country age
+                        rating system set in Brightcove Beacon will be used.
+                    </td>
+                    <td>
+                        Data type: <strong>List</strong>;<br />
+                        key=value,key=value, e.g. <em>us=TV-Y, us=TV-M</em>)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        beacon.<br />
+                        shortDescription
+                    </td>
+                    <td>
+                        beacon_<br />
+                        shortdescription
+                    </td>
+                    <td>
+                        Allows to provide a short description tailored for Brightcove Beacon
+                        - if this value is not set it uses the text set in the video short
+                        description field
+                    </td>
+                    <td>
+                        Data type: <strong>Text</strong>;<br />
+                        Text
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        beacon.<br />
+                        longDescription
+                    </td>
+                    <td>
+                        beacon_<br />
+                        longdescription
+                    </td>
+                    <td>
+                        Allows to provide a long description tailored for Brightcove Beacon
+                        - if this value is not set it uses the text set in the video long
+                        description field
+                    </td>
+                    <td>
+                        Data type: <strong>Text</strong>;<br />
+                        Text
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        beacon.<br />
+                        viewerScore
+                    </td>
+                    <td>
+                        beacon_<br />
+                        viewerscore
+                    </td>
+                    <td>
+                        Allow to set an initial score for the viewer ratings (either coming
+                        from some other system or to set the initial value). This will only
+                        be used if the video asset is new in Brightcove Beacon and will be
+                        ignored for any subsequent updates of this asset in Brightcove
+                        Beacon - this so that the values set by users in Brightcove Beacon
+                        are not overridden. Possible values are from 0 to 100.
+                    </td>
+                    <td>No</td>
+                    <td>
+                        Data type: <strong>Text</strong>;<br />
+                        Integer value 0-100
+                    </td>
+                </tr>
+                <tr>
+                    <td>beacon.trailer.id</td>
+                    <td>beacon_trailer_id</td>
+                    <td>
+                        Points to another video asset in video cloud that will be used as a
+                        trailer for the asset where this field is set. The asset being
+                        pointed to will be discarded as a Movie or Episode
+                    </td>
+                    <td>No</td>
+                    <td>
+                        Data type: <strong>Text</strong>;<br />
+                        A Video Cloud video ID, e.g. <em>6140603191001</em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>beacon.ingest</td>
+                    <td>beacon_ingest</td>
+                    <td>
+                        If this field is not present, then it will default to ingest. If you
+                        do not want some specific asset to not be synched, then this should
+                        be set to No
+                    </td>
+                    <td>
+                        Data type: <strong>Text</strong>;<br />
+                        Add this field and set the value to <em>No</em> if you do not want
+                        the video synced with Brightcove Beacon
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="bcls-table">
+            <thead class="bcls-table__head">
+                <tr>
+                    <th>Display Name</th>
+                    <th>
+                        Internal <br />
+                        Name
+                    </th>
+                    <th>Type</th>
+                    <th>Notes / Examples</th>
+                </tr>
+            </thead>
+            <tbody class="bcls-table__body">
+                <tr>
+                    <td>beacon.genre</td>
+                    <td>beacon_genre</td>
+                    <td>Text</td>
                     <td>
                         Genre for the asset - will show up in details page and will be used
                         to organize assets in different screens. If this value is not set,
@@ -800,7 +1015,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                         setting this value will have an impact on
                         <strong>Related Content</strong> functionality.
                     </td>
-                    <td>No</td>
                     <td>
                         Data type: <strong>Text</strong>;<br />
                         One of the genres as defined in Brightcove Beacon, e.g.
@@ -1389,7 +1603,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 24 Jul 2020
+  Page last updated on 30 Jul 2020
 </div>
 
 

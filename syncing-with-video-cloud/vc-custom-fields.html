@@ -386,10 +386,10 @@ parent: Syncing with Video Cloud
                 <tr>
                     <td>beacon.cast.actor</td>
                     <td>beacon_cast_actor</td>
-                    <td>Comma separated list of names of actors</td>
+                    <td>List</td>
                     <td>
-                        Data type: <strong>List</strong>;<br />
-                        Actor(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
+                        * Comma separated list of names of actors<br>
+                        * Example: Actor(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
                     </td>
                 </tr>
                 <tr>
@@ -401,10 +401,10 @@ parent: Syncing with Video Cloud
                         beacon_cast_<br />
                         composer
                     </td>
-                    <td>Comma separated list of names of composers</td>
+                    <td>List</td>
                     <td>
-                        Data type: <strong>List</strong>;<br />
-                        Composer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
+                        * Comma separated list of names of composers<br>
+                        * Example: Composer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
                     </td>
                 </tr>
                 <tr>
@@ -416,36 +416,30 @@ parent: Syncing with Video Cloud
                         beacon_cast_<br />
                         songwriter
                     </td>
-                    <td>Comma separated list of names of songwriters</td>
+                    <td>List</td>
                     <td>
-                        Data type: <strong>List</strong>;<br />
-                        Songwriter(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
+                        * Comma separated list of names of songwriters<br>
+                        * Example: Songwriter(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
                     </td>
                 </tr>
                 <tr>
                     <td>beacon.cast.writer</td>
                     <td>beacon_cast_writer</td>
-                    <td>Comma separated list of names of writers</td>
+                    <td>List</td>
                     <td>
-                        Data type: <strong>List</strong>;<br />
-                        Writer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
+                        * Comma separated list of names of writers<br>
+                        * Example: Writer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
                     </td>
                 </tr>
                 <tr>
                     <td>beacon.ageRating</td>
                     <td>beacon_agerating</td>
+                    <td>List</td>
                     <td>
-                        Provides the age rating for the asset. The value in this field
-                        should be in the form of <strong>key=value</strong> pairs separated
-                        by commas, where the key is the country code (like
-                        <strong>us</strong> ) and the value is the age rating appropriate
-                        for that country code supported by Brightcove Beacon . If this value
-                        is not set, the most permissive rating for the default country age
-                        rating system set in Brightcove Beacon will be used.
-                    </td>
-                    <td>
-                        Data type: <strong>List</strong>;<br />
-                        key=value,key=value, e.g. <em>us=TV-Y, us=TV-M</em>)
+                        * Provides the age rating for the asset<br>
+                        * The value in this field should be in the form of <strong>key=value</strong> pairs separated by commas, where the key is the country code (like <strong>us</strong>) and the value is the age rating appropriate for that country code supported by Brightcove Beacon<br>
+                        * If this value is not set, the most permissive rating for the default country age rating system set in Brightcove Beacon will be used<br>
+                        * Example: key=value,key=value, e.g. <em>us=TV-Y, us=TV-M</em>)
                     </td>
                 </tr>
                 <tr>
@@ -457,14 +451,10 @@ parent: Syncing with Video Cloud
                         beacon_<br />
                         shortdescription
                     </td>
+                    <td>Text</td>
                     <td>
-                        Allows to provide a short description tailored for Brightcove Beacon
-                        - if this value is not set it uses the text set in the video short
-                        description field
-                    </td>
-                    <td>
-                        Data type: <strong>Text</strong>;<br />
-                        Text
+                        * Allows to provide a short description tailored for Brightcove Beacon<br>
+                        * If this value is not set it uses the text set in the video short description field
                     </td>
                 </tr>
                 <tr>
@@ -476,14 +466,10 @@ parent: Syncing with Video Cloud
                         beacon_<br />
                         longdescription
                     </td>
+                    <td>Text</td>
                     <td>
-                        Allows to provide a long description tailored for Brightcove Beacon
-                        - if this value is not set it uses the text set in the video long
-                        description field
-                    </td>
-                    <td>
-                        Data type: <strong>Text</strong>;<br />
-                        Text
+                        * Allows to provide a long description tailored for Brightcove Beacon<br>
+                        * If this value is not set it uses the text set in the video long description field
                     </td>
                 </tr>
                 <tr>
@@ -495,18 +481,11 @@ parent: Syncing with Video Cloud
                         beacon_<br />
                         viewerscore
                     </td>
+                    <td>Text</td>
                     <td>
-                        Allow to set an initial score for the viewer ratings (either coming
-                        from some other system or to set the initial value). This will only
-                        be used if the video asset is new in Brightcove Beacon and will be
-                        ignored for any subsequent updates of this asset in Brightcove
-                        Beacon - this so that the values set by users in Brightcove Beacon
-                        are not overridden. Possible values are from 0 to 100.
-                    </td>
-                    <td>No</td>
-                    <td>
-                        Data type: <strong>Text</strong>;<br />
-                        Integer value 0-100
+                        * Allows to set an initial score for the viewer ratings (either coming from some other system or to set the initial value)<br>
+                        * This will only be used if the video asset is new in Brightcove Beacon and will be ignored for any subsequent updates of this asset in Brightcove Beacon - this so that the values set by users in Brightcove Beacon are not overridden<br>
+                        * Possible values are integers from 0 to 100
                     </td>
                 </tr>
                 <tr>

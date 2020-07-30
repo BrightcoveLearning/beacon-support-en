@@ -963,28 +963,204 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <section class="bcls-section">
         <h2 id="Rights_Management_fields">Rights Management fields</h2>
         <p>
-            To support the monetization and access restrictions for assets, a set of
-            custom fields should be used. As you can have multiples instances of
-            rights management configurations, the suggested approach is to create
-            multiple sets of customer fields. In each instance's name a counter is
-            used to differentiate between them. The first instance should use the
-            counter to 0.
+            To support the monetization and access restrictions for assets, a set of custom fields should be used. As you can have multiples instances of rights management configurations, the suggested approach is to create multiple sets of customer fields. In each instance's name a counter is used to differentiate between them. The first instance should use the counter to 0.
         </p>
         <p>
             For an example of using rights management fields, specifically when using
-            a subscription package, see the
-            <a href="/using-brightcove-beacon/using-subscription-package.html#Understanding_the_rights_management_custom_fields">Understanding the rights management custom fields</a>
-            section of the <strong>Using a Subscription Package</strong> document.
+            a subscription package, see the <a href="/using-brightcove-beacon/using-subscription-package.html#Understanding_the_rights_management_custom_fields">Understanding the rights management custom fields</a> section of the <strong>Using a Subscription Package</strong> document.
         </p>
+        <p>Note that no fields you create will need to have the <strong>Make this Field Required</strong> checkbox checked.</p>
         <p>
-            The following table displays custom Video Cloud fields that you MAY have
-            to create based on your implementation.
+            The following table displays custom Video Cloud fields that you MAY have to create based on your implementation.
         </p>
         <table class="bcls-table">
             <thead class="bcls-table__head">
                 <tr>
-                    <th>Video Cloud<br />Field</th>
-                    <th>Internal <br />Name</th>
+                    <th>Display Name</th>
+                    <th>Internal Name</th>
+                    <th>Type</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody class="bcls-table__body">
+                <tr>
+                    <td>beacon.rights.&lt;counter&gt;.type</td>
+                    <td>beacon_rights_ <br />&lt;counter&gt;_type</td>
+                    <td>Text</td>
+                    <td>
+                        * Identifies if the type of monetization for the asset<br>
+                        * For the value use one of:
+                        <ul>
+                            <li>FREE</li>
+                            <li>AVOD</li>
+                            <li>SVOD</li>
+                            <li>INHERIT</li>
+                        </ul>
+                        * Default value: <strong>FREE</strong><br>
+                        * The <strong>INHERIT</strong> value is only applicable to <em>Episode</em> assets
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        beacon.rights.<br />
+                        &lt;counter&gt;.<br />
+                        startDate
+                    </td>
+                    <td>
+                        beacon_rights_ <br />
+                        &lt;counter&gt;_<br />
+                        startdate
+                    </td>
+                    <td>Text</td>
+                    <td>
+                        * Date when the asset should be exposed under the access restrictions and monetization options in this particular set<br>
+                        * Format: Date yyyy-mm-dd<br>
+                        * Default value: If not set, defaults to video availability start date
+                    </td>
+                </tr>
+                <tr>
+                    <td>beacon.rights.&lt;counter&gt;.endDate</td>
+                    <td>
+                        beacon_rights_ <br />
+                        &lt;counter&gt;_enddate
+                    </td>
+                    <td>Text</td>
+                    <td>
+                        * Date when the asset should be no longer exposed under the access restrictions and monetization options in this particular set<br>
+                        * Format: Date yyyy-mm-dd<br>
+                        * Default value: If not set, defaults to video availability end date
+                    </td>
+                </tr>
+                <tr>
+                    <td>beacon.rights.&lt;counter&gt;.devices</td>
+                    <td>
+                        beacon_rights_ <br />
+                        &lt;counter&gt;_devices
+                    </td>
+                    <td>List</td>
+                    <td>
+                        * Comma separated list of devices supported in Brightcove Beacon to which the asset should be exposed under the access restrictions and monetization options in this particular set<br>
+                        * Comma separated list of:
+                        <ul>
+                            <li>iOS</li>
+                            <li>Android</li>
+                            <li>web</li>
+                            <li>Roku</li>
+                            <li>STV</li>
+                            <li>Firetv</li>
+                            <li>LGTV</li>
+                            <li>Samsung</li>
+                            <li>appletv</li>
+                            <li>androidtv</li>
+                            <li>panasonic</li>
+                        </ul>
+                        * Default value: If not set, defaults to all devices supported in Brightcove Beacon
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        beacon.rights.<br />
+                        &lt;counter&gt;.<br />
+                        locationsPermit
+                    </td>
+                    <td>
+                        beacon_rights_ <br />
+                        &lt;counter&gt;_<br />
+                        locationspermit
+                    </td>
+                    <td>
+                        Comma separated list of locations defined in Brightcove Beacon to
+                        which the asset should be exposed under the access restrictions and
+                        monetization options in this particular set
+                    </td>
+                    <td>No</td>
+                    <td>
+                        If not set, defaults to all locations supported in Brightcove Beacon
+                    </td>
+                    <td>
+                        Data type: <strong>List</strong>;<br />
+                        Comma separated list of geographies
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        beacon.rights.&lt;counter&gt;.<br />
+                        locationsDeny
+                    </td>
+                    <td>
+                        beacon_rights_ <br />
+                        &lt;counter&gt;_<br />
+                        locationsdeny
+                    </td>
+                    <td>
+                        Comma separated list of locations defined in Brightcove Beacon to
+                        which the asset should NOT be exposed under the access restrictions
+                        and monetization options in this particular set
+                    </td>
+                    <td>No</td>
+                    <td>None</td>
+                    <td>
+                        Data type: <strong>List</strong>;<br />
+                        Comma separated list of geographies
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        beacon.rights.<br />
+                        &lt;counter&gt;.<br />
+                        packageName
+                    </td>
+                    <td>
+                        beacon_rights_ <br />
+                        &lt;counter&gt;_<br />
+                        packagename
+                    </td>
+                    <td>
+                        A comma separated list of package names, as defined in Brightcove
+                        Beacon
+                    </td>
+                    <td>Yes, if the type is set to SVOD</td>
+                    <td>None</td>
+                    <td>
+                        Data type: <strong>List</strong>;<br />
+                        Names of the subscription packages, e.g.
+                        <em>Premium Sports, Action Movies, Earth Day Movies</em>; required for SVOD Type
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        beacon.rights.<br />
+                        &lt;counter&gt;.<br />
+                        adConfiguration
+                    </td>
+                    <td>
+                        beacon_rights_ <br />
+                        &lt;counter&gt;_<br />
+                        adconfiguration
+                    </td>
+                    <td>Identifier of an ad configuration in Brightcove Beacon</td>
+                    <td>Yes, if the type is set as AVOD</td>
+                    <td>None</td>
+                    <td>
+                        Data type: <strong>Text</strong>;<br />
+                        Name of advertising configuration, e.g. <em>Google Ad Manager</em>;
+                        required for AVOD Type
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+
+        <table class="bcls-table">
+            <thead class="bcls-table__head">
+                <tr>
+                    <th>Display Name</th>
+                    <th>Internal Name</th>
+                    <th>Type</th>
                     <th>Notes</th>
                     <th>Required</th>
                     <th>Default<br />Value</th>

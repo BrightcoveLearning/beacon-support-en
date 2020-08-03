@@ -15,6 +15,7 @@ parent: Using Brightcove Beacon
         <p>A high-level view of the process is:</p>
 
         <ol>
+            <li>Tag the videos you wish to use in your stream.</li>
             <li>Create the XML video feed of your desired videos with the Social Syndication API. </li>
             <li>Send your XML video feed URL to your third party Cloud Streaming partner.</li>
             <li>Create a remote video in the Media module with the URL provided by your Cloud Streaming partner.</li>
@@ -25,45 +26,38 @@ parent: Using Brightcove Beacon
     </section>
 
     <section>
-        <h2 id="creating-video-feed">Creating the XML Video Feed with the Social Syndication API</h2>
-        <p>The first thing you will need to do to stream your set of VODs as a live stream is to create a Video Feed XML file. This file will contain all the information of the videos you wish stream. This file is a requirement for any third party Cloud Streaming partner such as Frequency, Veset, or Amagi.</p>
+        <h2 id="creating-video-feed">Tag the videos that will be in the stream</h2>
+        <p>You will use tags (metadata) to mark the videos you want to be in your stream.</p>
         <ol class="bcls-tasklist">
-            <li>Go to Video Cloud, and click the <strong>Media</strong> module to manage your content.
+            <li>In Video Cloud Studio open the <strong>Media</strong> module. (The numbers in the screenshot refer to later steps.)
                 <figure class="bcls-figure">
-                    <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/vod-to-channels/1-media-module.png" />
+                    <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/vod-to-channels/media-module.png" />
                 </figure>
             </li>
-            <li>Click on any of the videos that will be part of your VOD set to stream.
-                <figure class="bcls-figure">
-                    <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/vod-to-channels/2-click-video.png" />
-                </figure>
+            <li>Check all the checkboxes in front of the videos you wish to use in your stream.</li>
+            <li>
+                Click the <strong>Quick Edit</strong> button located above your list of videos.
             </li>
-            <li>In the <strong>Video Information</strong> section, click the <strong>Edit</strong> button.
+            <li>
+                In the <strong>Quick Edit</strong> panel that appears to the right of your video titles, in the <strong>Tags to Add</strong> input box, enter the tag you choose to use to group all the videos you want in your stream. In this example the tag <strong>Aug_Stream</strong> is used.
                 <figure class="bcls-figure">
-                    <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/vod-to-channels/3-video-information.png" />
+                    <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/vod-to-channels/quick-edit-panel.png" />
                 </figure>
+                <aside class="bcls-aside bcls-aside--information">The tag will be needed to fill the XML template information. </aside>
             </li>
-            <li>Go down to the <strong>Tags</strong> section, and enter a name for your Tag, which will be the tag name that groups all your videos in the Video feed XML file. Note that videos can have multiple tags, as shown here.
-                <figure class="bcls-figure">
-                    <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/vod-to-channels/4-tags.png" />
-                </figure>
+        </ol>
+    </section>
+    <section class="bcls-section">
+        <h2 id="creating-video-feed">Creating the XML Video Feed with the Social Syndication API</h2>
+        <p>To stream your marked set of VODs as a live stream you need to create a Video Feed XML file. This file will contain all the information of the videos you wish stream. This file is a requirement for any third party Cloud Streaming partner such as Frequency, Veset, or Amagi. The following provides details of this process:</p>
+        <ul>
+            <li>You will need an API Development tool as <a href="https://www.postman.com/" target="_blank">Postman</a> or <a href="https://insomnia.rest/" target="_blank">Insomnia</a>. In this example <strong>Postman</strong> will be used.</li>
+            <li>To create the Video Feed XML file, you will need to use the Brightcove Social Syndication API, for information on how to use the API to obtain the XML URL please visit the <a href="https://apis.support.brightcove.com/social-syndication/getting-started/public-syndication-api-overview.html" target="_blank">Social Syndication API documentation</a>.
             </li>
-            <li>After entering a tag name, press <strong>Enter</strong>, and the tag will be created.</li>
-            <li>Scroll down and click <strong>Save</strong>.
-                <figure class="bcls-figure">
-                    <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/vod-to-channels/5-save.png" />
-                </figure>
-            </li>
-            <li>Add the same tag to each video you want to add to your Video Feed XML file.</li>
-            <aside class="bcls-aside bcls-aside--information">The tag will be needed to fill the XML template information. </aside>
-            <li>To create the Video Feed XML file, you will need to use the Brightcove Social Syndication API, for information on how to use the API to obtain the XML URL please visit the <a href="https://apis.support.brightcove.com/social-syndication/getting-started/public-syndication-api-overview.html" target="_blank">Social Syndication API documentation</a>. </li>
-            <aside class="bcls-aside bcls-aside--information">
-                <ul>
-                    <li>For this step, you will need an API Development tool as <a href="https://www.postman.com/" target="_blank">Postman</a> or <a href="https://insomnia.rest/" target="_blank">Insomnia</a>.</li>
-                    <li>Authentication for most platform APIs is via a temporary OAuth2 access token. A few APIs use a permanent API key or policy key instead. See the <a href="https://apis.support.brightcove.com/social-syndication/getting-started/public-syndication-api-overview.html" target="_blank">documentation</a> on the individual APIs for details.</li>
-                </ul>
-            </aside>
-            <li>Go to your API client tool. In this document Postman will be used.</li>
+            <li>Authentication for most platform APIs is via a temporary OAuth2 access token. A few APIs use a permanent API key or policy key instead. See the <a href="https://apis.support.brightcove.com/social-syndication/getting-started/public-syndication-api-overview.html" target="_blank">documentation</a> on the individual APIs for details.</li>
+        </ul>
+        <ol class="bcls-tasklist-restart">
+            <li>Go to your API client tool, in this example <em>Postman</em> is used.</li>
             <li>Select <strong>POST</strong> from the API call type dropmenu.
                 <figure class="bcls-figure">
                     <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/vod-to-channels/5.5-post-call.png" />
@@ -233,15 +227,8 @@ parent: Using Brightcove Beacon
                 </figure>
             </li>
             <li> Go to the Brightcove Beacon App, and you should see your VOD stream on your desired Channel.</li>
-            <li>The last step it’s to upload the XML file provided by your third-party Cloud Streaming partner into your Amazon S3 bucket to create the EPG of the Channel. For more information on how to upload and fetch the XML file, please visit the <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/electronic-program-guides.html#fetching-xml" target="_blank">EPG documentation</a>.</li>
-
+            <li>The last step is to upload the XML file provided by your third-party Cloud Streaming partner into your Amazon S3 bucket. THis creates the EPG of the Channel. For more information on how to upload and fetch the XML file, please visit the <a href="/using-brightcove-beacon/electronic-program-guides.html#fetching-xml" target="_blank">EPG documentation</a>.</li>
         </ol>
 
     </section>
-
-
-
-
-
-
 </article>

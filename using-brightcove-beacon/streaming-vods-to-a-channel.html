@@ -63,16 +63,16 @@ parent: Using Brightcove Beacon
                     <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/vod-to-channels/5.5-post-call.png" />
                 </figure>
             </li>
-            <li>Copy the Social API call:
+            <li>Copy the Social Syndication API call:
                 <pre class="line-numbers"><code class="language-http">https://social.api.brightcove.com/v1/accounts/your-account-id/mrss/syndications</code></pre>
             </li>
-            <li>Paste the Social API call in the URL field and, change the URL data with your own account ID information.</li>
+            <li>Paste the Social Syndication API call in the URL field and change the URL data with your own account ID information.</li>
             <li>Select the <strong>Body</strong> tab in your API client.
                 <figure class="bcls-figure">
                     <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/vod-to-channels/6.5-body-call.png" />
                 </figure>
             </li>
-            <li>Copy the following Syndication Resource template:
+            <li>Copy the following Social Syndication Resource template:
                 <pre class="line-numbers"><code class="language-json">
 {
   "name": "Your Channel Syndication Videos",
@@ -96,8 +96,8 @@ parent: Using Brightcove Beacon
   "sort": "-created_at"
  } </code></pre>
             </li>
-            <li>Paste the Syndication Resource template in the <strong>Body</strong> text field. </li>
-            <li>Edit the Syndication Resource template data with your own information. </li>
+            <li>Paste the Social Syndication Resource template in the <strong>Body</strong> text field. </li>
+            <li>Edit the Social Syndication Resource template data with your own information. </li>
             <li>Remember to add the Tag you created previously in Video Cloud, in the <strong>"include_filter": "tags: YourTag"</strong> field.
             </li>
             <li>Click the <strong>Send</strong> button in your API client to make the <strong>POST</strong> call.
@@ -105,7 +105,7 @@ parent: Using Brightcove Beacon
                     <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/vod-to-channels/6-first-api-call.png" />
                 </figure>
             </li>
-            <li>The Social API response will add some read-only fields:
+            <li>The Social Syndication API response will add some read-only fields:
                 <pre class="line-numbers"><code class="language-json">
  {
     "id": "7f594cd3-4853-4174-aff3-203c3e99e9c2",
@@ -208,7 +208,7 @@ parent: Using Brightcove Beacon
         <p>The last step is to connect the Remote Video stream you just created in Video Cloud to a Brightcove Beacon Channel.</p>
 
         <ol class="bcls-tasklist-restart">
-            <li>Go to the Brightcove Beacon Platform.</li>
+            <li>Go to Brightcove Beacon.</li>
             <li>In the upper menu, click the <strong>Channels</strong> tab.
                 <figure class="bcls-figure">
                     <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/vod-to-channels/14-channels-tab.png" />
@@ -226,8 +226,8 @@ parent: Using Brightcove Beacon
                     <img class="bcls-image--no-border" alt="" width="400" height="700" src="/assets/images/using-bcb/vod-to-channels/16-update-button.png" />
                 </figure>
             </li>
-            <li>Go to the Brightcove Beacon App, and you should see your VOD stream on your desired Channel.</li>
-            <li>The last step is to upload the XML file provided by your third-party Cloud Streaming partner into your Amazon S3 bucket. This creates the EPG of the Channel. For more information on how to upload and fetch the XML file, please visit the <a href="/using-brightcove-beacon/electronic-program-guides.html#fetching-xml" target="_blank">EPG documentation</a>.</li>
+            <li>Go to the Brightcove Beacon web app for testing, and you should see your VOD stream on your desired Channel.</li>
+            <li>The last step is to upload the XML file provided by your third-party Cloud Streaming partner into your Amazon S3 bucket. This creates the EPG for the Channel. For more information on how to upload and fetch the XML file, please visit the <a href="/using-brightcove-beacon/electronic-program-guides.html#fetching-xml" target="_blank">EPG documentation</a>.</li>
         </ol>
 
     </section>

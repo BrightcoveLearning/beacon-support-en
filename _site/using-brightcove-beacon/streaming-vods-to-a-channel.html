@@ -555,7 +555,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/vod-to-channels/6-first-api-call.png" />
                 </figure>
             </li>
-            <li>The Social Syndication API response will add some read-only fields:
+            <li>Note that the Social Syndication API response adds some read-only fields:
                 <pre class="line-numbers"><code class="language-json">
  {
     "id": "7f594cd3-4853-4174-aff3-203c3e99e9c2",
@@ -582,7 +582,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
  }</code></pre>
             </li>
 
-            <li>After the Video Feed creation, the API response will give you the <strong>id</strong> and the <strong>syndication_url</strong>. The <strong>syndication_url</strong> is the one that you should provide to your Cloud Streaming partner, but there are still some steps to do before the Video Feed is ready.
+            <li>After the Video Feed creation, note that the API response includes the <strong>id</strong> and the <strong>syndication_url</strong>. The <strong>syndication_url</strong> is the one that you should provide to your Cloud Streaming partner, but there are still some steps to do before the Video Feed is ready.
                 <figure class="bcls-figure">
                     <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/vod-to-channels/7-api-response-id.png" />
                 </figure>
@@ -601,14 +601,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             </li>
             <li>Select the <strong>raw</strong> option.</li>
             <li>Copy and Paste one of the <a href="https://apis.support.brightcove.com/social-syndication/getting-started/sample-templates-universal-syndication.html" target="_blank">XML templates provided for Universal Syndication</a> in the text section. </li>
-            <li>Click the <strong>Send</strong> button to make the <strong>PUT</strong> API call.
+            <li>Click <strong>Send</strong> to make the <strong>PUT</strong> API call.
                 <aside class="bcls-aside bcls-aside--information">Remember that you will need to have a valid token in your <strong>Authorization > Manage Access Token</strong> section for the API calls work correctly.
                     For more information on how to create the OAuth 2.0 token please read the <a href="https://apis.support.brightcove.com/oauth/index.html" target="_blank">OAuth API documentation</a>.
                 </aside>
 
             </li>
-
-            <li>After making the <strong>PUT</strong> call, the API answer will return the template with your videos' information, and the <strong>syndication_url</strong> will be updated and ready to deliver to your Cloud Streaming partner. </li>
+            <li>After making the <strong>PUT</strong> call, the API response will contain the template with your videos' information and the <strong>syndication_url</strong> will be updated and ready to deliver to your Cloud Streaming partner. </li>
     </section>
 
 

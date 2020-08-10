@@ -23,6 +23,8 @@
   icon: '<i class="far fa-sync"></i>'
   url: /syncing-with-video-cloud/
   docs:
+    - name: Connecting to a Video Cloud Account
+      url: /syncing-with-video-cloud/connecting-bcb-to-vc.html
     - name: Creating Video Cloud Custom Fields
       url: /syncing-with-video-cloud/vc-custom-fields.html
     - name: Forcing a Sync

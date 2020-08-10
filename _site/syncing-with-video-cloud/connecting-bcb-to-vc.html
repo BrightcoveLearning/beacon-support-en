@@ -504,6 +504,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <img class="bcls-image" src="/assets/images/syncing-with-vc/connecting-bcb-to-vc/exposed-apis.png" alt="exposed apis">
                 </figure>
             </li>
+            <li>Click <strong>Save</strong>.</li>
+            <li>A <strong>Copy Your Client Secret</strong> dialog opens. Copy and save for later use both the <em>Client ID</em> and <em>Client Secret</em>. You will NOT be able to ever recover the <em>Client Secret</em>, so you may wish to save this, as noted in the dialog.
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/syncing-with-vc/connecting-bcb-to-vc/copy-client-secret.png" alt="copy client secret dialog">
+                </figure>
+            </li>
+            <li>Click <strong>Okay, I copied it</strong>. You are now done with tasks performed in Video Cloud Studio.</li>
         </ol>
     </section>
     <section class="bcls-section">
@@ -516,13 +523,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 </figure>
             </li>
             <li>In the left menu, click the <strong>Auth OVP</strong> option.</li>
-            <li>Note that you need to get the following information from Video Cloud:
+            <li>Now enter in the three values retrieved from Video Cloud Studio:
                 <ul>
                     <li>Client_Id</li>
                     <li>Client_Secret</li>
                     <li>Account_Id</li>
                 </ul>
             </li>
+            <li>Note the text areas for <strong>Query</strong> and <strong>Playlist Filter</strong>. These need only be used if you want to restrict the videos and/or playlists that are ingested from Video Cloud into Brightcove Beacon. For instance, you may use a specific metadata tag on the videos you want to be pulled into Brightcove Beacon, and those video not tagged are not copied into Brightcove Beacon. You would the proper query from Video Cloud's CMS API to perform execute that restriction. For further information see the <a href="https://apis.support.brightcove.com/cms/index.html">CMS API</a> index page.</li>
         </ol>
     </section>
 </article>
@@ -541,7 +549,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 07 Aug 2020
+  Page last updated on 10 Aug 2020
 </div>
 
 

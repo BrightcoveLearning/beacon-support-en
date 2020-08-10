@@ -480,22 +480,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
 
     <section class="bcls-section">
-        <h2 id="section-name">Connect Brightcove Beacon to Video Cloud</h2>
+        <h2 id="section-name">Obtain Video Cloud authentication credentials</h2>
+        <p>To associate a Video Cloud account with Brightcove Beacon, you will need API authentication credentials. In this section you will obtain the needed credentials.</p>
         <ol class="bcls-tasklist">
-            <li>Open Brightcove Beacon, which can be found by browning to <strong>https://beacon.brightcove.com/<em>your_experience_name</em>/home</strong>.</li>
-            <li>In the top menu, click the <img src="/assets/images/syncing-with-vc/connecting-bcb-to-vc/settings-icon.png" alt="settings icon" class="imageWithText"> <strong>(Settings)</strong> icon.
-                <figure class="bcls-figure">
-                    <img class="bcls-image" src="/assets/images/syncing-with-vc/connecting-bcb-to-vc/auth-ovp.png" alt="auth ovp menu">
-                </figure>
-            </li>
-            <li>In the left menu, click the <strong>Auth OVP</strong> option.</li>
-            <li>Note that you need to get the following information from Video Cloud:
-                <ul>
-                    <li>Client_Id</li>
-                    <li>Client_Secret</li>
-                    <li>Account_Id</li>
-                </ul>
-            </li>
             <li>Open Video Cloud Studio, which can be found by browsing to <a href="https://studio.brightcove.com/">https://studio.brightcove.com/</a>.
                 <aside class="bcls-aside bcls-aside--information language-editable">Skeleton steps will be provided here to obtain your client ID and client secret. For full details, including a video on the process, see the <a href="https://studio.support.brightcove.com/admin/managing-api-authentication-credentials.html">Managing API Authentication Credentials</a> document.</aside>
             </li>
@@ -519,7 +506,25 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             </li>
         </ol>
     </section>
-
+    <section class="bcls-section">
+        <h2 id="section-name">Connect Brightcove Beacon to Video Cloud</h2>
+        <ol class="bcls-tasklist">
+            <li>Open Brightcove Beacon, which can be found by browning to <strong>https://beacon.brightcove.com/<em>your_experience_name</em>/home</strong>.</li>
+            <li>In the top menu, click the <img src="/assets/images/syncing-with-vc/connecting-bcb-to-vc/settings-icon.png" alt="settings icon" class="imageWithText"> <strong>(Settings)</strong> icon.
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/syncing-with-vc/connecting-bcb-to-vc/auth-ovp.png" alt="auth ovp menu">
+                </figure>
+            </li>
+            <li>In the left menu, click the <strong>Auth OVP</strong> option.</li>
+            <li>Note that you need to get the following information from Video Cloud:
+                <ul>
+                    <li>Client_Id</li>
+                    <li>Client_Secret</li>
+                    <li>Account_Id</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
 </article>
 <!-- complete bootstrap layout -->
     </div>

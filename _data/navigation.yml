@@ -1,9 +1,9 @@
 - section:
   name: Home
-  url: /
+  url: /index.html
 - section:
   name: Getting Started
-  url: /getting-started/
+  url: /getting-started/index.html
   icon: '<i class="far fa-location-arrow"></i>'
   docs:
     - name: Learning Guide
@@ -21,7 +21,7 @@
 - section:
   name: Syncing with Video Cloud
   icon: '<i class="far fa-sync"></i>'
-  url: /syncing-with-video-cloud/
+  url: /syncing-with-video-cloud/index.html
   docs:
     - name: Creating Video Cloud Custom Fields
       url: /syncing-with-video-cloud/vc-custom-fields.html
@@ -29,7 +29,7 @@
       url: /syncing-with-video-cloud/forcing-a-sync.html
 - section:
   name: Using Brightcove Beacon
-  url: /using-brightcove-beacon/
+  url: /using-brightcove-beacon/index.html
   icon: '<img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/beacon-nut.svg">'
   docs:
     - name: Adding a Carousel to a Page
@@ -71,10 +71,10 @@
 - section:
   name: 'Creating Your Apps'
   icon: '<i class="fal fa-rocket-launch"></i>'
-  url: '/creating-your-apps/'
+  url: '/creating-your-apps/index.html'
   docs:
     - name: 'Android'
-      url: '/creating-your-apps/android/'
+      url: '/creating-your-apps/android/index.html'
       docs:
         - name: 'Submitting New Apps to the Android Store'
           url: '/creating-your-apps/android/submitting-to-android.html'
@@ -87,31 +87,31 @@
         - name: 'Installing an Android Test Build'
           url: '/creating-your-apps/android/installing-android-test-build.html'
     - name: 'Fire TV'
-      url: '/creating-your-apps/fire-tv/'
+      url: '/creating-your-apps/fire-tv/index.html'
       docs:
         - name: 'Installing a Fire TV Test Build'
           url: '/creating-your-apps/fire-tv/installing-fire-tv-test-build.html'
         - name: 'Submitting to the Amazon Store'
           url: '/creating-your-apps/fire-tv/submitting-to-amazon.html'
     - name: 'iOS/tvOS'
-      url: '/creating-your-apps/ios-tvos/'
+      url: '/creating-your-apps/ios-tvos/index.html'
       docs:
         - name: 'Installing an iOS/tvOS Test Build'
           url: '/creating-your-apps/ios-tvos/installing-ios-test-build.html'
         - name: 'Submitting to the Apple Store'
           url: '/creating-your-apps/ios-tvos/submitting-to-apple.html'
     #    - name: 'LG'
-    #      url: '/creating-your-apps/lg/'
+    #      url: '/creating-your-apps/lg/index.html'
     #      docs:
     #        - name: 'Submitting to the LG (webOS) Store'
     #          url: '/creating-your-apps/lg/submitting-to-lg.html'
     - name: 'Panasonic'
-      url: '/creating-your-apps/panasonic/'
+      url: '/creating-your-apps/panasonic/index.html'
       docs:
         - name: 'Submitting to the Panasonic Store'
           url: '/creating-your-apps/panasonic/submitting-to-panasonic.html'
     - name: 'Roku'
-      url: '/creating-your-apps/roku/'
+      url: '/creating-your-apps/roku/index.html'
       docs:
         - name: 'Configuring In-Channel Products in Roku'
           url: '/creating-your-apps/roku/configuring-inchannel-products.html'
@@ -120,7 +120,7 @@
         - name: 'Submitting to the Roku Store'
           url: '/creating-your-apps/roku/submitting-to-roku.html'
     - name: 'Samsung'
-      url: '/creating-your-apps/samsung/'
+      url: '/creating-your-apps/samsung/index.html'
       docs:
         - name: 'Becoming a Samsung Partner'
           url: '/creating-your-apps/samsung/samsung-partner.html'
@@ -132,7 +132,7 @@
       url: '/creating-your-apps/device-apps-validation-guide.html'
 - section:
   name: References
-  url: /references/
+  url: /references/index.html
   icon: '<i class="fal fa-books"></i>'
   docs:
     - name: Common Configuration Settings
@@ -149,7 +149,7 @@
       url: '/references/product-updates.html'
 - section:
   name: 'Support'
-  url: '/support/'
+  url: '/support/index.html'
   icon: '<i class="far fa-question-circle"></i>'
   docs:
     - name: 'Brightcove Answers'

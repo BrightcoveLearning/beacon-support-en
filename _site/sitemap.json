@@ -160,47 +160,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/samsung/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/fire-tv/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/lg/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/panasonic/",
       "oldURL": "/index"
   },
 
@@ -210,12 +170,17 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/getting-started/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/panasonic/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/support/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/fire-tv/",
       "oldURL": "/index"
   },
 
@@ -225,7 +190,42 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/getting-started/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/samsung/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/lg/",
       "oldURL": "/index"
   },
 
@@ -297,6 +297,11 @@
   {
       "newURL": "https://beacon.support.brightcove.com/references/product-updates.html",
       "oldURL": "/product-updates"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/promo-codes.html",
+      "oldURL": "/promo-codes"
   },
 
   {

@@ -162,7 +162,8 @@ parent: Using Brightcove Beacon
                 <tr>
                     <td>Portrait Poster</td>
                     <td>
-                        Poster image (2:3) <table>
+                        <p>JPEG image (2:3)</p> 
+                        <table>
                             <tr>
                                 <td>Minimum</td>
                                 <td>Width: 1000px</td>
@@ -179,7 +180,8 @@ parent: Using Brightcove Beacon
                 <tr>
                     <td>Landscape Poster</td>
                     <td>
-                        Landscape image (16:9) <table>
+                      <p>JPEG image (16:9)</p>
+                        <table>
                             <tr>
                                 <td>Minimum</td>
                                 <td>Width: 1000px</td>
@@ -196,13 +198,13 @@ parent: Using Brightcove Beacon
                 <tr>
                     <td>Thumbnail</td>
                     <td>
-                        Thumbnail image (4:3) 
+                      JPEG image (4:3) 
                     </td>
                 </tr>
                 <tr>
                     <td>Wide Banner</td>
                     <td>
-                        Banner image (21:9) 
+                      JPEG image (21:9) 
                     </td>
                 </tr>
             </tbody>
@@ -446,7 +448,8 @@ parent: Using Brightcove Beacon
                 <tr>
                     <td>Portrait Poster</td>
                     <td>
-                        Poster image (2:3) <table>
+                        <p>JPEG image (2:3)</p> 
+                        <table>
                             <tr>
                                 <td>Minimum</td>
                                 <td>Width: 1000px</td>
@@ -463,7 +466,8 @@ parent: Using Brightcove Beacon
                 <tr>
                     <td>Landscape Poster</td>
                     <td>
-                        Landscape image (16:9) <table>
+                      <p>JPEG image (16:9)</p>
+                        <table>
                             <tr>
                                 <td>Minimum</td>
                                 <td>Width: 1000px</td>
@@ -480,13 +484,13 @@ parent: Using Brightcove Beacon
                 <tr>
                     <td>Thumbnail</td>
                     <td>
-                        Thumbnail image (4:3) 
+                      JPEG image (4:3) 
                     </td>
                 </tr>
                 <tr>
                     <td>Wide Banner</td>
                     <td>
-                        Banner image (21:9) 
+                      JPEG image (21:9) 
                     </td>
                 </tr>
             </tbody>
@@ -639,23 +643,43 @@ parent: Using Brightcove Beacon
   <section class="bcls-section">
     <h2 id="Ingesting_episodes">Ingesting episodes</h2>
     <p>
-      As you have seen, creating the series and associated seasons is done in
-      Brightcove Beacon. Creation of episodes for the series is done in Video
+      While creating the series and associated seasons is done in
+      Brightcove Beacon, the creation of episodes for the series is done in Video
       Cloud Studio. You will assign values about the series and seasons in
       custom fields for each episode video, then ingest those videos into
-      Brightcove Beacon. If you have not created the custom fields in Video
-      Cloud Studio, see the
-      <a href="/syncing-with-video-cloud/vc-custom-fields.html"
-        >Creating Video Cloud Custom Fields</a
-      >
-      document. To ingest episodes, follow these steps:
+      Brightcove Beacon.
     </p>
-    <aside class="bcls-aside bcls-aside--information language-editable">
+    <p>Remember, the truth of Brightcove Beacon episode content resides in Video Cloud.</p>
+    <!-- <aside class="bcls-aside bcls-aside--information language-editable">
       These steps assume you have already uploaded your episode videos to Video
       Cloud.
-    </aside>
-    <ol class="bcls-tasklist-restart">
+    </aside> -->
+    <h3>Prerequisites</h3>
+    <p>Before continuing with the steps below, make sure that you have completed the following:</p>
+    <ol  class="bcls-tasklist-restart">
       <li>Log in to Video Cloud Studio.</li>
+      <li>
+        From the dropdown menu at the top of the page, select
+        <strong>UPLOAD</strong>.
+      </li>
+      <li>Upload your episode videos.</li>
+      <li>
+        From the dropdown menu at the top of the page, select
+        <strong>MEDIA</strong>.
+      </li>
+      <li>Update your episode video images as specified in the <a href="/references/image-requirements.html">Images and Their Specifications</a> document.</li>
+      <li>
+        <p>In the navigation header, click <strong>ADMIN</strong> and then <strong>Video Fields</strong>.</p>
+        <aside class="bcls-aside bcls-aside--information language-editable">
+          You must be an account administrator to access the <strong>ADMIN</strong> menu.
+        </aside>
+      </li>
+      <li>Create the required custom fields needed to ingest videos to Brightcove Beacon. For details, see the <a href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a> document.</li>
+    </ol>
+    <h3>Steps</h3>
+    <p>To ingest episode videos into Brightcove Beacon, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Return to Video Cloud Studio.</li>
       <li>
         From the dropdown menu at the top of the page, select
         <strong>MEDIA</strong>.

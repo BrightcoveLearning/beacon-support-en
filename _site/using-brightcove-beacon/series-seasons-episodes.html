@@ -463,63 +463,39 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <summary>In this topic, you will learn how to create a series with related seasons and episodes.</summary>
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
-    <p>
-      When creating a series, you must define the relationships between the
-      series, its seasons, and the associated episodes.
-    </p>
-    <h3>Brightcove Beacon</h3>
-    <p>In Brightcove Beacon, create your series and seasons.</p>
-    <h4>Series</h4>
-    <p>In Brightcove Beacon, create the series. Here, you will name the series, and provide information including availability and images.</p>
-    <h4>Seasons</h4>
-    <p>In Brightcove Beacon, create the seasons related to the series. You will provide information similar to the series, in addition to
-        selecting the series to which the season belongs.</p>
-    
-    <h3>Video Cloud Studio</h3>
-    <p>In Video Cloud Studio, define your episodes. Then, ingest them into Brightcove Beacon.</p>
-  
-    <h4>Episodes</h4>
-    <p>The truth of Brightcove Beacon episode content resides in Video Cloud.</p>
-    <p>
-      In Video Cloud Studio, assign the video episodes to the
-          corresponding season using values supplied to custom fields. These custom fields include:
-    </p>
-    <ul>
-      <li>beacon.episode.number</li>
-      <li>beacon.episode.seasonNumber</li>
-      <li>beacon.episode.serieName</li>
-    </ul>
-    <p>Return to Brightcove Beacon and ingest your video episodes.</p>
+    <p>A <strong>series</strong> is a collection of related videos shown in a particular order, that usually share a common theme. When creating a series, you must define the relationships between the
+      series, its seasons, and the associated episodes.</p>
+    <p>A <strong>season</strong> is a group of videos that cover a set period of time. Each series can have one or more seasons.</p>
+    <p>An <strong>episode</strong> is an individual video. You can think of this as a specific movie.</p>
+    <p>Once you have defined your series and seasons, and ingested your episodes, they can be used in your Brightcove Beacon app. To do this, follow these steps:</p>
 
-    <!-- <ol class="bcls-tasklist">
+    <ol class="bcls-tasklist">
       <li>
-        <strong>In Brightcove Beacon, create the series.</strong> This involves
-        not only naming the series, but also providing information such as
-        images to be used for the series in the app, dates the series can be
-        viewed, etc.
+         <h4>Series (Brightcove Beacon)</h4>
+        <p>In Brightcove Beacon, create the series. Here, you will name the series, and provide information including availability and images.</p>
       </li>
       <li>
-        <strong
-          >In Brightcove Beacon, create the seasons related to the
-          series.</strong
-        >
-        You will provide information similar to the series, with the addition of
-        selecting the series to which the season belongs.
+         <h4>Seasons (Brightcove Beacon)</h4>
+         <p>In Brightcove Beacon, create the seasons related to the series. You will provide information similar to the series, in addition to
+        selecting the series to which the season belongs.</p>
       </li>
       <li>
-        <strong
-          >In Video Cloud Studio, you will assign the video episodes to the
-          corresponding season via values supplied to custom fields.</strong
-        >
-        You will then ingest those videos into the Brightcove Beacon experience.
-        The fields to be assigned data are:
+        <h4>Episodes (Video Cloud Studio)</h4>
+        <p>The truth of Brightcove Beacon episode content resides in Video Cloud.</p>
+        <p>
+          In Video Cloud Studio, assign the video episodes to the
+              corresponding season using values supplied to custom fields. These custom fields include:
+        </p>
         <ul>
           <li>beacon.episode.number</li>
           <li>beacon.episode.seasonNumber</li>
           <li>beacon.episode.serieName</li>
         </ul>
       </li>
-    </ol> -->
+      <li>
+        <p>Return to Brightcove Beacon and ingest your video episodes.</p>
+      </li>
+    </ol>
   </section>
 
   <section class="bcls-section">
@@ -1217,7 +1193,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 09 Sep 2020
+  Page last updated on 14 Sep 2020
 </div>
 
 

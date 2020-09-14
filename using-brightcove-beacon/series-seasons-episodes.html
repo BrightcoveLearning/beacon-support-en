@@ -1,6 +1,6 @@
 ---
 title: 'Creating Series/Seasons/Episodes'
-description: In this topic, you will learn how to create a series that contains associated seasons and episodes.
+description: In this topic, you will learn how to create a series with related seasons and episodes.
 parent: Using Brightcove Beacon
 ---
 
@@ -10,11 +10,34 @@ parent: Using Brightcove Beacon
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
     <p>
-      When creating a series you must define the relationships between the
-      series and its seasons, and the episodes in each season. A high-level view
-      of the process is:
+      When creating a series, you must define the relationships between the
+      series, its seasons, and the associated episodes.
     </p>
-    <ol class="bcls-tasklist">
+    <h3>Brightcove Beacon</h3>
+    <p>In Brightcove Beacon, create your series and seasons.</p>
+    <h4>Series</h4>
+    <p>In Brightcove Beacon, create the series. Here, you will name the series, and provide information including availability and images.</p>
+    <h4>Seasons</h4>
+    <p>In Brightcove Beacon, create the seasons related to the series. You will provide information similar to the series, in addition to
+        selecting the series to which the season belongs.</p>
+    
+    <h3>Video Cloud Studio</h3>
+    <p>In Video Cloud Studio, define your episodes. Then, ingest them into Brightcove Beacon.</p>
+  
+    <h4>Episodes</h4>
+    <p>The truth of Brightcove Beacon episode content resides in Video Cloud.</p>
+    <p>
+      In Video Cloud Studio, assign the video episodes to the
+          corresponding season using values supplied to custom fields. These custom fields include:
+    </p>
+    <ul>
+      <li>beacon.episode.number</li>
+      <li>beacon.episode.seasonNumber</li>
+      <li>beacon.episode.serieName</li>
+    </ul>
+    <p>Return to Brightcove Beacon and ingest your video episodes.</p>
+
+    <!-- <ol class="bcls-tasklist">
       <li>
         <strong>In Brightcove Beacon, create the series.</strong> This involves
         not only naming the series, but also providing information such as
@@ -42,7 +65,11 @@ parent: Using Brightcove Beacon
           <li>beacon.episode.serieName</li>
         </ul>
       </li>
-    </ol>
+    </ol> -->
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Relationship">Relationship</h2>
     <p>
       The following diagram shows the relationship between a series and its
       seasons and episodes.
@@ -54,10 +81,6 @@ parent: Using Brightcove Beacon
         alt=""
       />
     </figure>
-    <p>
-      The rest of this document will provide details on how to complete each of
-      the three steps mentioned above.
-    </p>
   </section>
 
   <section class="bcls-section">

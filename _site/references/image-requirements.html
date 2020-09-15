@@ -464,7 +464,48 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <section class="bcls-section">
         <h2 id="Video_Cloud_images">Video Cloud images</h2>
         <p>
-            Whenever a video is ingested into Video Cloud two images are automatically created and shown in the video's properties. The two images created are a <em>Poster</em> and a <em>Thumbnail</em>. This is the <strong>IMAGES</strong> section in Studio in edit mode.
+            Whenever a video is ingested into Video Cloud, two images are automatically created and shown in the video's properties. The two images created are a <em>Poster</em> and a <em>Thumbnail</em>. The images are displayed in the <strong>IMAGES</strong> section in Studio. You will use these upload images for use in Brightcove Beacon, but must a change to the default ingest profile for proper functionality. The steps shown in the following alert box show you how to make the change. If you do not make the change, the portrait image you are uploading will keep getting sized for a thumbnail and look very poor in your Brightcove Beacon app.
+        </p>
+        <aside class="bcls-aside bcls-aside--warning language-editable">You MUST change your default ingest profile. Follow these steps:
+            <ol class="bcls-tasklist">
+                <li>In Studio go to <strong>ADMIN → Ingest Profiles</strong>.</li>
+                <li>Click on the title of your current default profile which is labeled with an <strong>Uploading default</strong> label.
+                    <figure class="bcls-figure">
+                        <img class="bcls-image" src="/assets/images/references/image-requirements/uploading-default.png" alt="">
+                    </figure>
+                </li>
+                <li>Click the <strong>Duplicate</strong> button.</li>
+                <li>Locate where the <strong>thumbnail</strong> image is defined. The exact JSON will look slightly different depending on the profile you have duplicated.</li>
+                <li>Alter the width and height to represent the portrait sized image you will be uploading. The maximums, as shown below are width of 2000px and a height of 3000px. Two examples of altered JSON are shown here (remember, the JSON will look slightly different depending on the profile you are updating).
+                    <pre class="line-numbers">< class="language-json">{
+  "media_type": "image",
+  "format": "jpg",
+  "label": "thumbnail",
+  <span class="bcls-highlight">"width": 2000,
+  "height": 3000,</span>
+  "id": "559a8b0ee4b07cbb40be7d23"
+}
+
+
+"images": [{
+    "label": "thumbnail",
+    <span class="bcls-highlight">"height": 3000,
+    "width": 2000</span>
+  },
+  ...
+]</code></pre>
+                </li>
+                <li>Click <strong>Save</strong>.</li>
+                <li>Then click the <strong>Make this my default profile</strong> link.
+                    <figure class="bcls-figure">
+                        <img class="bcls-image" src="/assets/images/references/image-requirements/make-my-default.png" alt="">
+                    </figure>
+                </li>
+                <li>Check to be sure profile is now labeled as your uploading default.</li>
+            </ol>
+            You are now ready to upload images for Brightcove Beacon using Video Cloud Studio.
+        </aside>
+        <p>Use the Studio interface to upload two images. You will decide on an images that represent your video and take the appropriate screenshots that meet the requirements shown above. You will then upload the two images into Video Cloud.</p>
         </p>
         <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/references/image-requirements/studio-images.png" alt="studio images UI" />
         </figure>
@@ -511,9 +552,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 </tr>
             </tbody>
         </table>
-        <aside class="bcls-aside bcls-aside--warning language-editable"> This means that you will decide on an image that represents your video and take the appropriate screenshots that meet the requirements shown above.
-            You will then upload the two images into Video Cloud.
-        </aside>
+        <br>
+        <p>The image on the left in the screenshot is an example use of the portrait image. If you see a very pixelated image there you will know the default ingest profile needs to be updated.</p>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/references/image-requirements/portrait-used.png" alt="">
+        </figure>
     </section>
     <section class="bcls-section">
         <h2 id="Corporate_logo">Corporate logo</h2>
@@ -657,7 +700,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 20 Aug 2020
+  Page last updated on 14 Sep 2020
 </div>
 
 

@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="In this topic, you will learn how to create a series that contains associated seasons and episodes." />
+    <meta name="description" content="In this topic, you will learn how to create a series with related seasons and episodes." />
 
     <title>Creating Series/Seasons/Episodes</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -460,43 +460,46 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <h1>Creating Series/Seasons/Episodes</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn how to create a series that contains associated seasons and episodes.</summary>
+  <summary>In this topic, you will learn how to create a series with related seasons and episodes.</summary>
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
-    <p>
-      When creating a series you must define the relationships between the
-      series and its seasons, and the episodes in each season. A high-level view
-      of the process is:
-    </p>
+    <p>A <strong>series</strong> is a collection of related videos shown in a particular order, that usually share a common theme. When creating a series, you must define the relationships between the
+      series, its seasons, and the associated episodes.</p>
+    <p>A <strong>season</strong> is a group of videos that cover a set period of time. Each series can have one or more seasons.</p>
+    <p>An <strong>episode</strong> is an individual video. You can think of this as a specific movie.</p>
+    <p>Once you have defined your series and seasons, and ingested your episodes, they can be used in your Brightcove Beacon app. To do this, follow these steps:</p>
+
     <ol class="bcls-tasklist">
       <li>
-        <strong>In Brightcove Beacon, create the series.</strong> This involves
-        not only naming the series, but also providing information such as
-        images to be used for the series in the app, dates the series can be
-        viewed, etc.
+         <h4>Series (Brightcove Beacon)</h4>
+        <p>In Brightcove Beacon, create the series. Here, you will name the series, and provide information including availability and images.</p>
       </li>
       <li>
-        <strong
-          >In Brightcove Beacon, create the seasons related to the
-          series.</strong
-        >
-        You will provide information similar to the series, with the addition of
-        selecting the series to which the season belongs.
+         <h4>Seasons (Brightcove Beacon)</h4>
+         <p>In Brightcove Beacon, create the seasons related to the series. You will provide information similar to the series, in addition to
+        selecting the series to which the season belongs.</p>
       </li>
       <li>
-        <strong
-          >In Video Cloud Studio, you will assign the video episodes to the
-          corresponding season via values supplied to custom fields.</strong
-        >
-        You will then ingest those videos into the Brightcove Beacon experience.
-        The fields to be assigned data are:
+        <h4>Episodes (Video Cloud)</h4>
+        <p>The truth of Brightcove Beacon episode content resides in Video Cloud.</p>
+        <p>
+          In Video Cloud Studio, assign the video episodes to the
+              corresponding season using values supplied to custom fields. These custom fields include:
+        </p>
         <ul>
-          <li>beacon.episode.number</li>
-          <li>beacon.episode.seasonNumber</li>
-          <li>beacon.episode.serieName</li>
+          <li><code>beacon.episode.number</code></li>
+          <li><code>beacon.episode.seasonNumber</code></li>
+          <li><code>beacon.episode.serieName</code></li>
         </ul>
       </li>
+      <li>
+        <p>Return to Brightcove Beacon and ingest your video episodes.</p>
+      </li>
     </ol>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Relationship">Relationship</h2>
     <p>
       The following diagram shows the relationship between a series and its
       seasons and episodes.
@@ -508,10 +511,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         alt=""
       />
     </figure>
-    <p>
-      The rest of this document will provide details on how to complete each of
-      the three steps mentioned above.
-    </p>
   </section>
 
   <section class="bcls-section">
@@ -617,7 +616,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 <tr>
                     <td>Portrait Poster</td>
                     <td>
-                        Poster image (2:3) <table>
+                        <p>JPEG image (2:3)</p> 
+                        <table>
                             <tr>
                                 <td>Minimum</td>
                                 <td>Width: 1000px</td>
@@ -634,7 +634,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 <tr>
                     <td>Landscape Poster</td>
                     <td>
-                        Landscape image (16:9) <table>
+                      <p>JPEG image (16:9)</p>
+                        <table>
                             <tr>
                                 <td>Minimum</td>
                                 <td>Width: 1000px</td>
@@ -651,13 +652,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 <tr>
                     <td>Thumbnail</td>
                     <td>
-                        Thumbnail image (4:3) 
+                      JPEG image (4:3) 
                     </td>
                 </tr>
                 <tr>
                     <td>Wide Banner</td>
                     <td>
-                        Banner image (21:9) 
+                      JPEG image (21:9) 
                     </td>
                 </tr>
             </tbody>
@@ -901,7 +902,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 <tr>
                     <td>Portrait Poster</td>
                     <td>
-                        Poster image (2:3) <table>
+                        <p>JPEG image (2:3)</p> 
+                        <table>
                             <tr>
                                 <td>Minimum</td>
                                 <td>Width: 1000px</td>
@@ -918,7 +920,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 <tr>
                     <td>Landscape Poster</td>
                     <td>
-                        Landscape image (16:9) <table>
+                      <p>JPEG image (16:9)</p>
+                        <table>
                             <tr>
                                 <td>Minimum</td>
                                 <td>Width: 1000px</td>
@@ -935,13 +938,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 <tr>
                     <td>Thumbnail</td>
                     <td>
-                        Thumbnail image (4:3) 
+                      JPEG image (4:3) 
                     </td>
                 </tr>
                 <tr>
                     <td>Wide Banner</td>
                     <td>
-                        Banner image (21:9) 
+                      JPEG image (21:9) 
                     </td>
                 </tr>
             </tbody>
@@ -1094,30 +1097,75 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="Ingesting_episodes">Ingesting episodes</h2>
     <p>
-      As you have seen, creating the series and associated seasons is done in
-      Brightcove Beacon. Creation of episodes for the series is done in Video
+      While creating the series and associated seasons is done in
+      Brightcove Beacon, the creation of episodes for the series is done in Video
       Cloud Studio. You will assign values about the series and seasons in
       custom fields for each episode video, then ingest those videos into
-      Brightcove Beacon. If you have not created the custom fields in Video
-      Cloud Studio, see the
-      <a href="/syncing-with-video-cloud/vc-custom-fields.html"
-        >Creating Video Cloud Custom Fields</a
-      >
-      document. To ingest episodes, follow these steps:
+      Brightcove Beacon.
     </p>
-    <aside class="bcls-aside bcls-aside--information language-editable">
-      These steps assume you have already uploaded your episode videos to Video
-      Cloud.
-    </aside>
-    <ol class="bcls-tasklist-restart">
+    <aside  class="bcls-aside bcls-aside--tip language-editable">Remember, the truth of Brightcove Beacon episode content resides in Video Cloud. Any changes you make to episodes in Brightcove Beacon will be overwritten when you ingest content from Video Cloud.</aside>
+   
+    <h3>Prerequisites</h3>
+    <p>Before continuing with the steps below, make sure that you have completed the following:</p>
+    <ol  class="bcls-tasklist-restart">
       <li>Log in to Video Cloud Studio.</li>
+      <li>
+        <p>From the dropdown menu at the top of the page, select
+        <strong>UPLOAD</strong>.</p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/series-seasons-episodes/upload-module.png"
+            alt="Upload module"
+          />
+        </figure>
+      </li>
+      <li>Upload your episode videos.</li>
+      <li>
+        <p>From the dropdown menu at the top of the page, select
+        <strong>MEDIA</strong>.</p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/series-seasons-episodes/media-module.png"
+            alt="Media module"
+          />
+        </figure>
+      </li>
+      <li>Update your episode video images as specified in the <a href="/references/image-requirements.html">Images and Their Specifications</a> document.</li>
+      <li>
+        <p>In the navigation header, click <strong>ADMIN</strong> and then <strong>Video Fields</strong>.</p>
+        <aside class="bcls-aside bcls-aside--information language-editable">
+          You must be an account administrator to access the <strong>ADMIN</strong> menu.
+        </aside>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/series-seasons-episodes/video-fields.png"
+            alt="Video fields"
+          />
+        </figure>
+      </li>
+      <li>Create the required custom fields needed to ingest videos to Brightcove Beacon. For details, see the <a href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a> document.</li>
+    </ol>
+    <h3>Steps</h3>
+    <p>To ingest episode videos into Brightcove Beacon, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Return to Video Cloud Studio.</li>
       <li>
         From the dropdown menu at the top of the page, select
         <strong>MEDIA</strong>.
       </li>
       <li>
-        Click on the title of one of the episode videos to enter the video's
-        properties page.
+        <p>Click on the title of one of the episode videos to enter the video's
+        properties page.</p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/series-seasons-episodes/video-link.png"
+            alt="Video link"
+          />
+        </figure>
       </li>
       <li>
         Scroll down until you see on the right-hand side the
@@ -1151,8 +1199,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         icon) in the top menu.
       </li>
       <li>
-        Be sure the <strong>Ingestion</strong> option is selected on the left
-        menu.
+        <p>Be sure the <strong>Ingestion</strong> option is selected on the left
+        menu.</p>
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/series-seasons-episodes/beacon-ingest.png"
+            alt="Brightcove Beacon ingestion"
+          />
+        </figure>
       </li>
       <li>
         Click the <strong>Update Brightcove Videos</strong> button to ingest the
@@ -1194,7 +1249,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 09 Sep 2020
+  Page last updated on 14 Sep 2020
 </div>
 
 

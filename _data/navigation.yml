@@ -30,7 +30,7 @@
 - section:
   name: Using Brightcove Beacon
   url: /using-brightcove-beacon/index.html
-  icon: '<img src="https://learning-services-media.brightcove.com/doc-assets/site-assets/images/site/product-logos/beacon-nut.svg">'
+  icon: '<img src="https://support.brightcove.com/site-assets/images/site/product-logos/beacon-nut.svg">'
   docs:
     - name: Adding a Carousel to a Page
       url: /using-brightcove-beacon/adding-to-page.html

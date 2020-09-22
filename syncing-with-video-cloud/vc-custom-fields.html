@@ -521,9 +521,18 @@ parent: Syncing with Video Cloud
             For instance, you may need a set to define your advertising used in videos, and another to define specials for a holiday, like New Years.
         </p>
         <p>
-            For a specific example of using rights management fields, specifically when using
-            a subscription package, see the <a href="/using-brightcove-beacon/using-subscription-package.html#Understanding_the_rights_management_custom_fields">Understanding the rights management custom fields</a> section of the <strong>Using a Subscription Package</strong> document.
+            A specific example will help clarify the use of these fields. The following screenshot shows setting Server-Side Ad Insertion (SSAI) being used on a video from Video Cloud.
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/syncing-with-vc/vc-custom-fields/rights-mamagement-example-avod.png" alt="">
+            </figure>
+            You can learn the following from this example:
         </p>
+        <ul>
+            <li>Not all the rights management fields in a group must be be assigned values. In this case, only the <em>beacon.rights.&lt;counter&gt;.adConfiguration</em> and <em>beacon.rights.&lt;counter&gt;.type</em> are used.</li>
+            <li>You can use the SSAI configuration ID created in Studio in the Brightcove Beacon custom fields.</li>
+            <li>The counter value for a set of rights management fields can start at 0 (highlighted in yellow).</li>
+            <li>Although not directly visible in this screenshot, but true, is that the Video Cloud SSAI configuration will be ingested into Brightcove Beacon.</li>
+        </ul>
         <p>Note that no fields you create will need to have the <strong>Make this Field Required</strong> checkbox checked.</p>
         <p>
             The following table displays custom Video Cloud fields that you MAY have to create based on your implementation.

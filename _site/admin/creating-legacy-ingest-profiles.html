@@ -1,31 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="robots" content="noindex,nofollow"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  
-  <title>Configuring Language Settings</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
-  <link rel="stylesheet" href="/assets/css/local.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
-  <script src="/assets/js/sajari-head.js"></script>
-</head>
+    <title>Creating Legacy Ingest Profiles</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://support.brightcove.com/site-assets/css/site/prism.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://support.brightcove.com/site-assets/css/site/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://support.brightcove.com/site-assets/css/site/landing-page.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://support.brightcove.com/site-assets/css/site/tabs.css"
+    />
+    <link rel="stylesheet" href="/assets/css/local.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/381443caa8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+    <script src="/assets/js/sajari-head.js"></script>
+  </head>
 
-<body class="body">
+  <body class="body"></body>
+</html>
 
 <header>
   <div class="div-header">
@@ -122,7 +150,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       <li class="breadcrumb-item"><a href="/admin/">Administering Accounts</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Configuring Language Settings</li>
+      <li class="breadcrumb-item active" aria-current="page">Creating Legacy Ingest Profiles</li>
     </ol>
   </nav>
 </header>
@@ -432,43 +460,71 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
 <article class="bcls-article">
-  <h1>Configuring Language Settings</h1>
-  <summary>In this topic you will learn how to define a primary metadata language and add additional metadata languages that are supported.</summary>
+  <h1>Creating Legacy Ingest Profiles</h1>
+  <summary>This topic provides an overview of how to create custom ingest profiles for use with Legacy transcoding.</summary>
   <section class="bcls-section">
-    <p>The Language Settings is where you define a Primary Language and then add and manage additional metadata languages. The Primary Language is the language your account is currently using for video metadata. Before adding additional languages to your account, your existing metadata will be associated with the language you define as the Primary Language. The Primary Language is what is initially displayed when you edit video properties in the Media module. </p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/language-define.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="primary">Setting a Primary Language</h2>
-    <p>To set the Primary Language:</p>
+    <p>The Ingest Profiles administration page can be used to create new legacy ingest profiles. Ingest profiles are defined using JSON. When creating a new legacy profile, it is helpful to review the <a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">Standard Ingest Profiles for Legacy Transcoding</a> document and locate a profile similar to what you need. Then, in Studio, you can easily duplicate the profile and then edit it with your changes.</p>
+    <p class="language-editable">Note: For information on creating ingest profiles that use DRM, see the <a href="https://general.support.brightcove.com/general/mpeg-dash-video.html">MPEG-DASH Video</a> developer document.</p>
+    <p class="language-editable">Note: Each profile can create a maximum of 25 renditions. &nbsp;Poster and thumbnail images do count towards the maximum of 25.&nbsp;</p>
+    <p>To create a new legacy ingest profile:</p>
     <ol class="bcls-tasklist-restart">
-      <li class="language-editable">Login to Beacon Studio.</li>
-      <li class="language-editable">In the navigation header, click the Administration icon (<img class="bcls-image--no-border" alt="" src="/assets/images/admin/icon-gear.png" />) and then <strong>Language Settings</strong>. Note that you must be an account administrator to access to the Administration menu.</li>
-      <li>Enter your primary language. As you type, a list of matching languages will appear.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/language-primary-list.png" /></figure>
+      <li class="language-editable">In the navigation header, click the Administration icon (<img class="bcls-image--no-border" alt="" src="/assets/images/admin/icon-gear.png" />) and then <strong>Ingest Profiles</strong>. Note that you must be an account administrator to access to the Administration menu.</li>
+      <li class="language-editable">Locate a legacy profile to duplicate. Click the profile name to open the profile editor.</li>
+      <li class="language-editable">Click <strong>Duplicate</strong>. The profile editor will open with the new profile.</li>
+      <li class="language-editable">Scroll to the top of the profile. Edit the <code><strong>name</strong></code> element to give the profile a meaningful name. This name will be displayed inside Video Cloud Studio.</li>
+      <li class="language-editable">Edit the <code><strong>description</strong></code> element to give the profile a meaningful description.
+        <figure class="bcls-figure"><img alt="" src="/assets/images/admin/ingest-legacy-edit-profile-name.png" /></figure>
       </li>
-      <li>Click on a language to select it.</li>
-      <li>Click <strong>Save Language</strong>.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/language-primary-saved.png" /></figure>
-      </li>
+      <li class="language-editable">Edit the rendition information as needed. The default size for the poster and thumbnail images is located at the end of the profile.</li>
+      <li class="language-editable">Click <strong>Save</strong>.</li>
     </ol>
-    To change the Primary Language, click on the language, select a new language and then click <strong>Save</strong>.</section>
-  <section class="bcls-section">
-    <h2 id="add_languages">Adding additional languages</h2>
-    <p>After a Primary Language is saved, additional metadata languages can be added. By adding additional languages, you will be able to enter additional, multi-lingual metadata in the Media module. To add additional languages, follow these steps.</p>
-    <ol class="bcls-tasklist-restart">
-      <li class="language-editable">Click <strong>Add Language</strong>.</li>
-      <li class="language-editable">Enter your  language. As you type, a list of matching languages will appear.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/language-add-additional.png" /></figure>
-      </li>
-      <li>Click on a language to select it.</li>
-      <li>Click <strong>Save Language</strong>. The language will be added to the Additional Languages  table.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/language-additional-table.png" /></figure>
-      </li>
-      <li>Click <strong>Add Language</strong> to add additional languages as needed.</li>
-    </ol>
-    <p>To edit the language name (as it will appear in the Media module), click on it, make any changes and then click <strong>Save</strong>. To delete a language, click the delete icon (<img class="bcls-image--no-border" alt="" src="/assets/images/admin/icon-delete.png" />).</p>
-    <aside class="bcls-aside bcls-aside--information">Note: If you delete a language that is in use, all metadata associated with the language will be hidden. To restore the associated metadata, add the language again.</aside>
+    <div class="BCL-subsection">
+      <h3>Adding a watermark to a profile</h3>
+      <p>A watermark can be added to each rendition by adding the <code>watermarks</code> element to each <code>rendition</code>:</p>
+      <pre>
+       watermarks": [{ "y": -20, "x": -10, "width": "20%", "url": "http://www.mysite.com/companylogo.png" }]
+       </pre>
+      <p>The <code>watermarks</code> element has the following parameters.</p>
+      <table class="bcls-table">
+        <thead class="bcls-table__head">
+          <tr>
+            <th width="13%">Parameter</th>
+            <th width="14%">Type</th>
+            <th width="73%">Description</th>
+          </tr>
+        </thead>
+        <tbody class="bcls-table__body">
+          <tr>
+            <td class="language-editable"><code>url</code></td>
+            <td class="language-editable">string</td>
+            <td class="language-editable">URL for the watermark image</td>
+          </tr>
+          <tr>
+            <td class="language-editable"><code>width</code></td>
+            <td class="language-editable">string</td>
+            <td class="language-editable">width in pixels or percent of frame width; e.g. 20 or 10%</td>
+          </tr>
+          <tr>
+            <td class="language-editable"><code>height</code></td>
+            <td class="language-editable">string</td>
+            <td class="language-editable">height in pixels or percent of frame width; e.g. 20 or 10%</td>
+          </tr>
+          <tr>
+            <td class="language-editable"><code>x</code></td>
+            <td class="language-editable">string</td>
+            <td class="language-editable">distance from left edge to center of image as pixels or percent of frame width; e.g. 20 or 10% (use negative values like -10 to position the watermark relative to the right edge)</td>
+          </tr>
+          <tr>
+            <td class="language-editable"><code>y</code></td>
+            <td class="language-editable">string</td>
+            <td class="language-editable">distance from top edge to center if image as pixels or percent of frame height; e.g. 20 or 10% (use negative values like -10 to position the watermark relative to the bottom edge)</td>
+          </tr>
+        </tbody>
+      </table>
+      &nbsp;
+      <p>A sample profile with a watermark is shown below:</p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/ingest-legacy-watermark.png" /></figure>
+    </div>
   </section>
 </article>
 

@@ -21,25 +21,42 @@ parent: References
                     </figure>
                 </li>
                 <li>Click the <strong>Duplicate</strong> button.</li>
-                <li>Locate where the <strong>thumbnail</strong> image is defined. The exact JSON will look slightly different depending on the profile you have duplicated.</li>
-                <li>Alter the width and height to represent the portrait sized image you will be uploading. The maximums, as shown below are width of 2000px and a height of 3000px. Two examples of altered JSON are shown here (remember, the JSON will look slightly different depending on the profile you are updating).
+                <li>Locate where the <strong>images</strong> are defined. The exact JSON may look slightly different than what is shown below, depending on the profile you have duplicated.</li>
+                <li>Alter the width and height for both the poster and thumbnail images as shown:.
+                    <h4>Old Settings</h4>
                     <pre class="line-numbers">< class="language-json">{
   "media_type": "image",
   "format": "jpg",
+  "label": "poster",
+  <span class="bcls-highlight">"width": 1280,
+  "height": 720,</span>
+  "id": "559a8b0ee4b07cbb40be7d22"
+},
+{
+  "media_type": "image",
+  "format": "jpg",
   "label": "thumbnail",
-  <span class="bcls-highlight">"width": 2000,
-  "height": 3000,</span>
+  <span class="bcls-highlight">"width": 160,
+  "height": 90,</span>
   "id": "559a8b0ee4b07cbb40be7d23"
-}
-
-
-"images": [{
+}</code></pre>
+                    <h4>New Settings</h4>
+                    <pre class="line-numbers">< class="language-json">{
+  "media_type": "image",
+  "format": "jpg",
+  "label": "poster",
+  <span class="bcls-highlight">"width": 4000,
+  "height": 2250,</span>
+  "id": "559a8b0ee4b07cbb40be7d22"
+},
+{
+    "media_type": "image",
+    "format": "jpg",
     "label": "thumbnail",
-    <span class="bcls-highlight">"height": 3000,
-    "width": 2000</span>
-  },
-  ...
-]</code></pre>
+    <span class="bcls-highlight">"width": 3000,
+    "height": 2000,</span>
+    "id": "559a8b0ee4b07cbb40be7d23"
+}</code></pre>
                 </li>
                 <li>Click <strong>Save</strong>.</li>
                 <li>Then click the <strong>Make this my default profile</strong> link.

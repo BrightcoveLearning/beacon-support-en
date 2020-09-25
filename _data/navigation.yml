@@ -148,6 +148,12 @@
     - name: 'Product Updates'
       url: '/references/product-updates.html'
 - section:
+  name: Training
+  url: /training/index.html
+  docs:
+    - name: Using Video Cloud Videos/Custom Fields
+      url: /training/training-demand-custom-fields.html
+- section:
   name: 'Support'
   url: '/support/index.html'
   icon: '<i class="far fa-question-circle"></i>'

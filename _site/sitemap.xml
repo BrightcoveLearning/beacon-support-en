@@ -588,6 +588,24 @@
       
     
       <url>
+        <loc>https://beacon.support.brightcove.com/training/index.html</loc>
+        <lastmod>2020-09-25</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+      </url>
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/training/training-demand-custom-fields.html</loc>
+          
+            <lastmod>2020-09-25</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+    
+      <url>
         <loc>https://beacon.support.brightcove.com/support/index.html</loc>
         <lastmod>2020-09-25</lastmod>
         <changefreq>daily</changefreq>

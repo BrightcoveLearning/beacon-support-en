@@ -14,9 +14,9 @@ layout: staging
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/ingest-profile-list.png" /></figure>
     <p>Your Video Cloud account will be configured with one or more transcoding options. All Video Cloud accounts are configured with a default set of ingest profiles which can't be edited or deleted. These are marked with a <strong>Type</strong> of <strong>Standard VOD</strong> in the Studio. The <strong>Profile Version</strong> displays the type of transcoding that is used with the profile. For specific details on the renditions provided with the Brightcove supplied ingest profiles, see the appropriate document:</p>
     <ul>
-      <li class="language-editable"><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">Legacy</a></li>
-      <li class="language-editable"><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Dynamic Delivery</a></li>
-      <li class="language-editable"><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Context Aware</a></li>
+      <li ><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html">Legacy</a></li>
+      <li ><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Dynamic Delivery</a></li>
+      <li ><a href="https://studio.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Context Aware</a></li>
     </ul>
   </section>
   <section class="bcls-section">
@@ -24,32 +24,32 @@ layout: staging
     <p>The Ingest Profiles administration page can be used to create new ingest profiles. Ingest profiles are defined using JSON.</p>
     <p>To create a new context aware ingest profile:</p>
     <ol class="bcls-tasklist-restart">
-      <li class="language-editable">In the navigation header, click the Administration icon (<img class="bcls-image--no-border" alt="" src="/assets/images/admin/icon-gear.png" />) and then <strong>Ingest Profiles</strong>. Note that you must be an account administrator to access to the Administration menu.</li>
-      <li class="language-editable">Click <strong>New Profile &gt; Context Aware</strong>. The profile editor will open.</li>
-      <li class="language-editable">Enter a <strong>Name</strong>, <strong>Display Name</strong> and <strong>Description</strong> for the profile.</li>
-      <li class="language-editable">Decide whether to <strong>Store master files</strong>. Storing the master keeps a copy of the master file and provides the ability for the video to be retranscoded in the future without the need to upload it again. For additional information on archiving masters, see the <a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">Archiving Masters</a> document.</li>
-      <li class="language-editable">Select a setting for the images:
+      <li >In the navigation header, click the Administration icon (<img class="bcls-image--no-border" alt="" src="/assets/images/admin/icon-gear.png" />) and then <strong>Ingest Profiles</strong>. Note that you must be an account administrator to access to the Administration menu.</li>
+      <li >Click <strong>New Profile &gt; Context Aware</strong>. The profile editor will open.</li>
+      <li >Enter a <strong>Name</strong>, <strong>Display Name</strong> and <strong>Description</strong> for the profile.</li>
+      <li >Decide whether to <strong>Store master files</strong>. Storing the master keeps a copy of the master file and provides the ability for the video to be retranscoded in the future without the need to upload it again. For additional information on archiving masters, see the <a href="https://apis.support.brightcove.com/ingest-profiles/guides/archiving-masters.html">Archiving Masters</a> document.</li>
+      <li >Select a setting for the images:
         <ul>
-          <li class="language-editable"><strong>Capture images automatically at upload time</strong> - Video Cloud will capture poster and thumbnail images when the video is uploaded. Images are captured at the 50% point in the video.</li>
-          <li class="language-editable"><strong>Don't capture images; I'll upload or capture my own images</strong> - Poster and thumbnail images will be <a href="/media/capturing-poster-and-thumbnail-images.html">captured</a> or <a href="/media/uploading-poster-and-thumbnail-images.html">uploaded</a> using the Media module.</li>
+          <li ><strong>Capture images automatically at upload time</strong> - Video Cloud will capture poster and thumbnail images when the video is uploaded. Images are captured at the 50% point in the video.</li>
+          <li ><strong>Don't capture images; I'll upload or capture my own images</strong> - Poster and thumbnail images will be <a href="/media/capturing-poster-and-thumbnail-images.html">captured</a> or <a href="/media/uploading-poster-and-thumbnail-images.html">uploaded</a> using the Media module.</li>
         </ul>
       </li>
-      <li class="language-editable">Enter the <strong>Width</strong> and <strong>Height</strong> for the <strong>Poster</strong> and <strong>Thumbnail</strong> images.</li>
-      <li class="language-editable">Select a <strong>Minimum Resolution</strong> and <strong>Maximum Resolution</strong> by dragging the slider. This range will be used when creating renditions.
+      <li >Enter the <strong>Width</strong> and <strong>Height</strong> for the <strong>Poster</strong> and <strong>Thumbnail</strong> images.</li>
+      <li >Select a <strong>Minimum Resolution</strong> and <strong>Maximum Resolution</strong> by dragging the slider. This range will be used when creating renditions.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/ingest-cae-min-max-res.png" /></figure>
       </li>
-      <li class="language-editable">Select a <strong>Maximum Bitrate</strong>. Renditions above this bit rate will not be created regardless of the complexity of the content. A lower bitrate can help control costs around storage and bandwidth.
+      <li >Select a <strong>Maximum Bitrate</strong>. Renditions above this bit rate will not be created regardless of the complexity of the content. A lower bitrate can help control costs around storage and bandwidth.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/ingest-cae-max-bitrate.png" /></figure>
       </li>
-      <li class="language-editable">Select the <strong>Required Output Resolutions</strong>. Required resolutions will not be created if they are higher than the source file's resolution.</li>
-      <li class="language-editable">Adjust the <strong>Encoding Quality Control</strong> to adjust the video quality and bandwidth use. If you are more concerned about bandwidth usage and wish to optimize for lowest bandwidth consumption, move the slider to the left. If you are more concerned about quality and are okay with potentially using more bandwidth to deliver better picture quality, move the slider to the right.
+      <li >Select the <strong>Required Output Resolutions</strong>. Required resolutions will not be created if they are higher than the source file's resolution.</li>
+      <li >Adjust the <strong>Encoding Quality Control</strong> to adjust the video quality and bandwidth use. If you are more concerned about bandwidth usage and wish to optimize for lowest bandwidth consumption, move the slider to the left. If you are more concerned about quality and are okay with potentially using more bandwidth to deliver better picture quality, move the slider to the right.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/ingest-cae-encoding-quality.png" /></figure>
       </li>
-      <li class="language-editable">Select a <strong>Progressive MP4 Rendition</strong> to create. At least one MP4 rendition is required to post videos to social media accounts using the Social module or to allow video downloads. Select <strong>None</strong> if an MP4 rendition should not be created.
+      <li >Select a <strong>Progressive MP4 Rendition</strong> to create. At least one MP4 rendition is required to post videos to social media accounts using the Social module or to allow video downloads. Select <strong>None</strong> if an MP4 rendition should not be created.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/ingest-cae-mp4.png" /></figure>
       </li>
-      <li class="language-editable">Select the <strong>Audio Renditions</strong> that should be created.</li>
-      <li class="language-editable">Click <strong>Save</strong> to save the new profile.</li>
+      <li >Select the <strong>Audio Renditions</strong> that should be created.</li>
+      <li >Click <strong>Save</strong> to save the new profile.</li>
     </ol>
     <aside class="bcls-aside bcls-aside--information language-editable">Note that if you require renditions with specific resolutions, it is possible to require that in the profile, but not in Studio. Instead, you will need to use the <a href="http://docs.brightcove.com/ingest-profiles-api/v1/doc/index.html#operation/CreateIngestProfile">Ingest Profiles API</a>.</aside>
     <aside class="bcls-aside bcls-aside--information">Note that requiring renditions is <em>not</em> recommended, as it decreases the efficiency of Context Aware Encoding. If you have several required resolutions, CAE may not be the right option for you.</aside>
@@ -59,11 +59,11 @@ layout: staging
     <p>If you need to create a profile that is similar to an existing profile, you can duplicate an existing profile and then edit it to make the needed changes.</p>
     <p>To duplicate an ingest profile:</p>
     <ol class="bcls-tasklist-restart">
-      <li class="language-editable">In the navigation header, click the Administration icon (<img class="bcls-image--no-border" alt="" src="/assets/images/admin/icon-gear.png" />) and then <strong>Ingest Profiles</strong>.</li>
-      <li class="language-editable">Click on the ingest profile to duplicate.</li>
-      <li class="language-editable">Click <strong>Duplicate</strong>.</li>
-      <li class="language-editable">Use the Profile Editor to edit the profile name and definition.</li>
-      <li class="language-editable">Click <strong>Save</strong>.</li>
+      <li >In the navigation header, click the Administration icon (<img class="bcls-image--no-border" alt="" src="/assets/images/admin/icon-gear.png" />) and then <strong>Ingest Profiles</strong>.</li>
+      <li >Click on the ingest profile to duplicate.</li>
+      <li >Click <strong>Duplicate</strong>.</li>
+      <li >Use the Profile Editor to edit the profile name and definition.</li>
+      <li >Click <strong>Save</strong>.</li>
     </ol>
   </section>
   <section class="bcls-section">
@@ -71,10 +71,10 @@ layout: staging
     <p>The Ingest Profiles administration page can be used to edit ingest profiles. Note that the default set of ingest profiles (marked <strong>Standard VOD</strong>) can't be edited.</p>
     <p>To edit an ingest profile:</p>
     <ol class="bcls-tasklist-restart">
-      <li class="language-editable">In the navigation header, click the Administration icon (<img class="bcls-image--no-border" alt="" src="/assets/images/admin/icon-gear.png" />) and then <strong><strong>Ingest Profiles</strong></strong>.</li>
-      <li class="language-editable">Click on the ingest profile to edit.</li>
-      <li class="language-editable">Use the Profile Editor to edit the profile definition.</li>
-      <li class="language-editable">Click <strong>Save</strong>.</li>
+      <li >In the navigation header, click the Administration icon (<img class="bcls-image--no-border" alt="" src="/assets/images/admin/icon-gear.png" />) and then <strong><strong>Ingest Profiles</strong></strong>.</li>
+      <li >Click on the ingest profile to edit.</li>
+      <li >Use the Profile Editor to edit the profile definition.</li>
+      <li >Click <strong>Save</strong>.</li>
     </ol>
   </section>
   <section class="bcls-section">
@@ -82,9 +82,9 @@ layout: staging
     <p>The Ingest Profiles administration page can be used to delete ingest profiles that are no longer needed. Note that the default set of ingest profiles (marked <strong>Standard VOD</strong>) can't be deleted but <a href="#hide">they can be hidden</a> if they are not needed.</p>
     <p>To delete an ingest profile:</p>
     <ol class="bcls-tasklist-restart">
-      <li class="language-editable">In the navigation header, click the Administration icon (<img class="bcls-image--no-border" alt="" src="/assets/images/admin/icon-gear.png" />) and then <strong><strong>Ingest Profiles</strong></strong>.  The Ingest Profiles administration page will open displaying the ingest profiles that have been created for your account.</li>
-      <li class="language-editable">Click the delete icon (<img alt="" src="/assets/images/admin/icon-delete-green-outline.png" />) next to the ingest profile or click the profile name and then click the <strong>Delete </strong>button.</li>
-      <li class="language-editable">Confirm the deletion by clicking <strong>Delete Profile</strong>.</li>
+      <li >In the navigation header, click the Administration icon (<img class="bcls-image--no-border" alt="" src="/assets/images/admin/icon-gear.png" />) and then <strong><strong>Ingest Profiles</strong></strong>.  The Ingest Profiles administration page will open displaying the ingest profiles that have been created for your account.</li>
+      <li >Click the delete icon (<img alt="" src="/assets/images/admin/icon-delete-green-outline.png" />) next to the ingest profile or click the profile name and then click the <strong>Delete </strong>button.</li>
+      <li >Confirm the deletion by clicking <strong>Delete Profile</strong>.</li>
     </ol>
   </section>
   <section class="bcls-section">
@@ -92,9 +92,9 @@ layout: staging
     <p>All Brightcove Beacon accounts have a default ingest profile. The default profile is indicated with <img alt="" src="/assets/images/admin/ingest-uploading-default-button.png" /> next to the profile name.</p>
     <p>To change the default ingest profile for your account:</p>
     <ol class="bcls-tasklist-restart">
-      <li class="language-editable">In the navigation header, click the Administration icon (<img class="bcls-image--no-border" alt="" src="/assets/images/admin/icon-gear.png" />) and then <strong><strong>Ingest Profiles</strong></strong>.  The Ingest Profiles administration page will open displaying the ingest profiles that have been created for your account.</li>
-      <li class="language-editable">Click the ingest profile name for the profile you want to set as the default.</li>
-      <li class="language-editable">Click <strong>Make this my default profile</strong> link at the top of the page.</li>
+      <li >In the navigation header, click the Administration icon (<img class="bcls-image--no-border" alt="" src="/assets/images/admin/icon-gear.png" />) and then <strong><strong>Ingest Profiles</strong></strong>.  The Ingest Profiles administration page will open displaying the ingest profiles that have been created for your account.</li>
+      <li >Click the ingest profile name for the profile you want to set as the default.</li>
+      <li >Click <strong>Make this my default profile</strong> link at the top of the page.</li>
     </ol>
   </section>
   <section class="bcls-section">

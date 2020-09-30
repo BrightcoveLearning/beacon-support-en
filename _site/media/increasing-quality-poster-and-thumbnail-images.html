@@ -470,7 +470,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <li>Open the Media module.</li>
         <li>Click on a video to open the video properties.</li>
         <li>In the <strong>IMAGES</strong> section, hover over the poster/thumbnail image.</li>
-        <li>Click the view icon (<img alt="" src="/assets/images/media/view-icon.png" />) to open the image in a new browser tab.</li>
+        <li>Click the view icon (<img alt="" src="/assets/images/media/icon-eye.png" />) to open the image in a new browser tab.</li>
       </ol>
       <p>You may wish to use one of the many tools available that can give you the exact dimensions of the image. Remember, if any of your players are larger than the size of the poster, the image will be upscaled.</p>
     </div>
@@ -487,7 +487,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li>For <strong>Dynamic Delivery</strong> and <strong>Context-Aware</strong> profiles, image sizes are listed in the <strong>Images</strong> section of the profile definition.</li>
           </ul>
           <p>The following example is from a Dynamic Delivery Profile Version.</p>
-          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node16671-profile-editor.png" /></figure>
+          <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/increase-quality-profile-editor.png" /></figure>
         </li>
         <li>Check the poster and image sizes. Remember, if any of your players are larger than the size of the poster, the image will be upscaled.</li>
       </ol>
@@ -515,7 +515,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>If you want to override this behavior and have Video Cloud retain actual image dimensions, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
       <li><a href="/admin/managing-ingest-profiles.html">Create a new custom ingest profile</a> for your account (or modify an existing custom profile)</li>
-      <li>Include image renditions for the post and thumbnail that have <strong>exactly</strong> these <code>width</code> and <code>height</code> values:
+      <li>Include image renditions for the poster and thumbnail that have <strong>exactly</strong> these <code>width</code> and <code>height</code> values:
         <pre class="line-numbers">
 <code class="language-json">{
 "media_type": "image",
@@ -550,7 +550,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <div id="uploadnew" class="BCL-subsection">
       <h3>Uploading a new poster image</h3>
       <p>A new, properly sized poster image can be uploaded using the Media module. When a new poster image is uploaded, the image will be transcoded using the <strong>default</strong> ingest profile for the account. You should ensure that the default ingest profile has the video thumbnail image sized appropriately.</p>
-      <p>To view the default ingest profile, when viewing the list of ingest profiles, look for the marked with the <img alt="" src="/assets/images/media/node16671-default.png" /> indicator.</p>
+      <p>To view the default ingest profile, when viewing the list of ingest profiles, look for the marked with the <img alt="" src="/assets/images/media/increase-quality-default.png" /> indicator.</p>
     </div>
   </section>
 </article>

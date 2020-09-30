@@ -12,11 +12,11 @@ parent: Using Brightcove Beacon
         <h2 id="Types_of_pages">Types of pages</h2>
         <p>When you create or edit a page, the <strong>Page Type</strong> selection offers the following:</p>
         <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/using-bcb/non-configurable/page-types.png" alt="page-types">
+            <img class="bcls-image" src="/assets/images/using-bcb/introducing-pages/page-types.png" alt="page-types">
         </figure>
         <h3>Page categories</h3>
-        <p>The page types can be grouped into two categories. The categories and details for each follow:</p>
-        <ul>
+        <p>The page types can be grouped into three categories. The categories and details for each follow:</p>
+        <ol>
             <li>Non-configurable
                 <ul>
                     <li>A page you choose to include in your app, or not.</li>
@@ -53,21 +53,29 @@ parent: Using Brightcove Beacon
                         </div>
                     </div>
                 </li>
-            </ul>
-            <li>screen-hero_image</li>
-            <ul>
-                <li>A special type of screen page, but permits an image behind the video content.</li>
-                <li>The "hero" area at the top of the screen is meant to be non-covered and not configurable:
-                    <div class="row">
-                        <div class="column">
-                            <figure class="bcls-figure">
-                                <img class="bcls-image" src="/assets/images/using-bcb/introducing-pages/hero-image.png" alt="featured videos">
-                            </figure>
+                <li>screen-hero_image</li>
+                <ul>
+                    <li>A special type of screen page, but permits an image behind the video content.</li>
+                    <li>Need to upload both a landscape and poster orientation image for different platforms, for example, web (landscape) and mobile (portrait).</li>
+                    <li>The <strong>"hero"</strong> area at the top of the screen is meant to be non-covered and is not configurable:
+                        <div class="row">
+                            <div class="column">
+                                <figure class="bcls-figure">
+                                    <img class="bcls-image" src="/assets/images/using-bcb/introducing-pages/hero-image.png" alt="featured videos">
+                                </figure>
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
+                </ul>
             </ul>
-        </ul>
+            <li>Redirect</li>
+            <ul>
+                <li>Redirect page types are only for the web app.</li>
+                <li><code>redirect-blank</code> opens a web page in a new tab.</li>
+                <li><code>redirect-self</code> opens a web page in the same tab.</li>
+                <li>Specify the URL on the <strong>External Redirect tab.</strong></li>
+            </ul>
+        </ol>
 
         <h3>Page type definitions</h3>
         <p>The following table displays the page types, including a description and its use.</p>
@@ -144,7 +152,7 @@ parent: Using Brightcove Beacon
                 </tr>
                 <tr>
                     <td>my_stuff-favourites</td>
-                    <td>Contains the videos marked by the user as a favorite</td>
+                    <td>Contains the videos marked by the user as a favorite.</td>
                     <td>No</td>
                     <td>Recommended</td>
                 </tr>
@@ -155,10 +163,28 @@ parent: Using Brightcove Beacon
                     <td>Recommended</td>
                 </tr>
                 <tr>
+                    <td>redirect-blank</td>
+                    <td>Web only; when menu option clicked redirect occurs to a new tab.</td>
+                    <td>No</td>
+                    <td>Optional</td>
+                </tr>
+                <tr>
+                    <td>redirect-self</td>
+                    <td>Web only; when menu option clicked redirect occurs to same tab.</td>
+                    <td>No</td>
+                    <td>Optional</td>
+                </tr>
+                <tr>
                     <td>screen-</td>
                     <td>Displays the grouped videos in carousels or tabs. Used to organize the contents of your app.</td>
                     <td>Yes</td>
                     <td>Required</td>
+                </tr>
+                <tr>
+                    <td>screen-hero_image</td>
+                    <td>Special type of screen page where you can add an image behind the video content.</td>
+                    <td>Yes</td>
+                    <td>Optional</td>
                 </tr>
                 <tr>
                     <td>search-</td>

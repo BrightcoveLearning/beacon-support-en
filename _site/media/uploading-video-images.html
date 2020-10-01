@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   
-  <title>Managing Videos</title>
+  <title>Uploading Video Images</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -120,7 +120,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item active" aria-current="page">Managing Videos</li>
+      <li class="breadcrumb-item"><a href="/media/">Managing Videos</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Uploading Video Images</li>
     </ol>
   </nav>
 </header>
@@ -441,55 +443,48 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
 <article class="bcls-article">
-  <h1><i class="fas fa-film"></i> Managing Videos</h1>
-  <summary>
-    <p>Learn how to manage the videos in your account.</p>
-  </summary>
+  <h1>Uploading Poster and Thumbnail Images</h1>
+  <summary>In this topic you will learn how to upload video images using the Media module.</summary>
   <section class="bcls-section">
-    <table width="100%" border="0">
-      <tbody>
-        <tr>
-          <th width="50%" scope="col"> <h2>General Information</h2></th>
-          <th width="1%" scope="col">&nbsp;</th>
-          <th width="49%" scope="col"> <h2>Advanced Topics</h2></th>
-        </tr>
-        <tr>
-          <td valign="top"><ul>
-              <li><a href="/media/capturing-poster-and-thumbnail-images.html">Capturing Poster and Thumbnail Images</a></li>
-              <li><a href="/media/configuring-video-availability.html">Configuring Video Availability</a></li>
-              <li><a href="/media/creating-and-managing-playlists.html">Creating and Managing Playlists</a></li>
-              <li><a href="/media/editing-video-properties-using-media-module.html">Editing Video Properties</a></li>
-              <li><a href="/media/editing-video-properties-using-quick-edit.html">Editing Video Properties using Quick Edit</a></li>
-              <li><a href="/media/getting-started-media-module.html">Getting Started with the Media Module</a></li>
-              <li><a href="/media/how-search-videos-and-playlists-media-module.html">How to Search for Videos and Playlists</a></li>
-              <li><a href="/media/increasing-quality-poster-and-thumbnail-images.html">Increasing the Quality of Poster and Thumbnail Images</a></li>
-              <li><a href="/media/introduction-playlists.html">Introduction to Playlists</a></li>
-              <li><a href="/media/organizing-videos-using-folders.html">Organizing Videos Using Folders</a></li>
-              <li><a href="/media/overview-adding-captions-video.html">Overview: Adding Captions to a Video</a></li>
-              <li><a href="/media/publishing-videos-and-playlists.html">Publishing Videos and Playlists</a></li>
-              <li><a href="/media/replacing-video-source-file.html">Replacing a Video Source File</a></li>
-              <li><a href="/media/retranscoding-videos-using-media-module.html">Retranscoding Videos</a></li>
-              <li><a href="/media/setting-required-fields-videos.html">Setting Required Fields for Videos</a></li>
-              <li><a href="/media/uploading-video-images.html">Uploading Video Images</a></li>
-              <li><a href="/media/uploading-videos-remote-urls.html">Uploading Videos Using Remote URLs</a></li>
-              <li><a href="/media/uploading-videos-using-upload-module.html">Uploading Videos</a></li>
-            </ul></td>
-          <td>&nbsp;</td>
-          <td valign="top"><ul>
-              <li><a href="/media/adding-audio-tracks-videos-using-media-module.html">Adding Audio Tracks to Videos using the Media Module</a></li>
-              <li><a href="/media/adding-captions-videos-using-media-module.html">Adding Captions to Videos using the Media Module</a></li>
-              <li><a href="/media/adding-chapters-video.html">Adding Chapters to a Video</a></li>
-              <li><a href="/media/downloading-videos-video-cloud.html">Downloading Videos from Video Cloud</a></li>
-              <li><a href="/media/exporting-video-data.html">Exporting Video Data</a></li>
-              <li><a href="/media/media-sharing-using-media-module.html">Media Sharing using the Media Module</a></li>
-              <li><a href="/media/styling-captions.html">Styling Captions</a></li>
-              <li><a href="/media/working-cue-points-media-module.html">Working with Cue Points in the Media Module</a></li>
-              <li><a href="/media/working-multi-lingual-metadata.html">Working with Multi-Lingual Metadata</a></li>
-              <li><a href="/media/working-remote-asset-videos.html">Working with Remote Asset Videos</a></li>
-            </ul></td>
-        </tr>
-      </tbody>
-    </table>
+    <p>Videos in your Brightcove Beacon account have associated poster, thumbnail, portrait, wide and ultra wide images. These images allow viewers to pick which videos they want to see in a playlist or other listing of your content. Poster and thumbnail images can be seen in the following areas:</p>
+    <ul>
+      <li>In the Media module, the thumbnail image is displayed next to the video; the poster image will appear in the preview player on the video properties page</li>
+      <li>The thumbnail image will appear when publishing a playlist</li>
+      <li>The poster image is displayed in the playback area of the video player after the player loads and the video metadata is available; the poster will display until the viewer presses the play button</li>
+    </ul>
+    <p>For videos that are uploaded to Video Cloud, poster and thumbnail images are created automatically by taking a snapshot from the source video at the midway point. The size of the poster and thumbnail is based upon the dimensions specified in the ingest profile used when uploading the video. If you don't like the default images that were captured, you can upload other images or <a href="/media/capturing-poster-and-thumbnail-images.html">capture new images</a> to use as the poster and thumbnail.</p>
+    <p>When uploading custom poster and thumbnail images, we recommend:</p>
+    <ul>
+      <li><strong>Poster image</strong> - Recommended aspect ratio of 16:9 and a minimum width of 640px</li>
+      <li><strong>Thumbnail image</strong> - Recommended aspect ratio of 16:9 and a minimum width of 160px</li>
+      <li><strong>Wide image</strong> - Recommended aspect ratio of 16:9</li>
+      <li><strong>Portrait image</strong> - Recommended aspect ratio of 2:3</li>
+      <li><strong>Ultra Wide image</strong> - Recommended aspect ratio of 21:9
+        <aside class="bcls-aside bcls-aside--information">Note: Uploaded images should use the sRGB color format.</aside>
+      </li>
+    </ul>
+    <p>When you upload new poster and thumbnail images, the image dimensions will be based upon the image dimensions specified in the default ingest profile for the account. For information on increasing the quality of poster and thumbnail images, see <a href="/media/increasing-quality-poster-and-thumbnail-images.html">Increasing the Quality of Poster and Thumbnail Images</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="steps">Steps to upload new  images</h2>
+    <p>To upload a new image, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click <strong>Media</strong> in the navigation header to open the Media module.</li>
+      <li>Click the link for the video you want to edit.</li>
+      <li>Locate the <strong>Images</strong> section.</li>
+      <li>Hover over the appropriate image and click the upload button.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/upload-poster-edit-images.png" /></figure>
+      </li>
+      <li>Browse and select a new image. It may take a minute for the processing to complete and for the images to appear in the Media module.
+        <aside class="bcls-aside bcls-aside--information">Note: .png and .jpg images are supported.</aside>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Limitations">Limitations</h2>
+    <ul>
+      <li>The ingestion system does not allow concurrent jobs on the same video. Therefore, if you attempt to upload images while the video is being ingested or retranscoded, the image upload will fail.</li>
+    </ul>
   </section>
 </article>
 
@@ -497,13 +492,18 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </div>
     <div class="col-sm-2 right-side-bar">
       
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
     </div>
   </div>
 </div>
 
 <hr>
 <div class="last-updated">
-  Page last updated on 30 Sep 2020
+  Page last updated on 01 Oct 2020
 </div>
 
 

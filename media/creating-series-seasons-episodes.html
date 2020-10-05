@@ -38,11 +38,11 @@ layout: staging
         alt=""
       /> </figure>
       </li>
-      <li>The  Overview page will display.  The following details can be entered:
+      <li>The  Overview page will display.  Note, as you tab out of a field or press enter, any changes will be saved. The following details can be entered:
         <ul>
           <li><strong>Name</strong> - The identifier of the series; this is not a customer facing name</li>
-          <li><strong>Landscape, Portrait and Ultra Wide </strong>Images - Click the Upload new image link to upload an image to use based upon the following specifications:
-            <ul>
+          <li><strong>Landscape, Portrait and Ultra Wide </strong>Images - Click the <strong>Upload new image</strong> link to upload an image to use based upon the following specifications:
+<ul>
               <li><strong>Landscape</strong> - 16x9 aspect ration, minimum 2000px wide</li>
               <li><strong>Portrait</strong> - 2x3 aspect ration, minimum 500px wide</li>
               <li><strong>Ultra Wide</strong> - 21x9 aspect ration, minimum 2000px wide</li>
@@ -82,228 +82,75 @@ layout: staging
       /> </figure>
       </li>
     </ol>
-    <p> You have now created your series. The next step is to create one or more
-      seasons that belong to this series. The next section leads you through
-      that process. </p>
   </section>
   <section class="bcls-section">
     <h2 id="Creating_seasons">Creating seasons</h2>
     <p>To create a season, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Log in to Brightcove Beacon and select <strong>Programs</strong>.</li>
-      <li>In the left navigation, select <strong>Seasons</strong>.</li>
-      <li>Click the <strong>Add new season</strong> button.</li>
-      <li> On the <strong>Basic Data</strong> tab, fill in the following:
-        <table class="bcls-table">
-          <thead class="bcls-table__head">
-            <tr>
-              <th>Form Field Name</th>
-              <th>Description / Requirements</th>
-            </tr>
-          </thead>
-          <tbody class="bcls-table__body">
-            <tr>
-              <td>Select a Series</td>
-              <td> The dropdown will be populated with the series you have created.
-                Choose the series to which this season belongs. </td>
-            </tr>
-            <tr>
-              <td>Name</td>
-              <td> The identifier of the series, the customer facing name is
-                provided later in the <strong>Textual Data</strong> section </td>
-            </tr>
-            <tr>
-              <td>Season Number</td>
-              <td> This must be an integer number representing the season sequence
-                in the series. This number will be used when ingesting episode
-                videos from Video Cloud. </td>
-            </tr>
-            <tr>
-              <td>Production Year</td>
-              <td> The year the season was produced; this information will appear
-                in the the <strong>More Info</strong> screen. </td>
-            </tr>
-            <tr>
-              <td>Production Country</td>
-              <td> The country where the season is produced; this information will
-                appear in the the <strong>More Info</strong> screen. </td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>Click on the <strong>Textual Data</strong> tab.</li>
-      <li> Fill in the <em>Title</em>, <em>Description</em> and <em>Synopsis</em> for the season. This data will be displayed in the
-        Brightcove Beacon app.
-        <aside class="bcls-aside bcls-aside--tip language-editable"> For the season <em>Title</em>, you can enter a name like <em>Season 1</em>, but if a series has topics for distinct seasons
-          that may be a better choice. For instance, a series on the continents
-          where each season focuses on a continent, good names for the seasons
-          would be <em>Europe</em>, <em>Africa</em>, <em>Asia</em>, etc. </aside>
-      </li>
-      <li>Click on the <strong>Non-Textual Data</strong> tab.</li>
-      <li> For your season, supply an image for the following (matching the requirements below) :
+      <li>Log in to Brightcove Beacon.</li>
+      <li>In the left navigation, click <strong>Media</strong>.</li>
+      <li>Click <strong>All Series</strong>.</li>
+      <li>Locate the series to which the season will be added. Click the series title to open the series details.</li>
+      <li>On the series Overview page, click <strong>Create Season</strong>.</li>
+<li>Enter a <strong>Name</strong> for the season and click <strong>Save</strong>.
+        <figure class="bcls-figure"><img
+        class="bcls-image"
+        src="/assets/images/media/series-new-season.png"
+        alt=""
+      /> </figure>
+<li>The  Overview page will display.  Note, as you tab out of a field or press enter, any changes will be saved. The following details can be entered:
         <ul>
-          <li><strong>Portrait Poster</strong> (required)</li>
-          <li><strong>Landscape Poster</strong> (required)</li>
-          <li><strong>Thumbnail</strong></li>
-          <li><strong>Wide banner</strong></li>
+          <li><strong>Name</strong> - The identifier of the season; this is not a customer facing name</li>
+          <li><strong>Season Number</strong> - An integer number representing the season sequence
+          in the series.</li>
+          <li><strong>Landscape, Portrait and Ultra Wide </strong>Images - Click the <strong>Upload new image</strong> link to upload an image to use based upon the following specifications:
+<ul>
+              <li><strong>Landscape</strong> - 16x9 aspect ration, minimum 2000px wide</li>
+              <li><strong>Portrait</strong> - 2x3 aspect ration, minimum 500px wide</li>
+              <li><strong>Ultra Wide</strong> - 21x9 aspect ration, minimum 2000px wide</li>
+            </ul>
+          </li>
+          <li><strong>Title</strong> - Viewer facing name for the season (displayed in Beacon app)
+            <aside class="bcls-aside bcls-aside--tip language-editable">Note: For the season <em>Title</em>, you can enter a name like <em>Season 1</em>, but if a series has topics for distinct seasons
+          that may be a better choice. For example, a series on the continents
+          where each season focuses on a continent, good names for the seasons
+          would be <em>Europe</em>, <em>Africa</em>, <em>Asia</em>, etc. </aside></li>
+          <li><strong>Synopsis</strong> - Season synopsis (displayed in Beacon app)</li>
+          <li><strong>Description</strong> - Season description (displayed in Beacon app)</li>
+          <li><strong>Production Year</strong> - The year the season was produced; this information will appear
+            in the the <strong>More Info</strong> screen </li>
+          <li><strong>Production Country</strong> - The country where the season was produced; this information will
+            appear in the the <strong>More Info</strong> screen </li>
+                    <figure class="bcls-figure"><img
+        class="bcls-image"
+        src="/assets/images/media/season-overview-details.png"
+        alt=""
+      /> </figure>
         </ul>
-        <p>Although only the Portrait Poster and Landscape Poster images are required, it is recommended to supply the Thumbnail and Wide banner images.</p>
-        <p>If not provided, we will generate the Thumbnail image from the Portrait Poster and the Wide banner from the Landscape Poster.</p>
-        <table class="bcls-table">
-          <thead class="bcls-table__head">
-            <tr>
-              <th>Image</th>
-              <th>Requirements</th>
-            </tr>
-          </thead>
-          <tbody class="bcls-table__body">
-            <tr>
-              <td>Portrait Poster</td>
-              <td><p>JPEG image (2:3)</p>
-                <table>
-                  <tr>
-                    <td>Minimum</td>
-                    <td>Width: 1000px</td>
-                    <td>Height: 1500px</td>
-                  </tr>
-                  <tr>
-                    <td>Maximum</td>
-                    <td>Width: 2000px</td>
-                    <td>Height: 3000px</td>
-                  </tr>
-                </table></td>
-            </tr>
-            <tr>
-              <td>Landscape Poster</td>
-              <td><p>JPEG image (16:9)</p>
-                <table>
-                  <tr>
-                    <td>Minimum</td>
-                    <td>Width: 1000px</td>
-                    <td>Height: 563px</td>
-                  </tr>
-                  <tr>
-                    <td>Maximum</td>
-                    <td>Width: 4000px</td>
-                    <td>Height: 2250px</td>
-                  </tr>
-                </table></td>
-            </tr>
-            <tr>
-              <td>Thumbnail</td>
-              <td> JPEG image (4:3) </td>
-            </tr>
-            <tr>
-              <td>Wide Banner</td>
-              <td> JPEG image (21:9) </td>
-            </tr>
-          </tbody>
-        </table>
       </li>
-      <li> The information on the <strong>Tags</strong> tab is not used at this
-        time, so do not enter information on this tab. </li>
-      <li> The information on the <strong>Metadata</strong> tab is not used at this
-        time, so do not enter information on this tab. </li>
-      <li> Click on the <strong>Streams</strong> tab, where you will select a
-        trailer for the season. </li>
-      <li> Select your <strong>Provider</strong>. You will most likely only have
-        one provider, which references your Brightcove Video Cloud account. </li>
-      <li>Click the <strong>Add new stream</strong> button.</li>
-      <li> For the <strong>Stream Video ID</strong>, obtain the video ID for the
-        trailer from Studio and place it in the text box. </li>
-      <li> Be sure the <strong>Stream Type</strong> is set to <em>Trailer</em>. </li>
-      <li> Note that the <strong>DRM Type</strong> and <strong>Stream Format</strong> values do not need to be altered. </li>
-      <li> Click on the <strong>Rights & Scheduling</strong> tab, as shown here.
-        <figure class="bcls-figure"> <img
-            class="bcls-image"
-            src="/assets/images/using-bcb/series-seasons-episodes/rights-scheduling-tab-season.png"
-            alt="Rights and Scheduling"
-          /> </figure>
+        <li>Click <strong>Discovery</strong> in the left sidebar to open the Discovery details page.</li>
+      <li>Enter <strong>Tags</strong> for the season.
+        <figure class="bcls-figure"><img
+        class="bcls-image"
+        src="/assets/images/media/season-discovery-details.png"
+        alt=""
+      /> </figure>
       </li>
-      <li>
-        <p> Add values for the following fields: </p>
-        <table class="bcls-table">
-          <thead class="bcls-table__head">
-            <tr>
-              <th>Field</th>
-              <th>Required</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody class="bcls-table__body">
-            <tr>
-              <td>Status</td>
-              <td>Yes</td>
-              <td> Select one of the following types:
-                <ul>
-                  <li> Published </li>
-                  <li> Unpublished </li>
-                </ul></td>
-            </tr>
-            <tr>
-              <td>Rights Type</td>
-              <td>Yes</td>
-              <td> Choose the appropriate value for your season, from the options:
-                <ul>
-                  <li>Advertising - AVOD</li>
-                  <li>Free</li>
-                  <li>Inherit</li>
-                  <li>Subscription - SVOD</li>
-                </ul>
-                <p> <em>Inherit</em> means that the rights will be inherited from
-                  the series to which this season belongs. </p></td>
-            </tr>
-            <tr>
-              <td>Start Time</td>
-              <td>Yes</td>
-              <td>Schedule a starting date this season will be available</td>
-            </tr>
-            <tr>
-              <td>End Time</td>
-              <td>Yes</td>
-              <td> Schedule an ending date when this season will no longer be
-                available </td>
-            </tr>
-            <tr>
-              <td>Max Streams</td>
-              <td>Yes</td>
-              <td> The maximum number of streams that can be watching the season
-                from the same account </td>
-            </tr>
-            <tr>
-              <td>Devices to publish</td>
-              <td>Yes</td>
-              <td> Add the devices you wish to publish to. Select the <strong>Select / Unselect All Devices</strong> to see a list of available devices. </td>
-            </tr>
-            <tr>
-              <td>Permitted locations</td>
-              <td>Yes</td>
-              <td><p>Select the locations where you want to stream your content, if
-                  no restrictions enter <em>World</em>.</p>
-                <aside class="bcls-aside bcls-aside--information language-editable">
-                  <p>If you don't specify at least 1 permitted location, then you may see this message from your app:</p>
-                  <figure class="bcls-figure"> <img
-                    class="bcls-image"
-                    src="/assets/images/using-bcb/series-seasons-episodes/no-content.jpg"
-                    alt="No content"
-                  /> </figure>
-                </aside></td>
-            </tr>
-            <tr>
-              <td>Denied locations</td>
-              <td>No</td>
-              <td> Select the locations where you DO NOT want to stream your
-                content. Enter <em>World</em> if you have no restrictions. </td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li> Be sure to click the <strong>Create New Season</strong> button to save
-        the season information. </li>
     </ol>
-    <p> You have now created one of your seasons. If needed, create more seasons
-      for the series. The next step is to ingest episode videos from Video Cloud
-      into Brightcove Beacon. The next section leads you through that process. </p>
+    <p> To return to the seasons page, click the season breadcrumb at the top of the page.</p>
+    <p>
+      <figure class="bcls-figure"><img
+        class="bcls-image"
+        src="/assets/images/media/series-breadcrumb.png"
+        alt=""
+      /> </figure>
+    </p>
+    <p>Seasons that have been added to a series will appear on right side of the season Overview page.</p>
+<figure class="bcls-figure"><img
+        class="bcls-image"
+        src="/assets/images/media/series-seasons-list.png"
+        alt=""
+      /> </figure>
   </section>
   <section class="bcls-section">
     <h2 id="Ingesting_episodes">Ingesting episodes</h2>

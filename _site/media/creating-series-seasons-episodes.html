@@ -1,59 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="These topics cover synchronizing Video Cloud data with the Brightcove Beacon Experience" />
 
-    <title>Syncing with Video Cloud Home</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/prism.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/styles.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/landing-page.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/tabs.css"
-    />
-    <link rel="stylesheet" href="/assets/css/local.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/381443caa8.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
-    <script src="/assets/js/sajari-head.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="In this topic, you will learn how to create a series with related seasons and episodes.">
+  
+  <title>Creating Series, Seasons & Episodes</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+  <script src="/assets/js/sajari-head.js"></script>
+</head>
 
-  <body class="body"></body>
-</html>
+<body class="body">
 
 <header>
   <div class="div-header">
@@ -148,9 +120,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/syncing-with-video-cloud/">Syncing with Video Cloud</a></li>
+      <li class="breadcrumb-item"><a href="/media/">Managing Videos</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Syncing with Video Cloud Home</li>
+      <li class="breadcrumb-item active" aria-current="page">Creating Series, Seasons & Episodes</li>
     </ol>
   </nav>
 </header>
@@ -477,58 +449,397 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1em;"></a>
 
 
-<style>
-  h1 i.fal, h1 i.fab, h1 i.fas, h1 i.far {
-    font-size: 3rem;
-    color:rgb(28, 185, 213);
-    margin-right: 1rem;
-  }
-  .card-icon I {
-    color: rgb(28, 185, 213);
-  }
-  .card-wrapper {
-  justify-content: start;
-}
-</style>
-<article class="landing-page-wrapper">
-  <h1>Syncing with Video Cloud Home</h1>
-  <section class="landing-page-header" id="landing_page_header">
-    <p>These topics cover synchronizing Video Cloud data with the Brightcove Beacon Experience</p>
+<h1>Creating Series, Seasons & Episodes</h1>
+<article class="bcls-article">
+  <summary>In this topic, you will learn how to create a series with related seasons and episodes.</summary>
+  <section class="bcls-section">
+    <p>A <strong>series</strong> is a collection of related videos shown in a particular order, that usually share a common theme. When creating a series, you must define the relationships between the
+      series, its seasons, and the associated episodes.</p>
+    <p>A <strong>season</strong> is a group of videos that cover a set period of time. Each series can have one or more seasons.</p>
+    <p>An <strong>episode</strong> is an individual video. You can think of this as a specific movie.</p>
+    <p>Once you have defined your series and seasons, and ingested your episodes, they can be used in a Brightcove Beacon app.</p>
   </section>
-  <section class="card-wrapper">
-    
-      
-    
-      
-    
-      
-      <section class="bcls-card">
-        <div class="card-icon">
-          <i class="far fa-sync"></i>
-        </div>
-        <div class="card-content">
-          <h2 class="landing-page-item-header">Syncing with Video Cloud Topics</h2>
-          <ul class="landing-page-item list-none">
-            
-              <li><a href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a></li>
-            
-              <li><a href="/syncing-with-video-cloud/forcing-a-sync.html">Forcing a Sync</a></li>
-            
-          </ul>
-        </div>
-      </section>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+  <section class="bcls-section">
+    <h2 id="Relationship">Relationship</h2>
+    <p> The following diagram shows the relationship between a series and its
+      seasons and episodes. </p>
+    <figure class="bcls-figure"> <img
+        class="bcls-image"
+        src="/assets/images/media/series-season-episode-relation.png"
+        alt=""
+      /> </figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Creating_a_series">Creating a series</h2>
+    <p>To create a series, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Log in to Brightcove Beacon.</li>
+      <li>In the left navigation, click <strong>Media</strong>.</li>
+      <li>Click <strong>Create Series</strong>.</li>
+      <li>Enter a <strong>Name</strong> for the series and click <strong>Save</strong>.
+        <figure class="bcls-figure"><img
+        class="bcls-image"
+        src="/assets/images/media/series-new-series.png"
+        alt=""
+      /> </figure>
+      </li>
+      <li>The  Overview page will display.  The following details can be entered:
+        <ul>
+          <li><strong>Name</strong> - The identifier of the series; this is not a customer facing name</li>
+          <li><strong>Landscape, Portrait and Ultra Wide </strong>Images - Click the Upload new image link to upload an image to use based upon the following specifications:
+            <ul>
+              <li><strong>Landscape</strong> - 16x9 aspect ration, minimum 2000px wide</li>
+              <li><strong>Portrait</strong> - 2x3 aspect ration, minimum 500px wide</li>
+              <li><strong>Ultra Wide</strong> - 21x9 aspect ration, minimum 2000px wide</li>
+            </ul>
+          </li>
+          <li><strong>Title</strong> - Viewer facing name for the series (displayed in Beacon app)</li>
+          <li><strong>Synopsis</strong> - Series synopsis (displayed in Beacon app)</li>
+          <li><strong>Description</strong> - Series description (displayed in Beacon app)</li>
+          <li><strong>Production Year</strong> - The year the series was produced; this information will appear
+            in the the <strong>More Info</strong> screen </li>
+          <li><strong>Production Country</strong> - The country where the series was produced; this information will
+            appear in the the <strong>More Info</strong> screen </li>
+        </ul>
+      </li>
+      <li>Enter the <strong>Cast</strong> details:
+        <ul>
+          <li>Actors</li>
+          <li>Directors</li>
+          <li>Singers</li>
+          <li>Music Composers</li>
+          <li>Song Writers</li>
+          <li>Writers</li>
+        </ul>
+        <figure class="bcls-figure"><img
+        class="bcls-image"
+        src="/assets/images/media/series-overview-details.png"
+        alt=""
+      /> </figure>
+      </li>
+      <li>Click <strong>Discovery</strong> in the left sidebar to open the Discovery details page.</li>
+      <li>Enter <strong>Tags</strong> for the series.</li>
+      <li>Enter <strong>Genres</strong> for the series.
+        <figure class="bcls-figure"><img
+        class="bcls-image"
+        src="/assets/images/media/series-discovery-details.png"
+        alt=""
+      /> </figure>
+      </li>
+    </ol>
+    <p> You have now created your series. The next step is to create one or more
+      seasons that belong to this series. The next section leads you through
+      that process. </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Creating_seasons">Creating seasons</h2>
+    <p>To create a season, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Log in to Brightcove Beacon and select <strong>Programs</strong>.</li>
+      <li>In the left navigation, select <strong>Seasons</strong>.</li>
+      <li>Click the <strong>Add new season</strong> button.</li>
+      <li> On the <strong>Basic Data</strong> tab, fill in the following:
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th>Form Field Name</th>
+              <th>Description / Requirements</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td>Select a Series</td>
+              <td> The dropdown will be populated with the series you have created.
+                Choose the series to which this season belongs. </td>
+            </tr>
+            <tr>
+              <td>Name</td>
+              <td> The identifier of the series, the customer facing name is
+                provided later in the <strong>Textual Data</strong> section </td>
+            </tr>
+            <tr>
+              <td>Season Number</td>
+              <td> This must be an integer number representing the season sequence
+                in the series. This number will be used when ingesting episode
+                videos from Video Cloud. </td>
+            </tr>
+            <tr>
+              <td>Production Year</td>
+              <td> The year the season was produced; this information will appear
+                in the the <strong>More Info</strong> screen. </td>
+            </tr>
+            <tr>
+              <td>Production Country</td>
+              <td> The country where the season is produced; this information will
+                appear in the the <strong>More Info</strong> screen. </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>Click on the <strong>Textual Data</strong> tab.</li>
+      <li> Fill in the <em>Title</em>, <em>Description</em> and <em>Synopsis</em> for the season. This data will be displayed in the
+        Brightcove Beacon app.
+        <aside class="bcls-aside bcls-aside--tip language-editable"> For the season <em>Title</em>, you can enter a name like <em>Season 1</em>, but if a series has topics for distinct seasons
+          that may be a better choice. For instance, a series on the continents
+          where each season focuses on a continent, good names for the seasons
+          would be <em>Europe</em>, <em>Africa</em>, <em>Asia</em>, etc. </aside>
+      </li>
+      <li>Click on the <strong>Non-Textual Data</strong> tab.</li>
+      <li> For your season, supply an image for the following (matching the requirements below) :
+        <ul>
+          <li><strong>Portrait Poster</strong> (required)</li>
+          <li><strong>Landscape Poster</strong> (required)</li>
+          <li><strong>Thumbnail</strong></li>
+          <li><strong>Wide banner</strong></li>
+        </ul>
+        <p>Although only the Portrait Poster and Landscape Poster images are required, it is recommended to supply the Thumbnail and Wide banner images.</p>
+        <p>If not provided, we will generate the Thumbnail image from the Portrait Poster and the Wide banner from the Landscape Poster.</p>
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th>Image</th>
+              <th>Requirements</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td>Portrait Poster</td>
+              <td><p>JPEG image (2:3)</p>
+                <table>
+                  <tr>
+                    <td>Minimum</td>
+                    <td>Width: 1000px</td>
+                    <td>Height: 1500px</td>
+                  </tr>
+                  <tr>
+                    <td>Maximum</td>
+                    <td>Width: 2000px</td>
+                    <td>Height: 3000px</td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr>
+              <td>Landscape Poster</td>
+              <td><p>JPEG image (16:9)</p>
+                <table>
+                  <tr>
+                    <td>Minimum</td>
+                    <td>Width: 1000px</td>
+                    <td>Height: 563px</td>
+                  </tr>
+                  <tr>
+                    <td>Maximum</td>
+                    <td>Width: 4000px</td>
+                    <td>Height: 2250px</td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr>
+              <td>Thumbnail</td>
+              <td> JPEG image (4:3) </td>
+            </tr>
+            <tr>
+              <td>Wide Banner</td>
+              <td> JPEG image (21:9) </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li> The information on the <strong>Tags</strong> tab is not used at this
+        time, so do not enter information on this tab. </li>
+      <li> The information on the <strong>Metadata</strong> tab is not used at this
+        time, so do not enter information on this tab. </li>
+      <li> Click on the <strong>Streams</strong> tab, where you will select a
+        trailer for the season. </li>
+      <li> Select your <strong>Provider</strong>. You will most likely only have
+        one provider, which references your Brightcove Video Cloud account. </li>
+      <li>Click the <strong>Add new stream</strong> button.</li>
+      <li> For the <strong>Stream Video ID</strong>, obtain the video ID for the
+        trailer from Studio and place it in the text box. </li>
+      <li> Be sure the <strong>Stream Type</strong> is set to <em>Trailer</em>. </li>
+      <li> Note that the <strong>DRM Type</strong> and <strong>Stream Format</strong> values do not need to be altered. </li>
+      <li> Click on the <strong>Rights & Scheduling</strong> tab, as shown here.
+        <figure class="bcls-figure"> <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/series-seasons-episodes/rights-scheduling-tab-season.png"
+            alt="Rights and Scheduling"
+          /> </figure>
+      </li>
+      <li>
+        <p> Add values for the following fields: </p>
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th>Field</th>
+              <th>Required</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td>Status</td>
+              <td>Yes</td>
+              <td> Select one of the following types:
+                <ul>
+                  <li> Published </li>
+                  <li> Unpublished </li>
+                </ul></td>
+            </tr>
+            <tr>
+              <td>Rights Type</td>
+              <td>Yes</td>
+              <td> Choose the appropriate value for your season, from the options:
+                <ul>
+                  <li>Advertising - AVOD</li>
+                  <li>Free</li>
+                  <li>Inherit</li>
+                  <li>Subscription - SVOD</li>
+                </ul>
+                <p> <em>Inherit</em> means that the rights will be inherited from
+                  the series to which this season belongs. </p></td>
+            </tr>
+            <tr>
+              <td>Start Time</td>
+              <td>Yes</td>
+              <td>Schedule a starting date this season will be available</td>
+            </tr>
+            <tr>
+              <td>End Time</td>
+              <td>Yes</td>
+              <td> Schedule an ending date when this season will no longer be
+                available </td>
+            </tr>
+            <tr>
+              <td>Max Streams</td>
+              <td>Yes</td>
+              <td> The maximum number of streams that can be watching the season
+                from the same account </td>
+            </tr>
+            <tr>
+              <td>Devices to publish</td>
+              <td>Yes</td>
+              <td> Add the devices you wish to publish to. Select the <strong>Select / Unselect All Devices</strong> to see a list of available devices. </td>
+            </tr>
+            <tr>
+              <td>Permitted locations</td>
+              <td>Yes</td>
+              <td><p>Select the locations where you want to stream your content, if
+                  no restrictions enter <em>World</em>.</p>
+                <aside class="bcls-aside bcls-aside--information language-editable">
+                  <p>If you don't specify at least 1 permitted location, then you may see this message from your app:</p>
+                  <figure class="bcls-figure"> <img
+                    class="bcls-image"
+                    src="/assets/images/using-bcb/series-seasons-episodes/no-content.jpg"
+                    alt="No content"
+                  /> </figure>
+                </aside></td>
+            </tr>
+            <tr>
+              <td>Denied locations</td>
+              <td>No</td>
+              <td> Select the locations where you DO NOT want to stream your
+                content. Enter <em>World</em> if you have no restrictions. </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li> Be sure to click the <strong>Create New Season</strong> button to save
+        the season information. </li>
+    </ol>
+    <p> You have now created one of your seasons. If needed, create more seasons
+      for the series. The next step is to ingest episode videos from Video Cloud
+      into Brightcove Beacon. The next section leads you through that process. </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Ingesting_episodes">Ingesting episodes</h2>
+    <p> While creating the series and associated seasons is done in
+      Brightcove Beacon, the creation of episodes for the series is done in Video
+      Cloud Studio. You will assign values about the series and seasons in
+      custom fields for each episode video, then ingest those videos into
+      Brightcove Beacon. </p>
+    <aside  class="bcls-aside bcls-aside--tip language-editable">Remember, the truth of Brightcove Beacon episode content resides in Video Cloud. Any changes you make to episodes in Brightcove Beacon will be overwritten when you ingest content from Video Cloud.</aside>
+    <h3>Prerequisites</h3>
+    <p>Before continuing with the steps below, make sure that you have completed the following:</p>
+    <ol  class="bcls-tasklist-restart">
+      <li>Log in to Video Cloud Studio.</li>
+      <li>
+        <p>From the dropdown menu at the top of the page, select <strong>UPLOAD</strong>.</p>
+        <figure class="bcls-figure"> <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/series-seasons-episodes/upload-module.png"
+            alt="Upload module"
+          /> </figure>
+      </li>
+      <li>Upload your episode videos.</li>
+      <li>
+        <p>From the dropdown menu at the top of the page, select <strong>MEDIA</strong>.</p>
+        <figure class="bcls-figure"> <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/series-seasons-episodes/media-module.png"
+            alt="Media module"
+          /> </figure>
+      </li>
+      <li>Update your episode video images as specified in the <a href="/references/image-requirements.html">Images and Their Specifications</a> document.</li>
+      <li>
+        <p>In the navigation header, click <strong>ADMIN</strong> and then <strong>Video Fields</strong>.</p>
+        <aside class="bcls-aside bcls-aside--information language-editable"> You must be an account administrator to access the <strong>ADMIN</strong> menu. </aside>
+        <figure class="bcls-figure"> <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/series-seasons-episodes/video-fields.png"
+            alt="Video fields"
+          /> </figure>
+      </li>
+      <li>Create the required custom fields needed to ingest videos to Brightcove Beacon. For details, see the <a href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a> document.</li>
+    </ol>
+    <h3>Steps</h3>
+    <p>To ingest episode videos into Brightcove Beacon, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Return to Video Cloud Studio.</li>
+      <li> From the dropdown menu at the top of the page, select <strong>MEDIA</strong>. </li>
+      <li>
+        <p>Click on the title of one of the episode videos to enter the video's
+          properties page.</p>
+        <figure class="bcls-figure"> <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/series-seasons-episodes/video-link.png"
+            alt="Video link"
+          /> </figure>
+      </li>
+      <li> Scroll down until you see on the right-hand side the <strong>CUSTOM FIELDS</strong> section. </li>
+      <li>Click the <strong>Edit</strong> button.</li>
+      <li> Locate the three custom fields that are associated with episodes.
+        <figure class="bcls-figure"> <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/series-seasons-episodes/vc-custom-fields.png"
+            alt="episode custom fields"
+          /> </figure>
+      </li>
+      <li> For the episode video, enter the episode number, season number and
+        series name, in the corresponding custom fields. </li>
+      <li> Be sure to click the <strong>Save</strong> button after entering the
+        appropriate values for the video. </li>
+      <li> Repeat entering values in the custom fields for all your episode videos. </li>
+      <li>Log in to Brightcove Beacon.</li>
+      <li> Click on the <strong>Tools</strong> option (<strong>wrench</strong> icon) in the top menu. </li>
+      <li>
+        <p>Be sure the <strong>Ingestion</strong> option is selected on the left
+          menu.</p>
+        <figure class="bcls-figure"> <img
+            class="bcls-image"
+            src="/assets/images/using-bcb/series-seasons-episodes/beacon-ingest.png"
+            alt="Brightcove Beacon ingestion"
+          /> </figure>
+      </li>
+      <li> Click the <strong>Update Brightcove Videos</strong> button to ingest the
+        newly configured episode videos. </li>
+      <li>
+        <p> To make the videos immediately available in your apps, clear
+          Brightcove Beacon's cache by clicking on the <strong>Cache</strong> option in the left navigation, then click the <strong>Cache Purge</strong> button. </p>
+        <aside class="bcls-aside bcls-aside--information language-editable"> For more details on using the Brightcove Beacon Tools options, see the <a href="/using-brightcove-beacon/tools.html">Using the Tools</a> document. </aside>
+      </li>
+    </ol>
+    <p> This concludes information on creating series and its associated seasons
+      and episodes. </p>
   </section>
 </article>
 
@@ -536,13 +847,18 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </div>
     <div class="col-sm-2 right-side-bar">
       
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
     </div>
   </div>
 </div>
 
 <hr>
 <div class="last-updated">
-  Page last updated on 13 Jan 2020
+  Page last updated on 05 Oct 2020
 </div>
 
 

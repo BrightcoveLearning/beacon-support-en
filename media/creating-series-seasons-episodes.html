@@ -15,7 +15,7 @@ layout: staging
     <p>Once you have defined your series and seasons, and ingested your episodes, they can be used in a Brightcove Beacon app.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="Relationship">Relationship</h2>
+    <h2 id="relationship">Relationship</h2>
     <p> The following diagram shows the relationship between a series and its
       seasons and episodes. </p>
     <figure class="bcls-figure"> <img
@@ -25,7 +25,25 @@ layout: staging
       /> </figure>
   </section>
   <section class="bcls-section">
-    <h2 id="Creating_a_series">Creating a series</h2>
+    <h2 id="relationship">Reviewing series</h2>
+    <p>To view the list of series that have been created, click <strong>Media</strong> in the left navigation and then click <strong>All Series</strong>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/series-home.png" /></figure>
+    <p>The body of the page will display the following:</p>
+    <ul>
+      <li>Series  image (this is the landscape image)</li>
+      <li> Series name</li>
+      <li>Series ID - System assigned series ID (unique across all Brightcove Beacon accounts)</li>
+      <li>Status
+        <ul>
+          <li><img alt="" src="/assets/images/media/media-green-check.png" /> - Published - Series can be used in a Brightcove Beacon app</li>
+          <li><img alt="" src="/assets/images/media/media-red-x.png" /> - Unpublished - Series cannot be used in a Brightcove Beacon app</li>
+        </ul>
+      </li>
+      <li>Created date and time</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="creating_series">Creating a series</h2>
     <p>To create a series, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
       <li>Log in to Brightcove Beacon.</li>
@@ -42,7 +60,7 @@ layout: staging
         <ul>
           <li><strong>Name</strong> - The identifier of the series; this is not a customer facing name</li>
           <li><strong>Landscape, Portrait and Ultra Wide </strong>Images - Click the <strong>Upload new image</strong> link to upload an image to use based upon the following specifications:
-<ul>
+            <ul>
               <li><strong>Landscape</strong> - 16x9 aspect ration, minimum 2000px wide</li>
               <li><strong>Portrait</strong> - 2x3 aspect ration, minimum 500px wide</li>
               <li><strong>Ultra Wide</strong> - 21x9 aspect ration, minimum 2000px wide</li>
@@ -57,7 +75,8 @@ layout: staging
             appear in the the <strong>More Info</strong> screen </li>
         </ul>
       </li>
-      <li>Enter the <strong>Cast</strong> details:
+      <li>Enter the <strong>Cast</strong> details (this information will
+        appear in the the <strong>More Info</strong> screen):
         <ul>
           <li>Actors</li>
           <li>Directors</li>
@@ -82,29 +101,95 @@ layout: staging
       /> </figure>
       </li>
     </ol>
+    <p>The right side of the Overview page provides the ability to <a href="#creating_seasons">add seasons</a> and a <a href="#series_trailer">series trailer</a>.</p>
+    <figure class="bcls-figure"><img
+        class="bcls-image"
+        src="/assets/images/media/series-seasons-trailer-section.png"
+        alt=""
+      /> </figure>
   </section>
   <section class="bcls-section">
-    <h2 id="Creating_seasons">Creating seasons</h2>
+    <h2 id="edit_series">Editing  a series</h2>
+    <p>To edit a series, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>In the left navigation, click <strong>Media</strong>.</li>
+      <li>Click <strong>All Series</strong>.</li>
+      <li>Locate the series to edit. Click the series title to open the series details.</li>
+      <li>Make changes as needed. As you tab out of a field or press enter, any changes will be saved.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="delete_series">Deleting a series</h2>
+    <p>To delete a series, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>In the left navigation, click <strong>Media</strong>.</li>
+      <li>Click <strong>All Series</strong>.</li>
+      <li>Locate the series to delete and do one of the following:
+        <ul>
+          <li>Check the checkbox next to the series name and then click the delete icon (<img
+        class="bcls-image"
+        src="/assets/images/media/series-delete-icon.png"
+        alt=""
+      />) <strong>OR</strong></li>
+          <li>Click the series Title to open the series details and then click <strong>Delete</strong>.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="series_trailer">Adding a series trailer</h2>
+    <p>To add a series trailer, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>In the left navigation, click <strong>Media</strong>.</li>
+      <li>Click <strong>All Series</strong>.</li>
+      <li>Locate the series to add a trailer to. Click the series title to open the series details.</li>
+      <li>On the right side of the page click <strong>Add Trailer</strong>.</li>
+      <li>Click on  a video to use for the trailer. The Search field at the top of the dialog can be used to search for a specific video.
+        <figure class="bcls-figure"><img
+        class="bcls-image"
+        src="/assets/images/media/series-trailer.png"
+        alt=""
+      /> </figure>
+      </li>
+      <li>Click <strong>Select Video</strong>.</li>
+    </ol>
+    <p>The selected video will appear in the Series Trailer section.</p>
+    <p>
+      <figure class="bcls-figure"><img
+        class="bcls-image"
+        src="/assets/images/media/series-trailer-selected.png"
+        alt=""
+      /> </figure>
+    </p>
+    <p>To select a different trailer, click <strong>Replace Trailer</strong>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="creating_seasons">Creating seasons</h2>
     <p>To create a season, follow these steps:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Log in to Brightcove Beacon.</li>
       <li>In the left navigation, click <strong>Media</strong>.</li>
       <li>Click <strong>All Series</strong>.</li>
       <li>Locate the series to which the season will be added. Click the series title to open the series details.</li>
-      <li>On the series Overview page, click <strong>Create Season</strong>.</li>
-<li>Enter a <strong>Name</strong> for the season and click <strong>Save</strong>.
+      <li>On the series Overview page, click <strong>Create Season</strong>.
+        <figure class="bcls-figure"><img
+        class="bcls-image"
+        src="/assets/images/media/series-create-season.png"
+        alt=""
+      /> </figure>
+      </li>
+      <li>Enter a <strong>Name</strong> for the season and click <strong>Save</strong>.
         <figure class="bcls-figure"><img
         class="bcls-image"
         src="/assets/images/media/series-new-season.png"
         alt=""
       /> </figure>
-<li>The  Overview page will display.  Note, as you tab out of a field or press enter, any changes will be saved. The following details can be entered:
+      <li>The  Overview page will display.  Note, as you tab out of a field or press enter, any changes will be saved. The following details can be entered:
         <ul>
           <li><strong>Name</strong> - The identifier of the season; this is not a customer facing name</li>
           <li><strong>Season Number</strong> - An integer number representing the season sequence
-          in the series.</li>
+            in the series.</li>
           <li><strong>Landscape, Portrait and Ultra Wide </strong>Images - Click the <strong>Upload new image</strong> link to upload an image to use based upon the following specifications:
-<ul>
+            <ul>
               <li><strong>Landscape</strong> - 16x9 aspect ration, minimum 2000px wide</li>
               <li><strong>Portrait</strong> - 2x3 aspect ration, minimum 500px wide</li>
               <li><strong>Ultra Wide</strong> - 21x9 aspect ration, minimum 2000px wide</li>
@@ -112,23 +197,24 @@ layout: staging
           </li>
           <li><strong>Title</strong> - Viewer facing name for the season (displayed in Beacon app)
             <aside class="bcls-aside bcls-aside--tip language-editable">Note: For the season <em>Title</em>, you can enter a name like <em>Season 1</em>, but if a series has topics for distinct seasons
-          that may be a better choice. For example, a series on the continents
-          where each season focuses on a continent, good names for the seasons
-          would be <em>Europe</em>, <em>Africa</em>, <em>Asia</em>, etc. </aside></li>
+              that may be a better choice. For example, a series on the continents
+              where each season focuses on a continent, good names for the seasons
+              would be <em>Europe</em>, <em>Africa</em>, <em>Asia</em>, etc. </aside>
+          </li>
           <li><strong>Synopsis</strong> - Season synopsis (displayed in Beacon app)</li>
           <li><strong>Description</strong> - Season description (displayed in Beacon app)</li>
           <li><strong>Production Year</strong> - The year the season was produced; this information will appear
             in the the <strong>More Info</strong> screen </li>
           <li><strong>Production Country</strong> - The country where the season was produced; this information will
             appear in the the <strong>More Info</strong> screen </li>
-                    <figure class="bcls-figure"><img
+          <figure class="bcls-figure"><img
         class="bcls-image"
         src="/assets/images/media/season-overview-details.png"
         alt=""
       /> </figure>
         </ul>
       </li>
-        <li>Click <strong>Discovery</strong> in the left sidebar to open the Discovery details page.</li>
+      <li>Click <strong>Discovery</strong> in the left sidebar to open the Discovery details page.</li>
       <li>Enter <strong>Tags</strong> for the season.
         <figure class="bcls-figure"><img
         class="bcls-image"
@@ -146,11 +232,47 @@ layout: staging
       /> </figure>
     </p>
     <p>Seasons that have been added to a series will appear on right side of the season Overview page.</p>
-<figure class="bcls-figure"><img
+    <figure class="bcls-figure"><img
         class="bcls-image"
         src="/assets/images/media/series-seasons-list.png"
         alt=""
       /> </figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="edit_season">Editing and deleting a  season</h2>
+    <p>To edit or delete a season, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>In the left navigation, click <strong>Media</strong>.</li>
+      <li>Click <strong>All Series</strong>.</li>
+      <li>Locate the series with the season to edit/delete. Click the series title to open the series details.</li>
+      <li>Click the season to edit in the <strong>Seasons</strong> section.
+        <figure class="bcls-figure"><img
+        class="bcls-image"
+        src="/assets/images/media/series-edit-season.png"
+        alt=""
+      /> </figure>
+      </li>
+      <li>Make changes as needed. As you tab out of a field or press enter, any changes will be saved.</li>
+    </ol>
+    <p>To delete the season, click <strong>Delete</strong> at the top of the page.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="delete_season">Deleting  a season</h2>
+    <p>To delete a season, follow these steps:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>In the left navigation, click <strong>Media</strong>.</li>
+      <li>Click <strong>All Series</strong>.</li>
+      <li>Locate the series to delete and do one of the following:
+        <ul>
+          <li>Check the checkbox next to the series name and then click the delete icon (<img
+        class="bcls-image"
+        src="/assets/images/media/series-delete-icon.png"
+        alt=""
+      />) <strong>OR</strong></li>
+          <li>Click the series Title to open the series details and then click <strong>Delete</strong>.</li>
+        </ul>
+      </li>
+    </ol>
   </section>
   <section class="bcls-section">
     <h2 id="Ingesting_episodes">Ingesting episodes</h2>

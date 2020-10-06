@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   
-  <title>Adding Captions to Videos using the Media Module</title>
+  <title>Editing Video Details</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -122,7 +122,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       <li class="breadcrumb-item"><a href="/media/">Managing Videos</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Adding Captions to Videos using the Media Module</li>
+      <li class="breadcrumb-item active" aria-current="page">Editing Video Details</li>
     </ol>
   </nav>
 </header>
@@ -450,129 +450,137 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
 <article class="bcls-article">
-  <h1>Adding Captions to Videos using the Media Module</h1>
-  <summary>In this topic you will learn how to add captions to videos using the Media module.</summary>
+  <h1>Editing Video Details</h1>
+  <summary>In this topic you will learn how to edit video properties using the Media module.</summary>
   <section class="bcls-section">
-    <p>The text tracks properties can be configured to provide captions for a video. Captions provide additional or interpretive information to individuals who wish to access it. Captions are necessary so the deaf and hard of hearing can access the audio portion of video presentations. To display captions for a video in the Brightcove player, you need to complete the following tasks:</p>
+    <p>To view and edit the properties for a video, open the Media module and click the video title link. The video properties page will open.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: To edit video properties for multiple videos at the same time, use the <a href="/media/editing-video-details-using-quick-edit.html">Quick Edit</a> feature.</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-properties.png" /></figure>
+    <p>Buttons at the top of the video properties page provide the ability to:</p>
     <ul>
-      <li><a href="#captionsfile">Create caption files</a></li>
-      <li><a href="#texttrack">Configure the text track properties</a></li>
-      <li><a href="#style">Style captions</a></li>
+      <li><a href="/media/capturing-poster-and-thumbnail-images.html">Capture new poster and thumbnail images</a></li>
+      <li><a href="/media/organizing-videos-using-folders.html">Move the video to a folder</a> or <a href="/media/creating-and-managing-playlists.html">add it to a playlist</a></li>
+      <li>Deactivate/activate videos</li>
+      <li><a href="/publish/publishing-videos-and-playlists-media-module.html">Publish a video</a></li>
     </ul>
+    <p>If the video is activated, the <strong>Deactivate</strong> button can be used to deactivate the video. If the video is deactivated, the <strong>Activate</strong> button can be used to activate the video. Videos that are deactivated cannot be played in a Brightcove Player.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-deactivate-publish.png" /></figure>
+    <p>The preview player at the top of the page can be used to view the video.</p>
+    <p>The video properties are organized into the following sections:</p>
+    <ul>
+      <li><a href="#videoinfo">Video Information</a></li>
+      <li><a href="#videofiles">Video Files</a></li>
+      <li><a href="#mediasharing">Media Sharing</a></li>
+      <li><a href="#audiotracks">Audio Tracks</a></li>
+      <li><a href="#images">Images</a></li>
+      <li><a href="#videoviews">Video Views</a></li>
+      <li><a href="#customfields">Custom Fields</a></li>
+      <li><a href="#availability">Availability</a></li>
+      <li><a href="#texttracks">Text Tracks</a></li>
+    </ul>
+    <p>To edit the video properties, click the <strong>Edit</strong> button in the section or double-click in the section.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="captionsfile">Creating caption files</h2>
-    <p>To add captions to a video, you first need to create a captions file. The Brightcove player supports Web Video Text Tracks Format (WebVTT), SRT and DFXP formats. The WebVTT file format (shown below) is plain text and contains time text data followed by the desired caption or subtitle text.</p>
-    <aside class="bcls-aside bcls-aside--information">
-      <p><strong>Notes</strong></p>
-      <ul>
-        <li>SRT and DFXP captions are not supported for videos using Legacy transcoding. SRT and DFXP captions will be automatically converted to WebVTT for Dynamic Delivery accounts.</li>
-        <li>The text of the captions must be encoded UTF-8 to display properly for double-byte languages such as Japanese and Korean.</li>
-        <li>Because the captions are displayed in HTML, any text inside <code>< ></code> brackets will be interpreted as a tag and not displayed.</li>
-      </ul>
-    </aside>
-    <pre>
-WEBVTT
-00:00:00.000 --&gt; 00:00:07.080 align:middle line:90%
-
-00:00:07.080 --&gt; 00:00:10.280 align:middle line:84%
-Hi, I'm Bob Bailey, a Learning
-Specialist with Brightcove.
-
-00:00:10.280 --&gt; 00:00:12.780 align:middle line:84%
-In this video, you'll learn
-about how Video Cloud Studio is
-
-00:00:12.780 --&gt; 00:00:14.940 align:middle line:84%
-organized and get a
-brief overview of what
-
-00:00:14.940 --&gt; 00:00:17.490 align:middle line:90%
-you can accomplish using it.
-</pre>
-    <aside class="bcls-aside bcls-aside--information">Notes:
-      <ul>
-        <li>Caption file names should only include letters (upper or lower case), numbers, dashes (-) and underscores (_).</li>
-        <li> We have seen cases where captions created by a third party start the captions with the time stamp:
-          <p>01:00:00.000</p>
-          <p>This will cause the captions to being <strong>one hour</strong> into the video. To ensure that the captions are correctly synced with the video, make sure that the time stamps begin with <strong>00:00:00.000</strong> and check all time stamps for the <strong>01</strong> hour offset.</p>
-        </li>
-      </ul>
-    </aside>
-    <p>For more information on the WebVTT format, see <a href="http://dev.w3.org/html5/webvtt/">this link</a>. You should have a separate caption file for each language you need to support. While there are many third-party tools to help create captions files, Brightcove has several partners that provide transcription, captioning and translation services. For a complete list of Brightcove partners, visit the <a href="https://www.brightcove.com/en/partners">Partners</a> section of our website.</p>
+    <h2 id="required">Required fields</h2>
+    <p>Your Video Cloud account may be configured with required metadata fields. If a video is inactive, you can freely edit and save its metadata without supplying all required metadata. Also, videos can't be activated until all required metadata has been entered. If a video is already active, you cannot save any edits in the section you are editing unless you supply all required metadata in that section or deactivate the video. For more information on working with required fields, see <a href="/media/setting-required-fields-videos.html">Setting Required Fields for Videos</a>.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="texttrack">Configuring the text track properties</h2>
-    <p>Once the caption files have been created, they can be uploaded and hosted by Brightcove or reside at an internet accessible URL.</p>
-    <p>To view and edit the text track properties for a video, open the Media module, click the video title link and locate the <strong>Text Tracks</strong> section. To configure the text track properties, follow these steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Click <strong>Edit</strong> or double-click in the section.</li>
-      <li>Select if the text track file will be uploaded to Video Cloud or hosted on an external URL.
+    <h2 id="videoinfo">Video Information</h2>
+    <p>The Video Information section can be used to view and edit basic video properties.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-information.png" /></figure>
+    <p>To edit the properties, click the <strong>Edit</strong> button or double-click in the section. The following properties can be edited:</p>
+    <ul>
+      <li><strong>Name</strong> - No more than 255 characters.</li>
+      <li><strong>ID</strong> - System assigned video ID (unique across all Video Cloud accounts).</li>
+      <li><strong>Short description</strong> - No more than 250 characters.</li>
+      <li><strong>Tags</strong> - One or more tags, separated by commas. You can use tags to add videos to smart playlists or to find videos using the CMS API.
         <ul>
-          <li><strong>File Upload</strong> - Click <strong>Browse</strong> and select the text track file from the file system. The file will be uploaded to Video Cloud.</li>
-          <li><strong>URL Upload</strong> - Enter the public URL where the text track file resides and then click <strong>Upload</strong>. The file will be uploaded to Video Cloud.</li>
-          <li><strong>Remote URL</strong> - Enter the public URL where the text track file resides. The URL must be less than 250 characters. Captions will be loaded from the remote URL.
-            <aside class="bcls-aside bcls-aside--information">Note: If you are hosting captions files on your own server, make sure the file is located at a URL that can be accessed by the Brightcove player. The server hosting the captions file should also have Cross-Origin Resource Sharing (CORS) enabled. You can read more about CORS <a href="https://general.support.brightcove.com/developer/concepts-cors.html">here</a>.</aside>
-            <aside class="bcls-aside bcls-aside--information">Note: Text track file names with parentheses, question marks, quotation marks, spaces and other special characters will silently fail when uploading. Brightcove recommends using file names without special characters.</aside>
-            <aside class="bcls-aside bcls-aside--information">Note: Text track for videos shared to the account can't be edited in the Media module.</aside>
+          <li>Tags can be up to 128 characters. If any tags have more than 128 characters, an error will be displayed when you attempt to save changes.</li>
+          <li>Tags can't contain commas. For example, a tag of "roof, attic + front yard" is not supported.</li>
+          <li>A video can have no more than a total of 1200 tags.</li>
+          <li>A tag differing only in case (lowercase, uppercase) is handled as an identical tag and the case will automatically match those of the original tag.</li>
+          <li>Issues with case sensitivity need to be handled externally to Video Cloud, for example, using JavaScript methods to modify the strings.</li>
+          <li>After entering a tag, press the <strong>comma</strong> key or <strong>enter</strong>. Tags that have been added will display in a colored box.
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-tags-added.png" /></figure>
           </li>
         </ul>
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/captions-properties.png" /></figure>
-        <aside class="bcls-aside bcls-aside--warning language-editable">Note: The <strong>Default (Auto Display)</strong>&nbsp;option currently has no effect on Dynamic Delivery titles.</aside>
       </li>
-      <li>The <strong>Language</strong> field should contain the <a href="http://www.w3schools.com/tags/ref_language_codes.asp">two-letter language code</a> that specifies the language of the track text data.</li>
-      <li>Enter the appropriate <strong>Label</strong> for the caption file. The label is displayed inside player and allows the viewer to select a language. If no label is supplied, the language code is displayed.</li>
-      <li>Select the <strong>Kind</strong> of text track. Options include:
+      <li><strong>Reference ID</strong> - A unique ID assigned by a publisher to a video or playlist. Limited to no more than 150 characters. The reference ID is distinct from the video ID or playlist ID which are unique IDs generated by Video Cloud. The reference ID enables coordination between Video Cloud and other services such as a publisher's content management system. Note that you can't batch edit the reference ID as two videos can't have the same reference ID. Reference IDs must always be unique. Deleting a video will allow a previously assigned reference ID to be reused.</li>
+      <li><strong>Video Projection</strong> - Indicates how the video was recorded.
         <ul>
-          <li><strong>Captions</strong> - Similar to subtitles, but may also include sound effects and other audio information</li>
-          <li><strong>Subtitles</strong> - The transcription or translation of the dialogue</li>
-          <li><strong>Descriptions</strong> - Intended to be a separate text file that describes the video through a screen reader</li>
-          <li><strong>Chapters</strong> - Intended to help the user navigate through the video</li>
-          <li><strong>Metadata</strong> - Information and content about the video which isn’t intended to be displayed to the viewer by default (though you may wish to do so using JavaScript)</li>
+          <li><strong>Standard</strong> - Default. Regular video recording.</li>
+          <li><strong>360 Degree</strong> - Check to indicate the video is a 360 degree video. A 360 badge will appear in the video thumbnail in the Media module. For more information on working with 360 degree videos, see <a href="/general/working-360deg-videos.html">Working with 360° Videos</a>.</li>
         </ul>
       </li>
-      <li>Enter the <strong>MIME Type</strong> for the text track file. Selecting <strong>default</strong> will display the captions when the video is played (Brightcove Players 6.x and newer).
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Edit Mime Type" src="/assets/images/media/captions-english.png" /></figure>
-        <aside class="bcls-aside bcls-aside--information language-editable">Note that if you are uploading SRT or DFXP captions, you will not be able to edit the MIME Type.</aside>
-      </li>
-      <li>Check <strong>Default (Auto Display)</strong> to make the track the default. Most browsers will attempt to display the default text track first but language and accessibility settings may override the default setting.
-        <aside class="bcls-aside bcls-aside--information">Note: The default setting does not work with IE11.</aside>
-      </li>
-      <li>Click <strong>Add Text Track</strong> to save the text track information.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/captions-added.png" /></figure>
-      </li>
-      <li>Click <strong>Add Text Track</strong> to add another text track or<strong> Save</strong> to save the text tracks.
-        <aside class="bcls-aside bcls-aside--information">Note: Changes made to the text track properties may take up to 15 minutes to appear in published players.</aside>
-      </li>
-    </ol>
-    <p>If any text tracks have been designated as the default, they will appear in <strong>bold</strong>. To delete a text track, click the delete icon (<img alt="" src="/assets/images/media/captions-delete-icon.png" />) next to the text track.</p>
-    <aside class="bcls-aside bcls-aside--information">Note that the <code>default</code> value is not per track, but set to <code>true</code> for all tracks of the same language (<code>srclang</code>)</aside>
-    <p>When a player with associated captions is published, a <strong>CC</strong> button will appear on the player chrome. Click the <strong>CC</strong> button to select a caption language and display the captions.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/captions-cc-button.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit_captions">Edit caption properties</h2>
-    <p>To edit the properties of existing captions, click <strong>Edit</strong> in the Text Track panel, and then click on the captions item that you want to edit:</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="style">Styling captions</h2>
-    <p>The default look and feel of the captions is subject to change so you may wish to style the captions. For information on styling captions, see <a href="/media/styling-captions.html">Styling Captions</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="limitations">Limitations</h2>
-    <ul>
-      <li>Captions are supported on the following device types and operating systems.
+      <li><strong>Enable offline playback</strong> - When checked, enables the video to be saved locally and viewed offline when using applications created using the device SDKs. This option will only appear if the account is enabled for offline playback.</li>
+      <li><strong>Related Link URL</strong> - A standard web URL beginning with http:// or https:// limited to 255 characters.</li>
+      <li><strong>Related Link Text</strong> - Related link text limited to 255 characters.</li>
+      <li><strong>Long Description</strong> - No more than 5000 characters.</li>
+      <li><strong>Advertising</strong>
         <ul>
-          <li>iOS 10+</li>
-          <li>Android 7+</li>
-          <li>Internet Explorer 11+</li>
-          <li>The latest Chrome, Safari, and Firefox browsers on desktops</li>
+          <li><strong>Free</strong> - Ads will not be shown when the video plays.</li>
+          <li><strong>Ad Supported</strong> - Ads may be shown when video plays.
+            <aside class="bcls-aside bcls-aside--information">Note: If your account is not enabled for advertising and you set the Advertising property to Ad Supported, you will receive an error when saving changes.</aside>
+          </li>
         </ul>
       </li>
-      <li>There is no technical limit to the length of a caption, but in order for the full caption to be visible, the player must be large enough to display that much text</li>
-      <li>Because Safari uses the native capabilities for styling captions, the <strong>Captions Settings</strong> menu option is not available in the the <strong>CC</strong> menu on Safari browsers (both iOS and macOS).</li>
-      <li>If you ingest an invalid WebVTT file in Studio, the file will "process", but will not be added to the video. <strong>Workaround</strong>: you can validate your WebVTT files using <a href="https://quuz.org/webvtt/">this online validator</a>.</li>
+      <li><strong>Ad Keys</strong> - Passed as part of the ad server URL. For example, to pass <code>section=blog</code> and <code>anotherKey=value1</code>, you would enter <code>section=blog&amp;anotherKey=value1</code>. See the <a href="https://support.google.com/dfp_premium/answer/1080597">DoubleClick for Publishers Help</a> for information on adding key-value pairs. When using ad keys, ad macros should be added to the ad server URL (configured as part of the <a href="/players/configuring-player-advertising-using-players-module.html">player advertising properties</a>). Ad macros support variables in the server URL for which the IMA3 plugin will substitute appropriate values. For more information, see the <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#adMacros">IMA3 developer documentation</a>.</li>
+      <li><strong>Folder</strong> - Folder the video is assigned to. See <a href="/media/organizing-videos-using-folders.html">Organizing Videos Using Folders</a> for more information.</li>
+      <li><strong>Manual Playlists</strong> - Playlists that this video belongs to. For more information, see <a href="/media/creating-and-managing-playlists.html">Creating and Managing Playlists</a>.</li>
+      <li><strong>Sharing</strong> - Indicates if the video has been shared to another account. For more information, see <a href="/media/media-sharing-using-media-module.html">Media Sharing using the Media Module</a>.</li>
     </ul>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-information-edit.png" /></figure>
+    <p>Click <strong>Save</strong> to save changes.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="videofiles">Video Files</h2>
+    <p>The Video Files section displays the source file name, the transcoding technology that was used and details on the video renditions that were created. It also provides the ability to:</p>
+    <ul>
+      <li><a href="/media/replacing-video-source-file.html">Replace the Video Source File</a></li>
+      <li><a href="/media/retranscoding-videos-using-media-module.html">Retranscode the Video</a></li>
+    </ul>
+    <p>In this example, Legacy transcoding was used (when the video was uploaded, a Legacy ingest profile was used). To download a rendition, right-click on the format link for the rendition.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-files.png" /></figure>
+    <p>In this example, <a href="/general/overview-dynamic-delivery.html">Dynamic Delivery</a> transcoding was used (when the video was uploaded, a Dynamic Delivery or Context Aware Encoding ingest profile was used).</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-files-dd.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Note:  A DRM toggle switch may also appear in the section if the account has been enabled for DRM. For more information on DRM, see <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-content-drm.html">Ingesting content with DRM</a>.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="mediasharing">Media Sharing</h2>
+    <p>If the video has been shared to an affiliate account, the Media Sharing section will be displayed and list the affiliates the video has been shared to. For more information on media sharing, see <a href="/media/media-sharing-using-media-module.html">Media Sharing using the Media Module</a>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-media-sharing.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="audiotracks">Audio Tracks</h2>
+    <p>If the video was uploaded and transcoded using a Dynamic Delivery or Context Aware Encoding ingest profile, the Audio Tracks section will be displayed and contain information on the audio renditions that are available. For information on adding additional audio tracks to a video, see <a href="/media/adding-audio-tracks-videos.html">Adding Audio Tracks to Videos using the Media Module</a>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: The Audio Tracks section will not be displayed if the video was transcoded using a Legacy ingest profile.</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-audio-tracks.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="images">Images</h2>
+    <p>The Images section displays the poster and thumbnail images for the video. Poster and thumbnail images are created automatically by taking a snapshot from the source video at the midway point. If you don't like the default images that were captured, you can <a href="/media/capturing-poster-and-thumbnail-images.html">capture new images</a> or <a href="/media/uploading-poster-and-thumbnail-images.html">upload other images</a> to use as the poster and thumbnail. Hover over the Poster/Thumbnail image and click the view icon (<img alt="" src="/assets/images/media/icon-eye.png" />) to open the image in a new browser tab.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-images.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="videoviews">Video Views</h2>
+    <p>The Video Views section displays the number of video views for the past 30 days. Click the links to open the Performance or Engagement Reports for more information.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-views.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="customfields">Custom Fields</h2>
+    <p>The Custom Fields section can be used to view and edit the custom field for the video. To edit custom field values, click the <strong>Edit</strong> button or double-click in the section. An asterisk (*) next to the field name indicates that the field is required.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: For information on adding custom fields to an account, see <a href="/admin/creating-custom-metadata-fields.html">Creating Custom Metadata Fields</a>.</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-custom-fields.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="availability">Availability</h2>
+    <p>The Availability section displays the video availability settings. For more information on configuring the availability settings, see <a href="/media/configuring-video-availability.html">Configuring Video Availability</a>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-availability.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="texttracks">Text Tracks</h2>
+    <p>The text track section can be used to add text tracks to the video. For more information on configuring text tracks, see <a href="/media/adding-captions-videos.html">Adding Captions to Videos using the Media Module</a>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-text-tracks.png" /></figure>
   </section>
 </article>
 
@@ -591,7 +599,7 @@ you can accomplish using it.
 
 <hr>
 <div class="last-updated">
-  Page last updated on 30 Sep 2020
+  Page last updated on 06 Oct 2020
 </div>
 
 

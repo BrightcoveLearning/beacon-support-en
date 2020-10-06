@@ -5,13 +5,13 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/adding-audio-tracks-videos-using-media-module.html",
-      "oldURL": "/adding-audio-tracks-videos-using-media-module"
+      "newURL": "https://beacon.support.brightcove.com/media/adding-audio-tracks-videos.html",
+      "oldURL": "/adding-audio-tracks-videos"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/adding-captions-videos-using-media-module.html",
-      "oldURL": "/adding-captions-videos-using-media-module"
+      "newURL": "https://beacon.support.brightcove.com/media/adding-captions-videos.html",
+      "oldURL": "/adding-captions-videos"
   },
 
   {
@@ -80,12 +80,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/admin/configuring-server-side-ad-settings.html",
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/configuring-server-side-ad-settings.html",
       "oldURL": "/configuring-server-side-ad-settings"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/configuring-server-side-ad-settings.html",
+      "newURL": "https://beacon.support.brightcove.com/admin/configuring-server-side-ad-settings.html",
       "oldURL": "/configuring-server-side-ad-settings"
   },
 
@@ -185,13 +185,13 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/editing-video-properties-using-media-module.html",
-      "oldURL": "/editing-video-properties-using-media-module"
+      "newURL": "https://beacon.support.brightcove.com/media/editing-video-details-using-quick-edit.html",
+      "oldURL": "/editing-video-details-using-quick-edit"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/editing-video-properties-using-quick-edit.html",
-      "oldURL": "/editing-video-properties-using-quick-edit"
+      "newURL": "https://beacon.support.brightcove.com/media/editing-video-details.html",
+      "oldURL": "/editing-video-details"
   },
 
   {
@@ -210,8 +210,8 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/getting-started-media-module.html",
-      "oldURL": "/getting-started-media-module"
+      "newURL": "https://beacon.support.brightcove.com/media/getting-started-media.html",
+      "oldURL": "/getting-started-media"
   },
 
   {
@@ -260,32 +260,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/fire-tv/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/training/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/samsung/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/references/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/",
       "oldURL": "/index"
   },
 
@@ -295,12 +270,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/",
+      "newURL": "https://beacon.support.brightcove.com/getting-started/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/samsung/",
       "oldURL": "/index"
   },
 
@@ -310,27 +285,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/panasonic/",
+      "newURL": "https://beacon.support.brightcove.com/references/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/getting-started/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/",
       "oldURL": "/index"
   },
 
@@ -340,7 +300,47 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/panasonic/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/fire-tv/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/training/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/media/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -645,8 +645,8 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/working-cue-points-media-module.html",
-      "oldURL": "/working-cue-points-media-module"
+      "newURL": "https://beacon.support.brightcove.com/media/working-cue-points.html",
+      "oldURL": "/working-cue-points"
   },
 
   {

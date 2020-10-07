@@ -1,59 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
 
-    <title>Creating Legacy Ingest Profiles</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/prism.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/styles.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/landing-page.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/tabs.css"
-    />
-    <link rel="stylesheet" href="/assets/css/local.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/381443caa8.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
-    <script src="/assets/js/sajari-head.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="This topic provides an overview of Context Aware Encoding.">
+  
+  <title>Overview of Context Aware Encoding</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+  <script src="/assets/js/sajari-head.js"></script>
+</head>
 
-  <body class="body"></body>
-</html>
+<body class="body">
 
 <header>
   <div class="div-header">
@@ -148,9 +120,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/admin/">Administering Accounts</a></li>
+      <li class="breadcrumb-item"><a href="/general/">General Information</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Creating Legacy Ingest Profiles</li>
+      <li class="breadcrumb-item active" aria-current="page">Overview of Context Aware Encoding</li>
     </ol>
   </nav>
 </header>
@@ -470,74 +442,68 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<article class="bcls-article">
-  <h1>Creating Legacy Ingest Profiles</h1>
-  <summary>This topic provides an overview of how to create custom ingest profiles for use with Legacy transcoding.</summary>
-  <section class="bcls-section">
-    <p>The Ingest Profiles administration page can be used to create new legacy ingest profiles. Ingest profiles are defined using JSON. When creating a new legacy profile, it is helpful to review the <a href="standard-ingest-profiles-legacy-transcoding.html">Standard Ingest Profiles for Legacy Transcoding</a> document and locate a profile similar to what you need. Then, in Studio, you can easily duplicate the profile and then edit it with your changes.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: For information on creating ingest profiles that use DRM, see the <a href="https://general.support.brightcove.com/general/mpeg-dash-video.html">MPEG-DASH Video</a> developer document.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: Each profile can create a maximum of 25 renditions. &nbsp;Poster and thumbnail images do count towards the maximum of 25.&nbsp;</aside>
-    <p>To create a new legacy ingest profile:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>In the left navigation, click <strong>Admin</strong>. Note that you must be an account administrator to access to the Administration page.</li>
-      <li>Click<strong> Ingest Profiles</strong>. </li>
-      <li>Locate a legacy profile to duplicate. Click the profile name to open the profile editor.</li>
-      <li>Click <strong>Duplicate</strong>. The profile editor will open with the new profile.</li>
-      <li>Scroll to the top of the profile. Edit the <code translate="No"><strong>name</strong></code> element to give the profile a meaningful name. This name will be displayed inside Video Cloud Studio.</li>
-      <li>Edit the <code translate="No"><strong>description</strong></code> element to give the profile a meaningful description.
-        <figure class="bcls-figure"><img alt="" src="/assets/images/admin/ingest-legacy-edit-profile-name.png" /></figure>
-      </li>
-      <li>Edit the rendition information as needed. The default size for the poster and thumbnail images is located at the end of the profile.</li>
-      <li>Click <strong>Save</strong>.</li>
-    </ol>
-    <div class="BCL-subsection">
-      <h3>Adding a watermark to a profile</h3>
-      <p>A watermark can be added to each rendition by adding the <code translate="No">watermarks</code> element to each <code translate="No">rendition</code>:</p>
-      <pre>
-       watermarks": [{ "y": -20, "x": -10, "width": "20%", "url": "http://www.mysite.com/companylogo.png" }]
-       </pre>
-      <p>The <code translate="No">watermarks</code> element has the following parameters.</p>
-      <table class="bcls-table">
-        <thead class="bcls-table__head">
-          <tr>
-            <th width="13%">Parameter</th>
-            <th width="14%">Type</th>
-            <th width="73%">Description</th>
-          </tr>
-        </thead>
-        <tbody class="bcls-table__body">
-          <tr>
-            <td ><code translate="No">url</code></td>
-            <td >string</td>
-            <td >URL for the watermark image</td>
-          </tr>
-          <tr>
-            <td ><code translate="No">width</code></td>
-            <td >string</td>
-            <td >width in pixels or percent of frame width; e.g. 20 or 10%</td>
-          </tr>
-          <tr>
-            <td ><code translate="No">height</code></td>
-            <td >string</td>
-            <td >height in pixels or percent of frame width; e.g. 20 or 10%</td>
-          </tr>
-          <tr>
-            <td ><code translate="No">x</code></td>
-            <td >string</td>
-            <td >distance from left edge to center of image as pixels or percent of frame width; e.g. 20 or 10% (use negative values like -10 to position the watermark relative to the right edge)</td>
-          </tr>
-          <tr>
-            <td ><code translate="No">y</code></td>
-            <td >string</td>
-            <td >distance from top edge to center if image as pixels or percent of frame height; e.g. 20 or 10% (use negative values like -10 to position the watermark relative to the bottom edge)</td>
-          </tr>
-        </tbody>
-      </table>
-      &nbsp;
-      <p>A sample profile with a watermark is shown below:</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/ingest-legacy-watermark.png" /></figure>
-    </div>
-  </section>
+<!-- 
+  This content appears on:
+  
+  https://studio.support.brightcove.com/general/overview-context-aware-encoding.html
+
+  https://apis.support.brightcove.com/general/overview-context-aware-encoding.html
+
+  https://zencoder.support.brightcove.com/general-information/overview-context-aware-encoding.html
+
+  If you update in one place, you MUST update it in all!
+ -->
+
+ <h1>Overview of Context Aware Encoding</h1>
+ <article class="bcls-article">
+  <summary>This topic provides an overview of Context Aware Encoding.</summary>
+<section class="bcls-section">
+  <h2 id="Introduction">Introduction</h2>
+  <p>We are all watching more video online - on our phones, tablets, TVs, at work, on the train, while walking down the street, etc. As streaming services scale up to meet the demand for more content across more screens, the storage and bandwidth costs of delivering video to those screens rises. Efficiently delivering high-quality video at scale to a vast range of devices is central to what we do at Brightcove. Context Aware Encoding can drastically reduce the cost of storing and streaming video, while improving playback quality for viewers. Context Aware Encoding uses advanced content analysis algorithms to determine the number and quality of the renditions to create for each video. In most cases, this results in smaller video files (and smaller CDN bills) while maintaining visual quality.</p>
+  <h3>Signing up for Context Aware Encoding</h3>
+  <p>Context Aware Encoding requires an additional fee. Contact your Account Manager about bundling Context Aware Encoding to get the optimum set of renditions for your videos.</p>
+</section>
+<section class="bcls-section">
+  <h2 id="abr">Adaptive bitrate streaming - how we got here</h2>
+  <p>Most video delivered over the internet today uses Adaptive Bitrate (ABR) streaming technologies, such as HLS and MPEG-DASH, to optimize video playback. An ABR stream contains multiple copies of the same video, called “renditions,” which are encoded at different resolutions and bitrates. When a user presses the play button, the player receives a manifest that lists the renditions available for playback. The player chooses the appropriate rendition to play based on several factors, including the bandwidth currently available, buffer fullness, and the size of the playback window. As these factors change during the course of playback, the player can switch up to a higher-quality rendition or down to a lower-quality one, ensuring that the viewer gets the best possible video quality with minimal buffering.</p>
+  <p>Streaming services generally create a single encoding configuration for all of their content -- a predetermined set of ABR renditions, often called a “ladder,” that is used to encode every piece of content. Deciding on the list of resolutions and bitrates to put into an ABR ladder is an inexact science. In some cases, ABR ladders can be tuned to a specific use case - animation, for example, can be encoded at lower bitrates as the content is generally less complex.</p>
+</section>
+<section class="bcls-section">
+  <h2 id="problem">The problem with static ABR</h2>
+  <p>Reaching a wide audience forces streamers into a one-size-fits-all scenario, using a single bitrate ladder to encode a variety of content types for a variety of end-user devices. In most cases, a single ABR ladder is being used to encode HD sports content for TV playback as well as cartoons for playback on phones.</p>
+  <p>The problem? Using a single bitrate ladder often results in inconsistent quality between different types of content. High-complexity video such as sports content requires more bits to achieve an acceptable viewing experience than animation. For example, if you skew your ABR ladder towards higher bitrates to ensure your sports content looks great, you’re wasting storage and bandwidth when using that same profile to encode animated content. That wasted storage and bandwidth costs real money.</p>
+</section>
+<section class="bcls-section">
+  <h2 id="faq">Optimizing ABR streams with Context Aware Encoding</h2>
+  <p>That’s where Brightcove’s Context Aware Encoding technology comes in. Instead of using one ABR ladder for all content, Context Aware Encoding analyzes each source video and intelligently builds a custom bitrate ladder (set of renditions) for each piece of content. In addition, Context Aware Encoding takes into account constraints associated with the delivery network and device being used to view the content. It decides how many renditions are needed and what resolutions and bitrates to use for each, while still maintaining a consistent level of quality across all titles. This results in massive savings on storage and bandwidth costs, while improving the playback experience for users.</p>
+  <p>The chart below illustrates a typical static ABR ladder alongside an example of a context aware ladder that was generated for a typical news clip.</p>
+  <figure><img class="bcls-image--no-border" alt="" src="/assets/images/general/cae-compare.png" /></figure>
+  <p>Context Aware Encoding was able to deliver the same quality as the static ABR ladder using half as many renditions, and using lower bitrates or higher resolutions for each rendition. This has a positive impact on both playback performance and cost efficiency.</p>
+</section>
+<section class="bcls-section">
+  <h2 id="playback">Better playback performance at lower bitrates</h2>
+  <p>Using the static ABR ladder, a mobile 3G user with 1,000kbps of sustained bandwidth would peak at the 360p rendition at 900kbps. Context Aware Encoding determined that it could create a higher resolution 432p rendition at a lower bitrate - 777kbps. This rendition uses 13% fewer bits and actually delivers higher resolution and quality, as you can see in the below side-by-side comparison. In the example below, the sharper details of the Context Aware clip are noticeable in the text at the bottom, as well as the man's hair.</p>
+  <figure><img class="bcls-image--no-border" alt="" src="/assets/images/general/cae-360p-900k.png" /></figure>
+  <p>Similarly, a user with an economy-priced residential internet plan supplying 3,000kbps of sustained bandwidth would top out at the 720p rendition under the static ABR ladder, while they would be able to stream at full 1080p using Context Aware Encoding, delivering a Full HD experience.</p>
+</section>
+<section class="bcls-section">
+  <h2 id="faq2">Reduced storage and bandwidth costs</h2>
+  <p>Encoding video to all eight renditions of the static ABR ladder generates a total of 14,750kbps of data. For a one minute video, that’s 885MB. The Context Aware ladder on the right generates only 4,950kbps. So for the same one minute video, that’s only 297MB, which represents a savings of 66% in storage costs. Since the bandwidth used depends on the number of viewers and the duration of video viewed, bandwidth savings can be even higher than those for storage. Overall, Brightcove anticipates up to 50% savings on storage and bandwidth costs. By adjusting the bitrates of the renditions to the lowest rate necessary to maintain visual quality, viewers will generally consume less bandwidth during each viewing session, providing additional savings on bandwidth costs.</p>
+</section>
+<section class="bcls-section">
+  <h2 id="cae_dd">Context Aware Encoding and Dynamic Delivery</h2>
+  <p>Context Aware Encoding is a feature of <a href="overview-dynamic-delivery.html">Dynamic Delivery</a>. Context Aware Encoding analyzes each source video and intelligently builds a custom bitrate ladder (set of renditions) for each piece of content. When a viewer presses play, Video Cloud will identify the requesting device so that we know what kind of media format it is expecting (codecs, how it needs to be packaged for delivery, what kind of DRM it uses, what closed captions it needs, which audio language, etc.). Dynamic Delivery then uses this information to process the different quality levels in real-time so that they are in the right format for the device requesting the content.</p>
+  <p>A diagram illustrating the Dynamic Delivery architecture is shown below. For more information on Dynamic Delivery, see <a href="overview-dynamic-delivery.html">Overview of Dynamic Delivery</a>.</p>
+  <figure><img class="bcls-image--no-border" alt="" src="/assets/images/general/cae-architecture.png" /></figure>
+</section>
+<section class="bcls-section">
+  <h2 id="videocloud">Using Context Aware Encoding in Video Cloud</h2>
+  <p>From a video publishing perspective, a couple of things will appear differently inside Video Cloud Studio. First, when uploading videos using the Upload module, you will see a <strong>CONTEXT AWARE ENCODING</strong> section when selecting an ingest profile..</p>
+  <figure><img class="bcls-image--no-border" alt="" src="/assets/images/general/cae-upload-module.png" /></figure>
+  <aside class="bcls-aside bcls-aside--information">Note: It is possible to create custom Context Aware Encoding ingest profiles. For information, see <a href="/admin/creating-ingest-profiles-context-aware-encoding.html">Creating Ingest Profiles for Context Aware Encoding</a>.</aside>
+  <p>The Media module will display a green cloud icon (<img alt="" src="/assets/images/general/cae-dd-icon.png" />) next to video titles that have been ingested using a Dynamic Delivery or Context Aware ingest profile. Videos ingested using a legacy ingest profile will display a grey icon (<img alt="" src="/assets/images/general/cae-legacy-icon.png" />).</p>
+  <figure><img class="bcls-image--no-border" alt="" src="/assets/images/general/cae-media-module.png" /></figure>
+</section>
 </article>
 
 <!-- complete bootstrap layout -->

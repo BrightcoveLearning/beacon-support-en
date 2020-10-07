@@ -1,59 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
 
-    <title>Creating Legacy Ingest Profiles</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/prism.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/styles.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/landing-page.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/tabs.css"
-    />
-    <link rel="stylesheet" href="/assets/css/local.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/381443caa8.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
-    <script src="/assets/js/sajari-head.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="In this topic, you will learn about the properties of the standard ingest profiles that are provided when using legacy transcoding.">
+  
+  <title>Standard Ingest Profiles for Legacy Transcoding</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+  <script src="/assets/js/sajari-head.js"></script>
+</head>
 
-  <body class="body"></body>
-</html>
+<body class="body">
 
 <header>
   <div class="div-header">
@@ -150,7 +122,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       <li class="breadcrumb-item"><a href="/admin/">Administering Accounts</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Creating Legacy Ingest Profiles</li>
+      <li class="breadcrumb-item active" aria-current="page">Standard Ingest Profiles for Legacy Transcoding</li>
     </ol>
   </nav>
 </header>
@@ -470,76 +442,37 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<article class="bcls-article">
-  <h1>Creating Legacy Ingest Profiles</h1>
-  <summary>This topic provides an overview of how to create custom ingest profiles for use with Legacy transcoding.</summary>
-  <section class="bcls-section">
-    <p>The Ingest Profiles administration page can be used to create new legacy ingest profiles. Ingest profiles are defined using JSON. When creating a new legacy profile, it is helpful to review the <a href="standard-ingest-profiles-legacy-transcoding.html">Standard Ingest Profiles for Legacy Transcoding</a> document and locate a profile similar to what you need. Then, in Studio, you can easily duplicate the profile and then edit it with your changes.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: For information on creating ingest profiles that use DRM, see the <a href="https://general.support.brightcove.com/general/mpeg-dash-video.html">MPEG-DASH Video</a> developer document.</aside>
-    <aside class="bcls-aside bcls-aside--information">Note: Each profile can create a maximum of 25 renditions. &nbsp;Poster and thumbnail images do count towards the maximum of 25.&nbsp;</aside>
-    <p>To create a new legacy ingest profile:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>In the left navigation, click <strong>Admin</strong>. Note that you must be an account administrator to access to the Administration page.</li>
-      <li>Click<strong> Ingest Profiles</strong>. </li>
-      <li>Locate a legacy profile to duplicate. Click the profile name to open the profile editor.</li>
-      <li>Click <strong>Duplicate</strong>. The profile editor will open with the new profile.</li>
-      <li>Scroll to the top of the profile. Edit the <code translate="No"><strong>name</strong></code> element to give the profile a meaningful name. This name will be displayed inside Video Cloud Studio.</li>
-      <li>Edit the <code translate="No"><strong>description</strong></code> element to give the profile a meaningful description.
-        <figure class="bcls-figure"><img alt="" src="/assets/images/admin/ingest-legacy-edit-profile-name.png" /></figure>
-      </li>
-      <li>Edit the rendition information as needed. The default size for the poster and thumbnail images is located at the end of the profile.</li>
-      <li>Click <strong>Save</strong>.</li>
-    </ol>
-    <div class="BCL-subsection">
-      <h3>Adding a watermark to a profile</h3>
-      <p>A watermark can be added to each rendition by adding the <code translate="No">watermarks</code> element to each <code translate="No">rendition</code>:</p>
-      <pre>
-       watermarks": [{ "y": -20, "x": -10, "width": "20%", "url": "http://www.mysite.com/companylogo.png" }]
-       </pre>
-      <p>The <code translate="No">watermarks</code> element has the following parameters.</p>
-      <table class="bcls-table">
-        <thead class="bcls-table__head">
-          <tr>
-            <th width="13%">Parameter</th>
-            <th width="14%">Type</th>
-            <th width="73%">Description</th>
-          </tr>
-        </thead>
-        <tbody class="bcls-table__body">
-          <tr>
-            <td ><code translate="No">url</code></td>
-            <td >string</td>
-            <td >URL for the watermark image</td>
-          </tr>
-          <tr>
-            <td ><code translate="No">width</code></td>
-            <td >string</td>
-            <td >width in pixels or percent of frame width; e.g. 20 or 10%</td>
-          </tr>
-          <tr>
-            <td ><code translate="No">height</code></td>
-            <td >string</td>
-            <td >height in pixels or percent of frame width; e.g. 20 or 10%</td>
-          </tr>
-          <tr>
-            <td ><code translate="No">x</code></td>
-            <td >string</td>
-            <td >distance from left edge to center of image as pixels or percent of frame width; e.g. 20 or 10% (use negative values like -10 to position the watermark relative to the right edge)</td>
-          </tr>
-          <tr>
-            <td ><code translate="No">y</code></td>
-            <td >string</td>
-            <td >distance from top edge to center if image as pixels or percent of frame height; e.g. 20 or 10% (use negative values like -10 to position the watermark relative to the bottom edge)</td>
-          </tr>
-        </tbody>
-      </table>
-      &nbsp;
-      <p>A sample profile with a watermark is shown below:</p>
-      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/ingest-legacy-watermark.png" /></figure>
-    </div>
-  </section>
-</article>
+<!-- 
+  This content appears on:
+  
+  https://apis.support.brightcove.com/ingest-profiles-legacy/references/standard-ingest-profiles-legacy-transcoding.html
 
+  https://studio.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html
+
+  If you update in one place, you MUST update it in all!
+ -->
+
+ <h1>Standard Ingest Profiles for Legacy Transcoding</h1>
+ <article class="bcls-article">
+  <summary>In this topic, you will learn about the properties of the standard ingest profiles that are provided when using legacy transcoding.</summary>
+  <section class="bcls-section">
+    <p>When uploading videos using the Upload module or when creating a Dynamic Ingest request using the DI API, you must supply an ingest profile which determines the number and type of renditions created by the Video Cloud ingestion process. This topic provides detailed information on each of the legacy ingest profiles. For information on the Dynamic Delivery profiles, see <a href="https://apis.support.brightcove.com/ingest-profiles/references/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html">Standard Ingest Profiles for Dynamic Delivery</a>.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: When lower quality (lower bitrate) source content is uploaded and one of the standard profiles is selected, Video Cloud will only produce renditions that are equal to or lower in quality than the source.</aside>
+    <p>It is also possible to create your own custom ingest profiles. For information, see <a href="https://studio.support.brightcove.com/admin/managing-ingest-profiles.html">Managing Ingest Profiles</a>.</p>
+  </section>
+  <section class="bcls-section" id="Document_data">
+    <h2>Document data</h2>
+    <aside class="bcls-aside bcls-aside--information">Notes:
+      <ul>
+        <li>This page is built using live data from the API; it may take a minute to fully load.</li>
+        <li>Standard profiles may <strong>not</strong> be edited - if you want a modified version, you will need to create a custom profile.</li>
+      </ul>
+    </aside>
+  </section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/ingest-profiles-api/assets/BCLSprofilesArray.js"></script>
+<script src="//learning-services-media.brightcove.com/doc-assets/video-cloud-apis/ingest-profiles-api/guides/standard-profiles/standard-profiles-drupal.js"></script>
+</article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

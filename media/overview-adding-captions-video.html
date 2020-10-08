@@ -38,10 +38,10 @@ layout: staging
     
       <aside class="bcls-aside bcls-aside--information">Note: If you are hosting captions files on your own server, make sure the file is located at a URL that can be accessed by the Brightcove player. The server hosting the captions file should also have Cross-Origin Resource Sharing (CORS) enabled. You can read more about CORS <a href="https://general.support.brightcove.com/developer/concepts-cors.html">here</a>.</aside>
       </li>
-      <li><strong>Uploaded using Video Cloud</strong> (<strong>ingested</strong>) - In this case, the WebVTT file is uploaded (ingested) to Video Cloud. This can be done using the Media module or using the APIs.</li>
+      <li><strong>Uploaded using Video Cloud</strong> (<strong>ingested</strong>) - In this case, the WebVTT file is uploaded (ingested) to Video Cloud using the  Media page.</li>
     </ol>
     
-    <aside class="bcls-aside bcls-aside--information">Note: If the video source file you ingest into Video Cloud has embedded 608/708 captions, they will be ignored during the processing of the video, and <strong>not</strong> present in the video renditions. To have captions with your videos, you will need to add them through the <a href="https://studio.support.brightcove.com/media/adding-captions-videos-using-media-module.html">Media module</a>, the <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">Dynamic Ingest API</a>, or the <a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-add-webvtt-captions-text-tracks.html">CMS API (for remotely hosted captions)</a></aside>
+    <aside class="bcls-aside bcls-aside--information">Note: If the video source file you ingest into Video Cloud has embedded 608/708 captions, they will be ignored during the processing of the video, and <strong>not</strong> present in the video renditions. To have captions with your videos, you will need to add them using the the <a href="adding-captions-videos.html">Media page</a>.</aside>
     </section>
     
     <section id="associate" class="bcls-section">
@@ -57,7 +57,7 @@ layout: staging
     
     <h3 id="studio">Adding captions in Studio</h3>
     
-    <p>Captions can be associated with a video using the Media module. For information, see <a href="https://studio.support.brightcove.com/media/adding-captions-videos-using-media-module.html">Adding Captions to Videos using the Media Module</a>.</p>
+    <p>Captions can be associated with a video using the Media page. For information, see <a href="adding-captions-videos.html">Adding Captions to Videos</a>.</p>
     
     <h3 id="pubcode">Modifying the player publishing code</h3>
     
@@ -65,27 +65,16 @@ layout: staging
     
     <h3 id="api">Adding captions via the APIs</h3>
     
-    <p>How you add captions via the APIs varies depending on whether the captions file will be ingested or used as a remote asset.</p>
+    <p>How you add captions via the APIs varies depending on whether the captions file will be ingested or used as a remote asset.      </p>
     
-    <ul>
-      <li>
-      <p><strong>Remote asset captions</strong> - If you prefer to host the captions yourself (or have a captions provider who hosts them), then you can associate the captions with a video using the CMS API. For information, see <a href="https://apis.support.brightcove.com/cms/managing-videos/using-cms-api-add-webvtt-captions-text-tracks.html">Using the CMS API: Add WebVTT Captions</a>.</p>
-      </li>
-      <li>
-      <p><strong>Add captions to Video Cloud</strong> - If you want to have Brightcove host your captions, you can ingest your WebVTT file using the Dynamic Ingest API. For information, see <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">Ingesting WebVTT Files</a>.</p>
-      </li>
-    </ul>
-    
-    <aside class="bcls-aside bcls-aside--information">Note: Regardless of the method used to add caption files to a video, no more than 1000 text tracks may be added.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: No more than 1000 text tracks may be added.</aside>
     </section>
     
     <section id="remove" class="bcls-section">
     <h2>Removing captions</h2>
     
-    <p>Captions can be removed from videos using the Media module or via the CMS API. In Studio, open the Media module and edit the video properties. Edit the <strong>Text Tracks</strong> property as needed.</p>
-    
-    <p>Captions can also be removed using the CMS API by making an <a href="https://docs.brightcove.com/cms-api/v1/doc/index.html#api-videoGroup-Update_Video">Update Video</a> request and submitting a request body with an empty <code>text_tracks</code> array (or an array from which the object associated with that set of captions has been removed).</p>
-    </section>
+    <p>Captions can be removed from videos using the Media page. In Studio, open the Media page and edit the video details. Edit the <strong>Text Tracks</strong> property as needed.</p>
+        </section>
     
     <section id="styling" class="bcls-section">
     <h2>Styling captions</h2>

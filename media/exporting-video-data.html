@@ -5,17 +5,17 @@ layout: staging
 ---
 <article class="bcls-article">
   <h1>Exporting Video Data</h1>
-  <summary>In this topic you will learn how to export video data inside of the Media module.</summary>
+  <summary>In this topic you will learn how to export video data using the Media page.</summary>
   <section class="bcls-section">
-    <p>The Media module provides the ability to export video metadata for all of your videos or a subset of videos. When using this feature, keep the following in mind:</p>
+    <p>The Media page provides the ability to export video metadata for all of your videos or a subset of videos. When using this feature, keep the following in mind:</p>
     <ul>
       <li class="language-editable">Brightcove recommends exporting less than 15K videos at a time. If you need to export more than 15K videos, use the search feature to return a subset of videos and export multiple "batches" at a time.</li>
-      <li class="language-editable">URLs for renditions and images are not fixed. Brightcove reconfigures the storage of media assets from time to time and when this happens, URLs for specific assets will change. If you are relying on hard-coded URLs to these assets, the links may break at some point. The best way to prevent links to media from breaking is to retrieve them from Video Cloud at runtime using the <a href="https://apis.support.brightcove.com/cms/getting-started/overview-cms-api.html">CMS API</a>.</li>
+      <li class="language-editable">URLs for renditions and images are not fixed. Brightcove reconfigures the storage of media assets from time to time and when this happens, URLs for specific assets will change. If you are relying on hard-coded URLs to these assets, the links may break at some point.</li>
       <li class="language-editable">Double-byte characters such as Korean and Japanese will not display properly if opened in Excel. This is caused by the fact that the generated .csv file is encoded by UTF-8 and Excel does not support it properly. To fix this, the .csv file should be re-encoded by ANSI, then, it will be displayed properly in Excel.</li>
     </ul>
     <p>To export video metadata, follow these steps.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Open the Media module.</li>
+      <li>Open the Media page.</li>
       <li>If you want to export data for specific videos, check the checkbox next to the videos.</li>
       <li>Click <strong>Export</strong> at the top of the page.
         <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/export-data.png" /></figure>

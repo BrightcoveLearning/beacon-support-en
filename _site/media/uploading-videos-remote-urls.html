@@ -444,17 +444,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <article class="bcls-article">
   <h1>Uploading Videos Using Remote URLs</h1>
-  <summary>This topic covers how to upload remote videos using the Upload module.</summary>
+  <summary>This topic covers how to upload remote videos using the Upload page.</summary>
   <section class="bcls-section">
-    <p>The Upload module uses a dynamic ingest process to retrieve and transcode video content. When you select a file to upload, Video Cloud uses a pull-based process to pull the content from a storage location where it then uses the Zencoder transcoding service to transcode the content. </p>
-    <p>The Upload module supports various methods of uploading videos:</p>
+    <p>The Upload page uses a dynamic ingest process to retrieve and transcode video content. When you select a file to upload, Video Cloud uses a pull-based process to pull the content from a storage location where it then uses the Zencoder transcoding service to transcode the content. </p>
+    <p>The Upload page supports various methods of uploading videos:</p>
     <ul>
-      <li><strong>Drag and Drop</strong> - This method allows you to drag files from your local file system to the Upload module page</li>
+      <li><strong>Drag and Drop</strong> - This method allows you to drag files from your local file system to the Upload  page</li>
       <li><strong>File selection dialog</strong> - This method opens a file selection dialog where you browse and select files to upload</li>
       <li><strong>Remote URL</strong> - This method allows you to enter a URL to specify the location of the source file</li>
     </ul>
     <p>This topic will focus on how you can get the remote URL for popular cloud file hosting services. Using the remote URL upload method is helpful for larger files that may have been edited/processed by people outside of your organization. Rather than copying a large file to your local machine, a remote URL to the file can be provided and Video Cloud can pull the file from the location. In all cases, you must ensure the URL to the file is publicly available or the upload will fail.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: For complete details on using the Upload module, see <a href="/media/uploading-videos.html">Uploading Videos Using the Upload Module</a>.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: For complete details on using the Upload page, see <a href="/media/uploading-videos.html">Uploading Videos</a>.</aside>
     <aside class="bcls-aside bcls-aside--information">Note: Before uploading videos, make sure the appropriate ingest profile has been selected.</aside>
   </section>
   <section class="bcls-section">
@@ -475,7 +475,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </li>
       <li>Click <strong>Create Direct Link</strong>.</li>
     </ol>
-    <p>The URL returned in the Output link field is the URL to use in the Upload module to upload the video.</p>
+    <p>The URL returned in the Output link field is the URL to use on the Upload page to upload the video.</p>
     <aside class="bcls-aside bcls-aside--information">Note: You can not use a YouTube URL because a direct links to video files aren't generated.</aside>
   </section>
   <section class="bcls-section">

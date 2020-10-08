@@ -448,7 +448,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <p>To view and edit the details for a video, open the Media page and click the video title link. The video details page will open.</p>
     <aside class="bcls-aside bcls-aside--information">Note: To edit video details for multiple videos at the same time, use the <a href="/media/editing-video-details-using-quick-edit.html">Quick Edit</a> feature.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-properties.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-home.png" /></figure>
     <p>Buttons at the top of the video properties page provide the ability to:</p>
     <ul>
       <li><a href="/media/capturing-poster-and-thumbnail-images.html">Capture new poster and thumbnail images</a></li>
@@ -457,7 +457,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><a href="/publishing-videos-and-playlists.html">Publish a video</a></li>
     </ul>
     <p>If the video is activated, the <strong>Deactivate</strong> button can be used to deactivate the video. If the video is deactivated, the <strong>Activate</strong> button can be used to activate the video. Videos that are deactivated cannot be played in a Brightcove Player.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-deactivate-publish.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-deactivate-publish.png" /></figure>
     <p>The preview player at the top of the page can be used to view the video.</p>
     <p>The video properties are organized into the following sections:</p>
     <ul>
@@ -480,7 +480,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="videoinfo">Video Information</h2>
     <p>The Video Information section can be used to view and edit basic video properties.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-information.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-video-information.png" /></figure>
     <p>To edit the properties, click the <strong>Edit</strong> button or double-click in the section. The following properties can be edited:</p>
     <ul>
       <li><strong>Name</strong> - No more than 255 characters.</li>
@@ -494,7 +494,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <li>A tag differing only in case (lowercase, uppercase) is handled as an identical tag and the case will automatically match those of the original tag.</li>
           <li>Issues with case sensitivity need to be handled externally to Video Cloud, for example, using JavaScript methods to modify the strings.</li>
           <li>After entering a tag, press the <strong>comma</strong> key or <strong>enter</strong>. Tags that have been added will display in a colored box.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-tags-added.png" /></figure>
+            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-tags-added.png" /></figure>
           </li>
         </ul>
       </li>
@@ -520,9 +520,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><strong>Ad Keys</strong> - Passed as part of the ad server URL. For example, to pass <code>section=blog</code> and <code>anotherKey=value1</code>, you would enter <code>section=blog&amp;anotherKey=value1</code>. See the <a href="https://support.google.com/dfp_premium/answer/1080597">DoubleClick for Publishers Help</a> for information on adding key-value pairs. When using ad keys, ad macros should be added to the ad server URL (configured as part of the <a href="/players/configuring-player-advertising-using-players-module.html">player advertising properties</a>). Ad macros support variables in the server URL for which the IMA3 plugin will substitute appropriate values. For more information, see the <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#adMacros">IMA3 developer documentation</a>.</li>
       <li><strong>Folder</strong> - Folder the video is assigned to. See <a href="/media/organizing-videos-using-folders.html">Organizing Videos Using Folders</a> for more information.</li>
       <li><strong>Manual Playlists</strong> - Playlists that this video belongs to. For more information, see <a href="/media/creating-and-managing-playlists.html">Creating and Managing Playlists</a>.</li>
-      <li><strong>Sharing</strong> - Indicates if the video has been shared to another account. For more information, see <a href="/media/sharing-videos-other-accounts.html">Media Sharing using the Media Module</a>.</li>
+      <li><strong>Sharing</strong> - Indicates if the video has been shared to another account. For more information, see <a href="/media/sharing-videos-other-accounts.html">Sharing Videos to Other Accounts</a>.</li>
     </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-information-edit.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-video-information-edit.png" /></figure>
     <p>Click <strong>Save</strong> to save changes.</p>
   </section>
   <section class="bcls-section">
@@ -533,47 +533,47 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><a href="/media/retranscoding-videos.html">Retranscode the Video</a></li>
     </ul>
     <p>In this example, Legacy transcoding was used (when the video was uploaded, a Legacy ingest profile was used). To download a rendition, right-click on the format link for the rendition.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-files.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-video-files.png" /></figure>
     <p>In this example, <a href="/general/overview-dynamic-delivery.html">Dynamic Delivery</a> transcoding was used (when the video was uploaded, a Dynamic Delivery or Context Aware Encoding ingest profile was used).</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-files-dd.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-video-files-dd.png" /></figure>
     <aside class="bcls-aside bcls-aside--information">Note:  A DRM toggle switch may also appear in the section if the account has been enabled for DRM. For more information on DRM, see <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-content-drm.html">Ingesting content with DRM</a>.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="mediasharing">Media Sharing</h2>
-    <p>If the video has been shared to an affiliate account, the Media Sharing section will be displayed and list the affiliates the video has been shared to. For more information on media sharing, see <a href="/media/sharing-videos-other-accounts.html">Media Sharing using the Media Module</a>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-media-sharing.png" /></figure>
+    <p>If the video has been shared to an affiliate account, the Media Sharing section will be displayed and list the affiliates the video has been shared to. For more information on media sharing, see <a href="/media/sharing-videos-other-accounts.html">Sharing Videos to Other Accounts</a>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-media-sharing.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="audiotracks">Audio Tracks</h2>
-    <p>If the video was uploaded and transcoded using a Dynamic Delivery or Context Aware Encoding ingest profile, the Audio Tracks section will be displayed and contain information on the audio renditions that are available. For information on adding additional audio tracks to a video, see <a href="/media/adding-audio-tracks-videos.html">Adding Audio Tracks to Videos using the Media Module</a>.</p>
+    <p>If the video was uploaded and transcoded using a Dynamic Delivery or Context Aware Encoding ingest profile, the Audio Tracks section will be displayed and contain information on the audio renditions that are available. For information on adding additional audio tracks to a video, see <a href="/media/adding-audio-tracks-videos.html">Adding Audio Tracks to Videos</a>.</p>
     <aside class="bcls-aside bcls-aside--information">Note: The Audio Tracks section will not be displayed if the video was transcoded using a Legacy ingest profile.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-audio-tracks.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-audio-tracks.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="images">Images</h2>
     <p>The Images section displays the poster and thumbnail images for the video. Poster and thumbnail images are created automatically by taking a snapshot from the source video at the midway point. If you don't like the default images that were captured, you can <a href="/media/capturing-poster-and-thumbnail-images.html">capture new images</a> or <a href="/media/uploading-poster-and-thumbnail-images.html">upload other images</a> to use as the poster and thumbnail. Hover over the Poster/Thumbnail image and click the view icon (<img alt="" src="/assets/images/media/icon-eye.png" />) to open the image in a new browser tab.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-images.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-images.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="videoviews">Video Views</h2>
     <p>The Video Views section displays the number of video views for the past 30 days. Click the links to open the Performance or Engagement Reports for more information.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-video-views.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-video-views.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="customfields">Custom Fields</h2>
     <p>The Custom Fields section can be used to view and edit the custom field for the video. To edit custom field values, click the <strong>Edit</strong> button or double-click in the section. An asterisk (*) next to the field name indicates that the field is required.</p>
     <aside class="bcls-aside bcls-aside--information">Note: For information on adding custom fields to an account, see <a href="/admin/creating-custom-metadata-fields.html">Creating Custom Metadata Fields</a>.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-custom-fields.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-custom-fields.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="availability">Availability</h2>
     <p>The Availability section displays the video availability settings. For more information on configuring the availability settings, see <a href="/media/configuring-video-availability.html">Configuring Video Availability</a>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-availability.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-availability.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="texttracks">Text Tracks</h2>
     <p>The text track section can be used to add text tracks to the video. For more information on configuring text tracks, see <a href="/media/adding-captions-videos.html">Adding Captions to Videos using the Media Module</a>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/node15482-text-tracks.png" /></figure>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-text-tracks.png" /></figure>
   </section>
 </article>
 

@@ -255,7 +255,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/samsung/",
+      "newURL": "https://beacon.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
@@ -280,7 +280,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/general/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/samsung/",
       "oldURL": "/index"
   },
 
@@ -662,6 +662,11 @@
   {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/vod-ssai.html",
       "oldURL": "/vod-ssai"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/general/working-360deg-videos.html",
+      "oldURL": "/working-360deg-videos"
   },
 
   {

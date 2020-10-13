@@ -604,6 +604,26 @@
         </url>
         
       
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/training/training-demand-series-seasons-episodes.html</loc>
+          
+            <lastmod>2020-10-13</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/training/training-demand-design-layout.html</loc>
+          
+            <lastmod>2020-10-13</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
     
       <url>
         <loc>https://beacon.support.brightcove.com/support/index.html</loc>

@@ -484,7 +484,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/select-dashboards.png" alt="select dashboards">
                 </figure>
             </li>
-            <li>Note that your dashboard will appear on the right side of the screen. A sample dashboard is shown here:
+            <li>If the Dashboard does not appear, you will need to select it from the list:
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/click-on-report.png" alt="Select dashboard">
+                </figure>
+            </li>
+            <li>Your dashboard will appear on the right side of the screen. A sample dashboard is shown here:
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/dashboard.png" alt="Dashboard">
                 </figure>
@@ -495,14 +500,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <h2 id="Viewing_the_Data_Studio_report">Viewing the Data Studio report</h2>
         <p>To view the customized Google Data Studio report installed by Brightcove, follow these steps:</p>
         <ol class="bcls-tasklist-restart">
-            <li>Log in to <a href="https://analytics.google.com">Google Data Studio (datastudio.google.com)</a>.</li>
+            <li>Log in to <a href="https://datastudio.google.com/">Google Data Studio (datastudio.google.com)</a>.</li>
             <li>You will see a list of report(s) listed on the landing page (highlighted in yellow):
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/data-studio-landing-page.png" alt="data studio landing page">
                 </figure>
             </li>
             <li>Click on the report name to open it.</li>
-            <li>The first page of an example report is shown here. Note in the top right corner of the report is the navigation (highlighted in yellow) to see the other pages.
+            <li>The first page of an example report is shown here. Note in the top left corner of the report is the navigation (highlighted in yellow) to see the other pages.
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/data-studio-report.png" alt="data studio report">
                 </figure>
@@ -511,6 +516,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
         <h2 id="Viewing_dimensions_and_metrics">Viewing dimensions and metrics</h2>
+        <aside class="bcls-aside bcls-aside--tip">If you are not familiar with analytics dimensions and metrics here is a VERY simplified explanation:
+            <ul>
+                <li>Dimensions are attributes of your data. For example, the city where views are coming from is a dimension. A single dimension can contain many values, like the names of all the cities from which you have views.</li>
+                <li>Metrics are quantitative measurements. So the number of sessions from a particular city would be a metric.</li>
+            </ul>
+        </aside>
         <p>Brightcove adds functionality to the default Google measures for your analytics reports. You can use the default Google Analytics dimensions and metrics, the building blocks of analytics reports, as well as numerous dimensions and one metric added by Brightcove. These additional dimensions and the one metric are used in the dashboard and Data Studio report shown in the first two sections of this document.</p>
         <p> Note that the dimensions and metric added by Brightcove are NOT the same for each type of Brightcove Beacon app. For instance, the iOS mobile data has 16 custom metrics added, whereas the web site app has 20 custom metrics added. To see a list of the dimensions and metric in the Google Analytics UI, follow these steps:</p>
         <ol class="bcls-tasklist-restart">
@@ -583,13 +594,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <h2 id="Screen_views_information">Screen views information</h2>
         <p>Of course, you will want to see what your viewers are doing in your apps. The option for this is <strong>Behavior</strong>. Follow these steps to see <strong>screen views</strong> information:</p>
         <ol class="bcls-tasklist-restart">
-            <li>In the left side navigation, first click <strong>Behavior</strong> then <strong>Screens</strong>.
+            <li>In the left side navigation, click <strong>Behavior</strong> → <strong>Site Content</strong> → All Pages.
                 <p></p>
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/behavior-screens.png" alt="behavior screens" />
                 </figure>
             </li>
-            <li>On the right side of the screen you see a list of the most viewed screens. It is probably not a surprise that in many apps the <strong>Sign in</strong> and <strong>Home</strong> pages will be high in this list.
+            <li>On the right side of the screen you see a list of the most viewed screens.
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/screens-details.png" alt="screens details" />
                 </figure>
@@ -600,10 +611,20 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <h2 id="Played_and_time_watched_information">Played and time watched information</h2>
         <p>Still in the <strong>Behavior</strong> option, you can see the number of times a video asset has had the play button clicked for it, and also how long the asset was actually watched. Follow these steps for that info:</p>
         <ol class="bcls-tasklist-restart">
-            <li>While still in the <strong>Behavior</strong> option, click <strong>Events > Top Events</strong>.</li>
+            <li>While still in the <strong>Behavior</strong> option, click <strong>Events → Top Events</strong>.</li>
             <li>In the <strong>Event Category</strong> list, click <strong>Play movies</strong>
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/event-category-play-movie.png" alt="event category play movie" />
+                </figure>
+            </li>
+            <li>In the <strong>Event Category</strong> list, click <strong>Movie</strong>.
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/event-category.png" alt="event category" />
+                </figure>
+            </li>
+            <li>In the <strong>Even Action</strong> list, click <strong>Play</strong>.
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/event-action.png" alt="event action" />
                 </figure>
             </li>
             <li>Note that the list shows the number of times the play button was click for each asset.
@@ -621,12 +642,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/choose-custom-definition.png" alt="choose custom definition" />
                 </figure>
             </li>
-            <li>View the example table with the <strong>Language</strong> custom dimension added.
+            <li>View the example table with the <strong>Genre</strong> custom dimension added.
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/using-beacon-analytics/language-in-table.png" alt="language in table" />
                 </figure>
             </li>
-            <li>Note th in the <strong>Events > Top Events</strong> list you can also see <strong>Time Watched Movies</strong>, which of course uses your custom metric <strong>Time Watched</strong>.</li>
+            <li>Note the in the <strong>Event Action</strong> list you can also see <strong>Time Watched</strong>, which of course uses your custom metric <strong>Time Watched</strong>.</li>
         </ol>
     </section>
     <section class="bcls-section">

@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="description" content="This document lists the supported containers and codecs you can use when you upload videos to Video Cloud.">
   
-  <title>Editing Video Details</title>
+  <title>Supported Video and Audio Formats, Codecs, and Containers</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -120,9 +120,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/media/">Managing Videos</a></li>
+      <li class="breadcrumb-item"><a href="/general/">General Information</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Editing Video Details</li>
+      <li class="breadcrumb-item active" aria-current="page">Supported Video and Audio Formats, Codecs, and Containers</li>
     </ol>
   </nav>
 </header>
@@ -450,148 +450,76 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
+<h1>Supported Video and Audio Formats, Codecs, and Containers</h1>
 <article class="bcls-article">
-  <h1>Editing Video Details</h1>
-  <summary>In this topic you will learn how to edit video details using the Media page.</summary>
+  <summary>This document lists the supported containers and codecs you can use when you upload videos to Video Cloud.</summary>
   <section class="bcls-section">
-    <p>To view and edit the details for a video, open the Media page and click the video title link. The video details page will open.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: To edit video details for multiple videos at the same time, use the <a href="/media/editing-video-details-using-quick-edit.html">Quick Edit</a> feature.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-home.png" /></figure>
-    <p>Buttons at the top of the video details page provide the ability to:</p>
+    <h2 id="terms">Understanding codecs, containers, and file extensions</h2>
+    <p>Codecs, containers and file extensions are not equivalent but are often confused with one another. For example, H.264 video does not just mean a file with the extension <code translate="No">.mp4</code>. Video files contain both metadata (duration, dimensions, etc.) as well as the encoded and often compressed audio and video data.</p>
     <ul>
-      <li><a href="/media/capturing-poster-and-thumbnail-images.html">Capture new poster and thumbnail images</a></li>
-      <li><a href="/media/organizing-videos-using-folders.html">Add the video to a folder</a> or <a href="/media/creating-and-managing-playlists.html">add it to a playlist</a></li>
-      <li><a href="/publishing-videos-and-playlists.html">Publish a video</a></li>
-      <li>Deactivate/activate videos</li>
-      <li>Delete the video</li>
+      <li>The <em>container</em> format defines how the metadata is stored along with the audio and video data. It does not define the coding or compression of the data.</li>
+      <li><em>Codecs</em> are responsible for encoding and decoding the video and audio streams in a video file. They can be lossy or lossless and are usually optimized for certain types of transmission. Note that there are some cases where the codec and container share a single definition, but these are uncommon.</li>
     </ul>
-    <p>If the video is activated, the <strong>Deactivate</strong> button can be used to deactivate the video. If the video is deactivated, the <strong>Activate</strong> button can be used to activate the video. Videos that are deactivated cannot be played in a Brightcove Player.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-deactivate-publish.png" /></figure>
-    <p>The preview player at the top of the page can be used to view the video.</p>
-    <p>The video details are organized into the following sections:</p>
+    <p>Other terms that are often confused are encoding/decoding and muxing/demuxing.</p>
     <ul>
-      <li><a href="#videoinfo">Video Information</a></li>
-      <li><a href="#videofiles">Video Files</a></li>
-      <li><a href="#mediasharing">Media Sharing</a></li>
-      <li><a href="#audiotracks">Audio Tracks</a></li>
-      <li><a href="#videotype">Video Type Information</a></li>
-      <li><a href="#images">Images</a></li>
-      <li><a href="#videoviews">Video Views</a></li>
-      <li><a href="#customfields">Custom Fields</a></li>
-      <li><a href="#availability">Availability</a></li>
-      <li><a href="#texttracks">Text Tracks</a></li>
+      <li><em>Encoding </em>and <em>decoding </em>refer to converting the encoded video and audio data to and from streams that can be played.</li>
+      <li><em>Muxing </em>and <em>demuxing </em>refers to the writing and reading of audio and video streams into and from various container formats.</li>
     </ul>
-    <p>To edit the video details, click the <strong>Edit</strong> button in the section or double-click in the section.</p>
+    <p>For more information see:</p>
+    <ul>
+      <li>Containers are described in this <a class="external-link" rel="nofollow" href="http://en.wikipedia.org/wiki/Comparison_of_container_formats">article</a>.</li>
+      <li>More details on codecs can be found in this <a class="external-link" rel="nofollow" href="http://en.wikipedia.org/wiki/Video_codec">article</a>.</li>
+      <li>Additional references for codec IDs and codes can be found <a class="external-link" rel="nofollow" href="http://www.fourcc.org/codecs.php">here</a> and <a class="external-link" rel="nofollow" href="http://mp4ra.org/#/codecs">here</a>.</li>
+    </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="required">Required fields</h2>
-    <p>Your Video Cloud account may be configured with required metadata fields. If a video is inactive, you can freely edit and save its metadata without supplying all required metadata. Also, videos can't be activated until all required metadata has been entered. If a video is already active, you cannot save any edits in the section you are editing unless you supply all required metadata in that section or deactivate the video. For more information on working with required fields, see <a href="/media/setting-required-fields-videos.html">Setting Required Fields for Videos</a>.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="videoinfo">Video Information</h2>
-    <p>The Video Information section can be used to view and edit basic video details.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-video-information.png" /></figure>
-    <p>To edit the details, click the <strong>Edit</strong> button or double-click in the section. The following details can be edited:</p>
+    <h2 id="supported_source_formats">Supported source video types</h2>
+    <p>Since <span translate="No">Brightcove</span> generally handles the complexity of creating renditions with codecs and formats appropriate to different platforms, browsers, and device apps, what concerns you most is what kinds of source videos we can transcode for you.</p>
+    <p>Since <span translate="No">Brightcove</span> supports so many video input types, it is actually more helpful to talk about the formats we do not support. At the moment, there are only a few. The list below shows the formats <strong><em>not</em></strong> supported for <a href="https://zencoder.support.brightcove.com"><span translate="No">Zencoder</span> </a>, the <span translate="No">Video Cloud</span> <a href="/media/uploading-videos-using-upload-module.html">Upload module</a> and <a href="https://apis.support.brightcove.com/dynamic-ingest/"><span translate="No">Dynamic Ingest API</span></a>. Note that if a format is <strong>not</strong> in included in the list below, you can assume it <strong>is supported</strong>.</p>
     <ul>
-      <li><strong>Name</strong> - No more than 255 characters.</li>
-      <li><strong>ID</strong> - System assigned video ID (unique across all Video Cloud accounts).</li>
-      <li><strong>Short description</strong> - No more than 250 characters.</li>
-      <li><strong>Tags</strong> - One or more tags, separated by commas. You can use tags to add videos to smart playlists or to find videos using the CMS API.
-        <ul>
-          <li>Tags can be up to 128 characters. If any tags have more than 128 characters, an error will be displayed when you attempt to save changes.</li>
-          <li>Tags can't contain commas. For example, a tag of "roof, attic + front yard" is not supported.</li>
-          <li>A video can have no more than a total of 1200 tags.</li>
-          <li>A tag differing only in case (lowercase, uppercase) is handled as an identical tag and the case will automatically match those of the original tag.</li>
-          <li>Issues with case sensitivity need to be handled externally to Video Cloud, for example, using JavaScript methods to modify the strings.</li>
-          <li>After entering a tag, press the <strong>comma</strong> key or <strong>enter</strong>. Tags that have been added will display in a colored box.
-            <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-tags-added.png" /></figure>
-          </li>
-        </ul>
+      <li><code translate="No">Apple Intermediate</code></li>
+      <li><code translate="No">HDV 720p60</code></li>
+      <li><code translate="No">Go2Meeting3 (G2M3)</code></li>
+      <li><code translate="No">Avid Meridien Uncompressed</code></li>
+      <li><code translate="No">Windows Media Audio Lossless</code></li>
+      <li><code translate="No">CineForm</code> - partly supported; there are variants that can come from the software used to encode the source, or from OS, that make the source unusable by Zencoder. We are still trying to identify the exact factors that cause problems.</li>
+      <li><code translate="No">SWF</code> - partly supported by <span translate="No">Zencoder</span>; if the <code translate="No">SWF</code> contains a video or audio track, those can be processed, but many <code translate="No">SWFs</code> do not.</li>
+      <li><code translate="No">Animated .gif</code> - Officially not supported but they may work</li>
+    </ul>
+    <h3>Special cases</h3>
+    <ul>
+      <li>
+        <aside class="bcls-aside bcls-aside--information">Note: <code translate="No">AVdh (DNxHQ)</code> also does not work for <strong>422 10-bit and 444 12-bit sources (only)</strong> - this is a bug, and this note will be removed when it is fixed.</aside>
       </li>
-      <li><strong>Reference ID</strong> - A unique ID assigned by a publisher to a video or playlist. Limited to no more than 150 characters. The reference ID is distinct from the video ID or playlist ID which are unique IDs generated by Video Cloud. The reference ID enables coordination between Video Cloud and other services such as a publisher's content management system. Note that you can't batch edit the reference ID as two videos can't have the same reference ID. Reference IDs must always be unique. Deleting a video will allow a previously assigned reference ID to be reused.</li>
-      <li><strong>Video Projection</strong> - Indicates how the video was recorded.
-        <ul>
-          <li><strong>Standard</strong> - Default. Regular video recording.</li>
-          <li><strong>360 Degree</strong> - Check to indicate the video is a 360 degree video. A 360 badge will appear in the video thumbnail on the Media page. For more information on working with 360 degree videos, see <a href="/general/working-360deg-videos.html">Working with 360° Videos</a>.</li>
-        </ul>
+      <li>Content encrypted with KMS is supported but requires that you pre-sign your object URLs, ala what is outlined here: <a href="https://aws.amazon.com/blogs/developer/generating-amazon-s3-pre-signed-urls-with-sse-kms-part-2/">https://aws.amazon.com/blogs/developer/generating-amazon-s3-pre-signed-urls-with-sse-kms-part-2/</a>.
+        <p>Steps to implement:</p>
+        <ol>
+          <li>Create a KMS managed encrypted bucket</li>
+          <li>Add the Video Cloud/Zencoder Ingest Policy</li>
+          <li>Create a pre-signed URL using the KMS key</li>
+          <li>Use this URL when ingesting the video</li>
+        </ol>
       </li>
-      <li><strong>Enable offline playback</strong> - When checked, enables the video to be saved locally and viewed offline when using applications created using the device SDKs. This option will only appear if the account is enabled for offline playback.</li>
-      <li><strong>Related Link URL</strong> - A standard web URL beginning with http:// or https:// limited to 255 characters.</li>
-      <li><strong>Related Link Text</strong> - Related link text limited to 255 characters.</li>
-      <li><strong>Long Description</strong> - No more than 5000 characters.</li>
-      <li><strong>Advertising</strong>
-        <ul>
-          <li><strong>Free</strong> - Ads will not be shown when the video plays.</li>
-          <li><strong>Ad Supported</strong> - Ads may be shown when video plays.
-            <aside class="bcls-aside bcls-aside--information">Note: If your account is not enabled for advertising and you set the Advertising property to Ad Supported, you will receive an error when saving changes.</aside>
-          </li>
-        </ul>
+    </ul>
+    <p>Aside from those listed above, we believe we support pretty much all known video formats. If you have problems with another video format, please <a href="https://supportportal.brightcove.com/s/login/?language=en_US">Contact <span translate="No">Brightcove</span> Support</a> and also let <a href="mailto:docs@brightcove.com"><span translate="No">Brightcove</span> Learning Services</a> know.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="audio_concerns">Audio formats</h2>
+    <h3>Ingestion</h3>
+    <p>On the ingestion side, most formats are supported, except when they get over 8 channels of audio. (And the audio must either be configured as a single multichannel track, or multiple mono tracks.)</p>
+    <aside class="bcls-aside bcls-aside--information">Note: For Video Cloud ingestion, if your sources have multi-channel audio, you need to have support create custom audio renditions to correctly map the channels.</aside>
+    <h3>Encoding and transcoding</h3>
+    <p>For Dolby, both AC3 and EAC3 are supported, up to 5.1 channels. Many other non-Dolby formats are supported as well, including AAC.</p>
+    <h3>Playback (in the Brightcove Player)</h3>
+    <p>AAC, in mono or stereo. 5.1 channel audio support depends on browser capability - currently only Safari and Edge support it.</p>
+    <h3>Playback (in the SDK Native Players)</h3>
+    <p>AAC, in mono or stereo. 5.1 channel audio is supported by iOS, and believed to be supported by Andriod, but that has not been tested.</p>
+    <h3>Notes</h3>
+    <ul>
+      <li>
+        <p><strong>Windows:</strong> Content with audio above 48kHz for AAC is not supported on Windows and it will cause the player to fail. See <a href="https://docs.microsoft.com/en-gb/windows/desktop/medfound/aac-decoder#format-constraints">this Microsoft document</a> for more information.</p>
       </li>
-      <li><strong>Ad Keys</strong> - Passed as part of the ad server URL. For example, to pass <code>section=blog</code> and <code>anotherKey=value1</code>, you would enter <code>section=blog&amp;anotherKey=value1</code>. See the <a href="https://support.google.com/dfp_premium/answer/1080597">DoubleClick for Publishers Help</a> for information on adding key-value pairs. When using ad keys, ad macros should be added to the ad server URL (configured as part of the <a href="/players/configuring-player-advertising-using-players-module.html">player advertising properties</a>). Ad macros support variables in the server URL for which the IMA3 plugin will substitute appropriate values. For more information, see the <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#adMacros">IMA3 developer documentation</a>.</li>
-      <li><strong>Folder</strong> - Folder the video is assigned to. See <a href="/media/organizing-videos-using-folders.html">Organizing Videos Using Folders</a> for more information.</li>
-      <li><strong>Manual Playlists</strong> - Playlists that this video belongs to. For more information, see <a href="/media/creating-and-managing-playlists.html">Creating and Managing Playlists</a>.</li>
-      <li><strong>Sharing</strong> - Indicates if the video has been shared to another account. For more information, see <a href="/media/sharing-videos-other-accounts.html">Sharing Videos to Other Accounts</a>.</li>
     </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-video-information-edit.png" /></figure>
-    <p>Click <strong>Save</strong> to save changes.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="videofiles">Video Files</h2>
-    <p>The Video Files section displays the source file name, the transcoding technology that was used and details on the video renditions that were created. It also provides the ability to:</p>
-    <ul>
-      <li><a href="/media/replacing-video-source-file.html">Replace the Video Source File</a></li>
-      <li><a href="/media/retranscoding-videos.html">Retranscode the Video</a></li>
-    </ul>
-    <p>To download a rendition, right-click on the format link for the rendition. Note that only MP4 renditions can be downloaded.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-video-files.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information">Note:  A DRM toggle switch may also appear in the section if the account has been enabled for DRM. For more information on DRM, see <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-content-drm.html">Ingesting content with DRM</a>.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="mediasharing">Media Sharing</h2>
-    <p>If the video has been shared to an affiliate account, the Media Sharing section will be displayed and list the affiliates the video has been shared to. For more information on media sharing, see <a href="/media/sharing-videos-other-accounts.html">Sharing Videos to Other Accounts</a>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-media-sharing.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="audiotracks">Audio Tracks</h2>
-    <p>If the video was uploaded and transcoded using a Dynamic Delivery or Context Aware Encoding ingest profile, the Audio Tracks section will be displayed and contain information on the audio renditions that are available. For information on adding additional audio tracks to a video, see <a href="/media/adding-audio-tracks-videos.html">Adding Audio Tracks to Videos</a>.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: The Audio Tracks section will not be displayed if the video was transcoded using a Legacy ingest profile.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-audio-tracks.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="videotype">Video Type Information</h2>
-    <p>The Video Type Information section is where the Video Type is selected. The Video Type associated with a video will determine the video details that are available to be configured. The following Video Types are available:</p>
-    <ul>
-      <li><strong>Movie</strong> - Indicates the video is a movie. When a new video is uploaded, the <strong>Video Type</strong> will be set to <strong>Movie</strong>.</li>
-      <li><strong>Episode</strong> - Indicates the video is an episode as part of a season. The Video Information panel will display the episode number and the season the video is assigned to.</li>
-      <li><strong>Trailer</strong> - Indicates the video is used as a trailer. Videos that are added as a trailer for a movie or episode will automatically have their Video Type changed to Trailer.</li>
-    </ul>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-video-type-info.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="images">Images</h2>
-    <p>The Images section displays the images for the video. Poster and thumbnail images are created automatically by taking a snapshot from the source video at the midway point. If you don't like the default images that were captured, you can <a href="/media/capturing-poster-and-thumbnail-images.html">capture new images</a> or <a href="/media/uploading-video-images.html">upload other images</a> to use as the poster and thumbnail. Wide, Portrait and Ultra Wide images must be <a href="/media/uploading-video-images.html">manually uploaded</a>. Hover over any image  and click the view icon (<img alt="" src="/assets/images/media/icon-eye.png" />) to open the image in a new browser tab.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-images.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="videoviews">Video Views</h2>
-    <p>The Video Views section displays the number of video views for the past 30 days. Click the links to open the Performance or Engagement Reports for more information.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-video-views.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="customfields">Custom Fields</h2>
-    <p>The Custom Fields section can be used to view and edit the custom field for the video. To edit custom field values, click the <strong>Edit</strong> button or double-click in the section. An asterisk (*) next to the field name indicates that the field is required.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: For information on adding custom fields to an account, see <a href="/admin/creating-custom-metadata-fields.html">Creating Custom Metadata Fields</a>.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-custom-fields.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="availability">Availability</h2>
-    <p>The Availability section displays the video availability settings. For more information on configuring the availability settings, see <a href="/media/configuring-video-availability.html">Configuring Video Availability</a>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-availability.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="texttracks">Text Tracks</h2>
-    <p>The text track section can be used to add text tracks to the video. For more information on configuring text tracks, see <a href="/media/adding-captions-videos.html">Adding Captions to Videos</a>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-text-tracks.png" /></figure>
   </section>
 </article>
 

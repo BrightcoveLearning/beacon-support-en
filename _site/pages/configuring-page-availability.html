@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   
-  <title>Learn the Basics</title>
+  <title>Configuring Page Availability</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -120,7 +120,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item active" aria-current="page">Learn the Basics</li>
+      <li class="breadcrumb-item"><a href="/pages/">Managing Pages</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Configuring Page Availability</li>
     </ol>
   </nav>
 </header>
@@ -449,63 +451,86 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
 <article class="bcls-article">
-  <h1><i class="far fa-shapes"></i> Learn the Basics</h1>
-  <summary>Learn the basic skills needs to upload, manage and publish videos using Beacon Studio.</summary>
-  <br/>
+  <h1>Configuring Page Availability</h1>
+  <summary>In this topic you will learn how to configure page availability.</summary>
   <section class="bcls-section">
-    <table width="100%" border="0">
-      <tbody>
-        <tr>
-          <th width="46%" scope="col"> <h2>Creating Pages</h2></th>
-          <th width="1%" scope="col">&nbsp;</th>
-          <th width="53%" scope="col"> <h2>Managing Videos</h2></th>
-        </tr>
-        <tr>
-          <td valign="top"><ul>
-              <li><a href="/basics/creating-page.html">Creating a Page</a></li>
-            </ul></td>
-          <td>&nbsp;</td>
-          <td valign="top"><ul>
-              <li><a href="/basics/uploading-videos.html">Uploading Videos</a></li>
-              <li><a href="/basics/editing-basic-video-details.html">Editing Basic Video Properties</a></li>
-              <li><a href="/basics/editing-video-properties-multiple-videos.html">Editing Video Properties for Multiple Videos</a></li>
-              <li><a href="/basics/organizing-videos-using-folders.html">Organizing Videos Using Folders</a></li>
-              <li><a href="/basics/activating-and-deactivating-video.html">Activating and Deactivating a Video</a></li>
-              <li><a href="/basics/capturing-video-poster-thumbnail-images.html">Capturing Video Poster & Thumbnail Images</a></li>
-              <li><a href="/basics/uploading-video-poster-thumbnail-images.html">Uploading Video Poster & Thumbnail Images</a></li>
-              <li><a href="/basics/creating-manual-playlist.html">Creating a Manual Playlist</a></li>
-              <li><a href="/basics/creating-smart-playlist.html">Creating a Smart Playlist</a></li>
-              <li><a href="/basics/publishing-single-video-web.html">Publishing a Single Video to the Web</a></li>
-            </ul></td>
-        </tr>
-      </tbody>
-    </table>
+    <p>Page availability settings can be used to control the dates a page is available, the device the page is available to be viewed on and the locations where the page can be viewed. To configure the availability settings for a page, follow these steps: </p>
+    <ol class="bcls-tasklist-restart">
+      <li>Open the <strong>Pages</strong> page.</li>
+      <li>Click on the page name to edit. The page details will be displayed.</li>
+      <li>Click on <strong>Availability</strong> to display the Availability settings.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/pages/availability-options.png" /></figure>
+      </li>
+    </ol>
+    <p>The following availability settings can be configured:</p>
+    <ul>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#devices">Devices</a></li>
+      <li><a href="#locations">Locations</a></li>
+    </ul>
+    <p>After Availability settings have been configured, they will display in the left margin.</p>
+    <p>
+      <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/pages/availability-configured.png" /></figure>
+    </p>
+    <p>Click Clear All Restrictions to remove all Availability settings.</p>
   </section>
   <section class="bcls-section">
-    <table width="100%" border="0">
-      <tbody>
-        <tr>
-          <th width="46%" scope="col"> <h2>Managing Accounts</h2></th>
-          <th width="1%" scope="col">&nbsp;</th>
-          <th width="53%" scope="col"> <h2>Support</h2></th>
-        </tr>
-        <tr>
-          <td valign="top"><ul>
-              <li><a href="/basics/adding-user-video-cloud-account.html">Adding a User to a Video Cloud Account</a></li>
-            </ul></td>
-          <td>&nbsp;</td>
-          <td valign="top"><ul>
-            <li><a href="/basics/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
-          </ul></td>
-        </tr>
-      </tbody>
-    </table>
+    <h2 id="schedule">Configuring the page schedule</h2>
+    <p>By default, when a page is created, it will always be available for viewing. Pages can be configured with a schedule that defines the start date and time that a page will be available for viewing. Optionally, an end date and time can also be configured. To configure a schedule for a page, follow these steps: </p>
+    <ol class="bcls-tasklist-restart">
+      <li>In the <strong>Availability</strong> section, click on <strong>Schedule</strong>. The schedule settings will display.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/pages/availability-schedule-dialog.png" /></figure>
+      </li>
+      <li>Click the calendar icon (<img class="bcls-image--no-border" alt="" src="/assets/images/pages/icon-calendar.png" />) and pick a start date.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/pages/availability-start-date.png" /></figure>
+      </li>
+      <li>Click the clock icon (<img class="bcls-image--no-border" alt="" src="/assets/images/pages/icon-clock.png" />) and pick a start time.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/pages/availability-start-time.png" /></figure>
+      </li>
+      <li>(Optional) Check the <strong>End Time</strong> checkbox and select an end date and time.</li>
+      <li>Click <strong>Save</strong>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="device">Configuring device availability</h2>
+    <p>By default, when a page is created, it will be available for viewing on all devices. Pages can be configured so they can only be viewed on specific devices. To configure the devices a page can be viewed on, follow these steps: </p>
+    <ol class="bcls-tasklist-restart">
+      <li>In the <strong>Availability</strong> section, click on <strong>Devices</strong>. The device settings will display.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/pages/availability-devices-dialog.png" /></figure>
+      </li>
+      <li>Select the devices that can view the page.</li>
+      <li>Click <strong>Save</strong>.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="location">Configuring location availability</h2>
+    <p>By default, when a page is created, it will  be available for viewing in all geographic locations. Pages can be configured so viewing is permitted or denied in specific locations. To configure the locations for a page, follow these steps: </p>
+    <ol class="bcls-tasklist-restart">
+      <li>In the <strong>Availability</strong> section, click on <strong>Location</strong>. The location settings will display.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/pages/availability-location-dialog.png" /></figure>
+      </li>
+      <li>In the <strong>Permitted Locations</strong> section, click <strong>+ Location</strong>.</li>
+      <li>Type the name of a country. As you begin typing the list will filter.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/pages/availability-locations-type.png" /></figure>
+      </li>
+      <li>Click on  a country to select it.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/pages/availability-locations-selected.png" /></figure>
+      </li>
+      <li>In the <strong>Denied Locations</strong> section, click <strong>+ Location</strong> and add the countries where the page cannot be viewed.</li>
+      <li>Click <strong>Save</strong>.</li>
+    </ol>
+    <p>To remove a country, click the <strong>X</strong> next to the country.</p>
   </section>
 </article>
 
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
       
     </div>
   </div>

@@ -95,12 +95,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/admin/configuring-server-side-ad-settings.html",
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/configuring-server-side-ad-settings.html",
       "oldURL": "/configuring-server-side-ad-settings"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/configuring-server-side-ad-settings.html",
+      "newURL": "https://beacon.support.brightcove.com/admin/configuring-server-side-ad-settings.html",
       "oldURL": "/configuring-server-side-ad-settings"
   },
 
@@ -160,8 +160,8 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/basics/creating-pages.html",
-      "oldURL": "/creating-pages"
+      "newURL": "https://beacon.support.brightcove.com/basics/creating-page.html",
+      "oldURL": "/creating-page"
   },
 
   {

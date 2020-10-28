@@ -1,0 +1,51 @@
+---
+title: "Implementing AuthVOD"
+description: "In this topic, you will learn how to create an AuthVOD monetization package."
+parent: "Using Brightcove Beacon"
+---
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+    <summary>{{ page.description }}</summary>
+
+    <section class="bcls-section">
+        <h2 id="section-name">Understanding AuthVOD</h2>
+        <p>AuthVOD (AUTHenticated Video On Demand) is a monetization package where viewers must authenticate, that is enter a username and password, to the Brightcove Beacon app to watch videos included in the package. The videos may or may not show advertisements, depending on how you configure that package.</p>
+        <p>See the <a href="/using-brightcove-beacon/monetization-options.html">Understanding Monetization Options</a> document for more information on AuthVOD, as well as all monetization packages you can use with Brightcove Beacon.</p>
+    </section>
+
+    <section class="bcls-section">
+        <h2 id="section-name">Configuring an AuthVOD package</h2>
+        <p>Here are the high-level steps in configuring and AuthVOD package:</p>
+        <ol>
+            <li>Create an <strong>unpublished</strong>, cost free package.</li>
+            <li>If ads are desired, supply an ad provider.</li>
+            <li>Add content to the package.</li>
+        </ol>
+        <p>Here are the detailed steps to follow in Brightcove Beacon when configuring an AuthVOD package:</p>
+        <ol class="bcls-tasklist">
+            <li>Click the <strong>Commerce</strong> tab along the top of Brightcove Beacon.
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/implementing-authvod/navigation-to-add.png" alt="get to add new package button">
+                </figure>
+            </li>
+            <li>Select <strong>Packages</strong> from the left navigation.</li>
+            <li>Click the <strong>Add New Package</strong> button.</li>
+            <li>On the <strong>Package</strong> tab supply the internal name and be sure to leave the <strong>Status</strong> as <strong>Unpublished</strong>.
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/implementing-authvod/package-tab.png" alt="package tab">
+                </figure>
+            </li>
+            <li>If you wish to use advertising, you can click the <strong>Yes</strong> radio button for <strong>Advertisement</strong> then choose an <strong>Ads Provider</strong> from the dropdown.
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/implementing-authvod/package-tab-ads.png" alt="package tab">
+                </figure>
+            </li>
+            <li>On the <strong>Textual Data</strong> tab enter the name visible to viewers, and a headline about the package.</li>
+            <li>If desired, supply an image that will display with the package info.</li>
+            <li>On the <strong>Content</strong> tab, select media that will be part of the package.</li>
+            <li>On the <strong>Streams</strong> tab, enter values for the maximum number of devices that can stream at the same time, and the maximum number of devices that can have an active connection.</li>
+            <li>If you wish finer control of the package availability, click the <strong>Yes</strong> radio button for <strong>Advanced Streams?</strong> then complete form with finer availability options.</li>
+        </ol>
+    </section>
+
+</article>

@@ -606,7 +606,7 @@
       
         <url>
           
-            <loc>https://beacon.support.brightcove.com/training/training-demand-series-seasons-episodes.html</loc>
+            <loc>https://beacon.support.brightcove.com/training/training-demand-design-layout.html</loc>
           
             <lastmod>2020-10-29</lastmod>
             <changefreq>daily</changefreq>
@@ -616,7 +616,17 @@
       
         <url>
           
-            <loc>https://beacon.support.brightcove.com/training/training-demand-design-layout.html</loc>
+            <loc>https://beacon.support.brightcove.com/training/training-demand-playlists.html</loc>
+          
+            <lastmod>2020-10-29</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/training/training-demand-series-seasons-episodes.html</loc>
           
             <lastmod>2020-10-29</lastmod>
             <changefreq>daily</changefreq>

@@ -153,10 +153,13 @@
   docs:
     - name: Using Video Cloud Videos/Custom Fields
       url: /training/training-demand-custom-fields.html
-    - name: Creating Series, Seasons and Episodes
-      url: /training/training-demand-series-seasons-episodes.html
     - name: Designing the Application Layout
       url: /training/training-demand-design-layout.html
+    - name: Creating and Using Playlists
+      url: /training/training-demand-playlists.html
+    - name: Creating Series, Seasons and Episodes
+      url: /training/training-demand-series-seasons-episodes.html
+    
 - section:
   name: 'Support'
   url: '/support/index.html'

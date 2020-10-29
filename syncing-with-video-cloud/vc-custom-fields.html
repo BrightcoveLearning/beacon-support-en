@@ -146,7 +146,7 @@ parent: Syncing with Video Cloud
             Using list values for Brightcove Beacon metadata
         </h2>
         <p>
-            In the table below you find a number of customer fields you must create.
+            In the table below you find a number of custom fields you must create.
             As shown above, when creating a custom field you choose the data type to
             be either <strong>Text</strong> or <strong>List</strong>. It may ease
             the burden on video content curators if they can select from a list rather
@@ -155,7 +155,7 @@ parent: Syncing with Video Cloud
             typed in.
         </p>
         <p>
-            Of course, the choice is yours, but you may find for some customer fields
+            Of course, the choice is yours, but you may find for some custom fields
             a list is a good selection for the data type. For instance, you may wish
             to consider the following, among others, for lists:
         </p>
@@ -368,7 +368,7 @@ parent: Syncing with Video Cloud
                         beacon_cast_<br />
                         director
                     </td>
-                    <td>List</td>
+                    <td>Text</td>
                     <td>* Comma separated list of names of directors<br>
                         * Example: Director(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
                     </td>
@@ -376,7 +376,7 @@ parent: Syncing with Video Cloud
                 <tr>
                     <td>beacon.cast.singer</td>
                     <td>beacon_cast_singer</td>
-                    <td>List</td>
+                    <td>Text</td>
                     <td>
                         * Comma separated list of names of singers<br>
                         * Example: Singer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
@@ -385,7 +385,7 @@ parent: Syncing with Video Cloud
                 <tr>
                     <td>beacon.cast.actor</td>
                     <td>beacon_cast_actor</td>
-                    <td>List</td>
+                    <td>Text</td>
                     <td>
                         * Comma separated list of names of actors<br>
                         * Example: Actor(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
@@ -400,7 +400,7 @@ parent: Syncing with Video Cloud
                         beacon_cast_<br />
                         composer
                     </td>
-                    <td>List</td>
+                    <td>Text</td>
                     <td>
                         * Comma separated list of names of composers<br>
                         * Example: Composer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
@@ -415,7 +415,7 @@ parent: Syncing with Video Cloud
                         beacon_cast_<br />
                         songwriter
                     </td>
-                    <td>List</td>
+                    <td>Text</td>
                     <td>
                         * Comma separated list of names of songwriters<br>
                         * Example: Songwriter(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
@@ -424,7 +424,7 @@ parent: Syncing with Video Cloud
                 <tr>
                     <td>beacon.cast.writer</td>
                     <td>beacon_cast_writer</td>
-                    <td>List</td>
+                    <td>Text</td>
                     <td>
                         * Comma separated list of names of writers<br>
                         * Example: Writer(s) name(s), e.g. <em>Jane Smith, Santiago Almada</em>
@@ -433,7 +433,7 @@ parent: Syncing with Video Cloud
                 <tr>
                     <td>beacon.ageRating</td>
                     <td>beacon_agerating</td>
-                    <td>List</td>
+                    <td>Text</td>
                     <td>
                         * Provides the age rating for the asset<br>
                         * The value in this field should be in the form of <strong>key=value</strong> pairs separated by commas, where the key is the country code (like <strong>us</strong>) and the value is the age rating appropriate for that country code supported by Brightcove Beacon<br>
@@ -514,7 +514,7 @@ parent: Syncing with Video Cloud
     <section class="bcls-section">
         <h2 id="Rights_Management_fields">Rights Management fields</h2>
         <p>
-            To support the monetization and access restrictions for assets, a set of custom fields should be used. As you can have multiples instances of rights management configurations, the suggested approach is to create multiple sets of customer fields. In each instance's name a counter is used to differentiate between them. The first instance should use the counter to 0. Here is an example of these grouped fields actually using a counter value:
+            To support the monetization and access restrictions for assets, a set of custom fields should be used. As you can have multiples instances of rights management configurations, the suggested approach is to create multiple sets of custom fields. In each instance's name a counter is used to differentiate between them. The first instance should use the counter to 0. Here is an example of these grouped fields actually using a counter value:
             <figure class="bcls-figure">
                 <img class="bcls-image" src="/assets/images/syncing-with-vc/vc-custom-fields/rights-management.png" alt="">
             </figure>
@@ -601,7 +601,7 @@ parent: Syncing with Video Cloud
                         beacon_rights_ <br />
                         &lt;counter&gt;_devices
                     </td>
-                    <td>List</td>
+                    <td>Text</td>
                     <td>
                         * Comma separated list of devices supported in Brightcove Beacon to which the asset should be exposed under the access restrictions and monetization options in this particular set<br>
                         * Comma separated list of:
@@ -632,7 +632,7 @@ parent: Syncing with Video Cloud
                         &lt;counter&gt;_<br />
                         locationspermit
                     </td>
-                    <td>List</td>
+                    <td>Text</td>
                     <td>
                         * Comma separated list of locations defined in Brightcove Beacon to which the asset should be exposed under the access restrictions and monetization options in this particular set<br>
                         * Default value: If not set, defaults to all locations supported in Brightcove Beacon
@@ -648,7 +648,7 @@ parent: Syncing with Video Cloud
                         &lt;counter&gt;_<br />
                         locationsdeny
                     </td>
-                    <td>List</td>
+                    <td>Text</td>
                     <td>
                         * Comma separated list of locations defined in Brightcove Beacon to which the asset should NOT be exposed under the access restrictions and monetization options in this particular set<br>
                         * No default value
@@ -665,7 +665,7 @@ parent: Syncing with Video Cloud
                         &lt;counter&gt;_<br />
                         packagename
                     </td>
-                    <td>List</td>
+                    <td>Text</td>
                     <td>
                         * A value for this field MUST be entered if the <strong>beacon.rights.<counter>.type</strong> field value is set to <strong>SVOD</strong><br>
                         * A comma separated list of package names, as defined in Brightcove Beacon<br>

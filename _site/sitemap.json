@@ -105,12 +105,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/admin/configuring-server-side-ad-settings.html",
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/configuring-server-side-ad-settings.html",
       "oldURL": "/configuring-server-side-ad-settings"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/configuring-server-side-ad-settings.html",
+      "newURL": "https://beacon.support.brightcove.com/admin/configuring-server-side-ad-settings.html",
       "oldURL": "/configuring-server-side-ad-settings"
   },
 
@@ -315,17 +315,27 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/lg/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://beacon.support.brightcove.com/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/admin/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/basics/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
       "oldURL": "/index"
   },
 
@@ -340,7 +350,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/basics/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/media/",
       "oldURL": "/index"
   },
 
@@ -350,7 +365,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/lg/",
+      "newURL": "https://beacon.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
@@ -370,12 +385,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/admin/",
+      "newURL": "https://beacon.support.brightcove.com/getting-started/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/getting-started/",
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/",
       "oldURL": "/index"
   },
 
@@ -385,17 +400,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/training/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/general/",
+      "newURL": "https://beacon.support.brightcove.com/references/",
       "oldURL": "/index"
   },
 
@@ -405,12 +410,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/",
+      "newURL": "https://beacon.support.brightcove.com/training/",
       "oldURL": "/index"
   },
 
@@ -700,6 +700,11 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/training/training-demand-playlists.html",
+      "oldURL": "/training-demand-playlists"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/training/training-demand-series-seasons-episodes.html",
       "oldURL": "/training-demand-series-seasons-episodes"
   },
@@ -755,12 +760,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/support/viewing-brightcove-system-status-page.html",
+      "newURL": "https://beacon.support.brightcove.com/basics/viewing-brightcove-system-status-page.html",
       "oldURL": "/viewing-brightcove-system-status-page"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/basics/viewing-brightcove-system-status-page.html",
+      "newURL": "https://beacon.support.brightcove.com/support/viewing-brightcove-system-status-page.html",
       "oldURL": "/viewing-brightcove-system-status-page"
   },
 

@@ -315,12 +315,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/lg/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/",
       "oldURL": "/index"
   },
 
@@ -335,16 +330,6 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/samsung/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/fire-tv/",
       "oldURL": "/index"
   },
@@ -355,22 +340,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/general/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/lg/",
       "oldURL": "/index"
   },
 
@@ -380,7 +350,22 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/samsung/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/general/",
       "oldURL": "/index"
   },
 
@@ -390,17 +375,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/references/",
+      "newURL": "https://beacon.support.brightcove.com/media/",
       "oldURL": "/index"
   },
 
@@ -410,7 +385,32 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/training/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -705,6 +705,11 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/training/training-demand-publish-android-app.html",
+      "oldURL": "/training-demand-publish-android-app"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/training/training-demand-series-seasons-episodes.html",
       "oldURL": "/training-demand-series-seasons-episodes"
   },
@@ -760,12 +765,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/basics/viewing-brightcove-system-status-page.html",
+      "newURL": "https://beacon.support.brightcove.com/support/viewing-brightcove-system-status-page.html",
       "oldURL": "/viewing-brightcove-system-status-page"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/support/viewing-brightcove-system-status-page.html",
+      "newURL": "https://beacon.support.brightcove.com/basics/viewing-brightcove-system-status-page.html",
       "oldURL": "/viewing-brightcove-system-status-page"
   },
 

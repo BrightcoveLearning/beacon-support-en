@@ -48,6 +48,8 @@
       url: /using-brightcove-beacon/series-seasons-episodes.html
     - name: Configuring Server-Side Ad Settings
       url: /using-brightcove-beacon/configuring-server-side-ad-settings.html
+    - name: Implementing AuthVOD
+      url: /using-brightcove-beacon/implementing-authvod.html
     - name: Implementing Live SSAI
       url: /using-brightcove-beacon/live-ssai.html
     - name: Implementing VOD SSAI
@@ -161,7 +163,7 @@
       url: /training/training-demand-playlists.html
     - name: Creating Series, Seasons and Episodes
       url: /training/training-demand-series-seasons-episodes.html
-    
+
 - section:
   name: 'Support'
   url: '/support/index.html'

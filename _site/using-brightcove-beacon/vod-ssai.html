@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="In this topic, you will learn how to manage and create Video On Demand (VOD) server-side ad configurations in Brightcove Beacon." />
+    <meta name="description" content="In this topic, you will learn how to create and manage Server-Side Ad Insertion (SSAI) with Video On Demand (VOD) for Brightcove Beacon." />
 
     <title>Implementing VOD SSAI</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -503,26 +503,45 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <h1>Implementing VOD SSAI</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn how to manage and create Video On Demand (VOD) server-side ad configurations in Brightcove Beacon.</summary>
+  <summary>In this topic, you will learn how to create and manage Server-Side Ad Insertion (SSAI) with Video On Demand (VOD) for Brightcove Beacon.</summary>
 
   <section class="bcls-section">
     <h2 id="overview">Overview</h2>
-    <p>Brightcove Beacon supports Server-Side Ad Insertion (SSAI) so you can have ads inserted into your Video On Demand assets.</p>
-    <p>A high-level view of the process is:</p>
-    <ol>
-      <li>Create an <strong>Ad Configuration</strong> in Studio.</li>
-      <li>Configure the settings of your video in the <strong>Media</strong> module.</li>
-      <li>Add your VOD asset to a Brightcove Beacon playlist.</li>
-      <li>Configure the settings of your video in Brightcove Beacon.</li>
+    <p>Server-side ads are embedded in the video stream so they cannot be blocked by ad blockers in the browser.
+It works with both DRM-protected and non-protected content. Brightcove Beacon supports VOD with SSAI.</p>
+    <p>Here's are the steps for adding server-side ads:</p>
+    <ol  class="bcls-tasklist">
+      <li>In Video Cloud Studio, <a href="#Creating_an_ad_configuration">create an ad configuration</a></li>
+      <li>Set the custom field values for your video</li>
+      <li>Add your video to a Brightcove Beacon playlist</li>
+      <li>In Brightcove Beacon, import your videos and playlists</li>
     </ol>
+
+    <!-- <ol>
+      <li>Configure the settings of your video in Brightcove Beacon</li>
+    </ol> -->
   </section>
 
   <section class="bcls-section">
-    <h2 id="configuring-ssai">Configuring Server-Side Ad Settings</h2>
+    <h2 id="Best_practices">Best practices</h2>
+    <p>Brightcove recommends following these best practices when adding server-side ads to VOD content:</p>
+    <ul>
+      <li>Create your ad configuration in Video Cloud</li>
+      <li>Assign the ad configuration to videos using the custom fields in Video Cloud</li>
+      <li>Only use the <strong>Advertisement</strong> section in Brightcove Beacon for live events and channels</li>
+    </ul>
+
+    <!-- <ol>
+      <li>Configure the settings of your video in Brightcove Beacon</li>
+    </ol> -->
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Creating_an_ad_configuration">Creating an ad configuration</h2>
     <p>
       Here you will create an SSAI Ad Configuration to be used as your set of ads that will be displayed in your Brightcove Beacon VOD asset.
     </p>
-    <ol class="bcls-tasklist">
+    <ol class="bcls-tasklist-restart">
       <li>Log in to Studio.</li>
       <li>
         In the navigation header, click <strong>ADMIN</strong> and select <strong>Server-Side Ad Settings</strong>. A list of all ad configurations will be displayed.

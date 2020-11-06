@@ -12,17 +12,13 @@ parent: Using Brightcove Beacon
     <h2 id="overview">Overview</h2>
     <p>Server-side ads are embedded in the video stream so they cannot be blocked by ad blockers in the browser.
 It works with both DRM-protected and non-protected content. Brightcove Beacon supports VOD with SSAI.</p>
-    <p>Here's are the steps for adding server-side ads:</p>
-    <ol  class="bcls-tasklist">
+    <p>Here are the steps for adding server-side ads:</p>
+    <ol>
       <li>In Video Cloud Studio, <a href="#Creating_an_ad_configuration">create an ad configuration</a></li>
-      <li>Set the custom field values for your video</li>
+      <li><a href="#Set the custom field values">Set the custom field values</a> for your video</li>
       <li>Add your video to a Brightcove Beacon playlist</li>
       <li>In Brightcove Beacon, import your videos and playlists</li>
     </ol>
-
-    <!-- <ol>
-      <li>Configure the settings of your video in Brightcove Beacon</li>
-    </ol> -->
   </section>
 
   <section class="bcls-section">
@@ -31,21 +27,18 @@ It works with both DRM-protected and non-protected content. Brightcove Beacon su
     <ul>
       <li>Create your ad configuration in Video Cloud</li>
       <li>Assign the ad configuration to videos using the custom fields in Video Cloud</li>
+      <li>Even though you can assign ad configurations to videos in Brightcove Beacon, it is recommended to do that in Video Cloud</li>
       <li>Only use the <strong>Advertisement</strong> section in Brightcove Beacon for live events and channels</li>
     </ul>
-
-    <!-- <ol>
-      <li>Configure the settings of your video in Brightcove Beacon</li>
-    </ol> -->
   </section>
 
   <section class="bcls-section">
     <h2 id="Creating_an_ad_configuration">Creating an ad configuration</h2>
     <p>
-      Here you will create an SSAI Ad Configuration to be used as your set of ads that will be displayed in your Brightcove Beacon VOD asset.
+      Here you will create an SSAI ad configuration to define the ads displayed in your Brightcove Beacon VOD asset.
     </p>
-    <ol class="bcls-tasklist-restart">
-      <li>Log in to Studio.</li>
+    <ol class="bcls-tasklist">
+      <li>Log in to Video Cloud Studio.</li>
       <li>
         In the navigation header, click <strong>ADMIN</strong> and select <strong>Server-Side Ad Settings</strong>. A list of all ad configurations will be displayed.
         <figure class="bcls-figure">
@@ -60,7 +53,7 @@ It works with both DRM-protected and non-protected content. Brightcove Beacon su
         </figure>
       </li>
       <li>
-        From the dropdown, select <strong>VOD</strong> as a type.
+        From the dropdown, select <strong>VOD</strong> as the type.
         <figure class="bcls-figure">
           <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/vod-ssai/select-vod.png" />
         </figure>
@@ -75,12 +68,33 @@ It works with both DRM-protected and non-protected content. Brightcove Beacon su
       <li>Give your ad configuration a <strong>Name</strong>.</li>
       <li>
         Select the <strong>Ad Server Response</strong>:
-        <ul>
-          <li><strong>VAST 3.0</strong></li>
-          <li><strong>DFP (Ad Rules)</strong></li>
-          <li><strong>Smart XML</strong></li>
-          <li><strong>DFP VMAP</strong></li>
-        </ul>
+        <table class="bcls-table">
+            <thead class="bcls-table__head">
+                <tr>
+                    <th>Ad Server Response</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody class="bcls-table__body">
+                <tr>
+                    <td><strong>VAST 3.0</strong></td>
+                    <td><a href="https://www.iab.com/guidelines/vast/">Digital Video Ad Serving Template</a></td>
+                </tr>
+                <tr>
+                    <td><strong>DFP VMAP</strong></td>
+                    <td><a href="https://www.iab.com/guidelines/vmap/">Video Multiple Ad Playlist</a></td>
+                </tr>
+                <tr>
+                    <td><strong>DFP (Ad Rules)</strong></td>
+                    <td><a href="https://www.google.com/ads/publisher/#?modal_active=none">Proprietary format for DFP/Google for Publishers</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Smart XML</strong></td>
+                    <td><a href="https://www.freewheel.com/">Proprietary format for FreeWheel</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <br/>
         <aside class="bcls-aside bcls-aside--information">
           Please check with your ad operations manager for the correct value to select.
         </aside>
@@ -97,7 +111,7 @@ It works with both DRM-protected and non-protected content. Brightcove Beacon su
   </section>
 
   <section class="bcls-section">
-    <h2 id="configuring-vod">Configuring your VOD asset in Studio</h2>
+    <h2 id="Setting_custom_field_values">Setting custom field values</h2>
 
     <p>In this section, you will learn how to configure your VOD asset with the necessary settings to display SSAI in Brightcove Beacon.</p>
     <ol class="bcls-tasklist">
@@ -168,7 +182,7 @@ It works with both DRM-protected and non-protected content. Brightcove Beacon su
     <h2 id="configuring-vod-beacon">Configuring your VOD asset in Brightcove Beacon</h2>
     <p>In this section you will learn how to configure your VOD with SSAI asset in Brightcove Beacon.</p>
 
-    <ol class="bcls-tasklist">
+    <ol class="bcls-tasklist-restart">
       <li>In the Brightcove Beacon top menu, click the <strong>Playlists</strong> tab.</li>
       <li>
         Select your playlist to see the videos it contains.

@@ -487,14 +487,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>The video details are organized into the following sections:</p>
     <ul>
       <li><a href="#videoinfo">Video Information</a></li>
-      <li><a href="#videofiles">Video Files</a></li>
-      <li><a href="#mediasharing">Media Sharing</a></li>
+      <li><a href="#images">Images</a></li>
+      <li><a href="#cast">Cast</a></li>
+      <li><a href="#customfields">Custom Fields</a></li>
+      <li><a href="#texttracks">Text Tracks</a></li>
       <li><a href="#audiotracks">Audio Tracks</a></li>
       <li><a href="#videotype">Video Type Information</a></li>
-      <li><a href="#images">Images</a></li>
-      <li><a href="#customfields">Custom Fields</a></li>
+      <li><a href="#categorization">Categorization</a></li>
       <li><a href="#availability">Availability</a></li>
-      <li><a href="#texttracks">Text Tracks</a></li>
+      <li><a href="#videofiles">Video Files</a></li>
     </ul>
     <p>To edit the video details, click the <strong>Edit</strong> button in the section or double-click in the section.</p>
   </section>
@@ -551,20 +552,25 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Click <strong>Save</strong> to save changes.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="videofiles">Video Files</h2>
-    <p>The Video Files section displays the source file name, the transcoding technology that was used and details on the video renditions that were created. It also provides the ability to:</p>
-    <ul>
-      <li><a href="/media/replacing-video-source-file.html">Replace the Video Source File</a></li>
-      <li><a href="/media/retranscoding-videos.html">Retranscode the Video</a></li>
-    </ul>
-    <p>To download a rendition, right-click on the format link for the rendition. Note that only MP4 renditions can be downloaded.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-video-files.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information">Note:  A DRM toggle switch may also appear in the section if the account has been enabled for DRM. For more information on DRM, see <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-content-drm.html">Ingesting content with DRM</a>.</aside>
+    <h2 id="images">Images</h2>
+    <p>The Images section displays the images for the video. Poster and thumbnail images are created automatically by taking a snapshot from the source video at the midway point. If you don't like the default images that were captured, you can <a href="/media/capturing-poster-and-thumbnail-images.html">capture new images</a> or <a href="/media/uploading-video-images.html">upload other images</a> to use as the poster and thumbnail. Wide, Portrait and Ultra Wide images must be <a href="/media/uploading-video-images.html">manually uploaded</a>. Hover over any image  and click the view icon (<img alt="" src="/assets/images/media/icon-eye.png" />) to open the image in a new browser tab.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-images.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="mediasharing">Media Sharing</h2>
-    <p>If the video has been shared to an affiliate account, the Media Sharing section will be displayed and list the affiliates the video has been shared to. For more information on media sharing, see <a href="/media/sharing-videos-other-accounts.html">Sharing Videos to Other Accounts</a>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-media-sharing.png" /></figure>
+    <h2 id="cast">Cast</h2>
+    <p>If th</p>
+    <figure class="bcls-figure"></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="customfields">Custom Fields</h2>
+    <p>The Custom Fields section can be used to view and edit the custom field for the video. To edit custom field values, click the <strong>Edit</strong> button or double-click in the section. An asterisk (*) next to the field name indicates that the field is required.</p>
+    <aside class="bcls-aside bcls-aside--information">Note: For information on adding custom fields to an account, see <a href="/admin/creating-custom-metadata-fields.html">Creating Custom Metadata Fields</a>.</aside>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-custom-fields.png" /></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="texttracks">Text Tracks</h2>
+    <p>The text track section can be used to add text tracks to the video. For more information on configuring text tracks, see <a href="/media/adding-captions-videos.html">Adding Captions to Videos</a>.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-text-tracks.png" /></figure>
   </section>
   <section class="bcls-section">
     <h2 id="audiotracks">Audio Tracks</h2>
@@ -583,15 +589,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-video-type-info.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="images">Images</h2>
-    <p>The Images section displays the images for the video. Poster and thumbnail images are created automatically by taking a snapshot from the source video at the midway point. If you don't like the default images that were captured, you can <a href="/media/capturing-poster-and-thumbnail-images.html">capture new images</a> or <a href="/media/uploading-video-images.html">upload other images</a> to use as the poster and thumbnail. Wide, Portrait and Ultra Wide images must be <a href="/media/uploading-video-images.html">manually uploaded</a>. Hover over any image  and click the view icon (<img alt="" src="/assets/images/media/icon-eye.png" />) to open the image in a new browser tab.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-images.png" /></figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="customfields">Custom Fields</h2>
-    <p>The Custom Fields section can be used to view and edit the custom field for the video. To edit custom field values, click the <strong>Edit</strong> button or double-click in the section. An asterisk (*) next to the field name indicates that the field is required.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: For information on adding custom fields to an account, see <a href="/admin/creating-custom-metadata-fields.html">Creating Custom Metadata Fields</a>.</aside>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-custom-fields.png" /></figure>
+    <h2 id="categorization">Categorization</h2>
+    <p>If th</p>
+    <figure class="bcls-figure"></figure>
   </section>
   <section class="bcls-section">
     <h2 id="availability">Availability</h2>
@@ -599,9 +599,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-availability.png" /></figure>
   </section>
   <section class="bcls-section">
-    <h2 id="texttracks">Text Tracks</h2>
-    <p>The text track section can be used to add text tracks to the video. For more information on configuring text tracks, see <a href="/media/adding-captions-videos.html">Adding Captions to Videos</a>.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-text-tracks.png" /></figure>
+    <h2 id="videofiles">Video Files</h2>
+    <p>The Video Files section displays the source file name, the transcoding technology that was used and details on the video renditions that were created. It also provides the ability to:</p>
+    <ul>
+      <li><a href="/media/replacing-video-source-file.html">Replace the Video Source File</a></li>
+      <li><a href="/media/retranscoding-videos.html">Retranscode the Video</a></li>
+    </ul>
+    <p>To download a rendition, right-click on the format link for the rendition. Note that only MP4 renditions can be downloaded.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/media/video-details-video-files.png" /></figure>
+    <aside class="bcls-aside bcls-aside--information">Note:  A DRM toggle switch may also appear in the section if the account has been enabled for DRM. For more information on DRM, see <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-content-drm.html">Ingesting content with DRM</a>.</aside>
   </section>
 </article>
 

@@ -5,26 +5,6 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/basics/activating-and-deactivating-video.html",
-      "oldURL": "/activating-and-deactivating-video"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/adding-audio-tracks-videos.html",
-      "oldURL": "/adding-audio-tracks-videos"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/adding-captions-videos.html",
-      "oldURL": "/adding-captions-videos"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/adding-chapters-video.html",
-      "oldURL": "/adding-chapters-video"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/adding-subscriptions-in-android.html",
       "oldURL": "/adding-subscriptions-in-android"
   },
@@ -32,16 +12,6 @@
   {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/adding-to-page.html",
       "oldURL": "/adding-to-page"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/basics/adding-user-video-cloud-account.html",
-      "oldURL": "/adding-user-video-cloud-account"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/pages/adding-videos-pages.html",
-      "oldURL": "/adding-videos-pages"
   },
 
   {
@@ -70,16 +40,6 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/capturing-poster-and-thumbnail-images.html",
-      "oldURL": "/capturing-poster-and-thumbnail-images"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/basics/capturing-video-poster-thumbnail-images.html",
-      "oldURL": "/capturing-video-poster-thumbnail-images"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/references/common-configuration-settings.html",
       "oldURL": "/common-configuration-settings"
   },
@@ -95,28 +55,8 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/admin/configuring-language-settings.html",
-      "oldURL": "/configuring-language-settings"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/pages/configuring-page-availability.html",
-      "oldURL": "/configuring-page-availability"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/admin/configuring-server-side-ad-settings.html",
-      "oldURL": "/configuring-server-side-ad-settings"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/configuring-server-side-ad-settings.html",
       "oldURL": "/configuring-server-side-ad-settings"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/configuring-video-availability.html",
-      "oldURL": "/configuring-video-availability"
   },
 
   {
@@ -137,56 +77,6 @@
   {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/creating-a-playlist.html",
       "oldURL": "/creating-a-playlist"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/creating-and-managing-playlists.html",
-      "oldURL": "/creating-and-managing-playlists"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/admin/creating-custom-metadata-fields.html",
-      "oldURL": "/creating-custom-metadata-fields"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/admin/creating-ingest-profiles-context-aware-encoding.html",
-      "oldURL": "/creating-ingest-profiles-context-aware-encoding"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/admin/creating-ingest-profiles-dynamic-delivery.html",
-      "oldURL": "/creating-ingest-profiles-dynamic-delivery"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/admin/creating-legacy-ingest-profiles.html",
-      "oldURL": "/creating-legacy-ingest-profiles"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/pages/creating-managing-pages.html",
-      "oldURL": "/creating-managing-pages"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/basics/creating-manual-playlist.html",
-      "oldURL": "/creating-manual-playlist"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/basics/creating-page.html",
-      "oldURL": "/creating-page"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/creating-series-seasons-episodes.html",
-      "oldURL": "/creating-series-seasons-episodes"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/basics/creating-smart-playlist.html",
-      "oldURL": "/creating-smart-playlist"
   },
 
   {
@@ -225,48 +115,13 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/downloading-videos-video-cloud.html",
-      "oldURL": "/downloading-videos-video-cloud"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/basics/editing-basic-video-details.html",
-      "oldURL": "/editing-basic-video-details"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/editing-video-details-using-quick-edit.html",
-      "oldURL": "/editing-video-details-using-quick-edit"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/editing-video-details.html",
-      "oldURL": "/editing-video-details"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/basics/editing-video-properties-multiple-videos.html",
-      "oldURL": "/editing-video-properties-multiple-videos"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/electronic-program-guides.html",
       "oldURL": "/electronic-program-guides"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/exporting-video-data.html",
-      "oldURL": "/exporting-video-data"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/forcing-a-sync.html",
       "oldURL": "/forcing-a-sync"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/getting-started-media.html",
-      "oldURL": "/getting-started-media"
   },
 
   {
@@ -315,37 +170,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/increasing-quality-poster-and-thumbnail-images.html",
-      "oldURL": "/increasing-quality-poster-and-thumbnail-images"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/admin/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/basics/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/fire-tv/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/lg/",
+      "newURL": "https://beacon.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -355,12 +185,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/samsung/",
+      "newURL": "https://beacon.support.brightcove.com/training/",
       "oldURL": "/index"
   },
 
@@ -370,27 +195,27 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/general/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/fire-tv/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/getting-started/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/pages/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/lg/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://beacon.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/samsung/",
       "oldURL": "/index"
   },
 
@@ -405,7 +230,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/training/",
+      "newURL": "https://beacon.support.brightcove.com/getting-started/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/",
       "oldURL": "/index"
   },
 
@@ -415,18 +245,8 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/index_old.html",
       "oldURL": "/index_old"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/admin/ingest-profiles-best-practices.html",
-      "oldURL": "/ingest-profiles-best-practices"
   },
 
   {
@@ -460,11 +280,6 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/introduction-playlists.html",
-      "oldURL": "/introduction-playlists"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/references/known-issues.html",
       "oldURL": "/known-issues"
   },
@@ -477,41 +292,6 @@
   {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/live-ssai.html",
       "oldURL": "/live-ssai"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/admin/managing-account-information.html",
-      "oldURL": "/managing-account-information"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/admin/managing-account-settings.html",
-      "oldURL": "/managing-account-settings"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/admin/managing-api-authentication-credentials.html",
-      "oldURL": "/managing-api-authentication-credentials"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/admin/managing-ingest-profiles.html",
-      "oldURL": "/managing-ingest-profiles"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/admin/managing-media-sharing-settings.html",
-      "oldURL": "/managing-media-sharing-settings"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/admin/managing-profile-information.html",
-      "oldURL": "/managing-profile-information"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/admin/managing-users.html",
-      "oldURL": "/managing-users"
   },
 
   {
@@ -530,31 +310,6 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/organizing-videos-using-folders.html",
-      "oldURL": "/organizing-videos-using-folders"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/basics/organizing-videos-using-folders.html",
-      "oldURL": "/organizing-videos-using-folders"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/overview-adding-captions-video.html",
-      "oldURL": "/overview-adding-captions-video"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/general/overview-context-aware-encoding.html",
-      "oldURL": "/overview-context-aware-encoding"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/general/overview-dynamic-delivery.html",
-      "oldURL": "/overview-dynamic-delivery"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/references/product-updates.html",
       "oldURL": "/product-updates"
   },
@@ -565,28 +320,8 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/basics/publishing-single-video-web.html",
-      "oldURL": "/publishing-single-video-web"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/publishing-videos-and-playlists.html",
-      "oldURL": "/publishing-videos-and-playlists"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/support/register-training.html",
       "oldURL": "/register-training"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/replacing-video-source-file.html",
-      "oldURL": "/replacing-video-source-file"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/retranscoding-videos.html",
-      "oldURL": "/retranscoding-videos"
   },
 
   {
@@ -605,33 +340,8 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/searching-videos-and-playlist.html",
-      "oldURL": "/searching-videos-and-playlist"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/series-seasons-episodes.html",
       "oldURL": "/series-seasons-episodes"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/setting-required-fields-videos.html",
-      "oldURL": "/setting-required-fields-videos"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/sharing-videos-other-accounts.html",
-      "oldURL": "/sharing-videos-other-accounts"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/admin/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding.html",
-      "oldURL": "/standard-ingest-profiles-dynamic-delivery-and-context-aware-encoding"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/admin/standard-ingest-profiles-legacy-transcoding.html",
-      "oldURL": "/standard-ingest-profiles-legacy-transcoding"
   },
 
   {
@@ -642,11 +352,6 @@
   {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/streaming-vods-to-a-channel.html",
       "oldURL": "/streaming-vods-to-a-channel"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/styling-captions.html",
-      "oldURL": "/styling-captions"
   },
 
   {
@@ -682,11 +387,6 @@
   {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/samsung/submitting-to-samsung.html",
       "oldURL": "/submitting-to-samsung"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/general/supported-video-and-audio-formats-codecs-and-containers.html",
-      "oldURL": "/supported-video-and-audio-formats-codecs-and-containers"
   },
 
   {
@@ -730,31 +430,6 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/media/uploading-video-images.html",
-      "oldURL": "/uploading-video-images"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/basics/uploading-video-poster-thumbnail-images.html",
-      "oldURL": "/uploading-video-poster-thumbnail-images"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/uploading-videos-remote-urls.html",
-      "oldURL": "/uploading-videos-remote-urls"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/uploading-videos.html",
-      "oldURL": "/uploading-videos"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/basics/uploading-videos.html",
-      "oldURL": "/uploading-videos"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/using-subscription-package.html",
       "oldURL": "/using-subscription-package"
   },
@@ -770,43 +445,13 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/admin/viewing-billing-information.html",
-      "oldURL": "/viewing-billing-information"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/support/viewing-brightcove-system-status-page.html",
-      "oldURL": "/viewing-brightcove-system-status-page"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/basics/viewing-brightcove-system-status-page.html",
       "oldURL": "/viewing-brightcove-system-status-page"
   },
 
   {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/vod-ssai.html",
       "oldURL": "/vod-ssai"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/general/working-360deg-videos.html",
-      "oldURL": "/working-360deg-videos"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/working-cue-points.html",
-      "oldURL": "/working-cue-points"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/working-multi-lingual-metadata.html",
-      "oldURL": "/working-multi-lingual-metadata"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/media/working-remote-asset-videos.html",
-      "oldURL": "/working-remote-asset-videos"
   },
 ]
 

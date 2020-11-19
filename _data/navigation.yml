@@ -157,12 +157,14 @@
       url: /training/training-demand-custom-fields.html
     - name: Designing the Application Layout
       url: /training/training-demand-design-layout.html
-    - name: Publishing the Android App on the Play Store
-      url: /training/training-demand-publish-android-app.html
     - name: Creating and Using Playlists
       url: /training/training-demand-playlists.html
     - name: Creating Series, Seasons and Episodes
       url: /training/training-demand-series-seasons-episodes.html
+    - name: Implementing VOD Server-Side Ads
+      url: /training/training-demand-vod-ssai.html
+    - name: Publishing the Android App on the Play Store
+      url: /training/training-demand-publish-android-app.html
     - name: Viewing Analytics Data
       url: /training/training-demand-viewing-analytics.html
 - section:

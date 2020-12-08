@@ -151,6 +151,8 @@
       url: '/references/known-issues.html'
     - name: 'Product Updates'
       url: '/references/product-updates.html'
+    - name: 'Remote Asset Limitations'
+      url: '/references/remote-asset-limitations.html'
 - section:
   name: Training
   url: /training/index.html

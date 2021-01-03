@@ -20,7 +20,7 @@
       url: /getting-started/design-best-practices.html
 - section:
   name: Syncing with Video Cloud
-  icon: '<i class="far fa-sync"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/repeat.svg">'
   url: /syncing-with-video-cloud/index.html
   docs:
     - name: Creating Video Cloud Custom Fields
@@ -30,7 +30,7 @@
 - section:
   name: Using Brightcove Beacon
   url: /using-brightcove-beacon/index.html
-  icon: '<img src="https://support.brightcove.com/site-assets/images/site/product-logos/beacon-nut.svg">'
+  icon: '<img src="/assets/images/feather/fast-forward.svg">'
   docs:
     - name: Adding a Carousel to a Page
       url: /using-brightcove-beacon/adding-to-page.html
@@ -137,7 +137,7 @@
 - section:
   name: References
   url: /references/index.html
-  icon: '<i class="fal fa-books"></i>'
+  icon: '<img class="bcls-icon" src="/assets/images/feather/book.svg">'
   docs:
     - name: Common Configuration Settings
       url: /references/common-configuration-settings.html
@@ -156,6 +156,7 @@
 - section:
   name: Training
   url: /training/index.html
+  icon: '<img class="bcls-icon" src="/assets/images/feather/award.svg">'
   docs:
     - name: Using Video Cloud Videos/Custom Fields
       url: /training/training-demand-custom-fields.html

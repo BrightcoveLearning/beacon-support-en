@@ -540,6 +540,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li><strong>Episode data</strong> - If the video is an episode of a series, you define the series, season and episode number.</li>
         </ul>
         <p>The <a href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a> document is solely dedicated to helping you create the required custom fields.</p>
+        <p>Values are assigned to these custom fields in Video Cloud Studio.</p>
     </section>
     <section class="bcls-section">
         <h2 id="section-name">Add images</h2>
@@ -549,6 +550,40 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </figure>
         <p>The <a href="/references/image-requirements.html">Images and Their Specifications</a> document specifies image requirements and also how to upload the images in Video Cloud Studio.</p>
     </section>
+    <section class="bcls-section">
+        <h2 id="section-name">Add rights management information</h2>
+        <p>As mentioned earlier, custom fields are used to add rights management information that controls monetization and access restrictions. For instance, the fields</p>
+        <ul>
+            <li>beacon.rights.<em>index</em>.startDate</li>
+            <li>beacon.rights.<em>index</em>.endDate</li>
+        </ul>
+        <p>define when a particular video asset can be accessed.</p>
+        <p>Also, the following documents show how to implement monetization via advertising and subscriptions:</p>
+        <ul>
+            <li><a href="/using-brightcove-beacon/implementing-authvod.html">Implementing AuthVOD</a></li>
+            <li><a href="/using-brightcove-beacon/using-subscription-package.html">Implementing AuthVOD</a></li>
+        </ul>
+        <p>The rights management custom fields are assigned values in Video Cloud Studio. </p>
+    </section>
+    <section class="bcls-section">
+        <h2 id="section-name">Add episode data</h2>
+        <p>The custom fields are used to assign episode data to assign the video to the correct series, season and episode number. This example shows the custom fields used, and specific values for each field.</p>
+        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/syncing-with-vc/vc-custom-fields/episode-example.png" alt=""> </figure>
+        <p>The <a href="/using-brightcove-beacon/series-seasons-episodes.html#Ingesting_episodes">Ingesting episodes</a> section of the <strong>Creating Series/Seasons/Episodes</strong> document provides specific instructions.</p>
+    </section>
+    <section class="bcls-section">
+        <h2 id="section-name">Create video playlists</h2>
+        <p>Playlists are heavily leveraged in Brightcove Beacon when deciding what video content to display on an app page. You create playlists in Video Cloud Studio.</p>
+        <p>The following are resources on getting you videos into Video Cloud:</p>
+        <ul>
+            <li><a href="https://studio.support.brightcove.com/basics/video-cloud-basics-creating-manual-playlist.html">Video Cloud Basics: Creating a Manual Playlist</a></li>
+            <li><a href="https://studio.support.brightcove.com/basics/video-cloud-basics-creating-smart-playlist.html">Video Cloud Basics: Creating a Smart Playlist</a></li>
+            <li><a href="https://studio.support.brightcove.com/media/creating-and-managing-playlists.html">Creating and Managing Playlists</a></li>
+        </ul>
+        <aside class="bcls-aside bcls-aside--warning">Playlists created in Video Cloud Studio many ONLY contains videos. If you wish to create playlists that contain series, live events, etc. those must be created in Brightcove Beacon.</aside>
+    </section>
+
+
 
 
 

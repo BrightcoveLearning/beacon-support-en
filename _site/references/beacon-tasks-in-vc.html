@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic, you will learn the tasks that must/should be done in Video Cloud Studio when you are a Brightcove Beacon use.">
+  <meta name="description" content="In this topic, you will learn the tasks that must/should be done in Video Cloud Studio when you are a Brightcove Beacon customer.">
   
   <title>Brightcove Beacon Tasks Performed in Video Cloud </title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -492,11 +492,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <h1>Brightcove Beacon Tasks Performed in Video Cloud </h1>
 <article class="bcls-article">
-    <summary>In this topic, you will learn the tasks that must/should be done in Video Cloud Studio when you are a Brightcove Beacon use.</summary>
+    <summary>In this topic, you will learn the tasks that must/should be done in Video Cloud Studio when you are a Brightcove Beacon customer.</summary>
 
     <section class="bcls-section">
         <h2 id="Task_summary">Task summary</h2>
-        <p>The following is the list of tasks that you as Brightcove Beacon customers should/must do in Video Cloud</p>
+        <p>The following is the list of tasks that you as Brightcove Beacon customer should/must do in Video Cloud Studio:</p>
         <ul>
             <li><a href="#Add_video_assets">Add video assets</a></li>
             <li><a href="#Create_custom_fields">Create custom fields</a></li>
@@ -507,16 +507,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li><a href="#Create_Brightcove_Live_events">Create Brightcove Live events</a></li>
             <li><a href="#Create_an_SSAI_ad_configuration">Create an SSAI ad configuration</a></li>
         </ul>
-        <p>Each one of these will be further explained later in this document with a link to the documentation where instructions live on how to perform that particular task.</p>
+        <p>Each task will be further explained later in this document with a link to the documentation where instructions are provided on how to perform that particular task.</p>
         <p>This document is NOT a "how to" manual for each task, but each section will link you out to the appropriate document that contains steps on how to complete the task.</p>
     </section>
     <section class="bcls-section">
         <h2 id="Add_video_assets">Add video assets</h2>
-        <p>Obviously your Brightcove Beacon app would not be very interesting with video content, so this is a hugely important task. Video Cloud is the tool used to upload your videos. Later in this document you will see Video Cloud Studio is a commonly used tool when working with your Brightcove Beacon app. Remember that Video Cloud is the "truth" of Brightcove Beacon video content.</p>
-        <p>The following are resources on getting you videos into Video Cloud:</p>
+        <p>Video Cloud is the tool used to upload your videos. Later in this document you will see Video Cloud Studio is a commonly used tool when working with your Brightcove Beacon app.</p>
+        <p>Remember that Video Cloud is the "truth" of Brightcove Beacon video content.</p>
+        <p>The following are resources for getting your videos into Video Cloud:</p>
         <ul>
             <li><a href="https://studio.support.brightcove.com/basics/video-cloud-basics-uploading-videos.html">Video Cloud Basics: Uploading Videos</a> - A 1 minute 30 second video and four steps for a quick start to uploading content into Video Cloud.</li>
-            <li><a href="https://studio.support.brightcove.com/media/uploading-videos-using-upload-module.html">Uploading Videos Using the Upload Module</a> - The full document on uploading videos with Video Cloud. Includes </li>
+            <li><a href="https://studio.support.brightcove.com/media/uploading-videos-using-upload-module.html">Uploading Videos Using the Upload Module</a> - The full document on uploading videos with Video Cloud.</li>
             <li><a href="https://studio.support.brightcove.com/media/index.html">Managing Videos</a> - The landing page which encompasses the entire video management workflow, which includes uploading videos, playlists, organizing videos with folders, etc.</li>
         </ul>
     </section>
@@ -558,14 +559,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>define when a particular video asset can be accessed.</p>
         <p>Also, the following documents show how to implement monetization via advertising and subscriptions:</p>
         <ul>
-            <li><a href="/using-brightcove-beacon/implementing-authvod.html">Implementing AuthVOD</a></li>
+            <li><a href="/using-brightcove-beacon/vod-ssai.html">Implementing VOD SSAI</a>; see the <a href="/using-brightcove-beacon/vod-ssai.html#Setting_custom_field_values">Setting custom field values</a> section of the document for supplying values to the appropriate custom fields.</li>
             <li><a href="/using-brightcove-beacon/using-subscription-package.html">Implementing AuthVOD</a></li>
         </ul>
         <p>The rights management custom fields are assigned values in Video Cloud Studio. </p>
     </section>
     <section class="bcls-section">
         <h2 id="Add_episode_data">Add episode data</h2>
-        <p>The custom fields are used to assign episode data to assign the video to the correct series, season and episode number. This example shows the custom fields used, and specific values for each field.</p>
+        <p>If a particular video is an episode of a series, the custom fields are used to assign episode data that associates the video to the correct series, season and episode number. This example shows the custom fields used, and specific values for each field.</p>
         <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/syncing-with-vc/vc-custom-fields/episode-example.png" alt=""> </figure>
         <p>The <a href="/using-brightcove-beacon/series-seasons-episodes.html#Ingesting_episodes">Ingesting episodes</a> section of the <strong>Creating Series/Seasons/Episodes</strong> document provides specific instructions.</p>
     </section>

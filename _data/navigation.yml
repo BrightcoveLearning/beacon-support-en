@@ -153,6 +153,8 @@
       url: '/references/product-updates.html'
     - name: 'Remote Asset Limitations'
       url: '/references/remote-asset-limitations.html'
+    - name: 'Tasks Performed in Video Cloud'
+      url: '/references/beacon-tasks-in-vc.html'
 - section:
   name: Training
   url: /training/index.html

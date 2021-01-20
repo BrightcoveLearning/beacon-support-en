@@ -548,6 +548,16 @@
       
         <url>
           
+            <loc>https://beacon.support.brightcove.com/references/beacon-tasks-in-vc.html</loc>
+          
+            <lastmod>2021-01-20</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
             <loc>https://beacon.support.brightcove.com/references/common-configuration-settings.html</loc>
           
             <lastmod>2021-01-20</lastmod>

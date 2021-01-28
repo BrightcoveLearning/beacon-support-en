@@ -139,6 +139,8 @@
   url: /references/index.html
   icon: '<img class="bcls-icon" src="/assets/images/feather/book.svg">'
   docs:
+    - name: Branding Brightcove Beacon Apps
+      url: /references/branding-beacon-apps.html
     - name: Common Configuration Settings
       url: /references/common-configuration-settings.html
     - name: Creating a Stripe Account

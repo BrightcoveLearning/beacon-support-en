@@ -1,6 +1,6 @@
 ---
 title: "How Brightcove Beacon Gets Its Data"
-description: "In this topic, you will learn how Brightcove Beacon obtains the various types of data used in building its apps."
+description: "In this topic, you will learn how Brightcove Beacon obtains the various types of data used in building its apps. Also included is information on the details of authentication."
 parent: "references"
 layout: "staging"
 ---
@@ -62,7 +62,7 @@ layout: "staging"
             <li>refresh_token</li>
             <li>urn:ietf:params:oauth:grant-type:device_code</li>
         </ul>
-        <p>Following Authentication provider endpoints will need to be configured in Beacon (customer needs to provide us these so that we can configure - if OpenID Connect Discovery is available we can discover these):</p>
+        <p>Following Authentication provider endpoints will need to be configured in Beacon (customer needs to provide us these so that we can configure - if <a href="https://swagger.io/docs/specification/authentication/openid-connect-discovery/">OpenID Connect Discovery</a> is available we can discover these):</p>
         <ul>
             <li>Access Token</li>
             <li>Refresh Token</li>
@@ -70,9 +70,10 @@ layout: "staging"
             <li>Revoke Token</li>
             <li>Authorize</li>
             <li>Pairing codes</li>
-            <li>JWKS</li>
+            <li>JWKS (<a href="https://auth0.com/docs/tokens/json-web-tokens/json-web-key-sets">JSON Web Key Sets</a>)</li>
             <li>Logout</li>
-            <li>OpenID Connect Discovery (/.well-known/openid-configuration) - Used for configuration of the system</li>
+            <li><a href="https://swagger.io/docs/specification/authentication/openid-connect-discovery/">OpenID Connect Discovery</a>
+                (/.well-known/openid-configuration). This is used for configuration of the system.</li>
             <li>Optionally (but recommended) - Requesting customized aud (audience) by client app. This is used for extra validation</li>
         </ul>
         <p>For each application, Brightcove will need to get from customer the client_id to be set up in the apps (recommend one per platform) and will provide the redirect_uri(s) to be used for web and mobile applications (as applicable)</p>

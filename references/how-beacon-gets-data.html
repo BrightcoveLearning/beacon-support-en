@@ -38,6 +38,8 @@ layout: "staging"
 
     <section class="bcls-section">
         <h2 id="Authorizing_data_retrieval">Authorizing data retrieval</h2>
+        <p>Data retrieval authorization is done in two ways in Brightcove Beacon, authentication and entitlements.</p>
+        <h3>Authentication</h3>
         <p>Brightcove leverages the following OAuth 2.0 flows for authentication:</p>
         <h4>Authorization Code with PKCE: for <strong>iOS</strong>, <strong>Android</strong> and <strong>Web</strong></h4>
         <figure class="bcls-figure">
@@ -50,10 +52,33 @@ layout: "staging"
         </figure>
         <p>There are three tokens that need to be made available to Brightcove Beacon:</p>
         <ul>
-            <li>Access token: Validates that a user was able to authenticate and should be granted access to Brightcove Beacon (<strong>JWT format and need to include iss and sub</strong>)</li>
+            <li>Access token: Validates that a user was able to authenticate and should be granted access to Brightcove Beacon (<strong>JWT format and need to include iss and sub</strong>).</li>
             <li>Refresh token: Allows the user to remain logged in after the access token expires by providing a mechanism to automatically obtain a new access token on behalf of the user (as long as user is allowed access). This is especially important on TVs</li>
-            <li>Identity token: Standardizes the way Brightcove obtains information about users</li>
+            <li>Identity token: Standardizes the way Brightcove obtains information about users.</li>
         </ul>
+        <p>The following grant types should be supported:</p>
+        <ul>
+            <li>authorization_code</li>
+            <li>refresh_token</li>
+            <li>urn:ietf:params:oauth:grant-type:device_code</li>
+        </ul>
+        <p>Following Authentication provider endpoints will need to be configured in Beacon (customer needs to provide us these so that we can configure - if OpenID Connect Discovery is available we can discover these):</p>
+        <ul>
+            <li>Access Token</li>
+            <li>Refresh Token</li>
+            <li>User Info</li>
+            <li>Revoke Token</li>
+            <li>Authorize</li>
+            <li>Pairing codes</li>
+            <li>JWKS</li>
+            <li>Logout</li>
+            <li>OpenID Connect Discovery (/.well-known/openid-configuration) - Used for configuration of the system</li>
+            <li>Optionally (but recommended) - Requesting customized aud (audience) by client app. This is used for extra validation</li>
+        </ul>
+        <p>For each application, Brightcove will need to get from customer the client_id to be set up in the apps (recommend one per platform) and will provide the redirect_uri(s) to be used for web and mobile applications (as applicable)</p>
+
+
+        <h3>Entitlements</h3>
 
     </section>
 

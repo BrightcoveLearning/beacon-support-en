@@ -38,7 +38,23 @@ layout: "staging"
 
     <section class="bcls-section">
         <h2 id="Authorizing_data_retrieval">Authorizing data retrieval</h2>
-        <p></p>
+        <p>Brightcove leverages the following OAuth 2.0 flows for authentication:</p>
+        <h4>Authorization Code with PKCE: for <strong>iOS</strong>, <strong>Android</strong> and <strong>Web</strong></h4>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/references/how-beacon-gets-data/authorization-wth-PKCE.png" alt="">
+        </figure>
+        <h4>Device Flow (OAuth 2.0 Extension) for <strong>Connected TVs</strong> and <strong>Smart TVs</strong>
+        </h4>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/references/how-beacon-gets-data/device-flow-oauth2.png" alt="">
+        </figure>
+        <p>There are three tokens that need to be made available to Brightcove Beacon:</p>
+        <ul>
+            <li>Access token: Validates that a user was able to authenticate and should be granted access to Brightcove Beacon (<strong>JWT format and need to include iss and sub</strong>)</li>
+            <li>Refresh token: Allows the user to remain logged in after the access token expires by providing a mechanism to automatically obtain a new access token on behalf of the user (as long as user is allowed access). This is especially important on TVs</li>
+            <li>Identity token: Standardizes the way Brightcove obtains information about users</li>
+        </ul>
+
     </section>
 
 

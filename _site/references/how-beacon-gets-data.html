@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic, you will learn how Brightcove Beacon obtains the various types of data used in building its apps. Also included is information on the details of authentication.">
+  <meta name="description" content="In this topic, you will learn how Brightcove Beacon obtains the various types of data used in building its apps. Also included is information covering the details of authentication.">
   
   <title>How Brightcove Beacon Gets Its Data</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -500,28 +500,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <h1>How Brightcove Beacon Gets Its Data</h1>
 <article class="bcls-article">
-    <summary>In this topic, you will learn how Brightcove Beacon obtains the various types of data used in building its apps. Also included is information on the details of authentication.</summary>
+    <summary>In this topic, you will learn how Brightcove Beacon obtains the various types of data used in building its apps. Also included is information covering the details of authentication.</summary>
 
     <section class="bcls-section">
         <h2 id="Introduction">Introduction</h2>
-        <p>The first part of this document describes how Brightcove Beacon obtains common data, like playlists and live events. The last section goes into great detail how Open ID Connect (OIDC) and entitlements are used to authorize Brightcove Beacon to obtain data.</p>
+        <p>The first part of this document describes how Brightcove Beacon obtains common data, like videos, playlists and live events. The last section goes into great detail how Open ID Connect (OIDC) and entitlements are used to authorize Brightcove Beacon to obtain data.</p>
     </section>
 
     <section class="bcls-section">
         <h2 id="Ingestion_and_custom_fields">Video ingestion and custom fields</h2>
-        <p>Video assets need to be first ingested into Video Cloud before Brightcove Beacon can use them. Depending on how the videos will be used, for instance in a series or require advertising, Video Cloud custom fields can be used to associate the video with those special requirements. The <a href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a> goes into detail on how to create required custom fields and how to assign them values.</p>
-        <p>Once the videos are in Video Cloud, then Brightcove Beacon can pull in information associated the videos such as metadata, images and location in the Video Cloud catalog. The videos actually remain in Video Cloud and will be served by the Video Cloud playback delivery infrastructure. In the Brightcove Beacon UI, you can manually ingest the Video Cloud videos' information or wait for a background process to do so.</p>
+        <p>Video assets need to be first ingested into Video Cloud before Brightcove Beacon can use them. Depending on how the videos will be used, for instance in a series or requiring advertising, Video Cloud <strong>custom fields</strong> can be used to associate the video with those special requirements. The <a href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a> document goes into detail on how to create required custom fields and how to assign those fields values.</p>
+        <p>Once the videos are in Video Cloud, then Brightcove Beacon can pull in information associated the videos such as metadata, images and location from the Video Cloud catalog. The videos actually remain in Video Cloud and will be served by the Video Cloud playback delivery infrastructure. In the Brightcove Beacon UI, you can manually ingest the Video Cloud videos' information or wait for a background process to do so.</p>
     </section>
 
     <section class="bcls-section">
         <h2 id="Playlists">Playlists</h2>
-        <p>In addition to video assets being created in Video Cloud, it is also recommended you create your video playlists in Video Cloud. You can create two types of playlist in Video Cloud, Manual and Smart. For full details on implementing playlist in Video Cloud see the <a href="https://studio.support.brightcove.com/media/creating-and-managing-playlists.html">Creating and Managing Playlists</a> document.</p>
+        <p>In addition to video assets being created in Video Cloud, it is also recommended you create your video playlists in Video Cloud. You can create two types of playlists in Video Cloud, <strong>Manual</strong> and <strong>Smart</strong>. For full details on implementing playlists in Video Cloud see the <a href="https://studio.support.brightcove.com/media/creating-and-managing-playlists.html">Creating and Managing Playlists</a> document.</p>
         <p>If you wish to create a playlist that contains assets other than videos, such as including series or live events, those playlist must be created in Brightcove Beacon.</p>
     </section>
 
     <section class="bcls-section">
         <h2 id="Channels_and_live_events">Channels and live events</h2>
-        <p>For Channels and Live events, the live jobs need to be created in Video cloud and then manually configured in Beacon. For details see the <a href="/using-brightcove-beacon/streaming-live-event.html">Streaming a Live Event</a> and <a href="/using-brightcove-beacon/creating-a-channel.html">Creating a Channel</a> documents.</p>
+        <p>For Channels and Live events, the live jobs need to be created in Video cloud and then manually configured in Brightcove Beacon. For details see the <a href="/using-brightcove-beacon/streaming-live-event.html">Streaming a Live Event</a> and <a href="/using-brightcove-beacon/creating-a-channel.html">Creating a Channel</a> documents.</p>
     </section>
 
     <section class="bcls-section">
@@ -546,17 +546,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </figure>
         <p>There are three tokens that need to be made available to Brightcove Beacon:</p>
         <ul>
-            <li><strong>Access token</strong>: Validates that a user was able to authenticate and should be granted access to Brightcove Beacon (<strong>JWT format and need to include iss and sub</strong>).</li>
-            <li><strong>Refresh token</strong>: Allows the user to remain logged in after the access token expires by providing a mechanism to automatically obtain a new access token on behalf of the user (as long as user is allowed access). This is especially important on TVs</li>
+            <li><strong>Access token</strong>: Validates that a user was able to authenticate and should be granted access to Brightcove Beacon. The access token needs to be in <strong>JWT format</strong> and include <code>iss</code> and <code>sub</code>.</li>
+            <li><strong>Refresh token</strong>: Allows the user to remain logged in after the access token expires by providing a mechanism to automatically obtain a new access token on behalf of the user (as long as user is allowed access). This is especially important on TVs.</li>
             <li><strong>Identity token</strong>: Standardizes the way Brightcove obtains information about users.</li>
         </ul>
         <p>The following grant types should be supported:</p>
         <ul>
-            <li>authorization_code</li>
-            <li>refresh_token</li>
-            <li>urn:ietf:params:oauth:grant-type:device_code</li>
+            <li><code>authorization_code</code></li>
+            <li><code>refresh_token</code></li>
+            <li><code>urn:ietf:params:oauth:grant-type:device_code</code></li>
         </ul>
-        <p>Following Authentication provider endpoints will need to be configured in Beacon (customer needs to provide us these so that we can configure - if <a href="https://swagger.io/docs/specification/authentication/openid-connect-discovery/">OpenID Connect Discovery</a> is available we can discover these):</p>
+        <p>Following Authentication provider endpoints will need to be configured in Brightcove Beacon. You need to provide these to Brightcove for proper configuration. If <a href="https://swagger.io/docs/specification/authentication/openid-connect-discovery/">OpenID Connect Discovery</a> is available Brightcove can discover these:</p>
         <ul>
             <li>Access Token</li>
             <li>Refresh Token</li>
@@ -568,15 +568,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li>Logout</li>
             <li><a href="https://swagger.io/docs/specification/authentication/openid-connect-discovery/">OpenID Connect Discovery</a>
                 (/.well-known/openid-configuration). This is used for configuration of the system.</li>
-            <li>Optional (but recommended) : Requesting customized <strong>aud</strong> (audience) by client app. This is used for extra validation.</li>
+            <li>Optional (but recommended) : Requesting customized <code>aud</code> (audience) by client app. This is used for extra validation.</li>
         </ul>
-        <p>For each application, Brightcove will need to get from customer the <strong>client_id</strong> to be set up in the apps, recommend one per platform. Brightcove will also provide the <strong>redirect_uri(s)</strong> to be used for web and mobile applications (as applicable).</p>
+        <p>For each application, Brightcove will need to get from you the <code>client_id</code> to be set up in the apps, recommended one per platform. Brightcove will also provide the <code>redirect_uri(s)</code> to be used for web and mobile applications (as applicable).</p>
 
         <h3>Entitlements</h3>
         <p>To inform Brightcove Beacon about entitlements for users, Brightcove Beacon provides the following API:</p>
         <pre class="line-numbers"><code class="language-html">https://beacon.brightcove.com/&lt;instance&gt;/webhook/beacon</code></pre>
         <p>The API key is provided by Brightcove.</p>
-        <p>The payload for the data exchanged via the API is in JSON format and appears as follows:</p>
+        <p>The payload for the data exchanged via the API is JSON formatted and appears as follows:</p>
         <pre class="line-numbers"><code class="language-json">[
   {
     "package_name": "string",                // Commerce package for SVOD or SKU for TVOD purchases - required
@@ -590,6 +590,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     “payment_gateway”: “beaconstore”         // One of: “beaconstore”
   }
 ]</code></pre>
+        <p>When using an external authentication system, the <code>external_user_id</code> corresponds to the subject value in the Access token. Also note the following:</p>
+        <ul>
+            <li>The API key will need to be sent in the <code>HEADER</code> in the <code>auth-token</code> key.</li>
+            <li>It is possible to send multiple records at the same time.</li>
+            <li>If there is an error in any of the items in the JSON payload the entire payload is rejected.</li>
+        </ul>
     </section>
 
 
@@ -609,7 +615,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 29 Jan 2021
+  Page last updated on 30 Jan 2021
 </div>
 
 

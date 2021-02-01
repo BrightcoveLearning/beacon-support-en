@@ -135,6 +135,11 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/ga-self-configuration.html",
+      "oldURL": "/ga-self-configuration"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/references/glossary.html",
       "oldURL": "/glossary"
   },

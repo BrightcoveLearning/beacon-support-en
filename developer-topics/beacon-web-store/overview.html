@@ -1,0 +1,100 @@
+---
+title: 'Overview: Brightcove Beacon Web Store'
+description: This topic provides an overview of the Brightcove Beacon Web Store service.
+parent: Brightcove Beacon Web Store
+grandparent: Developer Topics
+layout: staging
+---
+
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="Introducion">Introducion</h2>
+    <p>The Beacon Web Store is a configuration, features and API integration that enables Beacon licensees to implement subscriptions, renting and selling of Beacon videos (TVOD) in Bring Your Own (BYO) web stores. The content owners implement the store front and business logic for renting and selling and the payment system integration in the web store. An Beacon API provides the interface for the store to add, remove and edit the resulting entitlement changes within the Beacon CMS. The logic defining access and display of the content titles in Beacon apps is unchanged.</p>
+    <p>Implementation of all financial reporting, dashboards, and tax payment are not managed or tracked in Beacon and are the responsibility of the Content Owner. </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="glossary_of_terms">Glossary of terms</h2>
+    <p>The table below explains terms used in this topic.</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">Glossary of Terms</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Term</th>
+          <th>Explanation</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>Web Store</td>
+          <td>A BYO commerce website for selling, renting and selling subscriptions</td>
+        </tr>
+        <tr>
+          <td>Payment processor</td>
+          <td>A system used by the web store to process transactions and deposit revenue into an account</td>
+        </tr>
+        <tr>
+          <td>SKU</td>
+          <td>Identifier for Beacon Assets</td>
+        </tr>
+        <tr>
+          <td>SVOD</td>
+          <td>Subscription VOD, recurring payment model</td>
+        </tr>
+        <tr>
+          <td>TVOD</td>
+          <td>One time purchase or rental payment model</td>
+        </tr>
+        <tr>
+          <td>Plan</td>
+          <td>An SVOD offer definition</td>
+        </tr>
+        <tr>
+          <td>UMS</td>
+          <td>User Management System</td>
+        </tr>
+        <tr>
+          <td>Proxy UMS</td>
+          <td>Proxy copies of users that map to master copies in BYO UMS. Beacon entitlements are managed in the Proxy UMS system.</td>
+        </tr>
+        <tr>
+          <td>OIDC</td>
+          <td>Open ID Connect, a protocol to communication Authorization during Authentication</td>
+        </tr>
+        <tr>
+          <td>Authentication</td>
+          <td>Identification of specific users for the purpose of granting access </td>
+        </tr>
+        <tr>
+          <td>Authorization</td>
+          <td>Communicating user entitlements via tokens upon login</td>
+        </tr>
+        <tr>
+          <td>In App Purchase</td>
+          <td>For cases where customers are adding Beacon apps to their web store product offers, and wish to sell the new product configurations through app stores, Beacon Stores can be configured for in app purchase. </td>
+        </tr>
+        <tr>
+          <td>Entitlements</td>
+          <td>Access to Beacon content or features</td>
+        </tr>
+        <tr>
+          <td>Purchase Notifications</td>
+          <td>A message, sent from a Beacon store to Beacon CMS that indicates a change in purchase status (purchase, cancel) of a subscription or asset rights</td>
+        </tr>
+        <tr>
+          <td>Connected TVs</td>
+          <td>HDMI connected external devices that provide app management support to televisions: Apple TV, FireTV, Roku, and Android TV STBs</td>
+        </tr>
+        <tr>
+          <td>Smart TV</td>
+          <td>Televisions with built-in support for app management</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Beacon_Store_Components">Beacon Store components</h2>
+    <p>All Beacon Store purchases are made through web stores. The selling model requires Viewers to visit the customer web store, purchase content and then open Beacon apps on their supported devices as a separate action.</p>
+  </section>
+</article>

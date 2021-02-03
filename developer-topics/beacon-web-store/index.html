@@ -1,0 +1,30 @@
+---
+title:
+description:
+parent: Developer Topics
+---
+<style>
+  .card-wrapper {
+    justify-content: start;
+  }
+</style>
+<h1>{{ page.title }}</h1>
+<article class="landing-page-wrapper">
+  <summary>{{ page.description }}</summary>
+  <section class="card-wrapper">
+    {% for item in site.data.navigation %}
+      {% if item.name == page.section %}
+      <section class="bcls-card">
+        <div class="card-content">
+          <h2 class="landing-page-item-header">{{ item.name }} Topics</h2>
+          <ul class="landing-page-item list-none">
+            {% for entry in item.docs %}
+            <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+      {% endif %}
+    {% endfor %}
+  </section>
+</article>

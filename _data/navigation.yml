@@ -147,6 +147,8 @@
       url: /references/creating-stripe-account.html
     - name: 'Glossary'
       url: '/references/glossary.html'
+    - name: 'How Brightcove Beacon Gets Data'
+      url: '/references/how-beacon-gets-data.html'
     - name: 'Images and Their Specifications'
       url: '/references/image-requirements.html'
     - name: 'Known Issues'

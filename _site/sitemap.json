@@ -200,6 +200,21 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/developer-topics/beacon-web-store/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/developer-topics/beacon-web-store/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/developer-topics/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/syncing-with-video-cloud/",
       "oldURL": "/index"
   },
@@ -327,6 +342,11 @@
   {
       "newURL": "https://beacon.support.brightcove.com/support/opening-case-with-brightcove-support.html",
       "oldURL": "/opening-case-with-brightcove-support"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/developer-topics/beacon-web-store/overview.html",
+      "oldURL": "/overview"
   },
 
   {

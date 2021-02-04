@@ -185,12 +185,22 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/training/",
+      "newURL": "https://beacon.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://beacon.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/training/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -260,17 +270,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -352,6 +352,11 @@
   {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/promo-codes.html",
       "oldURL": "/promo-codes"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/developer-topics/beacon-web-store/references/reference.html",
+      "oldURL": "/reference"
   },
 
   {

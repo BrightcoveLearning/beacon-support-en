@@ -165,11 +165,6 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/implementing-OIDC-auth.html",
-      "oldURL": "/implementing-OIDC-auth"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/implementing-authvod.html",
       "oldURL": "/implementing-authvod"
   },

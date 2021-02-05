@@ -543,7 +543,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>The following steps guide you through creating the <strong>Beacon Android</strong> property. You will need to create the others following the same process.</p>
         <ol class="bcls-tasklist">
             <li>Log in to your Google Analytics account.</li>
-            <li>CLick the <strong>Admin (gear)</strong> icon on the bottom-left of the screen.</li>
+            <li>Click the <strong>Admin (gear)</strong> icon on the bottom-left of the screen.</li>
             <li>On the top of the middle column click <strong>Create Property</strong>.</li>
             <li>In the <strong>Property setup</strong>, supply the <strong>Property name</strong>, for the first property, use <samp>Beacon Android</samp>.</li>
             <li>Supply the <strong>Reporting time zone</strong>.</li>
@@ -600,18 +600,34 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 </figure>
             </li>
             <li>From the three-paneled dropdown, select:
-                <ul>
+                <ul type="a">
                     <li>Your Brightcove Beacon account</li>
-                    <li>Your app for which you want analytics</li>
+                    <li>The property for which you will be creating dimensions/metic</li>
                     <li>Your view (you will only have one view per app)</li>
                 </ul>
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/choose-property-3-column.png" alt="">
                 </figure>
+            <li>Click the <strong>Admin (gear)</strong> icon on the bottom-left of the screen.</li>
+            </li>
+            <li>Near the bottom of the middle column, under <strong>Custom Definitions</strong> click <strong>Custom Dimensions</strong>
+                <div class="<figure class=" bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/click-custom-demensions.png" alt="">
+                    </figure>
+                </div>
+            </li>
+            <li>Click <strong>NEW CUSTOM DIMENSION</strong>.</li>
+            <li>For the <strong>Name</strong> enter <samp>Episode Number</samp>.</li>
+            <li>From the <strong>Scope</strong> dropdown select <samp>Hit</samp>.</li>
+            <li>Leave the dimension <strong>Active</strong>.</li>
+            <li>Click <strong>Create</strong>.</li>
+            <li>From the example code screen click <strong>Done</strong>.</li>
+            <li>You will see your newly created dimension in a list, as shown here:
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/dimension-list.png" alt="">
+                </figure>
 
             </li>
-            <li></li>
-            <li></li>
         </ol>
         <h3>Creating a custom metric</h3>
         <ol class="bcls-tasklist-restart">

@@ -909,8 +909,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <ul>
             <li>Create four containers, one for each property created earlier.</li>
             <li>Import the configuration JSON files which were emailed to you are part of the <a href="#Obtain_the_templates_and_configuration_files">Obtain the templates and configuration files</a> section above.</li>
+            <li>Enter your tracking ID, copied from your Google Analytic account, into each of the containers variables.</li>
         </ul>
-        <ol class="bcls-tasklist">
+        <h3>Create containers</h3>
+        <ol class="bcls-tasklist-restart">
             <li>
                 Review Google's documentation to <a href="https://support.google.com/tagmanager/answer/6103696?hl=en">Setup and install Tag Manager</a>.
             </li>
@@ -989,8 +991,36 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 </figure>
             </li>
         </ol>
+        <h3>Import configuration files</h3>
+        <p>Perform the following steps to import the configuration files for your containers:</p>
+        <ol class="bcls-tasklist-restart">
+            <li>From the <strong>Workspace</strong>, click <strong>Admin</strong>. <strong>Import Container</strong>.</li>
+            <li>Check which container you are now configuring, then click <strong>Import Container</strong>.
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/tm-check-container.png" alt="">
+                </figure>
+            </li>
+            <li>Click <strong>Chose container file</strong>, and select the correct JSON file for this container.</li>
+            <li>For <strong>Choose workspace</strong>, click <strong>Existing</strong>. Then from the dialog that opens select <strong>Default Workspace</strong>.</li>
+            <li>For <strong>Choose an import option</strong>, click the <strong>Overwrite</strong> radio button.</li>
+            <li>You will see information about tags, triggers, variables and templates.
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/tm-import-info.png" alt="">
+                </figure>
+            </li>
+            <li>Click <strong>Confirm</strong>, and you will be taken back to the <strong>Workspace.</strong>.</li>
+            <li>In the <strong>Workspace</strong>, click on <strong>Tags</strong>, <strong>Triggers</strong> and <strong>Variables</strong> to confirm the import was successful.
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/tm-check-ttv.png" alt="">
+                </figure>
+            </li>
+        </ol>
+        <p></p>
     </section>
 
+    assets/images/using-bcb/self-config-ga/tm-ga-choose-property.png
+    assets/images/using-bcb/self-config-ga/tm-ga-tracking-info-code.png
+    assets/images/using-bcb/self-config-ga/tm-ga-copy-tracking-id.png
 </article>
 <!-- complete bootstrap layout -->
     </div>

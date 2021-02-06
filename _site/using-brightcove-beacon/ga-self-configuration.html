@@ -587,8 +587,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <ul>
             <li>Steps will be shown how to create a single custom dimension.</li>
             <li>Steps will be shown how to create a single custom metric.</li>
-            <li>A table will show the dimensions and metrics required for the properties <strong>Beacon Android</strong> and <strong>Beacon iOS</strong>.</li>
-            <li>A table will show the dimensions and metrics required for the properties <strong>Beacon STV</strong> and <strong>Beacon WEB</strong>.</li>
+            <li>A table will show the dimensions required for the properties <strong>Beacon Android</strong> and <strong>Beacon iOS</strong>.</li>
+            <li>A table will show the dimensions required for the properties <strong>Beacon STV</strong> and <strong>Beacon WEB</strong>.</li>
+            <li>A table will show the single metric that <strong>all four</strong> properties must have.</li>
         </ul>
         <p>You will then need to create the dimensions and metric for each of the four properties.</p>
         <h3>Creating a custom dimension</h3>
@@ -626,7 +627,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/dimension-list.png" alt="">
                 </figure>
-                <aside class="bcls-aside bcls-aside--warning language-editable">It is crucial that the <strong>Index</strong> matches the dimension name as shown in the tables below. To do this simply create the dimensions in the order shown in the tables.</aside>
+                <aside class="bcls-aside bcls-aside--warning language-editable">It is crucial that the <strong>Index</strong> matches the dimension name as shown in the tables below. To do this, simply create the dimensions in the order shown in the tables.</aside>
             </li>
             <li>To create another dimension click <strong>NEW CUSTOM DIMENSION</strong>.</li>
         </ol>
@@ -661,7 +662,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </ol>
         <aside class="bcls-aside bcls-aside--information language-editable">This is the only custom metric you will need to create for each of the four properties.</aside>
         <h3>Android and iOS dimensions and metric</h3>
-
+        <p>The following table displays the custom dimensions that must be added to the Beacon Android and Beacon iOS properties.</p>
+        <aside class="bcls-aside bcls-aside--warning language-editable">It is crucial that the <strong>Index</strong> matches the dimension name as shown in the tables below. To do this, simply create the dimensions in the order shown in the tables.</aside>
         <table class="bcls-table">
             <thead class="bcls-table__head">
                 <tr>
@@ -753,8 +755,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 </tr>
             </tbody>
         </table>
-
         <h3>STV and WEB dimensions and metric</h3>
+        <p>The following table displays the custom dimensions that must be added to the Beacon STV and Beacon Web properties.</p>
+        <aside class="bcls-aside bcls-aside--warning language-editable">It is crucial that the <strong>Index</strong> matches the dimension name as shown in the tables below. To do this, simply create the dimensions in the order shown in the tables.</aside>
         <table class="bcls-table">
             <thead class="bcls-table__head">
                 <tr>
@@ -866,7 +869,26 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 </tr>
             </tbody>
         </table>
-
+        <h3>Custom metric</h3>
+        <p>The following table display the single custom metric that must be added to all four properties.</p>
+        <table class="bcls-table">
+            <thead class="bcls-table__head">
+                <tr>
+                    <th>Custom Metric Name</th>
+                    <th>Index</th>
+                    <th>Scope</th>
+                    <th>Formatting Type</th>
+                </tr>
+            </thead>
+            <tbody class="bcls-table__body">
+                <tr>
+                    <td>Time Watched</td>
+                    <td>1</td>
+                    <td>Hit</td>
+                    <td>Formatting Type</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 </article>
 <!-- complete bootstrap layout -->
@@ -884,7 +906,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 05 Feb 2021
+  Page last updated on 06 Feb 2021
 </div>
 
 

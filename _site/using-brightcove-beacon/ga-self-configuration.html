@@ -520,7 +520,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
 
     <section class="bcls-section">
-        <h2 id="Require_tools">Required tools</h2>
+        <h2 id="Required_tools">Required tools</h2>
         <p>Brightcove uses various tools to implement the collection, manipulation and display of analytics data using Google Analytics. These tools are:</p>
         <ul>
             <li><strong>Google Analytics</strong> - A web analytics platform offered by Google as part of their Google Marketing Platform brand.</li>
@@ -528,8 +528,21 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li><strong>Firebase</strong> - Firebase is a platform developed by Google for creating mobile and web applications. Firebase includes the <strong>Firebase Realtime Database</strong>, which is a cloud-hosted database.</li>
             <li><strong>Google Data Studio</strong> - From Google: "Data Studio is a free tool that turns your data into informative, easy to read, easy to share, and fully customizable dashboards and reports."</li>
         </ul>
-
     </section>
+
+    <section class="bcls-section">
+        <h2 id="section-name">Obtain the templates and ...</h2>
+        <p>We provide you same example templates that you can apply to the newly created views, if order have a better visualization of the gathered data to Google Analytics:
+
+            Template Examples that can be applied to the created views:
+            Mobile: https://analytics.google.com/analytics/web/template?uid=QTJbSdv3Sk6gvpa4Go_CRQ
+            Web: https://analytics.google.com/analytics/web/template?uid=pIoBH8hYRSO3JZL4WbFTlA
+            STV: https://analytics.google.com/analytics/web/template?uid=eZhlzo76QtSn5BNi-rXJyQ
+
+            When applying the Mobile Template to a mobile view (Android or iOS properties), you’ll get a report similar to the following:
+        </p>
+    </section>
+
 
     <section class="bcls-section">
         <h2 id="Create_Google_Analytics_properties">Create Google Analytics properties</h2>
@@ -890,6 +903,78 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             </tbody>
         </table>
     </section>
+    <section class="bcls-section">
+        <h2 id="Configuring_Google_Tag_Manager">Configuring Google Tag Manager</h2>
+        <p></p>
+        <ol class="bcls-tasklist">
+            <li>
+                Review Google's documentation to <a href="https://support.google.com/tagmanager/answer/6103696?hl=en">Setup and install Tag Manager</a>.
+            </li>
+            <li>
+                <p>
+                    In <a href="https://tagmanager.google.com/#/home">Tag Manager</a>, create an account or use an existing account. To create a new account, select the <strong>Create Account</strong> button.
+                </p>
+                <p>
+                    By default, a new container is created for a new account. You will create additional containers within each account.
+                </p>
+                <figure class="bcls-figure">
+                    <img class="bcls-image" alt="Create account" src="/assets/images/using-bcb/self-config-ga/tm-click-to-create.png" />
+                </figure>
+            </li>
+            <li>
+                <p>Enter values for your new account page:</p>
+                <ul>
+                    <li><strong>Account Name</strong>: Your company name, or perhaps <samp>Beacon</samp>.</li>
+                    <li><strong>Country</strong>: Home country for your company.</li>
+                    <li><strong>Container Name</strong>: <samp>Beacon WEB</samp> You will be creating a container for each property.</li>
+                    <li><strong>Target Platform</strong>: Web</li>
+                    <li></li>
+                </ul>
+
+                <figure class="bcls-figure">
+                    <img class="bcls-image" alt="New account information" src="/assets/images/using-bcb/self-config-ga/tm-add-new-account.png" />
+                </figure>
+            </li>
+            <li>Click <strong>Create</strong>.</li>
+            <li>Close the dialog that opens.
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/create-commerce-package/.png" alt="">
+                </figure>
+
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+        <table class="bcls-table">
+            <thead class="bcls-table__head">
+                <tr>
+                    <th>Container Name</th>
+                    <th>Target Platform</th>
+                </tr>
+            </thead>
+            <tbody class="bcls-table__body">
+                <tr>
+                    <td>Beacon Android</td>
+                    <td>Android</td>
+                </tr>
+                <tr>
+                    <td>Beacon iOS</td>
+                    <td>iOS</td>
+                </tr>
+                <tr>
+                    <td>Beacon STV</td>
+                    <td>Web</td>
+                </tr>
+                <tr>
+                    <td>Beacon WEB</td>
+                    <td>Web</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
 </article>
 <!-- complete bootstrap layout -->
     </div>

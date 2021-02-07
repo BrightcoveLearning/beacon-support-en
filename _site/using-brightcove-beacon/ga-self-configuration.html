@@ -531,7 +531,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
 
     <section class="bcls-section">
-        <h2 id="Obtain_the_templates_and_configuration_files">Obtain the templates and configuration files</h2>
+        <h2 id="Obtain_the_templates_and_configuration_files">Obtain templates and configuration files</h2>
         <p>We provide you same example templates that you can apply to the newly created views, if order have a better visualization of the gathered data to Google Analytics:
 
             Template Examples that can be applied to the created views:
@@ -910,6 +910,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li>Create four containers, one for each property created earlier.</li>
             <li>Import the configuration JSON files which were emailed to you are part of the <a href="#Obtain_the_templates_and_configuration_files">Obtain the templates and configuration files</a> section above.</li>
             <li>Enter your tracking ID, copied from your Google Analytics account, into each of the containers variables.</li>
+            <li>Publish your containers.</li>
         </ul>
         <h3>Create containers</h3>
         <ol class="bcls-tasklist-restart">
@@ -994,7 +995,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <h3>Import configuration files</h3>
         <p>Perform the following steps to import the configuration files for your containers:</p>
         <ol class="bcls-tasklist-restart">
-            <li>From the <strong>Workspace</strong>, click <strong>Admin</strong>. <strong>Import Container</strong>.</li>
+            <li>From the <strong>Workspace</strong>, click <strong>Admin</strong>.</li>
             <li>Check which container you are now configuring, then click <strong>Import Container</strong>.
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/tm-check-container.png" alt="">
@@ -1014,7 +1015,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/tm-check-ttv.png" alt="">
                 </figure>
             </li>
-            <li>Now import the correct JSON file for each container.</li>
+            <li>You now need to import the correct JSON file for each container.</li>
         </ol>
         <h3>Enter tracking ID</h3>
         <p>You will now copy from Google Analytics the tracking ID for each property, then paste it into the corresponding container.</p>
@@ -1040,18 +1041,27 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li>Be sure you are editing the <strong>Beacon Android</strong> container.</li>
             <li>Click <strong>Variables</strong> from the left side navigation.</li>
             <li>Click the <strong>Tracking Code</strong> variable.</li>
-            <li>Paste the copied tracking ID from Google Analytics into the <strong>Tracking ID</strong> form field.</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Paste the copied tracking ID from Google Analytics into the <strong>Tracking ID</strong> form field.
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/tm-paste-id-in-tracking-variable.png" alt="">
+                </figure>
+            </li>
         </ol>
+        <li>You now need to paste the tracking ID into the <strong>Tracking Code</strong> variable in each container.</li>
     </section>
-
-    assets/images/using-bcb/self-config-ga/tm-ga-choose-property.png
-    assets/images/using-bcb/self-config-ga/tm-ga-tracking-info-code.png
-    assets/images/using-bcb/self-config-ga/tm-ga-copy-tracking-id.png
+    <h3>Publish each container</h3>
+    <p>The last step you need to do in Google Tag Manger is submit each container for publishing. The following steps guide you through that process:</p>
+    <ol class="bcls-tasklist-restart">
+        <li>Return to your Workspace.</li>
+        <li>Note the container you are in.</li>
+        <li>On the top right of the UI, click <strong>Submit</strong>.</li>
+        <li>Be sure the <strong>Publish and Create Version</strong> button is selected.</li>
+        <li>If you choose, add a version name and version description.</li>
+        <li>Click <strong>Publish</strong>.</li>
+        <li>If you did not provide a version name and description you be asked again. Skip if you are sure you do not want those.</li>
+        <li>Check to be sure the information about your container is correct.</li>
+    </ol>
+    <li>You now need to be sure all containers are published.</li>
 </article>
 <!-- complete bootstrap layout -->
     </div>

@@ -17,7 +17,7 @@ layout: "staging"
             <li>Create a set of custom dimensions and one custom metric for each property.</li>
             <li>Create four Google Tag Manager containers.</li>
             <li>In Google Tag Manger configure each container.</li>
-            <li></li>
+            <li>Configure Firebase to assist in analytics collection with iOS and Android.</li>
         </ul>
 
     </section>
@@ -594,7 +594,6 @@ layout: "staging"
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/fb-add-ios-app.png" alt="add iOS" width="300">
                 </figure>
             </li>
-            <li></li>
             <li>If you are using an Android app, click the Android app button and complete the four steps to add Firebase to your Android app. To complete the steps you will need an Android developer to assist. The following Google document provides details on the steps:
                 <ul>
                     <li><a href="https://firebase.google.com/docs/android/setup">Add Firebase to your Android project</a>.</li>
@@ -603,11 +602,11 @@ layout: "staging"
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/fb-add-android-app.png" alt="add android" width="300">
                 </figure>
             </li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
         </ol>
+        <p>After adding the Goggle Tag Manager and Firebase files you should be able to check for events in Firebase itself and in addition hits sent to Google Analytics. Note that Google Tag Manager is acting as a middle man here, sending that information to Google Analytics based on data that is pushed to firebase.</p>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/fb-test-install.png" alt="firebase results">
+        </figure>
     </section>
 
 </article>

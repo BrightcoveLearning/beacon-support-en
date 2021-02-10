@@ -1,0 +1,74 @@
+---
+title: Integrating a User Management System with Beacon
+description:
+parent:
+---
+
+
+<section class="bcls-section">
+	<h2 id="Authorizing_data_retrieval">Authorizing data retrieval</h2>
+	<p>Data retrieval authorization is done in two ways in Brightcove Beacon, authentication and entitlements for users.</p>
+	<h3>Authentication</h3>
+	<p>Brightcove leverages the following OAuth 2.0 flows for authentication:</p>
+	<h4>Authorization Code with PKCE: for <strong>iOS</strong>, <strong>Android</strong> and <strong>Web</strong></h4>
+	<figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/references/how-beacon-gets-data/authorization-wth-PKCE.png" alt="">
+	</figure>
+	<h4>Device Flow (OAuth 2.0 Extension) for <strong>Connected TVs</strong> and <strong>Smart TVs</strong>
+	</h4>
+	<figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/references/how-beacon-gets-data/device-flow-oauth2.png" alt="">
+	</figure>
+	<p>There are three tokens that need to be made available to Brightcove Beacon:</p>
+	<ul>
+			<li><strong>Access token</strong>: Validates that a user was able to authenticate and should be granted access to Brightcove Beacon. The access token needs to be in <strong>JWT format</strong> and include <code>iss</code> and <code>sub</code>.</li>
+			<li><strong>Refresh token</strong>: Allows the user to remain logged in after the access token expires by providing a mechanism to automatically obtain a new access token on behalf of the user (as long as user is allowed access). This is especially important on TVs.</li>
+			<li><strong>Identity token</strong>: Standardizes the way Brightcove obtains information about users.</li>
+	</ul>
+	<p>The following grant types should be supported:</p>
+	<ul>
+			<li><code>authorization_code</code></li>
+			<li><code>refresh_token</code></li>
+			<li><code>urn:ietf:params:oauth:grant-type:device_code</code></li>
+	</ul>
+	<p>The following Authentication provider endpoints will need to be configured in Brightcove Beacon. You need to provide these to Brightcove for proper configuration. If <a href="https://swagger.io/docs/specification/authentication/openid-connect-discovery/">OpenID Connect Discovery</a> is available Brightcove can discover these:</p>
+	<ul>
+			<li>Access Token</li>
+			<li>Refresh Token</li>
+			<li>User Info</li>
+			<li>Revoke Token</li>
+			<li>Authorize</li>
+			<li>Pairing codes</li>
+			<li>JWKS (<a href="https://auth0.com/docs/tokens/json-web-tokens/json-web-key-sets">JSON Web Key Sets</a>)</li>
+			<li>Logout</li>
+			<li><a href="https://swagger.io/docs/specification/authentication/openid-connect-discovery/">OpenID Connect Discovery</a>
+					(/.well-known/openid-configuration). This is used for configuration of the system.</li>
+			<li>Optional (but recommended) : Requesting customized <code>aud</code> (audience) by client app. This is used for extra validation.</li>
+	</ul>
+	<p>For each application, Brightcove will need to get from you the <code>client_id</code> to be set up in the apps, recommended one per platform. Brightcove will also provide the <code>redirect_uri(s)</code> to be used for web and mobile applications (as applicable).</p>
+
+	<h3>Entitlements</h3>
+	<p>To inform Brightcove Beacon about entitlements for users, Brightcove Beacon provides the following API:</p>
+	<pre class="line-numbers"><code class="language-html">https://beacon.brightcove.com/&lt;instance&gt;/webhook/beacon</code></pre>
+	<p>The API key is provided by Brightcove.</p>
+	<p>The payload for the data exchanged via the API is JSON formatted and appears as follows:</p>
+	<pre class="line-numbers"><code class="language-json">[
+{
+"package_name": "string",                // Commerce package for SVOD or SKU for TVOD purchases - required
+"external_user_id": "string",            // User identifier (username or email depending on configuration of users)- required
+"transaction_id": "string",              // Unique transaction id for purchase - required for subscriptions (this will be used in renewal)
+"start_date": "string",                  // Start date for entitlements 
+"end_date": "string",                    // End date for entitlements (applicable if a rent or a subscription)
+"trial_end_date": "string",              // End date for a trial if applicable
+"effective_cancelation_date": "string",  // Date by when cancellation is effective (for example, end of current subscription period)
+"notification_type": "new",              // One of: new, renew, cancellation, buy or rent - required
+“payment_gateway”: “beaconstore”         // One of: “beaconstore”
+}
+]</code></pre>
+	<p>When using an external authentication system, the <code>external_user_id</code> corresponds to the subject value in the Access token. Also note the following:</p>
+	<ul>
+			<li>The API key will need to be sent in the <code>HEADER</code> in the <code>auth-token</code> key.</li>
+			<li>It is possible to send multiple records at the same time.</li>
+			<li>If there is an error in any of the items in the JSON payload the entire payload is rejected.</li>
+	</ul>
+</section>

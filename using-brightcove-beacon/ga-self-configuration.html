@@ -36,17 +36,14 @@ layout: "staging"
 
     <section class="bcls-section">
         <h2 id="Obtain_the_templates_and_configuration_files">Obtain templates and configuration files</h2>
-        <p>We provide you same example templates that you can apply to the newly created views, if order have a better visualization of the gathered data to Google Analytics:
-
-            Template Examples that can be applied to the created views:
-            Mobile: https://analytics.google.com/analytics/web/template?uid=QTJbSdv3Sk6gvpa4Go_CRQ
-            Web: https://analytics.google.com/analytics/web/template?uid=pIoBH8hYRSO3JZL4WbFTlA
-            STV: https://analytics.google.com/analytics/web/template?uid=eZhlzo76QtSn5BNi-rXJyQ
-
-            When applying the Mobile Template to a mobile view (Android or iOS properties), you’ll get a report similar to the following:
-        </p>
+        <p>There are a number of files/URLs to files you need to successfully complete your setup of analytics for Brightcove Beacon. The files/URLs are detailed in the following bullets. You need to contact your Brightcove onboarding manager to obtains these files/URLs. You will receive: </p>
+        <ul>
+            <li>URLs to three pre-built Google Analytics Dashboard configurations, one each for mobile, web and smart tv.</li>
+            <li>Four JSON files which configure each of the four containers created in Google Tag Manager.</li>
+            <li>URLs to three pre-built Google Data Studio templates, one each for mobile, web and smart tv.</li>
+        </ul>
+        <p>Directions for installing/using each of the files/URLs appears in the appropriate sections later in this document.</p>
     </section>
-
 
     <section class="bcls-section">
         <h2 id="Create_Google_Analytics_properties">Configure Google Analytics</h2>
@@ -412,7 +409,13 @@ layout: "staging"
             </tbody>
         </table>
         <h3>Import three report templates</h3>
-
+        <p>In the <a href="#Obtain_the_templates_and_configuration_files">Obtain templates and configuration files</a> section earlier in this document you requested files from your onboarding manager. Three of the files have URLs as follows:</p>
+        <ul>
+            <li>Mobile: https://analytics.google.com/analytics/web/template?uid=QTJbSdv3Sk6gvpa4Go_CRQ</li>
+            <li>Web: https://analytics.google.com/analytics/web/template?uid=pIoBH8hYRSO3JZL4WbFTlA</li>
+            <li>STV: https://analytics.google.com/analytics/web/template?uid=eZhlzo76QtSn5BNi-rXJyQ</li>
+        </ul>
+        <p>You will </p>
     </section>
     <section class="bcls-section">
         <h2 id="Configuring_Google_Tag_Manager">Configuring Google Tag Manager</h2>
@@ -421,6 +424,7 @@ layout: "staging"
             <li>Create four containers, one for each property created earlier.</li>
             <li>Import the configuration JSON files which were emailed to you are part of the <a href="#Obtain_the_templates_and_configuration_files">Obtain the templates and configuration files</a> section above.</li>
             <li>Enter your tracking ID, copied from your Google Analytics account, into each of the containers variables.</li>
+            <li>Import a JSON configuration file into each container.</li>
             <li>Publish your containers.</li>
         </ul>
         <h3>Create containers</h3>

@@ -529,6 +529,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li><strong>Firebase</strong> - Firebase is a platform developed by Google for creating mobile and web applications. Firebase includes the <strong>Firebase Realtime Database</strong>, which is a cloud-hosted database.</li>
             <li><strong>Google Data Studio</strong> - From Google: "Data Studio is a free tool that turns your data into informative, easy to read, easy to share, and fully customizable dashboards and reports."</li>
         </ul>
+        <p>The following diagram details the interaction/flow of these tools when gathering analytics for Brightcove Beacon:</p>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/tool-diagram.png" alt="">
+        </figure>
+
     </section>
 
     <section class="bcls-section">
@@ -905,14 +910,30 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 </tr>
             </tbody>
         </table>
-        <h3>Import three report templates</h3>
-        <p>In the <a href="#Obtain_the_templates_and_configuration_files">Obtain templates and configuration files</a> section earlier in this document you requested files from your onboarding manager. Three of the files have URLs as follows:</p>
+        <h3>Import dashboard configurations</h3>
+        <p>In the <a href="#Obtain_the_templates_and_configuration_files">Obtain templates and configuration files</a> section earlier in this document you requested files/URLs from your onboarding manager. Three of the URLs are as follows:</p>
         <ul>
             <li>Mobile: https://analytics.google.com/analytics/web/template?uid=QTJbSdv3Sk6gvpa4Go_CRQ</li>
             <li>Web: https://analytics.google.com/analytics/web/template?uid=pIoBH8hYRSO3JZL4WbFTlA</li>
-            <li>STV: https://analytics.google.com/analytics/web/template?uid=eZhlzo76QtSn5BNi-rXJyQ</li>
+            <li>Smart TV: https://analytics.google.com/analytics/web/template?uid=eZhlzo76QtSn5BNi-rXJyQ</li>
         </ul>
-        <p>You will </p>
+        <p>To use the configurations, perform the following tasks:</p>
+        <ol class="bcls-tasklist-restart">
+            <li>Note the use for the configuration, mobile, web or smart tv, then click on the URL.</li>
+            <li>In a new browser tab be sure you are seeing the following:</p>
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/ga-dashboard-config-import.png" alt="import configuration" width="500">
+                </figure>
+            </li>
+            <li>From the <strong>Select a view</strong> drop down choose the matching property, mobile (iOS and Android), web or smart tv.</li>
+            <li>Change the name of the configuration if you choose.</li>
+            <li>Click <strong>Create</strong>.</li>
+            <li>The imported configuration will open. Examine the data to be sure it seems valid. An example is shown here:
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/ga-example-imported-configuration.png" alt="example configuration" width="400">
+                </figure>
+            </li>
+        </ol>
     </section>
     <section class="bcls-section">
         <h2 id="Configuring_Google_Tag_Manager">Configuring Google Tag Manager</h2>
@@ -1119,13 +1140,31 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </section>
     <section class="bcls-section">
         <h2 id="Install_templates_into_Google_Data_Studio">Install templates into Google Data Studio</h2>
-        <p>Google Data Studio is a free tool that allows you to build custom reports to display your data. Brightcove supplies prebuilt report templates, one each for web, mobile and smart TV. The templates were emailed to you as part of the process described in the <a href="#Obtain_the_templates_and_configuration_files">Obtain templates and configuration files</a> section of this document.</p>
-        <p>The following is example data shown in the smart tv report. The highlighted selector at the top of the page is how you choose which report to view when in Google Data Studio.</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/ds-sample-report.png" alt="data studio sample report" width="500">
-        </figure>
+        <p>Brightcove supplies prebuilt report templates, one each for web, mobile and smart TV. URLs for the templates were emailed to you as part of the process described in the <a href="#Obtain_the_templates_and_configuration_files">Obtain templates and configuration files</a> section of this document.</p>
+        <p>In the <a href="#Obtain_the_templates_and_configuration_files">Obtain templates and configuration files</a> section earlier in this document you requested files/URLs from your onboarding manager. Three of the URLs are as follows:</p>
+        <ul>
+            <li>WEB: https://datastudio.google.com/reporting/43b8362b-785a-487d-b681-39dde640f029</li>
+            <li>Mobile: https://datastudio.google.com/reporting/2ca9572d-e50e-4931-858a-e67dc99f62f9</li>
+            <li>STV: https://datastudio.google.com/reporting/bfa8fad2-b4f6-4bfc-aee2-33742bf600a5</li>
+        </ul>
+        <p>To use the configurations, perform the following tasks:</p>
+        <ol class="bcls-tasklist-restart">
+            <li>Note the use for the report, mobile, web or smart tv, then click on the URL.</li>
+            <li>In a new browser tab be sure you are seeing the following:</p>
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/ga-dashboard-config-import.png" alt="import configuration" width="500">
+                </figure>
+            </li>
+            <li>From the <strong>Select a view</strong> drop down choose the matching property, mobile (iOS and Android), web or smart tv.</li>
+            <li>Change the name of the configuration if you choose.</li>
+            <li>Click <strong>Create</strong>.</li>
+            <li>The imported configuration will open. Examine the data to be sure it seems valid. An example is shown here:
+                <figure class="bcls-figure">
+                    <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/ds-sample-report.png" alt="example report" width="400">
+                </figure>
+            </li>
+        </ol>
     </section>
-
 </article>
 <!-- complete bootstrap layout -->
     </div>

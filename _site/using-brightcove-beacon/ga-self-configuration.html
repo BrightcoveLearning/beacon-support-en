@@ -550,9 +550,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>In this section of the document you will configure Google Analytics, which includes the following tasks:</p>
         <ul>
             <li>Create four Google Analytics properties.</li>
-            <li>Import the configuration JSON files which were emailed to you are part of the <a href="#Obtain_the_templates_and_configuration_files">Obtain the templates and configuration files</a> section above.</li>
-            <li>Enter your tracking ID, copied from your Google Analytics account, into each of the containers variables.</li>
-            <li>Publish your containers.</li>
+            <li>Create a set of customer dimensions for each property.</li>
+            <li>Create a single custom dimension for each property.</li>
+            <li>Import three Brightcove create report templates, one each for mobile, web and smart tv.</li>
         </ul>
         <h3>Create four properties</h3>
         <p>You need to create the following four properties:</p>
@@ -612,7 +612,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li>A table will show the single metric that <strong>all four</strong> properties must have.</li>
         </ul>
         <p>You will then need to create the dimensions and metric for each of the four properties.</p>
-        <h3>Creating a custom dimension</h3>
+        <h4>Creating a custom dimension</h4>
         <ol class="bcls-tasklist-restart">
             <li>Be sure you are still logged in to Google Analytics.</li>
             <li>Click on the dropdown (highlighted in yellow in the screenshot) to see all your Google Analytics account and property.
@@ -650,7 +650,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             </li>
             <li>To create another dimension click <strong>NEW CUSTOM DIMENSION</strong>.</li>
         </ol>
-        <h3>Creating a custom metric</h3>
+        <h4>Creating a custom metric</h4>
         <ol class="bcls-tasklist-restart">
             <li>Be sure you are still logged in to Google Analytics.</li>
             <li>Click on the dropdown (highlighted in yellow in the screenshot) to see all your Google Analytics account and property.
@@ -680,7 +680,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li>You will see your newly created metric in a list.</li>
         </ol>
         <aside class="bcls-aside bcls-aside--information language-editable">This is the only custom metric you will need to create for each of the four properties.</aside>
-        <h3>Android and iOS dimensions and metric</h3>
+        <h4>Android and iOS dimensions and metric</h4>
         <p>The following table displays the custom dimensions that must be added to the Beacon Android and Beacon iOS properties.</p>
         <aside class="bcls-aside bcls-aside--warning language-editable">It is crucial that the <strong>Index</strong> matches the dimension name as shown in the tables below. To do this, simply create the dimensions in the order shown in the tables.</aside>
         <table class="bcls-table">
@@ -774,7 +774,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 </tr>
             </tbody>
         </table>
-        <h3>STV and WEB dimensions and metric</h3>
+        <h4>STV and WEB dimensions and metric</h4>
         <p>The following table displays the custom dimensions that must be added to the Beacon STV and Beacon Web properties.</p>
         <aside class="bcls-aside bcls-aside--warning language-editable">It is crucial that the <strong>Index</strong> matches the dimension name as shown in the tables below. To do this, simply create the dimensions in the order shown in the tables.</aside>
         <table class="bcls-table">
@@ -888,7 +888,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 </tr>
             </tbody>
         </table>
-        <h3>Custom metric</h3>
+        <h4>Custom metric</h4>
         <p>The following table display the single custom metric that must be added to all four properties.</p>
         <table class="bcls-table">
             <thead class="bcls-table__head">
@@ -908,6 +908,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 </tr>
             </tbody>
         </table>
+        <h3>Import three report templates</h3>
+
     </section>
     <section class="bcls-section">
         <h2 id="Configuring_Google_Tag_Manager">Configuring Google Tag Manager</h2>
@@ -1136,7 +1138,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 10 Feb 2021
+  Page last updated on 11 Feb 2021
 </div>
 
 

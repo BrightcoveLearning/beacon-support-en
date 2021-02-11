@@ -545,6 +545,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li>URLs to three pre-built Google Data Studio templates, one each for mobile, web and smart tv.</li>
         </ul>
         <p>Directions for installing/using each of the files/URLs appear in the appropriate sections later in this document.</p>
+        <aside class="bcls-aside bcls-aside--tip language-editable">You will need to obtain these files/URLs BEFORE starting the configuration process.</aside>
     </section>
 
     <section class="bcls-section">
@@ -552,23 +553,23 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>In this section of the document you will configure Google Analytics, which includes the following tasks:</p>
         <ul>
             <li>Create four Google Analytics properties.</li>
-            <li>Create a set of customer dimensions for each property.</li>
+            <li>Create a set of custom dimensions for each property.</li>
             <li>Create a single custom dimension for each property.</li>
-            <li>Import three Brightcove create report templates, one each for mobile, web and smart tv.</li>
+            <li>Import three Brightcove created dashboard configurations, one each for mobile, web and smart tv.</li>
         </ul>
         <h3>Create four properties</h3>
-        <p>You need to create the following four properties:</p>
+        <p>You need to create these four properties:</p>
         <ul>
             <li>Beacon Android</li>
             <li>Beacon iOS</li>
-            <li>Beacon STV</li>
+            <li>Beacon STV (Smart TV)</li>
             <li>Beacon Web</li>
         </ul>
         <p>The following steps guide you through creating the <strong>Beacon Android</strong> property. You will need to create the others following the same process.</p>
         <ol class="bcls-tasklist">
             <li>Log in to your Google Analytics account.</li>
             <li>Click the <strong>Admin (gear)</strong> icon on the bottom-left of the screen.</li>
-            <li>On the top of the middle column click <strong>Create Property</strong>.</li>
+            <li>On the top of the middle column, click <strong>Create Property</strong>.</li>
             <li>In the <strong>Property setup</strong>, supply the <strong>Property name</strong>, for the first property, use <samp>Beacon Android</samp>.</li>
             <li>Supply the <strong>Reporting time zone</strong>.</li>
             <li>Supply the <strong>Currency</strong>.</li>
@@ -576,7 +577,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li>Turn on <strong>Create a Universal Analytics property.</strong></li>
             <li>Enter your website's URL.</li>
             <li>Click the <strong>Create a Universal Analytics property only</strong> radio button.</li>
-            <li>Check to be sure your property information is filled in similar to the following:
+            <li>Be sure your property information is filled in similar to the following:
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/property1-setup.png" alt="create property" width="600">
                 </figure>
@@ -590,7 +591,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/property3-back.png" alt="back button" width="500">
                 </figure>
             </li>
-            <li>Just below the <strong>Create Property</strong> you clicked earlier, click the down arrow to check to be sure your property was correctly created.
+            <li>Just below the <strong>Create Property</strong> you clicked earlier, click the down arrow to be sure your property was correctly created.
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/property-view.png" alt="property selector">
                 </figure>
@@ -617,7 +618,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <h4>Creating a custom dimension</h4>
         <ol class="bcls-tasklist-restart">
             <li>Be sure you are still logged in to Google Analytics.</li>
-            <li>Click on the dropdown (highlighted in yellow in the screenshot) to see all your Google Analytics account and property.
+            <li>Click on the dropdown (highlighted in yellow in the screenshot) to see all your Google Analytics accounts and properties.
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/choose-property.png" alt="choose property" width="400px">
                 </figure>
@@ -626,24 +627,24 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 <ul type="a">
                     <li>Your Brightcove Beacon account</li>
                     <li>The property for which you will be creating dimensions/metric</li>
-                    <li>Your view (you will only have one view per app)</li>
+                    <li>Your view (you will only have one view per property)</li>
                 </ul>
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/choose-property-3-column.png" alt="Select property" width="500px">
                 </figure>
             <li>Click the <strong>Admin (gear)</strong> icon on the bottom-left of the screen.</li>
             </li>
-            <li>Near the bottom of the middle column, under <strong>Custom Definitions</strong> click <strong>Custom Dimensions</strong>
+            <li>Near the bottom of the middle column, under <strong>Custom Definitions</strong>, click <strong>Custom Dimensions</strong>
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/click-custom-demensions.png" alt="click custom dimensions">
                 </figure>
             </li>
             <li>Click <strong>NEW CUSTOM DIMENSION</strong>.</li>
             <li>For the <strong>Name</strong> enter <samp>Episode Number</samp>.</li>
-            <li>From the <strong>Scope</strong> dropdown select <samp>Hit</samp>.</li>
+            <li>From the <strong>Scope</strong> dropdown, select <samp>Hit</samp>.</li>
             <li>Leave the dimension <strong>Active</strong>.</li>
             <li>Click <strong>Create</strong>.</li>
-            <li>From the example code screen click <strong>Done</strong>.</li>
+            <li>From the example code screen, click <strong>Done</strong>.</li>
             <li>You will see your newly created dimension in a list, as shown here:
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/dimension-list.png" alt="list dimensions" width="500px">
@@ -655,7 +656,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <h4>Creating a custom metric</h4>
         <ol class="bcls-tasklist-restart">
             <li>Be sure you are still logged in to Google Analytics.</li>
-            <li>Click on the dropdown (highlighted in yellow in the screenshot) to see all your Google Analytics account and property.
+            <li>Click on the dropdown (highlighted in yellow in the screenshot) to see all your Google Analytics accounts and properties.
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/choose-property.png" alt="select property" width="400">
                 </figure>
@@ -664,27 +665,27 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 <ul type="a">
                     <li>Your Brightcove Beacon account</li>
                     <li>The property for which you will be creating dimensions/metric</li>
-                    <li>Your view (you will only have one view per app)</li>
+                    <li>Your view (you will only have one view per property)</li>
                 </ul>
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/choose-property-3-column.png" alt="select property" width="500">
                 </figure>
             <li>Click the <strong>Admin (gear)</strong> icon on the bottom-left of the screen.</li>
             </li>
-            <li>Near the bottom of the middle column, under <strong>Custom Definitions</strong> click <strong>Custom Metrics</strong></li>
+            <li>Near the bottom of the middle column, under <strong>Custom Definitions</strong>, click <strong>Custom Metrics</strong></li>
             <li>Click <strong>NEW CUSTOM METRIC</strong>.</li>
             <li>For the <strong>Name</strong> enter <samp>Time Watched</samp>.</li>
-            <li>From the <strong>Scope</strong> dropdown select <samp>Hit</samp>.</li>
-            <li>For the <strong>Formatting Type</strong> select <samp>Time</samp>.</li>
+            <li>From the <strong>Scope</strong> dropdown, select <samp>Hit</samp>.</li>
+            <li>For the <strong>Formatting Type</strong>, select <samp>Time</samp>.</li>
             <li>Leave the dimension <strong>Active</strong>.</li>
             <li>Click <strong>Create</strong>.</li>
-            <li>From the example code screen click <strong>Done</strong>.</li>
+            <li>From the example code screen, click <strong>Done</strong>.</li>
             <li>You will see your newly created metric in a list.</li>
         </ol>
         <aside class="bcls-aside bcls-aside--information language-editable">This is the only custom metric you will need to create for each of the four properties.</aside>
         <h4>Android and iOS dimensions and metric</h4>
         <p>The following table displays the custom dimensions that must be added to the Beacon Android and Beacon iOS properties.</p>
-        <aside class="bcls-aside bcls-aside--warning language-editable">It is crucial that the <strong>Index</strong> matches the dimension name as shown in the tables below. To do this, simply create the dimensions in the order shown in the tables.</aside>
+        <aside class="bcls-aside bcls-aside--warning language-editable">It is crucial that the <strong>Index</strong> matches the dimension name as shown in the tables below. To do this, simply create the dimensions in the order shown in the table.</aside>
         <table class="bcls-table">
             <thead class="bcls-table__head">
                 <tr>
@@ -778,7 +779,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </table>
         <h4>STV and WEB dimensions and metric</h4>
         <p>The following table displays the custom dimensions that must be added to the Beacon STV and Beacon Web properties.</p>
-        <aside class="bcls-aside bcls-aside--warning language-editable">It is crucial that the <strong>Index</strong> matches the dimension name as shown in the tables below. To do this, simply create the dimensions in the order shown in the tables.</aside>
+        <aside class="bcls-aside bcls-aside--warning language-editable">It is crucial that the <strong>Index</strong> matches the dimension name as shown in the tables below. To do this, simply create the dimensions in the order shown in the table.</aside>
         <table class="bcls-table">
             <thead class="bcls-table__head">
                 <tr>
@@ -911,24 +912,24 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             </tbody>
         </table>
         <h3>Import dashboard configurations</h3>
-        <p>In the <a href="#Obtain_the_templates_and_configuration_files">Obtain templates and configuration files</a> section earlier in this document you requested files/URLs from your onboarding manager. Three of the URLs are as follows:</p>
+        <p>In the <a href="#Obtain_the_templates_and_configuration_files">Obtain templates and configuration files</a> section earlier in this document, you requested files/URLs from your onboarding manager. Three of the URLs are as follows:</p>
         <ul>
             <li>Mobile: https://analytics.google.com/analytics/web/template?uid=QTJbSdv3Sk6gvpa4Go_CRQ</li>
             <li>Web: https://analytics.google.com/analytics/web/template?uid=pIoBH8hYRSO3JZL4WbFTlA</li>
             <li>Smart TV: https://analytics.google.com/analytics/web/template?uid=eZhlzo76QtSn5BNi-rXJyQ</li>
         </ul>
-        <p>To use the configurations, perform the following tasks:</p>
+        <p>To use the configurations, perform the following steps:</p>
         <ol class="bcls-tasklist-restart">
             <li>Note the use for the configuration, mobile, web or smart tv, then click on the URL.</li>
-            <li>In a new browser tab be sure you are seeing the following:</p>
+            <li>In a new browser tab, be sure you are seeing the following:</p>
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/ga-dashboard-config-import.png" alt="import configuration" width="500">
                 </figure>
             </li>
-            <li>From the <strong>Select a view</strong> drop down choose the matching property, mobile (iOS and Android), web or smart tv.</li>
+            <li>From the <strong>Select a view</strong> drop down, choose the matching property, mobile (iOS and Android), web or smart tv.</li>
             <li>Change the name of the configuration if you choose.</li>
             <li>Click <strong>Create</strong>.</li>
-            <li>The imported configuration will open. Examine the data to be sure it seems valid. An example is shown here:
+            <li>Be sure the configuration opens. An example is shown here:
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/ga-example-imported-configuration.png" alt="example configuration" width="400">
                 </figure>
@@ -941,8 +942,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <ul>
             <li>Create four containers, one for each property created earlier.</li>
             <li>Import the configuration JSON files which were emailed to you are part of the <a href="#Obtain_the_templates_and_configuration_files">Obtain the templates and configuration files</a> section above.</li>
-            <li>Enter your tracking ID, copied from your Google Analytics account, into each of the containers variables.</li>
-            <li>Import a JSON configuration file into each container.</li>
+            <li>Enter your tracking ID, copied from your Google Analytics account, into each of the containers' <strong>Tracking Code</strong> variable.</li>
             <li>Publish your containers.</li>
         </ul>
         <h3>Create containers</h3>
@@ -968,11 +968,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                     <li><strong>Country</strong>: Home country for your company.</li>
                     <li><strong>Container Name</strong>: <samp>Beacon WEB</samp> You will be creating a container for each property.</li>
                     <li><strong>Target Platform</strong>: Web</li>
-                    <li></li>
                 </ul>
-                <figure class="bcls-figure">
-                    <img class="bcls-image" alt="New account information" src="/assets/images/using-bcb/self-config-ga/tm-add-new-account.png" />
-                </figure>
+            <li>Be sure your container information is filled in similar to the following:</li>
+            <figure class="bcls-figure">
+                <img class="bcls-image" alt="New account information" src="/assets/images/using-bcb/self-config-ga/tm-add-new-account.png" />
+            </figure>
             </li>
             <li>Click <strong>Create</strong>.</li>
             <li>Click <strong>OK</strong> to close the dialog that opens.</li>
@@ -1035,9 +1035,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 </figure>
             </li>
             <li>Click <strong>Chose container file</strong>, and select the correct JSON file for this container.</li>
-            <li>For <strong>Choose workspace</strong>, click <strong>Existing</strong>. Then from the dialog that opens select <strong>Default Workspace</strong>.</li>
+            <li>For <strong>Choose workspace</strong>, click <strong>Existing</strong>, then from the dialog that opens select <strong>Default Workspace</strong>.</li>
             <li>For <strong>Choose an import option</strong>, click the <strong>Overwrite</strong> radio button.</li>
-            <li>You will see information about tags, triggers, variables and templates.
+            <li>Be sure you see information about tags, triggers, variables and templates.
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/tm-import-info.png" alt="import information">
                 </figure>
@@ -1074,16 +1074,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li>Be sure you are editing the <strong>Beacon Android</strong> container.</li>
             <li>Click <strong>Variables</strong> from the left side navigation.</li>
             <li>Click the <strong>Tracking Code</strong> variable.</li>
-            <li>Paste the copied tracking ID from Google Analytics into the <strong>Tracking ID</strong> form field.
+            <li>Paste the copied tracking ID from Google Analytics into the <strong>Value</strong> form field.
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/tm-paste-id-in-tracking-variable.png" alt="paste id" width="500">
                 </figure>
             </li>
-            <li>You now need to paste the tracking ID into the <strong>Tracking Code</strong> variable in each container.</li>
+            <li>You now need to paste the corresponding tracking ID into the <strong>Tracking Code</strong> variable in each container.</li>
         </ol>
 
         <h3>Publish each container</h3>
-        <aside class="bcls-aside bcls-aside--tip language-editable">Later in these steps you will publish your containers. For iOS and Android, you will need to download configuration files and have your app development team add those to the respective app.</aside>
+        <aside class="bcls-aside bcls-aside--tip language-editable">Later in these steps you will publish your containers. For iOS and Android, you will need to download configuration files and have your app development team add those files to the respective app.</aside>
         <p>The last step you need to do in Google Tag Manger is submit each container for publishing. The following steps guide you through that process:</p>
         <ol class="bcls-tasklist-restart">
             <li>Return to your Workspace.</li>
@@ -1092,16 +1092,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li>Be sure the <strong>Publish and Create Version</strong> button is selected.</li>
             <li>If you choose, add a version name and version description.</li>
             <li>Click <strong>Publish</strong>.</li>
-            <li>If you did not provide a version name and description you be asked again. Skip if you are sure you do not want those.</li>
-            <li>Check to be sure the information returned about your container is correct.</li>
+            <li>If you did not provide a version name and description, you be asked again. Skip if you are sure you do not want those.</li>
+            <li>Be sure the information returned about your container is correct.</li>
             <li><strong>ONLY for the iOS and Android containers</strong>: Click <strong>Download</strong> in the top right of the UI to download the associated file.</li>
             <li><strong>ONLY for the iOS and Android containers</strong>: Contact your app development team and have them add the configuration files your the respective app.</li>
-            <li>You now need to be sure all containers are published.</li>
+            <li>Be sure all containers are published.</li>
         </ol>
     </section>
     <section class="bcls-section">
         <h2 id="section-name">Configure Firebase</h2>
-        <aside class="bcls-aside bcls-aside--tip language-editable">The steps in this section are only necessary if you have Android and/or iOS apps. Also, if you are completely unfamiliar with Google Firebase an introductory 2 1/2 minute marketing video is available form <a href="https://firebase.google.com/">Firebase's home page</a>.</aside>
+        <aside class="bcls-aside bcls-aside--tip language-editable">The steps in this section are only necessary if you have Android and/or iOS apps. Also, if you are completely unfamiliar with Google Firebase, an introductory 2 1/2 minute marketing video is available form <a href="https://firebase.google.com/">Firebase's home page</a>.</aside>
         <p></p>
         <ol class="bcls-tasklist-restart">
             <li>Browse to the <a href="https://console.firebase.google.com/?pli=1">Firebase Getting Started page</a>.</li>
@@ -1111,7 +1111,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <li>Accept the default of enabling Google Analytics for the project, and click <strong>Continue</strong>.</li>
             <li>Choose or supply a Google Analytics account.</li>
             <li>Click <strong>Create project</strong>.</li>
-            <li>Check to be sure you are returned to the <strong>Project Overview</strong> page. Also note the iOS and Android create app buttons.
+            <li>Be sure you are returned to the <strong>Project Overview</strong> page. Also note the iOS and Android create app buttons (the red arrows indicate their positions).
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/fb-project-overview.png" alt="project overview">
                 </figure>
@@ -1133,29 +1133,28 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 </figure>
             </li>
         </ol>
-        <p>After adding the Goggle Tag Manager and Firebase files you should be able to check for events in Firebase itself and in addition hits sent to Google Analytics. Note that Google Tag Manager is acting as a middle man here, sending that information to Google Analytics based on data that is pushed to firebase.</p>
+        <p>After adding the Goggle Tag Manager and Firebase files, as detailed in the last two sections of this document, you should be able to check for events in Firebase itself. In addition, hits will have been sent to Google Analytics. Note that Google Tag Manager is acting as a middle man here, sending that information to Google Analytics based on data that is pushed to Firebase.</p>
         <figure class="bcls-figure">
             <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/fb-test-install.png" alt="firebase results">
         </figure>
     </section>
     <section class="bcls-section">
         <h2 id="Install_templates_into_Google_Data_Studio">Install templates into Google Data Studio</h2>
-        <p>Brightcove supplies prebuilt report templates, one each for web, mobile and smart TV. URLs for the templates were emailed to you as part of the process described in the <a href="#Obtain_the_templates_and_configuration_files">Obtain templates and configuration files</a> section of this document.</p>
-        <p>In the <a href="#Obtain_the_templates_and_configuration_files">Obtain templates and configuration files</a> section earlier in this document you requested files/URLs from your onboarding manager. Three of the URLs are as follows:</p>
+        <p>Brightcove supplies Google Data Studio prebuilt report templates, one each for web, mobile and smart tv. In the <a href="#Obtain_the_templates_and_configuration_files">Obtain templates and configuration files</a> section earlier in this document you requested files/URLs from your onboarding manager. Three of the URLs are as follows:</p>
         <ul>
             <li>WEB: https://datastudio.google.com/reporting/43b8362b-785a-487d-b681-39dde640f029</li>
             <li>Mobile: https://datastudio.google.com/reporting/2ca9572d-e50e-4931-858a-e67dc99f62f9</li>
             <li>STV: https://datastudio.google.com/reporting/bfa8fad2-b4f6-4bfc-aee2-33742bf600a5</li>
         </ul>
-        <p>To use the configurations, perform the following tasks:</p>
+        <p>To use the templates, perform the following tasks:</p>
         <ol class="bcls-tasklist-restart">
             <li>Note the use for the report, mobile, web or smart tv, then click on the URL.</li>
-            <li>In a new browser tab be sure you are seeing the following:</p>
+            <li>In a new browser tab, be sure you see the following:</p>
                 <figure class="bcls-figure">
                     <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/ga-dashboard-config-import.png" alt="import configuration" width="500">
                 </figure>
             </li>
-            <li>From the <strong>Select a view</strong> drop down choose the matching property, mobile (iOS and Android), web or smart tv.</li>
+            <li>From the <strong>Select a view</strong> drop down, choose the matching property, mobile (iOS and Android), web or smart tv.</li>
             <li>Change the name of the configuration if you choose.</li>
             <li>Click <strong>Create</strong>.</li>
             <li>The imported configuration will open. Examine the data to be sure it seems valid. An example is shown here:
@@ -1164,6 +1163,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 </figure>
             </li>
         </ol>
+        <p>That's it! Congratulations you have configured Google Analytics for Brightcove Beacon.</p>
     </section>
 </article>
 <!-- complete bootstrap layout -->

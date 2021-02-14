@@ -1,8 +1,16 @@
 ---
 title: Integrating a User Management System with Beacon
-description:
-parent:
+description: This topic explains how an external user management system (UMS) can be integrated with Brightcove Beacon using OIDC for user authentication and the Beacon webhook API to inform Beacon of user entitlements.
+parent: Integration
 ---
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="Introduction">Introduction</h2>
+		<p>You may already have a user management system - for a web store or some other purpose - that you would like to integrate with Brightcove Beacon rather than replicate and maintain it manually in Beacon. This is possible, with some requirements that are detailed in the sections below.</p>
+  </section>
+</article>
 
 
 <section class="bcls-section">
@@ -49,7 +57,7 @@ parent:
 
 	<h3>Entitlements</h3>
 	<p>To inform Brightcove Beacon about entitlements for users, Brightcove Beacon provides the following API:</p>
-	<pre class="line-numbers"><code class="language-html">https://beacon.brightcove.com/&lt;instance&gt;/webhook/beacon</code></pre>
+	<pre class="line-numbers"><code class="language-html">https://beacon.brightcove.com/<span class="bcls-input">{instance}</span>/webhook/beacon</code></pre>
 	<p>The API key is provided by Brightcove.</p>
 	<p>The payload for the data exchanged via the API is JSON formatted and appears as follows:</p>
 	<pre class="line-numbers"><code class="language-json">[

@@ -150,6 +150,11 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/gpc-server-server-subscriptions.html",
+      "oldURL": "/gpc-server-server-subscriptions"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/references/how-beacon-gets-data.html",
       "oldURL": "/how-beacon-gets-data"
   },

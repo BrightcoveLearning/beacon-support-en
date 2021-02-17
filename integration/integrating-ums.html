@@ -2,16 +2,37 @@
 title: Integrating a User Management System with Beacon
 description: This topic explains how an external user management system (UMS) can be integrated with Brightcove Beacon using OIDC for user authentication and the Beacon webhook API to inform Beacon of user entitlements.
 parent: Integration
+published: false
 ---
 <h1>{{ page.title }}</h1>
 <article class="bcls-article">
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-		<p>You may already have a user management system - for a web store or some other purpose - that you would like to integrate with Brightcove Beacon rather than replicate and maintain it manually in Beacon. This is possible, with some requirements that are detailed in the sections below.</p>
+		<p>You may already have a user management system - for a web store or some other purpose - that you would like to integrate with Brightcove Beacon rather than replicate and maintain it manually in Beacon. This is possible using Open ID Connect (OIDC).</p>
   </section>
-</article>
-
+	<section class="bcls-section">
+		<h2 id="features_of_oidc_external_authentication">Features of OIDC external authentication</h2>
+		<ul>
+			<li>Existing 3rd party databases can be used to authenticate Beacon users.</li>  
+			<li>Beacon users can register, authenticate and change passwords through their Beacon apps.</li>
+			<li>Beacon apps support in app purchases.</li> 
+			<li>Existing applications and Beacon apps share the same authentication database.</li>
+			<li>New users can register in the 3rd party system.</li>
+			<li>Device pairing workflows (2nd device, enter code on screen to authorize the TV app).</li>
+			<li>Social logins - if they are supported by the OIDC provider.</li>
+			<li>Beacon Stream concurrency limiting is supported.</li>
+			<li>The OIDC provider may offer additional Authentication methods beyond username and password  (multi-factor, passwordless, device-pairing, Google account pairing).</li>
+		</ul>
+	</section>
+	<section class="bcls-section">
+		<h2 id="limitations">Limitations of external authentication</h2>
+		<ul>
+			<li>IF customer requires smart TVs and connected TVs THEN the OIDC system MUST support Device Flow (<a href="https://tools.ietf.org/html/rfc8628">https://tools.ietf.org/html/rfc8628</a>) for authenticating TV apps.</li>
+			<li>Password reset -  NOT SUPPORTED in Beacon Admin console.  Viewers are able to update PSW through apps.</li>
+			<li>No Beacon device management (therefore limiting and managing the number of devices in an account is NOT supported with 3rd party authentication)</li>
+		</ul>
+	</section>
 
 <section class="bcls-section">
 	<h2 id="Authorizing_data_retrieval">Authorizing data retrieval</h2>
@@ -19,17 +40,17 @@ parent: Integration
 	<h3>Authentication</h3>
 	<p>Brightcove leverages the following OAuth 2.0 flows for authentication:</p>
 	<h4>Authorization Code with PKCE: for <strong>iOS</strong>, <strong>Android</strong> and <strong>Web</strong></h4>
-	<figure class="bcls-figure">
+	<!-- <figure class="bcls-figure">
 			<img class="bcls-image" src="/assets/images/references/how-beacon-gets-data/authorization-wth-PKCE.png" alt="">
-	</figure>
+	</figure> -->
 	<h4>Device Flow (OAuth 2.0 Extension) for <strong>Connected TVs</strong> and <strong>Smart TVs</strong>
 	</h4>
-	<figure class="bcls-figure">
+	<!-- <figure class="bcls-figure">
 			<img class="bcls-image" src="/assets/images/references/how-beacon-gets-data/device-flow-oauth2.png" alt="">
-	</figure>
+	</figure> -->
 	<p>There are three tokens that need to be made available to Brightcove Beacon:</p>
 	<ul>
-			<li><strong>Access token</strong>: Validates that a user was able to authenticate and should be granted access to Brightcove Beacon. The access token needs to be in <strong>JWT format</strong> and include <code>iss</code> and <code>sub</code>.</li>
+			<li><strong>Access token</strong>: Validates that a user was able to authenticate and should be granted access to Brightcove Beacon. The access token needs to be in <strong>JWT format</strong> and include <code>iss</code> and <code>sub</code> claims.</li>
 			<li><strong>Refresh token</strong>: Allows the user to remain logged in after the access token expires by providing a mechanism to automatically obtain a new access token on behalf of the user (as long as user is allowed access). This is especially important on TVs.</li>
 			<li><strong>Identity token</strong>: Standardizes the way Brightcove obtains information about users.</li>
 	</ul>
@@ -80,3 +101,4 @@ parent: Integration
 			<li>If there is an error in any of the items in the JSON payload the entire payload is rejected.</li>
 	</ul>
 </section>
+</article>

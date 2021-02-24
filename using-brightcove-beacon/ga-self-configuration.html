@@ -57,7 +57,7 @@ layout: "staging"
         <ul>
             <li>Create four Google Analytics properties.</li>
             <li>Create a set of custom dimensions for each property.</li>
-            <li>Create a single custom dimension for each property.</li>
+            <li>Create a single custom metric for each property.</li>
             <li>Import three Brightcove created dashboard configurations, one each for mobile, web and smart tv.</li>
         </ul>
         <h3>Create four properties</h3>
@@ -123,7 +123,7 @@ layout: "staging"
             <li>Be sure you are still logged in to Google Analytics.</li>
             <li>Click on the dropdown (highlighted in yellow in the screenshot) to see all your Google Analytics accounts and properties.
                 <figure class="bcls-figure">
-                    <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/choose-property.png" alt="choose property">
+                    <img class="bcls-image" src="/assets/images/using-bcb/self-config-ga/choose-property.png" alt="choose property" width="400px">
                 </figure>
             </li>
             <li>From the three-paneled dropdown, select:
@@ -601,6 +601,7 @@ layout: "staging"
             <li><strong>ONLY for the iOS and Android containers</strong>: Contact your app development team and have them add the configuration files your the respective app.</li>
             <li>Be sure all containers are published.</li>
         </ol>
+        <aside class="bcls-aside bcls-aside--warning">Please ask your developer to add the Google Tag Manager container and respective Google Analytics tracking code to all the STV platforms (STV includes all TV boxes). Also the container and tracking code needs to be placed on the Beacon STV property.</aside>
     </section>
     <section class="bcls-section">
         <h2 id="section-name">Configure Firebase</h2>

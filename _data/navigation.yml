@@ -164,7 +164,7 @@
 - section:
   name: Training
   url: /training/index.html
-  icon: '<img class="bcls-icon" src="/assets/images/feather/award.svg">'
+  icon: '<i data-feather="award"></i>'
   docs:
     - name: Using Video Cloud Videos/Custom Fields
       url: /training/training-demand-custom-fields.html
@@ -185,7 +185,7 @@
 - section:
   name: 'Support'
   url: '/support/index.html'
-  icon: '<img class="bcls-icon" src="/assets/images/feather/help-circle.svg">'
+  icon: '<i data-feather="help-circle"></i>'
   docs:
     - name: 'Brightcove Answers'
       url: '/support/brightcove-answer.html'

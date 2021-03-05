@@ -34,7 +34,7 @@
   docs:
     - name: Adding a Carousel to a Page
       url: /using-brightcove-beacon/adding-to-page.html
-    - name: Creating a Channel
+    - name: Creating a Beacon Channel
       url: /using-brightcove-beacon/creating-a-channel.html
     - name: Creating an Electronic Program Guide (EPG)
       url: /using-brightcove-beacon/electronic-program-guides.html

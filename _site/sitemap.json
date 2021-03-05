@@ -5,6 +5,11 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/adding-bumpers-to-vod.html",
+      "oldURL": "/adding-bumpers-to-vod"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/adding-subscriptions-in-android.html",
       "oldURL": "/adding-subscriptions-in-android"
   },
@@ -47,6 +52,16 @@
   {
       "newURL": "https://beacon.support.brightcove.com/getting-started/brightcove-beacon-plans.html",
       "oldURL": "/brightcove-beacon-plans"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/cloud-playout-overview.html",
+      "oldURL": "/cloud-playout-overview"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/cloud-playout-stream-vod.html",
+      "oldURL": "/cloud-playout-stream-vod"
   },
 
   {
@@ -130,6 +145,11 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/enabling-server-side-ads.html",
+      "oldURL": "/enabling-server-side-ads"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/fairplay-certificate.html",
       "oldURL": "/fairplay-certificate"
   },
@@ -142,6 +162,11 @@
   {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/ga-self-configuration.html",
       "oldURL": "/ga-self-configuration"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/generating-channel-embed-code.html",
+      "oldURL": "/generating-channel-embed-code"
   },
 
   {
@@ -195,12 +220,17 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/training/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://beacon.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/training/",
       "oldURL": "/index"
   },
 
@@ -235,11 +265,6 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/panasonic/",
       "oldURL": "/index"
   },
@@ -256,6 +281,11 @@
 
   {
       "newURL": "https://beacon.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/",
       "oldURL": "/index"
   },
 
@@ -470,6 +500,11 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/using-channel-actions.html",
+      "oldURL": "/using-channel-actions"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/using-subscription-package.html",
       "oldURL": "/using-subscription-package"
   },
@@ -487,6 +522,11 @@
   {
       "newURL": "https://beacon.support.brightcove.com/support/viewing-brightcove-system-status-page.html",
       "oldURL": "/viewing-brightcove-system-status-page"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/viewing-channel-output-and-analytics.html",
+      "oldURL": "/viewing-channel-output-and-analytics"
   },
 
   {

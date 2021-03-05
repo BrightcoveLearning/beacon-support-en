@@ -127,6 +127,66 @@
       
         <url>
           
+            <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/cloud-playout-overview.html</loc>
+          
+            <lastmod>2021-03-05</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/cloud-playout-stream-vod.html</loc>
+          
+            <lastmod>2021-03-05</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/using-channel-actions.html</loc>
+          
+            <lastmod>2021-03-05</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/adding-bumpers-to-vod.html</loc>
+          
+            <lastmod>2021-03-05</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/enabling-server-side-ads.html</loc>
+          
+            <lastmod>2021-03-05</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/viewing-channel-output-and-analytics.html</loc>
+          
+            <lastmod>2021-03-05</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/creating-a-channel.html</loc>
           
             <lastmod>2021-03-05</lastmod>

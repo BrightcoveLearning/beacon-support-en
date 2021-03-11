@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic, you will learn how to setup Google publisher/subscriber notifications.">
+  <meta name="description" content="In this topic, you will learn how to configure Google subscriptions' publisher/subscriber data exchange.">
   
-  <title>Managing Google Subscriptions Part 1</title>
+  <title>Managing Google Subscriptions Part 2</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -64,7 +64,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       <li class="breadcrumb-item"><a href="/creating-your-apps/android/">android</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Managing Google Subscriptions Part 1</li>
+      <li class="breadcrumb-item active" aria-current="page">Managing Google Subscriptions Part 2</li>
     </ol>
   </nav>
 </header>
@@ -532,13 +532,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<h1>Managing Google Subscriptions Part 1</h1>
+<h1>Managing Google Subscriptions Part 2</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn how to setup Google publisher/subscriber notifications.</summary>
+  <summary>In this topic, you will learn how to configure Google subscriptions' publisher/subscriber data exchange.</summary>
 
   <section class="bcls-section">
-    <h2 id="section-name">section-title</h2>
-    <p></p>
+    <h2 id="section-name">Introduction</h2>
+    <p>This document steps you through using the Google Cloud Platform to create a <strong>Pub/Sub topic</strong> and add a previously created service account
+      to the Pub/Sub topic.</p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Create_a_Pub/Sub_topic">Create a Pub/Sub topic</h2>
+    <p>Perform the following steps to create a Pub/Sub topic:</p>
     <ol class="bcls-tasklist">
       <li>Browse to the index page for Google Cloud platform (https://cloud.google.com).</li>
       <li>Click the <strong>Console</strong> link in the top-right of the screen.
@@ -577,6 +583,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             alt="back to topics">
         </figure>
       </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Add_a_member_to_the_topic">Add a member to the topic</h2>
+    <p>Perform the following steps to add a service account as a member of the Pub/Sub topic:</p>
+    <ol class="bcls-tasklist">
       <li>From the <strong>Topics</strong> page, for the <strong>subs</strong> topic, click <strong>More actions</strong> (the three vertical dots) then from
         the dropdown select <strong>View permissions</strong>.
         <figure class="bcls-figure">

@@ -578,8 +578,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </figure>
       </li>
       <li>From the <strong>Topics</strong> page, for the <strong>subs</strong> topic, click <strong>More actions</strong> (the three vertical dots) then from
-        the
-        dropdown select <strong>View permissions</strong>.
+        the dropdown select <strong>View permissions</strong>.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/more-actions-permissions.png"
             alt="view permissions">
@@ -589,12 +588,32 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/add-member.png" alt="click add member">
         </figure>
       </li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>Confirm you are seeing the following form:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/empty-subs-member-form.png"
+            alt="add member form">
+        </figure>
+      </li>
+      <li>To get the required email address, browse to the <a
+          href="https://console.cloud.google.com/iam-admin/serviceaccounts?project=pc-api-8769861187782665707-545">Google Cloud Console -
+          Service Accounts</a> page. You will find the service account you created in the <a href="">DOC NAME HERE</a> document. Copy the email address for the
+        <strong>Android Subscriptions</strong> (or the name you chose) service account.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/copy-email.png" alt="">
+        </figure>
+        </a>
+      </li>
+      <li>Return to the <strong>Add members</strong> form in <strong>Google Cloud Platform</strong>.</li>
+      <li>Paste the retrieved email address into the <strong>New members</strong> text field.</li>
+      <li>For the role, select <strong>Pub/Sub → Pub/Sub Publisher</strong>.</li>
+      <li>Click the <strong>Send notification email</strong> checkbox, and add a message.</li>
+      <li>Confirm your form is filled in similar to the following:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/new-member-completed-form.png"
+            alt="filled in form">
+        </figure>
+
+      </li>
     </ol>
   </section>
 </article>
@@ -613,7 +632,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 07 Mar 2021
+  Page last updated on 11 Mar 2021
 </div>
 
 

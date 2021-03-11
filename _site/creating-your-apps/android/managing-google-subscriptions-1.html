@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic, you will learn how to setup Google publisher/subscriber notifications.">
+  <meta name="description" content="In this topic, you will learn how to create a service account ">
   
-  <title>gcp-pub-sub-subscription-notifications</title>
+  <title>Managing Google Subscriptions Part 1</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -64,7 +64,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       <li class="breadcrumb-item"><a href="/creating-your-apps/android/">android</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">gcp-pub-sub-subscription-notifications</li>
+      <li class="breadcrumb-item active" aria-current="page">Managing Google Subscriptions Part 1</li>
     </ol>
   </nav>
 </header>
@@ -532,97 +532,112 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<h1>gcp-pub-sub-subscription-notifications</h1>
+<h1>Managing Google Subscriptions Part 1</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn how to setup Google publisher/subscriber notifications.</summary>
+  <summary>In this topic, you will learn how to create a service account </summary>
 
   <section class="bcls-section">
-    <h2 id="section-name">section-title</h2>
-    <p></p>
+    <h2 id="section-name">Introduction</h2>
+    <p>This document steps you through using the Google Play Console to create a service account and then perform a couple of configuration tasks.</p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Create_a_service_account">Create a service account</h2>
+    <p>Perform the following steps to create a service account:</p>
     <ol class="bcls-tasklist">
-      <li>Browse to the index page for Google Cloud platform (https://cloud.google.com).</li>
-      <li>Click the <strong>Console</strong> link in the top-right of the screen.
+      <li>Browse to the <a href="https://play.google.com/console">Google Play Console</a>.</li>
+      <li>In the top right corner, click <strong>Go to Play Console</strong>.</li>
+      <li>In the left navigation, select <strong>Settings → Developer Account → API access</strong>.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gcp-pub-sub-subscription-notifications/first-page-click-console.png"
-            alt="click console">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/gpc-first-nav-steps.png"
+            alt="Settings > Developer Account > API access" width="268">
         </figure>
       </li>
-      <li>Choose the correct project. You most likely have named your project around your app, like <strong>Beacon</strong>.
+      <li>Click <strong>Create new service account</strong>.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gcp-pub-sub-subscription-notifications/choose-project.png"
-            alt="choose project">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/create-service-account.png"
+            alt="create service account">
         </figure>
       </li>
-      <li>In the <strong>Search</strong>, enter <samp>pub</samp>, and once it appears, click <strong>Pub/Sub</strong>.
+      <li>In the dialog that appears, click <strong>Google Cloud Platform</strong>.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gcp-pub-sub-subscription-notifications/search-4-pub.png"
-            alt="search for pub/sub">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/create-new-service-account-dialog.png"
+            alt="new service account dialog">
         </figure>
       </li>
-      <li>From the <strong>Pub/Sub</strong> page, click <strong>CREATE TOPIC</strong>.
+      <li>From the page to which you are redirected, click <strong>+ CREATE SERVICE ACCOUNT</strong>.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gcp-pub-sub-subscription-notifications/click-create-topic.png"
-            alt="click create topic">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/iam-admin-redirect.png" alt="service accounts">
         </figure>
       </li>
-      <li>In the <strong>Create a topic</strong> dialog, enter the <strong>Topic ID</strong> to be <samp>subs</samp>, then click <strong>CREATE TOPIC</strong>.
+      <li>In the dialog that opens, for the <strong>Service account name</strong> enter <samp>Android Subscriptions</samp> then click <strong>CREATE</strong>.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gcp-pub-sub-subscription-notifications/create-topic-dialog.png"
-            alt="sub for topic ID">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/create-service-account-1.png"
+            alt="enter service account name">
         </figure>
       </li>
-      <li>On the page that appears, click ← to return to the the <strong>Topics</strong> page.
+      <li>In step 2, from the dropdown choose the <strong>Role</strong> to be <samp>Owner</samp> then click <strong>CONTINUE</strong>.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/back-to-topics-left-arrow.png"
-            alt="back to topics">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/create-service-account-2.png"
+            alt="choose role">
         </figure>
       </li>
-      <li>From the <strong>Topics</strong> page, for the <strong>subs</strong> topic, click <strong>More actions</strong> (the three vertical dots) then from
-        the dropdown select <strong>View permissions</strong>.
+      <li>In step 3, click <strong>DONE</strong>.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/more-actions-permissions.png"
-            alt="view permissions">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/create-service-account-3.png" alt="click done">
         </figure>
       </li>
-      <li>From the permission panel, click <strong>ADD MEMBER</strong>.<figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/add-member.png" alt="click add member">
-        </figure>
-      </li>
-      <li>Confirm you are seeing the following form:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/empty-subs-member-form.png"
-            alt="add member form">
-        </figure>
-      </li>
-      <li>To get the required email address, browse to the <a
-          href="https://console.cloud.google.com/iam-admin/serviceaccounts?project=pc-api-8769861187782665707-545">Google Cloud Console -
-          Service Accounts</a> page. You will find the service account you created in the <a href="">DOC NAME HERE</a> document. Copy the email address for the
-        <strong>Android Subscriptions</strong> (or the name you chose) service account.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/copy-email.png" alt="">
-        </figure>
-        </a>
-      </li>
-      <li>Return to the <strong>Add members</strong> form in <strong>Google Cloud Platform</strong>.</li>
-      <li>Paste the retrieved email address into the <strong>New members</strong> text field.</li>
-      <li>For the role, select <strong>Pub/Sub → Pub/Sub Publisher</strong>.</li>
-      <li>Click the <strong>Send notification email</strong> checkbox, and add a message.</li>
-      <li>Confirm your form is filled in similar to the following:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/new-member-completed-form.png"
-            alt="filled in form">
-        </figure>
-      </li>
-      <li>Click <strong>Save</strong>.</li>
-      <li>From the <strong>Topics</strong> page, click the <strong>subs</strong> topic.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/click-on-subs.png" alt="click subs">
-        </figure>
-      </li>
-      <li>From the <strong>Topic details</strong>, copy the <strong>Topic name</strong> (note there is built in copy button, outlined in red).</li>
-      <li>Send this name to your onboarding manager.</li>
     </ol>
   </section>
+  <section class="bcls-section">
+    <h2 id="Configure_the_service_account">Configure the service account</h2>
+    <p>Perform the following steps to configure your service account:</p>
+    <ol class="bcls-tasklist">
+      <li>For the service account just created, under <strong>Actions</strong> click the three vertical dots. Then click <strong>Manage keys</strong>.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/manage-keys.png" alt="manage keys">
+        </figure>
+      </li>
+      <li>In the <strong>Keys</strong> information, select <strong>ADD KEY → Create new key</strong>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/create-new-key.png" alt="create new key">
+        </figure>
+      </li>
+      <li>From the private key info, leave the <strong>Key type</strong> to be <samp>JSON</samp>, then click <strong>CREATE</strong>.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/create-json-private-key.png"
+            alt="json private key">
+        </figure>
+      </li>
+      <li>Be sure you see this message displayed:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/private-key-saved.png"
+            alt="private key saved verification">
+        </figure>
+      </li>
+      <li>You need to email the private key file to your onboarding manager.</li>
+      <li>You can close the tab that opened, and click <strong>Done</strong> from the dialog that launched your service account creation process.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/click-done.png" alt="click done">
+        </figure>
+      </li>
+      <li>In the <strong>Service accounts</strong> section, click <strong>Grant access</strong> next to your newly created service account.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/click-grant-access.png" alt="grant access">
+        </figure>
+      </li>
+      <li>From the <strong>Invite user</strong> page, in the <strong>Account permissions</strong> section, click the <strong>Admin (all permissions)</strong>
+        checkbox.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/admin-permissions.png"
+            alt="grant admin permissions">
+        </figure>
+      </li>
+      <li>In the bottom-right of the page, click <span class="button-blue">Invite user</span>.</li>
+      <li>In the dialog that opens, click <span class="button-blue">Send invite</span>.</li>
+    </ol>
+  </section>
+
 </article>
 <!-- complete bootstrap layout -->
     </div>

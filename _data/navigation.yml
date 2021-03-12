@@ -104,6 +104,10 @@
           url: '/creating-your-apps/android/improving-relevance-android.html'
         - name: 'Installing an Android Test Build'
           url: '/creating-your-apps/android/installing-android-test-build.html'
+        - name: 'Managing Google Subscriptions Part 1'
+          url: '/creating-your-apps/android/managing-google-subscriptions-1.html'
+        - name: 'Managing Google Subscriptions Part 2'
+          url: '/creating-your-apps/android/managing-google-subscriptions-2.html'
     - name: 'Fire TV'
       url: '/creating-your-apps/fire-tv/index.html'
       docs:

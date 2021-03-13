@@ -14,23 +14,20 @@ description: This section contains reference information
   <section class="landing-page-header" id="landing_page_header">
     <p>{{ page.description }}</p>
   </section>
-  <section class="card-wrapper">
-    {% for item in site.data.navigation %}
-      {% if item.name == page.section %}
-      <section class="bcls-card">
-        <div class="card-icon">
-          <i class="fal fa-books"></i>
-        </div>
-        <div class="card-content">
-          <h2 class="landing-page-item-header">{{ item.name }} Topics</h2>
-          <ul class="landing-page-item list-none">
-            {% for entry in item.docs %}
-              <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
-  </section>
+  <section class="bcls-topic-list">
+    <h2 id="Topics_in_this_section">Topics in {{ page.title }}</h2>
+    <ul>
+      {% for item in site.data.navigation %}
+      {% if item.name == page.parent %}
+      {% for entry in item.docs %}
+      {% if entry.name == page.title %}
+      {% for doc in entry.docs %}
+      <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
+      {% endfor %}
       {% endif %}
-    {% endfor %}
+      {% endfor %}
+      {% endif %}
+      {% endfor %}
+    </ul>
   </section>
-</article>
+  </article>

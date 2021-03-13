@@ -5,18 +5,8 @@ description: This section provides guidance on submitting your apps to the app s
 icon: '<img class="bcls-icon" src="/assets/images/feather/send.svg">'
 ---
 
-<style>
-  h1 i.fal, i.fa, h1 i.fab, h1 i.fas, h1 i.far {
-    font-size: 3rem;
-    color:{{site.product_color}};
-    margin-right: .5rem;
-  }
-  .bcls-card-small ul {
-    list-style: none;
-    margin-left: -3em;
-  }
-</style>
-
+<summary>{{ page.description }}</summary>
+  <section class="bcls-topic-list">
 <article class="bcls-article">
   <h1>{{ page.title }}</h1>
   <summary>{{ page.description }}</summary>
@@ -30,7 +20,7 @@ icon: '<img class="bcls-icon" src="/assets/images/feather/send.svg">'
     >
       <div class="card-content">
         <h2>{{ subsection.name }}</h2>
-        <ul>
+        <ul class="bcls-topic-list">
           {% for doc in subsection.docs %}
           <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
           {% endfor %}

@@ -4,7 +4,6 @@
 - section:
   name: Getting Started
   url: /getting-started/index.html
-  icon: '<img class="bcls-icon" src="/assets/images/feather/play.svg">'
   docs:
     - name: Learning Guide
       url: /getting-started/learning-guide-bc-beacon.html
@@ -20,7 +19,6 @@
       url: /getting-started/design-best-practices.html
 - section:
   name: Syncing with Video Cloud
-  icon: '<img class="bcls-icon" src="/assets/images/feather/repeat.svg">'
   url: /syncing-with-video-cloud/index.html
   docs:
     - name: Creating Video Cloud Custom Fields
@@ -30,7 +28,6 @@
 - section:
   name: Using Brightcove Beacon
   url: /using-brightcove-beacon/index.html
-  icon: '<img src="/assets/images/feather/fast-forward.svg">'
   docs:
     - name: Adding a Carousel to a Page
       url: /using-brightcove-beacon/adding-to-page.html
@@ -88,7 +85,6 @@
       url: /using-brightcove-beacon/viewing-analytics-data.html
 - section:
   name: 'Creating Your Apps'
-  icon: '<img class="bcls-icon" src="/assets/images/feather/send.svg">'
   url: '/creating-your-apps/index.html'
   docs:
     - name: 'Android'
@@ -155,7 +151,6 @@
 - section:
   name: References
   url: /references/index.html
-  icon: '<img class="bcls-icon" src="/assets/images/feather/book.svg">'
   docs:
     - name: Branding Brightcove Beacon Apps
       url: /references/branding-beacon-apps.html
@@ -180,7 +175,6 @@
 - section:
   name: Training
   url: /training/index.html
-  icon: '<i data-feather="award"></i>'
   docs:
     - name: Using Video Cloud Videos/Custom Fields
       url: /training/training-demand-custom-fields.html
@@ -201,7 +195,6 @@
 - section:
   name: 'Support'
   url: '/support/index.html'
-  icon: '<i data-feather="help-circle"></i>'
   docs:
     - name: 'Brightcove Answers'
       url: '/support/brightcove-answer.html'

@@ -1,0 +1,150 @@
+---
+title: Beacon Apps Ad targeting
+description: Beacon Apps Ad targeting allows Beacon customers to send important device-level and user-specific information from the customer’s Beacon apps to their ad server or ad provider.
+parent: Using Brightcove Beacon
+---
+
+<h1>{{ page.title }}</h1>
+
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="introduction">Introduction</h2>
+    <p>Client-side information is passed from the apps to SSAI, and then SSAI includes this data in the customer’s VAST tag, which then allows customers to target ads based on this data. The purpose of this is to increase the value of customers’ ad inventory, therefore increasing ad revenue for their business.</p>
+    <p>You can to set up how this data is passed to their ad server or ad provider.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="key_benefits">Key benefits</h2>
+    <h3>Improved ad targeting</h3>
+    <ul>
+      <li><strong>User Session ID:</strong> we generate a session ID on each device when a user opens the app. This  allows you to frequency-cap ads to that session, exclude competitive ads from being served together, and sequentially rotate ads in that session. These targeting capabilities are both necessary for direct-sold and programmatic ads</li>
+      <li><strong>More data for programmatic ads:</strong> Mobile apps and CTV apps don’t support cookies, which is the dominant method for user/device-based ad targeting on the web. By including params like Device ID, you can pass this valuable information to programmatic ad buyers, which will then enhance their ad targeting capabilities, leading to greater CPMs.</li>
+    </ul>
+    <h3>Support for Ad Inventory split</h3>
+    <p>For apps that run on Amazon, Roku, and Samsung (in the US), you are required to do a 70/30 split of ad inventory/revenue with the platform. Beacon customers monetize 70% of the ad inventory and the platform gets the remaining 30% of the ad inventory. With this enhanced ad targeting, you can use one ad tag across all of their apps and pass the device params to their ad server. Inside their ad server, they will implement the business logic that splits the ad inventory by device. The platforms also require passing LAT - Limited Ad Targeting - for Ad Inventory Split, which is a parameter we are now sending to your ad server.</p>
+    <h3>User Privacy improvements</h3>
+    <ul>
+      <li>LAT “Limited Ad Targeting” - allows users of Beacon apps to opt out of ad targeting based on user behavior. This is beneficial for our customers since giving users the option is required for both GDPR and CCPA.</li>
+      <li>Users have the ability to reset the unique Device ID that we assign to the device at any time.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="targeting_information">Targeting information</h2>
+    <p>You can target ads based on the information in the table below.</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">Targeting Information</caption>
+      <thead class="bcls-table__head">
+          <tr>
+              <th>Type of information</th>
+              <th>Variable Name</th>
+              <th>Values</th>
+          </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+          <tr>
+              <td>Platform</td>
+              <td><code>platform</code></td>
+              <td><code translate="No">iOS</code>, <code translate="No">Android</code>, <code translate="No">Roku</code>, <code translate="No">AppleTV</code>, <code translate="No">Web</code>, <code translate="No">STV</code></td>
+          </tr>
+          <tr>
+              <td>OS version</td>
+              <td><code>os</code></td>
+              <td>device os version (for example, <code translate="No">iOS 14</code></td>
+          </tr>
+          <tr>
+              <td>Device model</td>
+              <td><code>model</code></td>
+              <td>device model. Browser version used for web apps</td>
+          </tr>
+          <tr>
+              <td>Manufacturer</td>
+              <td><code>mfgr</code></td>
+              <td>device manufacturer; browser name used for web apps</td>
+          </tr>
+          <tr>
+              <td>Language</td>
+              <td><code>lang</code></td>
+              <td>Language code set in the App (that comes from CMS)</td>
+          </tr>
+          <tr>
+              <td>User session</td>
+              <td><code>sid</code></td>
+              <td>Every time that app launches we want to have a unique integer created that is stored in memory and not persisted</td>
+          </tr>
+          <tr>
+              <td>Unique Device ID</td>
+              <td><code>rdid</code></td>
+              <td>Resettable device ID (TIFA = Samsung, rida = Roku, adid = Android, etc) - if limited ad targeting is set on the App, then the id should be all zeros (not possible to identify the user/device)</td>
+          </tr>
+          <tr>
+              <td>Is the user allowing tracking</td>
+              <td><code>is_lat</code></td>
+              <td>0 if user has not opted to limit targeting, 1 if limiting ad targeting</td>
+          </tr>
+          <tr>
+              <td>device type</td>
+              <td><code>idtype</code></td>
+              <td>adid = Android, idfa = Apple phones (iOS), afai = Amazon,  rida: Roku
+                tvOS: AppleTV (tvOS)</td>
+          </tr>
+          <tr>
+              <td>App identifier</td>
+              <td><code>app_id</code></td>
+              <td>This should be the App bundle name (like com.watchsmyapp)</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>Notes</h3>
+  <ul>
+    <li>This feature works across all platforms/devices iOS, Apple TV, Android, Roku, Fire TV, Web, and Smart TVs.</li>
+    <li>Beacon Apps Ad targeting can be used with both VOD SSAI and Live SSAI.</li>
+  </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Implementation">Implementation</h2>
+    <p>Below is a list of <strong>Keys</strong> that will passed to the ad server. They are <strong>NOT</strong> configurable.</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">Ad Keys</caption>
+      <thead class="bcls-table__head">
+          <tr>
+              <th>Key</th>
+              <th>Description</th>
+          </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+          <tr>
+              <td translate="no">PLATFORM</td>
+              <td>The appropriate beacon platform: iOS, AppleTV, Android, Roku, Web, STV</td>
+          </tr>
+          <tr>
+              <td translate="no">OS</td>
+              <td>full qualified OS (including version) - example iOS 14</td>
+          </tr>
+          <tr>
+              <td translate="no">MFGR</td>
+              <td>the Manufacturer of the device. (Web - user's' browser)</td>
+          </tr>
+          <tr>
+              <td translate="no">MODEL</td>
+              <td>Device Model. (Web - browser version)</td>
+          </tr>
+          <tr>
+              <td translate="no"></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td translate="no"></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td translate="no"></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td translate="no"></td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+  </section>
+</article>

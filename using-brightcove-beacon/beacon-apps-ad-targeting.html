@@ -195,11 +195,48 @@ parent: Using Brightcove Beacon
         <ol>
           <li>Enter ad targeting params in the “Ad-Target” field in Beacon Classic. The input will be a string in query form. Example: <code>d={PLATFORM}&os={OS}&man={MFGR}&mo={MODEL}&appid={APP_ID}&lan={LOCALE}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code></li>
           <li><strong>You can configure the keys before the equal sign</strong>. They <strong>MUST</strong> match the keys that are added to the SSAI ad tag.</li>
-          <li>Next, update your ad tag in the <strong>SSAI Studio Settings</strong> page. Here is an example of params that were entered in the Beacon Classic Ad-Targeting and added to SSAI Ad tag: <code>d={PLATFORM}&os={OS}&appid={APP_ID}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code></li>
-          <li></li>
+          <li>Next, update your ad tag in the <strong>SSAI Studio Settings</strong> page. Here is an example of params that were entered in the Beacon Classic Ad-Targeting and added to SSAI Ad tag: <code>d={PLATFORM}&os={OS}&appid={APP_ID}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code>...</li>
+          <li><strong>Get translated into this in this Ad tag:</strong> <code translate="no">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&pre=3&d={{url.d}}&os={{url.os}}&appid={{url.appid}}&did={{url.did}}&dt={{url.dt}}&lat={{url.latl}}&sid={{url.sid}}</code></li>
         </ol>
       </li>
 		</ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Live_steps">Live steps</h2>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        Create an ad config from the Server Side Ad settings page in Studio:
+        <ol>
+          <li>Select <strong>Live</strong></li>
+					<li>Add a name for the ad config</li>
+					<li>Select your ad response</li>
+					<li>Paste in your ad tag</li>
+					<li>Copy your ad config ID</li>
+        </ol>
+      </li>
+      <li>
+        Open the Beacon Classic UI and go the Advertisement tab
+        <ol>
+          <li>Click <strong>Add New Configuration</strong></li>
+          <li>Name the Ad Configuration</li>
+          <li>Select <strong>Brightcove SSAI</strong></li>
+          <li>Paste in the SSAI ad config ID into <strong>Live Ad Config ID</strong></li>
+        </ol>
+      </li>
+      <li>
+        You can reuse the existing client side ad params for VOD to Live. Example: <code translate="no">d={PLATFORM}&os={OS}&man={MFGR}&mo={MODEL}&appid={APP_ID}&lan={LOCALE}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code>
+        <ol>
+          <li>Live does not use the <code>url.xxx</code> notation. You can instead pass the query key directly</li>
+          <li>Example based on the client-side params: <code translate="no">https://ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&num={{random.int32}}&d={{PLATFORM}}&os={{OS}}&did={{RDID}}&dt={{IDTYPE}}&lat={{IS_LAT}}</code></li>
+        </ol>
+      </li>
+  </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Limitations">Limitations</h2>
+    <ul>
+      <li>There currently isn’t a way to handle Device ID on the web so we are not passing that information to SSAI. We are still defining how we will handle it, and the doc will be updated once Device ID for the web is implemented.</li>
+    </ul>
   </section>
   {% endraw %}
 </article>

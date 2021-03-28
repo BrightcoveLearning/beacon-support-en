@@ -113,38 +113,71 @@ parent: Using Brightcove Beacon
       </thead>
       <tbody class="bcls-table__body">
           <tr>
-              <td translate="no">PLATFORM</td>
+              <td translate="no" style="font-weight:bold">PLATFORM</td>
               <td>The appropriate beacon platform: iOS, AppleTV, Android, Roku, Web, STV</td>
           </tr>
           <tr>
-              <td translate="no">OS</td>
+              <td translate="no" style="font-weight:bold">OS</td>
               <td>full qualified OS (including version) - example iOS 14</td>
           </tr>
           <tr>
-              <td translate="no">MFGR</td>
-              <td>the Manufacturer of the device. (Web - user's' browser)</td>
+              <td translate="no" style="font-weight:bold">MFGR</td>
+              <td>the Manufacturer of the device; (Web - user's browser)</td>
           </tr>
           <tr>
-              <td translate="no">MODEL</td>
-              <td>Device Model. (Web - browser version)</td>
+              <td translate="no" style="font-weight:bold">MODEL</td>
+              <td>Device Model; (Web - browser version)</td>
           </tr>
           <tr>
-              <td translate="no"></td>
-              <td></td>
+              <td translate="no" style="font-weight:bold">APP_ID</td>
+              <td>Application id (for example bundle ID); Web: URL</td>
           </tr>
           <tr>
-              <td translate="no"></td>
-              <td></td>
+              <td translate="no" style="font-weight:bold">LOCALE</td>
+              <td>ISO 639-1 (2-letter) language code followed by an underscore and a ISO 3166-1 (2-letter) country code (example en_us) - language set in the app</td>
           </tr>
           <tr>
-              <td translate="no"></td>
-              <td></td>
+              <td translate="no" style="font-weight:bold">RDID</td>
+              <td>Resettable device ID (<code>tifa</code>: Samsung, <code>rida</code>: Roku, <code>adid</code>: Android, etc. - see <a href="#Device_identifiers">Device indentifiers</a> below for more values) - if <strong>limited ad targeting</strong> is set on the App, then the id should be all zeros (meaning not possible to identify the user/device)</td>
           </tr>
           <tr>
-              <td translate="no"></td>
-              <td></td>
+              <td translate="no" style="font-weight:bold">IDTYPE</td>
+              <td>Type resettable ID (<code>tifa</code>: Samsung, <code>rida</code>: Roku, <code>adid</code>: Android, etc. - see <a href="#Device_identifiers">Device indentifiers</a> below for more values)</td>
+          </tr>
+          <tr>
+              <td translate="no" style="font-weight:bold">IS_LAT</td>
+              <td>Flag that tells if limited ad targeting is selected by user: <code>0</code> if user has not opted to limit targeting, <code>1</code> if limiting ad targeting</td>
+          </tr>
+          <tr>
+              <td translate="no" style="font-weight:bold">SID</td>
+              <td>Unique session identifier (reset every time the app starts). Not dependent on user sign in / Sign up. Switching from foreground to background status does not change this ID.</td>
           </tr>
       </tbody>
-  </table>
+		</table>
+
+		<h4 id="Device_identifiers">Device identifiers</h4>
+		<ul>
+			<li>adid: Android</li>
+			<li>afai: Amazon</li>
+			<li>tvOS: AppleTV (tvOS)</li>
+			<li>idfa: Apple phones (iOS)</li>
+			<li>rida: Roku</li>
+			<li>tifa: Samsung</li>
+			<li>vida: Vizio</li>
+			<li>msai: Xbox</li>
+		</ul>
+		<h3>VOD</h3>
+		<ol class="bcls-tasklist-restart">
+			<li>
+				Create an ad config from the Server Side Ad settings page in Studio 
+				<ol>
+					<li>Select <strong>VOD</strong></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+			</li>
+		</ol>
   </section>
 </article>

@@ -50,15 +50,15 @@ published: false
 	</figure> -->
 	<p>There are three tokens that need to be made available to Brightcove Beacon:</p>
 	<ul>
-			<li><strong>Access token</strong>: Validates that a user was able to authenticate and should be granted access to Brightcove Beacon. The access token needs to be in <strong>JWT format</strong> and include <code>iss</code> and <code>sub</code> claims.</li>
+			<li><strong>Access token</strong>: Validates that a user was able to authenticate and should be granted access to Brightcove Beacon. The access token needs to be in <strong>JWT format</strong> and include <code translate="no">iss</code> and <code translate="no">sub</code> claims.</li>
 			<li><strong>Refresh token</strong>: Allows the user to remain logged in after the access token expires by providing a mechanism to automatically obtain a new access token on behalf of the user (as long as user is allowed access). This is especially important on TVs.</li>
 			<li><strong>Identity token</strong>: Standardizes the way Brightcove obtains information about users.</li>
 	</ul>
 	<p>The following grant types should be supported:</p>
 	<ul>
-			<li><code>authorization_code</code></li>
-			<li><code>refresh_token</code></li>
-			<li><code>urn:ietf:params:oauth:grant-type:device_code</code></li>
+			<li><code translate="no">authorization_code</code></li>
+			<li><code translate="no">refresh_token</code></li>
+			<li><code translate="no">urn:ietf:params:oauth:grant-type:device_code</code></li>
 	</ul>
 	<p>The following Authentication provider endpoints will need to be configured in Brightcove Beacon. You need to provide these to Brightcove for proper configuration. If <a href="https://swagger.io/docs/specification/authentication/openid-connect-discovery/">OpenID Connect Discovery</a> is available Brightcove can discover these:</p>
 	<ul>
@@ -72,9 +72,9 @@ published: false
 			<li>Logout</li>
 			<li><a href="https://swagger.io/docs/specification/authentication/openid-connect-discovery/">OpenID Connect Discovery</a>
 					(/.well-known/openid-configuration). This is used for configuration of the system.</li>
-			<li>Optional (but recommended) : Requesting customized <code>aud</code> (audience) by client app. This is used for extra validation.</li>
+			<li>Optional (but recommended) : Requesting customized <code translate="no">aud</code> (audience) by client app. This is used for extra validation.</li>
 	</ul>
-	<p>For each application, Brightcove will need to get from you the <code>client_id</code> to be set up in the apps, recommended one per platform. Brightcove will also provide the <code>redirect_uri(s)</code> to be used for web and mobile applications (as applicable).</p>
+	<p>For each application, Brightcove will need to get from you the <code translate="no">client_id</code> to be set up in the apps, recommended one per platform. Brightcove will also provide the <code translate="no">redirect_uri(s)</code> to be used for web and mobile applications (as applicable).</p>
 
 	<h3>Entitlements</h3>
 	<p>To inform Brightcove Beacon about entitlements for users, Brightcove Beacon provides the following API:</p>
@@ -94,9 +94,9 @@ published: false
 “payment_gateway”: “beaconstore”         // One of: “beaconstore”
 }
 ]</code></pre>
-	<p>When using an external authentication system, the <code>external_user_id</code> corresponds to the subject value in the Access token. Also note the following:</p>
+	<p>When using an external authentication system, the <code translate="no">external_user_id</code> corresponds to the subject value in the Access token. Also note the following:</p>
 	<ul>
-			<li>The API key will need to be sent in the <code>HEADER</code> in the <code>auth-token</code> key.</li>
+			<li>The API key will need to be sent in the <code translate="no">HEADER</code> in the <code translate="no">auth-token</code> key.</li>
 			<li>It is possible to send multiple records at the same time.</li>
 			<li>If there is an error in any of the items in the JSON payload the entire payload is rejected.</li>
 	</ul>

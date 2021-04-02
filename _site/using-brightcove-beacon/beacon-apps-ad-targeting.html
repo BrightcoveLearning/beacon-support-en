@@ -616,53 +616,53 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <tbody class="bcls-table__body">
           <tr>
               <td>Platform</td>
-              <td><code>platform</code></td>
+              <td><code translate="no">platform</code></td>
               <td><code translate="No">iOS</code>, <code translate="No">Android</code>, <code translate="No">Roku</code>, <code translate="No">AppleTV</code>, <code translate="No">Web</code>, <code translate="No">STV</code></td>
           </tr>
           <tr>
               <td>OS version</td>
-              <td><code>os</code></td>
+              <td><code translate="no">os</code></td>
               <td>device os version (for example, <code translate="No">iOS 14</code></td>
           </tr>
           <tr>
               <td>Device model</td>
-              <td><code>model</code></td>
+              <td><code translate="no">model</code></td>
               <td>device model. Browser version used for web apps</td>
           </tr>
           <tr>
               <td>Manufacturer</td>
-              <td><code>mfgr</code></td>
+              <td><code translate="no">mfgr</code></td>
               <td>device manufacturer; browser name used for web apps</td>
           </tr>
           <tr>
               <td>Language</td>
-              <td><code>lang</code></td>
+              <td><code translate="no">lang</code></td>
               <td>Language code set in the App (that comes from CMS)</td>
           </tr>
           <tr>
               <td>User session</td>
-              <td><code>sid</code></td>
+              <td><code translate="no">sid</code></td>
               <td>Every time that app launches we want to have a unique integer created that is stored in memory and not persisted</td>
           </tr>
           <tr>
               <td>Unique Device ID</td>
-              <td><code>rdid</code></td>
+              <td><code translate="no">rdid</code></td>
               <td>Resettable device ID (TIFA = Samsung, rida = Roku, adid = Android, etc) - if limited ad targeting is set on the App, then the id should be all zeros (not possible to identify the user/device)</td>
           </tr>
           <tr>
               <td>Is the user allowing tracking</td>
-              <td><code>is_lat</code></td>
+              <td><code translate="no">is_lat</code></td>
               <td>0 if user has not opted to limit targeting, 1 if limiting ad targeting</td>
           </tr>
           <tr>
               <td>device type</td>
-              <td><code>idtype</code></td>
+              <td><code translate="no">idtype</code></td>
               <td>adid = Android, idfa = Apple phones (iOS), afai = Amazon,  rida: Roku
                 tvOS: AppleTV (tvOS)</td>
           </tr>
           <tr>
               <td>App identifier</td>
-              <td><code>app_id</code></td>
+              <td><code translate="no">app_id</code></td>
               <td>This should be the App bundle name (like com.watchsmyapp)</td>
           </tr>
       </tbody>
@@ -711,15 +711,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </tr>
           <tr>
               <td translate="no" style="font-weight:bold">RDID</td>
-              <td>Resettable device ID (<code>tifa</code>: Samsung, <code>rida</code>: Roku, <code>adid</code>: Android, etc. - see <a href="#Device_identifiers">Device indentifiers</a> below for more values) - if <strong>limited ad targeting</strong> is set on the App, then the id should be all zeros (meaning not possible to identify the user/device)</td>
+              <td>Resettable device ID (<code translate="no">tifa</code>: Samsung, <code translate="no">rida</code>: Roku, <code translate="no">adid</code>: Android, etc. - see <a href="#Device_identifiers">Device indentifiers</a> below for more values) - if <strong>limited ad targeting</strong> is set on the App, then the id should be all zeros (meaning not possible to identify the user/device)</td>
           </tr>
           <tr>
               <td translate="no" style="font-weight:bold">IDTYPE</td>
-              <td>Type resettable ID (<code>tifa</code>: Samsung, <code>rida</code>: Roku, <code>adid</code>: Android, etc. - see <a href="#Device_identifiers">Device indentifiers</a> below for more values)</td>
+              <td>Type resettable ID (<code translate="no">tifa</code>: Samsung, <code translate="no">rida</code>: Roku, <code translate="no">adid</code>: Android, etc. - see <a href="#Device_identifiers">Device indentifiers</a> below for more values)</td>
           </tr>
           <tr>
               <td translate="no" style="font-weight:bold">IS_LAT</td>
-              <td>Flag that tells if limited ad targeting is selected by user: <code>0</code> if user has not opted to limit targeting, <code>1</code> if limiting ad targeting</td>
+              <td>Flag that tells if limited ad targeting is selected by user: <code translate="no">0</code> if user has not opted to limit targeting, <code translate="no">1</code> if limiting ad targeting</td>
           </tr>
           <tr>
               <td translate="no" style="font-weight:bold">SID</td>
@@ -764,11 +764,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </ol>
       </li>
       <li>
-        Once you have your Ad config setup in Studio and Beacon Classic, you need to implement the client side params that will be passed to the customers ad server. Client side parameters can be passed in the Playback APIs (provided in the VMAP/Manifest entry point) - those will be available to the SSAI infrastructure in the form of <code>{{url.xxx}}</code> macros where the xxx corresponds to the parameter key that is submitted in the playback API URL.
+        Once you have your Ad config setup in Studio and Beacon Classic, you need to implement the client side params that will be passed to the customers ad server. Client side parameters can be passed in the Playback APIs (provided in the VMAP/Manifest entry point) - those will be available to the SSAI infrastructure in the form of <code translate="no">{{url.xxx}}</code> macros where the xxx corresponds to the parameter key that is submitted in the playback API URL.
         <ol>
-          <li>Enter ad targeting params in the “Ad-Target” field in Beacon Classic. The input will be a string in query form. Example: <code>d={PLATFORM}&os={OS}&man={MFGR}&mo={MODEL}&appid={APP_ID}&lan={LOCALE}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code></li>
+          <li>Enter ad targeting params in the “Ad-Target” field in Beacon Classic. The input will be a string in query form. Example: <code translate="no">d={PLATFORM}&os={OS}&man={MFGR}&mo={MODEL}&appid={APP_ID}&lan={LOCALE}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code></li>
           <li><strong>You can configure the keys before the equal sign</strong>. They <strong>MUST</strong> match the keys that are added to the SSAI ad tag.</li>
-          <li>Next, update your ad tag in the <strong>SSAI Studio Settings</strong> page. Here is an example of params that were entered in the Beacon Classic Ad-Targeting and added to SSAI Ad tag: <code>d={PLATFORM}&os={OS}&appid={APP_ID}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code>...</li>
+          <li>Next, update your ad tag in the <strong>SSAI Studio Settings</strong> page. Here is an example of params that were entered in the Beacon Classic Ad-Targeting and added to SSAI Ad tag: <code translate="no">d={PLATFORM}&os={OS}&appid={APP_ID}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code>...</li>
           <li><strong>Get translated into this in this Ad tag:</strong> <code translate="no">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&pre=3&d={{url.d}}&os={{url.os}}&appid={{url.appid}}&did={{url.did}}&dt={{url.dt}}&lat={{url.latl}}&sid={{url.sid}}</code></li>
         </ol>
       </li>
@@ -799,7 +799,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>
         You can reuse the existing client side ad params for VOD to Live. Example: <code translate="no">d={PLATFORM}&os={OS}&man={MFGR}&mo={MODEL}&appid={APP_ID}&lan={LOCALE}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code>
         <ol>
-          <li>Live does not use the <code>url.xxx</code> notation. You can instead pass the query key directly</li>
+          <li>Live does not use the <code translate="no">url.xxx</code> notation. You can instead pass the query key directly</li>
           <li>Example based on the client-side params: <code translate="no">https://ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&num={{random.int32}}&d={{PLATFORM}}&os={{OS}}&did={{RDID}}&dt={{IDTYPE}}&lat={{IS_LAT}}</code></li>
         </ol>
       </li>

@@ -32,13 +32,10 @@ site_domain: "beacon.support.brightcove.com"
 product: Brightcove Beacon
 color: rgb(51, 51, 51)
 product_color: rgb(28, 185, 213)
-product_icon: "Beacon_Logo.svg"
+product_icon: "COVE004_Brightcove_Beacon_Logo_RGB_K.svg"
 search_id: "017969773216783359937:9ybe0wftqs0"
 feedbackify_id: "14941"
 bing_custom_config_id: "78ee3c35-10fb-4e51-92e6-e77f0d2dd983"
-talla_appID: "00c26be3-4421-41e6-bb00-1dee68740f67"
-talla_token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODI4MDQzNDF9.RYf2x65FXvdDURzM h00i76KfUrYlsDLsw6mVuEv6zmE'
-talla_knowledgegroup: 'd4105468-75a8-4bbb-89ac-33df9e3b5173'
 defaults:
   -
     scope:

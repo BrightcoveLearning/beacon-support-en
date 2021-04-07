@@ -1,0 +1,67 @@
+---
+title: 'Overview: Beacon-Evergent Integration'
+description: This topic provides an overview of the integration between Brightcove Beacon and Evergent.
+parent: Using Brightcove Beacon
+layout: staging
+---
+
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="Introduction">Introduction</h2>
+		<p>Evergent is a payment and subscriber management system that has been integrated with Beacon to provide these capabilities. Evergent provides robust subscriber management and access to many popular payment gateways worldwide, including those used commonly in Latin America, the Middle East, Africa, and the Asia-Pacific region.</p>
+  </section>
+	<section class="bcls-section">
+		<h2 id="glossary_of_terms">Glossary of terms</h2>
+		<dl>
+			<dt>Business Unit</dt>
+			<dd>A Business Unit (BU) is an entity in Evergent’s system that defines a country or region where you would like to sell your content. You will need separate Business Units if you want different currencies or tax collection per country/region. In Evergent’s system each Business Unit will have a currency assigned to it, this currency is what will be presented to their users when they checkout.</dd>
+			<dt>Payment Gateway</dt>
+			<dd>A service that allows a merchant to accept payments from customers. The payment gateway acts as a middleman by moving the money from your the bank accounts of your customers to your own bank account in a secure and reliable way. </dd>
+			<dt>Merchant of Record</dt>
+			<dd>The legal entity that is authorized to receive payments from consumers. You be the MOR (Merchant of Record) with each gateway that you use.</dd>
+			<dt>Merchant Account</dt>
+			<dd>A virtual bank account where revenue from online sales is sent. Revenue resides in your merchant account until settlement — the process of transferring funds to your bank account. Typically the payment gateway provides a merchant account. Gateways that do not provide merchant accounts transfer funds directly to your bank account.</dd>
+			<dt>Package</dt>
+			<dd>A Package defines how users can purchase access to your content in Beacon CMS, it defines all of the details for a monetization plan. It includes information such as the price, billing frequency, availability, app stores availability, currency, trial period, etc.</dd>
+			<dt>Products</dt>
+			<dd>Products in Evergent defines all of the details for a monetization plan. It includes information such as the price, billing frequency, availability, app stores availability, currency, trial period, etc.</dd>
+		</dl>
+	</section>
+	<section class="bcls-section">
+		<h2 id="account_setup">Account setup</h2>
+		<h3>What's needed:</h3>
+		<h4>Beacon</h4>
+		<ul>
+			<li>In Beacon, you need a CMS with Evergent configured as a Store.</li>
+			<li>All of the countries where the customers’ service will be available.</li>
+			<li>Each country should have a currency defined for receiving payments from a viewer. </li>
+		</ul>
+		<h4>Evergent</h4>
+		<ul>
+			<li>You need Business Units created in Evergent that map to the currencies that you want to receive payments in. </li>
+			<li>Each Business Unit will have gateways and app store billing (Apple Store, Roku, Amazon, Google Play) configured. You are required to have a relationship and merchant account with each gateway they want to use.</li>
+		</ul>
+	</section>
+	<section class="bcls-section">
+		<h2 id="package_product_management">Package/Product management</h2>
+		<p>You will set up and manage monetization plans from both the Beacon UI and Evergent UI. Plans will need to be manually linked using SKUs in both Beacon and Evergent:</p>
+		<ul>
+			<li>The Packages that are configured in Beacon are how information gets presented to the viewers in the app. See <a href="/using-brightcove-beacon/creating-subscription-package.html">Creating a Subscription Package</a> for details.</li>
+			<li>The <strong>Product</strong> in Evergent allows them to process payments for the correct monetization plan and validate the receipt before the viewer is granted access to the content. See <a href="/beacon-evergent/evergent-account-management.html">Evergent Account Management</a> for details.</li>
+			<li>
+				For the initial release, Beacon will support the following monetization models:
+				<ul>
+					<li>MixedVOD - subscription for Authenticated users with Ads served</li>
+					<li>SVOD - subscription for Authenticated users and no Ads served</li>
+				</ul>
+			</li>
+			<li>Future releases will include TVOD and PPV</li>
+		</ul>
+	</section>
+	<section class="bcls-section">
+		<h2 id="website_sales">Website sales</h2>
+		<p></p>
+	</section>
+</article>

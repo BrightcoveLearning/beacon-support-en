@@ -716,13 +716,23 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 		<h2 id="VOD_steps">VOD steps</h2>
 		<ol class="bcls-tasklist-restart">
 			<li>
-				Create an ad config from the Server Side Ad settings page in Studio 
+				Create an ad config from the <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">Server Side Ad settings page in Studio</a>:
 				<ol>
-					<li>Select <strong>VOD</strong></li>
-					<li>Add a name for the ad config</li>
-					<li>Select your ad response</li>
-					<li>Paste in your ad tag</li>
-					<li>Copy your ad config ID</li>
+					<li>
+						Click <span class="blue-button">Create Ad Configuration</span> and select <strong>VOD</strong>
+						<figure class="bcls-figure">
+							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/create-vod-ad-config.png" alt="Create VOD Ad Config">
+							<figcaption class="bcls-caption--image">Create VOD Ad Config</figcaption>
+						</figure>
+						<figure class="bcls-figure">
+							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-vod.png" alt="SSAI Configuration VOD">
+							<figcaption class="bcls-caption--image">SSAI Configuration VOD</figcaption>
+						</figure>
+					</li>
+					<li>Add a name for the ad config<./li>
+					<li>Select your ad response - VMAP or Vast is recommended. If you use Vast, you will need to add cuepoints to the videos to specify where ad breaks should appear.</li>
+					<li>Paste in your ad tag (from you ad provider).</li>
+					<li>Copy your ad config ID, as you will need it for the Beacon advertising configuration.</li>
 				</ol>
 			</li>
       <li>
@@ -749,7 +759,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Live_steps">Live steps</h2>
     <ol class="bcls-tasklist-restart">
       <li>
-        Create an ad config from the Server Side Ad settings page in Studio:
+        Create an ad config from <a href="https://live.support.brightcove.com/live-module/implementing-server-side-ads-live-module.html">the Server Side Ad settings page in Studio</a>:
         <ol>
           <li>Select <strong>Live</strong></li>
 					<li>Add a name for the ad config</li>
@@ -799,7 +809,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 02 Apr 2021
+  Page last updated on 06 Apr 2021
 </div>
 
 

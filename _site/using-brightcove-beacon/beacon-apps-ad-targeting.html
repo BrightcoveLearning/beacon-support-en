@@ -558,7 +558,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>You can to set up how this data is passed to their ad server or ad provider.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="key_benefits">Key benefits</h2>
+    <h2 id="key_benefits">Benefits</h2>
     <h3>Improved ad targeting</h3>
     <ul>
       <li><strong>User Session ID:</strong> we generate a session ID on each device when a user opens the app. This  allows you to frequency-cap ads to that session, exclude competitive ads from being served together, and sequentially rotate ads in that session. These targeting capabilities are both necessary for direct-sold and programmatic ads</li>
@@ -568,7 +568,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>For apps that run on Amazon, Roku, and Samsung (in the US), you are required to do a 70/30 split of ad inventory/revenue with the platform. Beacon customers monetize 70% of the ad inventory and the platform gets the remaining 30% of the ad inventory. With this enhanced ad targeting, you can use one ad tag across all of their apps and pass the device params to their ad server. Inside their ad server, they will implement the business logic that splits the ad inventory by device. The platforms also require passing LAT - Limited Ad Targeting - for Ad Inventory Split, which is a parameter we are now sending to your ad server.</p>
     <h3>User Privacy improvements</h3>
     <ul>
-      <li>LAT “Limited Ad Targeting” - allows users of Beacon apps to opt out of ad targeting based on user behavior. This is beneficial for our customers since giving users the option is required for both GDPR and CCPA.</li>
+      <li>LAT “Limited Ad Targeting” - allows users of Beacon apps to opt out of ad targeting based on user behavior.</li>
       <li>Users have the ability to reset the unique Device ID that we assign to the device at any time.</li>
     </ul>
   </section>
@@ -714,6 +714,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   
   <section class="bcls-section">
 		<h2 id="VOD_steps">VOD steps</h2>
+		<h3>Video Cloud part - VOD</h3>
 		<ol class="bcls-tasklist-restart">
 			<li>
 				Create an ad config from the <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">Server Side Ad settings page in Studio</a>:
@@ -735,13 +736,22 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 					<li>Copy your ad config ID, as you will need it for the Beacon advertising configuration.</li>
 				</ol>
 			</li>
-      <li>
-        Open the Beacon Classic UI and go the Advertisement tab
+			</ol>
+			<h3>Beacon part - VOD</h3>
+			<ol class="bcls-tasklist-restart">
+				<li>
+        Open the Beacon Classic UI and go the Advertisement tab:
         <ol>
-          <li>Click <strong>Add New Configuration</strong></li>
+          <li>
+						Click <span class="button-teal">Add New Configuration</span>
+						<figure class="bcls-figure">
+							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/advertising-config-vod.png" alt="Beacon Ad Configuration">
+							<figcaption class="bcls-caption--image">Beacon Ad Configuration VOD</figcaption>
+						</figure>
+					</li>
           <li>Name the Ad Configuration</li>
           <li>Select <strong>Brightcove SSAI</strong></li>
-          <li>Paste in the SSAI ad config ID into <strong>VOD Ad Config ID</strong></li>
+          <li>Paste in the <strong>SSAI ad config ID</strong> into <strong>VOD Ad Config ID</strong></li>
         </ol>
       </li>
       <li>
@@ -761,17 +771,34 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>
         Create an ad config from <a href="https://live.support.brightcove.com/live-module/implementing-server-side-ads-live-module.html">the Server Side Ad settings page in Studio</a>:
         <ol>
-          <li>Select <strong>Live</strong></li>
+          <li>
+						Click <span class="blue-button">Create Ad Configuration</span> and select <strong>Live</strong>
+						<figure class="bcls-figure">
+							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/create-live-ad-config.png" alt="Create Live Ad Config">
+							<figcaption class="bcls-caption--image">Create Live Ad Config</figcaption>
+						</figure>
+						<figure class="bcls-figure">
+							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-live.png" alt="SSAI Configuration Live">
+							<figcaption class="bcls-caption--image">SSAI Configuration Live</figcaption>
+						</figure>
+
+					</li>
 					<li>Add a name for the ad config</li>
-					<li>Select your ad response</li>
+					<li>Select <strong>Vast</strong> your ad response</li>
 					<li>Paste in your ad tag</li>
-					<li>Copy your ad config ID</li>
+					<li>Copy your ad config ID for the Beacon Advertising configurations</li>
         </ol>
       </li>
       <li>
         Open the Beacon Classic UI and go the Advertisement tab
         <ol>
-          <li>Click <strong>Add New Configuration</strong></li>
+          <li>
+						Click <span class="button-teal">Add New Configuration</span>
+						<figure class="bcls-figure">
+							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/advertising-config-live.png" alt="Beacon Ad Configuration Live">
+							<figcaption class="bcls-caption--image">Beacon Ad Configuration Live</figcaption>
+						</figure>
+					</li>
           <li>Name the Ad Configuration</li>
           <li>Select <strong>Brightcove SSAI</strong></li>
           <li>Paste in the SSAI ad config ID into <strong>Live Ad Config ID</strong></li>
@@ -782,16 +809,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <ol>
           <li>Live does not use the <code translate="no">url.xxx</code> notation. You can instead pass the query key directly</li>
           <li>Example based on the client-side params: <code translate="no">https://ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&num={{random.int32}}&d={{PLATFORM}}&os={{OS}}&did={{RDID}}&dt={{IDTYPE}}&lat={{IS_LAT}}</code></li>
+					<li>TODO ???</li>
         </ol>
       </li>
   </ol>
   </section>
-  <section class="bcls-section">
+  <!-- <section class="bcls-section">
     <h2 id="Limitations">Limitations</h2>
     <ul>
       <li>There currently isn’t a way to handle Device ID on the web so we are not passing that information to SSAI. We are still defining how we will handle it, and the doc will be updated once Device ID for the web is implemented.</li>
     </ul>
-  </section>
+  </section> -->
   
 </article>
 <!-- complete bootstrap layout -->
@@ -809,7 +837,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 06 Apr 2021
+  Page last updated on 07 Apr 2021
 </div>
 
 

@@ -262,11 +262,16 @@ layout: staging
         </ol>
       </li>
       <li>
-        You can reuse the existing client side ad params for VOD to Live. Example: <code translate="no">d={PLATFORM}&os={OS}&man={MFGR}&mo={MODEL}&appid={APP_ID}&lan={LOCALE}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code>
+        You can use the same ad params for Live as for VOD, or a different set. Example: <code translate="no">d={PLATFORM}&os={OS}&man={MFGR}&mo={MODEL}&appid={APP_ID}&lan={LOCALE}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code>
         <ol>
-          <li>Live does not use the <code translate="no">url.xxx</code> notation. You can instead pass the query key directly</li>
-          <li>Example based on the client-side params: <code translate="no">https://ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&num={{random.int32}}&d={{PLATFORM}}&os={{OS}}&did={{RDID}}&dt={{IDTYPE}}&lat={{IS_LAT}}</code></li>
-					<li>TODO ???</li>
+					<li>Add the params in the Ad-Target field in Beacon.</li>
+          <li>
+						Live does not use the <code translate="no">url.xxx</code> notation, so you must instead pass the params as a query string:
+						<p>Example:</p>
+						<pre><code translate="no">https://ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&num={{random.int32}}&d={{PLATFORM}}&os={{OS}}&did={{RDID}}&dt={{IDTYPE}}&lat={{IS_LAT}}</code></pre>
+					</li>
+          <li>Return the SSAI Ad Configuration in Studio and click on your live configuration to edit it.</li>
+					<li>Replace the Ad Tag with the new one that has the query string added to it, and click <span class="button-blue">Save</span>.</li>
         </ol>
       </li>
   </ol>

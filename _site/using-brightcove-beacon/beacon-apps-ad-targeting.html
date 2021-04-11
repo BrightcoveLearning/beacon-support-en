@@ -549,7 +549,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
 <h1>Beacon Apps Ad Targeting</h1>
-
 <article class="bcls-article">
   <summary>Beacon Apps Ad targeting allows Beacon customers to send important device-level and user-specific information from the customer’s Beacon apps to their ad server or ad provider.</summary>
   <section class="bcls-section">
@@ -759,8 +758,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <ol>
           <li>Enter ad targeting params in the <strong>Ad-Target</strong> field in Beacon. The input will be a string in query form. Example: <code translate="no">d={PLATFORM}&os={OS}&man={MFGR}&mo={MODEL}&appid={APP_ID}&lan={LOCALE}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code></li>
           <li><strong>You can configure the keys before the equal sign</strong>. They <strong>MUST</strong> match the keys that are added to the SSAI ad tag.</li>
-          <li>Next, update your ad tag in the <strong>SSAI Studio Settings</strong> page. Here is an example of params that were entered in the Beacon Classic Ad-Targeting and added to SSAI Ad tag: <code translate="no">d={PLATFORM}&os={OS}&appid={APP_ID}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code>...</li>
-          <li><strong>Get translated into this in this Ad tag:</strong> <code translate="no">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&pre=3&d={{url.d}}&os={{url.os}}&appid={{url.appid}}&did={{url.did}}&dt={{url.dt}}&lat={{url.latl}}&sid={{url.sid}}</code></li>
+          <li>Next, update your ad tag in the <strong>SSAI Studio Settings</strong> page. Here is an example of params that were entered in the Beacon Classic Ad-Targeting and added to SSAI Ad tag: <code translate="no">d={PLATFORM}&os={OS}&appid={APP_ID}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code></li>
+          <li><strong>These params get translated into this in this Ad tag:</strong> <code translate="no">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&pre=3&d={{url.d}}&os={{url.os}}&appid={{url.appid}}&did={{url.did}}&dt={{url.dt}}&lat={{url.latl}}&sid={{url.sid}}</code></li>
         </ol>
       </li>
 		</ol>
@@ -843,7 +842,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 09 Apr 2021
+  Page last updated on 10 Apr 2021
 </div>
 
 

@@ -84,6 +84,16 @@
     - name: Viewing Analytics Data
       url: /using-brightcove-beacon/viewing-analytics-data.html
 - section:
+  name: 'Beacon Web Store'
+  url: '/beacon-web-store/index.html'
+  docs:
+    - name: 'Overview: Brightcove Beacon Web Store'
+      url: '/beacon-web-store/beacon-webstore-overview.html'
+    - name: 'Integrating with the Beacon Web Store'
+      url: '/beacon-web-store/integration-details.html'
+    - name: 'Beacon Store Webhook Reference'
+      url: '/beacon-web-store/beacon-store-webhook-reference.html'
+- section:
   name: 'Creating Your Apps'
   url: '/creating-your-apps/index.html'
   docs:

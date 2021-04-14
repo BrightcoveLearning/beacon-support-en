@@ -147,8 +147,6 @@
           url: '/creating-your-apps/roku/installing-roku-test-build.html'
         - name: 'Submitting to the Roku Store'
           url: '/creating-your-apps/roku/submitting-to-roku.html'
-        - name: 'Additional Setup for Roku'
-          url: '/creating-your-apps/roku/additional-setup-roku.html'
     - name: 'Samsung'
       url: '/creating-your-apps/samsung/index.html'
       docs:

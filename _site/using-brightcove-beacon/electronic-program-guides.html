@@ -608,7 +608,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       past, current and upcoming broadcast programming available on each of your
       Brightcove Beacon channels.
     </p>
-		<aside class="bcls-aside bcls-aside--information language-editable">Note that if you are using a <a href="/using-brightcove-beacon/cloud-playout/cloud-playout-overview.html">Cloud Playout Channel</a> as the source for your Beacon channel, Brightcove will create the EPG automatically. The rest of the information in this topic applies only if you are <strong>not</strong> using a Cloud Playout channel.</aside>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that if you are using a <a href="/using-brightcove-beacon/cloud-playout/cloud-playout-overview.html">Cloud Playout Channel</a> as the source for your Beacon channel, Brightcove will create the EPG automatically. The rest of the information in this topic applies only if you are <strong>not</strong> using a Cloud Playout channel.</aside>
 
     <p>For information on creating channels in Brightcove Beacon, please visit the <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/creating-a-channel.html" target="_blank">Creating a Channel</a> documentation.</p>
 
@@ -648,7 +648,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </li>
     </ul>
   </section>
-  
+
   <section class="bcls-section">
     <h2 id="xml_structure">XML File Structure</h2>
     <p>
@@ -657,98 +657,92 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       your channels such as video titles, descriptions, and duration.
     </p>
     <p>Here is an example of the XML Structure:</p>
-    <pre class="line-numbers"> 
-            <code class="language-xml" translate="No">
-            &lt;RiGHTvEPG xmlns=&quot;http://www.orca.tv/RiGHTv/7.0/EPG&quot; 
-            xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
-            version=&quot;1.0&quot; language=&quot;en&quot; xsi:schemaLocation=&quot;http://www.orca.tv/RiGHTv/7.0/EPG 
-            RiGHTvEPG.xsd&quot;&gt;    
-              &lt;ChannelsList&gt;
-                &lt;channel id=&quot;your-channel-id&quot;&gt;
-                  &lt;program id=&quot;3394&quot; time=&quot;2020-04-22T01:25:00Z&quot; duration=&quot;PT01H45M&quot; 
-                  delete=&quot;false&quot; pvrEnabled=&quot;false&quot; stovEnabled=&quot;false&quot; catchUpEnabled=&quot;false&quot;&gt;
-                    &lt;title&gt;Video Title&lt;/title&gt;
-                    &lt;description&gt;
-                    &lt;![CDATA[
-                    Description of your video asset.
-                    ]]&gt;
-                    &lt;/description&gt;
-                  &lt;/program&gt;
-                &lt;/channel&gt;
-              &lt;/ChannelsList&gt;
-            &lt;/RiGHTvEPG&gt;
-        </code>
-        </pre>
+    <pre class="line-numbers">
+<code class="language-xml" translate="No">&lt;RiGHTvEPG xmlns=&quot;http://www.orca.tv/RiGHTv/7.0/EPG&quot; 
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+version=&quot;1.0&quot; language=&quot;en&quot; xsi:schemaLocation=&quot;http://www.orca.tv/RiGHTv/7.0/EPG 
+RiGHTvEPG.xsd&quot;&gt;    
+  &lt;ChannelsList&gt;
+    &lt;channel id=&quot;your-channel-id&quot;&gt;
+      &lt;program id=&quot;3394&quot; time=&quot;2020-04-22T01:25:00Z&quot; duration=&quot;PT01H45M&quot; 
+      delete=&quot;false&quot; pvrEnabled=&quot;false&quot; stovEnabled=&quot;false&quot; catchUpEnabled=&quot;false&quot;&gt;
+        &lt;title&gt;Video Title&lt;/title&gt;
+        &lt;description&gt;
+        &lt;![CDATA[
+        Description of your video asset.
+        ]]&gt;
+        &lt;/description&gt;
+      &lt;/program&gt;
+    &lt;/channel&gt;
+  &lt;/ChannelsList&gt;
+&lt;/RiGHTvEPG&gt;</code></pre>
 
     <p>For the head of the XML file you can use the following code:</p>
-    <pre class="line-numbers"> 
-          <code class="language-xml" translate="No">
-            &lt;RiGHTvEPG xmlns=&quot;http://www.orca.tv/RiGHTv/7.0/EPG&quot; 
-            xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
-            version=&quot;1.0&quot; language=&quot;en&quot; xsi:schemaLocation=&quot;http://www.orca.tv/RiGHTv/7.0/EPG 
-            RiGHTvEPG.xsd&quot;&gt;
-            </code>
-            </pre>
+    <pre class="line-numbers">
+<code class="language-xml" translate="No">&lt;RiGHTvEPG xmlns=&quot;http://www.orca.tv/RiGHTv/7.0/EPG&quot; 
+  xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+  version=&quot;1.0&quot; language=&quot;en&quot; xsi:schemaLocation=&quot;http://www.orca.tv/RiGHTv/7.0/EPG 
+  RiGHTvEPG.xsd&quot;&gt;</code>
+  </pre>
     <p>
       The <em>RiGHTvEPG.xsd</em> file contains an <em>XML Schema</em> that
       describes the structure of the XML document, and the file is hosted by
       Brightcove. You can validate your XML using the XSD file schema in an
-      <a
-        href="https://www.freeformatter.com/xml-validator-xsd.html"
-        target="_blank"
-        >XML validator</a
-      >.
+      <a href="https://www.freeformatter.com/xml-validator-xsd.html" target="_blank">XML validator</a>.
     </p>
 
-    <p>Validation Schema RiGHTvEPG.xsd file:</p>
-    <pre class="line-numbers"> 
-      <code class="language-xml" translate="No">
-      &lt;xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.orca.tv/RiGHTv/7.0/EPG" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
-        &lt;xs:element name="RiGHTvEPG"&gt;
-          &lt;xs:complexType&gt;
-            &lt;xs:sequence&gt;
-              &lt;xs:element name="ChannelsList"&gt;
-                &lt;xs:complexType&gt;
-                  &lt;xs:sequence&gt;
-                    &lt;xs:element name="channel"&gt;
-                      &lt;xs:complexType&gt;
-                        &lt;xs:sequence&gt;
-                          &lt;xs:element name="program" maxOccurs="unbounded" minOccurs="1"&gt;
-                            &lt;xs:complexType&gt;
-                              &lt;xs:sequence&gt;
-                                &lt;xs:element name="title"&gt;
-                                  &lt;xs:simpleType&gt;
-                                    &lt;xs:restriction base="xs:string"&gt;
-                                      &lt;xs:minLength value="1"/&gt;
-                                    &lt;/xs:restriction&gt;
-                                  &lt;/xs:simpleType&gt;
-                                &lt;/xs:element&gt;
-                                &lt;xs:element type="xs:string" name="description"/&gt;
-                              &lt;/xs:sequence&gt;
-                              &lt;xs:attribute type="xs:int" name="id" use="optional"/&gt;
-                              &lt;xs:attribute type="xs:dateTime" name="time" use="required" /&gt;
-                              &lt;xs:attribute type="xs:duration" name="duration" use="required"/&gt;
-                              &lt;xs:attribute type="xs:string" name="delete" use="optional"/&gt;
-                              &lt;xs:attribute type="xs:string" name="pvrEnabled" use="optional"/&gt;
-                              &lt;xs:attribute type="xs:string" name="stovEnabled" use="optional"/&gt;
-                              &lt;xs:attribute type="xs:string" name="catchUpEnabled" use="optional"/&gt;
-                            &lt;/xs:complexType&gt;
-                          &lt;/xs:element&gt;
-                        &lt;/xs:sequence&gt;
-                        &lt;xs:attribute type="xs:string" name="id" use="required"/&gt;
-                      &lt;/xs:complexType&gt;
-                    &lt;/xs:element&gt;
-                  &lt;/xs:sequence&gt;
-                &lt;/xs:complexType&gt;
-              &lt;/xs:element&gt;
-            &lt;/xs:sequence&gt;
-            &lt;xs:attribute type="xs:float" name="version"/&gt;
-            &lt;xs:attribute type="xs:string" name="language"/&gt;
-          &lt;/xs:complexType&gt;
-        &lt;/xs:element&gt;
-      &lt;/xs:schema&gt;
-</code>
+    <p>Validation Schema RiGHTvEPG.xsd file (a link to download the schema follows the listing):</p>
+    <pre class="line-numbers">
+  <code class="language-xml" translate="No">&lt;xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.orca.tv/RiGHTv/7.0/EPG" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+    &lt;xs:element name="RiGHTvEPG"&gt;
+      &lt;xs:complexType&gt;
+        &lt;xs:sequence&gt;
+          &lt;xs:element name="ChannelsList"&gt;
+            &lt;xs:complexType&gt;
+              &lt;xs:sequence&gt;
+                &lt;xs:element name="channel"&gt;
+                  &lt;xs:complexType&gt;
+                    &lt;xs:sequence&gt;
+                      &lt;xs:element name="program" maxOccurs="unbounded" minOccurs="1"&gt;
+                        &lt;xs:complexType&gt;
+                          &lt;xs:sequence&gt;
+                            &lt;xs:element name="title"&gt;
+                              &lt;xs:simpleType&gt;
+                                &lt;xs:restriction base="xs:string"&gt;
+                                  &lt;xs:minLength value="1"/&gt;
+                                &lt;/xs:restriction&gt;
+                              &lt;/xs:simpleType&gt;
+                            &lt;/xs:element&gt;
+                            &lt;xs:element type="xs:string" name="description"/&gt;
+                          &lt;/xs:sequence&gt;
+                          &lt;xs:attribute type="xs:int" name="id" use="optional"/&gt;
+                          &lt;xs:attribute type="xs:dateTime" name="time" use="required" /&gt;
+                          &lt;xs:attribute type="xs:duration" name="duration" use="required"/&gt;
+                          &lt;xs:attribute type="xs:string" name="delete" use="optional"/&gt;
+                          &lt;xs:attribute type="xs:string" name="pvrEnabled" use="optional"/&gt;
+                          &lt;xs:attribute type="xs:string" name="stovEnabled" use="optional"/&gt;
+                          &lt;xs:attribute type="xs:string" name="catchUpEnabled" use="optional"/&gt;
+                        &lt;/xs:complexType&gt;
+                      &lt;/xs:element&gt;
+                    &lt;/xs:sequence&gt;
+                    &lt;xs:attribute type="xs:string" name="id" use="required"/&gt;
+                  &lt;/xs:complexType&gt;
+                &lt;/xs:element&gt;
+              &lt;/xs:sequence&gt;
+            &lt;/xs:complexType&gt;
+          &lt;/xs:element&gt;
+        &lt;/xs:sequence&gt;
+        &lt;xs:attribute type="xs:float" name="version"/&gt;
+        &lt;xs:attribute type="xs:string" name="language"/&gt;
+      &lt;/xs:complexType&gt;
+    &lt;/xs:element&gt;
+  &lt;/xs:schema&gt;</code>
 </pre>
+    <p>You can also download the validation file from here:
+      <a href="/assets/files-to-download/RiGHTvEPG.xsd" download>
+        RiGHTvEPG.xsd
+      </a>
+    </p>
     <p>The following are important XML tags and metadata:</p>
 
     <table class="bcls-table">
@@ -804,9 +798,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>
             The duration of your video event; the duration format is defined
             following the
-            <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank"
-              >ISO 8601 standard</a
-            >
+            <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601 standard</a>
           </td>
           <td>
             duration=“PT01H45M” In this format the (PT) represents the Period
@@ -866,11 +858,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>
         Click on the Tools (wrench) button in the upper right of the screen.
         <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt=""
-            src="/assets/images/using-bcb/epg/fetch-xml.png"
-          />
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/epg/fetch-xml.png" />
         </figure>
       </li>
       <li>Select the <strong>Ingestion</strong> tab.</li>
@@ -878,11 +866,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>
         Select the <strong>Cache</strong> tab from the left menu.
         <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt=""
-            src="/assets/images/using-bcb/epg/clear-cache.png"
-          />
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/epg/clear-cache.png" />
         </figure>
       </li>
       <li>
@@ -903,22 +887,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>
         In the left menu, click in the <strong>EPG</strong> section.
         <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt=""
-            src="/assets/images/using-bcb/epg/1-epg-section.png"
-          />
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/epg/1-epg-section.png" />
         </figure>
       </li>
       <li>
         In the <strong>Schedule</strong> section, you will see all your
         available channels.
         <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt=""
-            src="/assets/images/using-bcb/epg/2-available-channels.png"
-          />
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/epg/2-available-channels.png" />
         </figure>
       </li>
       <li>
@@ -928,33 +904,21 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           All the dates and times are presented in the UTC format.
         </aside>
         <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt=""
-            src="/assets/images/using-bcb/epg/4-schedule-info.png"
-          />
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/epg/4-schedule-info.png" />
         </figure>
       </li>
       <li>
         Note the <strong>Start Time</strong> and <strong>End Time</strong> dates
         are in UTC time.
         <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt=""
-            src="/assets/images/using-bcb/epg/5-start-times.png"
-          />
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/epg/5-start-times.png" />
         </figure>
       </li>
       <li>
         To see the channel information in a Brightcove Beacon app, in the menu
         click in the <strong>Program Guide</strong> tab.
         <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt=""
-            src="/assets/images/using-bcb/epg/6-program-guide.png"
-          />
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/epg/6-program-guide.png" />
         </figure>
       </li>
       <li>Here you will be able to review the EPG of your channels.</li>
@@ -967,17 +931,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         To choose the EPG schedule for another day, select the day of your
         preference on the menu.
         <figure class="bcls-figure">
-          <img
-            class="bcls-image--no-border"
-            alt=""
-            src="/assets/images/using-bcb/epg/7-day-preference.png"
-          />
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/epg/7-day-preference.png" />
         </figure>
       </li>
     </ol>
   </section>
 </article>
-
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

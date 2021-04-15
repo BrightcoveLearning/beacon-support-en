@@ -167,10 +167,10 @@ parent: Beacon Web Store
         <strong>UMS Proxy Users</strong> - The full records of the registered users are maintained in the customer’s BYO UMS and that is the source of truth for user account and account management of the user.   User authentication on login occurs in the BYO UMS.  Proxy users are created in the Beacon UMS upon authentication or subscription.   When users are deleted from the UMS, proxy users are also deleted from Beacon.
         <p>The synchronization for authentication and account management is accomplished using OIDC (<a href="https://openid.net/developers/specs/">Open ID Connect</a>) protocol, an extension of OAuth 2.0. You must either provide a system with native OIDC support or update your UMS interface to support OIDC.</p>
       </li>
-      <li><strong>Purchase Notification</strong> - The web store is modified by you to send notifications of Commerce Events to the Beacon Entitlements API. The notification includes the USER ID and PRODUCT SKU.  When Beacon receives the notification the appropriate update to the entitlement in the User record is recorded in the Beacon UMS.  Thus bestowing or revoking the entitlement that enables the user to view content in Beacon apps.  The technical Entitlements API interface is defined in <a href="/developer-topics/integration-details.html">Beacon Integration Details</a></li>
+      <li><strong>Purchase Notification</strong> - The web store is modified by you to send notifications of Commerce Events to the Beacon Entitlements API. The notification includes the USER ID and PRODUCT SKU.  When Beacon receives the notification the appropriate update to the entitlement in the User record is recorded in the Beacon UMS.  Thus bestowing or revoking the entitlement that enables the user to view content in Beacon apps.  The technical Entitlements API interface is defined in <a href="/beacon-web-store/integration-details.html">Beacon Integration Details</a></li>
     </ul>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/developer-topics/beacon-web-store/beacon-store.png" alt="Beacon Store">
+      <img class="bcls-image" src="/assets/images/beacon-web-store/beacon-store.png" alt="Beacon Store">
       <figcaption class="bcls-caption--image">Beacon Store</figcaption>
     </figure>
     <p>Configuration details:</p>
@@ -190,7 +190,7 @@ parent: Beacon Web Store
     </ul>
     <p>Brightcove Beacon provides the in app purchase integrations.  The integration points are modified from what is described in the previous section to include payment notification FROM Beacon TO the webstore of successful in app purchases that occur.  The notification messages generate by Beacon follow a similar schema.</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/developer-topics/beacon-web-store/beacon-store-with-in-app-purchases.png" alt="Beacon Store with In-App Purchases">
+      <img class="bcls-image" src="/assets/images/beacon-web-store/beacon-store-with-in-app-purchases.png" alt="Beacon Store with In-App Purchases">
       <figcaption class="bcls-caption--image">Beacon Store with In-App Purchases</figcaption>
     </figure>
     <p>Configuration details:</p>
@@ -208,7 +208,7 @@ parent: Beacon Web Store
     <p>External BYO UMS systems interface with Beacon using the OIDC interface protocol.  Open ID Connect is an extension to OAuth  that standardizes identity token schemas.</p>
     <h3>Mobile and Web UMS Configuration</h3>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/developer-topics/beacon-web-store/mobile-web-ums.png" alt="Mobile and Web UMS">
+      <img class="bcls-image" src="/assets/images/beacon-web-store/mobile-web-ums.png" alt="Mobile and Web UMS">
       <figcaption class="bcls-caption--image">Mobile and Web UMS</figcaption>
     </figure>
     <ol>
@@ -219,7 +219,7 @@ parent: Beacon Web Store
     </ol>
     <h3>Connected and SmartTV UMS Configuration</h3>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/developer-topics/beacon-web-store/tv-ums.png" alt="Connected and SmartTV UMS">
+      <img class="bcls-image" src="/assets/images/beacon-web-store/tv-ums.png" alt="Connected and SmartTV UMS">
       <figcaption class="bcls-caption--image">Connected and SmartTV UMS</figcaption>
     </figure>
     <ol>

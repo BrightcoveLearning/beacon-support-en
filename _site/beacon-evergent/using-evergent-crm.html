@@ -649,42 +649,299 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 					</thead>
 					<tbody class="bcls-table__body">
 							<tr>
-									<td></td>
-									<td></td>
+									<td>Select BusinessUnit</td>
+									<td>Search for a customer under a particular Business unit</td>
 							</tr>
 							<tr>
-									<td></td>
-									<td></td>
+									<td>Account Number</td>
+									<td>Unique Account number of the customer-generated on successful registration in Evergent system</td>
 							</tr>
 							<tr>
-									<td></td>
-									<td></td>
+									<td>CP Customer ID</td>
+									<td>Unique Serial number of the hardware subscription purchased by the customer. Can be extracted from <code translate="no">getAccountDevices()</code> API</td> </tr>
+							<tr>
+									<td>Registration Number</td>
+									<td>Unique Registration number of the customer-generated on successful registration in Evergent system</td> 
 							</tr>
 							<tr>
-									<td></td>
-									<td></td>
+									<td>SP Account ID</td>
+									<td>Unique SP Account ID of the customer in the provisioning system </td>
 							</tr>
 							<tr>
-									<td></td>
-									<td></td>
+									<td>Order ID</td>
+									<td>Unique Order ID generated for the customer on the successful purchase of a subscription. Can be extracted from the <code translate="no">getCompleteAccountDetail()</code> API </td>
 							</tr>
 							<tr>
-									<td></td>
-									<td></td>
+									<td>Invoice Number</td>
+									<td>Unique Invoice ID generated for the customer on successful bill delivery</td>
 							</tr>
 							<tr>
-									<td></td>
-									<td></td>
+									<td>CTN</td>
+									<td>Unique customer telephone number</td>
 							</tr>
 							<tr>
-									<td></td>
-									<td></td>
+									<td>Payment Transaction ID</td>
+									<td>Klarna Payment gateway: Order number from Klarna transaction DIBS payment gateway: VerifyID from DIBS transaction </td>
 							</tr>
 							<tr>
-									<td></td>
-									<td></td>
+									<td>External OrderId</td>
+									<td>Unique external order ID generated for the customer on successful external order 
+										purchase</td>
+							</tr>
+							<tr>
+									<td>Payment Profile ID</td>
+									<td>Unique payment id that is generated at the time of payment</td>
+							</tr>
+							<tr>
+									<td>BAN</td>
+									<td>Unique BAN related to the customer account</td>
+							</tr>
+							<tr>
+									<td>BroadBand Ban</td>
+									<td>This field is used to search for the existing broadband accounts</td>
+							</tr>
+							<tr>
+									<td>User Name</td>
+									<td>Customer's login username as per the latest customer records</td>
+							</tr>
+							<tr>
+									<td>First Name</td>
+									<td>Customer's first name as per the latest customer records</td>
+							</tr>
+							<tr>
+									<td>Last Name</td>
+									<td>Customer's last name as per the latest customer records</td>
+							</tr>
+							<tr>
+									<td>SSN</td>
+									<td>Customer's SSN (Social Security Number) that is provided during registration and as per the customer's latest records</td>
+							</tr>
+							<tr>
+									<td>Alternate UserName</td>
+									<td>Customer's Alternate UserName provided during registration. This field holds either any of the Phone Numbers or Email or alphanumeric values during saving</td>
+							</tr>
+							<tr>
+									<td>Full Name</td>
+									<td>Customer's Full Name i.e., First Name and Last name as per the latest customer records</td>
+							</tr>
+							<tr>
+									<td>Phone Number</td>
+									<td>Can be any of the customer's Home or Work or Cell phone number that is provided during registration and as per the customer's latest records</td>
+							</tr>
+							<tr>
+									<td>Email</td>
+									<td>Customer's registered primary email address as per the latest customer records</td>
+							</tr>
+							<tr>
+									<td>Contact ID</td>
+									<td>Contact ID of the customer. Can be primary or secondary contact ID. This value can 
+										be extracted from <code translate="no">getAccountDetails()</code> or <code translate="no">getContacts()</code> API</td>
+							</tr>
+							<tr>
+									<td>CC4Digits</td>
+									<td>Customer's Credit Card last 4 digits that are registered or added later to the customer account</td>
+							</tr>
+							<tr>
+									<td>Expiry Month and Year</td>
+									<td>Expiry month and year of the customer's registered credit card in MM and YYYY 
+										format</td>
+							</tr>
+							<tr>
+									<td>Gift Card PIN</td>
+									<td>The gift card PIN for the gift card</td>
 							</tr>
 					</tbody>
+			</table>
+			</li>
+			<li>
+				If the search result yields only one account, then the customer’s Account Summary screen displays to view the 360-degree customer information:
+				<figure class="bcls-figure">
+					<img class="bcls-image" src="/assets/images/beacon-evergent/account-details.png" alt="Account Summary">
+					<figcaption class="bcls-caption--image">Account Summary</figcaption>
+				</figure>
+				<p>Below are the fields for an account.</p>
+				<table class="bcls-table">
+					<caption class="bcls-caption--table">Account Fields</caption>
+					<thead class="bcls-table__head">
+							<tr>
+									<th>Field</th>
+									<th>Description</th>
+							</tr>
+							<tr>
+									<th colspan="2">Account Details Section</th>
+							</tr>
+					</thead>
+					<tbody class="bcls-table__body">
+							<tr>
+									<td>Account Number</td>
+									<td>Unique Account number of the customer-generated on successful registration in Evergent system</td>
+							</tr>
+							<tr>
+									<td>Registration Number</td>
+									<td>Unique Registration number of the customer-generated on successful registration in Evergent system</td>
+							</tr>
+							<tr>
+									<td>Account Verified</td>
+									<td>Denotes whether the email verification is done status by a subscriber</td>
+							</tr>
+							<tr>
+									<td>Parental Control</td>
+									<td>If checked, will enable parental control</td>
+							</tr>
+							<tr>
+									<td>CP Customer ID</td>
+									<td>Unique CP Customer ID of the customer in the Evergent system</td>
+							</tr>
+							<tr>
+									<td>SP Customer ID</td>
+									<td>Unique SP Customer ID of the customer in the Evergent system</td>
+							</tr>
+							<tr>
+									<td>Complimentary Account</td>
+									<td>Denotes whether the account is a complementary mode or not</td>
+							</tr>
+							<tr>
+									<td>Complaint Mode</td>
+									<td>Denotes whether the account is a complaint mode or not</td>
+							</tr>
+							<tr>
+									<td>Account Type </td>
+									<td>Denotes the subscriber account type</td>
+							</tr>
+							<tr>
+									<td>Sales Method</td>
+									<td>Denotes the sales method through customer acquisition is done</td>
+								</tr>
+								<tr>
+										<td>Billing Mode</td>
+										<td>Denotes the frequency of bill mode</td>
+								</tr>
+								<tr>
+										<td>Bill Cycle</td>
+										<td>Indicates customer bill generation date</td>
+								</tr>
+								<tr>
+										<td>Bill Delivery Type</td>
+										<td>Type of bill delivery opted by the customer</td>
+								</tr>
+								<tr>
+										<td>Account Role</td>
+										<td>Indicates the account role of the customer</td>
+								</tr>
+								<tr>
+										<td>Cool Off</td>
+										<td>This indicates whether the customer is eligible for any type of offers/promotion as per the segments defined in the segments tab</td>
+								</tr>
+								<tr>
+										<td>Migrated Category</td>
+										<td>It indicates the reason why the user account is not migrated</td>
+								</tr>
+							</tbody>
+							<thead class="bcls-table__head">
+								<tr>
+										<th colspan="2">Service Details Section</th>
+								</tr>
+							</thead>
+							<tbody class="bcls-table__body">
+								<tr>
+									<td>Complaint Mode</td>
+									<td>Denotes whether the account is a complaint mode or not</td>
+							</tr>
+							<tr>
+									<td>Account Type </td>
+									<td>Denotes the subscriber account type</td>
+							</tr>
+							<tr>
+									<td>Sales Method</td>
+									<td>Denotes the sales method through customer acquisition is done</td>
+								</tr>
+								<tr>
+										<td>Billing Mode</td>
+										<td>Denotes the frequency of bill mode</td>
+								</tr>
+								<tr>
+										<td>Bill Cycle</td>
+										<td>Indicates customer bill generation date</td>
+								</tr>
+								<tr>
+										<td>Bill Delivery Type</td>
+										<td>Type of bill delivery opted by the customer</td>
+								</tr>
+							</tbody>
+							<thead class="bcls-table__head">
+								<tr>
+										<th colspan="2">Billing and Finance Section</th>
+								</tr>
+							</thead>
+							<tbody class="bcls-table__body">
+								<tr>
+									<td>Last Bill Amount</td>
+									<td>Denotes customer last bill amount</td>
+							</tr>
+							<tr>
+									<td>Current Balance</td>
+									<td>Customer's current balance amount</td>
+							</tr>
+							<tr>
+									<td>Next Bill Amount</td>
+									<td>This indicates the next bill amount that is to be collected from the customer</td>
+							</tr>
+							<tr>
+									<td>Device Activation Date (RTP date unless 10ft device activated)</td>
+									<td>This field is introduced to display the date up to which the device activation can be done for the customer after purchase</td>
+							</tr>
+							<tr>
+									<td>Devices on Service Fee</td>
+									<td>This reflects the Installment Details feature. On clicking this the user is navigated to the Orders tab in the Account Management module for getting the installment details</td>
+							</tr>
+							<tr>
+									<td>Next Bill Date</td>
+									<td>This indicates the next bill generation date of the customer</td>
+							</tr>
+							<tr>
+									<td>Wallet Balance</td>
+									<td>This indicates the available wallet balance for the customer account</td>
+							</tr>
+							<tr>
+									<td>Customer Since</td>
+									<td>Indicates when the customer is with the business</td>
+							</tr>
+							<tr>
+									<td>Revenue till date</td>
+									<td>Indicates revenue generated from that customer to date</td>
+							</tr>
+							<tr>
+									<td>Calls from Customer till date</td>
+									<td>Number calls received from customer till date to CSR</td>
+							</tr>
+							<tr>
+									<td>No. of Compensations</td>
+									<td>The total number of compensations provided to the customer</td>
+							</tr>
+							<tr>
+									<td>Total Compensation Amount</td>
+									<td>Total compensation amount provided to the customer</td>
+							</tr>
+							<tr>
+									<td>Loyalty Points</td>
+									<td>The points earned by the customers based on their purchases</td>
+							</tr>
+							<tr>
+									<td>Encashable Points/Amount</td>
+									<td>The points that can be encashable by the customer and the amount that can be encashed for the accumulated points</td>
+							</tr>
+						</tbody>
+						<thead class="bcls-table__head">
+							<tr>
+									<th colspan="2">Payment Methods Section</th>
+							</tr>
+						</thead>
+						<tbody class="bcls-table__body">
+							<tr>
+								<td>Setup</td>
+								<td>Displays the type of Auto Payment Method of the customer along with the card details in a masked form. Can be Credit/Debit Card, Operator Billing, Appstore Billing, Google Wallet, etc.</td>
+						</tr>
+				</tbody>
 			</table>
 			</li>
 		</ol>

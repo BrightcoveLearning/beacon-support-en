@@ -60,11 +60,6 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/support/brightcove-answer.html",
-      "oldURL": "/brightcove-answer"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/cloud-playout-add-content.html",
       "oldURL": "/cloud-playout-add-content"
   },
@@ -240,17 +235,22 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/panasonic/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/",
+      "newURL": "https://beacon.support.brightcove.com/references/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/samsung/",
+      "newURL": "https://beacon.support.brightcove.com/monetization/beacon-evergent/",
       "oldURL": "/index"
   },
 
@@ -265,22 +265,17 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/",
-      "oldURL": "/index"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/panasonic/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/references/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/",
       "oldURL": "/index"
   },
 
@@ -295,17 +290,17 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/fire-tv/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://beacon.support.brightcove.com/training/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/fire-tv/",
       "oldURL": "/index"
   },
 
@@ -330,7 +325,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/monetization/beacon-evergent/",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/samsung/",
       "oldURL": "/index"
   },
 

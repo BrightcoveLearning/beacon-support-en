@@ -9,6 +9,110 @@ layout: staging
 <article class="bcls-article">
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
-    <h2 id=""></h2>
+    <h2 id="introduction">Introduction</h2>
+		<p>To get to a user's finance and billing history, you will need to login to the Evergent CRM system and locate the account you want to work on. See <a href="/monetization/beacon-evergent/evergent-finding-accounts.html">Locating Accounts in the Evergent CRM</a> for details.</p>
+		<p>The <strong>Billing and Finance</strong> tab of the user account information is used to view the Billing and Financial history of your viewers. You can issue Payments, Adjustments, and Refunds to your customers from the Billing and Finance tab.</p>
+		<figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/beacon-evergent/billing-finance-tab.png" alt="Billing and Finance Tab">
+			<figcaption class="bcls-caption--image">Billing and Finance Tab</figcaption>
+		</figure>
+		<p>The following are the functionalities that can be provisioned:</p>
+		<ul>
+			<li>Running Balance</li>
+			<li>Invoices</li>
+			<li>Payments</li>
+			<li>Adjustments</li>
+			<li>Refunds</li>
+		</ul>
   </section>
+  <section class="bcls-section">
+    <h2 id="Running_Balance">Running Balance</h2>
+		<p>Running balance is a dynamic ledger balance that shows all the credit and debit transactions of that user account based on the selected range with the latest record</p>
+		<figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/beacon-evergent/running-balance.png" alt="Running Balance">
+			<figcaption class="bcls-caption--image">Running Balance</figcaption>
+		</figure>
+		<h3>Make a payment</h3>
+		<p>This module is used to make payment for a user account by an existing payment method and a new  payment method. To make a payment, do the following:</p>
+		<figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/beacon-evergent/make-payment.png" alt="Make a Payment">
+			<figcaption class="bcls-caption--image">Make a Payment</figcaption>
+		</figure>
+		<ol class="bcls-tasklist-restart">
+			<li>Click the <strong>Running Balance</strong> hyperlink under the Billing and Finance tab.</li>
+			<li>Click the <strong>Make a Payment</strong> button.</li>
+			<li>Select the payment mode that you want to make a payment.</li>
+			<li>Enter the card number in the <strong>Card Number</strong> field.</li>
+			<li>Enter the type of card in the <strong>Card Type</strong> field.</li>
+			<li>Enter the name of a cardholder in the <strong>Name on Card</strong> field.</li>
+			<li>Enter the card expiry date in the <strong>Expiry (MM/YYYY)</strong> field.</li>
+			<li>Enter the security code in the <strong>Security Code</strong> field.</li>
+			<li>Enter the required amount in the <strong>Amount</strong> field.</li>
+			<li>Click the <strong>Make Payment</strong> button. The payment line-item will be added to Payment History.</li>
+		</ol>
+
+		<h3>Adjustments</h3>
+		<p>This module is a transaction that provides the payment corrections of a customer account payment entry. To make the payment adjustments to the account, do the following:</p>
+		<figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/beacon-evergent/make-adjustment.png" alt="Make an Adjustment">
+			<figcaption class="bcls-caption--image">Make an Adjustment</figcaption>
+		</figure>
+		<ol class="bcls-tasklist-restart">
+			<li>Click the <strong>Running Balance</strong> hyperlink under the Billing and Finance tab.</li>
+			<li>Click the <strong>Make an Adjustment</strong> button.</li>
+			<li>Select the <strong>Adjustment Type</strong> from the drop-down list.</li>
+			<li>Enter the amount that you want to adjust in the <strong>Amount</strong> field</li>
+			<li>Select the reason for the payment adjustments from the <strong>Select Reason</strong> drop-down list.</li>
+			<li>Select the invoice from the <strong>Given-on Invoice</strong> drop-down list for which you want to make the  adjustments.</li>
+			<li>Select the <strong>Outage Start Date</strong> and <strong>Outage End Date</strong> from the calendar.</li>
+			<li>Type the comments in the <strong>Comment</strong> field.</li>
+			<li>Click the <strong>Done</strong> button. The adjustments are added in the List of Adjustments section.</li>
+		</ol>
+		<h3>Write-off</h3>
+		<p>The Write-Off button in the Running Balance of the respective accounts will get displayed only when the  balance due for the account is positive, i.e. the customer must pay the amount. When clicking on the Write Off button, if the customer has paid the amount and <strong>add a negative adjustment amount to make the balance  due to zero</strong>.</p>
+  </section>
+	<section class="bcls-section">
+		<h2 id="Invoices">Invoices</h2>
+		<p>The invoices section shows all the general invoices created for an account. It shows in detail for each invoice.</p>
+		<figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/beacon-evergent/invoices.png" alt="Invoices">
+			<figcaption class="bcls-caption--image">Invoices</figcaption>
+		</figure>
+	</section>
+	<section class="bcls-section">
+		<h2 id="Payments">Payments</h2>
+		<p>You can create a new payment and view the existing customer payment history, which provides a record  of credit card details, ordered product Id, the payment received date, amount, status, along with the option to  refund the payment to the customer.</p>
+		<figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/beacon-evergent/payments.png" alt="Payments">
+			<figcaption class="bcls-caption--image">Payments</figcaption>
+		</figure>
+		<h3>Refunding the Amount </h3>
+		<p>To refund the amount, do the following:</p>
+		<ol class="bcls-tasklist-restart">
+			<li>Click the <strong>Payments</strong> hyperlink under the <strong>Billing and Finance</strong> tab.</li>
+			<li>On the Payment History screen, click the <strong>Refund</strong> button in the <strong>Actions</strong> column heading that you want to refund for the account.</li>
+			<li>
+				A dialog box, <strong>“Are you sure?”</strong> appears as shown below.
+				<figure class="bcls-figure">
+					<img class="bcls-image" src="/" alt="Confirm Refund">
+					<figcaption class="bcls-caption--image">Confirm Refund</figcaption>
+				</figure>
+			</li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ol>
+	</section>
+	<section class="bcls-section">
+		<h2 id="Adjustments">Adjustments</h2>
+		<p></p>
+	</section>
+	<section class="bcls-section">
+		<h2 id="Refunds">Refunds</h2>
+		<p></p>
+	</section>
 </article>

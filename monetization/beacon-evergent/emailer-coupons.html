@@ -31,7 +31,7 @@ layout: staging
 			<dt>Invoice Message</dt>
 			<dd>During the invoice generation process and when the bill run is performed the system will pick the PDF invoice template defined under the email section with message type as invoice message. This invoice is associated to the subscriber account in the PDF format and when the delivery of the bill is performed from billing management, this email gets triggered.</dd>
 			<dt>Credit Card Expiry Reminder</dt>
-			<dd>When the “Credit Card Expiry Reminder” check box is selected at the business level then the reminder email is sent to the customers when their credit card is about to expired (usually a month before card expiry the email is sent). In this case the system will use email template message type credit card expiry reminder.</dd>
+			<dd>When the "Credit Card Expiry Reminder" check box is selected at the business level then the reminder email is sent to the customers when their credit card is about to expired (usually a month before card expiry the email is sent). In this case the system will use email template message type credit card expiry reminder.</dd>
 			<dt>Invocation Activity Error Info</dt>
 			<dd>When the invocation activity under workflow admin is defined and if the invocation activity is failed then the system will use this message type to notify the business that the invocation activity is failed.</dd>
 			<dt>Bill Run Process</dt>
@@ -70,7 +70,7 @@ layout: staging
 			<dt>Reset Password</dt>
 			<dd>
 				When an you make a request to your account admin to update or reset your password, an email will be sent sent to you with the reset password link. Click the reset password link to reset your password.
-				<p>The “Update Your Password” screen appears, as shown in the image below.</p>
+				<p>The "Update Your Password" screen appears, as shown in the image below.</p>
 				<figure class="bcls-figure">
 					<img class="bcls-image" src="/assets/images/beacon-evergent/update-password.png" alt="Update Password">
 					<figcaption class="bcls-caption--image">Update Password</figcaption>
@@ -173,10 +173,103 @@ layout: staging
 					<figcaption class="bcls-caption--image">Generate Coupon</figcaption>
 				</figure>
 			</li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
+			<li>
+				The New Coupon/Voucher generation screen appears as shown below.
+				<figure class="bcls-figure">
+					<img class="bcls-image" src="/assets/images/beacon-evergent/new-coupon-voucher.png" alt="New Coupon/Voucher">
+					<figcaption class="bcls-caption--image">New Coupon/Voucher</figcaption>
+				</figure>
+			</li>
+			<li>
+				Enter information in the fields as follows:
+				<ol style="list-style-type: lower-alpha;">
+					<li><strong>Coupon Prefix</strong>: Prefix of the Coupon (ex: TestC, Hal, CD, Friday, etc.)</li>
+					<li><strong>Batch Name</strong>: Name of the Batch for the Coupons (Ex: Test Coupon, Christmas, etc.)</li>
+					<li><strong>Retailer</strong>: Coupons can be generated on the Retailer selection like (AT&T, Vodafone, Verizon, Idea, etc.)</li>
+					<li><strong>Starting Date</strong>: The date from when the Coupon is available for the user</li>
+					<li><strong>Expiration Date</strong>: Users can define the Day the Coupon Expires</li>
+					<li><strong>Coupon Requestor</strong>: Indicates the name of the requestor who has requested the coupons</li>
+					<li>
+						<strong>Credited as Wallet Top-up</strong>:
+						<ul>
+							<li>For generating the Coupon for wallettop-up,click the toggle switch to enable and enter Amount</li>
+							<li>For generating the Coupon as a voucher, click the toggle switch to disable it</li>
+						</ul>
+						<figure class="bcls-figure">
+							<img class="bcls-image" src="/assets/images/beacon-evergent/toggle-wallet-top-up.png" alt="Toggle for Wallet Top-Up">
+							<figcaption class="bcls-caption--image">Toggle for Wallet Top-Up</figcaption>
+						</figure>
+					</li>
+					<li><strong>Discount Type</strong>: Define the Coupon Type – e.g., Free, Flat, Flat Off, Percentage, Percentage-Off, and Validity Extension</li>
+					<li><strong>Amount/Percentage</strong>: For the type selected, the Amount/Percentage field appears</li>
+					<li><strong>Period & Duration</strong>: The Period of Coupon applied can be number of days or number of Months, as the respective selection of period the Durations of the Coupon implies</li>
+					<li><strong>Make Prefix as Coupon Code</strong>: On checking the check, box Prefix will be saved as Coupon Code</li>
+					<li><strong>No. of Coupons</strong>: The user can provide the Number of Coupons generated for the Batch. In the Case of "Prefix as Coupon Code," the No. of Coupons will be "1"</li>
+					<li><strong>Coupon Priority</strong>: is used to set the generic coupon display on a priority order basis as generated in the business and mapped to a subscription and offer type</li>
+					<li><strong>Coupon Length</strong>: Length of the coupon code you want to be generated</li>
+					<li><strong>Multiple Redemptions</strong>: If this toggle switch is selected, the user can define the Maximum Redemptions for a Coupon</li>
+					<li><strong>Maximum Redemptions</strong>: Allows the No. of Redemptions for a Coupon</li>
+					<li><strong>Multiple Redemptions by Single User</strong>: Check box allows customers to redeem a single Coupon on their account for No. of Maximum redemptions by Single User</li>
+					<li><strong>Multiple Redemptions by Single User</strong>: Check box allows customers to redeem a single Coupon on their account for No. of Maximum redemptions by Single User</li>
+					<li><strong>Case sensitive</strong>: Check the check box if you want to generate coupon codes in Capital letters</li>
+					<li><strong>isGift</strong>: If the check box is selected, the Coupon can be given to others</li>
+					<li><strong>Inheritable</strong>: If the check box is selected, the Coupon can be inheritable</li>
+					<li><strong>Is All Items Mandatory</strong>: If this check box is selected, then all the items are mandatory</li>
+					<li><strong>Skip Payment Method</strong>: If the check box is selected, then the payment method will be skipped after applying the Coupon</li>
+					<li><strong>Coupon Description</strong>: Enter the coupon description</li>
+					<li><strong>Campaign Info</strong>: Enter the campaign Info details</li>
+					<li><strong>Success Message</strong>: Enter the success message that is to be displayed to the user.</li>
+					<li><strong>Warning Message</strong>: Enter the warning message that is to be displayed to the user</li>
+					<li><strong>Applicable Products</strong>: User can select the no. of applicable product to the Coupon (Ex: Flat 30% OFF Coupon for product <strong>Neon</strong>)</li>
+					<li><strong>Applicable Packages</strong>: The user can select the no. of application packages to the Coupons</li>
+					<li><strong>Offer Types</strong>: The user can select the offer types for the Coupons</li>
+					<li><strong>Applicable Payment Modes</strong>: The user can select the applicable payment modes for the Coupon</li>
+				</ol>
+			</li>
+			<li>Click the <strong>Create Coupon</strong> button to generate coupons (the generation time of coupons also depends on the No. of Coupons the user generates).</li>
+			<li>
+				Once Coupons are generated, <strong>Coupons Generated Successfully</strong> message is displayed:
+				<figure class="bcls-figure">
+					<img class="bcls-image" src="/assets/images/beacon-evergent/coupons-generated.png" alt="Coupons Generated">
+					<figcaption class="bcls-caption--image">Coupons Generated</figcaption>
+				</figure>
+			</li>
 		</ol>
+		<h3>Coupon search</h3>
+		<p>Search the coupons by using the various options. To search the coupons, do the following:</p>
+		<ol class="bcls-tasklist-restart">
+			<li>On the <strong>Coupons</strong> screen, enter the field value to search by Batch Name, Prefix, Coupon Code, Status, Expiration Date From/To.</li>
+			<li>
+				Click the Search button. The coupon search results are displayed, as shown below.
+				<figure class="bcls-figure">
+					<img class="bcls-image" src="/assets/images/beacon-evergent/coupon-search-results.png" alt="Coupon Search Results">
+					<figcaption class="bcls-caption--image">Coupon Search Results</figcaption>
+				</figure>
+			</li>
+			<li>
+				Click the Enable Advance Search toggle switch to enable the advance search.
+				<figure class="bcls-figure">
+					<img class="bcls-image" src="/assets/images/beacon-evergent/enable-advanced-coupon-search.png" alt="Enable Advanced Coupon Search">
+					<figcaption class="bcls-caption--image">Enable Advanced Coupon Search</figcaption>
+				</figure>
+			</li>
+			<li>You can search with coupon batch for the Applicable Products and Applicable Payment Modes listed in the lists. To search with coupon batch, click the Coupon Batch Search button.</li>
+			<li>
+				The searched coupons are displayed in the Search Result list, as shown below.
+				<figure class="bcls-figure">
+					<img class="bcls-image" src="/assets/images/beacon-evergent/coupon-batch-search-results.png" alt="Coupon Batch Search Results">
+					<figcaption class="bcls-caption--image">Coupon Batch Search Results</figcaption>
+				</figure>
+			</li>
+		</ol>
+	</section>
+	<section class="bcls-section">
+		<h2 id="Related_topics">Related topics</h2>
+		<ul>
+			<li><a href="/monetization/beacon-evergent/overview-beacon-evergent.html">Overview: Beacon-Evergent Integration</a></li>
+			<li><a href="/monetization/beacon-evergent/evergent-finding-accounts.html">Locating Accounts in the Evergent CRM</a></li>
+			<li><a href="/monetization/beacon-evergent/evergent-managing-account-details.html">Evergent: Managing Account Details</a></li>
+			<li><a href="/monetization/beacon-evergent/evergent-billing-finance.html">Evergent: Billing and Finance</a></li>
+		</ul>
 	</section>
 </article>

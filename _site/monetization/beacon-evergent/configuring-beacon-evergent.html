@@ -563,12 +563,109 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
+https://beacon-monetization-service.bifrost.ellis.us-east-1.qa.deploys.brightcove.com/v1/accounts/{account_id}/{beacon_instance}/users
 <h1>Configuring Beacon with Evergent</h1>
 <article class="bcls-article">
   <summary>This topic offers a step-by-step guide for configuring Beacon and Evergent to work with each other.</summary>
+	<section class="bcls-section">
+		<h2 id="Introduction">Introduction</h2>
+		<p>Configuring Beacon and Evergent to work together requires some setup in both systems. In several instances, you need to copy information from one system to the other, or replicate information exactly from one system to the other. If you can have both systems open in separate browser windows side-by-side, that will make it easier to perform the steps below successfully.</p>
+	</section>
   <section class="bcls-section">
-    <h2 id=""></h2>
+    <h2 id="Beacon_part_1">Beacon part 1</h2>
+		<p>For this part, you will need a configured Beacon CMS (customer management system) instance.</p>
+		<ol class="bcls-tasklist-restart">
+			<li>In the Beacon CMS, configure Evergent as a <strong>Store</strong>.</li>
+			<li>On the <strong>Settings &gt; Location</strong> page for the store, define the countries that the service will be available in.</li>
+			<li>On the <strong>Settings &gt; Currencies</strong> page for the store, define the currencies for each country.</li>
+	</ol>
   </section>
+	<section class="bcls-section">
+		<h2 id="Evergent_part_1">Evergent part 1</h2>
+		<p>For this part, you need to set up BUs (business units) in the Evergent Go Portal. Each Evergent BU will map to a specific country or region of the world, and these, and the currencies associated with them, should match what you entered into the Beacon CMS.</p>
+		<ol class="bcls-tasklist-restart">
+			<li>Configure the currency of the BU.</li>
+			<li>Configure the country where the BU is located</li>
+			<li>
+				Configure the payment gateways and payment methods for the BU:
+				<ul>
+					<li>Credit Card, Debit card</li>
+					<li>E-wallets</li>
+					<li>In-app purchases (iOS, Google Play, Amazon Billing, Roku Pay)</li>
+				</ul>
+			</li>
+	</ol>
+	</section>
+	<section class="bcls-section">
+		<h2 id="Beacon_part_2">Beacon part 2</h2>
+		<p>Evergent BUs IDs and country mapping need to be configured per Beacon customer. This is done in the Monetization Payment Service which is a backend service owned by the Playback team. (The plan is for this config to move to Jackie Pages by the end of Q1 21). These configs should be tied to a specific Video Cloud customer account that is being used for Beacon.</p>
+	</section>
+	<section class="bcls-section">
+		<h2 id="Beacon_part_3">Beacon part 4</h2>
+		<p>An Evergent <a href="https://en.wikipedia.org/wiki/Salt_(cryptography)">salt</a> for that specific Beacon customer needs to be configured in the Monetization Payment Service. </p>
+	</section>
+	<section class="bcls-section">
+		<h2 id="Beacon_part_5">Beacon part 5</h2>
+		<p>The Monetization Payment Service generates a "Beacon_Monetization_Api” endpoint (beacon-monetization-service.brightcove.com) that needs to be entered into the customers Beacon CMS instance. This should be entered in the Settings page under "Payment Gateway Configuration” for Evergent.</p>
+	</section>
+	<section class="bcls-section">
+		<h2 id="Beacon_part_6">Beacon part 6</h2>
+		<ol class="bcls-tasklist-restart">
+			<li>
+				Create SVOD plans in the Beacon CMS Commerce tab. Define the monetization policies:
+				<ol style="list-style-type: lower-alpha;">
+					<li>Billing Frequency</li>
+					<li>Trial period</li>
+					<li>Renewal policy</li>
+					<li>
+						Select which Stores the plan will show up in:
+						<ul>
+							<li>Evergent</li>
+							<li>App stores (iOS, Google Play, Amazon, Roku)</li>
+						</ul>
+					</li>
+					<li>Set the devices and locations.</li>
+					<li>Set the Availability dates.</li>
+					<li>
+						Configure the App Stores:
+						<ol style="list-style-type: lower-roman;">
+							<li>Configure the availability dates. </li>
+							<li>Configure the devices.</li>
+							<li>Enter the price and currencies.</li>
+							<li>Create the store IDs. This ID needs to be copied and pasted into the product sku in the app stores. Also, it needs to be entered in the Evergent Go for the matching SVOD plan.</li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+	</ol>
+	</section>
+	<section class="bcls-section">
+		<h2 id="Evergent_part_2">Evergent part 2</h2>
+		<p>In Evergent Go, create matching SVOD plans. It's important that the monetization policies match identically to what was entered in Beacon’s CMS. Also, note if you want to sell SVOD plans in different currencies, you need to use multiple Evergent BUs. The plans in each BU are mapped to Beacon using SKUs that are entered in the "Evergent Store” in the Beacon CMS.</p>
+		<figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/beacon-evergent/svod-plans.png" alt="Evergent SVOD Setup">
+			<figcaption class="bcls-caption--image">Evergent SVOD Setup</figcaption>
+		</figure>
+	</section>
+	<section class="bcls-section">
+		<h2 id="Beacon_part_7">Beacon part 7</h2>
+		<p>Configure Beacon Evergent Store for your SVOD plans:</p>
+		<ol class="bcls-tasklist-restart">
+			<li>Configure the availability.</li>
+			<li>Configure devices (right now only web).</li>
+			<li>Configure the Price and Currencies. The Currencies should map to the plans in the specific BUs that use that currency. For example, if you have a plan you are selling in EU using Euros, the Evergent ID should come from the EU Evergent BU. The Evergent ID field is where you enter the Evergent SKU.</li>
+		</ol>
+	</section>
+	<section class="bcls-section">
+		<h2 id="Related_topics">Related topics</h2>
+		<ul>
+			<li><a href="/monetization/beacon-evergent/overview-beacon-evergent.html">Overview: Beacon-Evergent Integration</a></li>
+			<li><a href="/monetization/beacon-evergent/evergent-finding-accounts.html">Locating Accounts in the Evergent CRM</a></li>
+			<li><a href="/monetization/beacon-evergent/evergent-managing-account-details.html">Evergent: Managing Account Details</a></li>
+			<li><a href="/monetization/beacon-evergent/evergent-billing-finance.html">Evergent: Billing and Finance</a></li>
+			<li><a href="/monetization/beacon-evergent/emailer-coupons.html">Evergent: Emailer and Coupons</a></li>
+		</ul>
+	</section>
 </article>
 
 <!-- complete bootstrap layout -->

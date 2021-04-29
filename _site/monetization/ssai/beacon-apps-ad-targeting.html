@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Beacon Apps Ad targeting allows Beacon customers to send important device-level and user-specific information from the customer’s Beacon apps to their ad server or ad provider." />
+
+    <title>Beacon Apps Ad Targeting</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://support.brightcove.com/site-assets/css/site/prism.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://support.brightcove.com/site-assets/css/site/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://support.brightcove.com/site-assets/css/site/landing-page.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://support.brightcove.com/site-assets/css/site/tabs.css"
+    />
+    <link rel="stylesheet" href="/assets/css/local.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/381443caa8.js"
+      crossorigin="anonymous"
+    ></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
+    <script src="/assets/js/sajari-head.js"></script>
+		<script src="https://unpkg.com/feather-icons"></script>
+  </head>
+
+  <body class="body"></body>
+</html>
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/SVG/COVE004_Brightcove_Beacon_Logo_RGB_K.svg" alt="Brightcove"></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script>
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><i data-feather="help-circle"></i> Contact Support</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><i data-feather="cloud"></i> System Status</a></span>
+    <br>
+    
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/monetization/ssai/">SSAI</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Beacon Apps Ad Targeting</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 left-side-bar">
+				<select id="site_select" class="bcls-select" style="margin-left: 1rem;">
+					<option value="">Other Brightcove Docs</option>
+					
+						
+							<option value="https://support.brightcove.com">Documentation Home</option>
+						
+					
+						
+							<option value="">-- VIDEO CLOUD --</option>
+						
+					
+						
+							<option value="https://studio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+						
+					
+						
+							<option value="https://player.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+						
+					
+						
+							<option value="https://apis.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+						
+					
+						
+							<option value="https://sdks.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+						
+					
+						
+							<option value="https://integrations.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+						
+					
+						
+							<option value="https://general.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+						
+					
+						
+							<option value="">-- VIDEO ESSENTIALS --</option>
+						
+					
+						
+							<option value="https://beacon.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon</option>
+						
+					
+						
+							<option value="https://live.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+						
+					
+						
+							<option value="https://zencoder.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+						
+					
+						
+							<option value="">-- VIDEO CLOUD ADD-ONS --</option>
+						
+					
+						
+							<option value="https://audience.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience</option>
+						
+					
+						
+							<option value="https://campaign.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
+						
+					
+						
+							<option value="https://engage.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Engage</option>
+						
+					
+						
+							<option value="https://gallery.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+						
+					
+						
+							<option value="https://ssai.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+						
+					
+						
+							<option value="https://social.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+						
+					
+				</select>
+      <nav class="sidenav" id="side_nav">
+        
+        
+        <h5><a href="/index.html">Home</a></h5>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/getting-started/index.html"><strong>+</strong> &nbsp;Getting Started</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li><a href="/getting-started/learning-guide-bc-beacon.html">Learning Guide</a></li>
+          
+          
+          
+          <li><a href="/getting-started/implementation-phases.html">Implementation Phases</a></li>
+          
+          
+          
+          <li><a href="/getting-started/app-design-considerations.html">Application Design Considerations</a></li>
+          
+          
+          
+          <li><a href="/getting-started/creating-your-app-design-info-architecture.html">App Design - Info Architecture</a></li>
+          
+          
+          
+          <li><a href="/getting-started/creating-your-app-design-layout-options.html">App Design - Layout Options</a></li>
+          
+          
+          
+          <li><a href="/getting-started/design-best-practices.html">Design Best Practices</a></li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/syncing-with-video-cloud/index.html"><strong>+</strong> &nbsp;Syncing with Video Cloud</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li><a href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a></li>
+          
+          
+          
+          <li><a href="/syncing-with-video-cloud/forcing-a-sync.html">Forcing a Sync</a></li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/using-brightcove-beacon/index.html"><strong>+</strong> &nbsp;Using Brightcove Beacon</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li><a href="/using-brightcove-beacon/adding-to-page.html">Adding a Carousel to a Page</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/cloud-playout/cloud-playout-overview.html">Overview: Cloud Playout Channels</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/cloud-playout/cloud-playout-stream-vod.html">Creating a Cloud Playout Channel</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/cloud-playout/using-channel-actions.html">Using Channel Actions</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/cloud-playout/adding-bumpers-to-vod.html">Adding Bumpers to Cloud Playout</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/cloud-playout/enabling-server-side-ads.html">Monetizing Cloud Playout</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/cloud-playout/viewing-channel-output-and-analytics.html">Viewing Channel Output and Analytics</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/creating-a-channel.html">Creating a Beacon Channel</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/electronic-program-guides.html">Creating an Electronic Program Guide (EPG)</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/creating-a-page.html">Creating a New Page</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/creating-a-playlist.html">Creating a Playlist</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/creating-subscription-package.html">Creating a Subscription Package</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/promo-codes.html">Creating Promo Codes</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/series-seasons-episodes.html">Creating Series/Seasons/Episodes</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/ga-self-configuration.html">Google Analytics Self Configuration</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/implementing-authvod.html">Implementing AuthVOD</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/vod-ssai.html">Implementing VOD SSAI</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/including-non-configurable-pages.html">Including Non-Configurable Pages</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/introducing-pages.html">Introducing Pages</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/streaming-live-event.html">Streaming a Live Event</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/streaming-vods-to-a-channel.html">Streaming VODs to a Channel</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/monetization-options.html">Understanding Monetization Options</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/using-subscription-package.html">Using a Subscription Package</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/tools.html">Using the Tools</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/viewing-analytics-data.html">Viewing Analytics Data</a></li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="monetization/index.html"><strong>+</strong> &nbsp;Monetization</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li class="submenu-header">
+            <a href="<strong>+</strong> &nbsp;/monetization/ssai/index.html">SSAI</a>
+            <ul class="sidenav-subsubmenu" style="display:none;">
+              
+              <li><a href="/monetization/ssai/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a></li>
+              
+              <li><a href="/monetization/ssai/live-ssai.html">Implementing Live SSAI</a></li>
+              
+              <li><a href="/monetization/ssai/beacon-apps-ad-targeting.html">Beacon Apps Ad Targeting</a></li>
+              
+            </ul>
+          </li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/beacon-web-store/index.html"><strong>+</strong> &nbsp;Beacon Web Store</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li><a href="/beacon-web-store/beacon-webstore-overview.html">Overview: Brightcove Beacon Web Store</a></li>
+          
+          
+          
+          <li><a href="/beacon-web-store/integration-details.html">Integrating with the Beacon Web Store</a></li>
+          
+          
+          
+          <li><a href="/beacon-web-store/beacon-store-webhook-reference.html">Beacon Store Webhook Reference</a></li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/creating-your-apps/index.html"><strong>+</strong> &nbsp;Creating Your Apps</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li class="submenu-header">
+            <a href="<strong>+</strong> &nbsp;/creating-your-apps/android/index.html">Android</a>
+            <ul class="sidenav-subsubmenu" style="display:none;">
+              
+              <li><a href="/creating-your-apps/android/submitting-to-android.html">Submitting New Apps to the Android Store</a></li>
+              
+              <li><a href="/creating-your-apps/android/updating-android-apps-to-bcb.html">Updating Android Apps to Brightcove Beacon</a></li>
+              
+              <li><a href="/creating-your-apps/android/adding-subscriptions-in-android.html">Adding Subscriptions to Android</a></li>
+              
+              <li><a href="/creating-your-apps/android/improving-relevance-android.html">Improving Search Relevance in the Android Play Store</a></li>
+              
+              <li><a href="/creating-your-apps/android/installing-android-test-build.html">Installing an Android Test Build</a></li>
+              
+              <li><a href="/creating-your-apps/android/managing-google-subscriptions-1.html">Managing Google Subscriptions Part 1</a></li>
+              
+              <li><a href="/creating-your-apps/android/managing-google-subscriptions-2.html">Managing Google Subscriptions Part 2</a></li>
+              
+            </ul>
+          </li>
+          
+          
+          
+          <li class="submenu-header">
+            <a href="<strong>+</strong> &nbsp;/creating-your-apps/fire-tv/index.html">Fire TV</a>
+            <ul class="sidenav-subsubmenu" style="display:none;">
+              
+              <li><a href="/creating-your-apps/fire-tv/installing-fire-tv-test-build.html">Installing a Fire TV Test Build</a></li>
+              
+              <li><a href="/creating-your-apps/fire-tv/submitting-to-amazon.html">Submitting to the Amazon Store</a></li>
+              
+            </ul>
+          </li>
+          
+          
+          
+          <li class="submenu-header">
+            <a href="<strong>+</strong> &nbsp;/creating-your-apps/ios-tvos/index.html">iOS/tvOS</a>
+            <ul class="sidenav-subsubmenu" style="display:none;">
+              
+              <li><a href="/creating-your-apps/ios-tvos/installing-ios-test-build.html">Installing an iOS/tvOS Test Build</a></li>
+              
+              <li><a href="/creating-your-apps/ios-tvos/submitting-to-apple.html">Submitting to the Apple Store</a></li>
+              
+            </ul>
+          </li>
+          
+          
+          
+          <li class="submenu-header">
+            <a href="<strong>+</strong> &nbsp;/creating-your-apps/panasonic/index.html">Panasonic</a>
+            <ul class="sidenav-subsubmenu" style="display:none;">
+              
+              <li><a href="/creating-your-apps/panasonic/submitting-to-panasonic.html">Submitting to the Panasonic Store</a></li>
+              
+            </ul>
+          </li>
+          
+          
+          
+          <li class="submenu-header">
+            <a href="<strong>+</strong> &nbsp;/creating-your-apps/roku/index.html">Roku</a>
+            <ul class="sidenav-subsubmenu" style="display:none;">
+              
+              <li><a href="/creating-your-apps/roku/configuring-inchannel-products.html">Configuring In-Channel Products in Roku</a></li>
+              
+              <li><a href="/creating-your-apps/roku/installing-roku-test-build.html">Installing a Roku Test Build</a></li>
+              
+              <li><a href="/creating-your-apps/roku/submitting-to-roku.html">Submitting to the Roku Store</a></li>
+              
+            </ul>
+          </li>
+          
+          
+          
+          <li class="submenu-header">
+            <a href="<strong>+</strong> &nbsp;/creating-your-apps/samsung/index.html">Samsung</a>
+            <ul class="sidenav-subsubmenu" style="display:none;">
+              
+              <li><a href="/creating-your-apps/samsung/samsung-partner.html">Becoming a Samsung Partner</a></li>
+              
+              <li><a href="/creating-your-apps/samsung/submitting-to-samsung.html">Submitting to the Samsung Store</a></li>
+              
+            </ul>
+          </li>
+          
+          
+          
+          <li><a href="/creating-your-apps/common-required-info.html">Common Required Information</a></li>
+          
+          
+          
+          <li><a href="/creating-your-apps/device-apps-validation-guide.html">Device Apps Validation Guide</a></li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/references/index.html"><strong>+</strong> &nbsp;References</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li><a href="/references/branding-beacon-apps.html">Branding Brightcove Beacon Apps</a></li>
+          
+          
+          
+          <li><a href="/references/common-configuration-settings.html">Common Configuration Settings</a></li>
+          
+          
+          
+          <li><a href="/references/creating-stripe-account.html">Creating a Stripe Account</a></li>
+          
+          
+          
+          <li><a href="/references/glossary.html">Glossary</a></li>
+          
+          
+          
+          <li><a href="/references/how-beacon-gets-data.html">How Brightcove Beacon Gets Data</a></li>
+          
+          
+          
+          <li><a href="/references/image-requirements.html">Images and Their Specifications</a></li>
+          
+          
+          
+          <li><a href="/references/known-issues.html">Known Issues</a></li>
+          
+          
+          
+          <li><a href="/references/product-updates.html">Product Updates</a></li>
+          
+          
+          
+          <li><a href="/references/remote-asset-limitations.html">Remote Asset Limitations</a></li>
+          
+          
+          
+          <li><a href="/references/beacon-tasks-in-vc.html">Tasks Performed in Video Cloud</a></li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/training/index.html"><strong>+</strong> &nbsp;Training</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li><a href="/training/training-demand-custom-fields.html">Using Video Cloud Videos/Custom Fields</a></li>
+          
+          
+          
+          <li><a href="/training/training-demand-design-layout.html">Designing the Application Layout</a></li>
+          
+          
+          
+          <li><a href="/training/training-demand-playlists.html">Creating and Using Playlists</a></li>
+          
+          
+          
+          <li><a href="/training/training-demand-series-seasons-episodes.html">Creating Series, Seasons and Episodes</a></li>
+          
+          
+          
+          <li><a href="/training/training-demand-vod-ssai.html">Implementing VOD Server-Side Ads</a></li>
+          
+          
+          
+          <li><a href="/training/training-demand-publish-android-app.html">Publishing the Android App on the Play Store</a></li>
+          
+          
+          
+          <li><a href="/training/training-demand-viewing-analytics.html">Viewing Analytics Data</a></li>
+          
+          
+          
+          <li><a href="/training/training-demand-streaming-live-bc-beacon.html">Streaming a Live event to Brightcove Beacon</a></li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/support/index.html"><strong>+</strong> &nbsp;Support</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li><a href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+          
+          
+          
+          <li><a href="/support/contact-sales.html">Contact Sales</a></li>
+          
+          
+          
+          <li><a href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+          
+          
+        </ul>
+        
+        
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+      <!-- bootstrap layout -->
+<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="Navigation Menu"></p>
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">Page Contents</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
+
+
+<h1>Beacon Apps Ad Targeting</h1>
+<article class="bcls-article">
+  <summary>Beacon Apps Ad targeting allows Beacon customers to send important device-level and user-specific information from the customer’s Beacon apps to their ad server or ad provider.</summary>
+  <section class="bcls-section">
+    <h2 id="introduction">Introduction</h2>
+    <p>Client-side information is passed from the apps to SSAI, and then SSAI includes this data in the customer’s VAST tag, which then allows customers to target ads based on this data. The purpose of this is to increase the value of customers’ ad inventory, therefore increasing ad revenue for their business.</p>
+    <p>Within Studio and Beacon CMS, you can set up how this data is passed to their ad server or ad provider.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="key_benefits">Benefits</h2>
+    <h3>Improved ad targeting</h3>
+    <ul>
+      <li><strong>User Session ID:</strong> we generate a session ID on each device when a user opens the app. This  allows you to frequency-cap ads to that session, exclude competitive ads from being served together, and sequentially rotate ads in that session. These targeting capabilities are both necessary for direct-sold and programmatic ads</li>
+      <li><strong>More data for programmatic ads:</strong> Mobile apps and CTV apps don’t support cookies, which is the dominant method for user/device-based ad targeting on the web. By including params like Device ID, you can pass this valuable information to programmatic ad buyers, which will then enhance their ad targeting capabilities, leading to greater CPMs.</li>
+    </ul>
+    <h3>Support for Ad Inventory split</h3>
+    <p>For apps that run on Amazon, Roku, and Samsung (in the US), you are required to do a 70/30 split of ad inventory/revenue with the platform. Beacon customers monetize 70% of the ad inventory and the platform gets the remaining 30% of the ad inventory. With this enhanced ad targeting, you can use one ad tag across all of their apps and pass the device params to your ad server. Inside your ad server, you will implement the business logic that splits the ad inventory by device. The platforms also require passing LAT - Limited Ad Targeting - for Ad Inventory Split, which is a parameter we are now sending to your ad server.</p>
+    <h3>User Privacy improvements</h3>
+    <ul>
+      <li>LAT “Limited Ad Targeting” - allows users of Beacon apps to opt out of ad targeting based on user behavior.</li>
+      <li>Users have the ability to reset the unique Device ID that we assign to the device at any time.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="targeting_information">Targeting information</h2>
+    <p>You can target ads based on the information in the table below.</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">Targeting Information</caption>
+      <thead class="bcls-table__head">
+          <tr>
+              <th>Type of information</th>
+              <th>Variable Name</th>
+              <th>Values</th>
+          </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+          <tr>
+              <td>Platform</td>
+              <td><code translate="no">platform</code></td>
+              <td><code translate="No">iOS</code>, <code translate="No">Android</code>, <code translate="No">Roku</code>, <code translate="No">AppleTV</code>, <code translate="No">Web</code>, <code translate="No">STV</code></td>
+          </tr>
+          <tr>
+              <td>OS version</td>
+              <td><code translate="no">os</code></td>
+              <td>device os version (for example, <code translate="No">iOS 14</code>)</td>
+          </tr>
+          <tr>
+              <td>Device model</td>
+              <td><code translate="no">model</code></td>
+              <td>device model. Browser version used for web apps</td>
+          </tr>
+          <tr>
+              <td>Manufacturer</td>
+              <td><code translate="no">mfgr</code></td>
+              <td>device manufacturer; browser name used for web apps</td>
+          </tr>
+          <tr>
+              <td>Language</td>
+              <td><code translate="no">lang</code></td>
+              <td>Language code set in the App (that comes from CMS)</td>
+          </tr>
+          <tr>
+              <td>User session</td>
+              <td><code translate="no">sid</code></td>
+              <td>Every time that app launches we want to have a unique integer created that is stored in memory and not persisted</td>
+          </tr>
+          <tr>
+              <td>Unique Device ID</td>
+              <td><code translate="no">rdid</code></td>
+              <td>Resettable device ID (TIFA = Samsung, rida = Roku, adid = Android, etc) - if limited ad targeting is set on the App, then the id should be all zeros (not possible to identify the user/device). This item is not applicable to the web.</td>
+          </tr>
+          <tr>
+              <td>Is the user allowing tracking</td>
+              <td><code translate="no">is_lat</code></td>
+              <td>0 if user has not opted to limit targeting, 1 if limiting ad targeting. This item is not applicable to the web.</td>
+          </tr>
+          <tr>
+              <td>device type</td>
+              <td><code translate="no">idtype</code></td>
+              <td>adid = Android, idfa = Apple phones (iOS), afai = Amazon,  rida: Roku
+                tvOS: AppleTV (tvOS)</td>
+          </tr>
+          <tr>
+              <td>App identifier</td>
+              <td><code translate="no">app_id</code></td>
+              <td>This should be the App bundle name</td>
+          </tr>
+      </tbody>
+  </table>
+  <h3>Notes</h3>
+  <ul>
+    <li>This feature works across all platforms/devices iOS, Apple TV, Android, Roku, Fire TV, Web, and Smart TVs.</li>
+    <li>Beacon Apps Ad targeting can be used with both VOD SSAI and Live SSAI.</li>
+  </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Implementation">Implementation</h2>
+    <p>Below is a list of <strong>value macros</strong> that will be passed to the app, which will then substitute the real values before sending to the ad server. They are <strong>NOT</strong> configurable.</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">Value Macros</caption>
+      <thead class="bcls-table__head">
+          <tr>
+              <th>Macro</th>
+              <th>Description</th>
+          </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+          <tr>
+              <td translate="no" style="font-weight:bold">PLATFORM</td>
+              <td>The appropriate beacon platform: iOS, AppleTV, Android, Roku, Web, STV</td>
+          </tr>
+          <tr>
+              <td translate="no" style="font-weight:bold">OS</td>
+              <td>full qualified OS (including version) - example iOS 14</td>
+          </tr>
+          <tr>
+              <td translate="no" style="font-weight:bold">MFGR</td>
+              <td>the Manufacturer of the device; (Web - user's browser)</td>
+          </tr>
+          <tr>
+              <td translate="no" style="font-weight:bold">MODEL</td>
+              <td>Device Model; (Web - browser version)</td>
+          </tr>
+          <tr>
+              <td translate="no" style="font-weight:bold">APP_ID</td>
+              <td>Application id (for example bundle ID); Web: app domain</td>
+          </tr>
+          <tr>
+              <td translate="no" style="font-weight:bold">LOCALE</td>
+              <td>ISO 639-1 (2-letter) language code followed by an underscore and a ISO 3166-1 (2-letter) country code (example en_us) - language set in the app</td>
+          </tr>
+          <tr>
+              <td translate="no" style="font-weight:bold">RDID</td>
+              <td>Resettable device ID (<code translate="no">tifa</code>: Samsung, <code translate="no">rida</code>: Roku, <code translate="no">adid</code>: Android, etc. - see <a href="#Device_identifiers">Device identifiers</a> below for more values) - if <strong>limited ad targeting</strong> is set on the App, then the id should be all zeros (meaning not possible to identify the user/device)</td>
+          </tr>
+          <tr>
+              <td translate="no" style="font-weight:bold">IDTYPE</td>
+              <td>Type resettable ID (<code translate="no">tifa</code>: Samsung, <code translate="no">rida</code>: Roku, <code translate="no">adid</code>: Android, etc. - see <a href="#Device_identifiers">Device identifiers</a> below for more values)</td>
+          </tr>
+          <tr>
+              <td translate="no" style="font-weight:bold">IS_LAT</td>
+              <td>Flag that tells if limited ad targeting is selected by user: <code translate="no">0</code> if user has not opted to limit targeting, <code translate="no">1</code> if limiting ad targeting</td>
+          </tr>
+          <tr>
+              <td translate="no" style="font-weight:bold">SID</td>
+              <td>Unique session identifier (reset every time the app starts). Not dependent on user sign in / Sign up. Switching from foreground to background status does not change this ID.</td>
+          </tr>
+      </tbody>
+		</table>
+
+		<h4 id="Device_identifiers">Device identifiers</h4>
+		<ul>
+			<li>adid: Android</li>
+			<li>afai: Amazon</li>
+			<li>tvOS: AppleTV (tvOS)</li>
+			<li>idfa: Apple phones (iOS)</li>
+			<li>rida: Roku</li>
+			<li>tifa: Samsung</li>
+			<li>vida: Vizio</li>
+			<li>msai: Xbox</li>
+		</ul>
+  </section>
+  
+  <section class="bcls-section">
+		<h2 id="VOD_steps">VOD steps</h2>
+		<h3>Video Cloud part - VOD</h3>
+		<ol class="bcls-tasklist-restart">
+			<li>
+				Create an ad config from the <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">Server Side Ad settings page in Studio</a>:
+				<ol>
+					<li>
+						Click <span class="blue-button">Create Ad Configuration</span> and select <strong>VOD</strong>
+						<figure class="bcls-figure">
+							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/create-vod-ad-config.png" alt="Create VOD Ad Config">
+							<figcaption class="bcls-caption--image">Create VOD Ad Config</figcaption>
+						</figure>
+						<figure class="bcls-figure">
+							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-vod.png" alt="SSAI Configuration VOD">
+							<figcaption class="bcls-caption--image">SSAI Configuration VOD</figcaption>
+						</figure>
+					</li>
+					<li>Add a name for the ad config.</li>
+					<li>Select your ad response - VMAP or Vast is recommended. If you use Vast, you will need to add cuepoints to the videos to specify where ad breaks should appear.</li>
+					<li>Paste in your ad tag (from you ad provider).</li>
+					<li>Copy your ad config ID, as you will need it for the Beacon advertising configuration.</li>
+				</ol>
+			</li>
+			</ol>
+			<h3>Beacon part - VOD</h3>
+			<ol class="bcls-tasklist-restart">
+				<li>
+        Open the Beacon Classic UI and go the Advertisement tab:
+        <ol>
+          <li>
+						Click <span class="button-teal">Add New Configuration</span>
+						<figure class="bcls-figure">
+							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/advertising-config-vod.png" alt="Beacon Ad Configuration">
+							<figcaption class="bcls-caption--image">Beacon Ad Configuration VOD</figcaption>
+						</figure>
+					</li>
+          <li>Name the Ad Configuration</li>
+          <li>Select <strong>Brightcove SSAI</strong></li>
+          <li>Paste in the <strong>SSAI ad config ID</strong> into <strong>VOD Ad Config ID</strong></li>
+        </ol>
+      </li>
+      <li>
+        Once you have your Ad config setup in Studio and Beacon Classic, you need to implement the client side params that will be passed to the customers ad server. Client side parameters can be passed in the Playback APIs (provided in the VMAP/Manifest entry point) - those will be available to the SSAI infrastructure in the form of <code translate="no">{{url.xxx}}</code> macros where the xxx corresponds to the parameter key that is submitted in the playback API URL.
+        <ol>
+          <li>Enter ad targeting params in the <strong>Ad-Target</strong> field in Beacon. The input will be a string in query form. Example: <code translate="no">d={PLATFORM}&os={OS}&man={MFGR}&mo={MODEL}&appid={APP_ID}&lan={LOCALE}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code></li>
+          <li><strong>You can configure the keys before the equal sign</strong>. They <strong>MUST</strong> match the keys that are added to the SSAI ad tag.</li>
+          <li>Next, update your ad tag in the <strong>SSAI Studio Settings</strong> page. Here is an example of params that were entered in the Beacon Classic Ad-Targeting and added to SSAI Ad tag: <code translate="no">d={PLATFORM}&os={OS}&appid={APP_ID}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code></li>
+          <li><strong>These params get translated into this in this Ad tag:</strong> <code translate="no">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&pre=3&d={{url.d}}&os={{url.os}}&appid={{url.appid}}&did={{url.did}}&dt={{url.dt}}&lat={{url.latl}}&sid={{url.sid}}</code></li>
+        </ol>
+      </li>
+		</ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Live_steps">Live steps</h2>
+    <ol class="bcls-tasklist-restart">
+			<li>
+				First, construct your ad-targeting parameter string, as you will need it both in the SSAI and Beacon configurations. You can reuse the params for VOD, or select a different set.
+				<p>Example:</p>
+				<pre><code translate="no">ip={{client.ipaddress}}&num={{random.int32}}&d={{PLATFORM}}&os={{OS}}&did={{RDID}}&dt={{IDTYPE}}&lat={{IS_LAT}}</code></pre>
+			</li>
+      <li>
+        Create an ad config from <a href="https://live.support.brightcove.com/live-module/implementing-server-side-ads-live-module.html">the Server Side Ad settings page in Studio</a>:
+        <ol>
+          <li>
+						Click <span class="blue-button">Create Ad Configuration</span> and select <strong>Live</strong>
+						<figure class="bcls-figure">
+							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/create-live-ad-config.png" alt="Create Live Ad Config">
+							<figcaption class="bcls-caption--image">Create Live Ad Config</figcaption>
+						</figure>
+						<figure class="bcls-figure">
+							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-live.png" alt="SSAI Configuration Live">
+							<figcaption class="bcls-caption--image">SSAI Configuration Live</figcaption>
+						</figure>
+
+					</li>
+					<li>Add a name for the ad config</li>
+					<li>Select <strong>Vast</strong> your ad response</li>
+					<li>
+						Paste in your ad tag, <strong>appending your query string of ad targeting params</strong>.
+						<p>Example:</p>
+						<pre><code translate="no">https://ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&num={{random.int32}}&d={{PLATFORM}}&os={{OS}}&did={{RDID}}&dt={{IDTYPE}}&lat={{IS_LAT}}</code></pre>
+					</li>
+					<li>Copy your ad config ID for the Beacon Advertising configurations</li>
+        </ol>
+      </li>
+      <li>
+        Open the Beacon Classic UI and go the Advertisement tab
+        <ol>
+          <li>
+						Click <span class="button-teal">Add New Configuration</span>
+						<figure class="bcls-figure">
+							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/advertising-config-live.png" alt="Beacon Ad Configuration Live">
+							<figcaption class="bcls-caption--image">Beacon Ad Configuration Live</figcaption>
+						</figure>
+					</li>
+          <li>Name the Ad Configuration</li>
+          <li>Select <strong>Brightcove SSAI</strong></li>
+          <li>Paste in the SSAI ad config ID into <strong>Live Ad Config ID</strong></li>
+        </ol>
+      </li>
+      <li>
+				Paste your string of ad-targeting params in the <strong>Ad-Target</strong> field.
+				<p>Example:</p>
+				<pre><code translate="no">d={{PLATFORM}}&os={{OS}}&did={{RDID}}&dt={{IDTYPE}}&lat={{IS_LAT}}</code></pre>
+			</li>
+		</ol>
+  </section>
+  <!-- <section class="bcls-section">
+    <h2 id="Limitations">Limitations</h2>
+    <ul>
+      <li>There currently isn’t a way to handle Device ID on the web so we are not passing that information to SSAI. We are still defining how we will handle it, and the doc will be updated once Device ID for the web is implemented.</li>
+    </ul>
+  </section> -->
+  
+</article>
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page last updated on 29 Apr 2021
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Brightcove Support</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">System Status</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">Contact Support</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">Documentation</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Training</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">Online Courses</a>
+          </li>
+          <li>
+            <a href="https://studio.support.brightcove.com/training/register-training.html">Register for a course</a>
+          </li>
+          <li>
+            <a href="https://university.brightcove.com/">Brightcove University</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">Brightcove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><i data-feather="linkedin" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><i data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i data-feather="facebook" style="color:#8E9093;height: 1.25rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+      
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documenation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder
+    maxSuggestions: 5, // Maximum number of suggestions to show
+    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+  
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+      window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/js/sajari-search-foot.js"></script>
+  
+	<script>
+		feather.replace()
+	</script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <style>
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>

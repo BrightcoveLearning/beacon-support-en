@@ -57,14 +57,10 @@
       url: /using-brightcove-beacon/promo-codes.html
     - name: 'Creating Series/Seasons/Episodes'
       url: /using-brightcove-beacon/series-seasons-episodes.html
-    - name: Configuring Server-Side Ad Settings
-      url: /using-brightcove-beacon/configuring-server-side-ad-settings.html
     - name: Google Analytics Self Configuration
       url: /using-brightcove-beacon/ga-self-configuration.html
     - name: Implementing AuthVOD
       url: /using-brightcove-beacon/implementing-authvod.html
-    - name: Implementing Live SSAI
-      url: /using-brightcove-beacon/live-ssai.html
     - name: Implementing VOD SSAI
       url: /using-brightcove-beacon/vod-ssai.html
     - name: Including Non-Configurable Pages
@@ -83,6 +79,19 @@
       url: /using-brightcove-beacon/tools.html
     - name: Viewing Analytics Data
       url: /using-brightcove-beacon/viewing-analytics-data.html
+- section:
+  name: 'Monetization'
+  url: 'monetization/index.html'
+  docs:
+    - name: SSAI
+      url: '/monetization/ssai/index.html'
+      docs:
+        - name: 'Configuring Server-Side Ad Settings'
+          url: '/monetization/ssai/configuring-server-side-ad-settings.html'
+        - name: 'Implementing Live SSAI'
+          url: '/monetization/ssai/live-ssai.html'
+        - name: 'Beacon Apps Ad Targeting'
+          url: '/monetization/ssai/beacon-apps-ad-targeting.html'
 - section:
   name: 'Beacon Web Store'
   url: '/beacon-web-store/index.html'

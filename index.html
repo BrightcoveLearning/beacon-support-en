@@ -16,6 +16,11 @@ title: Brightcove Beacon Home
         <ul class="bcls-topic-list">
           {% for entry in item.docs %}
           <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
+					{% if entry.docs != nil %}
+					{% for subentry in entry.docs %}
+          <li>- <a href="{{ subentry.url }}">{{ subentry.name }}</a></li>
+					{% endfor %}
+					{% endif %}
           {% endfor %}
         </ul>
       </div>

@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="In this topic, you will learn how to manage and create Live server-side ad configurations in Brightcove Beacon." />
+
+    <title>Implementing Live SSAI</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://support.brightcove.com/site-assets/css/site/prism.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://support.brightcove.com/site-assets/css/site/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://support.brightcove.com/site-assets/css/site/landing-page.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://support.brightcove.com/site-assets/css/site/tabs.css"
+    />
+    <link rel="stylesheet" href="/assets/css/local.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/381443caa8.js"
+      crossorigin="anonymous"
+    ></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2728311-17');
+</script>
+    <script src="/assets/js/sajari-head.js"></script>
+		<script src="https://unpkg.com/feather-icons"></script>
+  </head>
+
+  <body class="body"></body>
+</html>
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/SVG/COVE004_Brightcove_Beacon_Logo_RGB_K.svg" alt="Brightcove"></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script>
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><i data-feather="help-circle"></i> Contact Support</a> <span style="vertical-align: middle;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><i data-feather="cloud"></i> System Status</a></span>
+    <br>
+    
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/monetization/ssai/">SSAI</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Implementing Live SSAI</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 left-side-bar">
+				<select id="site_select" class="bcls-select" style="margin-left: 1rem;">
+					<option value="">Other Brightcove Docs</option>
+					
+						
+							<option value="https://support.brightcove.com">Documentation Home</option>
+						
+					
+						
+							<option value="">-- VIDEO CLOUD --</option>
+						
+					
+						
+							<option value="https://studio.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+						
+					
+						
+							<option value="https://player.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+						
+					
+						
+							<option value="https://apis.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+						
+					
+						
+							<option value="https://sdks.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+						
+					
+						
+							<option value="https://integrations.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+						
+					
+						
+							<option value="https://general.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+						
+					
+						
+							<option value="">-- VIDEO ESSENTIALS --</option>
+						
+					
+						
+							<option value="https://beacon.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon</option>
+						
+					
+						
+							<option value="https://live.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+						
+					
+						
+							<option value="https://zencoder.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+						
+					
+						
+							<option value="">-- VIDEO CLOUD ADD-ONS --</option>
+						
+					
+						
+							<option value="https://audience.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience</option>
+						
+					
+						
+							<option value="https://campaign.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
+						
+					
+						
+							<option value="https://engage.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Engage</option>
+						
+					
+						
+							<option value="https://gallery.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+						
+					
+						
+							<option value="https://ssai.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+						
+					
+						
+							<option value="https://social.support.brightcove.com">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+						
+					
+				</select>
+      <nav class="sidenav" id="side_nav">
+        
+        
+        <h5><a href="/index.html">Home</a></h5>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/getting-started/index.html"><strong>+</strong> &nbsp;Getting Started</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li><a href="/getting-started/learning-guide-bc-beacon.html">Learning Guide</a></li>
+          
+          
+          
+          <li><a href="/getting-started/implementation-phases.html">Implementation Phases</a></li>
+          
+          
+          
+          <li><a href="/getting-started/app-design-considerations.html">Application Design Considerations</a></li>
+          
+          
+          
+          <li><a href="/getting-started/creating-your-app-design-info-architecture.html">App Design - Info Architecture</a></li>
+          
+          
+          
+          <li><a href="/getting-started/creating-your-app-design-layout-options.html">App Design - Layout Options</a></li>
+          
+          
+          
+          <li><a href="/getting-started/design-best-practices.html">Design Best Practices</a></li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/syncing-with-video-cloud/index.html"><strong>+</strong> &nbsp;Syncing with Video Cloud</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li><a href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a></li>
+          
+          
+          
+          <li><a href="/syncing-with-video-cloud/forcing-a-sync.html">Forcing a Sync</a></li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/using-brightcove-beacon/index.html"><strong>+</strong> &nbsp;Using Brightcove Beacon</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li><a href="/using-brightcove-beacon/adding-to-page.html">Adding a Carousel to a Page</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/cloud-playout/cloud-playout-overview.html">Overview: Cloud Playout Channels</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/cloud-playout/cloud-playout-stream-vod.html">Creating a Cloud Playout Channel</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/cloud-playout/using-channel-actions.html">Using Channel Actions</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/cloud-playout/adding-bumpers-to-vod.html">Adding Bumpers to Cloud Playout</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/cloud-playout/enabling-server-side-ads.html">Monetizing Cloud Playout</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/cloud-playout/viewing-channel-output-and-analytics.html">Viewing Channel Output and Analytics</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/creating-a-channel.html">Creating a Beacon Channel</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/electronic-program-guides.html">Creating an Electronic Program Guide (EPG)</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/creating-a-page.html">Creating a New Page</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/creating-a-playlist.html">Creating a Playlist</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/creating-subscription-package.html">Creating a Subscription Package</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/promo-codes.html">Creating Promo Codes</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/series-seasons-episodes.html">Creating Series/Seasons/Episodes</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/ga-self-configuration.html">Google Analytics Self Configuration</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/implementing-authvod.html">Implementing AuthVOD</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/vod-ssai.html">Implementing VOD SSAI</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/including-non-configurable-pages.html">Including Non-Configurable Pages</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/introducing-pages.html">Introducing Pages</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/streaming-live-event.html">Streaming a Live Event</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/streaming-vods-to-a-channel.html">Streaming VODs to a Channel</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/monetization-options.html">Understanding Monetization Options</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/using-subscription-package.html">Using a Subscription Package</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/tools.html">Using the Tools</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/viewing-analytics-data.html">Viewing Analytics Data</a></li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="monetization/index.html"><strong>+</strong> &nbsp;Monetization</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li class="submenu-header">
+            <a href="<strong>+</strong> &nbsp;/monetization/ssai/index.html">SSAI</a>
+            <ul class="sidenav-subsubmenu" style="display:none;">
+              
+              <li><a href="/monetization/ssai/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a></li>
+              
+              <li><a href="/monetization/ssai/live-ssai.html">Implementing Live SSAI</a></li>
+              
+              <li><a href="/monetization/ssai/beacon-apps-ad-targeting.html">Beacon Apps Ad Targeting</a></li>
+              
+            </ul>
+          </li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/beacon-web-store/index.html"><strong>+</strong> &nbsp;Beacon Web Store</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li><a href="/beacon-web-store/beacon-webstore-overview.html">Overview: Brightcove Beacon Web Store</a></li>
+          
+          
+          
+          <li><a href="/beacon-web-store/integration-details.html">Integrating with the Beacon Web Store</a></li>
+          
+          
+          
+          <li><a href="/beacon-web-store/beacon-store-webhook-reference.html">Beacon Store Webhook Reference</a></li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/creating-your-apps/index.html"><strong>+</strong> &nbsp;Creating Your Apps</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li class="submenu-header">
+            <a href="<strong>+</strong> &nbsp;/creating-your-apps/android/index.html">Android</a>
+            <ul class="sidenav-subsubmenu" style="display:none;">
+              
+              <li><a href="/creating-your-apps/android/submitting-to-android.html">Submitting New Apps to the Android Store</a></li>
+              
+              <li><a href="/creating-your-apps/android/updating-android-apps-to-bcb.html">Updating Android Apps to Brightcove Beacon</a></li>
+              
+              <li><a href="/creating-your-apps/android/adding-subscriptions-in-android.html">Adding Subscriptions to Android</a></li>
+              
+              <li><a href="/creating-your-apps/android/improving-relevance-android.html">Improving Search Relevance in the Android Play Store</a></li>
+              
+              <li><a href="/creating-your-apps/android/installing-android-test-build.html">Installing an Android Test Build</a></li>
+              
+              <li><a href="/creating-your-apps/android/managing-google-subscriptions-1.html">Managing Google Subscriptions Part 1</a></li>
+              
+              <li><a href="/creating-your-apps/android/managing-google-subscriptions-2.html">Managing Google Subscriptions Part 2</a></li>
+              
+            </ul>
+          </li>
+          
+          
+          
+          <li class="submenu-header">
+            <a href="<strong>+</strong> &nbsp;/creating-your-apps/fire-tv/index.html">Fire TV</a>
+            <ul class="sidenav-subsubmenu" style="display:none;">
+              
+              <li><a href="/creating-your-apps/fire-tv/installing-fire-tv-test-build.html">Installing a Fire TV Test Build</a></li>
+              
+              <li><a href="/creating-your-apps/fire-tv/submitting-to-amazon.html">Submitting to the Amazon Store</a></li>
+              
+            </ul>
+          </li>
+          
+          
+          
+          <li class="submenu-header">
+            <a href="<strong>+</strong> &nbsp;/creating-your-apps/ios-tvos/index.html">iOS/tvOS</a>
+            <ul class="sidenav-subsubmenu" style="display:none;">
+              
+              <li><a href="/creating-your-apps/ios-tvos/installing-ios-test-build.html">Installing an iOS/tvOS Test Build</a></li>
+              
+              <li><a href="/creating-your-apps/ios-tvos/submitting-to-apple.html">Submitting to the Apple Store</a></li>
+              
+            </ul>
+          </li>
+          
+          
+          
+          <li class="submenu-header">
+            <a href="<strong>+</strong> &nbsp;/creating-your-apps/panasonic/index.html">Panasonic</a>
+            <ul class="sidenav-subsubmenu" style="display:none;">
+              
+              <li><a href="/creating-your-apps/panasonic/submitting-to-panasonic.html">Submitting to the Panasonic Store</a></li>
+              
+            </ul>
+          </li>
+          
+          
+          
+          <li class="submenu-header">
+            <a href="<strong>+</strong> &nbsp;/creating-your-apps/roku/index.html">Roku</a>
+            <ul class="sidenav-subsubmenu" style="display:none;">
+              
+              <li><a href="/creating-your-apps/roku/configuring-inchannel-products.html">Configuring In-Channel Products in Roku</a></li>
+              
+              <li><a href="/creating-your-apps/roku/installing-roku-test-build.html">Installing a Roku Test Build</a></li>
+              
+              <li><a href="/creating-your-apps/roku/submitting-to-roku.html">Submitting to the Roku Store</a></li>
+              
+            </ul>
+          </li>
+          
+          
+          
+          <li class="submenu-header">
+            <a href="<strong>+</strong> &nbsp;/creating-your-apps/samsung/index.html">Samsung</a>
+            <ul class="sidenav-subsubmenu" style="display:none;">
+              
+              <li><a href="/creating-your-apps/samsung/samsung-partner.html">Becoming a Samsung Partner</a></li>
+              
+              <li><a href="/creating-your-apps/samsung/submitting-to-samsung.html">Submitting to the Samsung Store</a></li>
+              
+            </ul>
+          </li>
+          
+          
+          
+          <li><a href="/creating-your-apps/common-required-info.html">Common Required Information</a></li>
+          
+          
+          
+          <li><a href="/creating-your-apps/device-apps-validation-guide.html">Device Apps Validation Guide</a></li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/references/index.html"><strong>+</strong> &nbsp;References</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li><a href="/references/branding-beacon-apps.html">Branding Brightcove Beacon Apps</a></li>
+          
+          
+          
+          <li><a href="/references/common-configuration-settings.html">Common Configuration Settings</a></li>
+          
+          
+          
+          <li><a href="/references/creating-stripe-account.html">Creating a Stripe Account</a></li>
+          
+          
+          
+          <li><a href="/references/glossary.html">Glossary</a></li>
+          
+          
+          
+          <li><a href="/references/how-beacon-gets-data.html">How Brightcove Beacon Gets Data</a></li>
+          
+          
+          
+          <li><a href="/references/image-requirements.html">Images and Their Specifications</a></li>
+          
+          
+          
+          <li><a href="/references/known-issues.html">Known Issues</a></li>
+          
+          
+          
+          <li><a href="/references/product-updates.html">Product Updates</a></li>
+          
+          
+          
+          <li><a href="/references/remote-asset-limitations.html">Remote Asset Limitations</a></li>
+          
+          
+          
+          <li><a href="/references/beacon-tasks-in-vc.html">Tasks Performed in Video Cloud</a></li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/training/index.html"><strong>+</strong> &nbsp;Training</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li><a href="/training/training-demand-custom-fields.html">Using Video Cloud Videos/Custom Fields</a></li>
+          
+          
+          
+          <li><a href="/training/training-demand-design-layout.html">Designing the Application Layout</a></li>
+          
+          
+          
+          <li><a href="/training/training-demand-playlists.html">Creating and Using Playlists</a></li>
+          
+          
+          
+          <li><a href="/training/training-demand-series-seasons-episodes.html">Creating Series, Seasons and Episodes</a></li>
+          
+          
+          
+          <li><a href="/training/training-demand-vod-ssai.html">Implementing VOD Server-Side Ads</a></li>
+          
+          
+          
+          <li><a href="/training/training-demand-publish-android-app.html">Publishing the Android App on the Play Store</a></li>
+          
+          
+          
+          <li><a href="/training/training-demand-viewing-analytics.html">Viewing Analytics Data</a></li>
+          
+          
+          
+          <li><a href="/training/training-demand-streaming-live-bc-beacon.html">Streaming a Live event to Brightcove Beacon</a></li>
+          
+          
+        </ul>
+        
+        
+        
+        <h5 class="submenu-header"><a href="/support/index.html"><strong>+</strong> &nbsp;Support</a></h5>
+        <ul class="sidenav-submenu" style="display:none;">
+          
+          
+          <li><a href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+          
+          
+          
+          <li><a href="/support/contact-sales.html">Contact Sales</a></li>
+          
+          
+          
+          <li><a href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+          
+          
+        </ul>
+        
+        
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+      <!-- bootstrap layout -->
+<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="Navigation Menu"></p>
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">Page Contents</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
+
+
+<h1>Implementing Live SSAI</h1>
+<article class="bcls-article">
+  <summary>In this topic, you will learn how to manage and create Live server-side ad configurations in Brightcove Beacon.</summary>
+
+  <section class="bcls-section">
+    <h2 id="overview">Overview</h2>
+
+    <p>
+      Brightcove Beacon supports Server-Side Ad Insertion (SSAI) in Live events so server-side ads can be requested and displayed during a Live stream. Note: if you are using redundancy with SSAI, you must insert ads into all jobs in the group at the same time. 
+    </p>
+    <p>A high-level view of the process is:</p>
+    <ol>
+      <li>Create an Ad Configuration in Studio.</li>
+      <li>Create a fill slate for your Live event.</li>
+      <li>Create a Live event with SSAI enabled.</li>
+      <li>Publish the Live event to Brightcove Beacon.</li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information">
+      This document is complementary to the
+      <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/streaming-live-event.html" target="_blank">Streaming a Live Event</a>
+      documentation to guide you into add SSAI to your live events. For detailed information on how to create an event, please see the section on
+      <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/streaming-live-event.html#create" target="_blank">Creating a live event in Brightcove Beacon</a>.
+    </aside>
+
+    <p>SSAI provides these main features during Live events:</p>
+    <ul>
+      <li>
+        Since ads are stitched into the Live video stream on the server-side, they are not affected by ad blockers.
+      </li>
+      <li>
+        Ads are inserted at cue points sent from your encoder or you can create an instant cue point using the Live module Control Room.
+      </li>
+      <li>
+        You can configure
+        <a href="https://live.support.brightcove.com/live-module/implementing-server-side-ads-live-module.html#fill_slate" target="_blank">fill slates</a>
+        to fill any unused ad time.
+      </li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configuring-ssai">Configuring Server-Side Ad Settings</h2>
+    <p>
+      Here you will create an SSAI Ad Configuration to be used as your set of ads that will be displayed in your Brightcove Beacon Live event.
+    </p>
+    <ol class="bcls-tasklist">
+      <li>Log in to Studio.</li>
+      <li>
+        In the navigation header, click <strong>ADMIN</strong> and select <strong>Server-Side Ad Settings</strong>. A list of all ad configurations will be displayed.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/1-studio-ssai-settings.png" />
+        </figure>
+      </li>
+      <li>
+        To create a new ad configuration, click the
+        <strong>Create Ad Configuration</strong> button.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/2-create-ad-configuration.png" />
+        </figure>
+        <aside class="bcls-aside bcls-aside--information">
+          Server-side Live ad configurations can also be managed using the Live API. For information, see
+          <a href="https://live.support.brightcove.com/live-api/ssai/live-api-server-side-ad-insertion-ssai.html#Create_an_ad_configuration" target="_blank"
+            >Brightcove Live API: Server-Side Ad Insertion (SSAI)</a
+          >.
+        </aside>
+      </li>
+      <li>
+        From the dropdown, select <strong>Live</strong> as a type.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/3-ad-config-live.png" />
+        </figure>
+      </li>
+      <li>
+        Check to be sure you are seeing the
+        <strong>Server-Side Ad Settings</strong> form.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/4-ad-config-form.png" />
+        </figure>
+      </li>
+      <li>Give your ad configuration a <strong>Name</strong>.</li>
+      <li>
+        Select the <strong>Ad Server Response</strong>:
+        <ul>
+          <li><strong>VAST</strong></li>
+          <li><strong>DFP (Ad Rules)</strong></li>
+          <li><strong>Smart XML</strong></li>
+        </ul>
+        <aside class="bcls-aside bcls-aside--information">
+          Please check with your ad operations manager for the correct value to select.
+        </aside>
+      </li>
+      <li>Enter the <strong>Ad Tag (server URL)</strong>.</li>
+      <li>Click the <strong>Save</strong> button.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configuring-slate">Configuring a Fill Slate</h2>
+    <p>
+      Fill slates are videos that will be displayed when there are gaps in a Live stream ad break that cannot be filled with a dynamically-served ad. If the requested ad is shorter
+      than the Ad break time, the fill slate will be displayed so viewers don't see a blank player.
+    </p>
+    <aside class="bcls-aside bcls-aside--information">
+      You should configure at least one fill slate before requesting a server-side ad.
+    </aside>
+    <p>To add a fill slate, follow these steps:</p>
+    <ol class="bcls-tasklist">
+      <li>
+        Click the <strong>ADMIN</strong> > <strong>Live Settings</strong> link in the Studio header.
+        <aside class="bcls-aside bcls-aside--information">
+          You must be an account administrator to access the
+          <strong>ADMIN</strong> menu.
+        </aside>
+      </li>
+      <li>
+        Click <strong>+ Add Fill Slate</strong>. You should be seeing the following form:
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/5-fill-slate.png" />
+        </figure>
+      </li>
+      <li>Enter a <strong>Name</strong> for your fill slate.</li>
+      <li>Enter the <strong>Source URL</strong> for the slate.</li>
+      <li>Click <strong>Save</strong>. The ingestion process for the slate will begin.</li>
+    </ol>
+    <p>To delete a fill slate, click the delete button (<img alt="" src="/assets/images/using-bcb/live-ssai/node18588-delete-icon.png" />) next to the fill slate.</p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="creating-live-ssai">Creating a Live event that supports SSAI</h2>
+    <p>
+      In order for a live event to use SSAI (Server-side Ad Insertion), the
+      <strong>Enable Server-Side Ad Insertion (SSAI)</strong> setting must be selected when the event is created, and a previously created fill slate should be chosen for playback.
+    </p>
+    <p>
+      Follow these steps to create an Event that supports SSAI ads in Brightcove Beacon:
+    </p>
+    <ol class="bcls-tasklist">
+      <li>Open the <strong>Live</strong> module in Studio.</li>
+      <li>From the <strong>Manage Events</strong> page, click <strong>Create Event</strong>.</li>
+      <li>
+        Enter your event details. For complete information on creating a live event using the Live module, please see
+        <a href="https://live.support.brightcove.com/live-module/creating-and-managing-live-events-using-live-module.html" target="_blank">
+          Creating and Managing Live Events using the Live Module</a
+        >.
+      </li>
+      <li>Click <strong>ADVANCED OPTIONS</strong> to expand the advanced options.</li>
+      <li>Check <strong>Enable Server-Side Ad Insertion (SSAI)</strong>. This will enable server-side ad insertion.</li>
+      <li>
+        Select a <strong>Fill Slate</strong>. The fill slate will be displayed when there are gaps in a live stream ad break that cannot be filled with a dynamically-served ad.
+      </li>
+      <li>
+        When the <strong>Ad Audio</strong> setting is checked, the audio levels on ads will be normalized based on the adjustment that is set. This can be used as a way to help
+        make sure ads aren’t significantly louder than the content. Brightcove recommends selecting this option.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" width="450" height="700" src="/assets/images/using-bcb/live-ssai/6-ssai-check.png" />
+        </figure>
+      </li>
+      <li>Click <strong>Create Event</strong></li>
+      <li>
+        The <strong>Control Room</strong> page will open with details about the Live event including the <strong>Streaming Endpoint (RTMP URL)</strong> and
+        <strong>Stream Name</strong>. These values will be used by the encoder.
+      </li>
+      <li>
+        Configure your encoder and start the Live stream.
+        <aside class="bcls-aside bcls-aside--information">
+          To start streaming in the Live platform, you will need an Encoder, for information on how to use an encoder please read the following the documentation:
+          <p>
+            <a href="https://live.support.brightcove.com/get-started/step-step-using-live-module-telestream-wirecast.html" target="_blank"
+              >Step-by-Step: Using the Live Module with Telestream Wirecast</a
+            >
+          </p>
+          <p>
+            <a href="https://live.support.brightcove.com/get-started/step-step-using-live-module-open-broadcaster-software-obs.html" target="_blank"
+              >Step-by-Step: Using the Live Module with Open Broadcaster Software (OBS)</a
+            >
+          </p>
+        </aside>
+      </li>
+      <li>
+        By default, the <strong>Control Room</strong> preview player shows the ad-free stream. Ads will not be shown in the <strong>Control Room</strong> unless a Live ad
+        configuration is selected. Use the dropdown below to the player to select an ad configuration.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/7-select-ad-config.png" />
+        </figure>
+      </li>
+      <li>
+        (Optional) Click the plus button (<img alt="" src="/assets/images/using-bcb/live-ssai/node18753-plus-icon.png" />) to select an additional ad configuration. Doing this will
+        add another preview player on the <strong>Control Room</strong> page.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/8-two-preview-players.png" />
+        </figure>
+        <p>
+          Click the volume button below the preview player to control which player audio stream is active.
+        </p>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="creating-live-ssai">Requesting an ad</h2>
+    <p>
+      Follow these steps to request an ad in the Live
+      <strong>Control Room</strong>:
+    </p>
+    <ol class="bcls-tasklist">
+      <li>
+        Click <strong>Goto Ad</strong> and from the dropdown choose the length of your desired ad break.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" width="350" height="500" src="/assets/images/using-bcb/live-ssai/9-gotoad.png" />
+        </figure>
+      </li>
+      <li>
+        Click <strong>Insert</strong> to insert an ad break into the live stream. If the ad doesn't fill the entire ad break time, the fill slate (being selected when the event was
+        created) will be displayed.
+      </li>
+    </ol>
+    <p>
+      Ads will be seen in the <strong>Control Room</strong> preview player and in players that are published using the Live module. This example shows 2 ads being displayed in the
+      <strong>Control Room</strong>.
+    </p>
+    <figure class="bcls-figure">
+      <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/10-adsplayer.png" />
+    </figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="requesting-ssai">Publishing a Live event in Brightcove Beacon</h2>
+    <p>
+      To publish your Live event with server-side ads in Brightcove Beacon, follow these steps:
+    </p>
+    <ol class="bcls-tasklist">
+      <li>In the Live <strong>Control Room</strong> click <strong>Publish and Embed</strong> in the left navigation.</li>
+      <li>
+        Select <strong>Player Configuration</strong>.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/11-controlroom.png" />
+        </figure>
+      </li>
+      <li>In the <strong>Live Player Options</strong> select an <strong>Available Player</strong>.</li>
+      <li>
+        Select your <strong>Ad Configuration</strong> previously created in the <strong>Server-Side Ad Settings</strong>.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/12-select-player.png" />
+        </figure>
+      </li>
+      <li>
+        After selecting your <strong>Available Player</strong> and <strong>Ad Configuration</strong>, a new Player URL will be generated. Copy the selected part of the URL as shown
+        in the image, starting from the word <strong>live</strong>. Example: <strong>live.xxxxxxx</strong>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/13-player-url.png" />
+        </figure>
+      </li>
+      <li>Go to the Brightcove Beacon Platform.</li>
+      <li>
+        In Brightcove Beacon, in the upper menu, click the
+        <strong>Advertisement</strong> tab.
+      </li>
+      <li>
+        Click the <strong>Add New Configuration</strong> button.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/14-newadconfig.png" />
+        </figure>
+      </li>
+      <li>
+        Check to be sure you are seeing the
+        <strong>New Advertisement</strong> form.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/15-newadconfig-settings.png" />
+        </figure>
+      </li>
+      <li>Give your new advertisement configuration a <strong>Name</strong>.</li>
+      <li>
+        In the <strong>Live Ad Config ID:</strong>, paste the <strong>Player URL ID</strong> you just copied from the Live Platform, for example: <strong>live.xxxxx</strong>.
+      </li>
+      <li>From the <strong>Provider</strong> menu select <strong>Brightcove SSAI</strong>.</li>
+      <li>Click in the <strong>Create New Advertisement</strong> button.</li>
+      <li>
+        Click on the upper menu <strong>Events</strong> tab and create or select your Live event. For more information in how to create a Brightcove Beacon Live Event, please see
+        the
+        <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/streaming-live-event.html" target="_blank">Streaming a Live Event</a>
+        document.
+        <aside class="bcls-aside bcls-aside--information">
+          For the Live event to stream successfully in Brightcove Beacon, the
+          <strong>Job ID</strong> and <strong>Stream Video ID</strong> must match the IDs of the current Live event.
+        </aside>
+      </li>
+      <li>
+        In you Brightcove Beacon Live Event click the
+        <strong>Rights & Scheduling</strong> tab.
+      </li>
+      <li>
+        In the <strong>Rights Type</strong> dropdown menu, select <strong>Advertising - AVOD</strong>.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/16-ad-avod.png" />
+        </figure>
+      </li>
+      <li>
+        In the <strong>Advertisement Configuration</strong> bottom menu, select your previously created advertisement configuration.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/17-ad-configuration.png" />
+        </figure>
+      </li>
+      <li>Click the <strong>Update Event</strong> button.</li>
+      <li>
+        Click on the <strong>Tools</strong> (wrench) button in the upper right of the screen. Then clear the cache.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/live-ssai/18-clear-cache.png" />
+        </figure>
+      </li>
+      <li>
+        Open your Brightcove Beacon App and select your event (the event names and pictures on the image are for example purposes only).
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" width="400" height="700" src="/assets/images/using-bcb/live-ssai/19-app-event.png" />
+        </figure>
+      </li>
+      <li>
+        In your Brightcove Beacon app, click on the
+        <strong>Play</strong> button. You should now be able to see your Live event streaming, with ads inserted by SSAI from Video Cloud.
+      </li>
+    </ol>
+    <p>
+      Once your event ends, you can save all or part of it as a clip that becomes a video asset in Video Cloud or a playable stream that can be shown in Brightcove Beacon. The Ads
+      of the Live event will not be saved, but the cue points from where the ads were transmitted will be registered so that you can add new ads in a later VOD of your recorded
+      Live event.
+    </p>
+    <p>
+      For more information on how to create a clip, please see the
+      <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/streaming-live-event.html#Clip" target="_blank">Creating a Clip from your Live event</a>
+      section from the <em>Streaming a Live Event</em> document.
+    </p>
+  </section>
+</article>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page last updated on 29 Apr 2021
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Brightcove Support</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">System Status</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">Contact Support</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">Documentation</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Training</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">Online Courses</a>
+          </li>
+          <li>
+            <a href="https://studio.support.brightcove.com/training/register-training.html">Register for a course</a>
+          </li>
+          <li>
+            <a href="https://university.brightcove.com/">Brightcove University</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">Brightcove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">Privacy</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin" style="margin-right: 1rem;"><i data-feather="linkedin" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter" style="margin-right: 1rem;"><i data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i data-feather="facebook" style="color:#8E9093;height: 1.25rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+      
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documenation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder
+    maxSuggestions: 5, // Maximum number of suggestions to show
+    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+  
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+      window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/js/sajari-search-foot.js"></script>
+  
+	<script>
+		feather.replace()
+	</script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <style>
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>

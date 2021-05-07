@@ -1,292 +1,292 @@
 ---
-title: Introducing Pages
-parent: Using Brightcove Beacon
+title: "Introducing Pages"
+description: "In this topic, you will be provided an overview of the use of <strong>Pages</strong> in a Brightcove Beacon app. Pages contain the functionality and video content app users will see."
+parent: "Using Brightcove Beacon"
 ---
 
+<h1>{{ page.title }}</h1>
 <article class="bcls-article">
+  <summary>{{ page.description }}</summary>
 
-    <h1>Introducing Pages</h1>
-    <summary>In this topic, you will be provided an overview of the use of <strong>Pages</strong> in a Brightcove Beacon app. Pages contain the functionality and video content app users will see.</summary>
+  <section class="bcls-section">
+    <h2 id="Types_of_pages">Types of pages</h2>
+    <p>When you create or edit a page, the <strong>Page Type</strong> selection offers the following:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/using-bcb/introducing-pages/page-types.png" alt="page-types">
+    </figure>
+    <h3>Page categories</h3>
+    <p>The page types can be grouped into three categories. The categories and details for each follow:</p>
+    <ol>
+      <li>Non-configurable
+        <ul>
+          <li>A page you choose to include in your app, or not.</li>
+          <li>The document <a href="/using-brightcove-beacon/including-non-configurable-pages.html">Including Non-Configurable Pages</a> provides further details, including how to add one of these types of pages to your app.</li>
+          <li>Examples of non-configurable pages are <strong>Settings</strong> and <strong>Sign Up</strong>, shown here:
+            <div class="row">
+              <div class="column">
+                <figure class="bcls-figure">
+                  <img class="bcls-image" width="250" height="430" src="/assets/images/using-bcb/introducing-pages/settings.png" alt="featured videos">
+                </figure>
+              </div>
+              <div class="column">
+                <figure class="bcls-figure">
+                  <img class="bcls-image" width="250" height="430" src="/assets/images/using-bcb/introducing-pages/sign-up.png" alt="featured videos">
+                </figure>
+              </div>
+            </div>
+          </li>
+        </ul>
+      <li>Screen</li>
+      <ul>
+        <li>A page that holds your video content, in carousels, lists, etc.</li>
+        <li>Highly configurable using <strong>blocks</strong>, <strong>layouts</strong> and <strong>playlists</strong>. Two examples are show here:
+          <div class="row">
+            <div class="column">
+              <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/featured-videos.png" alt="featured videos">
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/using-bcb/introducing-pages/beacon-layout-title-out.png" alt="featured videos">
+              </figure>
+            </div>
+          </div>
+        </li>
+        <li>screen-hero_image</li>
+        <ul>
+          <li>A special type of screen page, but permits an image behind the video content.</li>
+          <li>Need to upload both a landscape and poster orientation image for different platforms, for example, web (landscape) and mobile (portrait).</li>
+          <li>The <strong>"hero"</strong> area at the top of the screen is meant to be non-covered and is not configurable:
+            <div class="row">
+              <div class="column">
+                <figure class="bcls-figure">
+                  <img class="bcls-image" src="/assets/images/using-bcb/introducing-pages/hero-image.png" alt="featured videos">
+                </figure>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </ul>
+      <li>Redirect</li>
+      <ul>
+        <li>Redirect page types are only for the web app.</li>
+        <li><code translate="no">redirect-blank</code> opens a web page in a new tab.</li>
+        <li><code translate="no">redirect-self</code> opens a web page in the same tab.</li>
+        <li>Specify the URL on the <strong>External Redirect tab.</strong></li>
+      </ul>
+    </ol>
 
-    <section class="bcls-section">
-        <h2 id="Types_of_pages">Types of pages</h2>
-        <p>When you create or edit a page, the <strong>Page Type</strong> selection offers the following:</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/using-bcb/introducing-pages/page-types.png" alt="page-types">
-        </figure>
-        <h3>Page categories</h3>
-        <p>The page types can be grouped into three categories. The categories and details for each follow:</p>
-        <ol>
-            <li>Non-configurable
-                <ul>
-                    <li>A page you choose to include in your app, or not.</li>
-                    <li>The document <a href="/using-brightcove-beacon/including-non-configurable-pages.html">Including Non-Configurable Pages</a> provides further details, including how to add one of these types of pages to your app.</li>
-                    <li>Examples of non-configurable pages are <strong>Settings</strong> and <strong>Sign Up</strong>, shown here:
-                        <div class="row">
-                            <div class="column">
-                                <figure class="bcls-figure">
-                                    <img class="bcls-image" width="250" height="430" src="/assets/images/using-bcb/introducing-pages/settings.png" alt="featured videos">
-                                </figure>
-                            </div>
-                            <div class="column">
-                                <figure class="bcls-figure">
-                                    <img class="bcls-image" width="250" height="430" src="/assets/images/using-bcb/introducing-pages/sign-up.png" alt="featured videos">
-                                </figure>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            <li>Screen</li>
-            <ul>
-                <li>A page that holds your video content, in carousels, lists, etc.</li>
-                <li>Highly configurable using <strong>blocks</strong>, <strong>layouts</strong> and <strong>playlists</strong>. Two examples are show here:
-                    <div class="row">
-                        <div class="column">
-                            <figure class="bcls-figure">
-                                <img class="bcls-image" src="/assets/images/getting-started/creating-app-design/featured-videos.png" alt="featured videos">
-                            </figure>
-                        </div>
-                        <div class="column">
-                            <figure class="bcls-figure">
-                                <img class="bcls-image" src="/assets/images/using-bcb/introducing-pages/beacon-layout-title-out.png" alt="featured videos">
-                            </figure>
-                        </div>
-                    </div>
-                </li>
-                <li>screen-hero_image</li>
-                <ul>
-                    <li>A special type of screen page, but permits an image behind the video content.</li>
-                    <li>Need to upload both a landscape and poster orientation image for different platforms, for example, web (landscape) and mobile (portrait).</li>
-                    <li>The <strong>"hero"</strong> area at the top of the screen is meant to be non-covered and is not configurable:
-                        <div class="row">
-                            <div class="column">
-                                <figure class="bcls-figure">
-                                    <img class="bcls-image" src="/assets/images/using-bcb/introducing-pages/hero-image.png" alt="featured videos">
-                                </figure>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </ul>
-            <li>Redirect</li>
-            <ul>
-                <li>Redirect page types are only for the web app.</li>
-                <li><code translate="no">redirect-blank</code> opens a web page in a new tab.</li>
-                <li><code translate="no">redirect-self</code> opens a web page in the same tab.</li>
-                <li>Specify the URL on the <strong>External Redirect tab.</strong></li>
-            </ul>
-        </ol>
+    <h3>Page type definitions</h3>
+    <p>The following table displays the page types, including a description and its use.</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Page Type</th>
+          <th>Description</th>
+          <th style="text-align:center">Add Blocks in the UI<br>(Yes/No)</th>
+          <th style="text-align:center">Use<br>(Required/Recommended/Optional)</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>custom-downloads</td>
+          <td>Not supported</td>
+          <td>No</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>custom-exit</td>
+          <td>Provides functionality to quit an app.</td>
+          <td>No</td>
+          <td>Required on some platforms, mainly smart TV.</td>
+        </tr>
+        <tr>
+          <td>custom-logout</td>
+          <td>Provides functionality to logout of an app. After logout, the user is left on the landing page or makes the user an anonymous user.</td>
+          <td>No</td>
+          <td>Required if you have registered users, as would be the case for most mobile platforms.</td>
+        </tr>
+        <tr>
+          <td>custom-settings</td>
+          <td>Provides access to settings.</td>
+          <td>No</td>
+          <td>Highly recommended</td>
+        </tr>
+        <tr>
+          <td>custom-signin</td>
+          <td>Provides registered user login</td>
+          <td>No</td>
+          <td>Required for registered users; not needed if you allow anonymous browsing</td>
+        </tr>
+        <tr>
+          <td>custom-signup</td>
+          <td>Provides a way for users to register</td>
+          <td>No</td>
+          <td>Required if app uses registered users; not needed if you allow anonymous browsing</td>
+        </tr>
+        <tr>
+          <td>epg-</td>
+          <td>Electronic Program Guide (EPG) displays the program guide for live TV</td>
+          <td>No</td>
+          <td>Required is app uses live channels</td>
+        </tr>
+        <tr>
+          <td>liveTV-player</td>
+          <td>Plays live video and automatically will change the orientation to landscape.</td>
+          <td>No</td>
+          <td>If you do play live TV, it is recommended to use the <strong>liveTV-preview</strong> screen, as that presents a player to the user, then on click/tap will change the orientation to landscape and play the video.</td>
+        </tr>
+        <tr>
+          <td>liveTV-preview</td>
+          <td>Plays live video with player as part of a larger page, then on click/tap will play video in landscape orientation.</td>
+          <td>No</td>
+          <td>Recommended for use over <strong>liveTV-player</strong></td>
+        </tr>
+        <tr>
+          <td>my_stuff-all</td>
+          <td>Provides a page with two tabs, one of which displays <strong>Recently Watched</strong> and the other tab displays <strong>Favorites</strong>. This would just be a blank page with a message saying you need to use <strong>Recently
+              Watched</strong> and <strong>Favorites</strong>.</td>
+          <td>No</td>
+          <td>Optional</td>
+        </tr>
+        <tr>
+          <td>my_stuff-favourites</td>
+          <td>Contains the videos marked by the user as a favorite.</td>
+          <td>No</td>
+          <td>Recommended</td>
+        </tr>
+        <tr>
+          <td>my_stuff-recently_watched</td>
+          <td>Contains the last 20 videos watched, chronologically listed.</td>
+          <td>No</td>
+          <td>Recommended</td>
+        </tr>
+        <tr>
+          <td>redirect-blank</td>
+          <td>Web only; when menu option clicked redirect occurs to a new tab.</td>
+          <td>No</td>
+          <td>Optional</td>
+        </tr>
+        <tr>
+          <td>redirect-self</td>
+          <td>Web only; when menu option clicked redirect occurs to same tab.</td>
+          <td>No</td>
+          <td>Optional</td>
+        </tr>
+        <tr>
+          <td>screen-</td>
+          <td>Displays the grouped videos in carousels or tabs. Used to organize the contents of your app.</td>
+          <td>Yes</td>
+          <td>Required</td>
+        </tr>
+        <tr>
+          <td>screen-hero_image</td>
+          <td>Special type of screen page where you can add an image behind the video content.</td>
+          <td>Yes</td>
+          <td>Optional</td>
+        </tr>
+        <tr>
+          <td>search-</td>
+          <td>Provides input screen with an input field where you can search the content, and then presented the results.</td>
+          <td>No</td>
+          <td>Highly recommended</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-        <h3>Page type definitions</h3>
-        <p>The following table displays the page types, including a description and its use.</p>
-        <table class="bcls-table">
-            <thead class="bcls-table__head">
-                <tr>
-                    <th>Page Type</th>
-                    <th>Description</th>
-                    <th style="text-align:center">Add Blocks in the UI<br>(Yes/No)</th>
-                    <th style="text-align:center">Use<br>(Required/Recommended/Optional)</th>
-                </tr>
-            </thead>
-            <tbody class="bcls-table__body">
-                <tr>
-                    <td>custom-downloads</td>
-                    <td>Not supported</td>
-                    <td>No</td>
-                    <td>N/A</td>
-                </tr>
-                <tr>
-                    <td>custom-exit</td>
-                    <td>Provides functionality to quit an app.</td>
-                    <td>No</td>
-                    <td>Required on some platforms, mainly smart TV.</td>
-                </tr>
-                <tr>
-                    <td>custom-logout</td>
-                    <td>Provides functionality to logout of an app. After logout, the user is left on the landing page or makes the user an anonymous user.</td>
-                    <td>No</td>
-                    <td>Required if you have registered users, as would be the case for most mobile platforms.</td>
-                </tr>
-                <tr>
-                    <td>custom-settings</td>
-                    <td>Provides access to settings.</td>
-                    <td>No</td>
-                    <td>Highly recommended</td>
-                </tr>
-                <tr>
-                    <td>custom-signin</td>
-                    <td>Provides registered user login</td>
-                    <td>No</td>
-                    <td>Required for registered users; not needed if you allow anonymous browsing</td>
-                </tr>
-                <tr>
-                    <td>custom-signup</td>
-                    <td>Provides a way for users to register</td>
-                    <td>No</td>
-                    <td>Required if app uses registered users; not needed if you allow anonymous browsing</td>
-                </tr>
-                <tr>
-                    <td>epg-</td>
-                    <td>Electronic Program Guide (EPG) displays the program guide for live TV</td>
-                    <td>No</td>
-                    <td>Required is app uses live channels</td>
-                </tr>
-                <tr>
-                    <td>liveTV-player</td>
-                    <td>Plays live video and automatically will change the orientation to landscape.</td>
-                    <td>No</td>
-                    <td>If you do play live TV, it is recommended to use the <strong>liveTV-preview</strong> screen, as that presents a player to the user, then on click/tap will change the orientation to landscape and play the video.</td>
-                </tr>
-                <tr>
-                    <td>liveTV-preview</td>
-                    <td>Plays live video with player as part of a larger page, then on click/tap will play video in landscape orientation.</td>
-                    <td>No</td>
-                    <td>Recommended for use over <strong>liveTV-player</strong></td>
-                </tr>
-                <tr>
-                    <td>my_stuff-all</td>
-                    <td>Provides a page with two tabs, one of which displays <strong>Recently Watched</strong> and the other tab displays <strong>Favorites</strong>. This would just be a blank page with a message saying you need to use <strong>Recently
-                            Watched</strong> and <strong>Favorites</strong>.</td>
-                    <td>No</td>
-                    <td>Optional</td>
-                </tr>
-                <tr>
-                    <td>my_stuff-favourites</td>
-                    <td>Contains the videos marked by the user as a favorite.</td>
-                    <td>No</td>
-                    <td>Recommended</td>
-                </tr>
-                <tr>
-                    <td>my_stuff-recently_watched</td>
-                    <td>Contains the last 20 videos watched, chronologically listed.</td>
-                    <td>No</td>
-                    <td>Recommended</td>
-                </tr>
-                <tr>
-                    <td>redirect-blank</td>
-                    <td>Web only; when menu option clicked redirect occurs to a new tab.</td>
-                    <td>No</td>
-                    <td>Optional</td>
-                </tr>
-                <tr>
-                    <td>redirect-self</td>
-                    <td>Web only; when menu option clicked redirect occurs to same tab.</td>
-                    <td>No</td>
-                    <td>Optional</td>
-                </tr>
-                <tr>
-                    <td>screen-</td>
-                    <td>Displays the grouped videos in carousels or tabs. Used to organize the contents of your app.</td>
-                    <td>Yes</td>
-                    <td>Required</td>
-                </tr>
-                <tr>
-                    <td>screen-hero_image</td>
-                    <td>Special type of screen page where you can add an image behind the video content.</td>
-                    <td>Yes</td>
-                    <td>Optional</td>
-                </tr>
-                <tr>
-                    <td>search-</td>
-                    <td>Provides input screen with an input field where you can search the content, and then presented the results.</td>
-                    <td>No</td>
-                    <td>Highly recommended</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+  <section class="bcls-section">
+    <h2 id="Configuring_screen_pages">Configuring screen pages</h2>
+    <p>As mentioned earlier in this document, <em>screen</em> pages contain your videos and provide options for the display of the images that represent your videos. In this section, you will see your configuration options with screenshots of how those options look in your apps. You will first see information about blocks, which is the highest level of container on a screen page. Then you will see layout information, which controls how the images that represent your videos are displayed.</p>
+    <h3>Blocks</h3>
+    <p>Highlighted in yellow are the types of blocks you can use:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/pages/introducing-pages/block-types.png" alt="">
+    </figure>
+    <p>Here are images of each type:</p>
+    <h4>single-block</h4>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/pages/introducing-pages/carousel-labels-in.png" alt="">
+    </figure>
+    <p>The <em>single-block</em> only permits you to add one layout/playlist combination to the block. The screenshot shows a <em>single-block</em> displaying a carousel. Note that if you try to add multiple layout/playlist combinations to a <em>single-block</em>, or try to change to a <em>single-block</em> that contains multiple layout/playlist combinations, you will get an error:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/pages/introducing-pages/single-block-error.png" alt="">
+    </figure>
+    <h4>list-block</h4>
+    <p>The <em>list-block</em> permits you to add multiple layout/playlist combinations to the block. The screenshot shows a <em>list-block</em> with three carousels contained therein.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/pages/introducing-pages/list-block.png" alt="">
+    </figure>
+    <h4>tabed_block</h4>
+    <p>The <em>tabed-block</em> permits you to add multiple layout/playlist combinations to the block, but only one will be displayed at a time and the tabs permit the user to choose which one is visible. Two restrictions do apply:
+    <ul>
+      <li>The layouts inside a tabed-block should be the same.</li>
+      <li>Inside a tabed-block, the layouts should be grids.</li>
+    </ul>
+    The screenshot shows a <em>tabed-block</em> with playlists selectable.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/pages/introducing-pages/tabbed-block.png" alt="">
+    </figure>
+    <h4>dropdown-block</h4>
+    <p>The <em>dropdown-block</em> permits you to add multiple layout/playlist combinations to the block, but only one will be displayed at a time and the dropdown permits the user to choose which one is visible. Two restrictions do apply:
+    <ul>
+      <li>The layouts inside a dropdown-block should be the same.</li>
+      <li>Inside a dropdown-block, the layouts should be grids.</li>
+    </ul> The screenshot shows a <em>dropdown-block</em> (inside the yellow rectangle) with three playlists selectable.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/pages/introducing-pages/dropdown-block.png" alt="">
+    </figure>
+    <h3>Layouts</h3>
+    <p>In all the examples of blocks above the selected layout was a carousel. The carousel displays the image for each video in a horizontal list. That is not the only layout from which you can choose. The available layouts are highlighted in yellow:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/pages/introducing-pages/layout-types.png" alt="">
+    </figure>
+    <p>Rather than a screenshot of each layout type, an example of each layout characteristic will be shown. They types highlighted in yellow above are combinations of different characteristics.</p>
+    <h4>Carousel AND Labels In</h4>
+    <p>The carousel displays images in a horizontal row, and the labels overlay a small bottom portion of the image.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/pages/introducing-pages/featured-banner-labels-in.png" alt="">
+    </figure>
+    <h4>Labels Out</h4>
+    <p>Labels are below the image.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/pages/introducing-pages/featured-banner-labels-out.png" alt="">
+    </figure>
+    <h4>Featured</h4>
+    <p>Images are larger (featured boxed in red, normal carousel below that). Often, but not always, featured layouts are used at the top of a page.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/pages/introducing-pages/featured-versus-normal.png" alt="">
+    </figure>
+    <h4>Landscape</h4>
+    <p>The images are landscape proportioned.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/pages/introducing-pages/carousel-labels-in.png" alt="">
+    </figure>
+    <h4>Posters</h4>
+    <p>The images are poster (portrait) proportioned.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/pages/introducing-pages/carousel-posters-5-columns-labels-out.png" alt="">
+    </figure>
+    <h4>Grid 3 AND Grid 4</h4>
+    <p>The two types of grids display images in a 2-dimensional row/column pattern. The number following the grid, 3 or 4, indicates a relative size for the images. It does NOT indicated the number of columns that will always be displayed. This screenshot shows a browser at 800px wide, and the Grid 3 has two rows of three images. The Grid 4 is displaying four images across since the images are smaller.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/pages/introducing-pages/grid-3-4-800px.png" alt="">
+    </figure>
+    <p>This next screenshot is still using both a Grid 3 and Grid 4, but the browser width is 1600px. The Grid 3 images are now four across, and five images in the Grid 4 layout can fit across the screen. Again you can see the Grid 3 images are larger.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/pages/introducing-pages/grid-3-4-1600px.png" alt="">
+    </figure>
+    <p>That concludes the options for blocks and layouts.</p>
+  </section>
 
-    <section class="bcls-section">
-        <h2 id="Configuring_screen_pages">Configuring screen pages</h2>
-        <p>As mentioned earlier in this document, <em>screen</em> pages contain your videos and provide options for the display of the images that represent your videos. In this section, you will see your configuration options with screenshots of how those options look in your apps. You will first see information about blocks, which is the highest level of container on a screen page. Then you will see layout information, which controls how the images that represent your videos are displayed.</p>
-        <h3>Blocks</h3>
-        <p>Highlighted in yellow are the types of blocks you can use:</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/pages/introducing-pages/block-types.png" alt="">
-        </figure>
-        <p>Here are images of each type:</p>
-        <h4>single-block</h4>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/pages/introducing-pages/carousel-labels-in.png" alt="">
-        </figure>
-        <p>The <em>single-block</em> only permits you to add one layout/playlist combination to the block. The screenshot shows a <em>single-block</em> displaying a carousel. Note that if you try to add multiple layout/playlist combinations to a <em>single-block</em>, or try to change to a <em>single-block</em> that contains multiple layout/playlist combinations, you will get an error:</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/pages/introducing-pages/single-block-error.png" alt="">
-        </figure>
-        <h4>list-block</h4>
-        <p>The <em>list-block</em> permits you to add multiple layout/playlist combinations to the block. The screenshot shows a <em>list-block</em> with three carousels contained therein.</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/pages/introducing-pages/list-block.png" alt="">
-        </figure>
-        <h4>tabed_block</h4>
-        <p>The <em>tabed-block</em> permits you to add multiple layout/playlist combinations to the block, but only one will be displayed at a time and the tabs permit the user to choose which one is visible. Two restrictions do apply:
-            <ul>
-                <li>The layouts inside a tabed-block should be the same.</li>
-                <li>Inside a tabed-block, the layouts should be grids.</li>
-            </ul>
-            The screenshot shows a <em>tabed-block</em> with playlists selectable.</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/pages/introducing-pages/tabbed-block.png" alt="">
-        </figure>
-        <h4>dropdown-block</h4>
-        <p>The <em>dropdown-block</em> permits you to add multiple layout/playlist combinations to the block, but only one will be displayed at a time and the dropdown permits the user to choose which one is visible. Two restrictions do apply:
-            <ul>
-                <li>The layouts inside a dropdown-block should be the same.</li>
-                <li>Inside a dropdown-block, the layouts should be grids.</li>
-            </ul> The screenshot shows a <em>dropdown-block</em> (inside the yellow rectangle) with three playlists selectable.</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/pages/introducing-pages/dropdown-block.png" alt="">
-        </figure>
-        <h3>Layouts</h3>
-        <p>In all the examples of blocks above the selected layout was a carousel. The carousel displays the image for each video in a horizontal list. That is not the only layout from which you can choose. The available layouts are highlighted in yellow:</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/pages/introducing-pages/layout-types.png" alt="">
-        </figure>
-        <p>Rather than a screenshot of each layout type, an example of each layout characteristic will be shown. They types highlighted in yellow above are combinations of different characteristics.</p>
-        <h4>Carousel AND Labels In</h4>
-        <p>The carousel displays images in a horizontal row, and the labels overlay a small bottom portion of the image.</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/pages/introducing-pages/featured-banner-labels-in.png" alt="">
-        </figure>
-        <h4>Labels Out</h4>
-        <p>Labels are below the image.</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/pages/introducing-pages/featured-banner-labels-out.png" alt="">
-        </figure>
-        <h4>Featured</h4>
-        <p>Images are larger (featured boxed in red, normal carousel below that). Often, but not always, featured layouts are used at the top of a page.</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/pages/introducing-pages/featured-versus-normal.png" alt="">
-        </figure>
-        <h4>Landscape</h4>
-        <p>The images are landscape proportioned.</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/pages/introducing-pages/carousel-labels-in.png" alt="">
-        </figure>
-        <h4>Posters</h4>
-        <p>The images are poster (portrait) proportioned.</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/pages/introducing-pages/carousel-posters-5-columns-labels-out.png" alt="">
-        </figure>
-        <h4>Grid 3 AND Grid 4</h4>
-        <p>The two types of grids display images in a 2-dimensional row/column pattern. The number following the grid, 3 or 4, indicates a relative size for the images. It does NOT indicated the number of columns that will always be displayed. This screenshot shows a browser at 800px wide, and the Grid 3 has two rows of three images. The Grid 4 is displaying four images across since the images are smaller.</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/pages/introducing-pages/grid-3-4-800px.png" alt="">
-        </figure>
-        <p>This next screenshot is still using both a Grid 3 and Grid 4, but the browser width is 1600px. The Grid 3 images are now four across, and five images in the Grid 4 layout can fit across the screen. Again you can see the Grid 3 images are larger.</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/pages/introducing-pages/grid-3-4-1600px.png" alt="">
-        </figure>
-        <p>That concludes the options for blocks and layouts.</p>
-    </section>
-
-    <section class="bcls-section">
-        <h2 id="Common_page_configuration_settings">Common page configuration settings</h2>
-        <p>In Brightcove Beacon when you are creating a new page or editing an existing page, you will see the following tabs:</p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/using-bcb/introducing-pages/pages-tabs.png" alt="Page option tabs">
-        </figure>
-        <p>The <strong>Basic Data</strong> tab is where you choose your page type, as well as configure <strong>screen</strong> pages. The other tabs are the same for all page types. The <a href="/references/common-configuration-settings.html">Common Configuration Settings</a> document details the needed information on the <strong>Textual Data</strong>, <strong>Non-Textual Data</strong>, <strong>Tags</strong> and <strong>Rights & Scheduling</strong> tabs.</p>
-    </section>
+  <section class="bcls-section">
+    <h2 id="Common_page_configuration_settings">Common page configuration settings</h2>
+    <p>In Brightcove Beacon when you are creating a new page or editing an existing page, you will see the following tabs:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/using-bcb/introducing-pages/pages-tabs.png" alt="Page option tabs">
+    </figure>
+    <p>The <strong>Basic Data</strong> tab is where you choose your page type, as well as configure <strong>screen</strong> pages. The other tabs are the same for all page types. The <a href="/references/common-configuration-settings.html">Common Configuration Settings</a> document details the needed information on the <strong>Textual Data</strong>, <strong>Non-Textual Data</strong>, <strong>Tags</strong> and <strong>Rights & Scheduling</strong> tabs.</p>
+  </section>
 
 </article>

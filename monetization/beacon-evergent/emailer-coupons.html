@@ -12,7 +12,7 @@ layout: staging
 	<summary>{{ page.description }}</summary>
 	<section class="bcls-section">
 		<h2 id="Introduction">Introduction</h2>
-		<p>The Evergent backoffice system provides services to help you manage your business. In this topic, we will cover two of those services:</p>
+		<p>The Evergent backoffice system provides services to help you manage your business. In this topic, we will cover two of these services:</p>
 		<ul>
 			<li>The automated emailer</li>
 			<li>The coupon manager</li>
@@ -20,24 +20,24 @@ layout: staging
 	</section>
 	<section class="bcls-section">
 		<h2 id="emailer">Emailer</h2>
-		<p>The emailer allows to create templates and schedules for various system-generated emails. The sections that follow will detail the emailer operations.</p>
+		<p>The emailer allows you to create templates and schedules for various system-generated emails. The sections that follow will detail the emailer operations.</p>
 	</section>
 	<section class="bcls-section">
 		<h2 id="message_types">Message types</h2>
-		<p>Evergent supports the following message types.</p>
+		<p>Evergent supports the following message types:</p>
 		<dl>
 			<dt>Scheduling</dt>
 			<dd>When the batch jobs are scheduled in the system admin, an email is sent to an admin.</dd>
 			<dt>Credit Card Expiry Reminder</dt>
-			<dd>When the "Credit Card Expiry Reminder" check box is selected at the business level then the reminder email is sent to the customers when their credit card is about to expired (usually a month before card expiry the email is sent). In this case the system will use email template message type credit card expiry reminder.</dd>
+			<dd>When the "Credit Card Expiry Reminder" checkbox is selected at the business level then the reminder email is sent to the customers when their credit card is about to expire (the email is usually sent a month before the card expires). In this case the system will use the email template message type "credit card expiry reminder".</dd>
 			<dt>Bulk Emails</dt>
-			<dd>If a business wants to schedule a promotional email and specify the future time to execute then the bulk email message type is used. These types of bulk emails can be sent to a business unit subscriber, specific market area subscriber, or a specific service.</dd>
-			<dd>Credit Card Transaction</dd>
-			<dt>When the credit card payment transaction is done by a subscriber then the transaction details will be sent via email to the customer using this email template.</dt>
+			<dd>If a business wants to schedule a promotional email and specify a future time to execute, then the bulk email message type is used. These types of bulk emails can be sent to a business unit subscriber, specific market area subscriber, or a specific service.</dd>
+			<dt>Credit Card Transaction</dt>
+			<dd>When the credit card payment transaction is done by a subscriber, the transaction details will be sent via email to the customer using this email template.</dd>
 			<dt>Event Message</dt>
-			<dd>Event message type email templates will be used to define an email template and cross-map them to the event category, which gives ability to trigger email notifications to subscribers once the event is recorded at the account level.</dd>
+			<dd>Event message type email templates will be used to define an email template and cross-map them to the event category, which gives the ability to trigger email notifications to subscribers once the event is recorded at the account level.</dd>
 			<dt>Adhoc</dt>
-			<dd>Adhoc message type is to send the individual messages not linking with any of the event category mapping.</dd>
+			<dd>The adhoc message type is to send the individual messages not linking with any of the event category mapping.</dd>
 		</dl>
 	</section>
 	<section class="bcls-section">
@@ -57,12 +57,12 @@ layout: staging
 					<li>On the <strong>Title</strong> field, enter the title for the email.</li>
 					<li>On the <strong>Email Subject</strong> field, type the subject of the email.</li>
 					<li>Select the message type that you will define an email message from the <strong>Message Type</strong> drop-down list.</li>
-					<li>In the <strong>Admin Email</strong> field, enter the email id that you want the email to be sent.</li>
+					<li>In the <strong>Admin Email</strong> field, enter the email ID that you want the email to be sent from.</li>
 					<li>In the <strong>Admin Name</strong> field, enter the Admin name.</li>
 					<li>Select the <strong>Event Category</strong> from the provided drop-down list.</li>
 					<li>
-						Enter the email id of the persons you want the email to be sent in the <strong>Cc</strong> and <strong>Bcc</strong> fields.
-						<aside class="bcls-aside bcls-aside--information language-editable">Note: You can specify multiple email ids in the Cc and Bcc fields by separating each email id with a comma.</aside>
+						Enter the email ID of the persons you want the email to be sent to in the <strong>CC</strong> and <strong>BCC</strong> fields.
+						<aside class="bcls-aside bcls-aside--information language-editable">Note: You can specify multiple email IDs in the CC and BCC fields by separating each email ID with a comma.</aside>
 					</li>
 				</ol>
 			</li>
@@ -82,7 +82,7 @@ layout: staging
 		<ol class="bcls-tasklist-restart">
 			<li>Navigate to the <strong>Emailer</strong> screen of a Business Unit.</li>
 			<li>In the <strong>List of Email Templates</strong> section, click the email template that you want to edit.</li>
-			<li>The <strong>Update Emailer</strong> screen appears, make the necessary changes in the available fields, click <strong>Update</strong>.</li>
+			<li>The <strong>Update Emailer</strong> screen appears, make the necessary changes in the available fields, and click <strong>Update</strong>.</li>
 		</ol>
 		<aside class="bcls-aside bcls-aside--information language-editable">Note that you cannot modify the Message Type and Event Category fields on the Update Emailer screen.</aside>
 		<h3>Schedule emails</h3>
@@ -98,7 +98,7 @@ layout: staging
 					<figcaption class="bcls-caption--image">Schedule Email</figcaption>
 				</figure>
 			</li>
-			<li>Enter the email id in the <strong>Send Mail To</strong> field.</li>
+			<li>Enter the email ID in the <strong>Send Mail To</strong> field.</li>
 			<li>Click the <strong>Time To Execute</strong> field to select the schedule date and time.</li>
 			<li>To schedule emails daily on the selected date and time, select the <strong>Daily Schedule</strong> checkbox.</li>
 		</ol>
@@ -122,7 +122,7 @@ layout: staging
 	</section>
 	<section class="bcls-section">
 		<h2 id="Coupon_generation">Coupon generation</h2>
-		<p>Coupons generation Permission is based on the User’s BU Group Permission. Login users having this permission can generate & edit the Coupons.</p>
+		<p>Coupons generation permission is based on the User’s BU Group Permission. Logged in users having this permission can generate and edit the Coupons.</p>
 		<h3>Adding a new coupon/voucher</h3>
 		<ol class="bcls-tasklist-restart">
 			<li>Click the <strong>Coupons</strong> from the left menu.</li>
@@ -153,7 +153,7 @@ layout: staging
 					<li>
 						<strong>Credited as Wallet Top-up</strong>:
 						<ul>
-							<li>For generating the Coupon for wallet top-up,click the toggle switch to enable and enter Amount</li>
+							<li>For generating the Coupon for wallet top-up, click the toggle switch to enable and enter Amount</li>
 							<li>For generating the Coupon as a voucher, click the toggle switch to disable it</li>
 						</ul>
 						<figure class="bcls-figure">
@@ -163,25 +163,25 @@ layout: staging
 					</li>
 					<li><strong>Discount Type</strong>: Define the Coupon Type – e.g., Free, Flat, Flat Off, Percentage, Percentage-Off, and Validity Extension</li>
 					<li><strong>Amount/Percentage</strong>: For the type selected, the Amount/Percentage field appears</li>
-					<li><strong>Period & Duration</strong>: The Period of Coupon applied can be number of days or number of Months, as the respective selection of period the Durations of the Coupon implies</li>
-					<li><strong>Make Prefix as Coupon Code</strong>: On checking the check, box Prefix will be saved as Coupon Code</li>
+					<li><strong>Period & Duration</strong>: The Period of Coupon applied can be number of days or number of months, as the respective selection of period the Durations of the Coupon implies</li>
+					<li><strong>Make Prefix as Coupon Code</strong>: When you check this checkbox, the Prefix will be saved as Coupon Code</li>
 					<li><strong>No. of Coupons</strong>: The user can provide the Number of Coupons generated for the Batch. In the Case of "Prefix as Coupon Code," the No. of Coupons will be "1"</li>
-					<li><strong>Coupon Priority</strong>: is used to set the generic coupon display on a priority order basis as generated in the business and mapped to a subscription and offer type</li>
+					<li><strong>Coupon Priority</strong>: Used to set the generic coupon display on a priority order basis as generated in the business and mapped to a subscription and offer type</li>
 					<li><strong>Coupon Length</strong>: Length of the coupon code you want to be generated</li>
 					<li><strong>Multiple Redemptions</strong>: If this toggle switch is selected, the user can define the Maximum Redemptions for a Coupon</li>
 					<li><strong>Maximum Redemptions</strong>: Allows the No. of Redemptions for a Coupon</li>
-					<li><strong>Multiple Redemptions by Single User</strong>: Check box allows customers to redeem a single Coupon on their account for No. of Maximum redemptions by Single User</li>
-					<li><strong>Multiple Redemptions by Single User</strong>: Check box allows customers to redeem a single Coupon on their account for No. of Maximum redemptions by Single User</li>
-					<li><strong>Case sensitive</strong>: Check the check box if you want to generate coupon codes in Capital letters</li>
-					<li><strong>isGift</strong>: If the check box is selected, the Coupon can be given to others</li>
-					<li><strong>Inheritable</strong>: If the check box is selected, the Coupon can be inheritable</li>
-					<li><strong>Is All Items Mandatory</strong>: If this check box is selected, then all the items are mandatory</li>
-					<li><strong>Skip Payment Method</strong>: If the check box is selected, then the payment method will be skipped after applying the Coupon</li>
+					<li><strong>Multiple Redemptions by Single User</strong>: checkbox allows customers to redeem a single Coupon on their account for No. of Maximum redemptions by Single User</li>
+					<li><strong>Multiple Redemptions by Single User</strong>: checkbox allows customers to redeem a single Coupon on their account for No. of Maximum redemptions by Single User</li>
+					<li><strong>Case Sensitive</strong>: Check the checkbox if you want to generate coupon codes in Capital letters</li>
+					<li><strong>Is Gift</strong>: If the checkbox is selected, the Coupon can be given to others</li>
+					<li><strong>Inheritable</strong>: If the checkbox is selected, the Coupon can be inheritable</li>
+					<li><strong>Is All Items Mandatory</strong>: If this checkbox is selected, then all the items are mandatory</li>
+					<li><strong>Skip Payment Method</strong>: If the checkbox is selected, then the payment method will be skipped after applying the Coupon</li>
 					<li><strong>Coupon Description</strong>: Enter the coupon description</li>
 					<li><strong>Campaign Info</strong>: Enter the campaign Info details</li>
 					<li><strong>Success Message</strong>: Enter the success message that is to be displayed to the user.</li>
 					<li><strong>Warning Message</strong>: Enter the warning message that is to be displayed to the user</li>
-					<li><strong>Applicable Products</strong>: User can select the no. of applicable product to the Coupon (Ex: Flat 30% OFF Coupon for product <strong>Neon</strong>)</li>
+					<li><strong>Applicable Products</strong>: User can select the no. of applicable products to the Coupon (Ex: Flat 30% OFF Coupon for product <strong>Neon</strong>)</li>
 					<li><strong>Applicable Packages</strong>: The user can select the no. of application packages to the Coupons</li>
 					<li><strong>Offer Types</strong>: The user can select the offer types for the Coupons</li>
 					<li><strong>Applicable Payment Modes</strong>: The user can select the applicable payment modes for the Coupon</li>

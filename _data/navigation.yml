@@ -2,21 +2,21 @@
   name: Home
   url: /index.html
 - section:
-  name: Getting Started
-  url: /getting-started/index.html
+  name: 'Getting Started'
+  url: '/getting-started/index.html'
   docs:
-    - name: Learning Guide
-      url: /getting-started/learning-guide-bc-beacon.html
-    - name: Implementation Phases
-      url: /getting-started/implementation-phases.html
-    - name: Application Design Considerations
-      url: /getting-started/app-design-considerations.html
-    - name: App Design - Info Architecture
-      url: /getting-started/creating-your-app-design-info-architecture.html
-    - name: App Design - Layout Options
-      url: /getting-started/creating-your-app-design-layout-options.html
-    - name: Design Best Practices
-      url: /getting-started/design-best-practices.html
+    - name: 'Learning Guide'
+      url: '/getting-started/learning-guide-bc-beacon.html'
+    - name: 'Implementation Phases'
+      url: '/getting-started/implementation-phases.html'
+    - name: 'Application Design Considerations'
+      url: '/getting-started/app-design-considerations.html'
+    - name: 'App Design - Info Architecture'
+      url: '/getting-started/creating-your-app-design-info-architecture.html'
+    - name: 'App Design - Layout Options'
+      url: '/getting-started/creating-your-app-design-layout-options.html'
+    - name: 'Design Best Practices'
+      url: '/getting-started/design-best-practices.html'
 - section:
   name: Syncing with Video Cloud
   url: /syncing-with-video-cloud/index.html

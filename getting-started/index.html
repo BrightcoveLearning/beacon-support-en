@@ -1,33 +1,30 @@
 ---
 title: Getting Started Home
+description: This section provides guides to help you get started with Brightcove Beacon..
 parent: Getting Started
 section: Getting Started
-description: This section provides guides to help you get started with Brightcove Beacon.
 ---
 
-<summary>{{ page.description }}</summary>
-  <section class="bcls-topic-list"><article class="landing-page-wrapper">
+
+<article class="landing-page-wrapper">
   <h1>{{ page.title }}</h1>
   <section class="landing-page-header" id="landing_page_header">
     <p>{{ page.description }}</p>
   </section>
-  <br />
-
   <section class="card-wrapper">
-    <section
-      onclick="window.location.pathname = '/getting-started/learning-guide-bc-beacon.html';"
-      class="bcls-card"
-    >
-<summary>{{ page.description }}</summary>
-  <section class="bcls-topic-list">      <div class="card-content">
-        <h2 id="create-app-design">
-          Creating Your Application Design - Layout Options
-        </h2>
-        <p>
-          Walks you through alternatives for your specific screens in your
-          application design
-        </p>
+    {% for item in site.data.navigation %}
+    {% if item.name == page.section %}
+    <section class="bcls-card">
+      <div class="card-content">
+        <h2 class="landing-page-item-header">{{ item.name }} Topics</h2>
+        <ul class="bcls-topic-list">
+          {% for entry in item.docs %}
+          <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
+          {% endfor %}
+        </ul>
       </div>
     </section>
+    {% endif %}
+    {% endfor %}
   </section>
 </article>

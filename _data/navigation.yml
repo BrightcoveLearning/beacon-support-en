@@ -81,7 +81,7 @@
       url: /using-brightcove-beacon/viewing-analytics-data.html
 - section:
   name: 'Monetization'
-  url: 'monetization/index.html'
+  url: '/monetization/index.html'
   docs:
     - name: SSAI
       url: '/monetization/ssai/index.html'

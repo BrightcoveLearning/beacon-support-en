@@ -142,11 +142,11 @@
     #      docs:
     #        - name: 'Submitting to the LG (webOS) Store'
     #          url: '/creating-your-apps/lg/submitting-to-lg.html'
-    - name: 'Panasonic'
-      url: '/creating-your-apps/panasonic/index.html'
-      docs:
-        - name: 'Submitting to the Panasonic Store'
-          url: '/creating-your-apps/panasonic/submitting-to-panasonic.html'
+    #- name: 'Panasonic'
+    #  url: '/creating-your-apps/panasonic/index.html'
+    #  docs:
+    #    - name: 'Submitting to the Panasonic Store'
+    #      url: '/creating-your-apps/panasonic/submitting-to-panasonic.html'
     - name: 'Roku'
       url: '/creating-your-apps/roku/index.html'
       docs:

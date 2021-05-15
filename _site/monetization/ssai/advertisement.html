@@ -6,9 +6,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="This section provides guides to help you get started with Brightcove Beacon.." />
+    <meta name="description" content="" />
 
-    <title>Getting Started Home</title>
+    <title>Creating an Advertisement Configuration</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -91,9 +91,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/getting-started/">Getting Started</a></li>
+      <li class="breadcrumb-item"><a href="/monetization/ssai/">Using Brightcove Beacon</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Getting Started Home</li>
+      <li class="breadcrumb-item active" aria-current="page">Creating an Advertisement Configuration</li>
     </ol>
   </nav>
 </header>
@@ -597,59 +597,155 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<article class="landing-page-wrapper">
-  <h1>Getting Started Home</h1>
-  <section class="landing-page-header" id="landing_page_header">
-    <p>This section provides guides to help you get started with Brightcove Beacon..</p>
+<article class="bcls-article">
+    <h1>Creating an Advertisement Configuration</h1>
+    <h2>This document is in development</h2>
+    <!--   <summary>
+    In this topic, you will learn how to configure advertising using the
+    Advertisement tab for Brightcove Beacon.
+  </summary>
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
+    <p>
+      An advertisement is associated with either a live or VOD ad configuration
+      ID. You will create the ad configuration in Video Cloud Studio. For
+      details, see the
+      <a href="/using-brightcove-beacon/configuring-server-side-ad-settings.html">
+        Video Cloud Ad Configuration ID
+      </a>
+      document.
+    </p>
+    <p>
+      Once you have created an advertisement, then you will be able to select it
+      when creating a channel, movie, episode or playlist.
+    </p>
   </section>
-  <section class="card-wrapper">
-    
-    
-    
-    
-    <section class="bcls-card">
-      <div class="card-content">
-        <h2 class="landing-page-item-header">Getting Started Topics</h2>
-        <ul class="bcls-topic-list">
-          
-          <li><a href="/getting-started/learning-guide-bc-beacon.html">Learning Guide</a></li>
-          
-          <li><a href="/getting-started/implementation-phases.html">Implementation Phases</a></li>
-          
-          <li><a href="/getting-started/app-design-considerations.html">Application Design Considerations</a></li>
-          
-          <li><a href="/getting-started/creating-your-app-design-info-architecture.html">App Design - Info Architecture</a></li>
-          
-          <li><a href="/getting-started/creating-your-app-design-layout-options.html">App Design - Layout Options</a></li>
-          
-          <li><a href="/getting-started/design-best-practices.html">Design Best Practices</a></li>
-          
-        </ul>
-      </div>
-    </section>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  </section>
+
+  <section class="bcls-section">
+    <h2 id="Advertisement">Advertisement</h2>
+    <p>To create an advertisement, follow these steps:</p>
+
+    <ol class="bcls-tasklist">
+      <li>Login to Brightcove Beacon.</li>
+      <li>
+        In the top navigation, select
+        <strong>Advertisement</strong>
+        .
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image"
+            src="//learning-services-media.brightcove.com/doc-assets/beacon/advertisement/new-advertisement.png"
+            alt="New advertisement"
+          />
+          <figcaption class="bcls-caption--image">New advertisement</figcaption>
+        </figure>
+      </li>
+      <li>
+        Select the
+        <strong>Add New Configuration</strong>
+        button.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image"
+            src="//learning-services-media.brightcove.com/doc-assets/beacon/advertisement/new-config.png"
+            alt="New advertisement config"
+          />
+          <figcaption class="bcls-caption--image">New advertisement</figcaption>
+        </figure>
+      </li>
+      <li>
+        Here there is only one tab, that being for
+        <strong>Basic Data</strong>
+        .
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image"
+            src="//learning-services-media.brightcove.com/doc-assets/beacon/advertisement/basic-data.png"
+            alt="Basic Data"
+          />
+          <figcaption class="bcls-caption--image">Basic Data</figcaption>
+        </figure>
+      </li>
+      <li>
+        <p>
+          Enter values for the following fields:
+        </p>
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th width="20%">Field</th>
+              <th>Required</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td>Name</td>
+              <td>Yes</td>
+              <td>
+                A descriptive name for your advertisement definition. This could
+                be your campaign name.
+              </td>
+            </tr>
+            <tr>
+              <td>Provider</td>
+              <td>Yes</td>
+              <td>
+                The value is
+                <strong>Brightcove SSAI</strong>. This allows you to stitch ads into your stream using
+                <a
+                  target="_blank"
+                  href="//support.brightcove.com/video-cloud-ssai-overview"
+                >
+                  Brightcove Server-Side Ad Insertion (SSAI)
+                </a>
+                .
+              </td>
+            </tr>
+            <tr>
+              <td>Live Ad Config ID</td>
+              <td>No</td>
+              <td>
+                The ID for your live ad configuration created in Video Cloud.
+                Either this or the VOD Ad Config ID is required.
+              </td>
+            </tr>
+            <tr>
+              <td>VOD Ad Config ID</td>
+              <td>No</td>
+              <td>
+                The ID for your VOD ad configuration created in Video Cloud.
+                Either this or the live Ad Config ID is required.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <aside class="bcls-aside bcls-aside--tip">
+          You will create the ad configuration in Video Cloud Studio. For
+          details, see the
+          <a href="/using-brightcove-beacon/configuring-server-side-ad-settings.html">
+            Video Cloud Ad Configuration ID
+          </a>
+          document.
+        </aside>
+      </li>
+      <li>
+        Select the
+        <strong>Create New Advertisement</strong>
+        button.
+      </li>
+    </ol>
+  </section> -->
 </article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
       
     </div>
   </div>
@@ -657,7 +753,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 08 May 2021
+  Page last updated on 28 Mar 2021
 </div>
 
 

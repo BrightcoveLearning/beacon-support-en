@@ -196,7 +196,7 @@ grandparent: Monetization
     <ul>
       <li>The client side parameters will be passed to the ad server when requesting ads.</li>
       <li>Client side parameters can be passed in the Playback APIs (provided in the VMAP/Manifest entry point). Those will be available to the SSAI infrastructure in the form of <code translate="no">{{url.xxx}}</code> macros where the <code>xxx</code> corresponds to the parameter key.</li>
-      <li>You build the query string using the variable names and value macros from the table above, in the form:
+      <li>Paste in your ad tag, <strong>appending your query string of ad targeting params</strong>:
         <pre class="line-numbers"><code class="language-html" translate="No">variablename1={VALUEMACRO1}&variablename2={VALUEMACRO2}& ...</code></pre>
       </li>
       <li>Example:
@@ -226,7 +226,7 @@ grandparent: Monetization
         </figure>
       </li>
       <li>Select your ad response - VMAP or VAST is recommended. If you use VAST, you will need to add cuepoints to the videos to specify where ad breaks should appear.</li>
-      <li>Paste in your ad tag (from you ad provider).</li>
+      <li>Paste in your ad tag, <strong>appending your query string of ad targeting params</strong>.</li>
       <li>Click <strong>Save</strong>.</li>
       <li>Find your new ad configuration in the table and copy your ad config ID. You will need this value for the Beacon advertising configuration.
         <figure class="bcls-figure">
@@ -274,8 +274,6 @@ grandparent: Monetization
       <li>Select <strong>VAST</strong> your ad response</li>
       <li>
         Paste in your ad tag, <strong>appending your query string of ad targeting params</strong>.
-        <p>Example:</p>
-        <pre><code translate="no">https://ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&num={{random.int32}}&d={{PLATFORM}}&os={{OS}}&did={{RDID}}&dt={{IDTYPE}}&lat={{IS_LAT}}</code></pre>
       </li>
       <li>Click <strong>Save</strong>.</li>
       <li>Find your new ad configuration in the table and copy your ad config ID. You will need this value for the Beacon advertising configuration.

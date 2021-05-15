@@ -86,6 +86,8 @@
     - name: SSAI
       url: '/monetization/ssai/index.html'
       docs:
+        - name: 'Creating an Advertisement'
+          url: '/monetization/ssai/advertisement.html'
         - name: 'Configuring Server-Side Ad Settings'
           url: '/monetization/ssai/configuring-server-side-ad-settings.html'
         - name: 'Implementing Live SSAI'

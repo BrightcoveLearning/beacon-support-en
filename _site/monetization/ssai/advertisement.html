@@ -612,7 +612,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
 
   <section class="bcls-section">
-    <h2 id="section-name">Creating an SSAI ad configuration ID</h2>
+    <h2 id="section-name">Create an SSAI ad configuration ID</h2>
     <p>Follow these steps to create an SSAI ad configuration:</p>
     <ol class="bcls-tasklist-restart">
       <li>In Video Cloud Studio, navigate to <strong>Admin → Server-Side Ad Settings</strong>.</li>
@@ -625,7 +625,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </li>
       <li>Add a name for the ad config.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-vod.png" alt="SSAI Configuration VOD">
+          <img class="bcls-image" src="/assets/images/using-bcb/advertisement/ssai-config-vod.png" alt="SSAI Configuration VOD">
           <figcaption class="bcls-caption--image">SSAI Configuration VOD</figcaption>
         </figure>
       </li>
@@ -643,83 +643,25 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
   <section class="bcls-section">
-    <h2 id="Advertisement">Advertisement</h2>
-    <p>To create an advertisement, follow these steps:</p>
+    <h2 id="Advertisement">Create an advertisement configuration</h2>
+    <p>To create an advertisement configuration, follow these steps:</p>
     <ol class="bcls-tasklist">
-      <li>Login to Brightcove Beacon.</li>
-      <li>
-        In the top navigation, select <strong>Advertisement</strong> .
-        <figure class="bcls-figure"> <img class="bcls-image" src="assets/images/using-bcb/advertisement/new-advertisement.png" alt="New advertisement" />
+      <li>In Brightcove Beacon Classic, in the top navigation select <strong>Advertisement</strong> .
+        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/using-bcb/advertisement/new-advertisement.png" alt="New advertisement" />
           <figcaption class="bcls-caption--image">New advertisement</figcaption>
         </figure>
       </li>
       <li>
-        Select the
-        <strong>Add New Configuration</strong> button.
-        <figure class="bcls-figure"> <img class="bcls-image" src="assets/images/using-bcb/advertisement/new-config.png" alt="New advertisement config" />
-          <figcaption class="bcls-caption--image">New advertisement</figcaption>
-        </figure>
+        Click <span class="button-teal">Add New Configuration</span>.
       </li>
-      <li>
-        Here there is only one tab, that being for <strong>Basic Data</strong>
-        .
-        <figure class="bcls-figure"> <img class="bcls-image" src="assets/images/using-bcb/advertisement/new-advertisement.png" alt="Basic Data" />
-          <figcaption class="bcls-caption--image">Basic Data</figcaption>
-        </figure>
-      </li>
-      <li>
-        <p>
-          Enter values for the following fields: </p>
-        <table class="bcls-table">
-          <thead class="bcls-table__head">
-            <tr>
-              <th width="20%">Field</th>
-              <th>Required</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody class="bcls-table__body">
-            <tr>
-              <td>Name</td>
-              <td>Yes</td>
-              <td>
-                A descriptive name for your advertisement definition. This could be your campaign name.
-              </td>
-            </tr>
-            <tr>
-              <td>Provider</td>
-              <td>Yes</td>
-              <td>
-                The value is
-                <strong>Brightcove SSAI</strong>. This allows you to stitch ads into your stream using <a target="_blank" href="//support.brightcove.com/video-cloud-ssai-overview"> Brightcove Server-Side Ad Insertion (SSAI) </a>
-                .
-              </td>
-            </tr>
-            <tr>
-              <td>Live Ad Config ID</td>
-              <td>No</td>
-              <td>
-                The ID for your live ad configuration created in Video Cloud. Either this or the VOD Ad Config ID is required.
-              </td>
-            </tr>
-            <tr>
-              <td>VOD Ad Config ID</td>
-              <td>No</td>
-              <td>
-                The ID for your VOD ad configuration created in Video Cloud. Either this or the live Ad Config ID is required.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <br />
-        <aside class="bcls-aside bcls-aside--tip"> You will create the ad configuration in Video Cloud Studio. For details, see the <a href="/using-brightcove-beacon/configuring-server-side-ad-settings.html"> Video Cloud Ad Configuration ID </a>
-          document.
-        </aside>
-      </li>
-      <li>
-        Select the
-        <strong>Create New Advertisement</strong> button.
-      </li>
+      <li>Name the Ad Configuration.</li>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/using-bcb/advertisement/advertising-configuration.png" alt="Beacon Ad Configuration Live">
+        <figcaption class="bcls-caption--image">Beacon Ad Configuration Live</figcaption>
+      </figure>
+      <li>For the <strong>Provider</strong> select <strong>Brightcove SSAI</strong></li>
+      <li>Paste in the <strong>SSAI ad config ID</strong> copied in the steps just above into <strong>VOD Ad Config ID</strong>.</li>
+      <li>Click <span class="button-teal">Create New Advertisement</span>.</li>
     </ol>
   </section>
 </article>

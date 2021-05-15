@@ -6,9 +6,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="" />
+    <meta name="description" content="In this topic, you will learn how to create an advertisement configuration to which you can add video content." />
 
-    <title>Creating an Advertisement Configuration</title>
+    <title>Creating an Advertisement</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -91,9 +91,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/monetization/ssai/">Using Brightcove Beacon</a></li>
+      <li class="breadcrumb-item"><a href="/monetization/ssai/">Monetization</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Creating an Advertisement Configuration</li>
+      <li class="breadcrumb-item active" aria-current="page">Creating an Advertisement</li>
     </ol>
   </nav>
 </header>
@@ -597,79 +597,86 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
+<h1>Creating an Advertisement</h1>
 <article class="bcls-article">
-    <h1>Creating an Advertisement Configuration</h1>
-    <h2>This document is in development</h2>
-    <!--   <summary>
-    In this topic, you will learn how to configure advertising using the
-    Advertisement tab for Brightcove Beacon.
-  </summary>
+  <summary>In this topic, you will learn how to create an advertisement configuration to which you can add video content.</summary>
+
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
-    <p>
-      An advertisement is associated with either a live or VOD ad configuration
-      ID. You will create the ad configuration in Video Cloud Studio. For
-      details, see the
-      <a href="/using-brightcove-beacon/configuring-server-side-ad-settings.html">
-        Video Cloud Ad Configuration ID
-      </a>
-      document.
+    <p>To create an advertisement configuration you will need to do the following:</p>
+    <ul>
+      <li>Obtain an ad tag server URL from your ad service provider. This will be used in Video Cloud Studio to create your SSAI ad configuration.</li>
+      <li>In Video Cloud Studio, create your SSAI ad configuration. At completion of the task you will copy the ad server ID to create your advertisement configuration in Brightcove Beacon Classic.</li>
+      <li>In Brightcove Beacon Classic create your advertisement configuration, which you will then be able to apply to your video content.</li>
+    </ul>
+
+    An advertisement is associated with either a live or VOD ad configuration ID. You will create the ad configuration in Video Cloud Studio. Abbreviated steps will be shown in this doc, but for complete details, see the <a href="/using-brightcove-beacon/vod-ssai.html"> Video Cloud Ad Configuration ID </a> document.
+    document.
     </p>
     <p>
-      Once you have created an advertisement, then you will be able to select it
-      when creating a channel, movie, episode or playlist.
+      Once you have created an advertisement, then you will be able to select it when creating a channel, movie, episode or playlist.
     </p>
   </section>
 
   <section class="bcls-section">
+    <h2 id="section-name">Creating an SSAI ad configuration ID</h2>
+    <p>Follow these steps to create an SSAI ad configuration:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>In Video Cloud Studio, navigate to <strong>Admin → Server-Side Ad Settings</strong>.</li>
+      <li>
+        From the <span class="blue-button">Create Ad Configuration</span> dropdown, select <strong>VOD</strong>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/create-vod-ad-config.png" alt="Create VOD Ad Config">
+          <figcaption class="bcls-caption--image">Create VOD Ad Config</figcaption>
+        </figure>
+      </li>
+      <li>Add a name for the ad config.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-vod.png" alt="SSAI Configuration VOD">
+          <figcaption class="bcls-caption--image">SSAI Configuration VOD</figcaption>
+        </figure>
+      </li>
+      <li>Select your ad response - VMAP or VAST is recommended. If you use VAST, you will need to add cuepoints to the videos to specify where ad breaks should appear.</li>
+      <li>Paste in your ad tag.</li>
+      <li>Click <strong>Save</strong>.</li>
+      <li>Find your new ad configuration in the table and copy your ad config ID. You will need this value for the Beacon advertising configuration.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/copy-ad-config-id.png" alt="copy ad config ID">
+          <figcaption class="bcls-caption--image">Copy ad config ID</figcaption>
+        </figure>
+      </li>
+    </ol>
+  </section>
+
+
+  <section class="bcls-section">
     <h2 id="Advertisement">Advertisement</h2>
     <p>To create an advertisement, follow these steps:</p>
-
     <ol class="bcls-tasklist">
       <li>Login to Brightcove Beacon.</li>
       <li>
-        In the top navigation, select
-        <strong>Advertisement</strong>
-        .
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/advertisement/new-advertisement.png"
-            alt="New advertisement"
-          />
+        In the top navigation, select <strong>Advertisement</strong> .
+        <figure class="bcls-figure"> <img class="bcls-image" src="//learning-services-media.brightcove.com/doc-assets/beacon/advertisement/new-advertisement.png" alt="New advertisement" />
           <figcaption class="bcls-caption--image">New advertisement</figcaption>
         </figure>
       </li>
       <li>
         Select the
-        <strong>Add New Configuration</strong>
-        button.
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/advertisement/new-config.png"
-            alt="New advertisement config"
-          />
+        <strong>Add New Configuration</strong> button.
+        <figure class="bcls-figure"> <img class="bcls-image" src="//learning-services-media.brightcove.com/doc-assets/beacon/advertisement/new-config.png" alt="New advertisement config" />
           <figcaption class="bcls-caption--image">New advertisement</figcaption>
         </figure>
       </li>
       <li>
-        Here there is only one tab, that being for
-        <strong>Basic Data</strong>
+        Here there is only one tab, that being for <strong>Basic Data</strong>
         .
-        <figure class="bcls-figure">
-          <img
-            class="bcls-image"
-            src="//learning-services-media.brightcove.com/doc-assets/beacon/advertisement/basic-data.png"
-            alt="Basic Data"
-          />
+        <figure class="bcls-figure"> <img class="bcls-image" src="//learning-services-media.brightcove.com/doc-assets/beacon/advertisement/basic-data.png" alt="Basic Data" />
           <figcaption class="bcls-caption--image">Basic Data</figcaption>
         </figure>
       </li>
       <li>
         <p>
-          Enter values for the following fields:
-        </p>
+          Enter values for the following fields: </p>
         <table class="bcls-table">
           <thead class="bcls-table__head">
             <tr>
@@ -683,8 +690,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
               <td>Name</td>
               <td>Yes</td>
               <td>
-                A descriptive name for your advertisement definition. This could
-                be your campaign name.
+                A descriptive name for your advertisement definition. This could be your campaign name.
               </td>
             </tr>
             <tr>
@@ -692,13 +698,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
               <td>Yes</td>
               <td>
                 The value is
-                <strong>Brightcove SSAI</strong>. This allows you to stitch ads into your stream using
-                <a
-                  target="_blank"
-                  href="//support.brightcove.com/video-cloud-ssai-overview"
-                >
-                  Brightcove Server-Side Ad Insertion (SSAI)
-                </a>
+                <strong>Brightcove SSAI</strong>. This allows you to stitch ads into your stream using <a target="_blank" href="//support.brightcove.com/video-cloud-ssai-overview"> Brightcove Server-Side Ad Insertion (SSAI) </a>
                 .
               </td>
             </tr>
@@ -721,22 +721,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </tbody>
         </table>
         <br />
-        <aside class="bcls-aside bcls-aside--tip">
-          You will create the ad configuration in Video Cloud Studio. For
-          details, see the
-          <a href="/using-brightcove-beacon/configuring-server-side-ad-settings.html">
-            Video Cloud Ad Configuration ID
-          </a>
+        <aside class="bcls-aside bcls-aside--tip"> You will create the ad configuration in Video Cloud Studio. For details, see the <a href="/using-brightcove-beacon/configuring-server-side-ad-settings.html"> Video Cloud Ad Configuration ID </a>
           document.
         </aside>
       </li>
       <li>
         Select the
-        <strong>Create New Advertisement</strong>
-        button.
+        <strong>Create New Advertisement</strong> button.
       </li>
     </ol>
-  </section> -->
+  </section>
 </article>
 <!-- complete bootstrap layout -->
     </div>
@@ -753,7 +747,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 28 Mar 2021
+  Page last updated on 15 May 2021
 </div>
 
 

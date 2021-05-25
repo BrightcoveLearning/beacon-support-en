@@ -1,7 +1,7 @@
 ---
 title: 'Streaming a Live Event'
-description: In this topic, you will learn how to stream a Live event to a Brightcove Beacon app.
-parent: Using Brightcove Beacon
+description: In this topic, you will learn how to stream a Live event in Brightcove Beacon.
+parent: Using Beacon Classic
 ---
 
 <h1>{{ page.title }}</h1>
@@ -13,23 +13,23 @@ parent: Using Brightcove Beacon
 
     <p>
       To stream a Live event to your application, you must follow a series of
-      steps to connect your Video Cloud Live account and Brightcove Beacon.
+      steps to connect your Beacon Studio Live account and Beacon Classic.
     </p>
     <p>A high-level view of the process is:</p>
     <ol>
       <li>
-        In Brightcove Beacon, create an event and a playlist.
+        In Beacon Classic, create an event and a playlist.
       </li>
       <li>
-        In Video Cloud, access the Live module to create your event and obtain a
+        In Beacon Studio, access the Live module to create your event and obtain a
         job ID.
       </li>
       <li>
-        In Brightcove Beacon, register your live event using the job ID from
-        Video Cloud.
+        In Beacon Classic, register your live event using the job ID from
+        Beacon Studio.
       </li>
       <li>
-        The Live video will start streaming in the Brightcove Beacon App.
+        The Live video will start streaming in the Beacon App.
       </li>
     </ol>
     <p>
@@ -45,18 +45,18 @@ parent: Using Brightcove Beacon
   </section>
 
   <section class="bcls-section">
-    <h2 id="create">Creating a Live event in Brightcove Beacon</h2>
-    <p>Follow these steps to create an Event in Brightcove Beacon.</p>
+    <h2 id="create">Creating a Live event in Beacon Classic</h2>
+    <p>Follow these steps to create an Event in Beacon Classic.</p>
 
     <aside class="bcls-aside bcls-aside--information">
-      Only activated accounts with <strong>Brightcove Beacon Live</strong> will
+      Only activated accounts with <strong>Beacon Classic Live</strong> will
       have the <strong>Playlists</strong> and <strong>Events</strong> available
       in the tabs section. Please contact Brightcove Support in case you don't
       have them activated.
     </aside>
     <ol class="bcls-tasklist">
       <li>
-        In Brightcove Beacon, click on the <strong>Events</strong> tab to start
+        In Beacon Classic, click on the <strong>Events</strong> tab to start
         the set up of an Event.
       </li>
       <li>
@@ -192,14 +192,14 @@ parent: Using Brightcove Beacon
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="Playlist">Adding the Brightcove Beacon event to a playlist</h2>
+    <h2 id="Playlist">Adding the Beacon Classic event to a playlist</h2>
     <p>
       Once you create an event, the next task is to add the event to a Playlist.
       The following steps lead you through that process.
     </p>
     <ol class="bcls-tasklist">
       <li>
-        In Brightcove Beacon, click the <strong>Playlists</strong> tab.
+        In Beacon Classic, click the <strong>Playlists</strong> tab.
         <figure class="bcls-figure">
           <img
             class="bcls-image--no-border"
@@ -211,10 +211,10 @@ parent: Using Brightcove Beacon
       <li>
         Click on the <strong>Add new playlist</strong> button.
         <aside class="bcls-aside bcls-aside--warning">
-          You need to create a playlist in Brightcove Beacon that will contain
+          You need to create a playlist in Beacon Classic that will contain
           your Live events. <strong>Do not</strong> use a playlist from Video
           Cloud. Using a Video Cloud playlist may overwrite and delete your
-          Brightcove Beacon Live recordings.
+          Beacon Classic Live recordings.
         </aside>
         <figure class="bcls-figure">
           <img
@@ -283,7 +283,7 @@ parent: Using Brightcove Beacon
       image are for example purposes only), click on your event, and you will
       see something similar to the image on the right. To actually start
       streaming a Live video, you will need to set up your transmission in the
-      Video Cloud Live Platform.
+      Beacon Studio Live Platform.
     </p>
     <figure class="bcls-figure">
       <img
@@ -295,16 +295,23 @@ parent: Using Brightcove Beacon
   </section>
 
   <section class="bcls-section">
-    <h2 id="Live">Creating a Live event in Studio</h2>
+    <h2 id="Live">Creating a Live event in Beacon Studio</h2>
     <p>
       Follow these steps to create the actual live event that will be streamed
-      to Brightcove Beacon.
+      to the Beacon App.
     </p>
 
     <ol class="bcls-tasklist">
       <li>
-        Log in to Video Cloud Studio and click <strong>Live</strong> in the
-        navigation header.
+        Log in to Beacon Studio and click <strong>Live</strong> in the
+        in the primary navigation.
+        <figure class="bcls-figure">
+          <img
+            class="bcls-image--no-border"
+            alt=""
+            src="/assets/images/using-bcb/streaming-live-event/beacon-studio.png"
+          />
+        </figure>
       </li>
       <li>
         From the <strong>Manage Events</strong> page, click
@@ -381,7 +388,7 @@ parent: Using Brightcove Beacon
       </li>
       <li>
         Select <strong>Convert event to video asset when complete</strong> to
-        save a VOD version of the live event to your Video Cloud account. When
+        save a VOD version of the live event to your Beacon Studio account. When
         this option is selected, the highest quality rendition from the selected
         <strong>Live Ingest Profile</strong> is used as the source for the VOD
         video. The default ingest profile for the account is used when creating
@@ -402,7 +409,7 @@ parent: Using Brightcove Beacon
       <li>
         Click in the
         <strong>Enable stream status notifications</strong> checkbox and add the
-        notifications URL from Brightcove Beacon CMS (your Brightcove Support
+        notifications URL from Beacon Classic CMS (your Brightcove Support
         representative will provide this URL).
 
         <figure class="bcls-figure">
@@ -444,7 +451,7 @@ parent: Using Brightcove Beacon
         In the <strong>Control Room</strong>, copy the
         <strong>Job Id</strong> and the <strong>Video ID</strong> from the
         <strong>Test Event</strong> panel, you will need both to configure the
-        Live event in the Brightcove Beacon platform settings.
+        Live event in the Beacon Classic platform settings.
         <figure class="bcls-figure">
           <img
             class="bcls-image--no-border"
@@ -454,7 +461,7 @@ parent: Using Brightcove Beacon
         </figure>
       </li>
       <li>
-        Next, go back to Brightcove Beacon and click in the
+        Next, go back to Beacon Classic and click in the
         <strong>Event</strong> tab. Select the event you previously created
         there, and in the <strong>Basic Data</strong> settings paste the
         <em>Job ID</em> of your Live event.
@@ -472,7 +479,7 @@ parent: Using Brightcove Beacon
       </li>
       <li>
         In the <strong>Stream Video ID</strong> field, paste the
-        <strong>Video ID</strong> from the Video Cloud Event you previously
+        <strong>Video ID</strong> from the Beacon Studio Event you previously
         created. Also fill in the following information about the stream:
         <ul>
           <li>
@@ -509,7 +516,7 @@ parent: Using Brightcove Beacon
       </li>
 
       <li>
-        Open your Brightcove Beacon App and select your event (the event names
+        Open your Beacon App and select your event (the event names
         and pictures on the image are for example purposes only).
         <figure class="bcls-figure">
           <img
@@ -524,7 +531,7 @@ parent: Using Brightcove Beacon
 
       <li>
         Click on the <strong>Play</strong> button, and you should now be able to
-        see your Live Event streaming from Video Cloud in the Brightcove Beacon
+        see your Live Event streaming from Beacon Studio in the Beacon Classic
         App.
 
         <figure class="bcls-figure">
@@ -540,8 +547,8 @@ parent: Using Brightcove Beacon
     </ol>
     <p>
       Once your event ends, you can save all or part of it as a clip that
-      becomes a video asset in Video Cloud or a playable stream that can be
-      shown in Brightcove Beacon. The process is detailed in the next section of
+      becomes a video asset in Beacon Studio or a playable stream that can be
+      shown in Beacon Classic. The process is detailed in the next section of
       this document.
     </p>
   </section>
@@ -549,7 +556,7 @@ parent: Using Brightcove Beacon
   <section class="bcls-section">
     <h2 id="Clip">Creating a Clip from your Live event</h2>
     <aside class="bcls-aside bcls-aside--information">
-      You have to create a clip of your Brightcove Beacon Live event if you want
+      You have to create a clip of your Beacon Classic Live event if you want
       to keep the video for streaming later on as a VOD recorded video.
     </aside>
     <p>
@@ -625,15 +632,15 @@ parent: Using Brightcove Beacon
   </section>
   <section class="bcls-section">
     <h2 id="ClipToBeacon">
-      Adding your Clip to Brightcove Beacon as a playable stream video
+      Adding your Clip to Beacon Classic as a playable stream video
     </h2>
     <p>
       Here you will use the ID of your newly created clip video and make it a
-      stream that can be played in Brightcove Beacon.
+      stream that can be played in Beacon Classic.
     </p>
     <ol class="bcls-tasklist-restart">
       <li>
-        While still in Video Cloud Studio's Live module, copy the number
+        While still in Beacon Studio's Live module, copy the number
         <strong>ID</strong> of your created clip.
         <figure class="bcls-figure">
           <img
@@ -644,7 +651,7 @@ parent: Using Brightcove Beacon
         </figure>
       </li>
       <li>
-        In the Brightcove Beacon platform, go to the <strong>Events</strong> tab
+        In the Beacon Classic platform, go to the <strong>Events</strong> tab
         and select the <strong>Streams</strong> menu. You will see the following
         form:
         <figure class="bcls-figure">
@@ -671,7 +678,7 @@ parent: Using Brightcove Beacon
       <li>
         Before leaving, click the <strong>Update Event</strong> button at the
         bottom of the page. This will make the <strong>Play</strong> button
-        available in the Brightcove Beacon app to see the recording of the
+        available in the Beacon App to see the recording of the
         event.
         <figure class="bcls-figure">
           <img
@@ -692,7 +699,7 @@ parent: Using Brightcove Beacon
       when your event starts over and over again as for a weekly program, for
       example. This event can be used as a one for all
       <strong>Live Job ID</strong> that can be transmitted to several channels
-      in the Brightcove Beacon app.
+      in the Beacon App.
     </p>
 
     <aside class="bcls-aside bcls-aside--information">
@@ -710,7 +717,7 @@ parent: Using Brightcove Beacon
 
     <p>
       Follow these steps to create a SEP (Static Entry Point) Live event in
-      Brightcove Beacon.
+      Beacon Classic.
     </p>
     <ol class="bcls-tasklist-restart">
       <li>
@@ -772,7 +779,7 @@ parent: Using Brightcove Beacon
         </figure>
       </li>
       <li>
-        Return to the Brightcove Beacon platform and configure your event by
+        Return to the Beacon Classic platform and configure your event by
         pasting the <strong>Job ID</strong> of the recurring event. Also supply
         a <strong>Name</strong> and an <strong>Event Start Date</strong>.
         <figure class="bcls-figure">
@@ -797,11 +804,11 @@ parent: Using Brightcove Beacon
       </li>
       <li>Click in the <strong>Update event</strong> button.</li>
     </ol>
-    <aside class="bcls-aside bcls-aside--warning">Brightcove Beacon CMS is automating the <strong>Status</strong> transitions for Live events, but in Static Entry Points, you may have multiple Brightcove Beacon events associated with the same SEP. If there are issues with the automation as one running late and is overlapping, you can adjust the  CMS transition by manually changing the <strong>Status</strong>. For example, from <strong>Available</strong> to <strong>Finished</strong> in the <strong>Status</strong> field. </aside>
+    <aside class="bcls-aside bcls-aside--warning">Beacon Classic CMS is automating the <strong>Status</strong> transitions for Live events, but in Static Entry Points, you may have multiple Beacon Classic events associated with the same SEP. If there are issues with the automation as one running late and is overlapping, you can adjust the  CMS transition by manually changing the <strong>Status</strong>. For example, from <strong>Available</strong> to <strong>Finished</strong> in the <strong>Status</strong> field. </aside>
 
     <p>
       You can perform this process for all the Live events you want in the
-      Brightcove Beacon platform. All of them will be streaming from the same
+      Beacon Classic platform. All of them will be streaming from the same
       Live transmission, but each one with the different date and time that you
       adjusted in its event settings.
     </p>

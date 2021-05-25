@@ -35,12 +35,16 @@
       url: /using-brightcove-beacon/cloud-playout/cloud-playout-overview.html
     - name: Creating a Cloud Playout Channel
       url: /using-brightcove-beacon/cloud-playout/cloud-playout-stream-vod.html
+    - name: Adding Content to a Cloud Playout Channel
+      url: /using-brightcove-beacon/cloud-playout/cloud-playout-add-content.html
     - name: Using Channel Actions
       url: /using-brightcove-beacon/cloud-playout/using-channel-actions.html
     - name: Adding Bumpers to Cloud Playout
       url: /using-brightcove-beacon/cloud-playout/adding-bumpers-to-vod.html
     - name: Monetizing Cloud Playout
       url: /using-brightcove-beacon/cloud-playout/enabling-server-side-ads.html
+    - name: Adding Mid-Roll Ads to a Channel
+      url: /using-brightcove-beacon/cloud-playout/mid-roll-ad-insertion.html
     - name: Viewing Channel Output and Analytics
       url: /using-brightcove-beacon/cloud-playout/viewing-channel-output-and-analytics.html
     - name: Creating a Beacon Channel

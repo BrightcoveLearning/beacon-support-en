@@ -249,6 +249,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           
           
           
+          <li><a href="/using-brightcove-beacon/cloud-playout/cloud-playout-add-content.html">Adding Content to a Cloud Playout Channel</a></li>
+          
+          
+          
           <li><a href="/using-brightcove-beacon/cloud-playout/using-channel-actions.html">Using Channel Actions</a></li>
           
           
@@ -258,6 +262,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           
           
           <li><a href="/using-brightcove-beacon/cloud-playout/enabling-server-side-ads.html">Monetizing Cloud Playout</a></li>
+          
+          
+          
+          <li><a href="/using-brightcove-beacon/cloud-playout/mid-roll-ad-insertion.html">Adding Mid-Roll Ads to a Channel</a></li>
           
           
           
@@ -647,9 +655,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li> Your videos must be ingested or re-transcoded using a Dynamic Delivery profile and <strong>must have an MP4 rendition</strong></li>
       <li>The maximum input bitrate and resolution supported for Cloud Playout is 20MBPS/1080p. This applies both to VOD content and live inputs.</li>
       <li>Brightcove recommends using videos with at least a 2 minute duration to ensure a correct transition between videos and electronic program guide accuracy</li>
+      <li>Captions (text tracks) added to videos currently will not display in Cloud Playout channels. Support for captions will be added in a future release.</li>
       <li>The minimum length for Live events is 5 minutes.</li>
       <li>Every Live Event in Cloud Playout shares an 1:1 relation with a Video Cloud remote asset. This remote asset cannot be re-used in other channels. If the live event is removed from the channel, the associated remote asset will be automatically deleted. When a channel is deleted, any associated remote assets will also be deleted automatically.</li>
-      <li>Videos shared from a current account currently cannot be added to a Cloud Playout channel.</li>
+      <li>Videos <strong>shared</strong> to the account from another account currently cannot be added to a Cloud Playout channel.</li>
       <li>When a live event is currently playing, but no active feed is available, the slate content will be played in a loop until the live feed resumes or the event ends. There will be a delay of approximately 30 seconds before the slate MP4 starts playing.</li>
       <!--<li><strong>Input Looper : if the asset URL is duplicated, then input looper rely on order for switching; if the order is changes during the course of the switching , then subsequent N+1 switch it attempt to create would rely on the order. </strong></li>-->
       <li>If the Video Cloud account is configured for geo-restriction, then the channel <strong>Output Region</strong> should be created in a region compatible with the Video Cloud geo-restriction policy.</li>
@@ -662,8 +671,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><a href="/cloud-playout/cloud-playout-stream-vod.html">Creating a Cloud Playout Channel</a></li>
       <li><a href="/cloud-playout/using-channel-actions.html">Using Channel Actions</a></li>
       <li><a href="/cloud-playout/adding-bumpers-to-vod.html">Adding Bumpers to Cloud Playout</a></li>
-      <li><a href="/cloud-playout/enabling-server-side-ads.html">Enabling Server-Side Ads (SSAI)</a></li>
-      <!-- <li><a href="/cloud-playout/generating-channel-embed-code.html">Generating the Channel Embed Code</a></li> -->
+      <li><a href="/cloud-playout/enabling-server-side-ads.html">Monetizing Cloud Playout</a></li>
+      <li><a href="/cloud-playout/generating-channel-embed-code.html">Generating the Channel Embed Code</a></li>
       <li><a href="/cloud-playout/viewing-channel-output-and-analytics.html">Viewing Channel Output and Analytics</a></li>
       <!-- <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">Overview: EPG API</a></li>
       <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG API Reference</a></li>
@@ -671,6 +680,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ul>
   </section>
 </article>
+
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

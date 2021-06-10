@@ -6,9 +6,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="In this topic, you will learn how to create custom fields needed to implement monetization strategies." />
+    <meta name="description" content="" />
 
-    <title>Custom Fields for Monetization</title>
+    <title>Creating a Subscription Package</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -91,9 +91,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/monetization/">monetization</a></li>
+      <li class="breadcrumb-item"><a href="/monetization/general/">Monetization</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Custom Fields for Monetization</li>
+      <li class="breadcrumb-item active" aria-current="page">Creating a Subscription Package</li>
     </ol>
   </nav>
 </header>
@@ -321,6 +321,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li class="submenu-header">
+                      <a href="/monetization/general/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;General</a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                          
+                            <li><a href="/monetization/creating-stripe-account.html">Creating a Stripe Account</a></li>
+                          
+                        
+                          
+                            <li><a href="/monetization/creating-subscription-package.html">Creating a Subscription Package</a></li>
+                          
+                        
+                          
+                            <li><a href="/monetization/promo-codes.html">Creating Promo Codes</a></li>
+                          
+                        
+                          
+                            <li><a href="/monetization/vc-custom-fields.html">Custom Fields for Monetization</a></li>
+                          
+                        
+                          
+                            <li><a href="/monetization/implementing-authvod.html">Implementing AuthVOD</a></li>
+                          
+                        
+                          
+                            <li><a href="/monetization/monetization-options.html">Understanding Monetization Options</a></li>
+                          
+                        
+                          
+                            <li><a href="/monetization/using-subscription-package.html">Using a Subscription Package</a></li>
+                          
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
                       <a href="/monetization/ssai/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;SSAI</a>
                       <ul class="sidenav-subsubmenu" style="display:none;">
                         
@@ -346,34 +383,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                         
                       </ul>
                     </li>
-                  
-                
-                  
-                    <li><a href="/monetization/creating-stripe-account.html">Creating a Stripe Account</a></li>
-                  
-                
-                  
-                    <li><a href="/monetization/creating-subscription-package.html">Creating a Subscription Package</a></li>
-                  
-                
-                  
-                    <li><a href="/monetization/promo-codes.html">Creating Promo Codes</a></li>
-                  
-                
-                  
-                    <li><a href="/monetization/vc-custom-fields.html">Custom Fields for Monetization</a></li>
-                  
-                
-                  
-                    <li><a href="/monetization/implementing-authvod.html">Implementing AuthVOD</a></li>
-                  
-                
-                  
-                    <li><a href="/monetization/monetization-options.html">Understanding Monetization Options</a></li>
-                  
-                
-                  
-                    <li><a href="/monetization/using-subscription-package.html">Using a Subscription Package</a></li>
                   
                 
               </ul>
@@ -646,258 +655,190 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<h1>Custom Fields for Monetization</h1>
 <article class="bcls-article">
+  <h1>Creating a Subscription Package</h1>
+  <summary>In this topic, you will learn how to configure a video subscription package using the <strong>Commerce</strong> tab of Brightcove Beacon. The subscription package implements SVOD (subscription video on demand) monetization. To learn how to apply the subscription package to videos see the
+    <a href="/monetization/using-subscription-package.html">Using a Subscription Package</a> document.
+  </summary>
   <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>Videos you put into monetization strategies, like AuthOVD and SVOD, must have an enriched set of metadata defined. In this document you will see how to create new custom fields used in implementing monetization.</p>
-    <p>The sections of this document are as follows:</p>
-    <ol>
-      <li><strong>Rights Management fields</strong> - Specifies the names and functionality of the custom fields that may be needed for monetization implementation.</li>
-      <li><strong>Creating custom fields</strong> - Provides step-by-step instructions on how to create custom fields. In these instructions you will create one of the commonly used rights managements fields.</li>
-      <li><strong>Custom fields implementation details</strong> - Provides details on managing custom fields on the following topics:
-        <ul>
-          <li>Custom field names</li>
-          <li>Using list values for Brightcove Beacon metadata</li>
-          <li>Editing list values</li>
-          <li>Deleting list values</li>
-          <li>Removing custom fields from an account</li>
-        </ul>
-      </li>
-    </ol>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Rights_Management_fields">Rights Management fields</h2>
+    <h2 id="Overview">Overview</h2>
     <p>
-      To support the monetization and access restrictions for assets, a set of custom fields should be used. As you can have multiples instances of rights management configurations, the suggested approach is to create multiple sets of custom fields. In each instance's name a counter is used to differentiate between them. The first instance should use the counter to 0. Here is an example of these grouped fields actually using a counter value:</p>
-    <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/monetization/vc-custom-fields/rights-management.png" alt=""> </figure>
-    <p>For instance, you may need a set to define your advertising used in videos, and another to define specials for a holiday, like New Years.</p>
-    <p>A specific example will help clarify the use of these fields. The following screenshot shows setting Server-Side Ad Insertion (SSAI) used on a video.</p>
-    <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/monetization/vc-custom-fields/rights-mamagement-example-avod.png" alt=""> </figure>
-    <p>You can learn the following from this example:</p>
+      A subscription package defines how a particular set of videos can be purchased by your apps' customers. When creating the package you can, for example, configure the following:
+    </p>
     <ul>
-      <li>Not all the rights management fields in a group must be be assigned values. In this case, only the <em>beacon.rights.&lt;counter&gt;.adConfiguration</em> and <em>beacon.rights.&lt;counter&gt;.type</em> are used.</li>
-      <li>You can use the SSAI configuration ID created in Studio in the Brightcove Beacon custom fields.</li>
-      <li>The counter value for a set of rights management fields can start at 0 (highlighted in yellow).</li>
+      <li>The billing frequency</li>
+      <li>Set if ad supported, and the advertising configuration to use</li>
+      <li>Payment methods</li>
+      <li>
+        Maximum number of streams that can concurrently watch videos affected by the package
+      </li>
+      <li>Start and end dates when the package can be purchased</li>
+      <li>Allowed devices and geo-locations</li>
     </ul>
-    <p>Note that no fields you create will need to have the <strong>Make this Field Required</strong> checkbox checked.</p>
-    <p>
-      The following table displays custom fields that you MAY have to create based on your implementation.
-    </p>
-    <table class="bcls-table">
-      <thead class="bcls-table__head">
-        <tr>
-          <th>Display Name</th>
-          <th>Internal Name</th>
-          <th>Type</th>
-          <th>Notes / Examples</th>
-        </tr>
-      </thead>
-      <tbody class="bcls-table__body">
-        <tr>
-          <td>beacon.rights.&lt;counter&gt;.type</td>
-          <td>beacon_rights_ <br />&lt;counter&gt;_type</td>
-          <td>Text</td>
-          <td>
-            * Identifies if the type of monetization for the asset<br> * For the value use one of: <ul>
-              <li>FREE</li>
-              <li>AVOD</li>
-              <li>SVOD</li>
-              <li>INHERIT</li>
-            </ul>
-            * Default value: <strong>FREE</strong><br> * The <strong>INHERIT</strong> value is only applicable to <em>Episode</em> assets </td>
-        </tr>
-        <tr>
-          <td>
-            beacon.rights.<br />
-            &lt;counter&gt;.<br />
-            startDate
-          </td>
-          <td>
-            beacon_rights_ <br />
-            &lt;counter&gt;_<br />
-            startdate
-          </td>
-          <td>Text</td>
-          <td>
-            * Date when the asset should be exposed under the access restrictions and monetization options in this particular set<br> * Format: Date yyyy-mm-dd hh:mm:ss<br> * Default value: If not set, defaults to video availability start date </td>
-        </tr>
-        <tr>
-          <td>beacon.rights.&lt;counter&gt;.endDate</td>
-          <td>
-            beacon_rights_ <br />
-            &lt;counter&gt;_enddate
-          </td>
-          <td>Text</td>
-          <td>
-            * Date when the asset should be no longer exposed under the access restrictions and monetization options in this particular set<br> * Format: Date yyyy-mm-dd hh:mm:ss<br> * Default value: If not set, defaults to video availability end date </td>
-        </tr>
-        <tr>
-          <td>beacon.rights.&lt;counter&gt;.devices</td>
-          <td>
-            beacon_rights_ <br />
-            &lt;counter&gt;_devices
-          </td>
-          <td>Text</td>
-          <td>
-            * Comma separated list of devices supported in Brightcove Beacon to which the asset should be exposed under the access restrictions and monetization options in this particular set<br> * Comma separated list of: <ul>
-              <li>iOS</li>
-              <li>Android</li>
-              <li>web</li>
-              <li>Roku</li>
-              <li>STV</li>
-              <li>Firetv</li>
-              <!-- <li>LGTV</li> -->
-              <li>Samsung</li>
-              <li>appletv</li>
-              <li>androidtv</li>
-              <!-- li>panasonic</li> -->
-            </ul>
-            * Default value: If not set, defaults to all devices supported in Brightcove Beacon </td>
-        </tr>
-        <tr>
-          <td>
-            beacon.rights.<br />
-            &lt;counter&gt;.<br />
-            locationsPermit
-          </td>
-          <td>
-            beacon_rights_ <br />
-            &lt;counter&gt;_<br />
-            locationspermit
-          </td>
-          <td>Text</td>
-          <td>
-            * Comma separated list of locations defined in Brightcove Beacon to which the asset should be exposed under the access restrictions and monetization options in this particular set<br> * Default value: If not set, defaults to all locations supported in Brightcove Beacon </td>
-        </tr>
-        <tr>
-          <td>
-            beacon.rights.&lt;counter&gt;.<br /> locationsDeny </td>
-          <td>
-            beacon_rights_ <br />
-            &lt;counter&gt;_<br />
-            locationsdeny
-          </td>
-          <td>Text</td>
-          <td>
-            * Comma separated list of locations defined in Brightcove Beacon to which the asset should NOT be exposed under the access restrictions and monetization options in this particular set<br> * No default value </td>
-        </tr>
-        <tr>
-          <td>
-            beacon.rights.<br />
-            &lt;counter&gt;.<br />
-            packageName
-          </td>
-          <td>
-            beacon_rights_ <br />
-            &lt;counter&gt;_<br />
-            packagename
-          </td>
-          <td>Text</td>
-          <td>
-            * A value for this field MUST be entered if the <strong>beacon.rights.&lt;counter&gt;.type</strong> field value is set to <strong>SVOD</strong><br> * A comma separated list of package names, as defined in Brightcove Beacon<br> * Examples: <em>Premium Sports, Action Movies, Earth Day Movies</em><br> * No default value </td>
-        </tr>
-        <tr>
-          <td>
-            beacon.rights.<br />
-            &lt;counter&gt;.<br />
-            adConfiguration
-          </td>
-          <td>
-            beacon_rights_ <br />
-            &lt;counter&gt;_<br />
-            adconfiguration
-          </td>
-          <td>Text</td>
-          <td>
-            * A value for this field MUST be entered if the <strong>beacon.rights.&lt;counter&gt;.type</strong> field value is set to <strong>AVOD</strong><br> * Identifier of an ad configuration in Brightcove Beacon<br> * No default value </td>
-        </tr>
-      </tbody>
-    </table>
   </section>
-
   <section class="bcls-section">
-    <h2 id="Creating_custom_fields">Creating custom fields</h2>
-    <p>To create custom fields, follow these steps.</p>
+    <h2 id="Steps to create a package">Steps to create a package</h2>
+    <p>Step through the following steps to create a new package:</p>
     <ol class="bcls-tasklist">
-      <li>Log in to Beacon Studio.</li>
       <li>
-        In the primary navigation, click <strong>ADMIN</strong> and then <strong>Video Fields</strong>. Note that you must be an account administrator to access the ADMIN menu.
+        In Brightcove Beacon, select the <strong>Commerce</strong> tab, be sure <strong>Packages</strong> is selected in the left navigation, then click <strong>Add New Package</strong> .
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/using-bcb/creating-subscription-package/initial-menu-selections.png" alt="initial menu selections" />
+        </figure>
       </li>
       <li>
-        The Video Fields page will display your custom fields and all the standard video metadata fields, as shown in the following screenshot (in this case no custom fields have yet been created): <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/monetization/vc-custom-fields/custom-fields-overview1.png" alt="" /> </figure>
-      </li>
-      <li>
-        Click <strong>Add Custom Field</strong>.
-        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/monetization/vc-custom-fields/new-custom-field1.png" alt="" /> </figure>
-      </li>
-      <li>
-        For the <strong>Display Name</strong>, enter <samp>beacon.rights.0.adConfiguration</samp>. This is a commonly needed custom field for your first monetization implementation that needs custom fields. Note that this value will appear as the label for the field in the Media module. An <strong>Internal Name</strong> will automatically be created for the field based on the display name.
-      </li>
-      <li>
-        For the <strong>Type</strong> select <strong>Text</strong>. Note the following for values for the possible types:
+        On the <strong>Package</strong> tab (screenshot below), complete the following:
         <ul>
           <li>
-            <strong>Text</strong> - The user can type anything into the field up to 1024 single-byte characters (or 512 double-byte characters).
+            <strong>Name</strong> : The name of the package that is used in the Video Cloud custom fields for a video.
           </li>
           <li>
-            <strong>List</strong> - The user will select from a list of values. Lists can have no more than 150 possible values and each value in the list can be no more than 100 characters long.
+            <strong>Billing Frequency</strong> : Choose the billing frequency for this package.
+          </li>
+          <li>
+            <strong>Trial Period</strong> : The trial period for this package.
+            Enter <strong>0</strong> for no trial period.
+          </li>
+          <li>
+            <strong>Status</strong> : Chose if you wish to have the package published so it is available for use. Note that you will not be able to publish the package until at least one payment method is selected.
+          </li>
+          <li>
+            <strong>Advertisement</strong> : Choose if you wish to use advertisements with this package.
+          </li>
+          <li>
+            <strong>Ads Providers</strong> : If you have chosen to use ads in the previous step, choose the ad provider. This dropdown is populated with the advertisement configurations listed in the <strong>Advertisement</strong> section of Brightcove Beacon.
+            <!-- See the <a href="/using-brightcove-beacon/advertisement.html"> Advertisement </a> document for details on advertisement configurations. -->
+          </li>
+          <li>
+            <strong>Payment methods to use</strong> : Select the payment methods you want to use with this package. Note that for each method selected a section will open below the list of payment methods, which you must complete for each selected method. The screenshot below shows <strong>Stripe (in yellow)</strong> and <strong>Apple Store (in red)</strong> are selected.
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/using-bcb/creating-subscription-package/payment-method-details.png" alt="payment method details" />
+            </figure>
           </li>
         </ul>
       </li>
       <li>
-        Enter a <strong>Description</strong>. For this field a good description is <samp>A value for this field MUST be entered if the beacon.rights.&lt;counter&gt;.type field value is set to AVOD.</samp> The description field will appear as a hint in the Studio interface.
+        Click the <strong>Create Package</strong> button to save your current package configuration.
       </li>
       <li>
-        DO NOT make this field required.
-      </li>
-      <li>Check to be sure your form appears as follows:
-        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/monetization/vc-custom-fields/new-custom-field-added.png" alt="" /> </figure>
+        On the <strong>Textual Data</strong> tab, complete the following: <ul>
+          <li><strong>Pack Name</strong> : Name shown to users.</li>
+          <li>
+            <strong>Headline</strong> : Headline shown to users, for example <em>Holiday Special!</em> .
+          </li>
+        </ul>
       </li>
       <li>
-        Click <strong>Save Field</strong> to save the changes. Click <strong>Save and Add Another</strong> to save the field and begin creating another field.
+        Click the <strong>Create Package</strong> button to save your current package configuration.
+      </li>
+      <li>
+        On the <strong>Non-Textual Data</strong> tab, supply an image for use next to the package name.
+        <!-- The size of the image should be !!!!!!!!!!!!!!!!. -->
+      </li>
+      <li>
+        Click the <strong>Create Package</strong> button to save your current package configuration.
+      </li>
+      <li>
+        The <strong>Content</strong> tab is not for use at the current time.
+      </li>
+      <li>
+        On the <strong>Streams</strong> tab, complete the following: <ul>
+          <li>
+            <strong>Max Streams</strong> : Maximum number of connected devices that can be streaming at the same time.
+          </li>
+          <li>
+            <strong>Max Devices</strong> : Maximum number of connected devices that can have active connections.
+            <aside class="bcls-aside bcls-aside--information language-editable"> The two settings above are also set globally, so use these settings ONLY IF you wish to override the global settings in this package.
+            </aside>
+          </li>
+          <li>
+            <strong>Advanced Streams</strong> : Set this to <strong>Yes</strong> if you wish to customize the rights this package sets. The available changes are shown in the following screenshot:
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/using-bcb/creating-subscription-package/advanced-stream-rights.png" alt="advanced stream rights" />
+            </figure>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Click the <strong>Add new Right</strong> button to save your newly configured, customized rights.
+      </li>
+      <li>
+        Click the <strong>Create Package</strong> button to save your current package configuration.
+      </li>
+    </ol>
+    <p>That's it for the package creation!</p>
+  </section>
+  <!-- <section class="bcls-section"> <h2 id="Using_the_package_in_Video_Cloud"> Using the package in Video Cloud </h2> <p> Although the package is created in Brightcove Beacon, it is not applied to content in there. To use the package, and apply it to video content you use Video Cloud custom fields. </p> </section> -->
+  <section class="bcls-section">
+    <h2 id="Creating_a_Stripe_Coupon">Creating a Stripe Coupon</h2>
+    <p>
+      Coupons can be created to provide a discount, either a fixed monetary discount or a percentage discount, that can be applied when purchasing a package.
+    </p>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        In Brightcove Beacon, select the <strong>Commerce</strong> tab, then click <strong>Coupons by Stripe</strong> and finally click <strong>Add New Voucher</strong>.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/using-bcb/creating-subscription-package/coupon-menu-selection.png" alt="coupon menu selections" />
+        </figure>
+      </li>
+      <li>
+        On the <strong>Create New Coupons</strong> form (screenshot below), complete the following:
+        <ul>
+          <li>
+            <strong>Id</strong> : Code that viewers will enter in the Brightcove Beacon app to use the coupon
+          </li>
+          <li><strong>Name</strong> : A friendly name for the coupon that can be displayed in invoices</li>
+          <li>
+            <strong>Duration</strong> : Choose from <strong>Once</strong>, <strong>Forever</strong> or <strong>Repeating</strong>;<br /> If <strong>Repeating</strong> is selected, then set the number of months it can repeatedly be used.
+          </li>
+          <li>
+            For
+            <strong>Discount type</strong>
+            select one of the following:
+            <ul>
+              <li>
+                <strong>Monetary Amount</strong>: Enter the value of, and currency for, the coupon
+              </li>
+              <li>
+                <strong>Percentage</strong>: Enter the percentage of discount the coupon will carry
+              </li>
+            </ul>
+            <p>
+              Example: If the discount is 3 months free, then set the <strong>Duration</strong> to <strong>Repeating</strong> with 3 months and set the <strong>Discount type</strong> with <strong>Percentage</strong> of 100% </p>
+          </li>
+          <li>
+            <strong>Limit Date (UTC)</strong> : Select the last date the coupon can be used
+          </li>
+          <li>
+            <strong>Max redemption</strong> : Enter the maximum number of redemptions for the coupon; for instance only 50 customers can redeem the coupon
+          </li>
+          <li>
+            <strong>Select Packages</strong> : Select the packages to which the coupon can be applied; if you do not select a package the coupon can be applied to all packages<br />
+            Example: The coupon is only valid if you purchase the yearly subscription
+          </li>
+        </ul>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/using-bcb/creating-subscription-package/new-coupon-form.png" alt="coupon form" />
+        </figure>
+      </li>
+      <li>
+        <p>
+          Be sure to click the <strong>Save</strong> button to save your new coupon.
+        </p>
       </li>
     </ol>
     <p>
-      Custom fields you create are available immediately and will be visible in the Media module.
-    </p>
+      In the Brightcove Beacon app when a package purchase takes place, viewers will be able to enter the coupon <strong>Id</strong>: </p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/using-bcb/creating-subscription-package/use-coupon.png" alt="use coupon form" />
+    </figure>
     <p>
-      Up to 10 custom fields can be created. If you need more than 10 fields, click the <strong>Need more fields?</strong> link in the Video Fields page to contact Brightcove Customer Support with a request for more. Publishers are limited to 50 custom fields.
+      Alternatively, you can create coupons directly in your Stripe account, and then use them in Brightcove Beacon.
     </p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/using-bcb/creating-subscription-package/stripe-coupon-form.png" alt="use coupon form" />
+    </figure>
   </section>
-
-  <section class="bcls-section">
-    <h2 id="Custom_field_implementation_details">Custom field implementation details</h2>
-    <h3>Custom field names</h3>
-    <p>
-      The next three sections of this document cover custom fields that you may need to create based on your particular implementation use case. Each custom field has both a <strong>Display Name</strong> and an <strong>Internal Name</strong>. If you feel you have a more meaningful name for the <strong>Display Name</strong> option you can use that, but the <strong>Internal Name</strong> MUST match exactly.
-    </p>
-
-    <h3>Using list values for Brightcove Beacon metadata </h3>
-    <p>
-      In the table of values for the rights management custom fields show above, you may wish to consider the <strong>beacon.rights.&lt;counter&gt;.type</strong> to be of type <strong>List</strong>. Note that ALL the <strong>Types</strong> are <strong>Text</strong>. It may ease the burden on monetization implementors if they can select from a list rather than having to enter text. Also, it will invariably help to keep data entry more consistent if values can be selected from a list rather than typed in. Therefore, if you find a <strong>List</strong> works in some business cases, a list can be used.
-    </p>
-
-    <h3 id="edit">Editing list values</h3>
-    <p>
-      You can add additional values to a List type custom field. Click the custom field name link, add the values and then click <strong>Add to List</strong>. When done, click <strong>Save Field</strong>.
-    </p>
-
-    <h3 id="delete">Deleting list values</h3>
-    <p>
-      You can add remove existing values from a List type custom field. Click the custom field name link, click the delete icon associated with the value and then click <strong>Save Field</strong>.
-    </p>
-    <p>
-      When a list value is removed, any videos that were previously assigned that value will keep the value. However, if a video with the deleted value is edited, the value will be cleared and a new value will have to be selected.
-    </p>
-
-    <h3 id="remove">Removing custom fields from an account</h3>
-    <p>
-      In order to remove a custom field from your account, you must <a href="https://supportportal.brightcove.com/s/login/"> contact Brightcove Support</a>. Note that if you have Brightcove Support delete custom fields, the modified date will change for any videos where a value was present.
-    </p>
-  </section>
-
 </article>
 <!-- complete bootstrap layout -->
     </div>
@@ -914,7 +855,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 25 May 2021
+  Page last updated on 10 Jun 2021
 </div>
 
 

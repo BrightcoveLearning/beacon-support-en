@@ -6,9 +6,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="" />
+    <meta name="description" content="In this topic, you will learn how to create Brightcove Beacon coupons/vouchers for the use of your customers when paying." />
 
-    <title>Training on Demand: Viewing Analytics Data</title>
+    <title>Creating Promo Coupons</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -91,9 +91,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/training/">Training</a></li>
+      <li class="breadcrumb-item"><a href="/monetization/general/">Monetization</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Training on Demand: Viewing Analytics Data</li>
+      <li class="breadcrumb-item active" aria-current="page">Creating Promo Coupons</li>
     </ol>
   </nav>
 </header>
@@ -655,75 +655,55 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
+<h1>Creating Promo Coupons</h1>
 <article class="bcls-article">
-    <h1>Training on Demand: Viewing Analytics Data</h1>
-    <summary>Watching the Viewing Analytics Data training gives you the skills to use Google Analytics to see what viewers are doing in your Brightcove Beacon apps. You learn how to view Brightcove supplied dashboards/reports which are added to your Google Analytics account. In addition, you will get an introduction on how to use dimensions and a metic to build your own dashboards.</summary>
+  <summary>In this topic, you will learn how to create Brightcove Beacon coupons/vouchers for the use of your customers when paying.
+    <aside class="bcls-aside bcls-aside--information">Note: Alternatively you can create the coupons directly in Stripe.</aside>
+  </summary>
 
-    <section class="bcls-section">
-        <p class="BCL-objective">There is a logical order to these videos, so it is best to watch the videos in order of their appearance below.</p>
-    </section>
+  <section class="bcls-section">
+    <h2 id="overview"> Steps to Create a new Coupon</h2>
+    <p>To create new coupons/vouchers in Brightcove Beacon, follow these steps: </p>
 
+    <ol class="bcls-tasklist-restart">
+      <li>In the Brightcove Beacon UI click the <strong>Commerce</strong> tab.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/promo-codes/1-beacon-ui.png" />
+        </figure>
+      </li>
+      <li>In the left menu, select <strong>Coupons by Stripe</strong>.</li>
+      <li>Click the <strong>Add new Voucher</strong> button.</li>
+      <li>In the <strong>Id</strong> field, type the code that users will use.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/promo-codes/2-id-name.png" />
+        </figure>
+      </li>
+      <li>For the <strong>Name</strong> field, use a User-friendly name that can be displayed in invoices.</li>
+      <li>For the <strong>Duration</strong> field, enter the duration of the coupon in months. </li>
+      <li>In the <strong>Discount type</strong> you have the option to specify the discount in currency or percentage. For example, if the discount is 3 months free, set the duration to <strong>Repeating</strong> with 3 months and <strong>Discount Type</strong> as 100%.</li>
+      <li>In the <strong>Limitations</strong> section, you can limit the number of redemptions or date to use the coupon. For example, assume that the coupon can only be used until the end of August, or that only the first 100 people will get the coupon.
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/promo-codes/3-lmitations-packages.png" />
+        </figure>
+      </li>
+      <li>In the <strong>Packages/Subscription Associated</strong> section, specify the subscriptions that can be used with the coupon. If you do not select a subscription, then it will apply to all package subscriptions.</li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note the following
+      <ul>
+        <li>Once the Coupon/Voucher has been created, any registered user can apply it when buying a subscription.
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/promo-codes/4-enter-voucher.png" />
+          </figure>
+        </li>
+        <li>If an invalid coupon is entered, the following is displayed:
+          <figure class="bcls-figure">
+            <img class="bcls-image--no-border" alt="" src="/assets/images/using-bcb/promo-codes/5-error.png" />
+          </figure>
+        </li>
+      </ul>
+    </aside>
+  </section>
 
-    <!--  Template for adding videos
-     <tr>
-      <td width="50%">
-          <p style="font-size: 1.1em;"><strong></strong> (:)</p>
-          Key Documents
-          <ul>
-              <li><a href="/"></a></li>
-              <li><a href="/"></a></li>
-          </ul>
-      </td>
-      <td width="50%">
-          <div data-experience="5cf9550201c411001f80f13e" data-video-ids="">&nbsp;</div>
-          <script src="https://players.brightcove.net/20318290001/experience_5cf9550201c411001f80f13e/live.js"></script>
-      </td>
-  </tr>
- -->
-
-    <table width="80%" border="0">
-        <tbody>
-            <tr>
-                <td width="50%">
-                    <div data-experience="5cf9550201c411001f80f13e" data-video-ids="1682991593364106822">&nbsp;</div>
-                    <script src="https://players.brightcove.net/20318290001/experience_5cf9550201c411001f80f13e/live.js"></script>
-                </td>
-                <td width="50%">
-                    <p style="font-size: 1.1em;"><strong>Viewing Analytics Data</strong> (1:32)</p>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td width="50%">
-                    <div data-experience="5cf9550201c411001f80f13e" data-video-ids="1682991603576055728">&nbsp;</div>
-                    <script src="https://players.brightcove.net/20318290001/experience_5cf9550201c411001f80f13e/live.js"></script>
-                </td>
-                <td width="50%">
-                    <p style="font-size: 1.1em;"><strong>Viewing the Brightcove Supplied Dashboard and Report</strong> (5:19)</p>
-                    Key Document
-                    <ul>
-                        <li><a href="/using-brightcove-beacon/viewing-analytics-data.html">Viewing Analytics Data</a></li>
-                    </ul>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td width="50%">
-                    <div data-experience="5cf9550201c411001f80f13e" data-video-ids="1682991865255670140">&nbsp;</div>
-                    <script src="https://players.brightcove.net/20318290001/experience_5cf9550201c411001f80f13e/live.js"></script>
-                </td>
-                <td width="50%">
-                    <p style="font-size: 1.1em;"><strong>Using the Brightcove Supplied Dimensions and Metric</strong> (6:24)</p>
-                    Key Document
-                    <ul>
-                        <li><a href="/using-brightcove-beacon/viewing-analytics-data.html">Viewing Analytics Data</a></li>
-                    </ul>
-                </td>
-            </tr>
-        </tbody>
-    </table>
 </article>
 <!-- complete bootstrap layout -->
     </div>
@@ -740,7 +720,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 29 Dec 2020
+  Page last updated on 10 Jun 2021
 </div>
 
 

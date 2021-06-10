@@ -79,19 +79,19 @@
       url: '/monetization/general/index.html'
       docs:
         - name: Creating a Stripe Account
-          url: /monetization/creating-stripe-account.html
+          url: /monetization/general/creating-stripe-account.html
         - name: Creating a Subscription Package
-          url: /monetization/creating-subscription-package.html
+          url: /monetization/general/creating-subscription-package.html
         - name: Creating Promo Codes
-          url: /monetization/promo-codes.html
+          url: /monetization/general/promo-codes.html
         - name: Custom Fields for Monetization
-          url: /monetization/vc-custom-fields.html
+          url: /monetization/general/vc-custom-fields.html
         - name: Implementing AuthVOD
-          url: /monetization/implementing-authvod.html
+          url: /monetization/general/implementing-authvod.html
         - name: Understanding Monetization Options
-          url: /monetization/monetization-options.html
+          url: /monetization/general/monetization-options.html
         - name: Using a Subscription Package
-          url: /monetization/using-subscription-package.html
+          url: /monetization/general/using-subscription-package.html
     - name: SSAI
       url: '/monetization/ssai/index.html'
       docs:

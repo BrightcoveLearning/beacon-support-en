@@ -29,6 +29,8 @@
   name: Using Brightcove Beacon
   url: /using-brightcove-beacon/index.html
   docs:
+    - name: Adding a Trailer to a Movie
+      url: /using-brightcove-beacon/adding-trailer-movie.html
     - name: Adding a Carousel to a Page
       url: /using-brightcove-beacon/adding-to-page.html
     - name: 'Overview: Cloud Playout Channels'

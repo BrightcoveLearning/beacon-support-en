@@ -182,6 +182,8 @@
       url: '/creating-your-apps/common-required-info.html'
     - name: 'Device Apps Validation Guide'
       url: '/creating-your-apps/device-apps-validation-guide.html'
+    - name: 'Links to the App Stores Subscriptions'
+      url: '/creating-your-apps/links-subscriptions.html'   
 - section:
   name: References
   url: /references/index.html

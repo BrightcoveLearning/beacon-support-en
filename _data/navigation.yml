@@ -39,6 +39,8 @@
       url: /using-brightcove-beacon/cloud-playout/cloud-playout-stream-vod.html
     - name: Adding Content to a Cloud Playout Channel
       url: /using-brightcove-beacon/cloud-playout/cloud-playout-add-content.html
+    # - name: Static Image Overlays
+    #   url: /using-brightcove-beacon/cloud-playout/static-image-overlays.html
     - name: Using Channel Actions
       url: /using-brightcove-beacon/cloud-playout/using-channel-actions.html
     - name: Adding Bumpers to Cloud Playout
@@ -182,6 +184,8 @@
       url: '/creating-your-apps/common-required-info.html'
     - name: 'Device Apps Validation Guide'
       url: '/creating-your-apps/device-apps-validation-guide.html'
+    - name: 'Links to the App Stores Subscriptions'
+      url: '/creating-your-apps/links-subscriptions.html'   
 - section:
   name: References
   url: /references/index.html

@@ -167,6 +167,16 @@
       
         <url>
           
+            <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/static-image-overlays.html</loc>
+          
+            <lastmod>2021-06-29</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/using-channel-actions.html</loc>
           
             <lastmod>2021-06-29</lastmod>

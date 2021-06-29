@@ -123,6 +123,17 @@
   name: 'Creating Your Apps'
   url: '/creating-your-apps/index.html'
   docs:
+    - name: 'General'
+      url: '/creating-your-apps/general/index.html'
+      docs:
+        - name: 'Common Required Information'
+          url: '/creating-your-apps/general/common-required-info.html'
+        - name: 'Device Apps Validation Guide'
+          url: '/creating-your-apps/general/device-apps-validation-guide.html'
+        - name: 'In-App Subscription Resources'
+          url: '/creating-your-apps/general/in-app-subscription-resources.html'
+        - name: 'Links to the App Stores Subscriptions'
+          url: '/creating-your-apps/general/links-subscriptions.html'
     - name: 'Android'
       url: '/creating-your-apps/android/index.html'
       docs:
@@ -180,12 +191,6 @@
           url: '/creating-your-apps/samsung/samsung-partner.html'
         - name: 'Submitting to the Samsung Store'
           url: '/creating-your-apps/samsung/submitting-to-samsung.html'
-    - name: 'Common Required Information'
-      url: '/creating-your-apps/common-required-info.html'
-    - name: 'Device Apps Validation Guide'
-      url: '/creating-your-apps/device-apps-validation-guide.html'
-    - name: 'Links to the App Stores Subscriptions'
-      url: '/creating-your-apps/links-subscriptions.html'   
 - section:
   name: References
   url: /references/index.html

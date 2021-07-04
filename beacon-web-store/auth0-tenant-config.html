@@ -1,0 +1,65 @@
+---
+title: 'Auth0 Tenant configuration'
+description: 'This topic provides steps configuring the <a href="https://auth0.com/">Auth0</a> OIDC security service to work with Beacon.'
+parent: Beacon Web Store
+---
+
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+  <section class="bcls-section">
+    <h2 id="Create_Native_App">Create Native App</h2>
+    <p>This configuration is applicable to all app platforms with the exception of Web (the next section provides steps for web apps):</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on the <strong>Applications</strong> menu entry in your tenant dashboard.</li>
+      <li>Enter a name and select <strong>Native</strong> as the type and then click <strong>create</strong>.</li>
+      <li>On <strong>Allowed Web Origins</strong> add <code translate="no">file://*<code></li>
+      <li>On <strong>Allowed Origins</strong> add <code translate="no">file://*<code></li>
+      <li>
+        On <strong>Allowed Callback URLs</strong> and <strong>Allowed Logout URLs</strong> add (separated by comma): 
+        <dl>
+          <dt>iOS:</dt>
+          <dd>
+            <pre><code class="language-http" translate="No">[BUNDLE_IDENTIFIER]://[AUTH0_URL]/ios/[BUNDLE_IDENTIFIER]/callback</code></pre>
+            <p>Example:</p>
+            <pre><code class="language-http" translate="No">com.brightcove.telemagic://sso.telemagic.tv/ios/com.brightcove.telemagic/callback</code></pre>
+          </dd>
+          <dt>Android:</dt>
+          <dd>
+            <pre><code class="language-http" translate="No">[ANDROID_PACKAGE_NAME]://[AUTH0_URL]/android/[ANDROID_PACKAGE_NAME]/callback</code></pre>
+            <p>Example:</p>
+            <pre><code class="language-http" translate="No">tv.telemagic://sso.telemagic.tv/android/tv.telemagic/callback</code></pre>
+          </dd>
+        </dl>
+      </li>
+      <li>Click on <strong>Show Advanced Settings</strong> and then <strong>Grant Types</strong> and make sure only <strong>Authorization Code</strong>, <strong>Refresh Token</strong> and <strong>Device Code</strong> are selected.</li>
+      <li>On <strong>Refresh Token Behavior</strong>, <strong>Rotating</strong> can be selected (optional).</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Create_Web_App">Create Web App</h2>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on the <strong>Applications</strong> menu entry in your tenant dashboard.</li>
+      <li>Click on <strong>Create Application</strong>.</li>
+      <li>Enter a name and select <strong>Single Page App </strong>as the type and then click <strong>create</strong>.</li>
+      <li>On <strong>Allowed Callback URLs</strong> add the following beacon web app URL: <code translate="no">[BASE-URL]/cc</code>.</li>
+      <li>On <strong>Allowed Logout URLs</strong> add the following beacon web app URL: <code translate="no">[BASE-URL]</code>.</li>
+      <li>Click on <strong>Show Advanced Settings</strong> and then <strong>Grant Types</strong> and make sure only <strong>Authorization Code</strong> and <strong>Refresh Token</strong> are selected.</li>
+      <li>On <strong>Refresh Token Behavior</strong>, <strong>Rotating</strong> needs to be selected (this will prevent some of the security Auth0 warnings). <strong>Reuse Interval</strong> in seconds can be set to 10.</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Create_Api_service">Create Api service</h2>
+    <p>In order to let Auth0 know that it needs to generate an access token, we need to create an Api service:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on the <strong>APIs</strong> menu entry in your tenant dashboard.</li>
+      <li>Click on <strong>Create API</strong>.</li>
+      <li>Enter a name, Identifier and select <strong>RS256</strong> as the <strong>Signing Algorithm</strong> and then click <strong>create</strong>. Identifier should be (as recommended by Auth0) a URL. This Identifier will be used as the audience when requesting access tokens by the applications.</li>
+      <li>Once created, scroll down to <strong>Access Settings </strong>and make sure <strong>Allow Offline Access</strong> is enabled (required to be able to generate the Refresh Token).</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id=""></h2>
+    <p></p>
+  </section>
+</article>

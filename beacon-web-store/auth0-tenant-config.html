@@ -59,7 +59,43 @@ parent: Beacon Web Store
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id=""></h2>
-    <p></p>
+    <h2 id="Configuring_token_expiration_time">Configuring token expiration time</h2>
+    <h3>Refresh</h3>
+    <p>By default, Auth0 refresh tokens have no expiration date. Refresh token behavior can be changed to <strong>rotating</strong>/<strong>non-rotating</strong> per application.</p>
+    <p>If rotating is enabled make sure <strong>Refresh Token Reuse Interval </strong>is at least 30 seconds.</p>
+    <h3>Access</h3>
+    <p>To change access the token expiration date:</p>
+    <ol class="bcls-tasklist-restart">
+      <li>Click on the <strong>APIs</strong> menu entry in your tenant dashboard.</li>
+      <li>Select the API previously created.</li>
+      <li>On <strong>Token Expiration (Seconds)</strong> select the desired time - recommended min value (10 min).</li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Beacon_CMS_configuration">Beacon CMS configuration</h2>
+    <p>The Beacon CMS will simply need the domain name for the auth0 tenant (if you have a custom domain setup, that is the domain that we require here) - something like <code>https://beacon-dev.auth0.com/ </code>or <code>http://auth.mycompany.tv</code>.</p>
+    <p>Brightcove will then be configuring some endpoints that are standard for Auth0:</p>
+    <ul>
+      <li translate="no">Refresh token: oauth/token</li>
+      <li translate="no">Access token: oauth/token</li>
+      <li translate="no">Revoke Refresh token: oauth/revoke</li>
+      <li translate="no">User info: userinfo</li>
+      <li translate="no">Authorization: authorize</li>
+      <li translate="no">Pairing code: oauth/device/code</li>
+      <li translate="no">Logout: v2/logout</li>
+      <li translate="no">JWKS location: [Tenant URL]/.well-known/jwks.json (full URL)</li>
+      <li translate="no">Scopes: openid,name,email,nickname,offline_access,profile (separated by comma)</li>
+      <li translate="no">Audience: Should be exactly the same as the Identifier API created on Auth0</li>
+      <li translate="no">Auth Endpoint: /account/social_login</li>
+      <li translate="no">Auth Type: openid_connect </li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Beacon_Apps_configuration">Beacon Apps configuration</h2>
+    <p>Following is required for the different platforms:</p>
+    <dl>
+      <dt>Web</dt>
+      <dd>On the application side, the Client ID of the auth0 application must be added in the config.json file.</dd>
+    </dl>
   </section>
 </article>

@@ -49,6 +49,8 @@
       url: /using-brightcove-beacon/cloud-playout/enabling-server-side-ads.html
     - name: Adding Mid-Roll Ads to a Channel
       url: /using-brightcove-beacon/cloud-playout/mid-roll-ad-insertion.html
+    - name: Publishing a Cloud Playout Channel
+      url: /using-brightcove-beacon/cloud-playout/publish-channel-beacon.html
     - name: Viewing Channel Output and Analytics
       url: /using-brightcove-beacon/cloud-playout/viewing-channel-output-and-analytics.html
     - name: Creating a Beacon Channel

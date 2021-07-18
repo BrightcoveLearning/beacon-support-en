@@ -6,7 +6,7 @@
     
       <url>
         <loc>https://beacon.support.brightcove.com/index.html</loc>
-        <lastmod>2021-07-16</lastmod>
+        <lastmod>2021-07-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -14,7 +14,7 @@
     
       <url>
         <loc>https://beacon.support.brightcove.com/getting-started/index.html</loc>
-        <lastmod>2021-07-16</lastmod>
+        <lastmod>2021-07-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -23,7 +23,7 @@
           
             <loc>https://beacon.support.brightcove.com/getting-started/learning-guide-bc-beacon.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -33,7 +33,7 @@
           
             <loc>https://beacon.support.brightcove.com/getting-started/implementation-phases.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -43,7 +43,7 @@
           
             <loc>https://beacon.support.brightcove.com/getting-started/app-design-considerations.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -53,7 +53,7 @@
           
             <loc>https://beacon.support.brightcove.com/getting-started/creating-your-app-design-info-architecture.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -63,7 +63,7 @@
           
             <loc>https://beacon.support.brightcove.com/getting-started/creating-your-app-design-layout-options.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -73,7 +73,7 @@
           
             <loc>https://beacon.support.brightcove.com/getting-started/design-best-practices.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -82,7 +82,7 @@
     
       <url>
         <loc>https://beacon.support.brightcove.com/syncing-with-video-cloud/index.html</loc>
-        <lastmod>2021-07-16</lastmod>
+        <lastmod>2021-07-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -91,7 +91,7 @@
           
             <loc>https://beacon.support.brightcove.com/syncing-with-video-cloud/vc-custom-fields.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -101,7 +101,7 @@
           
             <loc>https://beacon.support.brightcove.com/syncing-with-video-cloud/forcing-a-sync.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -110,7 +110,7 @@
     
       <url>
         <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/index.html</loc>
-        <lastmod>2021-07-16</lastmod>
+        <lastmod>2021-07-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -119,7 +119,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/adding-trailer-movie.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -129,7 +129,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/adding-to-page.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -139,7 +139,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/cloud-playout-overview.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -149,7 +149,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/cloud-playout-stream-vod.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -159,7 +159,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/cloud-playout-add-content.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -169,7 +169,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/static-image-overlays.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -179,7 +179,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/using-channel-actions.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -189,7 +189,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/adding-bumpers-to-vod.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -199,7 +199,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/enabling-server-side-ads.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -209,7 +209,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/mid-roll-ad-insertion.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -219,7 +219,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/publish-channel-beacon.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -229,7 +229,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/viewing-channel-output-and-analytics.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -239,7 +239,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/creating-a-channel.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -249,7 +249,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/electronic-program-guides.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -259,7 +259,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/creating-a-page.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -269,7 +269,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/creating-a-playlist.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -279,7 +279,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/series-seasons-episodes.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -289,7 +289,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/ga-self-configuration.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -299,7 +299,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/including-non-configurable-pages.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -309,7 +309,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/introducing-pages.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -319,7 +319,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/streaming-live-event.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -329,7 +329,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/streaming-vods-to-a-channel.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -339,7 +339,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/tools.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -349,7 +349,7 @@
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/viewing-analytics-data.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -358,7 +358,7 @@
     
       <url>
         <loc>https://beacon.support.brightcove.com/monetization/index.html</loc>
-        <lastmod>2021-07-16</lastmod>
+        <lastmod>2021-07-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -367,7 +367,7 @@
           
             <loc>https://beacon.support.brightcove.com/monetization/general/index.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -376,7 +376,7 @@
             
               <loc>https://beacon.support.brightcove.com/monetization/general/creating-stripe-account.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -385,7 +385,7 @@
             
               <loc>https://beacon.support.brightcove.com/monetization/general/creating-subscription-package.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -394,7 +394,7 @@
             
               <loc>https://beacon.support.brightcove.com/monetization/general/promo-codes.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -403,7 +403,7 @@
             
               <loc>https://beacon.support.brightcove.com/monetization/general/vc-custom-fields.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -412,7 +412,7 @@
             
               <loc>https://beacon.support.brightcove.com/monetization/general/implementing-authvod.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -421,7 +421,7 @@
             
               <loc>https://beacon.support.brightcove.com/monetization/general/monetization-options.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -430,7 +430,7 @@
             
               <loc>https://beacon.support.brightcove.com/monetization/general/using-subscription-package.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -440,7 +440,7 @@
           
             <loc>https://beacon.support.brightcove.com/monetization/ssai/index.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -449,7 +449,7 @@
             
               <loc>https://beacon.support.brightcove.com/monetization/ssai/advertisement.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -458,7 +458,7 @@
             
               <loc>https://beacon.support.brightcove.com/monetization/ssai/configuring-server-side-ad-settings.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -467,7 +467,7 @@
             
               <loc>https://beacon.support.brightcove.com/monetization/ssai/live-ssai.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -476,7 +476,7 @@
             
               <loc>https://beacon.support.brightcove.com/monetization/ssai/vod-ssai.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -485,7 +485,7 @@
             
               <loc>https://beacon.support.brightcove.com/monetization/ssai/beacon-apps-ad-targeting.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -494,7 +494,7 @@
     
       <url>
         <loc>https://beacon.support.brightcove.com/beacon-web-store/index.html</loc>
-        <lastmod>2021-07-16</lastmod>
+        <lastmod>2021-07-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -503,7 +503,7 @@
           
             <loc>https://beacon.support.brightcove.com/beacon-web-store/beacon-webstore-overview.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -513,7 +513,7 @@
           
             <loc>https://beacon.support.brightcove.com/beacon-web-store/integration-details.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -523,7 +523,7 @@
           
             <loc>https://beacon.support.brightcove.com/beacon-web-store/beacon-store-webhook-reference.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -532,7 +532,7 @@
     
       <url>
         <loc>https://beacon.support.brightcove.com/creating-your-apps/index.html</loc>
-        <lastmod>2021-07-16</lastmod>
+        <lastmod>2021-07-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -541,7 +541,7 @@
           
             <loc>https://beacon.support.brightcove.com/creating-your-apps/general/index.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -550,7 +550,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/general/common-required-info.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -559,7 +559,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/general/device-apps-validation-guide.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -568,7 +568,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/general/in-app-subscription-resources.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -577,7 +577,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/general/links-subscriptions.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -587,7 +587,7 @@
           
             <loc>https://beacon.support.brightcove.com/creating-your-apps/android/index.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -596,7 +596,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/android/submitting-to-android.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -605,7 +605,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/android/updating-android-apps-to-bcb.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -614,7 +614,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/android/adding-subscriptions-in-android.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -623,7 +623,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/android/improving-relevance-android.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -632,7 +632,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/android/installing-android-test-build.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -641,7 +641,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/android/managing-google-subscriptions-1.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -650,7 +650,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/android/managing-google-subscriptions-2.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -660,7 +660,7 @@
           
             <loc>https://beacon.support.brightcove.com/creating-your-apps/fire-tv/index.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -669,7 +669,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/fire-tv/installing-fire-tv-test-build.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -678,7 +678,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/fire-tv/submitting-to-amazon.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -688,7 +688,7 @@
           
             <loc>https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/index.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -697,7 +697,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/installing-ios-test-build.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -706,7 +706,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/submitting-to-apple.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -716,7 +716,7 @@
           
             <loc>https://beacon.support.brightcove.com/creating-your-apps/roku/index.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -725,7 +725,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/roku/configuring-inchannel-products.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -734,7 +734,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/roku/installing-roku-test-build.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -743,7 +743,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/roku/submitting-to-roku.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -753,7 +753,7 @@
           
             <loc>https://beacon.support.brightcove.com/creating-your-apps/samsung/index.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -762,7 +762,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/samsung/samsung-partner.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -771,7 +771,7 @@
             
               <loc>https://beacon.support.brightcove.com/creating-your-apps/samsung/submitting-to-samsung.html</loc>
             
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -780,7 +780,7 @@
     
       <url>
         <loc>https://beacon.support.brightcove.com/references/index.html</loc>
-        <lastmod>2021-07-16</lastmod>
+        <lastmod>2021-07-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -789,7 +789,7 @@
           
             <loc>https://beacon.support.brightcove.com/references/branding-beacon-apps.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -799,7 +799,7 @@
           
             <loc>https://beacon.support.brightcove.com/references/common-configuration-settings.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -809,7 +809,7 @@
           
             <loc>https://beacon.support.brightcove.com/references/glossary.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -819,7 +819,7 @@
           
             <loc>https://beacon.support.brightcove.com/references/how-beacon-gets-data.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -829,7 +829,7 @@
           
             <loc>https://beacon.support.brightcove.com/references/image-requirements.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -839,7 +839,7 @@
           
             <loc>https://beacon.support.brightcove.com/references/known-issues.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -849,7 +849,7 @@
           
             <loc>https://beacon.support.brightcove.com/references/product-updates.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -859,7 +859,7 @@
           
             <loc>https://beacon.support.brightcove.com/references/remote-asset-limitations.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -869,7 +869,7 @@
           
             <loc>https://beacon.support.brightcove.com/references/beacon-tasks-in-vc.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -878,7 +878,7 @@
     
       <url>
         <loc>https://beacon.support.brightcove.com/training/index.html</loc>
-        <lastmod>2021-07-16</lastmod>
+        <lastmod>2021-07-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -887,7 +887,7 @@
           
             <loc>https://beacon.support.brightcove.com/training/training-demand-custom-fields.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -897,7 +897,7 @@
           
             <loc>https://beacon.support.brightcove.com/training/training-demand-design-layout.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -907,7 +907,7 @@
           
             <loc>https://beacon.support.brightcove.com/training/training-demand-playlists.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -917,7 +917,7 @@
           
             <loc>https://beacon.support.brightcove.com/training/training-demand-series-seasons-episodes.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -927,7 +927,7 @@
           
             <loc>https://beacon.support.brightcove.com/training/training-demand-vod-ssai.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -937,7 +937,7 @@
           
             <loc>https://beacon.support.brightcove.com/training/training-demand-publish-android-app.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -947,7 +947,7 @@
           
             <loc>https://beacon.support.brightcove.com/training/training-demand-viewing-analytics.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -957,7 +957,7 @@
           
             <loc>https://beacon.support.brightcove.com/training/training-demand-streaming-live-bc-beacon.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -966,7 +966,7 @@
     
       <url>
         <loc>https://beacon.support.brightcove.com/support/index.html</loc>
-        <lastmod>2021-07-16</lastmod>
+        <lastmod>2021-07-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
       </url>
@@ -975,7 +975,7 @@
           
             <loc>https://beacon.support.brightcove.com/support/viewing-brightcove-system-status-page.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -985,7 +985,7 @@
           
             <loc>https://beacon.support.brightcove.com/support/contact-sales.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -995,7 +995,7 @@
           
             <loc>https://beacon.support.brightcove.com/support/opening-case-with-brightcove-support.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>
@@ -1005,7 +1005,7 @@
           
             <loc>https://beacon.support.brightcove.com/support/reset-support-portal-password.html</loc>
           
-            <lastmod>2021-07-16</lastmod>
+            <lastmod>2021-07-18</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
         </url>

@@ -8,7 +8,7 @@
     />
     <meta name="description" content="In this topic, you will learn how to add a trailer to a movie, series and season." />
 
-    <title>Adding a Trailer to a Brightcove Beacon Movies, Series and Seasons</title>
+    <title>Adding a Trailer to Brightcove Beacon Movies, Series and Seasons</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -94,7 +94,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
     
       
-        <li class="breadcrumb-item active" aria-current="page">Adding a Trailer to a Brightcove Beacon Movies, Series and Seasons</li>
+        <li class="breadcrumb-item active" aria-current="page">Adding a Trailer to Brightcove Beacon Movies, Series and Seasons</li>
       
     
   </nav>
@@ -690,33 +690,32 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<h1>Adding a Trailer to a Brightcove Beacon Movies, Series and Seasons</h1>
+<h1>Adding a Trailer to Brightcove Beacon Movies, Series and Seasons</h1>
 <article class="bcls-article">
   <summary>In this topic, you will learn how to add a trailer to a movie, series and season.</summary>
 
   <section class="bcls-section">
-    <h2 id="section-name">Introducing trailers</h2>
-    <p>A trailer is a short clip associated with a video meant to entice your audience and build excitement for your content. Within Beacon Classic, you can add trailer to the following:</p>
+    <h2 id="Introducing_trailers">Introducing trailers</h2>
+    <p>A trailer is a short clip associated with a video meant to entice your audience and build excitement for your content. Trailers can be added to video content in both Beacon Classic and Video Cloud Studio. </p>
+    <p> Within Beacon Classic, you can add trailer to the following:</p>
     <ul>
       <li>Movies</li>
       <li>Series</li>
       <li>Seasons</li>
     </ul>
-    <p>The process of adding trailers requires the Video Cloud custom field <strong>beacon.trailer.id</strong>. For information and directions on how to add a custom field to your Video Cloud account see the <a href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a> document. your custom field should be defined as follows:
+    <p>You add trailers to Video Cloud videos in Video Cloud Studio. These videos when ingested into Brightcove Beacon will be movies. The process of adding trailers in Video Cloud Studio requires the Video Cloud custom field <strong>beacon.trailer.id</strong>. For information and directions on how to add a custom field to your Video Cloud account see the <a href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a> document. Your custom field should be defined as follows:
     <table class="bcls-table">
       <caption class="bcls-caption--table">Trailer Custom Field</caption>
       <thead class="bcls-table__head">
         <tr>
           <th>Display Name</th>
           <th>Internal Name</th>
-          <th>Value</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
           <td translate="no">beacon.trailer.id</td>
           <td translate="no">beacon_trailer_id</td>
-          <td translate="no">(Video id for trailer)</td>
         </tr>
       </tbody>
     </table>
@@ -743,6 +742,31 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ol>
     <p>To see your results immediately in your Brightcove Beacon apps, clear the cache in Beacon Classic, as explained in the <a href="/using-brightcove-beacon/tools.html#Cache">Using the Tools</a> document.</p>
   </section>
+
+  <section class="bcls-section">
+    <h2 id="Using_Beacon_Classic_to_add_a_trailer">Using Beacon Classic to add a trailer</h2>
+    <p>In Beacon Classic you can add trailers to movies, series and seasons. The process is very similar for all three entities. The screenshots shown below are for adding a trailer to a series, but the process is nearly identical for movies and seasons.</p>
+    <ol class="bcls-tasklist">
+      <li>Select the series to which you wish to add a trailer.</li>
+      <li>Click the <strong>Streams</strong> tab.</li>
+      <li>Be sure the <strong>Provider</strong> is <strong>Brightcove()</strong>.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/using-bcb/add-trailer-movie/classic-streams.png" alt="classic-streams">
+        </figure>
+      </li>
+      <li>Click <strong>Add new stream</strong>.</li>
+      <li>Add the Video Cloud ID for the trailer in the <strong>Stream Video ID</strong> field.</li>
+      <li>Select the <strong>Stream Type</strong> to be <strong>Trailer</strong>.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/using-bcb/add-trailer-movie/classic-add-stream.png" alt="add stream">
+        </figure>
+      </li>
+      <li>Click <strong>Update Series</strong></li>
+    </ol>
+    <p>To see your results immediately in your Brightcove Beacon apps, clear the cache in Beacon Classic, as explained in the <a href="/using-brightcove-beacon/tools.html#Cache">Using the Tools</a> document.</p>
+
+  </section>
+
 </article>
 <!-- complete bootstrap layout -->
     </div>
@@ -759,7 +783,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 21 Jun 2021
+  Page last updated on 23 Jul 2021
 </div>
 
 

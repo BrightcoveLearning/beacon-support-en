@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="" />
+    <meta name="description" content="In this topic, you will learn how to use a video SVOD plan that was created using the Commerce tab of Brightcove Beacon. For details on creating the SVOD plan see the Creating an SVOD Plan document." />
 
     <title>Using an SVOD Plan</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -698,15 +698,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
+<h1>Using an SVOD Plan</h1>
 <article class="bcls-article">
-  <h1>Using an SVOD Plan</h1>
-  <summary>In this topic, you will learn how to use a video subscription package that was created using the <strong>Commerce</strong> tab of Brightcove Beacon.
-    The subscription package implements SVOD (subscription video on demand) monetization. For details on creating the subscription see the <a href="/monetization/general/creating-svod-plan.html">Creating an SVOD Plan</a> document.
-  </summary>
+  <summary>In this topic, you will learn how to use a video SVOD plan that was created using the <strong>Commerce</strong> tab of Brightcove Beacon. For details on creating the SVOD plan see the <a href="/monetization/general/creating-svod-plan.html">Creating an SVOD Plan</a> document.</summary>
+
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
     <p>
-      An SVOD Plan defines how a particular set of videos can be purchased by your apps' customers. The subscription package must be created in Brightcove Beacon, and is detailed in the <a href="/monetization/general/creating-svod-plan.html">Creating an SVOD Plan</a> document. Also crucial in the use of the subscription package are the Video Cloud custom fields created for videos in a Video Cloud account, as detailed in the
+      An SVOD Plan defines how a particular set of videos can be purchased by your apps' customers. The SVOD plan must be created in Brightcove Beacon, and is detailed in the <a href="/monetization/general/creating-svod-plan.html">Creating an SVOD Plan</a> document. Also crucial in the use of the SVOD plan are the Video Cloud custom fields created for videos in a Video Cloud account, as detailed in the
       <a href="/syncing-with-video-cloud/vc-custom-fields.html"> Creating Video Cloud Custom Fields
       </a>
       document. Specifically, the
@@ -733,7 +732,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       This is included as you may wish to create multiple sets of rights management fields, and the <strong>&lt;counter&gt;</strong> is utilized so you can use array type syntax to group associated fields.
     </p>
     <p>
-      For instance, say you wanted to create subscription packages around the holidays and have packages for:
+      For instance, say you wanted to create SVOD plans around holidays and have packages for:
     </p>
     <ul>
       <li>Earth Day</li>
@@ -854,7 +853,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </figure>
       </li>
       <li>
-        Place the name of the subscription package created in Brightcove Beacon in the
+        Place the name of the SVOD plan created in Brightcove Beacon in the
         <code translate="No">beacon.rights.&lt;counter&gt;.packageName</code> field.
       </li>
       <li>
@@ -883,7 +882,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </li>
       <li>Click the <strong>Quick Edit</strong> button.</li>
       <li>
-        The <strong>Quick Edit</strong> section appears on the right side of the screen, and there you can place the name of the subscription package created in Brightcove Beacon in the
+        The <strong>Quick Edit</strong> section appears on the right side of the screen, and there you can place the name of the SVOD plan created in Brightcove Beacon in the
         <code translate="No">beacon.rights.&lt;counter&gt;.packageName</code> field.
       </li>
       <li>
@@ -897,7 +896,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="Ingesting_the_videos_into_Brightcove_Beacon"> Ingesting the videos into Brightcove Beacon </h2>
     <p>
-      You now have associated one or videos with your subscription package. You now have to ingest those associations into Brightcove Beacon. To do this, follow these steps:
+      You now have associated one or videos with your SVOD plan. You now have to ingest those associations into Brightcove Beacon. To do this, follow these steps:
     </p>
     <ol class="bcls-tasklist-restart">
       <li>Log in to Brightcove Beacon.</li>
@@ -905,7 +904,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>From the left side navigation click <strong>Ingestion</strong>.</li>
       <li>Click the <strong>Update Brightcove Videos</strong> button.</li>
       <li>
-        If any errors are reported, check those to be sure none are related to your subscription package.
+        If any errors are reported, check those to be sure none are related to your SVOD plan.
       </li>
       <li>
         If you wish to have the new associations immediately active in Brightcove Beacon, you must clear the current cache. To do this, from the left side navigation click <strong>Cache</strong>, then click <strong>Cache Purge</strong>.

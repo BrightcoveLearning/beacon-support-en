@@ -351,7 +351,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                           
                         
                           
-                            <li><a href="/monetization/general/creating-subscription-package.html">Creating a Subscription Package</a></li>
+                            <li><a href="/monetization/general/creating-svod-plan.html">Creating an SVOD Plan</a></li>
                           
                         
                           
@@ -371,7 +371,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                           
                         
                           
-                            <li><a href="/monetization/general/using-subscription-package.html">Using a Subscription Package</a></li>
+                            <li><a href="/monetization/general/using-svod-plan.html">Using an SVOD Plan</a></li>
                           
                         
                       </ul>
@@ -695,111 +695,112 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
 <article class="bcls-article">
-    <h1>Using the Tools</h1>
-    <summary>In this topic, you will learn the functionality of the options in the
-        <strong>Tools</strong> section of Brightcove Beacon.</summary>
+  <h1>Using the Tools</h1>
+  <summary>In this topic, you will learn the functionality of the options in the
+    <strong>Tools</strong> section of Brightcove Beacon.
+  </summary>
 
-    <section class="bcls-section">
-        <h2 id="Tools">Introducing the Tools</h2>
-        <p>
-            In Brightcove Beacon the <strong>wrench</strong> icon (labeled 1)
-            represents a set of tools. The options for the tools are
-            <strong>Ingestion</strong> and <strong>Cache</strong> (2). This document
-            explores the two options.
-        </p>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/using-bcb/tools/icon-and-options.png" alt="icon-and-options" />
-        </figure>
-    </section>
+  <section class="bcls-section">
+    <h2 id="Tools">Introducing the Tools</h2>
+    <p>
+      In Brightcove Beacon the <strong>wrench</strong> icon (labeled 1)
+      represents a set of tools. The options for the tools are
+      <strong>Ingestion</strong> and <strong>Cache</strong> (2). This document
+      explores the two options.
+    </p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/using-bcb/tools/icon-and-options.png" alt="icon-and-options" />
+    </figure>
+  </section>
 
-    <section class="bcls-section">
-        <h2 id="Ingestion">Ingestion</h2>
-        <p>In the Ingestion group you have three tools:</p>
-        <ul>
-            <li>
-                <strong>Update Brightcove Videos</strong>: If you have added videos to
-                your Video Cloud catalog, or altered existing videos, this button syncs
-                the newly added or updated videos to Brightcove Beacon.
-            </li>
-            <li>
-                <strong>Update Brightcove Playlists</strong>: If you have added
-                playlists to your Video Cloud catalog, or altered existing playlists,
-                this button syncs the newly added or updated playlists to Brightcove
-                Beacon.
-            </li>
-            <li>
-                <strong>XML EPG - Fetch XML from Folder</strong>: When your EPG
-                (Electronic Program Guide) needs to be updated, this button retrieves
-                the updated XML file. You will be provided an S3 account in which to
-                drop the file.
-            </li>
-        </ul>
-        <aside class="bcls-aside bcls-aside--tip">
-            You can also work with Brightcove support personnel to create a schedule
-            to automatically perform ingestion.
-        </aside>
+  <section class="bcls-section">
+    <h2 id="Ingestion">Ingestion</h2>
+    <p>In the Ingestion group you have three tools:</p>
+    <ul>
+      <li>
+        <strong>Update Brightcove Videos</strong>: If you have added videos to
+        your Video Cloud catalog, or altered existing videos, this button syncs
+        the newly added or updated videos to Brightcove Beacon.
+      </li>
+      <li>
+        <strong>Update Brightcove Playlists</strong>: If you have added
+        playlists to your Video Cloud catalog, or altered existing playlists,
+        this button syncs the newly added or updated playlists to Brightcove
+        Beacon.
+      </li>
+      <li>
+        <strong>XML EPG - Fetch XML from Folder</strong>: When your EPG
+        (Electronic Program Guide) needs to be updated, this button retrieves
+        the updated XML file. You will be provided an S3 account in which to
+        drop the file.
+      </li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--tip">
+      You can also work with Brightcove support personnel to create a schedule
+      to automatically perform ingestion.
+    </aside>
 
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/using-bcb/tools/ingestion.png" alt="ingestion" />
-        </figure>
-        <h3>Caveats for ingestion</h3>
-        <p>
-            Note that not all data that is entered about a particular video in Studio
-            is automatically ingested into Brightcove Beacon. For instance, the
-            following are not ingested into Brightcove Beacon from Video Cloud:
-        </p>
-        <ul>
-            <li>
-                <strong>Availability times</strong>: Scheduling times set in the
-                <em>AVAILABILITY</em> section of the video's properties are not ingested
-                into Brightcove Beacon. The dates will be, but not the times.
-            </li>
-            <li>
-                <strong>Geo Filtering</strong>: Geo filtering information set in the
-                <em>AVAILABILITY</em> section of the video's properties are not ingested
-                into Brightcove Beacon.
-            </li>
-        </ul>
-        <aside class="bcls-aside bcls-aside--tip">
-            The issues listed above can be remedied by creating a
-            <strong>Package</strong> in Brightcove Beacon the assigning the video to
-            that package at ingestion via custom fields. See the
-            <a href="/using-brightcove-beacon/creating-subscription-package.html">Creating a Subscription Package
-            </a>
-            and
-            <a href="/using-brightcove-beacon/using-subscription-package.html">Using a Subscription Package
-            </a>
-            documents for further information.
-        </aside>
-        <p>
-            Also note that not every field mentioned in Brightcove Beacon has an
-            associated custom field. For instance
-            <em>Production Country</em> and <em>Sub-Genre</em> do not have
-            corresponding custom fields associated with them.
-        </p>
-    </section>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/using-bcb/tools/ingestion.png" alt="ingestion" />
+    </figure>
+    <h3>Caveats for ingestion</h3>
+    <p>
+      Note that not all data that is entered about a particular video in Studio
+      is automatically ingested into Brightcove Beacon. For instance, the
+      following are not ingested into Brightcove Beacon from Video Cloud:
+    </p>
+    <ul>
+      <li>
+        <strong>Availability times</strong>: Scheduling times set in the
+        <em>AVAILABILITY</em> section of the video's properties are not ingested
+        into Brightcove Beacon. The dates will be, but not the times.
+      </li>
+      <li>
+        <strong>Geo Filtering</strong>: Geo filtering information set in the
+        <em>AVAILABILITY</em> section of the video's properties are not ingested
+        into Brightcove Beacon.
+      </li>
+    </ul>
+    <aside class="bcls-aside bcls-aside--tip">
+      The issues listed above can be remedied by creating a
+      <strong>Package</strong> in Brightcove Beacon the assigning the video to
+      that package at ingestion via custom fields. See the
+      <a href="/using-brightcove-beacon/creating-svod-plan.html">Creating an SVOD Plan
+      </a>
+      and
+      <a href="/using-brightcove-beacon/using-svod-plan.html">Using an SVOD Plan
+      </a>
+      documents for further information.
+    </aside>
+    <p>
+      Also note that not every field mentioned in Brightcove Beacon has an
+      associated custom field. For instance
+      <em>Production Country</em> and <em>Sub-Genre</em> do not have
+      corresponding custom fields associated with them.
+    </p>
+  </section>
 
-    <section class="bcls-section">
-        <h2 id="Cache">Cache</h2>
-        <p>In the Cache group you have two tools:</p>
-        <ul>
-            <li>
-                <strong>Cache Purge</strong>: When you make changes in Brightcove
-                Beacon, click this button to roll those changes into the current
-                configuration. This option pulls all changes EXCEPT images into the
-                current configuration.
-            </li>
-            <li>
-                <strong>Image Cache</strong>: If you update any images in Brightcove
-                Beacon, click this button to roll the image changes into the current
-                configuration.
-            </li>
-        </ul>
-        <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/using-bcb/tools/cache.png" alt="cache" />
-        </figure>
-        <p>This process should not be done indiscriminately as doing this too frequently in production has an adverse effect on scalability and performance.</p>
-    </section>
+  <section class="bcls-section">
+    <h2 id="Cache">Cache</h2>
+    <p>In the Cache group you have two tools:</p>
+    <ul>
+      <li>
+        <strong>Cache Purge</strong>: When you make changes in Brightcove
+        Beacon, click this button to roll those changes into the current
+        configuration. This option pulls all changes EXCEPT images into the
+        current configuration.
+      </li>
+      <li>
+        <strong>Image Cache</strong>: If you update any images in Brightcove
+        Beacon, click this button to roll the image changes into the current
+        configuration.
+      </li>
+    </ul>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/using-bcb/tools/cache.png" alt="cache" />
+    </figure>
+    <p>This process should not be done indiscriminately as doing this too frequently in production has an adverse effect on scalability and performance.</p>
+  </section>
 </article>
 <!-- complete bootstrap layout -->
     </div>
@@ -816,7 +817,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 19 Jun 2021
+  Page last updated on 27 Jul 2021
 </div>
 
 

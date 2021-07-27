@@ -88,8 +88,8 @@
       docs:
         - name: Creating a Stripe Account
           url: /monetization/general/creating-stripe-account.html
-        - name: Creating a Subscription Package
-          url: /monetization/general/creating-subscription-package.html
+        - name: Creating an SVOD Plan
+          url: /monetization/general/creating-svod-plan.html
         - name: Creating Promo Codes
           url: /monetization/general/promo-codes.html
         - name: Custom Fields for Monetization
@@ -98,8 +98,8 @@
           url: /monetization/general/implementing-authvod.html
         - name: Understanding Monetization Options
           url: /monetization/general/monetization-options.html
-        - name: Using a Subscription Package
-          url: /monetization/general/using-subscription-package.html
+        - name: Using an SVOD Plan
+          url: /monetization/general/using-svod-plan.html
     - name: SSAI
       url: '/monetization/ssai/index.html'
       docs:

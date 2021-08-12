@@ -699,19 +699,34 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <figure class="bcls-figure">
       <img class="bcls-image" src="/assets/images/monetization/receive-iap-notifications/overview-beacon-in-app-purchase.png" alt="overview beacon in app purchase">
     </figure>
-    <p>Notes:</p>
+    <p>Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers. For full details see Amazon's <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">SNS Developer Guide</a>.</p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Notification_specifications">Notification specifications</h2>
     <ul>
-      <li>Beacon will report all purchase related events, including the following actions on subscriptions:
+      <li>Notifications of In App purchases from following stores will be supported:
         <ul>
-          <li>new</li>
-          <li>renewals</li>
-          <li>cancellations</li>
-          <li>pauses</li>
-          <li>holds</li>
-          <li>resumes</li>
+          <li>Apple store (iOS and AppleTV)</li>
+          <li>Google Play (Android and Android TV)</li>
+          <li>Roku store</li>
+          <li>Amazon store (FireTV)</li>
+          <li>Stripe (Web and Samsung TV)</li>
         </ul>
       </li>
-      <li>Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers. For full details see Amazon's <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">SNS Developer Guide</a>.</li>
+      <li>Beacon will report all purchase related events, including the following actions on subscriptions:
+        <ul>
+          <li>New</li>
+          <li>Renewals</li>
+          <li>Cancellations</li>
+          <li>Pauses</li>
+          <li>Holds</li>
+          <li>Resumes</li>
+        </ul>
+      </li>
+      <li>Enough information is provided in the notification so the seller's external system is able to apply entitlements and/or prevent purchases of same asset (subscription) if already purchased through Beacon or native stores.</li>
+      <li>Purchase events are delivered to external stores within 5 min after receiving notification from source stores.</li>
+      <li></li>
     </ul>
   </section>
 

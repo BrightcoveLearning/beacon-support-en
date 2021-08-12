@@ -1,56 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="In this topic, you will learn how to add a trailer to a movie, series and season." />
 
-    <title>Adding a Trailer to Brightcove Beacon Movies, Series and Seasons</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-  <link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-      <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/prism.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/styles.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/landing-page.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/tabs.css"
-    />
-    <link rel="stylesheet" href="/assets/css/local.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/381443caa8.js"
-      crossorigin="anonymous"
-    ></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="In this topic, you will learn the requirements for setting up an endpoint to receive in-app purchase notifications.">
+  
+  <title>Receiving In-App Purchase Notifications</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -59,12 +30,12 @@
 
   gtag('config', 'UA-2728311-17');
 </script>
-    <script src="/assets/js/sajari-head.js"></script>
-		<script src="https://unpkg.com/feather-icons"></script>
-  </head>
+  <script src="/assets/js/sajari-head.js"></script>
+	<script src="https://unpkg.com/feather-icons"></script>
+</head>
 
-  <body class="body"></body>
-</html>
+
+<body class="body">
 
 <header>
   <div class="div-header">
@@ -90,11 +61,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
     
       
-        <li class="breadcrumb-item"><a href="/using-brightcove-beacon/">Using brightcove beacon</a></li>
+        <li class="breadcrumb-item"><a href="/monetization/">Monetization</a></li>
       
     
       
-        <li class="breadcrumb-item active" aria-current="page">Adding a Trailer to Brightcove Beacon Movies, Series and Seasons</li>
+        <li class="breadcrumb-item"><a href="/monetization/general/">General</a></li>
+      
+    
+      
+        <li class="breadcrumb-item active" aria-current="page">Receiving In-App Purchase Notifications</li>
       
     
   </nav>
@@ -698,85 +673,41 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<h1>Adding a Trailer to Brightcove Beacon Movies, Series and Seasons</h1>
+<h1>Receiving In-App Purchase Notifications</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn how to add a trailer to a movie, series and season.</summary>
+  <summary>In this topic, you will learn the requirements for setting up an endpoint to receive in-app purchase notifications.</summary>
 
   <section class="bcls-section">
-    <h2 id="Introducing_trailers">Introducing trailers</h2>
-    <p>A trailer is a short clip associated with a video meant to entice your audience and build excitement for your content. Trailers can be added to video content in both Beacon Classic and Video Cloud Studio. </p>
-    <p> Within Beacon Classic, you can add trailer to the following:</p>
+    <h2 id="Overview">Overview</h2>
+    <p>There are two types of purchases that can be done with Beacon, those being:</p>
     <ul>
-      <li>Movies</li>
-      <li>Series</li>
-      <li>Seasons</li>
+      <li>Purchases done outside Beacon - For those purchases a webhook/API is supported that allows external systems to notify Beacon of any purchases related events. This enables the Beacon entitlement subsystem to properly make assets available to viewers.</li>
+      <li>Purchases executed through Beacon - Of course, the Beacon entitlement subsystem still makes assets available to viewers. Also available are notifications that are sent to the seller of the asset. This permits the asset supplier to display to the purchaser, via the external store, that a purchase has been made.</li>
     </ul>
-    <p>You add trailers to Video Cloud videos in Video Cloud Studio. These videos when ingested into Brightcove Beacon will be movies. The process of adding trailers in Video Cloud Studio requires the Video Cloud custom field <strong>beacon.trailer.id</strong>. For information and directions on how to add a custom field to your Video Cloud account see the <a href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a> document. Your custom field should be defined as follows:
-    <table class="bcls-table">
-      <caption class="bcls-caption--table">Trailer Custom Field</caption>
-      <thead class="bcls-table__head">
-        <tr>
-          <th>Display Name</th>
-          <th>Internal Name</th>
-        </tr>
-      </thead>
-      <tbody class="bcls-table__body">
-        <tr>
-          <td translate="no">beacon.trailer.id</td>
-          <td translate="no">beacon_trailer_id</td>
-        </tr>
-      </tbody>
-    </table>
-    </p>
-    <p>Note that if a video is used as a trailer, it will be disregarded as a Movie or an Episode within Beacon.</p>
+    <p>An example of a purchase through Beacon is:</p>
+    <ul>
+      <li>A viewer purchases a subscription from ?????.</li>
+      <li>The Beacon entitlement subsystem grants the viewer to access all video assets in the subscription.</li>
+      <li>A notification is sent to ??????</li>
+      <li>????? then uses the information in the notification to display to the viewer the subscription was purchased.</li>
+    </ul>
   </section>
-
-  <section class="bcls-section">
-    <h2 id="Adding_a_trailer">Adding a trailer to a Video Cloud video</h2>
-    <p>You will add the trailer to a Video Cloud video, and when ingested into Brightcove Beacon it becomes a movie. Follow the steps below:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>Upload the trailer video to your Video Cloud account.</li>
-      <li>Copy the ID for the trailer video:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/add-trailer-movie/get-trailer-video-id.png" alt="Get Video ID">
-          <figcaption class="bcls-caption--image">Get Video ID</figcaption>
-        </figure>
-      </li>
-      <li>From the <strong>Media</strong> module, click the video title to which you are adding a trailer to open the properties page. In the <strong>Custom Fields</strong> section, paste the trailer video ID into the <strong>beacon.trailer.id</strong> custom field:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/add-trailer-movie/populate-custom-field.png" alt="populate custom field">
-        </figure>
-      </li>
-      <li>Click <strong>Save</strong>.</li>
-    </ol>
-    <p>To see your results immediately in your Brightcove Beacon apps, clear the cache in Beacon Classic, as explained in the <a href="/using-brightcove-beacon/tools.html#Cache">Using the Tools</a> document.</p>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Using_Beacon_Classic_to_add_a_trailer">Using Beacon Classic to add a trailer</h2>
-    <p>In Beacon Classic you can add trailers to movies, series and seasons. The process is very similar for all three entities. The screenshots shown below are for adding a trailer to a series, but the process is nearly identical for movies and seasons.</p>
-    <ol class="bcls-tasklist">
-      <li>Select the series to which you wish to add a trailer.</li>
-      <li>Click the <strong>Streams</strong> tab.</li>
-      <li>Be sure the <strong>Provider</strong> is <strong>Brightcove()</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/add-trailer-movie/classic-streams.png" alt="classic-streams">
-        </figure>
-      </li>
-      <li>Click <strong>Add new stream</strong>.</li>
-      <li>Add the Video Cloud ID for the trailer in the <strong>Stream Video ID</strong> field.</li>
-      <li>Select the <strong>Stream Type</strong> to be <strong>Trailer</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/add-trailer-movie/classic-add-stream.png" alt="add stream">
-        </figure>
-      </li>
-      <li>Click <strong>Update Series</strong></li>
-    </ol>
-    <p>To see your results immediately in your Brightcove Beacon apps, clear the cache in Beacon Classic, as explained in the <a href="/using-brightcove-beacon/tools.html#Cache">Using the Tools</a> document.</p>
-
-  </section>
-
 </article>
+
+<section class="bcls-section">
+  <h2 id="How_notifications_are_implemented">How notifications are implemented</h2>
+  <p>Here is a high-level diagram of the process:</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/monetization/receive-iap-notifications/overview-beacon-in-app-purchase.png" alt="overview beacon in app purchase">
+  </figure>
+</section>
+
+
+
+\For purchases that are done outside of Beacon, Beacon already supports a webhook/API that allows external systems to notify Beacon of any purchases related events so that the Beacon entitlement subsystem can then properly make assets available to viewers.
+When purchases are executed through Beacon, the same entitlement subsystem is updated but we now need to also notify the external system so that they know that a specific user has already purchased a specific asset and either grant additional entitlements that come from the purchase (like merchandise, etc) and can also inform the user in the external store that the asset is purchased (preventing double purchase).
+
+Beacon will report all purchase related events, including new subscriptions, renewals, cancellations, pauses, holds and resumes of subscriptions.
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

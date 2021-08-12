@@ -1,0 +1,42 @@
+---
+title: "Receiving In-App Purchase Notifications"
+description: "In this topic, you will learn the requirements for setting up an endpoint to receive in-app purchase notifications."
+parent: "General"
+grandparent: "Monetization"
+layout: "staging"
+---
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
+    <p>There are two types of purchases that can be done with Beacon, those being:</p>
+    <ul>
+      <li>Purchases done outside Beacon - For those purchases a webhook/API is supported that allows external systems to notify Beacon of any purchases related events. This enables the Beacon entitlement subsystem to properly make assets available to viewers.</li>
+      <li>Purchases executed through Beacon - Of course, the Beacon entitlement subsystem still makes assets available to viewers. Also available are notifications that are sent to the seller of the asset. This permits the asset supplier to display to the purchaser, via the external store, that a purchase has been made.</li>
+    </ul>
+    <p>An example of a purchase through Beacon is:</p>
+    <ul>
+      <li>A viewer purchases a subscription from ?????.</li>
+      <li>The Beacon entitlement subsystem grants the viewer to access all video assets in the subscription.</li>
+      <li>A notification is sent to ??????</li>
+      <li>????? then uses the information in the notification to display to the viewer the subscription was purchased.</li>
+    </ul>
+  </section>
+</article>
+
+<section class="bcls-section">
+  <h2 id="How_notifications_are_implemented">How notifications are implemented</h2>
+  <p>Here is a high-level diagram of the process:</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/monetization/receive-iap-notifications/overview-beacon-in-app-purchase.png" alt="overview beacon in app purchase">
+  </figure>
+</section>
+
+
+
+\For purchases that are done outside of Beacon, Beacon already supports a webhook/API that allows external systems to notify Beacon of any purchases related events so that the Beacon entitlement subsystem can then properly make assets available to viewers.
+When purchases are executed through Beacon, the same entitlement subsystem is updated but we now need to also notify the external system so that they know that a specific user has already purchased a specific asset and either grant additional entitlements that come from the purchase (like merchandise, etc) and can also inform the user in the external store that the asset is purchased (preventing double purchase).
+
+Beacon will report all purchase related events, including new subscriptions, renewals, cancellations, pauses, holds and resumes of subscriptions.

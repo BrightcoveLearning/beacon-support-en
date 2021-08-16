@@ -58,8 +58,79 @@ layout: "staging"
       </li>
       <li>Enough information is provided in the notification so the seller's external system is able to apply entitlements and/or prevent purchases of same asset (subscription) if already purchased through Beacon or native stores.</li>
       <li>Purchase events are delivered to external stores within 5 min after receiving notification from source stores.</li>
-
     </ul>
   </section>
+
+  <section class="bcls-section">
+    <h2 id="section-name">section-title</h2>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Required</th>
+          <th>Possible Values</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>notification_type</td>
+          <td>String</td>
+          <td>Always</td>
+          <td>new, renew, cancel, pause, hold, resume</td>
+          <td>
+            <li>new - will be issued for a new subscription</li>
+            <li>renew - will be used to renew an existing subscription (extend the subscription)</li>
+            <li>cancel - will cancel an existing purchase</li>
+            <li>hold - subscription was put on hold due to non payment</li>
+            <li>pause - subscription is paused by user</li>
+            <li>resume - subscription transition from hold or pause to continue</li>
+          </td>
+        </tr>
+        <tr>
+          <td>external_user_id</td>
+          <td>String</td>
+          <td>Always</td>
+          <td></td>
+          <td>This is the id that is commonly used by Beacon and the external store to identify the user</td>
+        </tr>
+        <tr>
+          <td>transaction_id</td>
+          <td>String</td>
+          <td>Always</td>
+          <td></td>
+          <td>Unique identifier for the transaction. When a cancellation is done, this id should be used to cancel the subscription or individual purchase. When a subscription is renewed, resumed, paused or put on hold, this id is used to find the specific subscription that is affected</td>
+        </tr>
+        <tr>
+          <td>start_date</td>
+          <td>integer</td>
+          <td>Yes with the exception of cancellation notifications</td>
+          <td></td>
+          <td>The date when the purchase is in effect and entitlements to user should start</td>
+        </tr>
+        <tr>
+          <td>end_date</td>
+          <td>integer</td>
+          <td>Required for these notification types: new, renew, cancel and resume</td>
+          <td></td>
+          <td>The date when the purchase is no longer in effect and entitlements to user should end. For cancellation requests, the end_date defines when the user loses access to the content</td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+      </tbody>
+    </table>
+  </section>
+
 
 </article>

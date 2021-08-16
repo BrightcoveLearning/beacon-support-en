@@ -784,18 +784,48 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td></td>
           <td>The date when the purchase is no longer in effect and entitlements to user should end. For cancellation requests, the end_date defines when the user loses access to the content</td>
         </tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
+        <tr>
+          <td>original_store</td>
+          <td>String</td>
+          <td>Always</td>
+          <td>Apple Store, Google Play, Amazon Store, Stripe, Roku Store, Evergent, Beacon Store</td>
+          <td>The original store where the purchase was done</td>
+        </tr>
+        <tr>
+          <td>sku</td>
+          <td>String</td>
+          <td>Always</td>
+          <td></td>
+          <td>Identifies the item that was purchased - this is the identifier used in the source store.</td>
+        </tr>
+        <tr>
+          <td>package_name</td>
+          <td>String</td>
+          <td>Always</td>
+          <td></td>
+          <td>The name of the SVOD or TVOD package</td>
+        </tr>
+        <tr>
+          <td>notification_date</td>
+          <td>integer</td>
+          <td>Always</td>
+          <td></td>
+          <td>Timestamp of dispatching the event from Beacon to the external store system.</td>
+        </tr>
+        <tr>
+          <td>cancellation_date</td>
+          <td>integer</td>
+          <td>Required when notification type is cancel</td>
+          <td></td>
+          <td>Used for a cancel request and specifies the Timestamp of when the user/store cancelled the subscription</td>
+        </tr>
+        <tr>
+          <td>trial_end_date</td>
+          <td>integer</td>
+          <td>Optional (applicable only to new subscriptions)</td>
+          <td></td>
+          <td>If present means that there is a trial. For new subscriptions it is possible that a trial end date is same as end_date (use case where stores sends us one notification for trial and a second one for when the real subscription starts)</td>
+        </tr>
       </tbody>
     </table>
   </section>

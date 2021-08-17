@@ -705,7 +705,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="Notification_specifications">Notification specifications</h2>
     <ul>
-      <li>Notifications of In App purchases from following stores will be supported:
+      <li>Notifications of In App purchases from following stores is supported:
         <ul>
           <li>Apple store (iOS and AppleTV)</li>
           <li>Google Play (Android and Android TV)</li>
@@ -730,7 +730,21 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
 
   <section class="bcls-section">
-    <h2 id="section-name">section-title</h2>
+    <h2 id="API_endpoint">API endpoint</h2>
+    <p>After successfully processing a subscription in the Beacon system, Beacon will deliver an SNS topic message to a configured API endpoint specific for a particular customer.</p>
+    <p>Following are the requirements for the external end point:</p>
+    <ul>
+      <li>The API endpoint must be compatible with AWS SNS integration. See Amazon's <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-http-https-endpoint-as-subscriber.html">Fanout to HTTP/S endpoints</a> document for more details.</li>
+      <li>The API endpoint will go through a subscription confirmation step. See Amazon's <a href="https://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.confirm.html">Confirm the subscription</a> document for more details.</li>
+      <li>The API endpoint will need to unescape the JSON in the message field of the notification. See Amazon's <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-message-and-json-formats.html">Parsing message formats</a> document for more details.</li>
+      <li>The API endpoint must verifying the signature and provenance of the message. See Amazon's <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-verify-signature-of-message.html">Verifying the signatures of Amazon SNS messages</a> document for more detials.</li>
+    </ul>
+    <p>To be able to recover from errors, it is possible to re-send all purchases for a user (filtering any non active notifications). The store's external API endpoint is responsible for re-processing all messages, even if those were previously consumed.</p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="JSON_payload_specifications">JSON payload specifications</h2>
+    <p>The JSON payload that is sent to the external store end point can include following fields:</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
@@ -748,12 +762,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>Always</td>
           <td>new, renew, cancel, pause, hold, resume</td>
           <td>
-            <li>new - will be issued for a new subscription</li>
-            <li>renew - will be used to renew an existing subscription (extend the subscription)</li>
-            <li>cancel - will cancel an existing purchase</li>
-            <li>hold - subscription was put on hold due to non payment</li>
-            <li>pause - subscription is paused by user</li>
-            <li>resume - subscription transition from hold or pause to continue</li>
+            <li>new - Issued for a new subscription</li>
+            <li>renew - Used to renew an existing subscription (extend the subscription)</li>
+            <li>cancel - Cancel an existing purchase</li>
+            <li>hold - Subscription was put on hold due to non payment</li>
+            <li>pause - Subscription is paused by user</li>
+            <li>resume - Subscription transition from hold or pause to continue</li>
           </td>
         </tr>
         <tr>
@@ -829,9 +843,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </tbody>
     </table>
   </section>
-
-
-
 </article>
 <!-- complete bootstrap layout -->
     </div>
@@ -848,7 +859,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 16 Aug 2021
+  Page last updated on 17 Aug 2021
 </div>
 
 

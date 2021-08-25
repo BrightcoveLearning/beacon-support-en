@@ -679,7 +679,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
-    <p>Consider when an in-app purchases is done through a Brightcove Beacon app. The app communicates with one of the platform stores, like the Apple App Store, to complete the purchase. By default the supplier of the video content, and possibly other merchandise, purchased is not notified. It is necessary for the provider of the video content and/or merchandise to setup an endpoint so Brightcove Beacon can notify the provider a purchase was completed.</p>
+    <p>Consider when an in-app purchase is done through a Brightcove Beacon app. The app communicates with one of the platform stores, like the Apple App Store, to complete the purchase. By default the supplier of the video content, and possibly other merchandise, purchased is not notified. It is necessary for the provider of the video content and/or merchandise to setup an endpoint so Brightcove Beacon can notify the provider a purchase was completed.</p>
     <p>For clarification, this example demonstrates the flow of the purchase to notification. The fictional company, Acme Symphony. has implemented an endpoint. A viewer using a Brightcove Beacon app on iOS makes a purchase. A high-level take on the workflow is as follows:</p>
     <ul>
       <li>A viewer purchases a subscription for access to videos of past symphonies, and tickets for the upcoming summer season of live concerts.</li>
@@ -701,7 +701,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Clarification details for the diagram:</p>
     <ul>
       <li>Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers. For full details see Amazon's <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">SNS Developer Guide</a>.</li>
-      <li>After the notification is received by you, the Brightcove Beacon user, the actions will vary. In the example, since tickets was purchased the tickets would need to be send. So once the notification is received, your business rules will determine what must occur.</li>
+      <li>After the notification is received by you, the Brightcove Beacon user, the actions will vary. In the example, since tickets were purchased the tickets would need to be sent. So once the notification is received, your business rules will determine what must occur.</li>
       <li>The endpoint implementation approach is entirely your decision. The decision will most likely be guided by backend technologies used and skills of your software engineers.</li>
     </ul>
   </section>

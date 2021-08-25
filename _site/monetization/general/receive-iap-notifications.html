@@ -680,15 +680,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
     <p>Consider when an in-app purchases is done through a Brightcove Beacon app. The app communicates with one of the platform stores, like the Apple App Store, to complete the purchase. By default the supplier of the video content, and possibly other merchandise, purchased is not notified. It is necessary for the provider of the video content and/or merchandise to setup an endpoint so Brightcove Beacon can notify the provider a purchase was completed.</p>
-    <p>An example, using the fictional company Acme Symphony which has setup an endpoint, of a in-app purchase through an iOS Beacon app is:</p>
+    <p>For clarification, this example demonstrates the flow of the purchase to notification. The fictional company, Acme Symphony. has implemented an endpoint. A viewer using a Brightcove Beacon app on iOS makes a purchase. A high-level take on the workflow is as follows:</p>
     <ul>
-      <li>A viewer purchases a subscription for access to videos of past symphonies, and tickets for the summer season of live concerts.</li>
+      <li>A viewer purchases a subscription for access to videos of past symphonies, and tickets for the upcoming summer season of live concerts.</li>
       <li>The Beacon app completes the purchase through the Apple App Store.</li>
       <li>The Beacon app notifies Beacon of the purchase.</li>
-      <li>The Beacon entitlement subsystem grants the viewer access all video assets in the purchased subscription.</li>
+      <li>The Beacon entitlement subsystem grants the viewer access to all video assets in the purchased subscription.</li>
       <li>A notification is sent to Acme Symphony's endpoint.</li>
-      <li>Acme Symphony knows of the purchase and sends tickets to the purchaser.</li>
+      <li>Acme Symphony knows of the purchase and sends tickets to the purchaser, and subscription purchase is reflected in Acme Symphony's store front.</li>
     </ul>
+    <p>The rest of the document clarifies the technical implementation and provides specifics for implementing your endpoint.</p>
   </section>
 
   <section class="bcls-section">
@@ -697,13 +698,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <figure class="bcls-figure">
       <img class="bcls-image" src="/assets/images/monetization/receive-iap-notifications/beacon-in-app-purchase-v3.png" alt="overview beacon in app purchase">
     </figure>
-    <p>Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers. For full details see Amazon's <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">SNS Developer Guide</a>.</p>
+    <p>Clarification details for the diagram:</p>
+    <ul>
+      <li>Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers. For full details see Amazon's <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">SNS Developer Guide</a>.</li>
+      <li>After the notification is received by you, the Brightcove Beacon user, the actions will vary. In the example, since tickets was purchased the tickets would need to be send. So once the notification is received, your business rules will determine what must occur.</li>
+      <li>The endpoint implementation approach is entirely your decision. The decision will most likely be guided by backend technologies used and skills of your software engineers.</li>
+    </ul>
   </section>
 
   <section class="bcls-section">
-    <h2 id="Notification_specifications">Notification specifications</h2>
+    <h2 id="Notification_usage_guidelines">Notification usage guidelines</h2>
+    <p>The following specify usage guidelines for notifications:</p>
     <ul>
-      <li>Notifications of In App purchases from following stores is supported:
+      <li>Notifications of in-app purchases from following stores is supported:
         <ul>
           <li>Apple App Store (iOS and AppleTV)</li>
           <li>Google Play (Android and Android TV)</li>
@@ -728,7 +735,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
 
   <section class="bcls-section">
-    <h2 id="API_endpoint">API endpoint</h2>
+    <h2 id="API_endpoint_specifications">API endpoint specifications</h2>
     <p>After successfully processing a subscription in the Beacon system, Beacon will deliver an SNS topic message to a configured API endpoint specific for a particular customer.</p>
     <p>Following are the requirements for the external end point:</p>
     <ul>
@@ -758,14 +765,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>notification_type</td>
           <td>String</td>
           <td>Always</td>
-          <td>new, renew, cancel, pause, hold, resume</td>
+          <td><strong>new</strong>, <strong>renew</strong>, <strong>cancel</strong>, <strong>pause</strong>, <strong>hold</strong>, <strong>resume</strong></td>
           <td>
-            <li>new - Issued for a new subscription</li>
-            <li>renew - Used to renew an existing subscription (extend the subscription)</li>
-            <li>cancel - Cancel an existing purchase</li>
-            <li>hold - Subscription was put on hold due to non payment</li>
-            <li>pause - Subscription is paused by user</li>
-            <li>resume - Subscription transition from hold or pause to continue</li>
+            <li><strong>new</strong> - Issued for a new subscription</li>
+            <li><strong>renew</strong> - Used to renew an existing subscription (extend the subscription)</li>
+            <li><strong>cancel</strong> - Cancel an existing purchase</li>
+            <li><strong>hold</strong> - Subscription was put on hold due to non payment</li>
+            <li><strong>pause</strong> - Subscription is paused by user</li>
+            <li><strong>resume</strong> - Subscription transition from hold or pause to continue</li>
           </td>
         </tr>
         <tr>
@@ -780,7 +787,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>String</td>
           <td>Always</td>
           <td></td>
-          <td>Unique identifier for the transaction. When a cancellation is done, this id should be used to cancel the subscription or individual purchase. When a subscription is renewed, resumed, paused or put on hold, this id is used to find the specific subscription that is affected</td>
+          <td>Unique identifier for the transaction. When a cancellation is done, this ID should be used to cancel the subscription or individual purchase. When a subscription is renewed, resumed, paused or put on hold, this ID is used to find the specific subscription that is affected.</td>
         </tr>
         <tr>
           <td>start_date</td>
@@ -794,13 +801,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>integer</td>
           <td>Required for these notification types: new, renew, cancel and resume</td>
           <td></td>
-          <td>The date when the purchase is no longer in effect and entitlements to user should end. For cancellation requests, the end_date defines when the user loses access to the content</td>
+          <td>The date when the purchase is no longer in effect and entitlements to the user should end. For cancellation requests, the <code>end_date</code> defines when the user loses access to the content.</td>
         </tr>
         <tr>
           <td>original_store</td>
           <td>String</td>
           <td>Always</td>
-          <td>Apple Store, Google Play, Amazon Store, Stripe, Roku Store, Evergent, Beacon Store</td>
+          <td><strong>Apple Store</strong>, <strong>Google Play</strong>, <strong>Amazon Store</strong>, <strong>Stripe</strong>, <strong>Roku Store</strong>, <strong>Evergent</strong>, <strong>Beacon Store</strong></td>
           <td>The original store where the purchase was done</td>
         </tr>
         <tr>
@@ -808,7 +815,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>String</td>
           <td>Always</td>
           <td></td>
-          <td>Identifies the item that was purchased - this is the identifier used in the source store.</td>
+          <td>Identifies the item that was purchased. This is the identifier used in the source store.</td>
         </tr>
         <tr>
           <td>package_name</td>
@@ -822,7 +829,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>integer</td>
           <td>Always</td>
           <td></td>
-          <td>Timestamp of dispatching the event from Beacon to the external store system.</td>
+          <td>Timestamp of dispatching the event from Beacon to the external store system</td>
         </tr>
         <tr>
           <td>cancellation_date</td>
@@ -836,7 +843,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>integer</td>
           <td>Optional (applicable only to new subscriptions)</td>
           <td></td>
-          <td>If present means that there is a trial. For new subscriptions it is possible that a trial end date is same as end_date (use case where stores sends us one notification for trial and a second one for when the real subscription starts)</td>
+          <td>If present, means that there is a trial. For new subscriptions it is possible that a trial end date is same as <code>end_date</code> (use case where stores sends one notification for trial and a second one for when the real subscription starts).</td>
         </tr>
       </tbody>
     </table>

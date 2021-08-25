@@ -11,17 +11,15 @@ layout: "staging"
 
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
-    <p>There are two types of purchases that can be done with Beacon, those being:</p>
+    <p>Consider when an in-app purchases is done through a Brightcove Beacon app. The app communicates with one of the platform stores, like the Apple App Store, to complete the purchase. By default the supplier of the video content, and possibly other merchandise, purchased is not notified. It is necessary for the provider of the video content and/or merchandise to setup an endpoint so Brightcove Beacon can notify the provider a purchase was completed.</p>
+    <p>An example, using the fictional company Acme Symphony which has setup an endpoint, of a in-app purchase through an iOS Beacon app is:</p>
     <ul>
-      <li><strong>Purchases done outside Beacon</strong> - For those purchases, a webhook/API is supported that allows external systems to notify Beacon of any purchases related events. This enables the Beacon entitlement subsystem to properly make assets available to viewers.</li>
-      <li><strong>Purchases executed through Beacon</strong> - Of course, the Beacon entitlement subsystem still makes assets available to viewers. Also available are notifications that are sent to the seller of the asset. This permits the asset supplier to display to the purchaser, via the external store, that a purchase has been made.</li>
-    </ul>
-    <p>An example of a purchase through Beacon is:</p>
-    <ul>
-      <li>A viewer purchases a subscription from the Apple App Store as an in-app purchase in Beacon.</li>
-      <li>The Beacon entitlement subsystem grants the viewer to access all video assets in the subscription.</li>
-      <li>A notification is sent to the Beacon Store.</li>
-      <li>????? then uses the information in the notification to display to the viewer the subscription was purchased.</li>
+      <li>A viewer purchases a subscription for access to videos of past symphonies, and tickets for the summer season of live concerts.</li>
+      <li>The Beacon app completes the purchase through the Apple App Store.</li>
+      <li>The Beacon app notifies Beacon of the purchase.</li>
+      <li>The Beacon entitlement subsystem grants the viewer access all video assets in the purchased subscription.</li>
+      <li>A notification is sent to Acme Symphony's endpoint.</li>
+      <li>Acme Symphony knows of the purchase and sends tickets to the purchaser.</li>
     </ul>
   </section>
 
@@ -29,7 +27,7 @@ layout: "staging"
     <h2 id="How_notifications_are_implemented">How notifications are implemented</h2>
     <p>Here is a high-level diagram of the process:</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/monetization/receive-iap-notifications/overview-beacon-in-app-purchase.png" alt="overview beacon in app purchase">
+      <img class="bcls-image" src="/assets/images/monetization/receive-iap-notifications/overview-beacon-in-app-purchase-v3.png" alt="overview beacon in app purchase">
     </figure>
     <p>Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers. For full details see Amazon's <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">SNS Developer Guide</a>.</p>
   </section>

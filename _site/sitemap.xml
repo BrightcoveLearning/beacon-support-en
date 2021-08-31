@@ -915,6 +915,24 @@
       
     
       <url>
+        <loc>https://beacon.support.brightcove.com/admin/index.html</loc>
+        <lastmod>2021-08-31</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+      </url>
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/admin/change-user-password.html</loc>
+          
+            <lastmod>2021-08-31</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+    
+      <url>
         <loc>https://beacon.support.brightcove.com/training/index.html</loc>
         <lastmod>2021-08-31</lastmod>
         <changefreq>daily</changefreq>

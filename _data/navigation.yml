@@ -220,6 +220,12 @@
     - name: 'Tasks Performed in Video Cloud'
       url: '/references/beacon-tasks-in-vc.html'
 - section:
+  name: Admin
+  url: /admin/index.html
+  docs:
+    - name: Change a User's Password
+      url: /admin/change-user-password.html
+- section:
   name: Training
   url: /training/index.html
   docs:

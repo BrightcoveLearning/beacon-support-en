@@ -300,37 +300,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/support/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/references/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/training/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/fire-tv/",
+      "newURL": "https://beacon.support.brightcove.com/monetization/beacon-evergent/",
       "oldURL": "/index"
   },
 
   {
       "newURL": "https://beacon.support.brightcove.com/beacon-web-store/",
-      "oldURL": "/index"
-  },
-
-  {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/",
       "oldURL": "/index"
   },
 
@@ -351,6 +326,11 @@
 
   {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/lg/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/",
       "oldURL": "/index"
   },
 
@@ -400,12 +380,32 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/fire-tv/",
+      "oldURL": "/index"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/",
       "oldURL": "/index"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/monetization/beacon-evergent/",
+      "newURL": "https://beacon.support.brightcove.com/support/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/references/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/training/",
+      "oldURL": "/index"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/",
       "oldURL": "/index"
   },
 
@@ -495,12 +495,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/monetization/monetization-options.html",
+      "newURL": "https://beacon.support.brightcove.com/monetization/general/monetization-options.html",
       "oldURL": "/monetization-options"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/monetization/general/monetization-options.html",
+      "newURL": "https://beacon.support.brightcove.com/monetization/monetization-options.html",
       "oldURL": "/monetization-options"
   },
 
@@ -525,12 +525,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/monetization/general/promo-codes.html",
+      "newURL": "https://beacon.support.brightcove.com/monetization/promo-codes.html",
       "oldURL": "/promo-codes"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/monetization/promo-codes.html",
+      "newURL": "https://beacon.support.brightcove.com/monetization/general/promo-codes.html",
       "oldURL": "/promo-codes"
   },
 
@@ -540,12 +540,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/monetization/receive-iap-notifications.html",
+      "newURL": "https://beacon.support.brightcove.com/monetization/general/receive-iap-notifications.html",
       "oldURL": "/receive-iap-notifications"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/monetization/general/receive-iap-notifications.html",
+      "newURL": "https://beacon.support.brightcove.com/monetization/receive-iap-notifications.html",
       "oldURL": "/receive-iap-notifications"
   },
 
@@ -562,6 +562,16 @@
   {
       "newURL": "https://beacon.support.brightcove.com/support/reset-support-portal-password.html",
       "oldURL": "/reset-support-portal-password"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/resources.html",
+      "oldURL": "/resources"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/monetization/general/resources.html",
+      "oldURL": "/resources"
   },
 
   {

@@ -98,6 +98,8 @@
           url: /monetization/general/vc-custom-fields.html
         - name: Implementing AuthVOD
           url: /monetization/general/implementing-authvod.html
+        - name: Resources for Monetization
+          url: /monetization/general/resources.html
         - name: Understanding Monetization Options
           url: /monetization/general/monetization-options.html
         - name: Using an SVOD Plan
@@ -169,6 +171,8 @@
       docs:
         - name: 'Installing an iOS/tvOS Test Build'
           url: '/creating-your-apps/ios-tvos/installing-ios-test-build.html'
+        - name: 'iOS/tvOS Resources'
+          url: '/creating-your-apps/ios-tvos/resources.html'
         - name: 'Submitting to the Apple Store'
           url: '/creating-your-apps/ios-tvos/submitting-to-apple.html'
     #    - name: 'LG'

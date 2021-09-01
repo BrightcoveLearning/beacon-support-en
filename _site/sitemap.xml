@@ -297,16 +297,6 @@
       
         <url>
           
-            <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/ga-self-configuration.html</loc>
-          
-            <lastmod>2021-09-01</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/including-non-configurable-pages.html</loc>
           
             <lastmod>2021-09-01</lastmod>
@@ -358,16 +348,6 @@
         <url>
           
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/tools.html</loc>
-          
-            <lastmod>2021-09-01</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-        </url>
-        
-      
-        <url>
-          
-            <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/viewing-analytics-data.html</loc>
           
             <lastmod>2021-09-01</lastmod>
             <changefreq>daily</changefreq>
@@ -813,6 +793,54 @@
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
+        
+      
+    
+      <url>
+        <loc>https://beacon.support.brightcove.com/analytics/index.html</loc>
+        <lastmod>2021-09-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+      </url>
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/analytics/analytics-overview.html</loc>
+          
+            <lastmod>2021-09-01</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/analytics/analytics-business-metrics.html</loc>
+          
+            <lastmod>2021-09-01</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/analytics/ga-self-configuration.html</loc>
+          
+            <lastmod>2021-09-01</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/analytics/viewing-analytics-data.html</loc>
+          
+            <lastmod>2021-09-01</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
         
       
     

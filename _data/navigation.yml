@@ -65,8 +65,6 @@
       url: /using-brightcove-beacon/creating-a-playlist.html
     - name: 'Creating Series/Seasons/Episodes'
       url: /using-brightcove-beacon/series-seasons-episodes.html
-    - name: Google Analytics Self Configuration
-      url: /using-brightcove-beacon/ga-self-configuration.html
     - name: Including Non-Configurable Pages
       url: /using-brightcove-beacon/including-non-configurable-pages.html
     - name: Introducing Pages
@@ -79,8 +77,6 @@
       url: /using-brightcove-beacon/using-multiple-languages.html
     - name: Using the Tools
       url: /using-brightcove-beacon/tools.html
-    - name: Viewing Analytics Data
-      url: /using-brightcove-beacon/viewing-analytics-data.html
 - section:
   name: 'Monetization'
   url: '/monetization/index.html'
@@ -201,6 +197,18 @@
           url: '/creating-your-apps/samsung/samsung-partner.html'
         - name: 'Submitting to the Samsung Store'
           url: '/creating-your-apps/samsung/submitting-to-samsung.html'
+- section:
+  name: Analytics
+  url: /analytics/index.html
+  docs:
+    - name: Analytics Overview
+      url: /analytics/analytics-overview.html
+    - name: Beacon Analytics Business Metrics
+      url: /analytics/analytics-business-metrics.html
+    - name: Google Analytics Self Configuration
+      url: /analytics/ga-self-configuration.html
+    - name: Viewing Analytics Data
+      url: /analytics/viewing-analytics-data.html
 - section:
   name: References
   url: /references/index.html

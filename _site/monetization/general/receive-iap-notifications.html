@@ -783,6 +783,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>The API endpoint must verify the signature and provenance of the message. See Amazon's <a href="https://docs.aws.amazon.com/sns/latest/dg/sns-verify-signature-of-message.html">Verifying the signatures of Amazon SNS messages</a> document for more details.</li>
     </ul>
     <p>To be able to recover from errors, it is possible to re-send all purchases for a user (filtering any non active notifications). The store's external API endpoint is responsible for re-processing all messages, even if those were previously consumed.</p>
+    <aside class="bcls-aside bcls-aside--warning language-editable">It is possible to generate an infinite loop of notifications. For instance, Beacon sends the IAP notification to the end point, the receiver creates a user and sends a <em>create entitlement</em> message to Beacon, which in turn sends an IAP notification to the receiver, and an infinite loop is started. When implementing your endpoint you must be sure not to allow this to happen.</aside>
   </section>
 
   <section class="bcls-section">

@@ -94,6 +94,8 @@
           url: /monetization/general/vc-custom-fields.html
         - name: Implementing AuthVOD
           url: /monetization/general/implementing-authvod.html
+        - name: Receiving In-App Purchase Notifications
+          url: /monetization/general/receive-iap-notifications.html
         - name: Resources for Monetization
           url: /monetization/general/resources.html
         - name: Understanding Monetization Options

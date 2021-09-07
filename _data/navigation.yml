@@ -231,6 +231,8 @@
       url: '/references/known-issues.html'
     - name: 'Product Updates'
       url: '/references/product-updates.html'
+    - name: 'Related Content'
+      url: '/references/related-content.html'
     - name: 'Remote Asset Limitations'
       url: '/references/remote-asset-limitations.html'
     - name: 'Tasks Performed in Video Cloud'

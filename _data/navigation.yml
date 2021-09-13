@@ -88,7 +88,7 @@
           url: /monetization/general/creating-stripe-account.html
         - name: Creating an SVOD Plan
           url: /monetization/general/creating-svod-plan.html
-        - name: Creating Promo Codes
+        - name: Creating Promo Coupons
           url: /monetization/general/promo-codes.html
         - name: Custom Fields for Monetization
           url: /monetization/general/vc-custom-fields.html

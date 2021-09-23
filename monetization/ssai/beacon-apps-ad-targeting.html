@@ -191,18 +191,26 @@ grandparent: Monetization
  -->
   {% raw %}
   <section class="bcls-section">
-    <h2 id="Implement_the_client_side_params">Implement the client side params</h2>
+    <h2 id="Implement_the_client_side_params">Implement the client side parameters</h2>
     <p>Whether you are using ad targeting with VOD or Live, you need to build the query string which will be used with both. Use the following guidelines when building your query string:</p>
     <ul>
-      <li>The client side parameters will be passed to the ad server when requesting ads.</li>
-      <li>Client side parameters can be passed in the Playback APIs (provided in the VMAP/Manifest entry point). Those will be available to the SSAI infrastructure in the form of <code translate="no">{{url.xxx}}</code> macros where the <code>xxx</code> corresponds to the parameter key.</li>
-      <li>Paste in your ad tag, <strong>appending your query string of ad targeting params</strong>:
+      <li>The client side parameters will be passed to the ad server when requesting ads.
+      </li>
+      <li>Client side parameters can be passed in the Playback APIs (provided in the VMAP/Manifest entry point). Those will be available to the SSAI infrastructure in the form of <code translate="no">{{url.xxx}}</code> macros where the <code>xxx</code> corresponds to the parameter key.
+        <aside class="bcls-aside bcls-aside--information language-editable">Note that client-side macros are only supported for web apps.</aside>
+      </li>
+      <li>Paste in your ad tag, <strong>appending your query string of ad targeting parameters</strong>:
         <pre class="line-numbers"><code class="language-html" translate="No">variablename1={VALUEMACRO1}&variablename2={VALUEMACRO2}& ...</code></pre>
       </li>
       <li>Example:
         <pre class="line-numbers"><code class="language-html" translate="No">plarform={PLATFORM}&os={OS}&appid={APP_ID}&did={RDID}&dt={IDTYPE}&lat={IS_LAT}&sid={SID}</code></pre>
       </li>
-      <!-- <li></li> -->
+      <li>Client-side macros for the web are expanded by the player. Please follow the documentation at <a href="https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Client_side_macros">https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Client_side_macros</a> to setup client-side macros. If support is needed for client-side macros, that should be logged through Brightcove support for Brightcove Player.</li>
+      <li>Beacon apps for all platforms but the web will simply remove the curly braces when requesting manifest and VMAP URLs with client-side macros. e.g. a URL such as:
+        <pre class="line-numbers"><code class="language-html" translate="No">https://bolt-prefix/blah.vmap?pageVar.whatever={pageVar.whatever}</code></pre>
+        <p>will be requested as</p>
+        <pre class="line-numbers"><code class="language-html" translate="No">https://bolt-prefix/blah.vmap?pageVar.whatever=pageVar.whatever</code></pre>
+      </li>
     </ul>
     <p>Be sure to have your desired ad targeting query string built as you will need it in the implementation steps below.</p>
   </section>

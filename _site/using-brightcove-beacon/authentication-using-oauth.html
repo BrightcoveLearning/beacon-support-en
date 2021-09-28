@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic, you will learn how to create a service account and configure it. This is the first part of the larger process of establishing communication between your Brightcove Beacon apps and the Google Store.">
+  <meta name="description" content="In this topic, you will learn how to setup an OAuth account to be used with Brightcove Beacon.">
   
-  <title>Managing Google Subscriptions Part 1</title>
+  <title>Authentication Using OAuth</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -61,15 +61,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
     
       
-        <li class="breadcrumb-item"><a href="/creating-your-apps/">Creating your apps</a></li>
+        <li class="breadcrumb-item"><a href="/using-brightcove-beacon/">Using brightcove beacon</a></li>
       
     
       
-        <li class="breadcrumb-item"><a href="/creating-your-apps/android/">Android</a></li>
-      
-    
-      
-        <li class="breadcrumb-item active" aria-current="page">Managing Google Subscriptions Part 1</li>
+        <li class="breadcrumb-item active" aria-current="page">Authentication Using OAuth</li>
       
     
   </nav>
@@ -719,102 +715,57 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<h1>Managing Google Subscriptions Part 1</h1>
+<h1>Authentication Using OAuth</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn how to create a service account and configure it. This is the first part of the larger process of establishing communication between your Brightcove Beacon apps and the Google Store.</summary>
+  <summary>In this topic, you will learn how to setup an OAuth account to be used with Brightcove Beacon.</summary>
 
   <section class="bcls-section">
-    <aside class="bcls-aside bcls-aside--information">Note that it can take up to 24 hours for changes to be reflected in your account.</aside>
-    <h2 id="section-name">Introduction</h2>
-    <p>This document steps you through using the Google Play Console to create a service account and then perform a couple of configuration tasks.</p>
+    <p></p>
+    <h2 id="Introduction">Introduction</h2>
+    <p>OAuth (<strong>O</strong>pen <strong>Auth</cod>orization) is an open standard for access delegation, commonly used as a way for Internet users to grant websites or applications access to their information on other websites but without using passwords. For instance, you are using a bank application. OAuth is provides a user a way to get an authorization token to access protected/privileged bank information. A Brightcove Beacon example is ...</p>
+    DIAGRAM HERE
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/" alt="">
+    </figure>
   </section>
 
   <section class="bcls-section">
-    <h2 id="Create_a_service_account">Create a service account</h2>
-    <p>Perform the following steps to create a service account:</p>
-    <ol class="bcls-tasklist">
-      <li>Browse to the <a href="https://play.google.com/console">Google Play Console</a>.</li>
-      <li>In the top right corner, click <strong>Go to Play Console</strong>.</li>
-      <li>In the left navigation, select <strong>Settings → Developer Account → API access</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/gpc-first-nav-steps.png" alt="Settings > Developer Account > API access" width="268">
-        </figure>
-      </li>
-      <li>Click <strong>Create new service account</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/create-service-account.png" alt="create service account">
-        </figure>
-      </li>
-      <li>In the dialog that appears, click <strong>Google Cloud Platform</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/create-new-service-account-dialog.png" alt="new service account dialog">
-        </figure>
-      </li>
-      <li>From the page to which you are redirected, click <strong>+ CREATE SERVICE ACCOUNT</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/iam-admin-redirect.png" alt="service accounts">
-        </figure>
-      </li>
-      <li>In the dialog that opens, for the <strong>Service account name</strong> enter <samp>Android Subscriptions</samp> then click <strong>CREATE</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/create-service-account-1.png" alt="enter service account name">
-        </figure>
-      </li>
-      <li>In step 2, from the dropdown choose the <strong>Role</strong> to be <samp>Owner</samp> then click <strong>CONTINUE</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/create-service-account-2.png" alt="choose role">
-        </figure>
-      </li>
-      <li>In step 3, click <strong>DONE</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/create-service-account-3.png" alt="click done">
-        </figure>
-      </li>
+    <h2 id="Key_terms">Key terms</h2>
+    <p>Some terms need to be understood before jumping into details of OAuth. These are:</p>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="section-name">Process overview</h2>
+    <p>A high-level look at the process of using OAuth with Brightcove Beacon is:</p>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
     </ol>
   </section>
 
   <section class="bcls-section">
-    <h2 id="Configure_the_service_account">Configure the service account</h2>
-    <p>Perform the following steps to configure your service account:</p>
+    <h2 id="Implementation_steps">Implementation steps</h2>
+    <p></p>
     <ol class="bcls-tasklist">
-      <li>For the service account just created, under <strong>Actions</strong> click the three vertical dots. Then click <strong>Manage keys</strong>.
+      <li>
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/manage-keys.png" alt="manage keys">
+          <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/login-screen.png" alt="login screen">
         </figure>
       </li>
-      <li>In the <strong>Keys</strong> information, select <strong>ADD KEY → Create new key</strong>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/create-new-key.png" alt="create new key">
-        </figure>
-      </li>
-      <li>From the private key info, leave the <strong>Key type</strong> to be <samp>JSON</samp>, then click <strong>CREATE</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/create-json-private-key.png" alt="json private key">
-        </figure>
-      </li>
-      <li>Be sure you see this message displayed:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/private-key-saved.png" alt="private key saved verification">
-        </figure>
-      </li>
-      <li>You need to email the private key file to your onboarding manager.</li>
-      <li>You can close the tab that opened you opened in step 5, and click <strong>Done</strong> from the dialog that launched your service account creation process.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/click-done.png" alt="click done">
-        </figure>
-      </li>
-      <li>In the <strong>Service accounts</strong> section, click <strong>Grant access</strong> next to your newly created service account.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/click-grant-access.png" alt="grant access">
-        </figure>
-      </li>
-      <li>From the <strong>Invite user</strong> page, in the <strong>Account permissions</strong> section, click the <strong>Admin (all permissions)</strong> checkbox.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/creating-your-apps/android/gpc-server-server-subscriptions/admin-permissions.png" alt="grant admin permissions">
-        </figure>
-      </li>
-      <li>In the bottom-right of the page, click <span class="button-blue">Invite user</span>.</li>
-      <li>In the dialog that opens, click <span class="button-blue">Send invite</span>.</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
     </ol>
   </section>
 

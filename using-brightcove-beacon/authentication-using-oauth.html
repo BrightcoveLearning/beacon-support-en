@@ -35,7 +35,7 @@ layout: "staging"
     <p>A high-level look at the process of using OAuth with Brightcove Beacon is:</p>
     <ol>
       <li>Create an Auth0 API.</li>
-      <li>Create an Auth0 single page application for your web application, if used. Once created, you will need to send the associated <strong>Client ID</strong> to the Beacon web app team to get the corresponding <strong>Allowed Callback URLs</strong>.</li>
+      <li>If using a web application, create an Auth0 single page application. Once created, you will need to send the associated <strong>Client ID</strong> to the Beacon web app team to get the corresponding <strong>Allowed Callback URLs</strong>.</li>
       <li>Create an Auth0 native application for all other mobile and TV application platforms you are using with Beacon. For each platform, once the applications are created you will need to send the associated <strong>Client ID</strong> to the specific Beacon platform team to get the corresponding <strong>Allowed Callback URLs</strong>.</li>
       <li>Enter the returned URLs from each platform team into the corresponding <strong>Allowed Callback URLs</strong> form field for each application: web, mobile and TV.</li>
       <li>From one of the applications, copy the <strong>OpenID Configuration</strong> URL and browse it.</li>
@@ -47,39 +47,35 @@ layout: "staging"
     <h2 id="Creating_the_OAuth_API">Creating the OAuth API</h2>
     <p></p>
     <ol class="bcls-tasklist-restart">
-      <li>
+      <li>Browse to <a href="https://auth0.com/">https://auth0.com/</a> and either login or create an account and then login.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/login-screen.png" alt="login screen">
         </figure>
       </li>
-      <li>
+      <li>From the Dashboard, click <strong>Applications > APIs > Create API</strong>.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/create-api.png" alt="create api">
         </figure>
       </li>
-      <li>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/new-api-form.png" alt="new api form">
-        </figure>
-      </li>
-      <li>
+      <li>In the <strong>New API</strong> form, enter the following:
+        <ul>
+          <li>A <strong>Name</strong> to identify this API</li>
+          <li>The <strong>Identifer</strong> is a logical name for the API. A URL is recommended, but it need not be accessible.</li>
+          <li>Leave the <strong>Signing Algorithm</strong> the default of <em>RS256</em>.</li>
+        </ul>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/completed-api-form.png" alt="completed api form">
         </figure>
       </li>
-      <li>
+      <li>Click <strong>Create</strong>.</li>
+      <li>From the API details page, click <strong>Settings</strong>, then scroll down to the <strong>Access Settings</strong> and enable <strong>Allow Offline Access</strong>.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/allow-offline-access.png" alt="allow offline access">
         </figure>
       </li>
       <li>If you choose, you can change the <strong>Token Expiration</strong> to meet your business requirements.</li>
       <li>Click <strong>Save</strong>.</li>
-      <li>In the left navigation, click <strong>Applications > APIs</strong> an be sure your API has been created.</li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>In the left navigation, click <strong>Applications > APIs</strong> and be sure your API has been created.</li>
     </ol>
   </section>
 
@@ -88,33 +84,36 @@ layout: "staging"
     <p></p>
     <aside class="bcls-aside bcls-aside--tip language-editable">For complete documentation see Auth0's <a href="">Application Settings</a> document.</aside>
     <ol class="bcls-tasklist-restart">
-      <li>
+      <li>From the Dashboard, click <strong>Applications > Applications > Create Application</strong>.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/create-application.png" alt="create application">
         </figure>
       </li>
-      <li>
+      <li>In the <strong>Create application</strong> dialog, enter a name for your web application and select the <strong>Single Page Web Applications</strong> option.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/create-single-page-app-completed-form.png" alt="create single page app completed form">
         </figure>
       </li>
-      <li>
+      <li>Click <strong>Create</strong>.</li>
+      <li>From the application details page, click <strong>Settings</strong> and locate the <strong>Client ID</strong> value.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/client-id-single-page.png" alt="client id">
         </figure>
       </li>
-      <li>
+      <li>You now need to copy the Client ID, be sure you record that it is from your web application, and send the ID to the Beacon web application team. The Beacon team will then send back to you the value you will enter in <strong>Application URIs > Allowed Callback URLs</strong>.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/allowed-callback-urls.png" alt="allowed callback urls">
         </figure>
       </li>
-      <li>
+      <li>Near the bottom of the application details page, open the <strong>Advanced Settings</strong> and click on <strong>Grant Types</strong>.</li>
+      <li>In the <strong>Grants</strong> section, UNCHECK the <strong>Implicit</strong> grant.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/grant-types-single-page.png" alt="grant types single page">
         </figure>
       </li>
-
+      <li>Click <strong>Save Changes</strong>. Even though you have not yet entered <strong>Allowed Callback URLs</strong> you will be able to save your current data.</li>
     </ol>
+    <aside class="bcls-aside bcls-aside--warning language-editable">Remember you must submit the Client ID to the Web application team so you can get the proper <em>Allowed Callback URLs</em>. Once received you will edit your application and enter the provided URLs.</aside>
   </section>
 
   <section class="bcls-section">
@@ -123,37 +122,45 @@ layout: "staging"
     <aside class="bcls-aside bcls-aside--tip language-editable">For complete documentation see Auth0's <a href="">Application Settings</a> document.</aside>
 
     <ol class="bcls-tasklist-restart">
-      <li>
+      <li>From the Dashboard, click <strong>Applications > Applications > Create Application</strong>.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/create-application.png" alt="create application">
         </figure>
       </li>
-      <li>
+      <li>In the <strong>Create application</strong> dialog, enter a name for your web application and select the <strong>Native</strong> option.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/create-native-app-completed-form.png" alt="create native app completed form">
         </figure>
       </li>
-      <li>
+      <li>Click <strong>Create</strong>.</li>
+      <li>From the application details page, click <strong>Settings</strong> and locate the <strong>Client ID</strong> value.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/client-id-native.png" alt="client id">
         </figure>
       </li>
-      <li>
+      <li>You now need to copy the Client ID, be sure you record to which mobile/TV platform this application corresponds. You then need to send the ID to the correct platform team. The Beacon team will then send back to you the value you will enter in <strong>Application URIs > Allowed Callback URLs</strong>.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/allowed-callback-urls.png" alt="allowed callback urls">
         </figure>
       </li>
-      <li>
+      <li>Still in <strong>Settings</strong>, locate the <strong>Refresh Token Rotation</strong> group and enable <strong>Rotation</strong>.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/native-enable-rotation.png" alt="enable rotation">
         </figure>
       </li>
-      <li>
+      <li>Near the bottom of the application details page, open the <strong>Advanced Settings</strong> and click on <strong>Grant Types</strong>.</li>
+      <li>In the <strong>Grants</strong> section, perform the following:
+        <ul>
+          <li>Uncheck/disable the <strong>Implicit</strong> grant.</li>
+          <li>Check/enable the <strong>Device Control</strong> code.</li>
+        </ul>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/grant-types-native.png" alt="grant types native">
         </figure>
       </li>
+      <li>Click <strong>Save Changes</strong>. Even though you have not yet entered <strong>Allowed Callback URLs</strong> you will be able to save your current data.</li>
     </ol>
+    <aside class="bcls-aside bcls-aside--warning language-editable">Remember you must submit the Client ID to the correct team so you can get the proper <em>Allowed Callback URLs</em>. Once received you will edit your application and enter the provided URLs.</aside>
   </section>
 
   <section class="bcls-section">

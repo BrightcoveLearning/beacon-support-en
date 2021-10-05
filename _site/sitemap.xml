@@ -137,6 +137,16 @@
       
         <url>
           
+            <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/authentication-using-oauth.html</loc>
+          
+            <lastmod>2021-10-05</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/cloud-playout-overview.html</loc>
           
             <lastmod>2021-10-05</lastmod>

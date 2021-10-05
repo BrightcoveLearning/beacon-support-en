@@ -33,6 +33,8 @@
       url: /using-brightcove-beacon/adding-trailer-movie.html
     - name: Adding a Carousel to a Page
       url: /using-brightcove-beacon/adding-to-page.html
+    - name: Authentication Using OAuth
+      url: /using-brightcove-beacon/authentication-using-oauth.html
     - name: 'Overview: Cloud Playout Channels'
       url: /using-brightcove-beacon/cloud-playout/cloud-playout-overview.html
     - name: Creating a Cloud Playout Channel

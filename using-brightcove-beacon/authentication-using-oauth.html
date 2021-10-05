@@ -1,6 +1,6 @@
 ---
 title: "Authentication Using OAuth"
-description: "In this topic, you will learn how to setup an OAuth account and integrate it with Brightcove Beacon."
+description: "In this topic, you will learn how to configure the integration of Brightcove Beacon with an OIDC provider. Auth0 is used as an example OIDC provider."
 parent: "Using Brightcove Beacon"
 layout: "staging"
 ---
@@ -84,9 +84,9 @@ layout: "staging"
           <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/client-id-single-page.png" alt="client id">
         </figure>
       </li>
-      <li>You now need to copy the Client ID, be sure you record that it is from your web application, and send the ID to the Beacon web application team. The Beacon team will then send back to you the value you will enter in <strong>Application URIs > Allowed Callback URLs</strong>.
+      <li>You now need to copy the Client ID, be sure you record that it is from your web application, and send the ID to the Beacon web application team. The Beacon team will then send back to you the value you will enter in <strong>Application URIs > Allowed Callback URLs</strong> AND <strong>Application URIs > Allowed Logout URLs</strong>.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/allowed-callback-urls.png" alt="allowed callback urls">
+          <img class="bcls-image" src="/assets/images/using-bcb/authentication-using-oauth/allowed-callback-urls-web.png" alt="allowed callback urls">
         </figure>
       </li>
       <li>Near the bottom of the application details page, open the <strong>Advanced Settings</strong> and click on <strong>Grant Types</strong>.</li>
@@ -97,7 +97,7 @@ layout: "staging"
       </li>
       <li>Click <strong>Save Changes</strong>. Even though you have not yet entered <strong>Allowed Callback URLs</strong> you can save your current data.</li>
     </ol>
-    <aside class="bcls-aside bcls-aside--warning language-editable">Remember you must submit the Client ID to the Web application team so you can get the proper <em>Allowed Callback URLs</em>. Once received, you will edit your application and enter the provided URLs.</aside>
+    <aside class="bcls-aside bcls-aside--warning language-editable">Remember you must submit the Client ID to the Web application team so you can get the proper <em>Allowed Callback URLs</em> AND <em>Allowed Logout URLs</em>. Once received, you will edit your application and enter the provided URLs.</aside>
   </section>
 
   <section class="bcls-section">
@@ -189,7 +189,7 @@ layout: "staging"
           <tbody class="bcls-table__body">
             <tr>
               <td>Auth Endpoint</td>
-              <td>From JSON: <code>authorization_endpoint</code> value</td>
+              <td><strong>/account/social_login</strong></td>
             </tr>
             <tr>
               <td>Auth Type</td>
@@ -201,7 +201,7 @@ layout: "staging"
             </tr>
             <tr>
               <td>Base URL</td>
-              <td></td>
+              <td>From JSON: <code>issuer</code> value, BE SURE to include the trailing slash (/)</td>
             </tr>
             <tr>
               <td>User Info Url</td>
@@ -209,7 +209,7 @@ layout: "staging"
             </tr>
             <tr>
               <td>Refresh Token Url</td>
-              <td></td>
+              <td>From JSON: <code>token_endpoint</code> value</td>
             </tr>
             <tr>
               <td>Revoke Refresh Token Url</td>
@@ -217,15 +217,15 @@ layout: "staging"
             </tr>
             <tr>
               <td>Access Token Url</td>
-              <td></td>
+              <td>From JSON: <code>token_endpoint</code> value</td>
             </tr>
             <tr>
               <td>Authorization Url</td>
-              <td>From JSON: <code>device_authorization_endpoint</code> value</td>
+              <td>From JSON: <code>authorization_endpoint</code> value</td>
             </tr>
             <tr>
               <td>Pairing Codes Url</td>
-              <td></td>
+              <td>From JSON: <code>device_authorization_endpoint</code> value</td>
             </tr>
             <tr>
               <td>Logout Url</td>
@@ -275,7 +275,7 @@ layout: "staging"
       <li>Place this value in the <strong>Has Audience</strong> form field.</li>
     </ol>
     <h3>Confirming correct implementation</h3>
-    <p>JP, Eric: how does a customer know they succeeded?</p>
+    <p>Once the OIDC provider is integrated correctly with Brightcove Beacon, the OIDC provider's tool will authenticate users to the Beacon apps.</p>
   </section>
 
 </article>

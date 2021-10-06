@@ -207,9 +207,12 @@ grandparent: Monetization
       </li>
       <li>Client-side macros for the web are expanded by the player. Please follow the documentation at <a href="https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Client_side_macros">https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Client_side_macros</a> to setup client-side macros. If support is needed for client-side macros, that should be logged through Brightcove support for Brightcove Player.</li>
       <li>Beacon apps for all platforms, but the web, will simply remove the curly braces when requesting manifest and VMAP URLs with client-side macros. e.g. a URL such as:
-        <pre class="line-numbers"><code class="language-html" translate="No">https://bolt-prefix/blah.vmap?pageVar.whatever={pageVar.whatever}</code></pre>
+        <pre class="line-numbers"><code class="language-html" translate="No">https://bolt-prefix/blah.vmap?pageVar.whatever={{pageVar.whatever}}</code></pre>
         <p>will be requested as</p>
         <pre class="line-numbers"><code class="language-html" translate="No">https://bolt-prefix/blah.vmap?pageVar.whatever=pageVar.whatever</code></pre>
+      </li>
+      <li>The complete ad tag will include your ad server URL and parameters AND your targeting query string (highlighted):
+        <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15<span class="bcls-highlight">?platform={{PLATFORM}}&os={{OS}}&appid={{APP_ID}}&did={{RDID}}</span></code></pre>
       </li>
     </ul>
     <p>Be sure to have your desired ad targeting query string built as you will need it in the implementation steps below.</p>
@@ -227,14 +230,18 @@ grandparent: Monetization
           <figcaption class="bcls-caption--image">Create VOD Ad Config</figcaption>
         </figure>
       </li>
-      <li>Add a name for the ad config.
+      <li>Complete the following:
+        <ol type="a">
+          <li>Add a name for the ad config.</li>
+          <li>Select your ad response, <strong>VMAP</strong> or <strong>VAST</strong> is recommended. If you use VAST, you will need to add cuepoints to the videos to specify where ad breaks should appear.</li>
+          <li>Paste in your ad tag, <strong>appending your query string of ad targeting params</strong>.</li>
+        </ol>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-vod.png" alt="SSAI Configuration VOD">
           <figcaption class="bcls-caption--image">SSAI Configuration VOD</figcaption>
         </figure>
       </li>
-      <li>Select your ad response - VMAP or VAST is recommended. If you use VAST, you will need to add cuepoints to the videos to specify where ad breaks should appear.</li>
-      <li>Paste in your ad tag, <strong>appending your query string of ad targeting params</strong>.</li>
+
       <li>Click <strong>Save</strong>.</li>
       <li>Find your new ad configuration in the table and copy your ad config ID. You will need this value for the Beacon advertising configuration.
         <figure class="bcls-figure">
@@ -250,15 +257,18 @@ grandparent: Monetization
       <li>
         Click <span class="button-teal">Add New Configuration</span>.
       </li>
-      <li>Name the Ad Configuration.
+      <li>Complete the following:
+        <ol type="a">
+          <li>Name the Ad Configuration.</li>
+          <li>For the <strong>Provider</strong> select <strong>Brightcove SSAI</strong>.</li>
+          <li>Paste in the ad targeting URL built from the section above.</li>
+          <li>Paste in the <strong>SSAI ad config ID</strong> copied in the steps just above into <strong>VOD Ad Config ID</strong>.</li>
+        </ol>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ad-config-vod.png" alt="Beacon Ad Configuration">
           <figcaption class="bcls-caption--image">Beacon Ad Configuration VOD</figcaption>
         </figure>
       </li>
-      <li>For the <strong>Provider</strong> select <strong>Brightcove SSAI</strong>.</li>
-      <li>Paste in the ad targeting URL built from the section above.</li>
-      <li>Paste in the <strong>SSAI ad config ID</strong> copied in the steps just above into <strong>VOD Ad Config ID</strong>.</li>
       <li>Click <span class="button-teal">Create New Advertisement</span>.</li>
     </ol>
   </section>

@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="Beacon Apps Ad targeting allows Beacon customers to send important device-level and user-specific information from the customer’s Beacon apps to their ad server or ad provider." />
+    <meta name="description" content="Beacon ad targeting allows your Beacon apps to send important device-level and user-specific information to your ad server or ad provider." />
 
     <title>Beacon Apps Ad Targeting</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -754,21 +754,21 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <h1>Beacon Apps Ad Targeting</h1>
 <article class="bcls-article">
-  <summary>Beacon Apps Ad targeting allows Beacon customers to send important device-level and user-specific information from the customer’s Beacon apps to their ad server or ad provider.</summary>
+  <summary>Beacon ad targeting allows your Beacon apps to send important device-level and user-specific information to your ad server or ad provider.</summary>
   <section class="bcls-section">
     <h2 id="introduction">Introduction</h2>
-    <p>Client-side information is passed from the apps to SSAI, and then SSAI includes this data in the customer’s VAST tag, which then allows customers to target ads based on this data. The purpose of this is to increase the value of customers’ ad inventory, therefore increasing ad revenue for their business.</p>
-    <p>Within Studio and Beacon CMS, you can set up how this data is passed to their ad server or ad provider.</p>
+    <p>Client-side information is passed from the apps to SSAI (Server Side Ad Insertion), and then SSAI includes this data in the your VAST tag, which then allows you to target ads based on this data. The purpose of this is to increase the value of your ad inventory, therefore increasing ad revenue for your business.</p>
+    <p>Within Video Cloud Studio and Beacon Classic, you can set up how this data is passed to your ad server or ad provider.</p>
   </section>
   <section class="bcls-section">
     <h2 id="key_benefits">Benefits</h2>
     <h3>Improved ad targeting</h3>
     <ul>
       <li><strong>User Session ID:</strong> Brightcove generates a session ID on each device when a user opens the app. This allows you to frequency-cap ads to that session, exclude competitive ads from being served together, and sequentially rotate ads in that session. These targeting capabilities are both necessary for direct-sold and programmatic ads.</li>
-      <li><strong>More data for programmatic ads:</strong> Mobile apps and CTV apps don’t support cookies, which is the dominant method for user/device-based ad targeting on the web. By including params like Device ID, you can pass this valuable information to programmatic ad buyers, which will then enhance their ad targeting capabilities, leading to greater CPMs.</li>
+      <li><strong>More data for programmatic ads:</strong> Mobile apps and CTV apps don’t support cookies, which is the dominant method for user/device-based ad targeting on the web. By including parameters like Device ID, you can pass this valuable information to programmatic ad buyers, which then enhances your ad targeting capabilities, leading to greater CPMs.</li>
     </ul>
     <h3>Support for Ad Inventory split</h3>
-    <p>For apps that run on Amazon, Roku, and Samsung (in the US), you are required to do a 70/30 split of ad inventory/revenue with the platform. This means Brightcove Beacon customers monetize 70% of the ad inventory and the platform gets the remaining 30% of the ad inventory. With this enhanced ad targeting, you can use one ad tag across all of their apps and pass the device params to your ad server. Inside your ad server, you will implement the business logic that splits the ad inventory by device. The platforms also require passing LAT - Limited Ad Targeting - for Ad Inventory Split, which is a parameter we are now sending to your ad server.</p>
+    <p>For apps that run on Amazon, Roku, and Samsung (in the US), you are required to do a 70/30 split of ad inventory/revenue with the platform. This means Brightcove Beacon customers monetize 70% of the ad inventory and the platform gets the remaining 30% of the ad inventory. With this enhanced ad targeting, you can use one ad tag across all of your apps and pass the device parameters to your ad server. Inside your ad server, implement the business logic that splits the ad inventory by device. The platforms also require passing Limited Ad Targeting (LAT) for Ad Inventory Split, which is a parameter Brightcove is now sending to your ad server.</p>
     <h3>User Privacy improvements</h3>
     <ul>
       <li>LAT (<em>Limited Ad Targeting</em>) allows users of Beacon apps to opt out of ad targeting based on user behavior.</li>
@@ -777,15 +777,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
-    <p>Initially you will setup SSAI (Server Side Ad Insertion) in Video Cloud Studio. This configuration is used by Beacon web apps. Then in Beacon Classic, you will setup an <em>Advertisement Configuration</em> that links to the Video Cloud SSAI configuration and permits ad targeting. Here are more details:</p>
+    <p>Initially setup SSAI (Server Side Ad Insertion) in Video Cloud Studio. This configuration is used by Beacon web apps. Then in Beacon Classic, setup an <em>Advertisement Configuration</em> that links to the Video Cloud SSAI configuration and permits ad targeting. Here are more details:</p>
     <ul>
       <li>Configure SSAI in Video Cloud Studio
         <ul>
           <li>The ad tag you provide in this setup will include:
             <ul>
-              <li>The base URL for your ad server</li>
-              <li>URL parameters needed by your ad server</li>
-              <li>Optionally ad macros, which are marked by double braces <code>{{ }}</code>. Ad macros are variables you can use that provide appropriate values for your ad request. See the <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#Ad_macros_and_the_serverUrl">Ad macros and the serverUrl</a> section of the <strong>Advertising with the IMA3 Plugin</strong> document for more information.</li>
+              <li>The base URL for your ad server.</li>
+              <li>URL parameters needed by your ad server.</li>
+              <li>Optionally, ad macros which are marked by double braces <code>{{ }}</code>. Ad macros are variables you can use that provide appropriate values for your ad request. See the <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#Ad_macros_and_the_serverUrl">Ad macros and the serverUrl</a> section of the <strong>Advertising with the IMA3 Plugin</strong> document for more information.</li>
               <li>An example ad tag used in the Video Cloud setup would follow this format:
                 <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&document.referrer={{document.referrer}}</code></pre>
               </li>
@@ -794,7 +794,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <li>The ad macros are only used in Beacon web apps. All other app platforms use ad targeting. If ad macros are used, they simply are ignored for all non-web apps.</li>
           <li>See the <a href="/monetization/ssai/vod-ssai.html">Implementing VOD SSAI</a>, <a href="/monetization/ssai/live-ssai.html">Implementing Live SSAI</a> and <a href="https://player.support.brightcove.com/plugins/implementing-server-side-ads-brightcove-player.html">Implementing Server-Side Ads with Brightcove Player</a> documents for more information on setting up SSAI.</li>
           <!-- <li>Client-side macros for the web are expanded by the player. Please follow the documentation at <a href="https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Client_side_macros">https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Client_side_macros</a> to setup client-side macros. If support is needed for client-side macros, that should be logged through Brightcove support for Brightcove Player.</li> -->
-          <li>When finished with the SSAI configuration, you will copy the ID for that ad configuration which will be used in the Beacon setup.</li>
+          <li>When finished with the SSAI configuration, copy the ID for that ad configuration which will be used in the Beacon setup.</li>
         </ul>
       </li>
       <li>Create an Advertisement Configuration in Beacon Classic</li>
@@ -1006,7 +1006,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Complete the following:
         <ol type="a">
           <li>Add a name for the ad config.</li>
-          <li>Select your ad response, <strong>VMAP</strong> or <strong>VAST</strong> is recommended. If you use VAST, you will need to add cuepoints to the videos to specify where ad breaks should appear.</li>
+          <li>Select your ad response, <strong>VMAP</strong> or <strong>VAST</strong> is recommended. If you use VAST, add cuepoints to the videos to specify where ad breaks should appear.</li>
           <li>Paste in your ad tag with URL parameters and ad macros (if used) as a query string.</li>
         </ol>
         <figure class="bcls-figure">
@@ -1061,7 +1061,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <ol type="a">
           <li>Add a name for the ad config.</li>
           <li>Select <strong>VAST</strong> for your ad response.</li>
-          <li>Paste in your ad tag, <strong>appending your query string of ad targeting params</strong>.</li>
+          <li>Paste in your ad tag, <strong>appending your query string of ad targeting parameters</strong>.</li>
         </ol>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-live.png" alt="SSAI Configuration Live">

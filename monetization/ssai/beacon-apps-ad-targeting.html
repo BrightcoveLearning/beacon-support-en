@@ -38,11 +38,15 @@ grandparent: Monetization
             <ul>
               <li>The base URL for your ad server</li>
               <li>URL parameters needed by your ad server</li>
-              <li>Optionally ad macros. Ad macros are variables you can use that provide appropriate values for your ad request. See the <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#Ad_macros_and_the_serverUrl">Ad macros and the serverUrl</a> section of the <strong>Advertising with the IMA3 Plugin</strong> document for more information.</li>
+              <li>Optionally ad macros, which are marked by double braces {% raw %}<code>{{ }}</code>{% endraw %}. Ad macros are variables you can use that provide appropriate values for your ad request. See the <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#Ad_macros_and_the_serverUrl">Ad macros and the serverUrl</a> section of the <strong>Advertising with the IMA3 Plugin</strong> document for more information.</li>
+              <li>An example ad tag used in the Video Cloud setup would follow this format:
+                <pre class="line-numbers"><code class="language-html" translate="No">{% raw %}https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&document.referrer={{document.referrer}}{% endraw %}</code></pre>
+              </li>
             </ul>
           </li>
           <li>The ad macros are only used in Beacon web apps. All other app platforms use ad targeting. If ad macros are used, they simply are ignored for all non-web apps.</li>
           <li>See the <a href="/monetization/ssai/vod-ssai.html">Implementing VOD SSAI</a>, <a href="/monetization/ssai/live-ssai.html">Implementing Live SSAI</a> and <a href="https://player.support.brightcove.com/plugins/implementing-server-side-ads-brightcove-player.html">Implementing Server-Side Ads with Brightcove Player</a> documents for more information on setting up SSAI.</li>
+          <!-- <li>Client-side macros for the web are expanded by the player. Please follow the documentation at <a href="https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Client_side_macros">https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Client_side_macros</a> to setup client-side macros. If support is needed for client-side macros, that should be logged through Brightcove support for Brightcove Player.</li> -->
           <li>When finished with the SSAI configuration, you will copy the ID for that ad configuration which will be used in the Beacon setup.</li>
         </ul>
       </li>
@@ -58,7 +62,7 @@ grandparent: Monetization
 
   <section class="bcls-section">
     <h2 id="ad_targeting_information">Ad Targeting information</h2>
-    <p>You can target ads based on the information in the table below.</p>
+    <p>You can target ads based on the information in the table below:</p>
     <table class="bcls-table">
       <caption class="bcls-caption--table">Targeting Information</caption>
       <thead class="bcls-table__head">
@@ -219,33 +223,22 @@ grandparent: Monetization
  -->
   {% raw %}
   <section class="bcls-section">
-    <h2 id="Implement_the_client_side_params">Implement the client side parameters</h2>
-    <p>Whether you are using ad targeting with VOD or Live, you need to build the query string which will be used with both. Use the following guidelines when building your query string:</p>
+    <h2 id="Build_your_ad_targeting_query_string">Build your ad targeting parameters</h2>
+    <p>Whether you are using ad targeting with VOD or Live, you need to build the query string which will be used with both. Use the following guidelines when building your ad targeting query string:</p>
     <ul>
-      <li>The client side parameters will be passed to the ad server when requesting ads.
-        <aside class="bcls-aside bcls-aside--information language-editable">Note that client-side macros are only supported for web apps.</aside>
-      </li>
+      <li>The client side parameters will be passed to the ad server when requesting ads.</li>
       <!-- <li>Client side parameters can be passed in the Playback APIs (provided in the VMAP/Manifest entry point). Those will be available to the SSAI infrastructure in the form of <code translate="no">{{url.xxx}}</code> macros where the <code>xxx</code> corresponds to the parameter key.
       </li> -->
-      <li>Build your ad tag, <strong>appending your query string of ad targeting parameters</strong>:
+      <li>Build your ad targeting parameters query string using this general format.</strong>:
         <pre class="line-numbers"><code class="language-html" translate="No">variablename1={VALUEMACRO1}&variablename2={VALUEMACRO2}& ...</code></pre>
       </li>
       <li>Example:
-        <pre class="line-numbers"><code class="language-html" translate="No">platform={PLATFORM}&os={OS}&appid={APP_ID}&did={RDID}</code></pre>
+        <pre class="line-numbers"><code class="language-html" translate="No">platform={PLATFORM}&os={OS}&appid={APP_ID}&rdid={RDID}</code></pre>
       </li>
-      <li>Client-side macros for the web are expanded by the player. Please follow the documentation at <a href="https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Client_side_macros">https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Client_side_macros</a> to setup client-side macros. If support is needed for client-side macros, that should be logged through Brightcove support for Brightcove Player.</li>
-      <li>Beacon apps for all platforms, but the web, will simply remove the curly braces when requesting manifest and VMAP URLs with client-side macros. e.g. a URL such as:
+      <li>Beacon apps for all platforms, with the exception of web apps, will simply remove the curly braces when requesting manifest and VMAP URLs with client-side macros, for example:
         <pre class="line-numbers"><code class="language-html" translate="No">https://bolt-prefix/blah.vmap?pageVar.whatever={pageVar.whatever}</code></pre>
         <p>will be requested as</p>
         <pre class="line-numbers"><code class="language-html" translate="No">https://bolt-prefix/blah.vmap?pageVar.whatever=pageVar.whatever</code></pre>
-      </li>
-      <li>The complete ad tag will include:
-        <ul>
-          <li>your ad server URL</li>
-          <li>your ad server parameters</li>
-          <li>your targeting query string (highlighted)</li>
-        </ul>
-        <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15<span class="bcls-highlight">?platform={PLATFORM}&os={OS}&appid={APP_ID}&did={RDID}</span></code></pre>
       </li>
     </ul>
     <p>Be sure to have your desired ad targeting query string built as you will need it in the implementation steps below.</p>
@@ -267,7 +260,7 @@ grandparent: Monetization
         <ol type="a">
           <li>Add a name for the ad config.</li>
           <li>Select your ad response, <strong>VMAP</strong> or <strong>VAST</strong> is recommended. If you use VAST, you will need to add cuepoints to the videos to specify where ad breaks should appear.</li>
-          <li>Paste in your ad tag, <strong>appending your query string of ad targeting params</strong>.</li>
+          <li>Paste in your ad tag with URL parameters and ad macros (if used) as a query string.</li>
         </ol>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-vod.png" alt="SSAI Configuration VOD">
@@ -293,8 +286,8 @@ grandparent: Monetization
       <li>Complete the following:
         <ol type="a">
           <li>Name the Ad Configuration.</li>
-          <li>For the <strong>Provider</strong> select <strong>Brightcove SSAI</strong>.</li>
-          <li>Paste in the ad targeting URL built from the section above.</li>
+          <li>For the <strong>Provider</strong>, select <strong>Brightcove SSAI</strong>.</li>
+          <li>Paste in the ad targeting parameters query string built from the section above.</li>
           <li>Paste in the <strong>SSAI ad config ID</strong> copied in the steps just above into <strong>VOD Ad Config ID</strong>.</li>
         </ol>
         <figure class="bcls-figure">
@@ -344,14 +337,18 @@ grandparent: Monetization
       <li>
         Click <span class="button-teal">Add New Configuration</span>.
       </li>
-      <li>Name the Ad Configuration.</li>
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ad-config-live.png" alt="Beacon Ad Configuration Live">
-        <figcaption class="bcls-caption--image">Beacon Ad Configuration Live</figcaption>
-      </figure>
-      <li>For the <strong>Provider</strong> select <strong>Brightcove SSAI</strong></li>
-      <li>Paste in the ad targeting URL built from the section above.</li>
-      <li>Paste in the <strong>SSAI ad config ID</strong> copied in the steps just above into <strong>VOD Ad Config ID</strong>.</li>
+      <li>Complete the following:
+        <ul type="a">
+          <li>Name the Ad Configuration.</li>
+          <li>For the <strong>Provider</strong>, select <strong>Brightcove SSAI</strong>.</li>
+          <li>Paste in the ad targeting parameters query string built above.</li>
+          <li>Paste in the <strong>SSAI ad config ID</strong> copied in the steps just above into <strong>Live Ad Config ID</strong>.</li>
+        </ul>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ad-config-live.png" alt="Beacon Ad Configuration Live">
+          <figcaption class="bcls-caption--image">Beacon Ad Configuration Live</figcaption>
+        </figure>
+      </li>
       <li>Click <span class="button-teal">Create New Advertisement</span>.</li>
     </ol>
   </section>

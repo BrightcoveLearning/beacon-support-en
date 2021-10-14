@@ -241,7 +241,7 @@ grandparent: Monetization
         <pre class="line-numbers"><code class="language-html" translate="No">https://bolt-prefix/blah.vmap?pageVar.whatever=pageVar.whatever</code></pre>
       </li>
     </ul>
-    <p>Be sure to have your desired ad targeting query string built as you will need it in the implementation steps below.</p>
+    <p>Be sure to have your desired ad targeting query string built as you will need it in the implementation steps below in the two sections where you configure an <em>Ad Configuration</em> in Beacon Classic.</p>
   </section>
 
   <section class="bcls-section">
@@ -260,7 +260,7 @@ grandparent: Monetization
         <ol type="a">
           <li>Add a name for the ad config.</li>
           <li>Select your ad response, <strong>VMAP</strong> or <strong>VAST</strong> is recommended. If you use VAST, add cuepoints to the videos to specify where ad breaks should appear.</li>
-          <li>Paste in your ad tag with URL parameters and ad macros (if used) as a query string.</li>
+          <li>Paste in your ad tag with URL parameters and ad macros (if used).</li>
         </ol>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-vod.png" alt="SSAI Configuration VOD">
@@ -269,7 +269,7 @@ grandparent: Monetization
       </li>
 
       <li>Click <strong>Save</strong>.</li>
-      <li>Find your new ad configuration in the table and copy your ad config ID. You will need this value for the Beacon advertising configuration.
+      <li>Find your new ad configuration in the table and copy your ad config ID. You will need this value for the Beacon advertising configuration in the next section.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/copy-ad-config-id.png" alt="copy ad config ID">
           <figcaption class="bcls-caption--image">Copy ad config ID</figcaption>
@@ -279,7 +279,7 @@ grandparent: Monetization
 
     <h3>Beacon steps - VOD</h3>
     <ol class="bcls-tasklist">
-      <li>Open the Beacon Classic UI and navigate to the <strong>Advertisement</strong> tab.</li>
+      <li>Open Beacon Classic and navigate to the <strong>Advertisement</strong> tab.</li>
       <li>
         Click <span class="button-teal">Add New Configuration</span>.
       </li>
@@ -312,9 +312,9 @@ grandparent: Monetization
       </li>
       <li>Complete the following:
         <ol type="a">
-          <li>Add a name for the ad config.</li>
+          <li>Add a name for the ad configuration.</li>
           <li>Select <strong>VAST</strong> for your ad response.</li>
-          <li>Paste in your ad tag, <strong>appending your query string of ad targeting parameters</strong>.</li>
+          <li>Paste in your ad tag with URL parameters and ad macros (if used).</li>
         </ol>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-live.png" alt="SSAI Configuration Live">
@@ -322,7 +322,7 @@ grandparent: Monetization
         </figure>
       </li>
       <li>Click <strong>Save</strong>.</li>
-      <li>Find your new ad configuration in the table and copy your ad config ID. You will need this value for the Beacon advertising configuration.
+      <li>Find your new ad configuration in the table and copy your ad config ID. You will need this value for the Beacon advertising configuration in the next section.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/copy-ad-config-id.png" alt="copy ad config ID">
           <figcaption class="bcls-caption--image">Copy ad config ID</figcaption>
@@ -332,18 +332,18 @@ grandparent: Monetization
     <h3>Beacon steps - Live</h3>
     <ol class="bcls-tasklist-restart">
       <li>
-        Open the Beacon Classic UI and go the <strong>Advertisement</strong> tab.
+        Open Beacon Classic and go the <strong>Advertisement</strong> tab.
       </li>
       <li>
         Click <span class="button-teal">Add New Configuration</span>.
       </li>
       <li>Complete the following:
-        <ul type="a">
+        <ol type="a">
           <li>Name the Ad Configuration.</li>
           <li>For the <strong>Provider</strong>, select <strong>Brightcove SSAI</strong>.</li>
           <li>Paste in the ad targeting parameters query string built above.</li>
           <li>Paste in the <strong>SSAI ad config ID</strong> copied in the steps just above into <strong>Live Ad Config ID</strong>.</li>
-        </ul>
+        </ol>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ad-config-live.png" alt="Beacon Ad Configuration Live">
           <figcaption class="bcls-caption--image">Beacon Ad Configuration Live</figcaption>

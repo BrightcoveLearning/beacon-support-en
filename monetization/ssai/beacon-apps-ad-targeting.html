@@ -10,7 +10,13 @@ grandparent: Monetization
   <summary>{{ page.description }}</summary>
   <section class="bcls-section">
     <h2 id="introduction">Introduction</h2>
-    <p>Client-side information is passed from the apps to SSAI (Server Side Ad Insertion), and then SSAI includes this data in the your VAST tag, which then allows you to target ads based on this data. The purpose of this is to increase the value of your ad inventory, therefore increasing ad revenue for your business.</p>
+    <p>Through add targeting, client-side information is passed from the apps to SSAI (Server Side Ad Insertion) which allows you to target ads based on the clients' data. The process is implemented as follows:</p>
+    <ul>
+      <li>Ad targeting variable/value pairs are passed to the playback infrastructure.</li>
+      <li>The playback infrastructure then in turn passes the targeting information to SSAI via {% raw %}{{url.xxx}}{% endraw %} ad macros.</li>
+      <li>SSAI then requests ads from your ad server using a VAST tag using the client side information.</li>
+    </ul>
+    <p>The purpose of this is to increase the value of your ad inventory, therefore increasing ad revenue for your business.</p>
     <p>Within Video Cloud Studio and Beacon Classic, you can set up how this data is passed to your ad server or ad provider.</p>
   </section>
   <section class="bcls-section">
@@ -22,10 +28,11 @@ grandparent: Monetization
     </ul>
     <h3>Support for Ad Inventory split</h3>
     <p>For apps that run on Amazon, Roku, and Samsung (in the US), you are required to do a 70/30 split of ad inventory/revenue with the platform. This means Brightcove Beacon customers monetize 70% of the ad inventory and the platform gets the remaining 30% of the ad inventory. With this enhanced ad targeting, you can use one ad tag across all of your apps and pass the device parameters to your ad server. Inside your ad server, implement the business logic that splits the ad inventory by device. The platforms also require passing Limited Ad Targeting (LAT) for Ad Inventory Split, which is a parameter Brightcove is now sending to your ad server.</p>
-    <h3>User Privacy improvements</h3>
+    <h3>User privacy considerations</h3>
     <ul>
       <li>LAT (<em>Limited Ad Targeting</em>) allows users of Beacon apps to opt out of ad targeting based on user behavior.</li>
       <li>Users have the ability to reset the unique Device ID that we assign to the device at any time.</li>
+      <li>iOS apps follow Apple's <a href="https://developer.apple.com/documentation/apptrackingtransparency">App Tracking Transparency</a> framework.</li>
     </ul>
   </section>
   <section class="bcls-section">
@@ -233,7 +240,7 @@ grandparent: Monetization
         <pre class="line-numbers"><code class="language-html" translate="No">variablename1={VALUEMACRO1}&variablename2={VALUEMACRO2}& ...</code></pre>
       </li>
       <li>Example:
-        <pre class="line-numbers"><code class="language-html" translate="No">platform={PLATFORM}&os={OS}&appid={APP_ID}&rdid={RDID}</code></pre>
+        <pre class="line-numbers"><code class="language-html" translate="No">platform={PLATFORM}&os={OS}&app_id={APP_ID}&rdid={RDID}</code></pre>
       </li>
       <li>Beacon apps for all platforms, with the exception of web apps, will simply remove the curly braces when requesting manifest and VMAP URLs with client-side macros, for example:
         <pre class="line-numbers"><code class="language-html" translate="No">https://bolt-prefix/blah.vmap?pageVar.whatever={pageVar.whatever}</code></pre>

@@ -1,5 +1,5 @@
 ---
-title: Required Setup for the Beacon Web App
+title: DNS Setup for the Beacon Web App
 description: This topic explains steps that are required for setting up the Beacon Web App
 parent: Using Brightcove Beacon
 ---
@@ -11,5 +11,20 @@ parent: Using Brightcove Beacon
     <h2 id="Introduction">Introduction</h2>
     <aside class="bcls-aside bcls-aside--information language-editable">Note that this topic applies only if you purchased the Beacon Web App.</aside>
     <p>Like any web app, the Beacon Web App requires a structured collection of files available to the internet, security certificates to guarantee the authenticity of the sites, and fronting by a CDN to make the pages readily available to users anywhere in the world. Brightcove manages all this for you, but there are two steps you need to perform to enable the Beacon Web App to be associated with your domain.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="steps">Steps</h2>
+    <h3>Domain validation</h3>
+    <ol class="bcls-tasklist-restart">
+      <li>To validate your domain name, Brightcove will provide you with a <code translate="No">CNAME</code> record correspond to each variation of the domain name (for example, you may want to all both <code translate="No">www.myplace.com</code> and <code translate="No">myplace.com</code>).</li>
+      <li>These <code translate="No">CNAME</code> records must be added to your DNS database. Contact your your DNS provider for instructions on how to do this.</li>
+      <li>These DNS entries will be used to validate that you own the domain name, and it will then be attached to a security certificate for Beacon Web App.</li>
+    </ol>
+    <h3>Redirecting the domain name to the Beacon Web App</h3>
+    <ol class="bcls-tasklist">
+      <li>Once the domain name validation is complete, Brightcove will provide you another DNS entry that will route requests for your domain to the internal address of your Beacon Web App.</li>
+      <li>Add this entry to your DNS database also.</li>
+      <li>Once the update to the DNS database is propagated across the internet (this may take up to 24 hours), your Beacon Web App will be available.</li>
+    </ol>
   </section>
 </article>

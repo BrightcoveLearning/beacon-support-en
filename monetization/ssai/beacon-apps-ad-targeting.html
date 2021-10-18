@@ -51,7 +51,7 @@ grandparent: Monetization
               </li>
             </ul>
           </li>
-          <li>The ad macros are only used in Beacon web apps. All other app platforms use ad targeting. If ad macros are used, they simply are ignored for all non-web apps.</li>
+          <li>The IMA3 ad macros, mentioned just above, are only used in Beacon web apps. All other app platforms use ad targeting. If ad macros are used, they simply are ignored for all non-web apps.</li>
           <li>See the <a href="/monetization/ssai/vod-ssai.html">Implementing VOD SSAI</a>, <a href="/monetization/ssai/live-ssai.html">Implementing Live SSAI</a> and <a href="https://player.support.brightcove.com/plugins/implementing-server-side-ads-brightcove-player.html">Implementing Server-Side Ads with Brightcove Player</a> documents for more information on setting up SSAI.</li>
           <!-- <li>Client-side macros for the web are expanded by the player. Please follow the documentation at <a href="https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Client_side_macros">https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Client_side_macros</a> to setup client-side macros. If support is needed for client-side macros, that should be logged through Brightcove support for Brightcove Player.</li> -->
           <li>When finished with the SSAI configuration, copy the ID for that ad configuration which will be used in the Beacon setup.</li>
@@ -62,7 +62,7 @@ grandparent: Monetization
         <li>You supply the ID of the SSAI configuration created in Video Cloud Studio when creating the Beacon Ad Configuration. This associates the ad configuration with the proper ad server.</li>
         <li>In the Beacon Ad Configuration you supply only the ad targeting variables query string.</li>
         <li>Ten ad targeting variables are available for use, detailed in the next section of this document.</li>
-        <li>The ad targeting variables are used by all non-web apps. Web apps do NOT use the ad targeting variables.</li>
+        <li>The ad targeting variables are used by all apps, with the exception of web apps do NOT use <code>RDID</code>, <code>IDTYPE</code>, <code>APP_ID</code> and <code>IS_LAT</code>. The ad targeting variables are detailed in the next section of this document.</li>
       </ul>
     </ul>
   </section>
@@ -144,20 +144,21 @@ grandparent: Monetization
               <li>vida: Vizio</li>
               <li>msai: Xbox</li>
             </ul>
+            This item is not applicable to the web.
           </td>
         </tr>
         <tr>
           <td>App identifier</td>
           <td><code translate="no">app_id</code></td>
           <td><strong>APP_ID</strong></td>
-          <td>This should be the App bundle name</td>
+          <td>This should be the App bundle name. This item is not applicable to the web.</td>
         </tr>
       </tbody>
     </table>
     <h3>Notes</h3>
     <ul>
       <li>This feature works across all platforms/devices iOS, Apple TV, Android, Roku, Fire TV, Web, and Smart TVs.</li>
-      <li>Beacon apps ad targeting can be used with both VOD SSAI and Live SSAI.</li>
+      <li>Beacon apps ad targeting can be used with both VOD SSAI and Live SSAI. The details of implementation are shown below.</li>
     </ul>
   </section>
   <!--   <section class="bcls-section">

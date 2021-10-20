@@ -1021,7 +1021,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Add <code>url.</code> in front of each value in the double curly braces.
         <pre class="line-numbers"><code class="language-html" translate="No">platform={{url.PLATFORM}}&os={{url.OS}}&app_id={{url.APP_ID}}&rdid={{url.RDID}}</code></pre>
       </li>
-      <li>Use your ad tag and append the altered ad targeting variable query string, adding an ampersand <code>&</code> in front of the ad targeting query string:
+      <li>Use your ad tag and append the altered ad targeting variable query string, adding <code>&</code> (ampersand) in front of the ad targeting query string:
         <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&document.referrer={{document.referrer}}&platform={{url.PLATFORM}}&os={{url.OS}}&app_id={{url.APP_ID}}&rdid={{url.RDID}}</code></pre>
       </li>
     </ol>
@@ -1059,7 +1059,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <!--       <li>Remove the varialbe name and equals sign <code>=</code> in front of each ad targeting variable.
         <pre class="line-numbers"><code class="language-html" translate="No">platform={{url.PLATFORM}}&os={{url.OS}}&app_id={{url.APP_ID}}&rdid={{url.RDID}}</code></pre>
       </li> -->
-      <li>Use your ad tag and append the altered ad targeting variable query string, adding an ampersand <code>&</code> in front of the ad targeting query string:
+      <li>Use your ad tag and append the altered ad targeting variable query string, adding <code>&</code> (ampersand) in front of the ad targeting query string:
         <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&document.referrer={{document.referrer}}&platform={{PLATFORM}}&os={{OS}}&app_id={{APP_ID}}&rdid={{RDID}}</code></pre>
       </li>
     </ol>
@@ -1134,7 +1134,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <ol type="a">
           <li>Name the Ad Configuration.</li>
           <li>For the <strong>Provider</strong>, select <strong>Brightcove SSAI</strong>.</li>
-          <li>Paste in the ad targeting parameters query string built from the section above.</li>
+          <li>Paste in the ad targeting parameters query string built in the <a href="#Build_your_ad_targeting_query_string">Build your ad targeting parameters</a> section above. Note that it is NOT proceeded by <strong>&</strong>.</li>
           <li>Paste in the <strong>SSAI ad config ID</strong> copied in the steps just above into <strong>VOD Ad Config ID</strong>.</li>
         </ol>
         <figure class="bcls-figure">
@@ -1149,7 +1149,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Live_steps">Live steps</h2>
     <h3>Video Cloud steps - Live</h3>
     <ol class="bcls-tasklist-restart">
-      <li>In Video Cloud Studio, navigate to <strong>Admin → Server-Side Ad Settings</strong>. (For full details see the <a href="/monetization/ssai/vod-ssai.html">Implementing VOD SSAI</a> document.)</li>
+      <li>In Video Cloud Studio, navigate to <strong>Admin → Server-Side Ad Settings</strong>. (For full details see the <a href="/monetization/ssai/live-ssai.html">Implementing Live SSAI</a> document.)</li>
       <li>
         From the <strong>Create Ad Configuration</strong> dropdown, select <strong>Live</strong>
         <figure class="bcls-figure">
@@ -1161,7 +1161,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <ol type="a">
           <li>Add a name for the ad configuration.</li>
           <li>Select <strong>VAST</strong> for your ad response.</li>
-          <li>Paste in your ad tag with URL parameters and ad macros (if used).</li>
+          <li>Paste in your ad tag in the format detailed in the <a href="#Live_SSAI_ad_tag_creation">Live SSAI ad tag creation</a> section above.</li>
         </ol>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-live.png" alt="SSAI Configuration Live">
@@ -1188,7 +1188,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <ol type="a">
           <li>Name the Ad Configuration.</li>
           <li>For the <strong>Provider</strong>, select <strong>Brightcove SSAI</strong>.</li>
-          <li>Paste in the ad targeting parameters query string built above.</li>
+          <li>Paste in the ad targeting parameters query string built in the <a href="#Build_your_ad_targeting_query_string">Build your ad targeting parameters</a> section above. Note that it is NOT proceeded by <strong>&</strong>.</li>
           <li>Paste in the <strong>SSAI ad config ID</strong> copied in the steps just above into <strong>Live Ad Config ID</strong>.</li>
         </ol>
         <figure class="bcls-figure">
@@ -1222,7 +1222,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 19 Oct 2021
+  Page last updated on 20 Oct 2021
 </div>
 
 

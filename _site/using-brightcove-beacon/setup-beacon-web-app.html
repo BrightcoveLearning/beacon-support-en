@@ -6,9 +6,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="This topic explains steps that are required for setting up the Beacon Web App" />
+    <meta name="description" content="This topic explains steps that are required for setting up the Beacon Web App." />
 
-    <title>DNS Setup for the Beacon Web App</title>
+    <title>Setup for the Beacon Web App</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -94,7 +94,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
     
       
-        <li class="breadcrumb-item active" aria-current="page">DNS Setup for the Beacon Web App</li>
+        <li class="breadcrumb-item active" aria-current="page">Setup for the Beacon Web App</li>
       
     
   </nav>
@@ -311,7 +311,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
-                    <li><a href="/using-brightcove-beacon/setup-beacon-web-app.html">DNS Setup for the Beacon Web App</a></li>
+                    <li><a href="/using-brightcove-beacon/setup-beacon-web-app.html">Setup for the Beacon Web App</a></li>
                   
                 
                   
@@ -752,28 +752,43 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<h1>DNS Setup for the Beacon Web App</h1>
+<h1>Setup for the Beacon Web App</h1>
 <article class="bcls-article">
-  <summary>This topic explains steps that are required for setting up the Beacon Web App</summary>
+  <summary>This topic explains steps that are required for setting up the Beacon Web App.</summary>
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
     <aside class="bcls-aside bcls-aside--information language-editable">Note that this topic applies only if you purchased the Beacon Web App.</aside>
-    <p>Like any web app, the Beacon Web App requires a structured collection of files available to the internet, security certificates to guarantee the authenticity of the sites, and fronting by a CDN to make the pages readily available to users anywhere in the world. Brightcove manages all this for you, but there are two steps you need to perform to enable the Beacon Web App to be associated with your domain.</p>
+    <p>Brightcove does most of the work in setting up your Beacon Web App, but there are a few things you need to do to associate it with your domain and systems.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="steps">Steps</h2>
+    <h2 id="steps">DNS setup</h2>
+    <p>Like any web app, the Beacon Web App requires a structured collection of files available to the internet, security certificates to guarantee the authenticity of the sites, and fronting by a CDN to make the pages readily available to users anywhere in the world. Brightcove manages all this for you, but there are two steps you need to perform to enable the Beacon Web App to be associated with your domain.</p>
     <h3>Domain validation</h3>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note: this step should be done ahead of time so as not to delay the app going live.</aside>
     <ol class="bcls-tasklist-restart">
-      <li>To validate your domain name, Brightcove will provide you with a <code translate="No">CNAME</code> record correspond to each variation of the domain name (for example, you may want to all both <code translate="No">www.myplace.com</code> and <code translate="No">myplace.com</code>).</li>
-      <li>These <code translate="No">CNAME</code> records must be added to your DNS database. Contact your your DNS provider for instructions on how to do this.</li>
-      <li>These DNS entries will be used to validate that you own the domain name, and it will then be attached to a security certificate for Beacon Web App.</li>
+      <li>
+        To validate your domain name, Brightcove will provide you with a couple <code translate="No">CNAME</code> record correspond to each variation of the domain name (for example, you may want to add both <code translate="No">www.awesome.tv</code> and <code translate="No">awesome.tv</code>).
+        <aside class="bcls-aside bcls-aside--warning language-editable">Note that these test records have a 72 hour expiration.</aside>
+      </li>
+      <li>These <code translate="No">CNAME</code> records must be added to your DNS registry. Contact your your DNS provider for instructions on how to do this.</li>
+      <li>These DNS entries will be used to validate that you own the domain name, and will allow the Brightcove infrastructure to generate a certificate for your domain and attach it to the appropriate resources.</li>
     </ol>
     <h3>Redirecting the domain name to the Beacon Web App</h3>
+    <aside class="bcls-aside bcls-aside--information language-editable">This step is done when the Beacon Web App is being made live.</aside>
     <ol class="bcls-tasklist">
-      <li>Once the domain name validation is complete, Brightcove will provide you another DNS entry that will route requests for your domain to the internal address of your Beacon Web App.</li>
-      <li>Add this entry to your DNS database also.</li>
-      <li>Once the update to the DNS database is propagated across the internet (this may take up to 24 hours), your Beacon Web App will be available.</li>
+      <li>
+        Brightcove can provide one or a couple of records that will need to be setup. If the beacon web app is to be available in at the root of the domain than we typically setup 2 domains available <code translate="No">www.awesome.tv</code> and <code translate="No">awesome.tv</code>.
+        <p>The reason for the two records is that some DNS providers do not allow you to setup CNAME records at the root domain - in this case, the setup would be to setup the www.awesome.tv record pointing to the CDN distribution URL and have the root domain forward to the www.awesome.tv domain. If the DNS provider supports CNAME records at root domain or if the app is being launched in a subdomain, then only a CNAME record for the CDN distribution URL is required.</p>
+        <p>Also note that depending on the current setup, you may need to either update or add new records (for example if a www.awesome.tv record already exists, then user should edit it instead of trying to create a new one).</p>
+      </li>
+      <li>Add this entry to your DNS registry also (or update the existing record, if it already exists).</li>
+      <li>Once the update to the DNS registry is propagated across the internet (how long this takes depends on the TTL of existing records that are modified), your Beacon Web App will be live.</li>
     </ol>
+    <h3>Notes on GoDaddy</h3>
+    <ul>
+      <li>When you set up the DNS records for <a href="https://www.godaddy.com/">GoDaddy</a>, the records should only have the name, not the full domain. For example, for www.awesome.tv you would only add "www" in the host. See <a href="https://www.godaddy.com/help/add-a-cname-record-19236">Add a CNAME record</a> for more information.</li>
+      <li>Setting up forwarding requires selecting the <strong>Forwarding</strong> section at the end of the page and entering the host to forward to - for example: "www.awesome.tv" - with a 301 type. See <a href="https://www.godaddy.com/help/forward-my-domain-12123">Forward my domain</a> for more information.</li>
+    </ul>
   </section>
 </article>
 <!-- complete bootstrap layout -->
@@ -791,7 +806,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 17 Oct 2021
+  Page last updated on 18 Oct 2021
 </div>
 
 

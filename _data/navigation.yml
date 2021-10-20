@@ -67,7 +67,7 @@
       url: /using-brightcove-beacon/creating-a-playlist.html
     - name: 'Creating Series/Seasons/Episodes'
       url: /using-brightcove-beacon/series-seasons-episodes.html
-    - name: 'DNS Setup for the Beacon Web App'
+    - name: 'Setup for the Beacon Web App'
       url: /using-brightcove-beacon/setup-beacon-web-app.html
     - name: Including Non-Configurable Pages
       url: /using-brightcove-beacon/including-non-configurable-pages.html

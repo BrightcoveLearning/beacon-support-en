@@ -5,15 +5,17 @@ parent: SSAI
 grandparent: Monetization
 ---
 
+
 <h1>{{ page.title }}</h1>
 <article class="bcls-article">
   <summary>{{ page.description }}</summary>
+  {% raw %}
   <section class="bcls-section">
     <h2 id="introduction">Introduction</h2>
     <p>Through add targeting, client-side information is passed from the apps to SSAI (Server Side Ad Insertion) which allows you to target ads based on the clients' data. The process is implemented as follows:</p>
     <ul>
       <li>Ad targeting variable/value pairs are passed to the playback infrastructure.</li>
-      <li>The playback infrastructure then in turn passes the targeting information to SSAI via {% raw %}{{url.xxx}}{% endraw %} ad macros.</li>
+      <li>The playback infrastructure then in turn passes the targeting information to SSAI via {{url.xxx}} ad macros.</li>
       <li>SSAI then requests ads from your ad server using a VAST tag using the client side information.</li>
     </ul>
     <p>The purpose of this is to increase the value of your ad inventory, therefore increasing ad revenue for your business.</p>
@@ -45,9 +47,9 @@ grandparent: Monetization
             <ul>
               <li>The base URL for your ad server.</li>
               <li>URL parameters needed by your ad server.</li>
-              <li>Optionally, ad macros which are marked by double braces {% raw %}<code>{{ }}</code>{% endraw %}. Ad macros are variables you can use that provide appropriate values for your ad request. See the <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#Ad_macros_and_the_serverUrl">Ad macros and the serverUrl</a> section of the <strong>Advertising with the IMA3 Plugin</strong> document for more information.</li>
+              <li>Optionally, ad macros which are marked by double braces <code>{{ }}</code>. Ad macros are variables you can use that provide appropriate values for your ad request. See the <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#Ad_macros_and_the_serverUrl">Ad macros and the serverUrl</a> section of the <strong>Advertising with the IMA3 Plugin</strong> document for more information.</li>
               <li>An example ad tag used in the Video Cloud setup would follow this format:
-                <pre class="line-numbers"><code class="language-html" translate="No">{% raw %}https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&document.referrer={{document.referrer}}{% endraw %}</code></pre>
+                <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&document.referrer={{document.referrer}}</code></pre>
               </li>
             </ul>
           </li>
@@ -229,7 +231,6 @@ grandparent: Monetization
     </ul>
   </section>
  -->
-  {% raw %}
   <section class="bcls-section">
     <h2 id="Build_your_ad_targeting_query_string">Build your ad targeting parameters</h2>
     <p>Whether you are using ad targeting with VOD or Live, you need to build the query string which will be used with both. Use the following guidelines when building your ad targeting query string:</p>
@@ -253,6 +254,94 @@ grandparent: Monetization
   </section>
 
   <section class="bcls-section">
+    <h2 id="Building_the_ad_tag">Building the ad tag</h2>
+    <p>For the two sections below where you create an ad configuration in Video Cloud Studio, you need to combine your ad tag for your ad server and a modified version of your ad targeting variables query string.</p>
+    <p>For the instructions below, the ad server tag from the <em>Overview</em> section are used:
+    <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&document.referrer={{document.referrer}}</code></pre>
+    </p>
+    <p>For the instructions below, Beacon ad targeting variables from the <em>Build your ad targeting parameters</em> section are used:
+    <pre class="line-numbers"><code class="language-html" translate="No">platform={PLATFORM}&os={OS}&app_id={APP_ID}&rdid={RDID}</code></pre>
+    </p>
+    <h4 id="VOD_SSAI_ad_tag_creation">VOD SSAI ad tag creation</h4>
+    <p>To build the proper ad tag for the VOD SSAI creation in Video Cloud Studio follow these steps:</p>
+    <ol>
+      <li>In your ad targeting variables, make all the single braces into <strong>double</strong> braces.
+        <pre class="line-numbers"><code class="language-html" translate="No">platform={{PLATFORM}}&os={{OS}}&app_id={{APP_ID}}&rdid={{RDID}}</code></pre>
+      </li>
+      <li>Add <code>url.</code> in front of each value in the double curly braces.
+        <pre class="line-numbers"><code class="language-html" translate="No">platform={{url.PLATFORM}}&os={{url.OS}}&app_id={{url.APP_ID}}&rdid={{url.RDID}}</code></pre>
+      </li>
+      <li>Use your ad tag and append the altered ad targeting variable query string, adding an ampersand <code>&</code> in front of the ad targeting query string:
+        <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&document.referrer={{document.referrer}}&platform={{url.PLATFORM}}&os={{url.OS}}&app_id={{url.APP_ID}}&rdid={{url.RDID}}</code></pre>
+      </li>
+    </ol>
+    <p>The different parts of the ad tag are detailed in the following table:
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Ad tag section</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code>https://ads.brightcove.com/ads?tech=dfpadrules&dur=15</code></td>
+          <td>Base URL of ad server and standard query parameters</td>
+        </tr>
+        <tr>
+          <td><code>&document.referrer={{document.referrer}}</code></td>
+          <td>Ad macros, in this case for IMA3</td>
+        </tr>
+        <tr>
+          <td><code>&platform={{url.PLATFORM}}&os={{url.OS}}<br>&app_id={{url.APP_ID}}&rdid={{url.RDID}}</code></td>
+          <td>Beacon ad targeting variables</td>
+        </tr>
+      </tbody>
+    </table>
+    </p>
+    <p>This newly created ad tag will be used in the <a href="#VOD_steps">VOD Steps</a> section below.</p>
+    <h4 id="Live_SSAI_ad_tag_creation">Live SSAI ad tag creation</h4>
+    <p>To build the proper ad tag for the Live SSAI creation in Video Cloud Studio follow these steps:</p>
+    <ol>
+      <li>In your ad targeting variables, make all the single braces into <strong>double</strong> braces.
+        <pre class="line-numbers"><code class="language-html" translate="No">platform={{PLATFORM}}&os={{OS}}&app_id={{APP_ID}}&rdid={{RDID}}</code></pre>
+      </li>
+      <!--       <li>Remove the varialbe name and equals sign <code>=</code> in front of each ad targeting variable.
+        <pre class="line-numbers"><code class="language-html" translate="No">platform={{url.PLATFORM}}&os={{url.OS}}&app_id={{url.APP_ID}}&rdid={{url.RDID}}</code></pre>
+      </li> -->
+      <li>Use your ad tag and append the altered ad targeting variable query string, adding an ampersand <code>&</code> in front of the ad targeting query string:
+        <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&document.referrer={{document.referrer}}&platform={{PLATFORM}}&os={{OS}}&app_id={{APP_ID}}&rdid={{RDID}}</code></pre>
+      </li>
+    </ol>
+    <p>The different parts of the ad tag are detailed in the following table:
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Ad tag section</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code>https://ads.brightcove.com/ads?tech=dfpadrules&dur=15</code></td>
+          <td>Base URL of ad server and standard query parameters</td>
+        </tr>
+        <tr>
+          <td><code>&document.referrer={{document.referrer}}</code></td>
+          <td>Ad macros, in this case for IMA3</td>
+        </tr>
+        <tr>
+          <td><code>&platform={{PLATFORM}}&os={OS}}<br>&app_id={{APP_ID}}&rdid={{RDID}}</code></td>
+          <td>Beacon ad targeting variables</td>
+        </tr>
+      </tbody>
+    </table>
+    </p>
+
+    <p>This newly created ad tag will be used in the <a href="#Live_steps">Live steps</a> section below.</p>
+  </section>
+
+  <section class="bcls-section">
     <h2 id="VOD_steps">VOD steps</h2>
     <h3>Video Cloud steps - VOD</h3>
     <ol class="bcls-tasklist-restart">
@@ -268,7 +357,7 @@ grandparent: Monetization
         <ol type="a">
           <li>Add a name for the ad config.</li>
           <li>Select your ad response, <strong>VMAP</strong> or <strong>VAST</strong> is recommended. If you use VAST, add cuepoints to the videos to specify where ad breaks should appear.</li>
-          <li>Paste in your ad tag with URL parameters and ad macros (if used).</li>
+          <li>Paste in your ad tag in the format detailed in the <a href="#VOD_SSAI_ad_tag_creation">VOD SSAI ad tag creation</a> section above. </li>
         </ol>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-vod.png" alt="SSAI Configuration VOD">

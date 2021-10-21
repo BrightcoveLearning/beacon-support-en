@@ -780,7 +780,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             </li>
             <li>These test records have a 72 hour expiration.</li>
           </ul>
-           
           </aside>
       </li>
       <li>These <code translate="No">CNAME</code> records must be added to your DNS registry. Contact your your DNS provider for instructions on how to do this.</li>
@@ -813,7 +812,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="set_up_oidc_callback_and_logout_url">Set up OIDC callback and logout URL</h2>
     <p>In case you use an external auth system that is setup in Beacon, there is an additional step that must be performed.This step will need to be done <strong>between <a href="#domain_validation">domain validation</a></strong> and <strong>before <a href="#redirecting_the_domain_name">redirecting the domain name to the Beacon Web App</a></strong> (the steps described in the previous section).</p>
-    <p>You will need to update the <strong>callback and logout URLs</strong> to include any of the domains being setup - how that is setup is dependent on the auth provider. The URLS would be:</p>
+    <p>You will need to update the OIDC <strong>callback and logout URLs</strong> to include any of the domains being setup - how that is setup is dependent on the auth provider. The URLS would be:</p>
     <ul>
       <li>signin callback: {domain}/cc</li>
       <li>singout url: {domain}</li>
@@ -835,7 +834,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 20 Oct 2021
+  Page last updated on 21 Oct 2021
 </div>
 
 

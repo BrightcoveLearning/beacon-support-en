@@ -15,17 +15,30 @@ parent: Using Brightcove Beacon
   <section class="bcls-section">
     <h2 id="steps">DNS setup</h2>
     <p>Like any web app, the Beacon Web App requires a structured collection of files available to the internet, security certificates to guarantee the authenticity of the sites, and fronting by a CDN to make the pages readily available to users anywhere in the world. Brightcove manages all this for you, but there are two steps you need to perform to enable the Beacon Web App to be associated with your domain.</p>
-    <h3>Domain validation</h3>
+    <h3 id="domain_validation">Domain validation</h3>
     <aside class="bcls-aside bcls-aside--information language-editable">Note: this step should be done ahead of time so as not to delay the app going live.</aside>
     <ol class="bcls-tasklist-restart">
       <li>
-        To validate your domain name, Brightcove will provide you with a couple <code translate="No">CNAME</code> record correspond to each variation of the domain name (for example, you may want to add both <code translate="No">www.awesome.tv</code> and <code translate="No">awesome.tv</code>).
-        <aside class="bcls-aside bcls-aside--warning language-editable">Note that these test records have a 72 hour expiration.</aside>
+        To validate your domain name, Brightcove will provide you with a <code translate="No">CNAME</code> record corresponding to each variation of the domain name (for example, you may want to add both <code translate="No">www.awesome.tv</code> and <code translate="No">awesome.tv</code>).
+        <aside class="bcls-aside bcls-aside--warning language-editable">
+          Notes:
+          <ul>
+            <li>
+              The need to have one or two records depends on following factors:
+              <ol>
+                <li>If the app will not be on root domain, then only one record will be required for that subdomain.</li>
+                <li>If the app is on root and we cannot do a CNAME on the root, then www domain will also be required in addition to root domain, otherwise only one record will be required</li>
+              </ol>
+            </li>
+            <li>These test records have a 72 hour expiration.</li>
+          </ul>
+           
+          </aside>
       </li>
       <li>These <code translate="No">CNAME</code> records must be added to your DNS registry. Contact your your DNS provider for instructions on how to do this.</li>
       <li>These DNS entries will be used to validate that you own the domain name, and will allow the Brightcove infrastructure to generate a certificate for your domain and attach it to the appropriate resources.</li>
     </ol>
-    <h3>Redirecting the domain name to the Beacon Web App</h3>
+    <h3 id="redirecting_the_domain_name">Redirecting the domain name to the Beacon Web App</h3>
     <aside class="bcls-aside bcls-aside--information language-editable">This step is done when the Beacon Web App is being made live.</aside>
     <ol class="bcls-tasklist">
       <li>
@@ -40,6 +53,22 @@ parent: Using Brightcove Beacon
     <ul>
       <li>When you set up the DNS records for <a href="https://www.godaddy.com/">GoDaddy</a>, the records should only have the name, not the full domain. For example, for www.awesome.tv you would only add "www" in the host. See <a href="https://www.godaddy.com/help/add-a-cname-record-19236">Add a CNAME record</a> for more information.</li>
       <li>Setting up forwarding requires selecting the <strong>Forwarding</strong> section at the end of the page and entering the host to forward to - for example: "www.awesome.tv" - with a 301 type. See <a href="https://www.godaddy.com/help/forward-my-domain-12123">Forward my domain</a> for more information.</li>
+    </ul>
+    <h3>Troubleshooting</h3>
+    <p>There are some command line (terminal) tools that may be useful in troubleshooting DNS setup:</p>
+    <ul>
+      <li><code translate="no">dig {url}</code></li>
+      <li><code translate="no">nslookup {url}</code></li>
+      <li><code translate="no">and curl -v {url}</code></li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="set_up_oidc_callback_and_logout_url">Set up OIDC callback and logout URL</h2>
+    <p>In case you use an external auth system that is setup in Beacon, there is an additional step that must be performed.This step will need to be done <strong>between <a href="#domain_validation">domain validation</a></strong> and <strong>before <a href="#redirecting_the_domain_name">redirecting the domain name to the Beacon Web App</a></strong> (the steps described in the previous section).</p>
+    <p>You will need to update the <strong>callback and logout URLs</strong> to include any of the domains being setup - how that is setup is dependent on the auth provider. The URLS would be:</p>
+    <ul>
+      <li>signin callback: {domain}/cc</li>
+      <li>singout url: {domain}</li>
     </ul>
   </section>
 </article>

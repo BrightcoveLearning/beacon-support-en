@@ -257,7 +257,7 @@ grandparent: Monetization
     <h2 id="Building_the_ad_tag">Building the ad tag</h2>
     <p>For the two sections below where you create an ad configuration in Video Cloud Studio, you need to combine your ad tag for your ad server and a modified version of your ad targeting variables query string.</p>
     <p>For the instructions below, the ad server tag from the <em>Overview</em> section are used:
-    <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&document.referrer={{document.referrer}}</code></pre>
+    <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15</code></pre>
     </p>
     <p>For the instructions below, Beacon ad targeting variables from the <em>Build your ad targeting parameters</em> section are used:
     <pre class="line-numbers"><code class="language-html" translate="No">platform={PLATFORM}&os={OS}&app_id={APP_ID}&rdid={RDID}</code></pre>
@@ -288,12 +288,13 @@ grandparent: Monetization
           <td><code>https://ads.brightcove.com/ads?tech=dfpadrules&dur=15</code></td>
           <td>Base URL of ad server and standard query parameters</td>
         </tr>
-        <tr>
+        <!--         <tr>
           <td><code>&document.referrer={{document.referrer}}</code></td>
-          <td>Ad macros, in this case for IMA3</td>
+          <td>Ad macro</td>
         </tr>
+ -->
         <tr>
-          <td><code>&platform={{url.PLATFORM}}&os={{url.OS}}<br>&app_id={{url.APP_ID}}&rdid={{url.RDID}}</code></td>
+          <td><code>&platform={{url.platform}}&os={{url.os}}<br>&app_id={{url.app_id}}&rdid={{url.rdid}}</code></td>
           <td>Beacon ad targeting variables</td>
         </tr>
       </tbody>
@@ -303,14 +304,14 @@ grandparent: Monetization
     <h4 id="Live_SSAI_ad_tag_creation">Live SSAI ad tag creation</h4>
     <p>To build the proper ad tag for the Live SSAI creation in Video Cloud Studio follow these steps:</p>
     <ol>
-      <li>In your ad targeting variables, make all the single braces into <strong>double</strong> braces.
-        <pre class="line-numbers"><code class="language-html" translate="No">platform={{PLATFORM}}&os={{OS}}&app_id={{APP_ID}}&rdid={{RDID}}</code></pre>
+      <li>In your ad targeting variables, make all the single braces into <strong>double</strong> braces and change the macro values to lowercase.
+        <pre class="line-numbers"><code class="language-html" translate="No">platform={{platform}}&os={{os}}&app_id={{app_id}}&rdid={{rdid}}</code></pre>
       </li>
-      <!--       <li>Remove the varialbe name and equals sign <code>=</code> in front of each ad targeting variable.
+      <!--       <li>Remove the variable name and equals sign <code>=</code> in front of each ad targeting variable.
         <pre class="line-numbers"><code class="language-html" translate="No">platform={{url.PLATFORM}}&os={{url.OS}}&app_id={{url.APP_ID}}&rdid={{url.RDID}}</code></pre>
       </li> -->
       <li>Use your ad tag and append the altered ad targeting variable query string, adding <code>&</code> (ampersand) in front of the ad targeting query string:
-        <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&document.referrer={{document.referrer}}&platform={{PLATFORM}}&os={{OS}}&app_id={{APP_ID}}&rdid={{RDID}}</code></pre>
+        <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&platform={{platform}}&os={{os}}&app_id={{app_id}}&rdid={{rdid}}</code></pre>
       </li>
     </ol>
     <p>The different parts of the ad tag are detailed in the following table:
@@ -326,12 +327,12 @@ grandparent: Monetization
           <td><code>https://ads.brightcove.com/ads?tech=dfpadrules&dur=15</code></td>
           <td>Base URL of ad server and standard query parameters</td>
         </tr>
-        <tr>
+        <!--         <tr>
           <td><code>&document.referrer={{document.referrer}}</code></td>
-          <td>Ad macros, in this case for IMA3</td>
-        </tr>
+          <td>Ad macros</td>
+        </tr> -->
         <tr>
-          <td><code>&platform={{PLATFORM}}&os={OS}}<br>&app_id={{APP_ID}}&rdid={{RDID}}</code></td>
+          <td><code>&platform={{platform}}&os={os}}<br>&app_id={{app_id}}&rdid={{rdid}}</code></td>
           <td>Beacon ad targeting variables</td>
         </tr>
       </tbody>

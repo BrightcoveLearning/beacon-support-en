@@ -797,13 +797,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <ul>
               <li>The base URL for your ad server.</li>
               <li>URL parameters needed by your ad server.</li>
-              <li>Optionally, ad macros which are marked by double braces <code>{{ }}</code>. Ad macros are variables you can use that provide appropriate values for your ad request. See the <a href="https://player.support.brightcove.com/plugins/advertising-ima3-plugin.html#Ad_macros_and_the_serverUrl">Ad macros and the serverUrl</a> section of the <strong>Advertising with the IMA3 Plugin</strong> document for more information.</li>
               <li>An example ad tag used in the Video Cloud setup would follow this format:
-                <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&document.referrer={{document.referrer}}</code></pre>
+                <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15</code></pre>
               </li>
             </ul>
           </li>
-          <li>The IMA3 ad macros, mentioned just above, are only used in Beacon web apps. All other app platforms use ad targeting. If ad macros are used, they simply are ignored for all non-web apps.</li>
+          <li>If client-side ad macros are used, they are only valid for Beacon web apps. All other app platforms use ad targeting. If ad macros are used, they simply are ignored for all non-web apps.</li>
           <li>See the <a href="/monetization/ssai/vod-ssai.html">Implementing VOD SSAI</a>, <a href="/monetization/ssai/live-ssai.html">Implementing Live SSAI</a> and <a href="https://player.support.brightcove.com/plugins/implementing-server-side-ads-brightcove-player.html">Implementing Server-Side Ads with Brightcove Player</a> documents for more information on setting up SSAI.</li>
           <!-- <li>Client-side macros for the web are expanded by the player. Please follow the documentation at <a href="https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Client_side_macros">https://apis.support.brightcove.com/ssai/getting-started/video-cloud-ssai-ad-config-api.html#Client_side_macros</a> to setup client-side macros. If support is needed for client-side macros, that should be logged through Brightcove support for Brightcove Player.</li> -->
           <li>When finished with the SSAI configuration, copy the ID for that ad configuration which will be used in the Beacon setup.</li>
@@ -822,6 +821,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="ad_targeting_information">Ad Targeting information</h2>
     <p>You can target ads based on the information in the table below:</p>
+    <aside class="bcls-aside bcls-aside--tip language-editable">The <em>Variable Name</em> column is using <a href="https://support.google.com/admanager/answer/10660756?hl=en&ref_topic=10684636">Google Ad Manager parameter names</a>. The variable names you use must be those required by your ad platform. For instance, you can see Spring Serve's parameter names in their <a href="https://springserve.atlassian.net/wiki/spaces/SSD/pages/1573158912/Macros">Macros</a> document.</aside>
     <table class="bcls-table">
       <caption class="bcls-caption--table">Targeting Information</caption>
       <thead class="bcls-table__head">
@@ -1007,7 +1007,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Building_the_ad_tag">Building the ad tag</h2>
     <p>For the two sections below where you create an ad configuration in Video Cloud Studio, you need to combine your ad tag for your ad server and a modified version of your ad targeting variables query string.</p>
     <p>For the instructions below, the ad server tag from the <em>Overview</em> section are used:
-    <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&document.referrer={{document.referrer}}</code></pre>
+    <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15</code></pre>
     </p>
     <p>For the instructions below, Beacon ad targeting variables from the <em>Build your ad targeting parameters</em> section are used:
     <pre class="line-numbers"><code class="language-html" translate="No">platform={PLATFORM}&os={OS}&app_id={APP_ID}&rdid={RDID}</code></pre>
@@ -1015,14 +1015,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h4 id="VOD_SSAI_ad_tag_creation">VOD SSAI ad tag creation</h4>
     <p>To build the proper ad tag for the VOD SSAI creation in Video Cloud Studio follow these steps:</p>
     <ol>
-      <li>In your ad targeting variables, make all the single braces into <strong>double</strong> braces.
-        <pre class="line-numbers"><code class="language-html" translate="No">platform={{PLATFORM}}&os={{OS}}&app_id={{APP_ID}}&rdid={{RDID}}</code></pre>
+      <li>In your ad targeting variables, make all the single braces into <strong>double</strong> braces and change the macro values to lowercase.
+        <pre class="line-numbers"><code class="language-html" translate="No">platform={{platform}}&os={{os}}&app_id={{app_id}}&rdid={{rdid}}</code></pre>
       </li>
       <li>Add <code>url.</code> in front of each value in the double curly braces.
-        <pre class="line-numbers"><code class="language-html" translate="No">platform={{url.PLATFORM}}&os={{url.OS}}&app_id={{url.APP_ID}}&rdid={{url.RDID}}</code></pre>
+        <pre class="line-numbers"><code class="language-html" translate="No">platform={{url.platform}}&os={{url.os}}&app_id={{url.app_id}}&rdid={{url.rdid}}</code></pre>
       </li>
       <li>Use your ad tag and append the altered ad targeting variable query string, adding <code>&</code> (ampersand) in front of the ad targeting query string:
-        <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&document.referrer={{document.referrer}}&platform={{url.PLATFORM}}&os={{url.OS}}&app_id={{url.APP_ID}}&rdid={{url.RDID}}</code></pre>
+        <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&platform={{url.platform}}&os={{url.os}}&app_id={{url.app_id}}&rdid={{url.rdid}}</code></pre>
       </li>
     </ol>
     <p>The different parts of the ad tag are detailed in the following table:
@@ -1038,12 +1038,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td><code>https://ads.brightcove.com/ads?tech=dfpadrules&dur=15</code></td>
           <td>Base URL of ad server and standard query parameters</td>
         </tr>
-        <tr>
+        <!--         <tr>
           <td><code>&document.referrer={{document.referrer}}</code></td>
-          <td>Ad macros, in this case for IMA3</td>
+          <td>Ad macro</td>
         </tr>
+ -->
         <tr>
-          <td><code>&platform={{url.PLATFORM}}&os={{url.OS}}<br>&app_id={{url.APP_ID}}&rdid={{url.RDID}}</code></td>
+          <td><code>&platform={{url.platform}}&os={{url.os}}<br>&app_id={{url.app_id}}&rdid={{url.rdid}}</code></td>
           <td>Beacon ad targeting variables</td>
         </tr>
       </tbody>
@@ -1053,14 +1054,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h4 id="Live_SSAI_ad_tag_creation">Live SSAI ad tag creation</h4>
     <p>To build the proper ad tag for the Live SSAI creation in Video Cloud Studio follow these steps:</p>
     <ol>
-      <li>In your ad targeting variables, make all the single braces into <strong>double</strong> braces.
-        <pre class="line-numbers"><code class="language-html" translate="No">platform={{PLATFORM}}&os={{OS}}&app_id={{APP_ID}}&rdid={{RDID}}</code></pre>
+      <li>In your ad targeting variables, make all the single braces into <strong>double</strong> braces and change the macro values to lowercase.
+        <pre class="line-numbers"><code class="language-html" translate="No">platform={{platform}}&os={{os}}&app_id={{app_id}}&rdid={{rdid}}</code></pre>
       </li>
-      <!--       <li>Remove the varialbe name and equals sign <code>=</code> in front of each ad targeting variable.
+      <!--       <li>Remove the variable name and equals sign <code>=</code> in front of each ad targeting variable.
         <pre class="line-numbers"><code class="language-html" translate="No">platform={{url.PLATFORM}}&os={{url.OS}}&app_id={{url.APP_ID}}&rdid={{url.RDID}}</code></pre>
       </li> -->
       <li>Use your ad tag and append the altered ad targeting variable query string, adding <code>&</code> (ampersand) in front of the ad targeting query string:
-        <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&document.referrer={{document.referrer}}&platform={{PLATFORM}}&os={{OS}}&app_id={{APP_ID}}&rdid={{RDID}}</code></pre>
+        <pre class="line-numbers"><code class="language-html" translate="No">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&platform={{platform}}&os={{os}}&app_id={{app_id}}&rdid={{rdid}}</code></pre>
       </li>
     </ol>
     <p>The different parts of the ad tag are detailed in the following table:
@@ -1076,12 +1077,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td><code>https://ads.brightcove.com/ads?tech=dfpadrules&dur=15</code></td>
           <td>Base URL of ad server and standard query parameters</td>
         </tr>
-        <tr>
+        <!--         <tr>
           <td><code>&document.referrer={{document.referrer}}</code></td>
-          <td>Ad macros, in this case for IMA3</td>
-        </tr>
+          <td>Ad macros</td>
+        </tr> -->
         <tr>
-          <td><code>&platform={{PLATFORM}}&os={OS}}<br>&app_id={{APP_ID}}&rdid={{RDID}}</code></td>
+          <td><code>&platform={{platform}}&os={os}}<br>&app_id={{app_id}}&rdid={{rdid}}</code></td>
           <td>Beacon ad targeting variables</td>
         </tr>
       </tbody>
@@ -1222,7 +1223,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 20 Oct 2021
+  Page last updated on 21 Oct 2021
 </div>
 
 

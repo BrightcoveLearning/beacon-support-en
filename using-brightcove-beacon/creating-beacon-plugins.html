@@ -13,7 +13,7 @@ layout: "staging"
     <p></p>
     <pre class="line-numbers"><code class="language-javascript" translate="No">window.addEventListener("message",
   (event) => {
-    console.log('event: ', event)
+    console.log('event: ', event);
   },
   false
 );</code></pre>
@@ -21,7 +21,18 @@ layout: "staging"
       <img class="bcls-image" src="/assets/images/using-bcb/creating-beacon-plugins/console-1-show-event.png" alt="console 1 show event">
     </figure>
 
+
+
+    <pre class="line-numbers"><code class="language-javascript" translate="No">window.addEventListener("message",
+  (event) => {
+    const originsAllowed = [
+      'https://beacon-web.ott.us-east-1.qa.deploys.brightcove.com'
+    ]
+    if (originsAllowed.includes(event.origin)) {
+      console.log('event: ', event)
+    }
+  },
+  false
+);</code></pre>
   </section>
 </article>
-
-IF NEEDED

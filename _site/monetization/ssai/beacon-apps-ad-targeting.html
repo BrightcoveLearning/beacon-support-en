@@ -762,21 +762,30 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   
   <section class="bcls-section">
     <h2 id="introduction">Introduction</h2>
-    <p>Through add targeting, client-side information is passed from the apps to SSAI (Server Side Ad Insertion) which allows you to target ads based on the clients' data. The process is implemented as follows:</p>
+    <h2>The purpose of ad targeting is to increase the value of your ad inventory, therefore increasing ad revenue for your business.</h2>
+    <p>Ad targeting allows you to target ads based on the clients' data. The process of how client-side data is passed from the Beacon apps to SSAI (Server Side Ad Insertion)is implemented as follows:</p>
     <ul>
-      <li>Ad targeting variable/value pairs are passed to the playback infrastructure.</li>
-      <li>The playback infrastructure then in turn passes the targeting information to SSAI via {{url.xxx}} ad macros.</li>
-      <li>SSAI then requests ads from your ad server using a VAST tag using the client side information.</li>
+      <li>Ad targeting variables are use in a Beacon Classic ad configuration setup. Example:
+        <pre class="line-numbers"><code class="language-html" translate="No">platform={PLATFORM}</code></pre>
+      </li>
+      <li>The Beacon app passes the ad targeting variables to Brightcove playback infrastructure with values gathered from from the particular app platform. The values are substituted for the variables. Example:
+        <pre class="line-numbers"><code class="language-html" translate="No">platform=iOS</code></pre>
+      </li>
+      <li>The playback infrastructure then in turn passes the targeting information to SSAI via {{url.xxx}} ad macros. Example:
+        <pre class="line-numbers"><code class="language-html" translate="No">platform={{url.platform}}</code></pre>
+      </li>
+      <li>SSAI then requests ads from your ad server using a VAST tag using the client side information. Example:
+        <pre class="line-numbers"><code class="language-html" translate="No">platform=iOS</code></pre>
+      </li>
     </ul>
-    <p>The purpose of this is to increase the value of your ad inventory, therefore increasing ad revenue for your business.</p>
-    <p>Within Video Cloud Studio and Beacon Classic, you can set up how this data is passed to your ad server or ad provider.</p>
+    <p>Further details and exact configuration steps follow later in this document.</p>
   </section>
   <section class="bcls-section">
     <h2 id="key_benefits">Benefits</h2>
     <h3>Improved ad targeting</h3>
     <ul>
-      <li><strong>User Session ID:</strong> Brightcove generates a session ID on each device when a user opens the app. This allows you to frequency-cap ads to that session, exclude competitive ads from being served together, and sequentially rotate ads in that session. These targeting capabilities are both necessary for direct-sold and programmatic ads.</li>
-      <li><strong>More data for programmatic ads:</strong> Mobile apps and CTV apps don’t support cookies, which is the dominant method for user/device-based ad targeting on the web. By including parameters like Device ID, you can pass this valuable information to programmatic ad buyers, which then enhances your ad targeting capabilities, leading to greater CPMs.</li>
+      <li><strong>User Session ID</strong>: Brightcove generates a session ID on each device when a user opens the app. This allows you to frequency-cap ads to that session, exclude competitive ads from being served together, and sequentially rotate ads in that session. These targeting capabilities are both necessary for direct-sold and programmatic ads.</li>
+      <li><strong>More data for programmatic ads</strong>: Mobile apps and CTV apps don’t support cookies, which is the dominant method for user/device-based ad targeting on the web. By including parameters like Device ID, you can pass this valuable information to programmatic ad buyers, which then enhances your ad targeting capabilities, leading to greater CPMs.</li>
     </ul>
     <h3>Support for Ad Inventory split</h3>
     <p>For apps that run on Amazon, Roku, and Samsung (in the US), you are required to do a 70/30 split of ad inventory/revenue with the platform. This means Brightcove Beacon customers monetize 70% of the ad inventory and the platform gets the remaining 30% of the ad inventory. With this enhanced ad targeting, you can use one ad tag across all of your apps and pass the device parameters to your ad server. Inside your ad server, implement the business logic that splits the ad inventory by device. The platforms also require passing Limited Ad Targeting (LAT) for Ad Inventory Split, which is a parameter Brightcove is now sending to your ad server.</p>
@@ -811,7 +820,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Create an Advertisement Configuration in Beacon Classic</li>
       <ul>
         <li>You supply the ID of the SSAI configuration created in Video Cloud Studio when creating the Beacon Ad Configuration. This associates the ad configuration with your ad platform.</li>
-        <li>In the Beacon Ad Configuration you supply only the ad targeting variables query string.</li>
+        <li>In the Beacon Ad Configuration you supply only the ad targeting variables query string. This is required here as the particular platform's app must gather the client side data at this point so it can be used later when the playback infrastructure makes a request to SSAI.</li>
         <li>Ten ad targeting variables are available for use, detailed in the next section of this document.</li>
         <li>The ad targeting variables are used by all apps, with the exception of web apps do NOT use <code>RDID</code>, <code>IDTYPE</code>, <code>APP_ID</code> and <code>IS_LAT</code>. The ad targeting variables are detailed in the next section of this document.</li>
       </ul>
@@ -827,7 +836,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <thead class="bcls-table__head">
         <tr>
           <th>Type of Information</th>
-          <th>Variable Name</th>
+          <th>Variable Name<br>(See note just above table)</th>
           <th>Value Macro</th>
           <th>Values</th>
         </tr>
@@ -836,55 +845,55 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td>Platform</td>
           <td><code translate="no">platform</code></td>
-          <td><strong>PLATFORM</strong></td>
+          <td><strong>{PLATFORM}</strong></td>
           <td><code translate="No">iOS</code>, <code translate="No">Android</code>, <code translate="No">Roku</code>, <code translate="No">AppleTV</code>, <code translate="No">Web</code>, <code translate="No">STV</code></td>
         </tr>
         <tr>
           <td>OS version</td>
           <td><code translate="no">os</code></td>
-          <td><strong>OS</strong></td>
+          <td><strong>{OS}</strong></td>
           <td>device os version (for example, <code translate="No">iOS 14</code>)</td>
         </tr>
         <tr>
           <td>Device model</td>
           <td><code translate="no">model</code></td>
-          <td><strong>MODEL</strong></td>
+          <td><strong>{MODEL}</strong></td>
           <td>device model. Browser version used for web apps</td>
         </tr>
         <tr>
           <td>Manufacturer</td>
           <td><code translate="no">mfgr</code></td>
-          <td><strong>MFGR</strong></td>
+          <td><strong>{MFGR}</strong></td>
           <td>device manufacturer; browser name used for web apps</td>
         </tr>
         <tr>
           <td>Language</td>
           <td><code translate="no">lang</code></td>
-          <td><strong>LOCALE</strong></td>
+          <td><strong>{LOCALE}</strong></td>
           <td>Language code set in the App (that comes from CMS)</td>
         </tr>
         <tr>
           <td>User session</td>
           <td><code translate="no">sid</code></td>
-          <td><strong>SID</strong></td>
+          <td><strong>{SID}</strong></td>
           <td>Every time that app launches we want to have a unique integer created that is stored in memory and not persisted</td>
         </tr>
         <tr>
           <td>Unique Device ID</td>
           <td><code translate="no">rdid</code></td>
-          <td><strong>RDID</strong></td>
+          <td><strong>{RDID}</strong></td>
           <td>Resettable device ID (TIFA = Samsung, rida = Roku, adid = Android, etc) - if limited ad targeting is set on the App, then the id should be all zeros (not possible to identify the user/device). This item is not applicable to the web.</td>
         </tr>
         <tr>
           <td>Is the user allowing tracking</td>
           <td><code translate="no">is_lat</code></td>
-          <td><strong>IS_LAT</strong></td>
+          <td><strong>{IS_LAT}</strong></td>
           <td>0 if user has not opted to limit targeting, 1 if limiting ad targeting. This item is not applicable to the web.</td>
         </tr>
         <tr>
           <td>device type</td>
           <td><code translate="no">idtype</code></td>
-          <td><strong>IDTYPE</strong></td>
+          <td><strong>{IDTYPE}</strong></td>
           <td>
             <ul>
               <li>adid: Android</li>
@@ -902,7 +911,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <tr>
           <td>App identifier</td>
           <td><code translate="no">app_id</code></td>
-          <td><strong>APP_ID</strong></td>
+          <td><strong>{APP_ID}</strong></td>
           <td>This should be the App bundle name. This item is not applicable to the web.</td>
         </tr>
       </tbody>

@@ -735,7 +735,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="key_benefits">Benefits</h2>
     <h3>Improved ad targeting</h3>
     <ul>
-      <li><strong>User Session ID:</strong> we generate a session ID on each device when a user opens the app. This  allows you to frequency-cap ads to that session, exclude competitive ads from being served together, and sequentially rotate ads in that session. These targeting capabilities are both necessary for direct-sold and programmatic ads</li>
+      <li><strong>User Session ID:</strong> we generate a session ID on each device when a user opens the app. This allows you to frequency-cap ads to that session, exclude competitive ads from being served together, and sequentially rotate ads in that session. These targeting capabilities are both necessary for direct-sold and programmatic ads</li>
       <li><strong>More data for programmatic ads:</strong> Mobile apps and CTV apps don’t support cookies, which is the dominant method for user/device-based ad targeting on the web. By including params like Device ID, you can pass this valuable information to programmatic ad buyers, which will then enhance their ad targeting capabilities, leading to greater CPMs.</li>
     </ul>
     <h3>Support for Ad Inventory split</h3>
@@ -752,71 +752,72 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <caption class="bcls-caption--table">Targeting Information</caption>
       <thead class="bcls-table__head">
-          <tr>
-              <th>Type of information</th>
-              <th>Variable Name</th>
-              <th>Values</th>
-          </tr>
+        <tr>
+          <th>Type of information</th>
+          <th>Variable Name</th>
+          <th>Value Macro</th>
+          <th>Values</th>
+        </tr>
       </thead>
       <tbody class="bcls-table__body">
-          <tr>
-              <td>Platform</td>
-              <td><code translate="no">platform</code></td>
-              <td><code translate="No">iOS</code>, <code translate="No">Android</code>, <code translate="No">Roku</code>, <code translate="No">AppleTV</code>, <code translate="No">Web</code>, <code translate="No">STV</code></td>
-          </tr>
-          <tr>
-              <td>OS version</td>
-              <td><code translate="no">os</code></td>
-              <td>device os version (for example, <code translate="No">iOS 14</code></td>
-          </tr>
-          <tr>
-              <td>Device model</td>
-              <td><code translate="no">model</code></td>
-              <td>device model. Browser version used for web apps</td>
-          </tr>
-          <tr>
-              <td>Manufacturer</td>
-              <td><code translate="no">mfgr</code></td>
-              <td>device manufacturer; browser name used for web apps</td>
-          </tr>
-          <tr>
-              <td>Language</td>
-              <td><code translate="no">lang</code></td>
-              <td>Language code set in the App (that comes from CMS)</td>
-          </tr>
-          <tr>
-              <td>User session</td>
-              <td><code translate="no">sid</code></td>
-              <td>Every time that app launches we want to have a unique integer created that is stored in memory and not persisted</td>
-          </tr>
-          <tr>
-              <td>Unique Device ID</td>
-              <td><code translate="no">rdid</code></td>
-              <td>Resettable device ID (TIFA = Samsung, rida = Roku, adid = Android, etc) - if limited ad targeting is set on the App, then the id should be all zeros (not possible to identify the user/device). This item is not applicable to the web.</td>
-          </tr>
-          <tr>
-              <td>Is the user allowing tracking</td>
-              <td><code translate="no">is_lat</code></td>
-              <td>0 if user has not opted to limit targeting, 1 if limiting ad targeting. This item is not applicable to the web.</td>
-          </tr>
-          <tr>
-              <td>device type</td>
-              <td><code translate="no">idtype</code></td>
-              <td>adid = Android, idfa = Apple phones (iOS), afai = Amazon,  rida: Roku
-                tvOS: AppleTV (tvOS)</td>
-          </tr>
-          <tr>
-              <td>App identifier</td>
-              <td><code translate="no">app_id</code></td>
-              <td>This should be the App bundle name (<code translate="no">com.brightcove.beacon</code>)</td>
-          </tr>
+        <tr>
+          <td>Platform</td>
+          <td><code translate="no">platform</code></td>
+          <td><code translate="No">iOS</code>, <code translate="No">Android</code>, <code translate="No">Roku</code>, <code translate="No">AppleTV</code>, <code translate="No">Web</code>, <code translate="No">STV</code></td>
+        </tr>
+        <tr>
+          <td>OS version</td>
+          <td><code translate="no">os</code></td>
+          <td>device os version (for example, <code translate="No">iOS 14</code></td>
+        </tr>
+        <tr>
+          <td>Device model</td>
+          <td><code translate="no">model</code></td>
+          <td>device model. Browser version used for web apps</td>
+        </tr>
+        <tr>
+          <td>Manufacturer</td>
+          <td><code translate="no">mfgr</code></td>
+          <td>device manufacturer; browser name used for web apps</td>
+        </tr>
+        <tr>
+          <td>Language</td>
+          <td><code translate="no">lang</code></td>
+          <td>Language code set in the App (that comes from CMS)</td>
+        </tr>
+        <tr>
+          <td>User session</td>
+          <td><code translate="no">sid</code></td>
+          <td>Every time that app launches we want to have a unique integer created that is stored in memory and not persisted</td>
+        </tr>
+        <tr>
+          <td>Unique Device ID</td>
+          <td><code translate="no">rdid</code></td>
+          <td>Resettable device ID (TIFA = Samsung, rida = Roku, adid = Android, etc) - if limited ad targeting is set on the App, then the id should be all zeros (not possible to identify the user/device). This item is not applicable to the web.</td>
+        </tr>
+        <tr>
+          <td>Is the user allowing tracking</td>
+          <td><code translate="no">is_lat</code></td>
+          <td>0 if user has not opted to limit targeting, 1 if limiting ad targeting. This item is not applicable to the web.</td>
+        </tr>
+        <tr>
+          <td>device type</td>
+          <td><code translate="no">idtype</code></td>
+          <td>adid = Android, idfa = Apple phones (iOS), afai = Amazon, rida: Roku
+            tvOS: AppleTV (tvOS)</td>
+        </tr>
+        <tr>
+          <td>App identifier</td>
+          <td><code translate="no">app_id</code></td>
+          <td>This should be the App bundle name (<code translate="no">com.brightcove.beacon</code>)</td>
+        </tr>
       </tbody>
-  </table>
-  <h3>Notes</h3>
-  <ul>
-    <li>This feature works across all platforms/devices iOS, Apple TV, Android, Roku, Fire TV, Web, and Smart TVs.</li>
-    <li>Beacon Apps Ad targeting can be used with both VOD SSAI and Live SSAI.</li>
-  </ul>
+    </table>
+    <h3>Notes</h3>
+    <ul>
+      <li>This feature works across all platforms/devices iOS, Apple TV, Android, Roku, Fire TV, Web, and Smart TVs.</li>
+      <li>Beacon Apps Ad targeting can be used with both VOD SSAI and Live SSAI.</li>
+    </ul>
   </section>
   <section class="bcls-section">
     <h2 id="Implementation">Implementation</h2>
@@ -824,105 +825,105 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <table class="bcls-table">
       <caption class="bcls-caption--table">Value Macros</caption>
       <thead class="bcls-table__head">
-          <tr>
-              <th>Macro</th>
-              <th>Description</th>
-          </tr>
+        <tr>
+          <th>Macro</th>
+          <th>Description</th>
+        </tr>
       </thead>
       <tbody class="bcls-table__body">
-          <tr>
-              <td translate="no" style="font-weight:bold">PLATFORM</td>
-              <td>The appropriate beacon platform: iOS, AppleTV, Android, Roku, Web, STV</td>
-          </tr>
-          <tr>
-              <td translate="no" style="font-weight:bold">OS</td>
-              <td>full qualified OS (including version) - example iOS 14</td>
-          </tr>
-          <tr>
-              <td translate="no" style="font-weight:bold">MFGR</td>
-              <td>the Manufacturer of the device; (Web - user's browser)</td>
-          </tr>
-          <tr>
-              <td translate="no" style="font-weight:bold">MODEL</td>
-              <td>Device Model; (Web - browser version)</td>
-          </tr>
-          <tr>
-              <td translate="no" style="font-weight:bold">APP_ID</td>
-              <td>Application id (for example bundle ID); Web: app domain</td>
-          </tr>
-          <tr>
-              <td translate="no" style="font-weight:bold">LOCALE</td>
-              <td>ISO 639-1 (2-letter) language code followed by an underscore and a ISO 3166-1 (2-letter) country code (example en_us) - language set in the app</td>
-          </tr>
-          <tr>
-              <td translate="no" style="font-weight:bold">RDID</td>
-              <td>Resettable device ID (<code translate="no">tifa</code>: Samsung, <code translate="no">rida</code>: Roku, <code translate="no">adid</code>: Android, etc. - see <a href="#Device_identifiers">Device indentifiers</a> below for more values) - if <strong>limited ad targeting</strong> is set on the App, then the id should be all zeros (meaning not possible to identify the user/device)</td>
-          </tr>
-          <tr>
-              <td translate="no" style="font-weight:bold">IDTYPE</td>
-              <td>Type resettable ID (<code translate="no">tifa</code>: Samsung, <code translate="no">rida</code>: Roku, <code translate="no">adid</code>: Android, etc. - see <a href="#Device_identifiers">Device indentifiers</a> below for more values)</td>
-          </tr>
-          <tr>
-              <td translate="no" style="font-weight:bold">IS_LAT</td>
-              <td>Flag that tells if limited ad targeting is selected by user: <code translate="no">0</code> if user has not opted to limit targeting, <code translate="no">1</code> if limiting ad targeting</td>
-          </tr>
-          <tr>
-              <td translate="no" style="font-weight:bold">SID</td>
-              <td>Unique session identifier (reset every time the app starts). Not dependent on user sign in / Sign up. Switching from foreground to background status does not change this ID.</td>
-          </tr>
+        <tr>
+          <td translate="no" style="font-weight:bold">PLATFORM</td>
+          <td>The appropriate beacon platform: iOS, AppleTV, Android, Roku, Web, STV</td>
+        </tr>
+        <tr>
+          <td translate="no" style="font-weight:bold">OS</td>
+          <td>full qualified OS (including version) - example iOS 14</td>
+        </tr>
+        <tr>
+          <td translate="no" style="font-weight:bold">MFGR</td>
+          <td>the Manufacturer of the device; (Web - user's browser)</td>
+        </tr>
+        <tr>
+          <td translate="no" style="font-weight:bold">MODEL</td>
+          <td>Device Model; (Web - browser version)</td>
+        </tr>
+        <tr>
+          <td translate="no" style="font-weight:bold">APP_ID</td>
+          <td>Application id (for example bundle ID); Web: app domain</td>
+        </tr>
+        <tr>
+          <td translate="no" style="font-weight:bold">LOCALE</td>
+          <td>ISO 639-1 (2-letter) language code followed by an underscore and a ISO 3166-1 (2-letter) country code (example en_us) - language set in the app</td>
+        </tr>
+        <tr>
+          <td translate="no" style="font-weight:bold">RDID</td>
+          <td>Resettable device ID (<code translate="no">tifa</code>: Samsung, <code translate="no">rida</code>: Roku, <code translate="no">adid</code>: Android, etc. - see <a href="#Device_identifiers">Device indentifiers</a> below for more values) - if <strong>limited ad targeting</strong> is set on the App, then the id should be all zeros (meaning not possible to identify the user/device)</td>
+        </tr>
+        <tr>
+          <td translate="no" style="font-weight:bold">IDTYPE</td>
+          <td>Type resettable ID (<code translate="no">tifa</code>: Samsung, <code translate="no">rida</code>: Roku, <code translate="no">adid</code>: Android, etc. - see <a href="#Device_identifiers">Device indentifiers</a> below for more values)</td>
+        </tr>
+        <tr>
+          <td translate="no" style="font-weight:bold">IS_LAT</td>
+          <td>Flag that tells if limited ad targeting is selected by user: <code translate="no">0</code> if user has not opted to limit targeting, <code translate="no">1</code> if limiting ad targeting</td>
+        </tr>
+        <tr>
+          <td translate="no" style="font-weight:bold">SID</td>
+          <td>Unique session identifier (reset every time the app starts). Not dependent on user sign in / Sign up. Switching from foreground to background status does not change this ID.</td>
+        </tr>
       </tbody>
-		</table>
+    </table>
 
-		<h4 id="Device_identifiers">Device identifiers</h4>
-		<ul>
-			<li>adid: Android</li>
-			<li>afai: Amazon</li>
-			<li>tvOS: AppleTV (tvOS)</li>
-			<li>idfa: Apple phones (iOS)</li>
-			<li>rida: Roku</li>
-			<li>tifa: Samsung</li>
-			<li>vida: Vizio</li>
-			<li>msai: Xbox</li>
-		</ul>
+    <h4 id="Device_identifiers">Device identifiers</h4>
+    <ul>
+      <li>adid: Android</li>
+      <li>afai: Amazon</li>
+      <li>tvOS: AppleTV (tvOS)</li>
+      <li>idfa: Apple phones (iOS)</li>
+      <li>rida: Roku</li>
+      <li>tifa: Samsung</li>
+      <li>vida: Vizio</li>
+      <li>msai: Xbox</li>
+    </ul>
   </section>
   
   <section class="bcls-section">
-		<h2 id="VOD_steps">VOD steps</h2>
-		<h3>Video Cloud part - VOD</h3>
-		<ol class="bcls-tasklist-restart">
-			<li>
-				Create an ad config from the <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">Server Side Ad settings page in Studio</a>:
-				<ol>
-					<li>
-						Click <span class="blue-button">Create Ad Configuration</span> and select <strong>VOD</strong>
-						<figure class="bcls-figure">
-							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/create-vod-ad-config.png" alt="Create VOD Ad Config">
-							<figcaption class="bcls-caption--image">Create VOD Ad Config</figcaption>
-						</figure>
-						<figure class="bcls-figure">
-							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-vod.png" alt="SSAI Configuration VOD">
-							<figcaption class="bcls-caption--image">SSAI Configuration VOD</figcaption>
-						</figure>
-					</li>
-					<li>Add a name for the ad config<./li>
-					<li>Select your ad response - VMAP or Vast is recommended. If you use Vast, you will need to add cuepoints to the videos to specify where ad breaks should appear.</li>
-					<li>Paste in your ad tag (from you ad provider).</li>
-					<li>Copy your ad config ID, as you will need it for the Beacon advertising configuration.</li>
-				</ol>
-			</li>
-			</ol>
-			<h3>Beacon part - VOD</h3>
-			<ol class="bcls-tasklist-restart">
-				<li>
+    <h2 id="VOD_steps">VOD steps</h2>
+    <h3>Video Cloud part - VOD</h3>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        Create an ad config from the <a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html">Server Side Ad settings page in Studio</a>:
+        <ol>
+          <li>
+            Click <span class="blue-button">Create Ad Configuration</span> and select <strong>VOD</strong>
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/create-vod-ad-config.png" alt="Create VOD Ad Config">
+              <figcaption class="bcls-caption--image">Create VOD Ad Config</figcaption>
+            </figure>
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-vod.png" alt="SSAI Configuration VOD">
+              <figcaption class="bcls-caption--image">SSAI Configuration VOD</figcaption>
+            </figure>
+          </li>
+          <li>Add a name for the ad config<. /li>
+          <li>Select your ad response - VMAP or Vast is recommended. If you use Vast, you will need to add cuepoints to the videos to specify where ad breaks should appear.</li>
+          <li>Paste in your ad tag (from you ad provider).</li>
+          <li>Copy your ad config ID, as you will need it for the Beacon advertising configuration.</li>
+        </ol>
+      </li>
+    </ol>
+    <h3>Beacon part - VOD</h3>
+    <ol class="bcls-tasklist-restart">
+      <li>
         Open the Beacon Classic UI and go the Advertisement tab:
         <ol>
           <li>
-						Click <span class="button-teal">Add New Configuration</span>
-						<figure class="bcls-figure">
-							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/advertising-config-vod.png" alt="Beacon Ad Configuration">
-							<figcaption class="bcls-caption--image">Beacon Ad Configuration VOD</figcaption>
-						</figure>
-					</li>
+            Click <span class="button-teal">Add New Configuration</span>
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/advertising-config-vod.png" alt="Beacon Ad Configuration">
+              <figcaption class="bcls-caption--image">Beacon Ad Configuration VOD</figcaption>
+            </figure>
+          </li>
           <li>Name the Ad Configuration</li>
           <li>Select <strong>Brightcove SSAI</strong></li>
           <li>Paste in the <strong>SSAI ad config ID</strong> into <strong>VOD Ad Config ID</strong></li>
@@ -937,62 +938,62 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <li><strong>These params get translated into this in this Ad tag:</strong> <code translate="no">https://ads.brightcove.com/ads?tech=dfpadrules&dur=15&pre=3&d={{url.d}}&os={{url.os}}&appid={{url.appid}}&did={{url.did}}&dt={{url.dt}}&lat={{url.latl}}&sid={{url.sid}}</code></li>
         </ol>
       </li>
-		</ol>
+    </ol>
   </section>
   <section class="bcls-section">
     <h2 id="Live_steps">Live steps</h2>
     <ol class="bcls-tasklist-restart">
-			<li>
-				First, construct your ad-targeting parameter string, as you you will need it both in the SSAI and Beacon configurations. You can reuse the params for VOD, or select a different set.
-				<p>Example:</p>
-				<pre><code translate="no">ip={{client.ipaddress}}&num={{random.int32}}&d={{PLATFORM}}&os={{OS}}&did={{RDID}}&dt={{IDTYPE}}&lat={{IS_LAT}}</code></pre>
-			</li>
+      <li>
+        First, construct your ad-targeting parameter string, as you you will need it both in the SSAI and Beacon configurations. You can reuse the params for VOD, or select a different set.
+        <p>Example:</p>
+        <pre><code translate="no">ip={{client.ipaddress}}&num={{random.int32}}&d={{PLATFORM}}&os={{OS}}&did={{RDID}}&dt={{IDTYPE}}&lat={{IS_LAT}}</code></pre>
+      </li>
       <li>
         Create an ad config from <a href="https://live.support.brightcove.com/live-module/implementing-server-side-ads-live-module.html">the Server Side Ad settings page in Studio</a>:
         <ol>
           <li>
-						Click <span class="blue-button">Create Ad Configuration</span> and select <strong>Live</strong>
-						<figure class="bcls-figure">
-							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/create-live-ad-config.png" alt="Create Live Ad Config">
-							<figcaption class="bcls-caption--image">Create Live Ad Config</figcaption>
-						</figure>
-						<figure class="bcls-figure">
-							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-live.png" alt="SSAI Configuration Live">
-							<figcaption class="bcls-caption--image">SSAI Configuration Live</figcaption>
-						</figure>
+            Click <span class="blue-button">Create Ad Configuration</span> and select <strong>Live</strong>
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/create-live-ad-config.png" alt="Create Live Ad Config">
+              <figcaption class="bcls-caption--image">Create Live Ad Config</figcaption>
+            </figure>
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/ssai-config-live.png" alt="SSAI Configuration Live">
+              <figcaption class="bcls-caption--image">SSAI Configuration Live</figcaption>
+            </figure>
 
-					</li>
-					<li>Add a name for the ad config</li>
-					<li>Select <strong>Vast</strong> your ad response</li>
-					<li>
-						Paste in your ad tag, <strong>appending your query string of ad targeting params</strong>.
-						<p>Example:</p>
-						<pre><code translate="no">https://ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&num={{random.int32}}&d={{PLATFORM}}&os={{OS}}&did={{RDID}}&dt={{IDTYPE}}&lat={{IS_LAT}}</code></pre>
-					</li>
-					<li>Copy your ad config ID for the Beacon Advertising configurations</li>
+          </li>
+          <li>Add a name for the ad config</li>
+          <li>Select <strong>Vast</strong> your ad response</li>
+          <li>
+            Paste in your ad tag, <strong>appending your query string of ad targeting params</strong>.
+            <p>Example:</p>
+            <pre><code translate="no">https://ad-provider-host.com/path/to/ad-handler?ip={{client.ipaddress}}&num={{random.int32}}&d={{PLATFORM}}&os={{OS}}&did={{RDID}}&dt={{IDTYPE}}&lat={{IS_LAT}}</code></pre>
+          </li>
+          <li>Copy your ad config ID for the Beacon Advertising configurations</li>
         </ol>
       </li>
       <li>
         Open the Beacon Classic UI and go the Advertisement tab
         <ol>
           <li>
-						Click <span class="button-teal">Add New Configuration</span>
-						<figure class="bcls-figure">
-							<img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/advertising-config-live.png" alt="Beacon Ad Configuration Live">
-							<figcaption class="bcls-caption--image">Beacon Ad Configuration Live</figcaption>
-						</figure>
-					</li>
+            Click <span class="button-teal">Add New Configuration</span>
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/advertising-config-live.png" alt="Beacon Ad Configuration Live">
+              <figcaption class="bcls-caption--image">Beacon Ad Configuration Live</figcaption>
+            </figure>
+          </li>
           <li>Name the Ad Configuration</li>
           <li>Select <strong>Brightcove SSAI</strong></li>
           <li>Paste in the SSAI ad config ID into <strong>Live Ad Config ID</strong></li>
         </ol>
       </li>
       <li>
-				Paste your string of ad-targeting params in the <strong>Ad-Target</strong> field.
-				<p>Example:</p>
-				<pre><code translate="no">ip={{client.ipaddress}}&num={{random.int32}}&d={{PLATFORM}}&os={{OS}}&did={{RDID}}&dt={{IDTYPE}}&lat={{IS_LAT}}</code></pre>
-			</li>
-		</ol>
+        Paste your string of ad-targeting params in the <strong>Ad-Target</strong> field.
+        <p>Example:</p>
+        <pre><code translate="no">ip={{client.ipaddress}}&num={{random.int32}}&d={{PLATFORM}}&os={{OS}}&did={{RDID}}&dt={{IDTYPE}}&lat={{IS_LAT}}</code></pre>
+      </li>
+    </ol>
   </section>
   <!-- <section class="bcls-section">
     <h2 id="Limitations">Limitations</h2>

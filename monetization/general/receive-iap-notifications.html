@@ -34,7 +34,7 @@ layout: "staging"
     <p>Clarification details for the diagram:</p>
     <ul>
       <li>Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers. For full details see Amazon's <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">SNS Developer Guide</a>.</li>
-      <li>After the notification is received by you, the Brightcove Beacon customer, the actions will vary. In the example, since tickets were purchased the tickets would need to be sent. So once the notification is received, your business rules will determine what must occur.</li>
+      <li>After the notification is received by you, the Brightcove Beacon customer, the actions will vary. In the example, since tickets were purchased, the tickets would need to be sent. So once the notification is received, your business rules will determine what must occur.</li>
       <li>The endpoint implementation approach is entirely your decision. The decision will most likely be guided by backend technologies used and skills of your software engineers.</li>
     </ul>
   </section>
@@ -55,15 +55,19 @@ layout: "staging"
       <li>Beacon will report all purchase related events, including the following actions on subscriptions:
         <ul>
           <li>New</li>
-          <li>Renewals</li>
-          <li>Cancellations</li>
-          <li>Pauses</li>
-          <li>Holds</li>
-          <li>Resumes</li>
+          <li>Renewal</li>
+          <li>Cancellation</li>
+          <li>Applicable to Google Play only:
+            <ul>
+              <li>Pause</li>
+              <li>Hold</li>
+              <li>Resume</li>
+            </ul>
+          </li>
         </ul>
       </li>
-      <li>Enough information is provided in the notification so the seller's external system is able to apply entitlements and/or prevent purchases of the same asset (subscription) if already purchased through Beacon or native stores.</li>
-      <li>Purchase events are delivered to external stores within 5 min after receiving notification from source stores.</li>
+      <li>Enough information is provided in the notification so the external store is able to apply entitlements and/or prevent purchases of the same asset (subscription) if already purchased through Beacon or native stores.</li>
+      <li>Purchase events are delivered to external stores after receiving notification from source stores. This typically happens in under 5 minutes (usually within seconds). </li>
     </ul>
   </section>
 
@@ -163,7 +167,7 @@ layout: "staging"
           <td>String</td>
           <td>Always</td>
           <td></td>
-          <td>The name of the SVOD or TVOD package</td>
+          <td>The name of the SVOD or TVOD package in Brightcove Beacon</td>
         </tr>
         <tr>
           <td>notification_date</td>

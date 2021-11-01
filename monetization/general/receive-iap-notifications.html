@@ -11,8 +11,8 @@ layout: "staging"
 
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
-    <p></p>
-    <p>Consider when an in-app purchase is done through a Brightcove Beacon app. The app communicates with one of the platform stores, like the Apple App Store, to complete the purchase. By default the supplier of the video content (and possibly other merchandise) purchased is not notified. It is necessary for the provider of the video content and/or merchandise to setup an endpoint so Brightcove Beacon can notify the provider a purchase was completed.</p>
+    <p>It is necessary for the provider of the video content and/or merchandise to setup an endpoint so Brightcove Beacon can notify the provider that a purchase is completed. When an in-app purchase is made through a Brightcove Beacon app, the app communicates with one of the platform stores, like the Apple App Store, to complete the purchase. Defined endpoints will receive a notification of this transaction.</p>
+    <!-- <p>By default the supplier of the video content (and possibly other merchandise) purchased is not notified.</p> -->
     <p>Let's look at an example that demonstrates the flow from purchase to notification. The fictional company, Acme Symphony, has implemented an endpoint. A viewer using a Brightcove Beacon app on iOS makes a purchase. Here is the high-level workflow:</p>
     <ul>
       <li>A viewer purchases a subscription for access to videos of past symphonies, and tickets for the upcoming summer season of live concerts.</li>

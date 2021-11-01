@@ -11,15 +11,16 @@ layout: "staging"
 
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
+    <p></p>
     <p>Consider when an in-app purchase is done through a Brightcove Beacon app. The app communicates with one of the platform stores, like the Apple App Store, to complete the purchase. By default the supplier of the video content (and possibly other merchandise) purchased is not notified. It is necessary for the provider of the video content and/or merchandise to setup an endpoint so Brightcove Beacon can notify the provider a purchase was completed.</p>
-    <p>For clarification, this example demonstrates the flow of the purchase to notification. The fictional company, Acme Symphony. has implemented an endpoint. A viewer using a Brightcove Beacon app on iOS makes a purchase. A high-level take on the workflow is as follows:</p>
+    <p>Let's look at an example that demonstrates the flow from purchase to notification. The fictional company, Acme Symphony, has implemented an endpoint. A viewer using a Brightcove Beacon app on iOS makes a purchase. Here is the high-level workflow:</p>
     <ul>
       <li>A viewer purchases a subscription for access to videos of past symphonies, and tickets for the upcoming summer season of live concerts.</li>
       <li>The Beacon app completes the purchase through the Apple App Store.</li>
       <li>The Beacon app notifies Beacon of the purchase.</li>
       <li>The Beacon entitlement subsystem grants the viewer access to all video assets in the purchased subscription.</li>
       <li>A notification is sent to Acme Symphony's endpoint.</li>
-      <li>Acme Symphony knows of the purchase and sends tickets to the purchaser, and subscription purchase is reflected in Acme Symphony's store front.</li>
+      <li>Acme Symphony knows of the purchase and is able to trigger additional workflows like sending tickets to the purchaser.</li>
     </ul>
     <p>The rest of the document clarifies the technical implementation and provides specifics for implementing your endpoint.</p>
   </section>
@@ -33,7 +34,7 @@ layout: "staging"
     <p>Clarification details for the diagram:</p>
     <ul>
       <li>Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers. For full details see Amazon's <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">SNS Developer Guide</a>.</li>
-      <li>After the notification is received by you, the Brightcove Beacon user, the actions will vary. In the example, since tickets were purchased the tickets would need to be sent. So once the notification is received, your business rules will determine what must occur.</li>
+      <li>After the notification is received by you, the Brightcove Beacon customer, the actions will vary. In the example, since tickets were purchased the tickets would need to be sent. So once the notification is received, your business rules will determine what must occur.</li>
       <li>The endpoint implementation approach is entirely your decision. The decision will most likely be guided by backend technologies used and skills of your software engineers.</li>
     </ul>
   </section>

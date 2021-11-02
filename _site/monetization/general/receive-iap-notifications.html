@@ -751,13 +751,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="How_notifications_are_implemented">How notifications are implemented</h2>
     <p>Here is a high-level diagram of the process:</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/monetization/receive-iap-notifications/beacon-in-app-purchase-v3.png" alt="overview beacon in app purchase">
+      <img class="bcls-image" src="/assets/images/monetization/receive-iap-notifications/beacon-in-app-purchase v4.png" alt="overview beacon in app purchase">
     </figure>
     <p>Clarification details for the diagram:</p>
     <ul>
       <li>Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers. For full details see Amazon's <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">SNS Developer Guide</a>.</li>
       <li>After the notification is received by you, the Brightcove Beacon customer, the actions will vary. In the example, since tickets were purchased, the tickets would need to be sent. So once the notification is received, your business rules will determine what must occur.</li>
       <li>The endpoint implementation approach is entirely your decision. The decision will most likely be guided by backend technologies used and skills of your software engineers.</li>
+      <li>The dashed line from the platform stores directly to the Brightcove Beacon backend is for other notifications, like renewals.</li>
     </ul>
   </section>
 

@@ -844,18 +844,32 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </tbody>
   </table>
   <br>
+  <p>To find the IDs of the video assets, in Beacon Classic select the asset, season for series for which you need the ID. The ID will be part of the name information, as highlighted in the screenshots below.</p>
+  <figure class="bcls-figure">
+    <img class="bcls-image" src="/assets/images/using-bcb/sending-app-notifications/asset-id.png" alt="get asset IDs">
+  </figure>
   <ol class="bcls-tasklist">
-    <li>
-
-
+    <li>Complete the additional options for the video asset to which you wish to link. An example is shown here:
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/using-bcb/sending-app-notifications/additional-options.png" alt="additional options">
+      </figure>
     </li>
   </ol>
+  <p>Note the following:</p>
+  <ul>
+    <li>The <strong>season_id</strong> and <strong>series_id</strong> are optional and only used in case of <strong>asset_type</strong> is an <strong>episode</strong>.</li>
+    <li>The <strong>series_id</strong> is also used if the <strong>asset_type</strong> is a <strong>season</strong>.</li>
+    <li>If you have the <em>Explore</em> option disabled and user has not authenticated yet, when the the app opens from a notification to display the asset, after the user is authenticated, it’s expected to show the details page to the user, from the asset that user clicked on.</li>
+  </ul>
 
+  For customers that have Explore option disabled and user is not authenticated yet, when the user opens the app from a notification with action to open a asset, after the user is authenticated, it’s expected to show the details page to the user, from the asset that user clicked on.
 
+  When a asset is opened from a push notification, the workflow is the same as opening an asset from a carousel regarding:
 
-  <figure class="bcls-figure">
-    <img class="bcls-image" src="/assets/images/using-bcb/sending-app-notifications/additional-options.png" alt="additional options">
-  </figure>
+  Entitlements checks and buttons displayed
+
+  Continuous Play (applicable when the asset in the notification is a series/seasons)
+
 
 </article>
 <!-- complete bootstrap layout -->

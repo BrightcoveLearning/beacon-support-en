@@ -736,15 +736,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="section-name">Sending a notification</h2>
     <p>The implmentation tasks to send a notification are detailed in the remainder of this document. Those steps are:</p>
     <ol>
-      <li><a href="#Configure_the_notification">>Configure the notification</a></li>
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
+      <li><a href="#Configure_the_notification">Configure the notification</a></li>
+      <li><a href="#Define_the_target">Define the target</a></li>
+      <li><a href="#Schedule_when_the_notification_will_be_sent">Schedule when the notification will be sent</a></li>
+      <li><a href="#Add_options_for_the_video_asset_to_which_the_notification_will_link">Add options for the video asset to which
     </ol>
     <h3 id="Configure_the_notification">Configure the notification</h3>
+    <p>If this section you define the content in the notification.</p>
     <ol class="bcls-tasklist">
       <li>Navigate to the <a href="https://console.firebase.google.com/u/0/">Firebase Console</a> and select your project.</li>
       <li>In the left navigation select:
@@ -782,8 +780,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Click <strong>Next</strong>.</li>
     </ol>
   </section>
-  <h3>Define the target</h3>
-  <p>When you define the target you configure which apps should receive the notification and also define any further restrictions on whom should receive the notification.</p>
+  <h3 id="Define_the_target">Define the target</h3>
+  <p>When you define the target you configure which app(s) should receive the notification and also define any further restrictions on whom should receive the notification.</p>
   <ol class="bcls-tasklist">
     <li>Select the app or apps to which you wish to send the notification.
       <figure class="bcls-figure">
@@ -797,18 +795,18 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </li>
     <li>Click <strong>Next</strong>.</li>
   </ol>
-  <h3>Schedule when the notification will be sent.</h3>
+  <h3 id="Schedule_when_the_notification_will_be_sent">Schedule when the notification will be sent</h3>
   <p>You have the option to send the notification immediately or have it sent repeatedly.</p>
   <ol class="bcls-tasklist">
     <li>Choose when you will send the notification.
       <figure class="bcls-figure">
         <img class="bcls-image" src="/assets/images/using-bcb/sending-app-notifications/scheduling.png" alt="scheduling">
       </figure>
-      <aside class="bcls-aside bcls-aside--information">Do not choose the send now option until you have configured the video asset to which the notification will links. This process is detailed in the next section.</aside>
+      <aside class="bcls-aside bcls-aside--information">Do not choose the send now option until you have configured the video asset to which the notification links. This process is detailed in the next section.</aside>
     </li>
   </ol>
-  <h3>Add options for the video asset to which the notification will link</h3>
-  <p>You will often link to a video asset that will be displayed when the viewer clicks a link in your notification. The video assets is defined in the <strong>Addition options</strong> section. The options from which you can choose are defined in this table:</p>
+  <h3 id="Add_options_for_the_video_asset_to_which_the_notification_will_link">Add options for the video asset to which the notification will link</h3>
+  <p>You will often link to a video asset that will be displayed when the viewer clicks a link in your notification. The video asset is defined in the <strong>Addition options</strong> section. The options from which you can choose are defined in this table:</p>
   <table class="bcls-table">
     <thead class="bcls-table__head">
       <tr>
@@ -867,9 +865,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </ol>
   <p>Note the following:</p>
   <ul>
-    <li>The <strong>season_id</strong> and <strong>series_id</strong> are optional and only used in case of <strong>asset_type</strong> is an <strong>episode</strong>.</li>
-    <li>The <strong>series_id</strong> is also used if the <strong>asset_type</strong> is a <strong>season</strong>.</li>
-    <li>If you have the <em>Explore</em> option disabled and user has not authenticated yet, when the the app opens from a notification and the user authenticates the details page for the video asset is displayed to the user.</li>
+    <li>The <strong>season_id</strong> and <strong>series_id</strong> are optional and only used in the case when <strong>asset_type</strong> is <strong>episode</strong>.</li>
+    <li>The <strong>series_id</strong> is also used if the <strong>asset_type</strong> is <strong>season</strong>.</li>
+    <li>If you have the <em>Explore</em> option disabled and user has not authenticated, when the the app opens from a notification and the user authenticates the details page for the video asset is displayed to the user.</li>
     <li>When a asset is opened from a push notification, the workflow is the same as opening an asset from a carousel regarding:
       <ul>
         <li>Entitlements checks and buttons displayed</li>
@@ -877,6 +875,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </ul>
     </li>
   </ul>
+  <p>That's the process of implementing app push notifications.</p>
 </article>
 <!-- complete bootstrap layout -->
     </div>
@@ -893,7 +892,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 09 Nov 2021
+  Page last updated on 10 Nov 2021
 </div>
 
 

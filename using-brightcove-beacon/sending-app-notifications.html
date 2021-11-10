@@ -10,20 +10,29 @@ layout: "staging"
 
   <section class="bcls-section">
     <h2 id="Introduction">Introductions</h2>
-    <p>For iOS and Android apps you can send notifications using Google Firebase. This document will walk you through the process. The configuration of the iOS and/or Android apps to enable this functionality is done be Brightcove.</p>
+    <p>For iOS and Android apps you can send notifications using Google Firebase. This document will walk you through the process. The configuration of the iOS and/or Android apps to enable this functionality is done by Brightcove.</p>
   </section>
 
   <section class="bcls-section">
     <h2 id="section-name">Sending a notification</h2>
-    <p></p>
-    <h3>Configure the notification.</h3>
+    <p>The implmentation tasks to send a notification are detailed in the remainder of this document. Those steps are:</p>
+    <ol>
+      <li><a href="#Configure_the_notification">>Configure the notification</a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ol>
+    <h3 id="Configure_the_notification">Configure the notification</h3>
     <ol class="bcls-tasklist">
       <li>Navigate to the <a href="https://console.firebase.google.com/u/0/">Firebase Console</a> and select your project.</li>
       <li>In the left navigation select:
-        <ul>
+        <ol type="a">
           <li>Engage</li>
           <li>Cloud Messaging</li>
-        </ul>
+        </ol>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/sending-app-notifications/navigation-main-left.png" alt="navigation">
         </figure>
@@ -31,22 +40,22 @@ layout: "staging"
     </ol>
     <ol class="bcls-tasklist">
       <li>Click <strong>Send your first message</strong>.</li>
-      <li>Supply the notification title and text. Note that you can see a preview on the bottom right of the screen.
+      <li>Supply the <strong>Notification title</strong> and <strong>Notification text</strong>. Note that you can see a preview on the bottom right of the screen.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/sending-app-notifications/notification.png" alt="notification">
         </figure>
       </li>
-      <li>Add an optional notification image.
+      <li>Add an optional notification image, if desired.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/sending-app-notifications/notification-image.png" alt="notification image">
         </figure>
       </li>
-      <li>Add an optional notification name.
+      <li>Add an optional notification name, if desired.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/sending-app-notifications/notification-name.png" alt="notification name">
         </figure>
       </li>
-      <li>If configured, you can test the message.
+      <li>If a development device is configured, you can test the message.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/using-bcb/sending-app-notifications/test-message.png" alt="test message">
         </figure>
@@ -62,7 +71,7 @@ layout: "staging"
         <img class="bcls-image" src="/assets/images/using-bcb/sending-app-notifications/target.png" alt="target">
       </figure>
     </li>
-    <li>Add any restrictions for each app to which you are sendiung the notification.
+    <li>Add any restrictions for each app to which you are sending the notification.
       <figure class="bcls-figure">
         <img class="bcls-image" src="/assets/images/using-bcb/sending-app-notifications/target-restrictions.png" alt="target restrictions">
       </figure>
@@ -72,13 +81,14 @@ layout: "staging"
   <h3>Schedule when the notification will be sent.</h3>
   <p>You have the option to send the notification immediately or have it sent repeatedly.</p>
   <ol class="bcls-tasklist">
-    <li>
+    <li>Choose when you will send the notification.
       <figure class="bcls-figure">
         <img class="bcls-image" src="/assets/images/using-bcb/sending-app-notifications/scheduling.png" alt="scheduling">
       </figure>
+      <aside class="bcls-aside bcls-aside--information">Do not choose the send now option until you have configured the video asset to which the notification will links. This process is detailed in the next section.</aside>
     </li>
   </ol>
-  <h3>Add options for the video asset to which the notification will link.</h3>
+  <h3>Add options for the video asset to which the notification will link</h3>
   <p>You will often link to a video asset that will be displayed when the viewer clicks a link in your notification. The video assets is defined in the <strong>Addition options</strong> section. The options from which you can choose are defined in this table:</p>
   <table class="bcls-table">
     <thead class="bcls-table__head">
@@ -140,16 +150,12 @@ layout: "staging"
   <ul>
     <li>The <strong>season_id</strong> and <strong>series_id</strong> are optional and only used in case of <strong>asset_type</strong> is an <strong>episode</strong>.</li>
     <li>The <strong>series_id</strong> is also used if the <strong>asset_type</strong> is a <strong>season</strong>.</li>
-    <li>If you have the <em>Explore</em> option disabled and user has not authenticated yet, when the the app opens from a notification to display the asset, after the user is authenticated, it’s expected to show the details page to the user, from the asset that user clicked on.</li>
+    <li>If you have the <em>Explore</em> option disabled and user has not authenticated yet, when the the app opens from a notification and the user authenticates the details page for the video asset is displayed to the user.</li>
+    <li>When a asset is opened from a push notification, the workflow is the same as opening an asset from a carousel regarding:
+      <ul>
+        <li>Entitlements checks and buttons displayed</li>
+        <li>Continuous Play (applicable when the asset in the notification is a series/seasons)</li>
+      </ul>
+    </li>
   </ul>
-
-  For customers that have Explore option disabled and user is not authenticated yet, when the user opens the app from a notification with action to open a asset, after the user is authenticated, it’s expected to show the details page to the user, from the asset that user clicked on.
-
-  When a asset is opened from a push notification, the workflow is the same as opening an asset from a carousel regarding:
-
-  Entitlements checks and buttons displayed
-
-  Continuous Play (applicable when the asset in the notification is a series/seasons)
-
-
 </article>

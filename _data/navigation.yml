@@ -245,6 +245,8 @@
   name: Admin
   url: /admin/index.html
   docs:
+    - name: Add a New User
+      url: /admin/add-user.html
     - name: Change a User's Password
       url: /admin/change-user-password.html
 - section:

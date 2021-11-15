@@ -337,6 +337,16 @@
       
         <url>
           
+            <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/sending-app-notifications.html</loc>
+          
+            <lastmod>2021-11-15</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
             <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/streaming-live-event.html</loc>
           
             <lastmod>2021-11-15</lastmod>

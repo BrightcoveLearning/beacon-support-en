@@ -91,7 +91,21 @@ parent: "Using Brightcove Beacon"
       <figure class="bcls-figure">
         <img class="bcls-image" src="/assets/images/using-bcb/sending-app-notifications/target-restrictions.png" alt="target restrictions">
       </figure>
-      <aside class="bcls-aside bcls-aside--tip">A common use case of adding a filter is limiting the notification by app version. This is useful to let users know that there is a new version available of the app available (with a potential new fix/feature).</aside>
+      <aside class="bcls-aside bcls-aside--tip">A common use case of adding a filter is limiting the notification by app version. This is useful to let users know that there is a new version available of the app available (with a potential new fix/feature).
+        <p>Here are some pointers if using the version to filter which of your viewers see the notification:</p>
+        <ul>
+          <li>To find the version number go to the <strong>Settings</strong> page:
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/using-bcb/sending-app-notifications/version-number.png" alt="version number">
+            </figure>
+          </li>
+          <li>For iOS, ignore the last number of the app version, and use it as the target version. For example, the screenshot shows <em>1.12.81</em>. You would use <em>1.12</em> to target users that have this version.</li>
+          <li>For Android, use only the last number shown. For example, the screenshot shows <em>1.12.81</em>. You would use <em>81</em> to target users that have this version. </li>
+          <li>When adding a filter you can tell if you are referencing iOS or Android by the icon shown next to the app name.</li>
+          <li>When adding a filter with a version, use the <strong>contains</strong> operator when specifying the version as detailed above.</li>
+        </ul>
+
+      </aside>
     </li>
     <li>Click <strong>Next</strong>.</li>
   </ol>

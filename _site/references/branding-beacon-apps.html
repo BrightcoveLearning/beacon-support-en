@@ -760,6 +760,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
+<link rel="stylesheet" href="/assets/css/zoom-image.css">
+
 <h1>Branding Brightcove Beacon Apps</h1>
 <article class="bcls-article">
   <summary>In this topic, you will learn how you can use your logo, color palette and imagery to brand your Brightcove Beacon apps.</summary>
@@ -786,23 +788,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ul>
     <p>The default icons shown on the mockups are used.</p>
     <p>Further usage information:</p>
-    <ul>
-      <li>Logo
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/branding-beacon-apps/logos-text.png" alt="logos text">
-        </figure>
-      </li>
-      <li>Launcher icons
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/branding-beacon-apps/launcher-icons.png" alt="launcher icons">
-        </figure>
-      </li>
-      <li>Logo examples
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/branding-beacon-apps/logo-examples.png" alt="logo examples">
-        </figure>
-      </li>
-    </ul>
+    <aside class="bcls-aside bcls-aside--tip language-editable">Click to zoom in and out on the image.</aside>
+    <!-- Image Zoom HTML -->
+    <img class="thumbnail" id="myImg" src="/assets/images/references/branding-beacon-apps/Logos.png" alt="logos" width="850" height="442">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
   </section>
 
   <section class="bcls-section">
@@ -816,21 +809,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>White is NOT supported as a background color.</li>
     </ul>
     <p>Further information:</p>
-    <ul>
-      <li>Button colors
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/branding-beacon-apps/buttons.png" alt="app buttons">
-        </figure>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/branding-beacon-apps/blue-button.png" alt="blue button">
-        </figure>
-      </li>
-      <li>Color usage
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/branding-beacon-apps/colors.png" alt="colors">
-        </figure>
-      </li>
-    </ul>
+    <aside class="bcls-aside bcls-aside--tip language-editable">Click to zoom in and out on the image.</aside>
+    <!-- Image Zoom HTML -->
+    <img class="thumbnail" id="myImg" src="/assets/images/references/branding-beacon-apps/color-palette.png" alt="color palette" width="850" height="442">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="img02">
+      <div id="caption"></div>
+    </div>
   </section>
 
   <section class="bcls-section">
@@ -850,6 +836,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Typography includes font styles, sizes and spacing. Brightcove Beacon currently supports <strong>Gotham</strong> typeface (for Latin based languages) and <strong>Noto Sans</strong> typeface (for RTL supported languages). It is not possible to change font sizes, weight/style or spacing. Nor is it possible to add custom fonts.</p>
   </section>
 </article>
+
+<script src="/assets/js/zoom-image.js">
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -865,7 +853,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 11 Aug 2021
+  Page last updated on 09 Dec 2021
 </div>
 
 

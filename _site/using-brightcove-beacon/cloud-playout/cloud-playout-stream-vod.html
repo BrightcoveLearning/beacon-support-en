@@ -816,6 +816,13 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </ul>
       </li>
       <li>If you will be using Live inputs, set <strong>Live Input</strong> to On, and enter a Slate URL, unless you are going to use the default Brightcove MP4 for you slate. The slate MP4 will play whenever Live input is stopped because the encoder is stopped or some technical issue blocks the live stream. <strong>Note that <strong>the Slate URL must be a static URL that is always available</strong> (short-lived CDN URLs are not allowed).</strong></li>
+      <!-- <li>
+        Import closed captions is enabled by default; if you do not want to import captions, disable it now or while the channel is in DRAFT state:
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/cloud-playout/import-captions.png" alt="Import Captions">
+          <figcaption class="bcls-caption--image">Import Captions</figcaption>
+        </figure>
+      </li> -->
       <li>Enter the channel <strong>Destination</strong> details. For channels to work in Beacon apps, you must select <strong>Brightcove Live Event</strong> as the destination.
         <ul>
           <li><strong>Optimize Display for</strong> - Controls the bitrate and dimensions for the output
@@ -918,20 +925,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>There are additional steps you must take to make your Cloud Playout channel part of your Beacon app. See <a href="/using-brightcove-beacon/cloud-playout/publish-channel-beacon.html">Publishing a channel</a> for details.</p>
   </section>
 
-  <section class="bcls-section">
-    <h2 id="Related_topics">Related topics</h2>
-    <ul>
-      <li><a href="/using-brightcove-beacon/cloud-playout/cloud-playout-overview.html">Overview: Cloud Playout</a></li>
-      <li><a href="/using-brightcove-beacon/creating-a-channel.html">Creating a Beacon Channel</a></li>
-      <li><a href="/using-brightcove-beacon/cloud-playout/using-channel-actions.html">Using Channel Actions</a></li>
-      <li><a href="/using-brightcove-beacon/cloud-playout/enabling-server-side-ads.html">Monetizing Cloud Playout</a></li>
-      <li><a href="/using-brightcove-beacon/cloud-playout/generating-channel-embed-code.html">Generating the Channel Embed Code</a></li>
-      <li><a href="/using-brightcove-beacon/cloud-playout/viewing-channel-output-and-analytics.html">Viewing Channel Output and Analytics</a></li>
-      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">Overview: EPG API</a></li>
-      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG API Reference</a></li>
-      <li><a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-channels.html">Channel API Reference</a></li>
-    </ul>
-  </section>
 </article>
 <!-- complete bootstrap layout -->
     </div>
@@ -948,7 +941,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 01 Dec 2021
+  Page last updated on 03 Jan 2022
 </div>
 
 

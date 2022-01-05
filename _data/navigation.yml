@@ -45,6 +45,10 @@
       url: /using-brightcove-beacon/cloud-playout/static-image-overlays.html
     - name: Adding Dynamic Overlays
       url: /using-brightcove-beacon/cloud-playout/dynamic-overlays.html
+    - name: Importing Captions to a Channel
+      url: /using-brightcove-beacon/cloud-playout/import-captions.html
+    - name: Searching for Channels
+      url: /using-brightcove-beacon/cloud-playout/searching-for-channels.html
     - name: Using Channel Actions
       url: /using-brightcove-beacon/cloud-playout/using-channel-actions.html
     - name: Adding Bumpers to Cloud Playout

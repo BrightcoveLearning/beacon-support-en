@@ -342,4 +342,24 @@ RiGHTvEPG.xsd&quot;&gt;
       </li>
     </ol>
   </section>
+  <section class="bcls-section">
+    <h2 id="General_questions">FAQ</h2> 
+    <p>Here are some common questions related to EPG's with their corresponding answers:</p>
+      <details>
+          <summary>How do I link the EPG to a Live Channel ID in Brightcove?</summary>
+          <p>In the EPG XML file, set the <strong>channel id</strong> to the value of your Beacon channel name.</p>
+      </details>
+      <br/>
+      <details>
+        <summary>Can I use the same program id value for repeated programs?</summary>
+        <p>The <strong>program id</strong> must be unique, even if the same program is repeated. For example, if replays are used within the same EPG schedule, you must use a unique <strong>program id</strong> value for each instance.</p>
+      </details>
+      <br/>
+      <details>
+        <summary>Can I use a single XML file with multiple channel ids?</summary>
+        <p>No. You must use one XML file per channel.</p>
+      </details>
+
+    <br/>
+  </section>
 </article>

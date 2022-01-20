@@ -47,7 +47,7 @@ parent: Using Brightcove Beacon
         An XML file with the channel information: This file can be created
         manually or automatically.
       </li>
-      <li>The S3 bucket <strong>Username</strong> and <strong>Password</strong> credentials <em>provided by Brghtcove</em>.</li>
+      <li>The S3 bucket <strong>Username</strong> and <strong>Password</strong> credentials <em>provided by Brightcove</em>.</li>
       <li>
         An S3 account (bucket name and URL path) <em>provided by Brightcove</em>. The
         actual location for the EPG file.
@@ -69,7 +69,7 @@ xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
 version=&quot;1.0&quot; language=&quot;en&quot; xsi:schemaLocation=&quot;http://www.orca.tv/RiGHTv/7.0/EPG 
 RiGHTvEPG.xsd&quot;&gt;    
   &lt;ChannelsList&gt;
-    &lt;channel id=&quot;your-channel-id&quot;&gt;
+    &lt;channel id=&quot;<span class="bcls-input">your Beacon channel name</span>&quot;&gt;
       &lt;program id=&quot;3394&quot; time=&quot;2020-04-22T01:25:00Z&quot; duration=&quot;PT01H45M&quot; 
       delete=&quot;false&quot; pvrEnabled=&quot;false&quot; stovEnabled=&quot;false&quot; catchUpEnabled=&quot;false&quot;&gt;
         &lt;title&gt;Video Title&lt;/title&gt;
@@ -162,8 +162,8 @@ RiGHTvEPG.xsd&quot;&gt;
       <tbody class="bcls-table__body">
         <tr>
           <td><strong>channel id</strong></td>
-          <td>Unique identifier for your channel</td>
-          <td>id=“channel2”</td>
+          <td>Unique identifier for your channel</td> 
+          <td>id=“<span class="bcls-input">your Beacon channel name</span>”</td>
         </tr>
         <tr>
           <td><strong>program id</strong></td>

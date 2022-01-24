@@ -739,10 +739,54 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
 
   <section class="bcls-section">
-    <h2 id="section-name">section-title</h2>
-    <p></p>
+    <h2 id="section-name">Events and event listeners</h2>
+    <p>The following events can be used in your plugin code to control the side panel:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Event</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code>enablePlayerSidePanel</code></td>
+          <td>Enables a button (using a chevron character) on the side of the Player area. This allows Beacon app to show the side/hide panel when the viewer clicks the chevron.</td>
+        </tr>
+        <tr>
+          <td><code>disablePlayerSidePanel</code></td>
+          <td>Disables/hides the button (chevron character) on the side of the Player area.</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
+  <section class="bcls-section">
+    <h2 id="section-name">Events listened for</h2>
+    <p>The following events are listened for by the player when side panel events are dispatched in your Beacon plugin code:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Event</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code>beforePlayerSidePanelDisplay</code></td>
+          <td>Called before the animation to show the side panel starts.</td>
+        </tr>
+        <tr>
+          <td><code>onPlayerSidePanelDisplay</code></td>
+          <td>Called when the animation to show the side panel finishes.</td>
+        </tr>
+        <tr>
+          <td><code>onPlayerSidePanelDisappear</code></td>
+          <td>Called when the animation to hide the side panel finishes.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
 
   <section class="bcls-section">

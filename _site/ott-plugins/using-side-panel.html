@@ -788,6 +788,29 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </table>
   </section>
 
+  <section class="bcls-section">
+    <h2 id="section-name">section-title</h2>
+    <p></p>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">window.postMessage({
+  event: 'enablePlayerSidePanel',
+  data: {
+    asset_id: integer,
+    bc_account_id: integer,
+    video_id: integer,
+    user_language: 'string'
+  }
+}, window.location.origin);</code></pre>
+    <p>The data that can be passed with the event is as follows:</p>
+    <ul>
+      <li><code>asset_id</code>:</li>
+      <li><code>bc_account_id</code>:</li>
+      <li><code>video_id</code>:</li>
+      <li><code>user_language</code>:</li>
+    </ul>
+
+  </section>
+
+
 
   <section class="bcls-section">
     <h2 id="Example_code">Example code</h2>

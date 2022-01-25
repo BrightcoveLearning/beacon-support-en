@@ -772,18 +772,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Overview">Overview</h2>
     <p>
       Playlists are a collection of videos and other entities that are created one of two ways for Brightcove Beacon: </p>
-    <ol>
+    <ul>
       <li>
         Imported into Brightcove Beacon from your Video Cloud library. In this case, the items in the playlist will ONLY be videos.
       </li>
       <li>
         Created in Brightcove Beacon using the <strong>Playlists</strong> tab. When creating the playlist in Brightcove Beacon, you can use the videos imported from Video Cloud (movies / episodes), and in addition you can also add series, seasons, channels and live events. This method is the focus of this document.
       </li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--warning">Note the following:
+    </ul>
+    <aside class="bcls-aside bcls-aside--warning">Notes:
       <ul>
         <li>Brightcove recommends playlists that contain only videos should be created in Video Cloud.</li>
         <li>Not all the functionality shown in the <strong>Playlists</strong> tab is usable at this time. It is made clear in this document what form items you should complete.</li>
+        <li>For Brightcove Beacon playlists, any changes made in Video Cloud to the playlist (e.g., adding or removing a video) will be automatically synced to Beacon after one hour. For details, see <a href="#Video_Cloud_syncing">Video Cloud syncing</a>.</li>
       </ul>
     </aside>
   </section>
@@ -986,6 +987,20 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         Be sure to click the <strong>Create New Playlist</strong> button to save your work.
       </li>
     </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Video_Cloud_syncing">Video Cloud syncing</h2>
+    <p>
+      Any changes that you make to videos or playlists in Video Cloud Studio, will be automatically synced to Beacon after one hour. This includes adding and removing videos from the playlist.
+    </p>
+    <p>Updates to a playlist in Video Cloud will not appear in your Beacon app carousel until the playlist is synced from Video Cloud. Syncing is done in one of two ways:</p>
+    <ul>
+      <li>After one hour, videos and playlists are automatically synced</li>
+      <li>You can force a sync manually. For details, see the <a href="https://beacon.support.brightcove.com/syncing-with-video-cloud/forcing-a-sync.html">Forcing a Sync</a> document.</li>
+    </ul>
+    <h3>Example</h3>
+    <p>A Beacon app has a Playlist A with 10 videos. In Beacon CMS, this Playlist A is fetching content from Playlist AX in Video Cloud. In Video Cloud, a user adds a video, making the total count 11 videos in playlist AX. The Beacon app will display 10 videos in the playlist for one hour. After one hour, the update will be visible in the Beacon app (and Beacon CMS). If you don't want to wait an hour, you can manually force a sync.</p>
+
   </section>
 </article>
 <!-- complete bootstrap layout -->

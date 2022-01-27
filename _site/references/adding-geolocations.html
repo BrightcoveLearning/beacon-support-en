@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="In this topic, you will learn how to add locations for geo-restriction." />
+    <meta name="description" content="In this topic, you will learn how to add restrictions to use either permitted or denied locations." />
 
     <title>Adding Geolocations</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -759,11 +759,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <h1>Adding Geolocations</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn how to add locations for geo-restriction.</summary>
+  <summary>In this topic, you will learn how to add restrictions to use either permitted or denied locations.</summary>
 
   <section class="bcls-section">
   <h2 id="Introduction">Introduction</h2> 
-  <p>App users use locations on Beacon Classic when they want to set up locations to include or exclude certain regions to be able to see videos.</p>
+  <p>App users use geo-locations on Beacon Classic when they want to set up locations to include or exclude certain regions to be able to see videos.</p>
   </section>
 
   <section class="bcls-section">
@@ -777,19 +777,38 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             <figure class="bcls-figure">
               <img class="bcls-image" src="/assets/images/ott/click-settings-top-navigation.png" alt="Click Settings">
             </figure>
-              <img class="bcls-image" src="/" alt="">
-            </figure>
             <li>Click <strong>Locations</strong> in the left navigation.
               <img class="bcls-image" src="/assets/images/ott/click-locations.png" alt="Click Locations">
         </figure></li>
       </ol>
-   <li>To add a new locations, click Add new location. 
-   </li>
-        <aside class="bcls-aside bcls-aside--information language-editable">Note: the <strong>location name</strong> could be different from the <strong>country</strong>, it does not have to be identical.</aside>
-
+   <li>To add a new locations, click <strong>Add new location</strong>.</li>
+   <li> Now you have to choose: a location name and a country. Click save.            
+     Notice that you can choose other locales like Country, City, Zip, Fips, Dst, Type, State, Zone, Ac, Tz, Ma, DMAs, but it is not required. </li>
+        <aside class="bcls-aside bcls-aside--information language-editable">Note: the <strong>Location name</strong> could be different from the <strong>Country</strong>, it does not have to be identical.</aside>
+        <img class="bcls-image" src="/assets/images/ott/select-location-country.png" alt="Select location and country">
           </ol>
     <section>
+      <section class="bcls-section">
+        <h2 id="Add_geo_restrictions">Add Geo-restrictions on videos</h2>
+        <p> Follow these steps to add a new <strong>geo-restriction </strong> to make a video unavailable to watch in specific locations.</p>
+        <ol class="bcls-tasklist-restart">
+          <li>Click on the top navigation to open the category you want to use.  In this case, it would be <strong>Movies.</strong></li>
+          <img class="bcls-image" src="/assets/images/ott/click-movies.png" alt="Click Movies">
+          <li>Select the video you wish to use.
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/ott/select-video.png" alt=" Select-video">
+            </figure>
+          <li>Click<strong> Rights & Scheduling</strong></li>
+          <li>Once you have created a location, you have two options:
+            <ul>
+              <li>Click <strong>Permitted locations</strong> - To include certain regions.</li>
+              <li>Click <strong>Denied locations</strong> - To exclude certain regions.</li>
+              <img class="bcls-image" src="/assets/images/ott/denied-locations.png"alt="Denied-locations">
+            </ul>
+          </ol>
+      </section>
 </article>
+
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -805,7 +824,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 25 Jan 2022
+  Page last updated on 26 Jan 2022
 </div>
 
 

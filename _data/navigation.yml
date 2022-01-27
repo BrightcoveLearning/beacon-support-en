@@ -231,16 +231,18 @@
       url: /references/branding-beacon-apps.html
     - name: Common Configuration Settings
       url: /references/common-configuration-settings.html
-    - name: 'Glossary'
-      url: '/references/glossary.html'
     - name: 'Deleting an App User'
       url: '/references/delete-app-user.html'
+    - name: 'Glossary'
+      url: '/references/glossary.html'
     - name: 'How Brightcove Beacon Gets Data'
       url: '/references/how-beacon-gets-data.html'
     - name: 'Images and Their Specifications'
       url: '/references/image-requirements.html'
     - name: 'Known Issues'
       url: '/references/known-issues.html'
+    - name: 'Login Durations'
+      url: '/references/login-durations.html'
     - name: 'Product Updates'
       url: '/references/product-updates.html'
     - name: 'Related Content'

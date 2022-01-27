@@ -942,7 +942,7 @@
       
         <url>
           
-            <loc>https://beacon.support.brightcove.com/references/glossary.html</loc>
+            <loc>https://beacon.support.brightcove.com/references/delete-app-user.html</loc>
           
             <lastmod>2022-01-27</lastmod>
             <changefreq>daily</changefreq>
@@ -952,7 +952,7 @@
       
         <url>
           
-            <loc>https://beacon.support.brightcove.com/references/delete-app-user.html</loc>
+            <loc>https://beacon.support.brightcove.com/references/glossary.html</loc>
           
             <lastmod>2022-01-27</lastmod>
             <changefreq>daily</changefreq>
@@ -983,6 +983,16 @@
         <url>
           
             <loc>https://beacon.support.brightcove.com/references/known-issues.html</loc>
+          
+            <lastmod>2022-01-27</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+        </url>
+        
+      
+        <url>
+          
+            <loc>https://beacon.support.brightcove.com/references/login-durations.html</loc>
           
             <lastmod>2022-01-27</lastmod>
             <changefreq>daily</changefreq>

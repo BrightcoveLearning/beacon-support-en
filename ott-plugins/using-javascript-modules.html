@@ -9,7 +9,32 @@ layout: "staging"
   <summary>{{ page.description }}</summary>
 
   <section class="bcls-section">
+    <h2 id="Basics">Basics</h2>
+    <p>Whether you are going to use modules or another plan, there are some basics you need to understand before you start writing code. The first concept to understand is that Beacon plugins are implemented using an event based framework. Essential to the process is using <code>window.postMessage</code> which provides easy cross domain functionality. The following describe some of the fundamentals of implementing your plugins.</p>
+    <h3>Dispatching an event</h3>
+    <p>The skeleton code for dispatching an event is:</p>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">window.postEvent({
+  event: "<em>eventType</em>",
+  data: {
+    <em>key1: value1</em>,
+    <em>key2: value2</em>,
+    ...
+  }
+}, window.location.origin)</code></pre>
+    <p>where</p>
+    <ul>
+      <li><code>eventType</code>: The event being posted, for example <strong>enablePlayerSidePanel</strong></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+  </section>
+
+  <section class="bcls-section">
     <h2 id="section-name">section-title</h2>
     <p></p>
   </section>
+
 </article>

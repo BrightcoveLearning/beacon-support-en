@@ -739,22 +739,22 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>Beacon plugins provide customization of your web apps not available through the normal page creation process in Beacon Studio. For instance, this 8 second video shows the side panel opening and closing under viewer control. What, where, how, why</p>
+    <p>Beacon plugins provide customization of your web apps not available through the normal page creation process in Beacon Studio. For instance, this very short video shows plugin functionality called the side panel opening and closing under viewer control.</p>
     <div style="position: relative; display: block; max-width: 960px;">
       <div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=1722964957659610162" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
     </div>
-    <p>This side panel can be populated with data about the video playing, or maybe if it is a live video you can place a chat application in the side panel for viewer comments and discussion. The side panel is just one element available only through Beacon plugins.</p>
+    <p>This side panel can be populated with data about the video playing, or if it is a live video you can place a chat application in the side panel for viewer comments and discussion. The side panel is just one element only available through Beacon plugins.</p>
     <p>The plugin functionality is controlled with JavaScript and CSS. In Beacon Classic you point to one JavaScript file and one CSS file that are loaded at app startup. Here is a screenshot of Beacon Classic of where that data is entered:</p>
     <figure class="bcls-figure">
       <img class="bcls-image" src="/assets/images/ott-plugins/learning-guide/cms-web-customization.png" alt="cms web customization">
     </figure>
-    <p>The JavaScript file must be called <strong>index.js</strong> and the optional CSS file must be called <strong>index.css</strong>.</p>
+    <p>The JavaScript file must be called <strong>index.js</strong> and the optional CSS file must be called <strong>index.css</strong>. Of course, the files must be Internet accessible.</p>
   </section>
 
 
   <section class="bcls-section">
     <h2 id="Available_elements">Available elements</h2>
-    <p></p>
+    <p>The side panel example shown above is just one element available in Beacon Plugin functionality. The following table shows all elements with a brief description of the purpose/functionality:</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
@@ -772,8 +772,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>Listen for user events like sign in, register and sign out.</td>
         </tr>
         <tr>
-          <td>Player events and data</td>
-          <td>Listen for events for side panel behavior.</td>
+          <td><a href="/ott-plugins/side-panel.html">Side panel events and data</a></td>
+          <td>Open and close the side panel and listen for events of side panel behavior.</td>
         </tr>
         <tr>
           <td>Custom buttons events and data</td>
@@ -781,7 +781,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
         <tr>
           <td>Custom <code>&lt;div&gt;</code>s ID selectors</td>
-          <td>Place custom content in <code>&lt;div&gt;</code>s.</td>
+          <td>Place custom content in custom <code>&lt;div&gt;</code>s.</td>
         </tr>
         <tr>
           <td>Custom pages</td>
@@ -789,12 +789,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
       </tbody>
     </table>
+    <p>Note that the element names in the table are linked to the detailed document for complete information on that element. The details documents show the available functionality and implementation details.</p>
   </section>
 
 
   <section class="bcls-section">
     <h2 id="Implementation_architecture">Implementation architecture</h2>
-    <p></p>
+    <p>As mentioned earlier, Beacon Plugins are implemented with JavaScript and CSS. Obviously, there are many ways to structure your JavaScript code. For instance, you could simply put all your code the single <strong>index.js</strong> file mentioned earlier. Brightcove's consulting team did an implementation of the plugins using <a href="https://reactjs.org/">React</a>, a JavaScript library for building user interfaces. For the documents on this site, it was decided that the one file approach would lead to poor coding practices, and React was maybe more than what was needed when the exact JavaScript skill sets of Beacon customers is not known. This led to the decision to use JavaScript modules for implementation and examples in this documentation.</p>
+    <p>The <a href="/ott-plugins/using-javascript-modules.html">Using JavaScript Modules for Beacon Plugins</a> document explains the basic programming model around Beacon Plugins, and how JavaScript modules can be used for code implementation.</p>
+    <p>Of course, you are free to organize your JavaScript code in any way you wish.</p>
   </section>
 
 

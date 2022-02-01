@@ -1,0 +1,142 @@
+---
+title: "Implementing Buttons and Event Handlers"
+description: "In this topic, you will learn how to implement custom buttons using a plugin in your Brightcove Beacon web apps."
+parent: "OTT Plugins"
+layout: "staging"
+---
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+  <section class="bcls-section">
+    <h2 id="Using the side panel">Using the side panel</h2>
+    <p>The side panel can be opened on the side of the player area. A chevron appears and the viewer can click the chevron to open and close the panel. The following video shows the behavior:</p>
+    <div style="position: relative; display: block; max-width: 960px;">
+      <div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/1507807800001/default_default/index.html?videoId=6293553909001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
+    </div>
+    <h3>Use cases</h3>
+    <p>The following are appropriate use cases for the side panel:</p>
+    <ul>
+      <li>The side panel has been used for a chat application during live video.</li>
+      <li>You can also have access to information about the video that is playing and could display information on the video in the panel.</li>
+    </ul>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Events">Events</h2>
+    <p>The following events can be used in your plugin code to control the side panel:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Event</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code>enablePlayerSidePanel</code></td>
+          <td>Enables a button (using a chevron character) on the side of the Player area. This allows Beacon app to show the side/hide panel when the viewer clicks the chevron.</td>
+        </tr>
+        <tr>
+          <td><code>disablePlayerSidePanel</code></td>
+          <td>Disables/hides the button (chevron character) on the side of the Player area.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Event_listeners">Event listeners</h2>
+    <p>The following events are listened for by the player when side panel events are dispatched in your Beacon plugin code:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Event</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code>beforePlayerSidePanelDisplay</code></td>
+          <td>Called before the animation to show the side panel starts.</td>
+        </tr>
+        <tr>
+          <td><code>onPlayerSidePanelDisplay</code></td>
+          <td>Called when the animation to show the side panel finishes.</td>
+        </tr>
+        <tr>
+          <td><code>onPlayerSidePanelDisappear</code></td>
+          <td>Called when the animation to hide the side panel finishes.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Code_syntax">Code syntax</h2>
+    <p></p>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">window.postMessage({
+  event: 'enablePlayerSidePanel',
+  data: {
+    asset_id: integer,
+    bc_account_id: integer,
+    video_id: integer,
+    user_language: 'string'
+  }
+}, window.location.origin);</code></pre>
+    <p>The data that can be passed with the event is as follows:</p>
+    <ul>
+      <li><code>asset_id</code>: An ID you can assign for later reference in the Beacon Plugin code.</li>
+      <li><code>bc_account_id</code>: The Video Cloud account from which the video is taken.</li>
+      <li><code>video_id</code>: The Video Cloud ID of the video in the player.</li>
+      <li><code>user_language</code>: The language code currently in use in the Beacon app, taken from the Beacon API.</li>
+    </ul>
+    <p>Data details:</p>
+    <ul>
+      <li>No data is required for using the <code>enablePlayerSidePanel</code> event.</li>
+      <li>The data's main purpose is for use in the event handlers. For instance, you may populate the side panel with different information based on the video that is currently in the player. To know that you would need to pass the video ID in the data.</li>
+    </ul>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Module_implementation">Module implementation</h2>
+    <p>The following shows how functions using the side panel are implemented using JavaScript modules. Of course, you may implement your JavaScript in the manner of your choice. Further details on this module implementation can be found in the <a href="">Implementing Beacon Plugin Code Using Modules</a> document.</p>
+    <p>The following code contains these functions. A brief descriptions is provided for each:</p>
+    <ul>
+      <li><code>openSidePanel</code>: Dispatches the <code>enablePlayerSidePanel</code> event so the open/hide chevron button is displayed in the player.</li>
+      <li><code>enablePlayerSidePanel</code>: Places some example text in the panel. The key concept is locating the <code>div</code> element inside the panel using <br> <code>var panelArea = document.getElementById('player_side_panel_hook');</code></li>
+      <li><code>clearSidePanel</code>: Clears the side panel of contents. Note that the viewer closing the side panel does NOT empty the contents, so functionality in this function can be useful.</li>
+    </ul>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">const openSidePanel = () => {
+
+  window.postMessage({
+    event: 'enablePlayerSidePanel',
+    data: {}
+  }, window.location.origin);
+
+};
+
+
+const populateSidePanel = () => {
+
+  var panelArea = document.getElementById('player_side_panel_hook');
+  var para2 = document.createElement("P");
+  var t2 = document.createTextNode("This is in the panel.");
+  para2.appendChild(t2);
+  panelArea.appendChild(para2);
+
+};
+
+
+const clearSidePanel = () => {
+
+  var panelArea = document.getElementById('player_side_panel_hook');
+  panelArea.innerHTML = '';
+
+};
+
+export { openSidePanel, populateSidePanel, clearSidePanel };</code></pre>
+  </section>
+
+
+</article>

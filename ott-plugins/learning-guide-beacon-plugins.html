@@ -11,7 +11,16 @@ layout: "staging"
 
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>What, where, how, why</p>
+    <p>Beacon plugins provide customization of your web apps not available through the normal page creation process in Beacon Studio. For instance, this 8 second video shows the side panel opening and closing under viewer control. What, where, how, why</p>
+    <div style="position: relative; display: block; max-width: 960px;">
+      <div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=1722964957659610162" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
+    </div>
+    <p>This side panel can be populated with data about the video playing, or maybe if it is a live video you can place a chat application in the side panel for viewer comments and discussion. The side panel is just one element available only through Beacon plugins.</p>
+    <p>The plugin functionality is controlled with JavaScript and CSS. In Beacon Classic you point to one JavaScript file and one CSS file that are loaded at app startup. Here is a screenshot of Beacon Classic of where that data is entered:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/ott-plugins/learning-guide/cms-web-customization.png" alt="cms web customization">
+    </figure>
+    <p>The JavaScript file must be called <strong>index.js</strong> and the optional CSS file must be called <strong>index.css</strong>.</p>
   </section>
 
 
@@ -43,8 +52,8 @@ layout: "staging"
           <td>Add and remove buttons and listen for click events.</td>
         </tr>
         <tr>
-          <td>Custom &lt;div&gt;s ID selectors</td>
-          <td>Place custom content in &lt;div&gt;s.</td>
+          <td>Custom <code>&lt;div&gt;</code>s ID selectors</td>
+          <td>Place custom content in <code>&lt;div&gt;</code>s.</td>
         </tr>
         <tr>
           <td>Custom pages</td>

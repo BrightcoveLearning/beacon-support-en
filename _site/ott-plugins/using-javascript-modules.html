@@ -741,7 +741,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Whether you are going to use modules or another plan, there are some basics you need to understand before you start writing code. The first concept to understand is that Beacon plugins are implemented using an event based framework. Essential to the process is using <code>window.postMessage</code> which provides easy cross domain functionality. The following describe some of the fundamentals of implementing your plugins.</p>
     <h3>Dispatching an event</h3>
     <p>The skeleton code for dispatching an event is:</p>
-    <pre class="line-numbers"><code class="language-javascript" translate="No">window.postEvent({
+    <pre class="line-numbers"><code class="language-javascript" translate="No">window.postMessage({
   event: "<em>eventType</em>",
   data: {
     <em>key1: value1</em>,
@@ -752,12 +752,22 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>where</p>
     <ul>
       <li><code>eventType</code>: The event being posted, for example <strong>enablePlayerSidePanel</strong></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li><code>data</code>: Data passed for use</li>
     </ul>
-
+    <p>The following is an example that adds a button to a details page, passing as data for:</p>
+    <ul>
+      <li>The text to appear on the button</li>
+      <li>The icon on the button</li>
+      <li>An ID for later use in a handler</li>
+    </ul>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">window.postMessage({
+  event: 'detailsPageAddCustomButton',
+  data: {
+    title: 'Test Button',
+    font_awesome_icon: 'fa fa-info-circle',
+    element_id: 'TEST_BTN_ID'
+  }
+}, window.location.origin);</code></pre>
   </section>
 
   <section class="bcls-section">
@@ -781,7 +791,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 31 Jan 2022
+  Page last updated on 01 Feb 2022
 </div>
 
 

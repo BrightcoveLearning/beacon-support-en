@@ -1,0 +1,160 @@
+---
+title: "Implementing Buttons and Event Handlers"
+description: "In this topic, you will learn how to implement custom buttons using a plugin in your Brightcove Beacon web apps."
+parent: "OTT Plugins"
+layout: "staging"
+---
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+  <section class="bcls-section">
+    <h2 id="Creating_custom_buttons">Creating custom buttons</h2>
+    <p>Custom buttons can be added to your app's details page. For example, you can add a Download button and/or a Location button. You are responsible for programming the button  functionality.</p>
+    <div style="position: relative; display: block; max-width: 960px;">
+      <div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/1507807800001/default_default/index.html?videoId=6293553909001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
+    </div>
+    <h3>Use cases</h3>
+    <p>Here are some use cases for custom buttons:</p>
+    <ul>
+      <li>A <strong>Download</strong> button to allow users to download a copy of the video</li>
+      <li>A <strong>Location</strong> button to allow users to tag their location on videos</li>
+    </ul>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Events">Events</h2>
+    <p>The following events can be used in your plugin code to control custom buttons:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Event</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">detailsPageAddCustomButton</code></td>
+          <td>Adds a button to the details page buttons list, at the end of the list</td>
+        </tr>
+        <tr>
+          <td><code translate="No">detailsPageRemoveCustomButton</code></td>
+          <td>Removes the button with the defined ID from the buttons list</td>
+        </tr>
+      </tbody>
+    </table>
+    <aside class="bcls-aside bcls-aside--information">When a user has a details page for a series open, and a new season/episode is selected, the previously added button will not be removed. </aside>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Event_listeners">Event listeners</h2>
+    <p>The following events are listened for by the player when button events are dispatched in your Beacon plugin code:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Event</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">detailsPageExternalButtonWasClicked</code></td>
+          <td>Called when a user clicks on one of the externally added buttons</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Code_syntax">Code syntax</h2>
+    <p></p>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">window.postMessage({
+  event: 'detailsPageAddCustomButton',
+  data: {
+    title: 'Test Button',
+    font_awesome_icon: 'fa fa-info-circle',
+    element_id: 'TEST_BTN_ID'
+  }
+}, window.location.origin);</code></pre>
+    <p>Here is the data that can be passed with the button events:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Data element</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">title</code></td>
+          <td>string</td>
+          <td>The name displayed in the button</td>
+        </tr>
+        <tr>
+          <td><code translate="No">font_awesome_icon</code></td>
+          <td>string</td>
+          <td>The Font Awesome ID for the icon; leave empty if no icon is to be applied</td>
+        </tr>
+        <tr>
+          <td><code translate="No">element_id</code></td>
+          <td>string</td>
+          <td>The HTML ID to be applied to this button</td>
+        </tr>
+      </tbody>
+    </table>
+   
+    <p>Data notes:</p>
+    <ul>
+      <li>When calling <code translate="No">detailsPageRemoveCustomButton</code>, the only required field is the <code translate="No">element_id</code>.</li>
+    </ul>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Module_implementation">Module implementation</h2>
+    <p>The following shows how functions using the side panel are implemented using JavaScript modules. Of course, you may implement your JavaScript in the manner of your choice. Further details on this module implementation can be found in the <a href="">Implementing Beacon Plugin Code Using Modules</a> document.</p>
+    <p>The following code contains these functions. A brief descriptions is provided for each:</p>
+    <ul>
+      <li><code translate="No">openSidePanel</code>: Dispatches the <code translate="No">enablePlayerSidePanel</code> event so the open/hide chevron button is displayed in the player.</li>
+      <li><code translate="No">enablePlayerSidePanel</code>: Places some example text in the panel. The key concept is locating the <code translate="No">div</code> element inside the panel using <br> <code translate="No">var panelArea = document.getElementById('player_side_panel_hook');</code></li>
+      <li><code translate="No">clearSidePanel</code>: Clears the side panel of contents. Note that the viewer closing the side panel does NOT empty the contents, so functionality in this function can be useful.</li>
+    </ul>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">const addCustomButtonDetails = () =&gt; {
+  
+      window.postMessage({
+        event: 'detailsPageAddCustomButton',
+        data: {
+          title: 'Test Button',
+          font_awesome_icon: 'fa fa-info-circle',
+          element_id: 'TEST_BTN_ID'
+        }
+      }, window.location.origin);
+    
+    };
+    
+    
+    const addCustomButtonDetailsParams = (pTitle, pFont, pID) =&gt; {
+      
+      window.postMessage({
+        event: 'detailsPageAddCustomButton',
+        data: {
+          title: pTitle,
+          font_awesome_icon: pFont,
+          element_id: pID
+        }
+      }, window.location.origin);
+    
+    };
+    
+    
+    const handleButtonClick = (buttonString) =&gt; {
+    
+      alert('button was clicked ' + buttonString);
+    
+    };
+    
+    export { addCustomButtonDetails, addCustomButtonDetailsParams, handleButtonClick };</code></pre>
+  </section>
+
+
+</article>

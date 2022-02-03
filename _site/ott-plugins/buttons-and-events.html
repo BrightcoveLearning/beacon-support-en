@@ -1,56 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="In this topic, you will learn how to set Live SSAI Ads to a Brightcove Beacon Channel." />
 
-    <title>Configuring Advertisements for Live SSAI with a Brightcove Beacon Channel</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-  <link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-      <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/prism.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/styles.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/landing-page.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/tabs.css"
-    />
-    <link rel="stylesheet" href="/assets/css/local.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/381443caa8.js"
-      crossorigin="anonymous"
-    ></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="In this topic, you will learn how to implement custom buttons using a plugin in your Brightcove Beacon web apps.">
+  
+  <title>Implementing Buttons and Event Handlers</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
 <script translate="no">
   window.dataLayer = window.dataLayer || [];
@@ -59,12 +30,12 @@
 
   gtag('config', 'UA-2728311-17');
 </script>
-    <script src="/assets/js/sajari-head.js"></script>
-		<script src="https://unpkg.com/feather-icons"></script>
-  </head>
+  <script src="/assets/js/sajari-head.js"></script>
+	<script src="https://unpkg.com/feather-icons"></script>
+</head>
 
-  <body class="body"></body>
-</html>
+
+<body class="body">
 
 <header>
   <div class="div-header">
@@ -90,11 +61,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
     
       
-        <li class="breadcrumb-item"><a href="/using-brightcove-beacon/">Using brightcove beacon</a></li>
+        <li class="breadcrumb-item"><a href="/ott-plugins/">Ott plugins</a></li>
       
     
       
-        <li class="breadcrumb-item active" aria-current="page">Configuring Advertisements for Live SSAI with a Brightcove Beacon Channel</li>
+        <li class="breadcrumb-item active" aria-current="page">Implementing Buttons and Event Handlers</li>
       
     
   </nav>
@@ -761,95 +732,158 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<h1>This page has moved - you will be directed to the <a href="/monetization/ssai/live-ssai.html">new location</a> in 5 seconds. Please update your bookmarks!</h1>
-<script type="text/javascript">
-  var t = setTimeout(function () {
-    window.location.href = '/monetization/ssai/live-ssai.html';
-  }, 5000);
-</script>
-
-
-<h3>Configuring Advertisements for Live SSAI with a Brightcove Beacon Channel</h3>
+<h1>Implementing Buttons and Event Handlers</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn how to set Live SSAI Ads to a Brightcove Beacon Channel.</summary>
+  <summary>In this topic, you will learn how to implement custom buttons using a plugin in your Brightcove Beacon web apps.</summary>
 
   <section class="bcls-section">
-    <aside class="bcls-aside bcls-aside--information">This Live Ad configuration process is only needed if the Live Channel was enabled with SSAI. If not, these steps are not required.</aside>
-    <h2 id="Prerequisites">Prerequisites</h2>
-
+    <h2 id="Creating_custom_buttons">Creating custom buttons</h2>
+    <p>Custom buttons can be added to your app's details page. For example, you can add a Download button and/or a Location button. You are responsible for programming the button  functionality.</p>
+    <div style="position: relative; display: block; max-width: 960px;">
+      <div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/1507807800001/default_default/index.html?videoId=6293553909001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
+    </div>
+    <h3>Use cases</h3>
+    <p>Here are some use cases for custom buttons:</p>
     <ul>
-      <li><a href="https://live.support.brightcove.com/live-module/implementing-server-side-ads-live-module.html" target="_blank">Create a Live channel enabled with SSAI in Video Cloud.</a></li>
-      <li><a href="https://studio.support.brightcove.com/admin/configuring-server-side-ad-settings.html#live" target="_blank">Create and set up the Ad Tag in Video Cloud.</a></li>
-      <li><a href="https://beacon.support.brightcove.com/using-brightcove-beacon/creating-a-channel.html" target="_blank">Create a Channel in Brightcove Beacon.</a></li>
-      <li>Create the Advertisement Configuration in Brightcove Beacon.</li>
-      <li>Set the Rights & Scheduling in the Channel.</li>
+      <li>A <strong>Download</strong> button to allow users to download a copy of the video</li>
+      <li>A <strong>Location</strong> button to allow users to tag their location on videos</li>
     </ul>
-
   </section>
 
   <section class="bcls-section">
-    <h2 id="Prerequisites">Configuring the Video Cloud Ad with Brightcove Beacon </h2>
-
-    <ol class="bcls-tasklist-restart">
-      <li>In Video Cloud Studio select the <strong>LIVE</strong> module.</li>
-      <li>Create or open the Live SSAI Channel you want to use with Brightcove Beacon. </li>
-      <li>In the <strong>Control Room</strong>, click <strong>Publish and Embed</strong> from the left panel.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" src="/assets/images/using-bcb/ssai-beacon/live-player-options.png" alt="" width="" height="" />
-        </figure>
-      </li>
-      <li>In the <strong>Live Player Options</strong> section, from the dropdown select the <strong>Ad Configuration</strong> you want to set.</li>
-      <li>Once selected a new <strong>Standard Embed Code</strong> will appear. </li>
-      <li>Extract the <strong>adConfigId</strong> by copying part of the URL that is assigned to the adConfigId, as shown in the image.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" src="/assets/images/using-bcb/ssai-beacon/configid.png" alt="" width="" height="" />
-        </figure>
-      </li>
-
-    </ol>
-
+    <h2 id="Events">Events</h2>
+    <p>The following events can be used in your plugin code to control custom buttons:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Event</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">detailsPageAddCustomButton</code></td>
+          <td>Adds a button to the details page buttons list, at the end of the list</td>
+        </tr>
+        <tr>
+          <td><code translate="No">detailsPageRemoveCustomButton</code></td>
+          <td>Removes the button with the defined ID from the buttons list</td>
+        </tr>
+      </tbody>
+    </table>
+    <aside class="bcls-aside bcls-aside--information">When a user has a details page for a series open, and a new season/episode is selected, the previously added button will not be removed. </aside>
   </section>
 
   <section class="bcls-section">
-    <h2 id="Prerequisites">Create the Advertisement in Brightcove Beacon</h2>
-
-    <ol class="bcls-tasklist-restart">
-      <li>Return to the Brightcove Beacon platform.</li>
-      <li>Click <strong>Advertisement</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" src="/assets/images/using-bcb/ssai-beacon/paste-configid.png" alt="" width="" height="" />
-        </figure>
-      </li>
-      <li>Create or select the Ad configuration you want to set. </li>
-      <li>For a new Advertisement, give it a <strong>Name</strong>.</li>
-      <li>Be sure that the <strong>Provider</strong> is set to <strong>Brightcove SSAI</strong>.</li>
-      <li>In the <strong>Live Config ID</strong> field, paste the <strong>adConfigId</strong> URL you copied in the previous section of this document.</li>
-      <li>Click <strong>Create New Advertisement</strong>.</li>
-
-    </ol>
-
+    <h2 id="Event_listeners">Event listeners</h2>
+    <p>The following events are listened for by the player when button events are dispatched in your Beacon plugin code:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Event</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">detailsPageExternalButtonWasClicked</code></td>
+          <td>Called when a user clicks on one of the externally added buttons</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
   <section class="bcls-section">
-    <h2 id="Prerequisites">Setting Rights & Scheduling in Brightcove Beacon</h2>
-    <ol class="bcls-tasklist-restart">
-      <li>On the top navigation, click <strong>Channels</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" src="/assets/images/using-bcb/ssai-beacon/rigthsandsche.png" alt="" width="" height="" />
-        </figure>
-      </li>
-      <li>Select the channel whose SSAI configuration you want to set.</li>
-      <li>Click the <strong>Rights & Scheduling</strong> tab.</li>
-      <li>In <strong>Rights Type</strong>, select <strong>Advertising - AVOD</strong>.</li>
-      <li>In <strong>Advertisement Configuration</strong>, from the dropdown select the Ad configuration just created.</li>
-      <li>Click <strong>Create New Channel</strong> to save your work.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" src="/assets/images/using-bcb/ssai-beacon/create-button.png" alt="" width="300" height="100" />
-        </figure>
-      </li>
-    </ol>
-
+    <h2 id="Code_syntax">Code syntax</h2>
+    <p></p>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">window.postMessage({
+  event: 'detailsPageAddCustomButton',
+  data: {
+    title: 'Test Button',
+    font_awesome_icon: 'fa fa-info-circle',
+    element_id: 'TEST_BTN_ID'
+  }
+}, window.location.origin);</code></pre>
+    <p>Here is the data that can be passed with the button events:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Data element</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">title</code></td>
+          <td>string</td>
+          <td>The name displayed in the button</td>
+        </tr>
+        <tr>
+          <td><code translate="No">font_awesome_icon</code></td>
+          <td>string</td>
+          <td>The Font Awesome ID for the icon; leave empty if no icon is to be applied</td>
+        </tr>
+        <tr>
+          <td><code translate="No">element_id</code></td>
+          <td>string</td>
+          <td>The HTML ID to be applied to this button</td>
+        </tr>
+      </tbody>
+    </table>
+   
+    <p>Data notes:</p>
+    <ul>
+      <li>When calling <code translate="No">detailsPageRemoveCustomButton</code>, the only required field is the <code translate="No">element_id</code>.</li>
+    </ul>
   </section>
+
+  <section class="bcls-section">
+    <h2 id="Module_implementation">Module implementation</h2>
+    <p>The following shows how functions using the side panel are implemented using JavaScript modules. Of course, you may implement your JavaScript in the manner of your choice. Further details on this module implementation can be found in the <a href="">Implementing Beacon Plugin Code Using Modules</a> document.</p>
+    <p>The following code contains these functions. A brief descriptions is provided for each:</p>
+    <ul>
+      <li><code translate="No">openSidePanel</code>: Dispatches the <code translate="No">enablePlayerSidePanel</code> event so the open/hide chevron button is displayed in the player.</li>
+      <li><code translate="No">enablePlayerSidePanel</code>: Places some example text in the panel. The key concept is locating the <code translate="No">div</code> element inside the panel using <br> <code translate="No">var panelArea = document.getElementById('player_side_panel_hook');</code></li>
+      <li><code translate="No">clearSidePanel</code>: Clears the side panel of contents. Note that the viewer closing the side panel does NOT empty the contents, so functionality in this function can be useful.</li>
+    </ul>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">const addCustomButtonDetails = () =&gt; {
+  
+      window.postMessage({
+        event: 'detailsPageAddCustomButton',
+        data: {
+          title: 'Test Button',
+          font_awesome_icon: 'fa fa-info-circle',
+          element_id: 'TEST_BTN_ID'
+        }
+      }, window.location.origin);
+    
+    };
+    
+    
+    const addCustomButtonDetailsParams = (pTitle, pFont, pID) =&gt; {
+      
+      window.postMessage({
+        event: 'detailsPageAddCustomButton',
+        data: {
+          title: pTitle,
+          font_awesome_icon: pFont,
+          element_id: pID
+        }
+      }, window.location.origin);
+    
+    };
+    
+    
+    const handleButtonClick = (buttonString) =&gt; {
+    
+      alert('button was clicked ' + buttonString);
+    
+    };
+    
+    export { addCustomButtonDetails, addCustomButtonDetailsParams, handleButtonClick };</code></pre>
+  </section>
+
 
 </article>
 <!-- complete bootstrap layout -->
@@ -867,7 +901,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 31 Jan 2022
+  Page last updated on 02 Feb 2022
 </div>
 
 

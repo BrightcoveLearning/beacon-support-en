@@ -77,6 +77,8 @@
       url: /using-brightcove-beacon/including-non-configurable-pages.html
     - name: Introducing Pages
       url: /using-brightcove-beacon/introducing-pages.html
+    - name: Protecting Content with Forensic Watermarking
+      url: /using-brightcove-beacon/forensic-watermarking-with-beacon.html
     - name: Sending App Notifications
       url: /using-brightcove-beacon/sending-app-notifications.html
     - name: Streaming a Live Event

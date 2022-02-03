@@ -861,7 +861,6 @@ window.addEventListener(&quot;message&quot;, (event) =&gt; {
     switch (event.data.event) {
       
       case 'detailsPageExternalButtonWasClicked':
-        console.log('button ID', event.data.data.element_id);
         if (event.data.data.element_id == 'download-button') {
           handleButtonClick('Download button'); 
         };
@@ -884,25 +883,30 @@ window.addEventListener(&quot;message&quot;, (event) =&gt; {
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>Function</th>
+          <th>Event</th>
           <th>Description</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td><code translate="No">addCustomButtonDetails</code></td>
-          <td>Dispatches the <code translate="No">detailsPageAddCustomButton</code> event to create a custom button on the details page, at the end of the buttons list.<br/>
-             The <code translate="No">title</code>, <code translate="No">font_awesome_icon</code> and <code translate="No">element_id</code> values are passed into this function as strings, using the <code translate="No">data</code> object.</td>
+          <td><code translate="No">detailsPageExternalButtonWasClicked</code></td> 
+          <td>Listen for this event. When triggered, do the following:
+            <ul>
+              <li>Check the code translate="No">event.data.data.element_id</code> to determine which button was clicked</li>
+              <li>Call the <strong>handleButtonClick</strong> function with the button value.</li>
+            </ul> 
+          </td>
         </tr>
         <tr>
-          <td><code translate="No">addCustomButtonDetailsParams</code></td>
-          <td>Dispatches the <code translate="No">detailsPageAddCustomButton</code> event to create a custom button on the details page, at the end of the buttons list.<br/>
-             This function uses the <code translate="No">pTitle</code>, <code translate="No">pFont</code> and <code translate="No">pID</code> parameters to populate the <code translate="No">title</code>, <code translate="No">font_awesome_icon</code> and <code translate="No">element_id</code> values in the <code translate="No">data</code> object.</td>
+          <td><code translate="No">onBeaconPageLoad</code></td>
+          <td>Listen for this event. When triggered, do the following:
+            <ul>
+              <li>Call the <strong>addCustomButtonDetailsParams</strong> function to add the Download button.</li>
+              <li>Call the <strong>addCustomButtonDetailsParams</strong> function to add the Location button.</li>
+            </ul> 
+          </td>
         </tr>
-        <tr>
-          <td><code translate="No">handleButtonClick</code></td>
-          <td>Displays an alert box with a message identifying the button that was clicked.</td>
-        </tr>
+       
       </tbody>
     </table>
 

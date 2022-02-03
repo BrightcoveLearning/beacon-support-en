@@ -1,6 +1,6 @@
 ---
-title: "Using JavaScript Modules in Beacon Plugins"
-description: "In this topic, you will learn how JavaScript modules are used in the code implementation of the examples shown for Beacon Plugins."
+title: "Dispatching and Handling Events in Beacon Plugins"
+description: "In this topic, you will learn how events are dispatched and handled in Beacon Plugins."
 parent: "OTT Plugins"
 layout: "staging"
 ---
@@ -61,7 +61,7 @@ layout: "staging"
     // event.data.data contains event data
   }
 },
-  false
+false
 );</code></pre>
     <p>where</p>
     <ul>
@@ -72,17 +72,22 @@ layout: "staging"
       <li><code>code to execute</code> (lines 7-8): Your business logic code to be executed in the handler; you access to the event object here (detailed later)</li>
       <li><code>false</code> (line 11): The <code>useCapture</code> value</li>
     </ul>
-
+    <p>The following is a functioning example that simply displays two different parts of the <code>event</code> object:</p>
     <pre class="line-numbers"><code class="language-javascript" translate="No">window.addEventListener("message", (event) => {
   const originsAllowed = [
-    'https://beacon-web.ott.us-east-1.qa.deploys.brightcove.com'
+    'https://myapplocation.brightcove.com'
   ];
   if (originsAllowed.includes(event.origin)) {
-    console.log('*** Test ***');
-  }
+    console.log('event.data.event: ', event.data.event);
+    console.log('event.data.data: ', event.data.data);  }
 },
-  false
+false
 );</code></pre>
+    <p>It is not uncommon to use the values of the <code>event</code> object in your code. Here are example values:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/" alt="">
+    </figure>
+
   </section>
 
   <section class="bcls-section">

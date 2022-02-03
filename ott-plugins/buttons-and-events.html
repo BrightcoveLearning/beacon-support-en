@@ -70,7 +70,7 @@ layout: "staging"
 
   <section class="bcls-section">
     <h2 id="Code_syntax">Code syntax</h2>
-    <p></p>
+    <p>Here is the JavaScript code syntax used for creating a custom button:</p>
     <pre class="line-numbers"><code class="language-javascript" translate="No">window.postMessage({
   event: 'detailsPageAddCustomButton',
   data: {
@@ -79,7 +79,7 @@ layout: "staging"
     element_id: 'TEST_BTN_ID'
   }
 }, window.location.origin);</code></pre>
-    <p>Here is the data that can be passed with the button events:</p>
+    <p>The following data can be passed with the button event:</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
@@ -116,12 +116,66 @@ layout: "staging"
   <section class="bcls-section">
     <h2 id="Module_implementation">Module implementation</h2>
     <p>The following shows how functions using the side panel are implemented using JavaScript modules. Of course, you may implement your JavaScript in the manner of your choice. Further details on this module implementation can be found in the <a href="">Implementing Beacon Plugin Code Using Modules</a> document.</p>
-    <p>The following code contains these functions. A brief descriptions is provided for each:</p>
-    <ul>
-      <li><code translate="No">openSidePanel</code>: Dispatches the <code translate="No">enablePlayerSidePanel</code> event so the open/hide chevron button is displayed in the player.</li>
-      <li><code translate="No">enablePlayerSidePanel</code>: Places some example text in the panel. The key concept is locating the <code translate="No">div</code> element inside the panel using <br> <code translate="No">var panelArea = document.getElementById('player_side_panel_hook');</code></li>
-      <li><code translate="No">clearSidePanel</code>: Clears the side panel of contents. Note that the viewer closing the side panel does NOT empty the contents, so functionality in this function can be useful.</li>
-    </ul>
+    
+    <h3><code translate="No">index.js</code></h3>
+    <p>Here is our example code:</p>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">import { addCustomButtonDetails, addCustomButtonDetailsParams, handleButtonClick } from './button-module.js';
+
+window.addEventListener(&quot;message&quot;, (event) =&gt; {
+  const originsAllowed = [
+    '<span class="bcls-input">your Beacon app URL</span>'
+  ];
+  if (originsAllowed.includes(event.origin)) {
+    switch (event.data.event) {
+      
+      case 'detailsPageExternalButtonWasClicked':
+        console.log('button ID', event.data.data.element_id);
+        if (event.data.data.element_id == 'download-button') {
+          handleButtonClick('Download button'); 
+        };
+        if (event.data.data.element_id == 'location-button') {
+          handleButtonClick('Location button');
+        };
+        break;
+        
+      case 'onBeaconPageLoad':
+        addCustomButtonDetailsParams('Download', 'fa fa-info-circle', 'download-button');
+        addCustomButtonDetailsParams('Location', 'fa fa-info-circle', 'location-button');
+      break;
+
+    }
+  }
+},
+  false
+);</code></pre>
+
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Function</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">addCustomButtonDetails</code></td>
+          <td>Dispatches the <code translate="No">detailsPageAddCustomButton</code> event to create a custom button on the details page, at the end of the buttons list.<br/>
+             The <code translate="No">title</code>, <code translate="No">font_awesome_icon</code> and <code translate="No">element_id</code> values are passed into this function as strings, using the <code translate="No">data</code> object.</td>
+        </tr>
+        <tr>
+          <td><code translate="No">addCustomButtonDetailsParams</code></td>
+          <td>Dispatches the <code translate="No">detailsPageAddCustomButton</code> event to create a custom button on the details page, at the end of the buttons list.<br/>
+             This function uses the <code translate="No">pTitle</code>, <code translate="No">pFont</code> and <code translate="No">pID</code> parameters to populate the <code translate="No">title</code>, <code translate="No">font_awesome_icon</code> and <code translate="No">element_id</code> values in the <code translate="No">data</code> object.</td>
+        </tr>
+        <tr>
+          <td><code translate="No">handleButtonClick</code></td>
+          <td>Displays an alert box with a message identifying the button that was clicked.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3><code translate="No">button-module.js</code></h3>
+    <p>Here is our example code:</p>
     <pre class="line-numbers"><code class="language-javascript" translate="No">const addCustomButtonDetails = () =&gt; {
   
       window.postMessage({
@@ -134,7 +188,6 @@ layout: "staging"
       }, window.location.origin);
     
     };
-    
     
     const addCustomButtonDetailsParams = (pTitle, pFont, pID) =&gt; {
       
@@ -149,7 +202,6 @@ layout: "staging"
     
     };
     
-    
     const handleButtonClick = (buttonString) =&gt; {
     
       alert('button was clicked ' + buttonString);
@@ -157,6 +209,31 @@ layout: "staging"
     };
     
     export { addCustomButtonDetails, addCustomButtonDetailsParams, handleButtonClick };</code></pre>
+
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Function</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">addCustomButtonDetails</code></td>
+          <td>Dispatches the <code translate="No">detailsPageAddCustomButton</code> event to create a custom button on the details page, at the end of the buttons list.<br/>
+             The <code translate="No">title</code>, <code translate="No">font_awesome_icon</code> and <code translate="No">element_id</code> values are passed into this function as strings, using the <code translate="No">data</code> object.</td>
+        </tr>
+        <tr>
+          <td><code translate="No">addCustomButtonDetailsParams</code></td>
+          <td>Dispatches the <code translate="No">detailsPageAddCustomButton</code> event to create a custom button on the details page, at the end of the buttons list.<br/>
+             This function uses the <code translate="No">pTitle</code>, <code translate="No">pFont</code> and <code translate="No">pID</code> parameters to populate the <code translate="No">title</code>, <code translate="No">font_awesome_icon</code> and <code translate="No">element_id</code> values in the <code translate="No">data</code> object.</td>
+        </tr>
+        <tr>
+          <td><code translate="No">handleButtonClick</code></td>
+          <td>Displays an alert box with a message identifying the button that was clicked.</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
 

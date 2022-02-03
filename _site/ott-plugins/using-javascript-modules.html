@@ -754,7 +754,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li><code>eventType</code>: The event being posted, for example <strong>enablePlayerSidePanel</strong></li>
       <li><code>data</code>: Data passed for use</li>
     </ul>
-    <p>The following is an example that adds a button to a details page, passing as data for:</p>
+    <p>The following is an example that adds a button to a details page, passing data for:</p>
     <ul>
       <li>The text to appear on the button</li>
       <li>The icon on the button</li>
@@ -768,6 +768,31 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     element_id: 'TEST_BTN_ID'
   }
 }, window.location.origin);</code></pre>
+    <h3>Handling an event</h3>
+    <p></p>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">window.addEventListener("message", (event) => {
+  const originsAllowed = [
+    'validhost1',
+    ...
+  ];
+  if (originsAllowed.includes(event.origin)) {
+    // event.data.event contains the event name
+    // event.data.data contains event data
+  }
+},
+  false
+);</code></pre>
+
+    <pre class="line-numbers"><code class="language-javascript" translate="No">window.addEventListener("message", (event) => {
+  const originsAllowed = [
+    'https://beacon-web.ott.us-east-1.qa.deploys.brightcove.com'
+  ];
+  if (originsAllowed.includes(event.origin)) {
+    console.log('*** Test ***');
+  }
+},
+  false
+);</code></pre>
   </section>
 
   <section class="bcls-section">

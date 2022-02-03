@@ -100,12 +100,54 @@ export { addCustomButtonDetails };</code></pre>
 
 const handleButtonClick = (buttonString) => {
 
-  alert('button was clicked ' + buttonString);
+  alert('Button clicked: ' + buttonString);
 
 };
 
 export { addCustomButtonDetails, handleButtonClick };</code></pre>
     <p>Now it is time to move on to see how the functions can be used.</p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="The_controller">The <strong>index.js</strong> controller</h2>
+    <p>The <strong>index.js</strong> is setup to be the centralized event handler and "direct traffic" from there. In this example the following happens:</p>
+    <ul>
+      <li>Line 1: The functions from the module are imported</li>
+      <li>Lines 3-8: Standard Beacon plugin event handler syntax</li>
+      <li>Line 9: A <code>switch-case</code> statement directs execution to the correction code</li>
+      <li>Lines 10-13: Adds two buttons to the web app when the <code>onBeaconPageLoad</code> event is handled</li>
+      <li>Lines 15-22: On the <code>detailsPageExternalButtonWasClicked</code> event the <code>handleButtonClick()</code> function is called; the <code>if</code> statements are used to pass the correct parameter value to the function</li>
+    </ul>
+
+    <pre class="line-numbers"><code class="language-javascript" translate="No">import { addCustomButtonDetails, handleButtonClick } from './button-demo-module.js';
+    
+window.addEventListener("message", (event) => {
+  const originsAllowed = [
+    'https://beacon-web.ott.us-west-2.qa.deploys.brightcove.com',
+    'https://beacon-web.ott.us-west-2.stage.deploys.brightcove.com'
+  ];
+  if (originsAllowed.includes(event.origin)) {
+    switch (event.data.event) {
+      case 'onBeaconPageLoad':
+        addCustomButtonDetails('Download', 'fa fa-info-circle', 'download-button');
+        addCustomButtonDetails('Location', 'fa fa-info-circle', 'location-button');
+        break;
+
+      case 'detailsPageExternalButtonWasClicked':
+        if (event.data.data.element_id == 'download-button') {
+         handleButtonClick('Download');
+        };
+        if (event.data.data.element_id == 'location-button') {
+          handleButtonClick('Location');
+        };
+        break;
+    }
+
+  }
+},
+false
+);</code></pre>
+
   </section>
 
 

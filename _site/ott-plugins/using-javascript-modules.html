@@ -740,7 +740,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Basics">Basics</h2>
     <p>Whether you are going to use modules or another plan, there are some basics you need to understand before you start writing code. The first concept to understand is that Beacon plugins are implemented using an event based framework. Essential to the process is using <code>window.postMessage</code> which provides easy cross domain functionality. The following describe some of the fundamentals of implementing your plugins.</p>
     <h3>Dispatching an event</h3>
-    <p>The skeleton code for dispatching an event is:</p>
+    <p>The generic code for dispatching an event is:</p>
     <pre class="line-numbers"><code class="language-javascript" translate="No">window.postMessage({
   event: "<em>eventType</em>",
   data: {
@@ -751,10 +751,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 }, window.location.origin)</code></pre>
     <p>where</p>
     <ul>
-      <li><code>eventType</code>: The event being posted, for example <strong>enablePlayerSidePanel</strong></li>
-      <li><code>data</code>: Data passed for use</li>
+      <li><code>eventType</code> (line 2): The event being posted, for example <strong>enablePlayerSidePanel</strong></li>
+      <li><code>data</code> (lines 4-5): Data passed for use</li>
     </ul>
-    <p>The following is an example that adds a button to a details page, passing data for:</p>
+    <p>The following is a functioning example that adds a button to a details page, passing data for:</p>
     <ul>
       <li>The text to appear on the button</li>
       <li>The icon on the button</li>
@@ -768,8 +768,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     element_id: 'TEST_BTN_ID'
   }
 }, window.location.origin);</code></pre>
+
     <h3>Handling an event</h3>
-    <p></p>
+    <p>When events are dispatched, of course they must be handled. Following is the generic code for handling an event:</p>
     <pre class="line-numbers"><code class="language-javascript" translate="No">window.addEventListener("message", (event) => {
   const originsAllowed = [
     'validhost1',
@@ -782,6 +783,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 },
   false
 );</code></pre>
+    <p>where</p>
+    <ul>
+      <li><code>message</code> (line 1): The event type, and when using <code>postMessage()</code> the type is always <code>message</code></li>
+      <li><code>originsAllowed</code> (lines 2-5): An array that contains the URL from where your apps will be served. Most likely this will be just on URL.</li>
+    </ul>
 
     <pre class="line-numbers"><code class="language-javascript" translate="No">window.addEventListener("message", (event) => {
   const originsAllowed = [
@@ -816,7 +822,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 01 Feb 2022
+  Page last updated on 03 Feb 2022
 </div>
 
 

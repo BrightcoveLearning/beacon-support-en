@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic, you will learn how JavaScript modules are used in the code implementation of the examples shown for Beacon Plugins.">
+  <meta name="description" content="In this topic, you will learn how events are dispatched and handled in Beacon Plugins.">
   
-  <title>Using JavaScript Modules in Beacon Plugins</title>
+  <title>Dispatching and Handling Events in Beacon Plugins</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -65,7 +65,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
     
       
-        <li class="breadcrumb-item active" aria-current="page">Using JavaScript Modules in Beacon Plugins</li>
+        <li class="breadcrumb-item active" aria-current="page">Dispatching and Handling Events in Beacon Plugins</li>
       
     
   </nav>
@@ -736,14 +736,18 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<h1>Using JavaScript Modules in Beacon Plugins</h1>
+<h1>Dispatching and Handling Events in Beacon Plugins</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn how JavaScript modules are used in the code implementation of the examples shown for Beacon Plugins.</summary>
+  <summary>In this topic, you will learn how events are dispatched and handled in Beacon Plugins.</summary>
 
   <section class="bcls-section">
-    <h2 id="Basics">Basics</h2>
-    <p>Whether you are going to use modules or another plan, there are some basics you need to understand before you start writing code. The first concept to understand is that Beacon plugins are implemented using an event based framework. Essential to the process is using <code>window.postMessage</code> which provides easy cross domain functionality. The following describe some of the fundamentals of implementing your plugins.</p>
-    <h3>Dispatching an event</h3>
+    <h2 id="Introduction">Introduction</h2>
+    <p>When getting started implementing Beacon plugins it is imperative to understand these plugins use an event based framework. Essential to the process is using <code>window.postMessage</code> which provides easy cross domain functionality. The rest of this document describes fundamentals of using events in your plugins.</p>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Dispatching_events">Dispatching events</h2>
+    <p>Some of the Beacon plugin elements have events you can dispatch. The following describes how to dispatch events in Beacon plugins.</p>
     <p>The generic code for dispatching an event is:</p>
     <pre class="line-numbers"><code class="language-javascript" translate="No">window.postMessage({
   event: "<em>eventType</em>",
@@ -772,8 +776,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     element_id: 'TEST_BTN_ID'
   }
 }, window.location.origin);</code></pre>
+    <p>The button created would appear as follows:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/ott-plugins/dispatching-handling-events/button.png" alt="" button>
+    </figure>
 
-    <h3>Handling an event</h3>
+  </section>
+
+
+  <section class="bcls-section">
+    <h2 id="Handling_events">Handling events</h2>
     <p>When events are dispatched, of course they must be handled. The basic syntax of the <code>addEventListener()</code> method is:</p>
     <pre class="line-numbers"><code class="language-javascript" translate="No">document.addEventListener(event, function, useCapture)</code></pre>
     <p>where</p>
@@ -793,33 +805,32 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     // event.data.data contains event data
   }
 },
-  false
+false
 );</code></pre>
     <p>where</p>
     <ul>
       <li><code>message</code> (line 1): The event type, and when using <code>postMessage()</code> the type is always <code>message</code></li>
       <li><code>(event) => {}</code> (line 1): The function that runs when the event occurs, defined as an arrow function</li>
       <li><code>originsAllowed</code> (lines 2-5): An array that contains the URL(s) from where your apps are served; most likely this will be just one URL</li>
-      <li><code>if (originsAllowed.includes(event.origin)) {}</code> (line 6): Check to be sure the event is coming from a valid URL for your apps.</li>
-      <li><code>code to execute</code> (lines 7-8): Your business logic code to be executed in the handler; you access to the event object here (detailed later)</li>
+      <li><code>if (originsAllowed.includes(event.origin)) {}</code> (line 6): Checks to be sure the event is coming from a valid URL for your apps</li>
+      <li><code>code to execute</code> (lines 7-8): Your business logic code to be executed in the handler; you can access the event object here (detailed later)</li>
       <li><code>false</code> (line 11): The <code>useCapture</code> value</li>
     </ul>
-
+    <p>The following is a functioning example that simply displays two different parts of the <code>event</code> object:</p>
     <pre class="line-numbers"><code class="language-javascript" translate="No">window.addEventListener("message", (event) => {
   const originsAllowed = [
-    'https://beacon-web.ott.us-east-1.qa.deploys.brightcove.com'
+    'https://myapplocation.brightcove.com'
   ];
   if (originsAllowed.includes(event.origin)) {
-    console.log('*** Test ***');
-  }
+    console.log('event.data.event: ', event.data.event);
+    console.log('event.data.data: ', event.data.data);  }
 },
-  false
+false
 );</code></pre>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="section-name">section-title</h2>
-    <p></p>
+    <p>It is not uncommon to use the values of the <code>event</code> object in your code. Here are example values for <code>event.data.event</code> and <code>event.data.data</code> when an <code>onBeaconPageLoad</code> event is handled:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/ott-plugins/dispatching-handling-events/event-object.png" alt="event object">
+    </figure>
   </section>
 
 </article>

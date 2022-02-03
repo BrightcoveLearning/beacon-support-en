@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic, you will learn what Beacon Plugins are, why they are used, and an introduction to their implementation.">
+  <meta name="description" content="In this topic, you will learn how to implement the custom sections which are defined by the HTML tag &lt;div&gt; using a plugin in your Brightcove Beacon web apps.">
   
-  <title>Learning Guide: Beacon Plugins</title>
+  <title>Implementing Custom Sections</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -65,7 +65,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
     
       
-        <li class="breadcrumb-item active" aria-current="page">Learning Guide: Beacon Plugins</li>
+        <li class="breadcrumb-item active" aria-current="page">Implementing Custom Sections</li>
       
     
   </nav>
@@ -299,10 +299,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/using-brightcove-beacon/introducing-pages.html">Introducing Pages</a></li>
-                  
-                
-                  
-                    <li><a href="/using-brightcove-beacon/forensic-watermarking-with-beacon.html">Protecting Content with Forensic Watermarking</a></li>
                   
                 
                   
@@ -736,63 +732,139 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<h1>Learning Guide: Beacon Plugins</h1>
+<h1>Implementing Custom Sections</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn what Beacon Plugins are, why they are used, and an introduction to their implementation.</summary>
+    <summary>In this topic, you will learn how to implement the custom sections which are defined by the HTML tag <code>&lt;div&gt;</code> using a plugin in your Brightcove Beacon web apps.</summary>
 
+    <section class="bcls-section">
+        <h2 id="Using_the_custom_divs">Using the custom sections</h2>
+        <p>There are three areas in your Beacon app that you can customize.</p>
+        <p>You can add content to the HTML <code>&lt;div&gt;</code> sections and style these areas using CSS. Here are
+            some
+            examples:</p>
+        <ol class="bcls-tasklist">
+            <li>
+                <figure class="bcls-figure">
+                    <img class="bcls-image" width="1000" src="/assets/images/ott/div-mid-page.png"
+                        alt="Add carousel layout">
+                    <figcaption class="bcls-caption--image">Beacon details mid page section.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure class="bcls-figure">
+                    <img class="bcls-image" width="1000" height='600'src="/assets/images/ott/web-app-overflow.png"
+                        alt="Add carousel layout">
+                    <figcaption class="bcls-caption--image">Beacon web app overflow.</figcaption>
+                </figure>
+            </li>
+        </ol>
 
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>What, where, how, why</p>
-  </section>
+        <h3>Use cases</h3>
+        <p>The following are appropriate use cases for the custom sections.</p>
+        <ul>
+            <li>The custom sections has been used to place custom content like a short description on the
+                details page.</li>
+            <li>You can also add a chat-bot to the bottom of each page.</li>
+        </ul>
+    </section>
 
+    <section class="bcls-section">
+        <h2 id="ID_selectors">ID selectors</h2>
+        <p>The following selectors can be used in your plugin code to control the custom <code>&lt;div&gt;</code> tags.
+        </p>
+        <table class="bcls-table">
+            <thead class="bcls-table__head">
+                <tr>
+                    <th>ID Selector</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody class="bcls-table__body">
+                <tr>
+                    <td><code>beacon-web-app-overflow </code></td>
+                    <td>
+                        <ul>
+                            <li>Available in all pages.</li>
+                            <li>This element has a higher z-index than the Beacon Web App content but is lower than the
+                                alerts/confirmation popups shown in the app.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>beacon_details_mid_page_section </code></td>
+                    <td>
+                        <ul>
+                            <li>Only available on the details page.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-  <section class="bcls-section">
-    <h2 id="Available_elements">Available elements</h2>
-    <p></p>
-    <table class="bcls-table">
-      <thead class="bcls-table__head">
-        <tr>
-          <th>Element</th>
-          <th>Functionality</th>
-        </tr>
-      </thead>
-      <tbody class="bcls-table__body">
-        <tr>
-          <td>Page events and data</td>
-          <td>Listen for page events like page loading, unloading and changing.</td>
-        </tr>
-        <tr>
-          <td>User events and data</td>
-          <td>Listen for user events like sign in, register and sign out.</td>
-        </tr>
-        <tr>
-          <td>Player events and data</td>
-          <td>Listen for events for side panel behavior.</td>
-        </tr>
-        <tr>
-          <td>Custom buttons events and data</td>
-          <td>Add and remove buttons and listen for click events.</td>
-        </tr>
-        <tr>
-          <td>Custom &lt;div&gt;s ID selectors</td>
-          <td>Place custom content in &lt;div&gt;s.</td>
-        </tr>
-        <tr>
-          <td>Custom pages</td>
-          <td>Create a custom page in the Beacon Studio then populate with dynamically built HTML of your choice.</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+        <section class="bcls-section">
+            <h2 id="Module_implementation">Module implementation</h2>
+            <p>The following shows how functions using the custom HTML <code>&lt;div&gt;</code> sections are implemented
+                using
+                JavaScript and CSS modules. Of course, you may implement your JavaScript in the manner of your choice.
+            </p>
+            <p>The following code contains these functions. A brief descriptions is provided for each:</p>
+            <h3>Beacon web app overflow</h3>
+            <p>Below is the JavaScript code used for this example:</p>
+            <!-- <ul>
+                <li><code>populateAppOverflowDiv</code>: This function creates a paragraph inside the
+                    <code>&lt;div&gt;</code> and places some example text.</li>
+            </ul> -->
+            <pre class="line-numbers"><code class="language-javascript" translate="No">const populateAppOverflowDiv = () => { 
+    var webAppOverflow = document.getElementById('beacon-web-app-overflow');
+    var para2 = document.createElement("P");
+    var t2 = document.createTextNode("This is beacon-web-app-overflow.");
+    para2.appendChild(t2);
+    webAppOverflow.appendChild(para2);
+};
 
+const clearAppOverflowDiv = () => {
+    var webAppOverflow = document.getElementById('beacon-web-app-overflow');
+    webAppOverflow.innerHTML = '';
+};
 
-  <section class="bcls-section">
-    <h2 id="Implementation_architecture">Implementation architecture</h2>
-    <p></p>
-  </section>
+export { populateAppOverflowDiv, clearAppOverflowDiv };</code></pre>
 
+            <p>Here is the CSS code used for this example:</p>
 
+            <pre class="line-numbers"><code class="language-css" translate="No">#beacon-web-app-overflow {
+    background-color: black;
+    color: white;
+    font-size: large;
+}</code></pre>
+
+            <h3>Beacon details mid page section</h3>
+            <p>Below is the JavaScript code used for this example:</p>
+            <!-- <ul>
+                <li><code>populateMidPageDiv</code>: This function creates a paragraph inside the
+                    <code>&lt;div&gt;</code> and places some information text.</li>
+            </ul> -->
+            <pre class="line-numbers"><code class="language-javascript" translate="No">const populateMidPageDiv = () => {
+    var midPage = document.getElementById('beacon_details_mid_page_section');
+    var para1 = document.createElement("P");
+    var t1 = document.createTextNode("This is div-mid-page")
+    para1.appendChild(t1);
+    midPage.appendChild(para1);   
+};
+ 
+const clearMidPageDiv = () => {
+    var midPage = document.getElementById('beacon_details_mid_page_section');
+    midPage.innerHTML = '';
+};
+  
+export { populateMidPageDiv, clearMidPageDiv };</code></pre>
+
+            <p>Here is the CSS code used for this example:</p>
+            <pre class="line-numbers"><code class="language-css" translate="No">#beacon_details_mid_page_section {
+    background-color: black;
+    color: white;
+    font-size: medium;
+}</code></pre>
+        </section>
 </article>
 <!-- complete bootstrap layout -->
     </div>

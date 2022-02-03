@@ -770,7 +770,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 }, window.location.origin);</code></pre>
 
     <h3>Handling an event</h3>
-    <p>When events are dispatched, of course they must be handled. Following is the generic code for handling an event:</p>
+    <p>When events are dispatched, of course they must be handled. The basic syntax of the <code>addEventListener()</code> method is:</p>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">document.addEventListener(event, function, useCapture)</code></pre>
+    <p>where</p>
+    <ul>
+      <li><code>event</code>: Event name</li>
+      <li><code>function</code>: Function to run when the event occurs</li>
+      <li><code>useCapture</code>: Very technical issue concerning when the event is executed; this will always be <code>false</code> for Beacon plugins.</li>
+    </ul>
+    <p>Following is the generic code for handling an event in Beacon plugin code:</p>
     <pre class="line-numbers"><code class="language-javascript" translate="No">window.addEventListener("message", (event) => {
   const originsAllowed = [
     'validhost1',
@@ -786,7 +794,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>where</p>
     <ul>
       <li><code>message</code> (line 1): The event type, and when using <code>postMessage()</code> the type is always <code>message</code></li>
-      <li><code>originsAllowed</code> (lines 2-5): An array that contains the URL from where your apps will be served. Most likely this will be just on URL.</li>
+      <li><code>(event) => {}</code> (line 1): The function that runs when the event occurs, defined as an arrow function</li>
+      <li><code>originsAllowed</code> (lines 2-5): An array that contains the URL(s) from where your apps are served; most likely this will be just one URL</li>
+      <li><code>if (originsAllowed.includes(event.origin)) {}</code> (line 6): Check to be sure the event is coming from a valid URL for your apps.</li>
+      <li><code>code to execute</code> (lines 7-8): Your business logic code to be executed in the handler; you access to the event object here (detailed later)</li>
+      <li><code>false</code> (line 11): The <code>useCapture</code> value</li>
     </ul>
 
     <pre class="line-numbers"><code class="language-javascript" translate="No">window.addEventListener("message", (event) => {

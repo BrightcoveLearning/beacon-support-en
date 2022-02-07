@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This section contains topics on Beacon plugins.">
+  <meta name="description" content="In this topic, you will learn how to force Brightcove Beacon to sync with the Video Cloud catalog.">
   
-  <title>Beacon Plugins</title>
+  <title>Forcing a Sync</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -61,7 +61,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
     
       
-        <li class="breadcrumb-item active" aria-current="page">Beacon Plugins</li>
+        <li class="breadcrumb-item"><a href="/syncing-with-video-cloud/">Syncing with video cloud</a></li>
+      
+    
+      
+        <li class="breadcrumb-item active" aria-current="page">Forcing a Sync</li>
       
     
   </nav>
@@ -732,50 +736,63 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<h1>Beacon Plugins</h1>
-<article class="landing-page-wrapper">
-  <summary>This section contains topics on Beacon plugins.</summary>
-  <ul>
-    <li><a href="/ott-plugins/learning-guide-beacon-plugins.html">Learning Guide: Beacon Plugins</a></li>
-    <li><a href="/ott-plugins/javascript-modules-beacon-plugins.html">Use JavaScript Modules for Plugins</a></li>
-    <li><a href="/ott-plugins/dispatching-handling-events.html">Dispatch & Handle Events in Plugins</a></li>
-    <li><a href="/ott-plugins/buttons-and-events.html">Implement Buttons and Event Handlers</a></li>
-    <li><a href="/ott-plugins/custom-divs.html">Implement Custom Sections</a></li>
-    <li><a href="/ott-plugins/side-panel.html">Implement the Side Panel</a></li>
-  </ul>
+<!-- The location of this document has changed. Please update your bookmark. You should be redirected to the new document location. 
+      DO NOT UPDATE THIS DOCUMENT. Instead, find the new location and update there. 
+      There is redirect code at the bottom of this document. -->
 
-  <!--   <section class="bcls-topic-list">
-    <h2 id="Topics_in_this_section">Topics in Beacon Plugins</h2>
-    <ul>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-    </ul>
-  </section> -->
+<h1>Forcing a Sync</h1>
+<article class="bcls-article">
+  <summary>In this topic, you will learn how to force Brightcove Beacon to sync with the Video Cloud catalog.</summary>
+
+    <section class="bcls-section">
+        <h2 id="Syncing_options">Syncing options</h2>
+        <p>In the <strong>Tools</strong> section of Brightcove Beacon you have two options for syncing Brightcove Beacon with the Video Cloud catalog. To get to the tools, click on the <strong>wrench</strong> icon in the top menu, then the <strong>Ingestion</strong> option on the left menu:</p>
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/syncing-with-vc/force-sync.png" alt="force-sync">
+            <p>Here you have two tools with which to direct a sync. They are:</p>
+            <ul>
+                <li><strong>Update Brightcove Videos</strong>: If you have added videos to your Video Cloud catalog, or altered existing videos, this button syncs the newly added or updated videos to Brightcove Beacon.</li>
+                <li><strong>Update Brightcove Playlists</strong>: If you have added playlists to your Video Cloud catalog, or altered existing playlists, this button syncs the newly added or updated playlists to Brightcove Beacon.</li>
+            </ul>
+            <aside class="bcls-aside bcls-aside--warning">Note: Be sure to sync the videos first and wait for that process to end <strong>BEFORE</strong> syncing the playlists.</aside>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/syncing-with-vc/sync-buttons.png" alt="sync-buttons">
+            </figure>
+            <aside class="bcls-aside bcls-aside--tip">When working with Brightcove personnel to configure your Brightcove Beacon Experience, you can request a schedule be created to automate the sync process.</aside>
+    </section>
+    <section class="bcls-section">
+        <h2 id="Clearing_the_cache_after_syncing">Clearing the cache after syncing</h2>
+        <p>After syncing the videos you will most likely want to clear the cache to see the results of performing a sync as soon as possible. This can be done from the <strong>Tools</strong> menu. Simply click the <strong>Cache</strong> option from the left navigation and click the <strong>Cache Purge</strong> button. Note that doing this too frequently in production has an adverse effect on scalability and performance. For details see the <a href="/using-brightcove-beacon/tools.html">Using the Tools</a> document.</p>
+    </section>
+
 </article>
+<script>
+  var h1 = document.querySelector('h1'),
+      path = location.pathname,
+      new_location = 'https://beacon.support.brightcove.com/syncing-with-video-cloud/syncing-video-cloud-catalog.html',
+      message = '<h3>This page has moved to <a href="' + new_location + '">' + new_location + '</a>. Please update your bookmark! You will be redirected in 5 seconds.<h3>';
+
+      console.log('new_location', new_location);
+
+      h1.insertAdjacentHTML('afterend', message);
+      redirect();
+
+      function redirect() {
+        var t = window.setTimeout(go_to_new_location, 5000);
+      }
+
+      function go_to_new_location() {
+        window.location.href = new_location;
+      }
+</script> 
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Page Contents</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
       
     </div>
   </div>
@@ -783,7 +800,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 07 Feb 2022
+  Page last updated on 06 Jul 2021
 </div>
 
 

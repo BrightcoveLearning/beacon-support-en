@@ -233,6 +233,8 @@
       url: /references/branding-beacon-apps.html
     - name: Common Configuration Settings
       url: /references/common-configuration-settings.html
+    - name: Cookie Consent Using OneTrust
+      url: /references/managing-cookie-consent.html
     - name: 'Deleting an App User'
       url: '/references/delete-app-user.html'
     - name: 'Glossary'

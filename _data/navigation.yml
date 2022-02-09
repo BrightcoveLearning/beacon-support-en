@@ -122,7 +122,7 @@
         - name: 'Configuring Server-Side Ad Settings'
           url: '/monetization/ssai/configuring-server-side-ad-settings.html'
         - name: 'Configuring Live SSAI with Beacon Channels'
-          url: '/using-brightcove-beacon/config-live-ssai-beacon.html'
+          url: '/monetization/ssai/config-live-ssai-beacon-channel.html'
         - name: 'Implementing Live SSAI Events'
           url: '/monetization/ssai/live-ssai.html'
         - name: Implementing VOD SSAI

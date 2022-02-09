@@ -4,12 +4,9 @@ description: 'In this topic, you will learn how to set Live SSAI Ads to a Bright
 parent: Using Brightcove Beacon
 ---
 
-<!-- <h1>This page has moved - you will be directed to the <a href="/monetization/ssai/live-ssai.html">new location</a> in 5 seconds. Please update your bookmarks!</h1>
-<script type="text/javascript">
-  var t = setTimeout(function () {
-    window.location.href = '/monetization/ssai/live-ssai.html';
-  }, 5000);
-</script> -->
+<!-- The location of this document has changed. Please update your bookmark. You should be redirected to the new document location. 
+      DO NOT UPDATE THIS DOCUMENT. Instead, find the new location and update there. 
+      There is redirect code at the bottom of this document. -->
 <h1>{{ page.title }}</h1>
 <article class="bcls-article">
     <summary>{{ page.description }}</summary>
@@ -93,3 +90,23 @@ parent: Using Brightcove Beacon
   </section>
 
 </article>
+
+<script>
+  var h1 = document.querySelector('h1'),
+      path = location.pathname,
+      new_location = 'https://beacon.support.brightcove.com/monetization/ssai/config-live-ssai-beacon-channel.html',
+      message = '<h3>This page has moved to <a href="' + new_location + '">' + new_location + '</a>. Please update your bookmark! You will be redirected in 5 seconds.<h3>';
+
+      console.log('new_location', new_location);
+
+      h1.insertAdjacentHTML('afterend', message);
+      redirect();
+
+      function redirect() {
+        var t = window.setTimeout(go_to_new_location, 5000);
+      }
+
+      function go_to_new_location() {
+        window.location.href = new_location;
+      }
+</script>

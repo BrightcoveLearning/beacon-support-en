@@ -200,7 +200,7 @@
     - name: 'Roku'
       url: '/creating-your-apps/roku/index.html'
       docs:
-        - name: 'Adding Brightcove User to Roku Account'
+        - name: 'Add Brightcove User to Roku Account'
           url: '/creating-your-apps/roku/add-bc-user.html'
         - name: 'Configuring In-Channel Products in Roku'
           url: '/creating-your-apps/roku/configuring-inchannel-products.html'

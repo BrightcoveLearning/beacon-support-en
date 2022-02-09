@@ -172,6 +172,8 @@
     - name: 'Fire TV'
       url: '/creating-your-apps/fire-tv/index.html'
       docs:
+        - name: 'Add Brightcove Email to Amazon Account'
+          url: '/creating-your-apps/fire-tv/add-bc-email.html'
         - name: 'Installing a Fire TV Test Build'
           url: '/creating-your-apps/fire-tv/installing-fire-tv-test-build.html'
         - name: 'Submitting to the Amazon Store'
@@ -198,6 +200,8 @@
     - name: 'Roku'
       url: '/creating-your-apps/roku/index.html'
       docs:
+        - name: 'Adding Brightcove User to Roku Account'
+          url: '/creating-your-apps/roku/add-bc-user.html'
         - name: 'Configuring In-Channel Products in Roku'
           url: '/creating-your-apps/roku/configuring-inchannel-products.html'
         - name: 'Installing a Roku Test Build'

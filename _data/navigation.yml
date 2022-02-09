@@ -125,7 +125,7 @@
           url: '/using-brightcove-beacon/config-live-ssai-beacon.html'
         - name: 'Implementing Live SSAI Events'
           url: '/monetization/ssai/live-ssai.html'
-        - name: Implementing VOD SSAI Events
+        - name: Implementing VOD SSAI
           url: '/monetization/ssai/vod-ssai.html'
         - name: 'Beacon Apps Ad Targeting'
           url: '/monetization/ssai/beacon-apps-ad-targeting.html'

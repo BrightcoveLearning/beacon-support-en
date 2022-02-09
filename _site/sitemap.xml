@@ -543,6 +543,15 @@
         
           <url>
             
+              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/config-live-ssai-beacon.html</loc>
+            
+            <lastmod>2022-02-09</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
               <loc>https://beacon.support.brightcove.com/monetization/ssai/live-ssai.html</loc>
             
             <lastmod>2022-02-09</lastmod>

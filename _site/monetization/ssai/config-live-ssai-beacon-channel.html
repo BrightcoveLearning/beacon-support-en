@@ -785,12 +785,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<!-- <h1>This page has moved - you will be directed to the <a href="/monetization/ssai/live-ssai.html">new location</a> in 5 seconds. Please update your bookmarks!</h1>
-<script type="text/javascript">
-  var t = setTimeout(function () {
-    window.location.href = '/monetization/ssai/live-ssai.html';
-  }, 5000);
-</script> -->
 <h1>Configuring Live SSAI with Brightcove Beacon Channels</h1>
 <article class="bcls-article">
     <summary>In this topic, you will learn how to set Live SSAI Ads to a Brightcove Beacon Channel.</summary>
@@ -845,7 +839,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Create or select the Ad configuration you want to set. </li>
       <li>For a new Advertisement, give it a <strong>Name</strong>.</li>
       <li>Be sure that the <strong>Provider</strong> is set to <strong>Brightcove SSAI</strong>.</li>
-      <li>In the <strong>Live Config ID</strong> field, paste the <strong>adConfigId</strong> URL you copied in the previous section of this document.</li>
+      <li>In the <strong>Live Config ID</strong> field, paste the <strong>adConfigId</strong> URL you copied in the previous section of this document.
+        <aside class="bcls-aside bcls-aside--information">When using Beacon Channels, the <strong>Live Ad Config ID</strong> value is the Live playback token, instead of the Ad Configuration ID.</aside>
+      </li>
       <li>Click <strong>Create New Advertisement</strong>.</li>
 
     </ol>

@@ -1,56 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="In this topic, you will learn how to implement OneTrust Cookie Compliance with Brightcove Beacon." />
 
-    <title>Managing Cookie Consent Using OneTrust</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-  <link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-      <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/prism.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/styles.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/landing-page.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://support.brightcove.com/site-assets/css/site/tabs.css"
-    />
-    <link rel="stylesheet" href="/assets/css/local.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/381443caa8.js"
-      crossorigin="anonymous"
-    ></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="In this topic, you will learn how to listen and work with page events when using a custom plugin for your Brightcove Beacon web apps.">
+  
+  <title>Working with Page Events</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2728311-17"></script>
 <script translate="no">
   window.dataLayer = window.dataLayer || [];
@@ -59,12 +30,12 @@
 
   gtag('config', 'UA-2728311-17');
 </script>
-    <script src="/assets/js/sajari-head.js"></script>
-		<script src="https://unpkg.com/feather-icons"></script>
-  </head>
+  <script src="/assets/js/sajari-head.js"></script>
+	<script src="https://unpkg.com/feather-icons"></script>
+</head>
 
-  <body class="body"></body>
-</html>
+
+<body class="body">
 
 <header>
   <div class="div-header">
@@ -90,11 +61,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <li class="breadcrumb-item first-item"><a href="/">Home</a></li>
     
       
-        <li class="breadcrumb-item"><a href="/references/">References</a></li>
+        <li class="breadcrumb-item"><a href="/ott-plugins/">Ott plugins</a></li>
       
     
       
-        <li class="breadcrumb-item active" aria-current="page">Managing Cookie Consent Using OneTrust</li>
+        <li class="breadcrumb-item active" aria-current="page">Working with Page Events</li>
       
     
   </nav>
@@ -781,497 +752,240 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<h1>Managing Cookie Consent Using OneTrust</h1>
+<h1>Working with Page Events</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn how to implement OneTrust Cookie Compliance with Brightcove Beacon.</summary>
-
+  <summary>In this topic, you will learn how to listen and work with page events when using a custom plugin for your Brightcove Beacon web apps.</summary>
 
   <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <aside class="bcls-aside bcls-aside--warning language-editable">The first step in an implementation of cookie compliance is checking with your legal team and determine rules and regulations for all geographies you are targeting with your content.</aside>
-    <p>Cookies are used to store data on a visitor's computer or mobile device. Cookies are commonly used and sometimes critical to a website's functionality. Cookies can be used to store large amounts of data, store personal data and track online activity so advertisers can target ads. Because of the negatives that are associated with cookies, regulations have evolved around them. The two most common are:</p>
+    <h2 id="Handling_page_events">Handling page events</h2>
+    <p>When using web customization with your Beacon web apps, you can listen for page events and process custom code based on your requirements.</p>
+    <!-- <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Custom buttons" src="/assets/images/ott-plugins/buttons/custom-buttons.png" />
+      <figcaption class="bcls-caption--image">Custom buttons</figcaption>
+    </figure> -->
+    <!-- <div style="position: relative; display: block; max-width: 960px;">
+      <div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/1507807800001/default_default/index.html?videoId=6293553909001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
+    </div> -->
+    <h3>Use cases</h3> 
+    <p>Here are some use cases for custom buttons:</p>
     <ul>
-      <li>California Consumer Privacy Act (CCPA)</li>
-      <li>General Data Protection Regulation (GDPR) used in the EU and United Kingdom</li>
-    </ul>
-    <p>This document is an introduction to get you started using OneTrust's Cookie Compliance tool with Brightcove Beacon. Brightcove recommends using OneTrust for your Beacon cookie compliance needs.</p>
-    <aside class="bcls-aside bcls-aside--tip language-editable">
-      <p>For further general information on cookies, regulation, rules and cookie compliance see OneTrust's <a href="https://www.cookiepro.com/knowledgebase/">CookiePro Knowledge Base</a> document. For complete details on OneTrust's tools see the <a href="https://my.onetrust.com/s/topic/0TO1Q000000ItRyWAK/cookie-compliance">Cookie Compliance</a> section of the documentation at OneTrust.</p>
-    </aside>
-    <p>This main sections in this document are:</p>
-    <ul>
-      <li>How OneTrust Cookie Compliance works</li>
-      <li>Implementation steps (comprised of four sections)</li>
-      <li>What data is collected?</li>
-      <li>Implementation architecture</li>
+      <li>A <strong>Download</strong> button to allow users to download a copy of the video</li>
+      <li>A <strong>Location</strong> button to allow users to tag their location on videos</li>
     </ul>
   </section>
 
-
   <section class="bcls-section">
-    <h2 id="How_it_works">How OneTrust Cookie Compliance works</h2>
-    <p>The end result of setting up OneTrust Cookie Compliance is that a banner will appear in the Beacon App for geographic locations you choose. Here is an example of what the banner could look like (taken from OneTrust's site):</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/one-trust-banner.png" alt="one trust banner">
-    </figure>
-    <p>When a viewer clicks on the <strong>Customize Settings</strong> link in the banner, a <strong>Preference Center</strong> dialog appears. This allows your viewers to customize how cookies behave in their app:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/one-trust-preference-center.png" alt="one trust preference center">
-    </figure>
-    <p>As part of the implementation process, you will have the option to customize the text displayed in, and the look of, both the banner and preference center.</p>
-    <h3>Overview of implementation process</h3>
-    <p>There are a number of steps to complete to implement OneTrust's cookie compliance with your Beacon app. Here is an overview of that process:</p>
-    <ol>
-      <li>Define from where your apps will be served.</li>
-      <li>Create templates that define your banner and preference center functionality and upload your logo for each template created.</li>
-      <li>Create a geolocation rule group, which will act as a container for geolocation rules.</li>
-      <li>Create three geolocation rules that:
-        <ul>
-          <li>Define the regions in which the cookie compliance will be used.</li>
-          <li>Define the template to be used with the geolocation rule.</li>
-          <li>Define other specifications, like how often re-consent will need to be done.</li>
-        </ul>
-      </li>
-      <li>Assign geolocation rules to the domains from which your Beacon app is served.</li>
-      <li>Generate the scripts that provide the actual cookie compliance in your Beacon app.</li>
-      <li>Supply the scripts to Brightcove's OTT Delivery Team for implementation.</li>
-    </ol>
-    <p>The major sections following in this document lead you step by step through the implementation process.</p>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Define_app_location">Define app location</h2>
-    <p>Later in the implementation process, you need to use the domain(s) from which your apps are served. The steps in this section define that.</p>
-    <ol class="bcls-tasklist">
-      <li>Log in to your OneTrust account.</li>
-      <li>From the <em>Welcome</em> page, click the <strong>Cookie Compliance</strong> option.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/onetrust-index.png" alt="onetrust index page">
-        </figure>
-      </li>
-      <li>To start the process:
-        <ol type="a">
-          <li>In the left navigation, click <strong>Websites</strong></li>
-          <li>Click <strong>Add Website</strong></li>
-        </ol>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/add-website.png" alt="click add website">
-        </figure>
-      </li>
-      <li>Enter the URL from where your app will be served and the <em>Organization</em>, then click <strong>Scan Only</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/scan-website.png" alt="scan website">
-        </figure>
-      </li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ol>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Create_two_templates">Create two templates</h2>
-    <p>A template defines how your banner and preferences dialog appear, and function, for your users. In the following steps you will create two templates, one for CCPA and one for GDPR.</p>
-    <aside class="bcls-aside bcls-aside--tip language-editable">You may not need both templates. As stated earlier, generally CCPA is used for California and GDPR for EU and UK. If you are not targeting one of these regions the corresponding template may not be needed. You should investigate your targeted geographies to check on cookie compliance regulations. The step-by-step instructions will cover creating both templates.</aside>
-    <ol class="bcls-tasklist">
-      <li>In the left navigation, click <strong>Templates</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/click-templates.png" alt="click templates">
-        </figure>
-      </li>
-      <li>Click <strong>Add New</strong>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/add-new-template.png" alt="add new template">
-        </figure>
-      </li>
-      <li>Select the <strong>CCPA Template (California)</strong> for the <strong>Framework</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/select-ccpa-template.png" alt="select ccpa template">
-        </figure>
-      </li>
-      <li>Click <strong>Next</strong>.</li>
-      <li>Complete the form then click <strong>Create</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/name-the-template.png" alt="name the template">
-        </figure>
-      </li>
-      <li>The <em>Template Details</em> page opens to the <em>Banner</em> tab. Click <strong>Preference Center</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/details-banner-tab.png" alt="/details banner tab">
-        </figure>
-      </li>
-      <li>In the <em>Preference Center</em>:
-        <ol type="a">
-          <li>Open the <strong>Styling</strong> options</li>
-          <li>Enable <strong>Override Banner Styling</strong></li>
-          <li>Upload a new logo</li>
-        </ol>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/upload-new-logo.png" alt="upload new logo">
-        </figure>
-        <aside class="bcls-aside bcls-aside--warning language-editable">There is no need to make any other styling changes here as the banner and preference center will automatically be styled based on the design of your Beacon app.</aside>
-      </li>
-      <li>Note that the logo is updated in the preview.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/logo-updated.png" alt="logo updated">
-        </figure>
-      </li>
-      <li>Click <strong>Save Template</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/save-template.png" alt="Save template">
-        </figure>
-      </li>
-      <li>Click <strong>Add New</strong> to start creation of your second template.</li>
-      <li>Select the <strong>IAB Transparency and Consent Framework 2.0</strong> for the <em>Framework</em>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/new-iab-framework.png" alt="new iab framework">
-        </figure>
-      </li>
-      <li>Click <strong>Next</strong>.</li>
-      <li>Read the <em>IAB TCF</em> information then click <strong>I Agree</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/iab-agree.png" alt="IAB Agree">
-        </figure>
-      </li>
-      <li>Complete the form then click <strong>Create</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/gdpr-form.png" alt="gdpr form">
-        </figure>
-        <aside class="bcls-aside bcls-aside--information language-editable">Note that using <strong>GDPR</strong> in the template name makes sense as IAB standards are GDPR compliant.</aside>
-      </li>
-      <li>Supply your company's logo for the banner, as shown in steps 8-10 above.</li>
-      <li>While still in the <em>Preference Center</em>, open the <strong>Advanced Configuration</strong> options.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/advanced-configuration.png" alt="advanced configuration">
-        </figure>
-      </li>
-      <li>A number of changes must be made here for use with Brightcove Beacon. The changes are listed, then a video follows showing the process how to implement those changes.
-        <ol>
-          <li>Move <strong>Social Media Cookies</strong> to the <strong>Strictly Necessary Cookies</strong> subgroup.</li>
-          <li>Move <strong>Targeting Cookies</strong> to the <strong>Strictly Necessary Cookies</strong> subgroup.</li>
-          <li>Move <strong>Functional Cookies</strong> to the <strong>Strictly Necessary Cookies</strong> subgroup.</li>
-          <li>Move <strong>Performance Cookies</strong> to the <strong>Strictly Necessary Cookies</strong> subgroup.</li>
-          <li>From the <strong>Personalised ads and content, ad and content measurement, audience insights and product development</strong> group, perform the following:
-            <ol type="a">
-              <li>Remove <strong>Create a personalised content profile</strong> as a subgroup, then choose <strong>Disable IAB Purpose</strong>.</li>
-              <li>Remove <strong>Select personalised content</strong> as a subgroup, then choose <strong>Disable IAB Purpose</strong>.</li>
-              <li>Remove <strong>Measure content performance</strong> as a subgroup, but do NOT disable.</li>
-              <li>Remove <strong>Apply market research to generate audience insights</strong> as a subgroup, then choose <strong>Disable IAB Purpose</strong>.</li>
-              <li>Remove <strong>Develop and improve products</strong> as a subgroup, then choose <strong>Disable IAB Purpose</strong>.</li>
-            </ol>
-          </li>
-          <li>For <strong>Use precise geolocation data</strong>, choose <strong>Disable IAB Purpose</strong>.</li>
-          <li>For <strong>Actively scan device characteristics for identification</strong>, choose <strong>Disable IAB Purpose</strong>.</li>
-          <li>For <strong>Match and combine offline data sources</strong>, choose <strong>Disable IAB Purpose</strong>.</li>
-          <li>For <strong>Link different devices</strong>, choose <strong>Disable IAB Purpose</strong>.</li>
-          <li>For <strong>Receive and use automatically-sent device characteristics for identification</strong>, choose <strong>Disable IAB Purpose</strong></li>
-        </ol>
-        <div style="position: relative; display: block; max-width: 1728px;">
-          <div style="padding-top: 63%;"><iframe src="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=1723375706636721528" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
-        </div>
-      </li>
-      <li>Check your configuration by comparing your results to the following, making corrections as needed:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/adv-config-changes.png" alt="advanced b configuration changes">
-        </figure>
-      </li>
-      <li>Click <strong>Save Template</strong>.</li>
-    </ol>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Create_geolocation_rules">Create geolocation rules</h2>
-    <p>Creating geolocation rules first requires that you create a geolocation rule group. The group will act as a container for the rules you create. The actual geolocation rules define cookie compliance behaviors you wish for different geographic regions.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>To start the process, create a new rule group by:
-        <ol type="a">
-          <li>In the left navigation, click <strong>Geolocation Rules</strong>.</li>
-          <li>Click <strong>Create New</strong>.
-            <figure class="bcls-figure">
-              <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/geo-rules-index.png" alt="geo rules index">
-            </figure>
-          </li>
-        </ol>
-      </li>
-      <li>In the <strong>Create New Rule Group</strong> dialog, supply a group name, organization and description.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/create-rule-group.png" alt="create rule group">
-        </figure>
-      </li>
-      <li>Click <strong>Create</strong>.</li>
-      <li>To create your first actual geolocation rule, from the rule group details page, click <strong>Add Rule</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/geo-add-rule.png" alt="geo add rule">
-        </figure>
-      </li>
-      <li>You will now create the CCPA rule. The following table provides settings you need to make to be compatible with Beacon. Other changes can be made based on regulations for your targeted geographies.
-        <aside class="bcls-aside bcls-aside--tip language-editable">As with templates, you may not need all the rules based on locations your Beacon app is targeting.</aside>
-        <table class="bcls-table">
-          <thead class="bcls-table__head">
-            <tr>
-              <th>Form element</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-          <tbody class="bcls-table__body">
-            <tr>
-              <td>Rule Name</td>
-              <td>Provide a name</td>
-            </tr>
-            <tr>
-              <td>Regions</td>
-              <td>For CCPA, you would most likely want to include <em>California</em>, then any other desired regions.</td>
-            </tr>
-            <tr>
-              <td>Template</td>
-              <td>Choose the template created that was based on the CCPA framework.</td>
-            </tr>
-            <tr>
-              <td>Cookie Categories</td>
-              <td>Opt-out</td>
-            </tr>
-            <tr>
-              <td>Capture Records of Consent</td>
-              <td>Enabled</td>
-            </tr>
-            <tr>
-              <td>Advanced Analytics</td>
-              <td>Strictly Necessary Cookies</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>Create the GDPR rule. Be sure to supply the following values to insure compatibility with Beacon. Other values can be set as needed to meet other regulations.
-        <table class="bcls-table">
-          <thead class="bcls-table__head">
-            <tr>
-              <th>Form element</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-          <tbody class="bcls-table__body">
-            <tr>
-              <td>Rule Name</td>
-              <td>Provide a name</td>
-            </tr>
-            <tr>
-              <td>Regions</td>
-              <td>For GDPR, you would most likely want to include <em>Eu</em> and <em>United Kingdom</em>, then any other desired regions.</td>
-            </tr>
-            <tr>
-              <td>Template</td>
-              <td>Choose the template created that was based on the IAB framework.</td>
-            </tr>
-            <tr>
-              <td>Cookie Categories</td>
-              <td>Opt-in</td>
-            </tr>
-            <tr>
-              <td>Capture Records of Consent</td>
-              <td>Enabled</td>
-            </tr>
-            <tr>
-              <td>Advanced Analytics</td>
-              <td>Strictly Necessary Cookies</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>You may wish to create a rule that can be applied to regions NOT selected for the CCPA or GDPR rules. It might be applied to all other regions, and because of this you might want to name this rule <strong>Global</strong>. Be sure to supply the following values to insure compatibility with Beacon. Other values can be set as needed to meet other regulations.
-        <table class="bcls-table">
-          <thead class="bcls-table__head">
-            <tr>
-              <th>Form element</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-          <tbody class="bcls-table__body">
-            <tr>
-              <td>Rule Name</td>
-              <td>Provide a name</td>
-            </tr>
-            <tr>
-              <td>Regions</td>
-              <td>If this rule create for all regions not previously selected, do not enter any regions</td>
-            </tr>
-            <tr>
-              <td>Template</td>
-              <td>A template must be selected, but which template is based on regulations in targeted regions.</td>
-            </tr>
-            <tr>
-              <td>Capture Records of Consent</td>
-              <td>Enabled</td>
-            </tr>
-            <tr>
-              <td>Advanced Analytics</td>
-              <td>Strictly Necessary Cookies</td>
-            </tr>
-            <tr>
-              <td>Checkbox: Use this consent model if site visitor's IP address is unknown</td>
-              <td>Consider this option if this rule acting in a global capacity.</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-    </ol>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Assign_geolocation_rules_to_domains">Assign geolocation rules to domains</h2>
-    <p></p>
-    <ol class="bcls-tasklist-restart">
-      <li>In the left navigation, click <strong>Geolocation Rules</strong>.</li>
-      <li>For the <em>Geolocation Rule Group</em> you created, click the ellipses icon and select <strong>Assign to Domains</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/rule-group-assign-to-domains.png" alt="rule group assign to domains">
-        </figure>
-      </li>
-      <li>Select the appropriate domains, then click <strong>Assign</strong>. These domains should match the URLs supplied by your DNS provider.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/rule-group-assign-to-domains-confirm.png" alt="rule group assign to domains confirm">
-        </figure>
-      </li>
-    </ol>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Create and copy scripts">Create and copy scripts</h2>
-    <ol class="bcls-tasklist--restart">
-      <li>From the Cookie Compliance index page:
-        <ol type="a">
-          <li>In the left navigation, click <strong>Scripts</strong>.</li>
-          <li>Click the domain where your cookie compliance will be implemented.</li>
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/scripts-index.png" alt="scripts index">
-          </figure>
-        </ol>
-      </li>
-      <li>In the details screen for your domain, click <strong>Publish Test</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/publish-test.png" alt="publish test">
-        </figure>
-      </li>
-      <li>In the <em>Test Website</em> dialog:
-        <ol type="a">
-          <li>Set the script version to <strong>6.29.0</strong>.</li>
-          <li>Click <strong>Confirm</strong>.</li>
-        </ol>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/test-website-confirm.png" alt="test website confirm">
-        </figure>
-      </li>
-      <li>Ensure the settings are those in the following screenshot, then click <strong>Publish Test Scripts</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/publish-test-scripts-dialog.png" alt="publish test scripts dialog">
-        </figure>
-      </li>
-      <li>If a <em>Live Preview</em> dialog displays, click <strong>Cancel</strong>.</li>
-      <li>Click the <strong>Test Scripts</strong> tab.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/test-scripts.png" alt="test scripts">
-        </figure>
-      </li>
-      <li>Click <strong>Copy Scripts</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/copy-scripts-by-download.png" alt="copy scripts">
-        </figure>
-      </li>
-      <li>Provide the scripts to Brightcove's OTT Delivery Team for proper deployment.</li>
-    </ol>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="What_data_is_collected">What data is collected?</h2>
-    <p>Data is collected for the these main purposes:</p>
-    <ul>
-      <li>App behavior</li>
-      <li>Analytics</li>
-      <li>Ad targeting</li>
-    </ul>
-    <p>The steps above configured your system to address these general purposes:</p>
+    <h2 id="Events">Events</h2>
+    <p>The following events can be used in your plugin code to control custom buttons:</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>Data</th>
-          <th>Use(s)</th>
+          <th>Event</th>
+          <th>Description</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td>Geo-filtering</td>
-          <td>Location services</td>
+          <td><code translate="No">detailsPageAddCustomButton</code></td>
+          <td>Adds a button to the details page buttons list, at the end of the list</td>
         </tr>
         <tr>
-          <td>Device information (model, type, OS version)</td>
-          <td>Login, trace actions, analytics, record favorites, etc.</td>
-        </tr>
-        <tr>
-          <td>Ad targeting</td>
-          <td>Specified ads</td>
-        </tr>
-        <tr>
-          <td>Locale</td>
-          <td>Number and date formatting, currencies</td>
-        </tr>
-        <tr>
-          <td>App information (name, version, errors)</td>
-          <td>Reports on versions used, aggregated errors for proactive corrections, etc.</td>
-        </tr>
-        <tr>
-          <td>User navigation and use patterns</td>
-          <td>Google analytics (navigation patterns), sign ups, count search, page opens, etc.</td>
-        </tr>
-        <tr>
-          <td>Local storage</td>
-          <td>Persist credentials and login info, user application state, user settings, etc.</td>
+          <td><code translate="No">detailsPageRemoveCustomButton</code></td>
+          <td>Removes the button with the defined ID from the buttons list</td>
         </tr>
       </tbody>
     </table>
-    <h3>Standards body purpose definitions</h3>
-    <p>The purposes for cookie data collection are very thoroughly defined in the <em>IAB Europe Transparency & Consent Framework v2.0</em>. The definitions can be found in <a href="https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/#Appendix_A_Purposes_and_Features_Definitions">Appendix A: Purposes and Features Definitions</a> of the <em>IAB Europe Transparency & Consent Framework Policies</em> document.</p>
-    <p>The IAB Europe Transparency & Consent Framework v2.0 defines 10 purposes. The following table displays those used by Beacon.</p>
+    <aside class="bcls-aside bcls-aside--information">When a user has a details page for a series open, and a new season/episode is selected, the previously added button will not be removed. </aside>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Event_listeners">Event listeners</h2>
+    <p>The following events are listened for by the player when button events are dispatched in your Beacon plugin code:</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
-          <th>Purpose</th>
-          <th>Name</th>
+          <th>Event</th>
+          <th>Description</th>
         </tr>
       </thead>
       <tbody class="bcls-table__body">
         <tr>
-          <td>1</td>
-          <td>Store and/or access information on a device</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Create a personalised ads profile</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Select personalised ads</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>Measure ad performance</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Measure content performance</td>
+          <td><code translate="No">detailsPageExternalButtonWasClicked</code></td>
+          <td>Called when a user clicks on one of the externally added buttons</td>
         </tr>
       </tbody>
     </table>
   </section>
 
+  <section class="bcls-section">
+    <h2 id="Code_syntax">Code syntax</h2>
+    <p>Here is the JavaScript code syntax used for creating a custom button:</p>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">window.postMessage({
+  event: 'detailsPageAddCustomButton',
+  data: {
+    title: 'Test Button',
+    font_awesome_icon: 'fa fa-info-circle',
+    element_id: 'TEST_BTN_ID'
+  }
+}, window.location.origin);</code></pre>
+    <p>The following data can be passed with the button event:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Data element</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">title</code></td>
+          <td>string</td>
+          <td>The name displayed in the button</td>
+        </tr>
+        <tr>
+          <td><code translate="No">font_awesome_icon</code></td>
+          <td>string</td>
+          <td>The Font Awesome ID for the icon; leave empty if no icon is to be applied</td>
+        </tr>
+        <tr>
+          <td><code translate="No">element_id</code></td>
+          <td>string</td>
+          <td>The HTML ID to be applied to this button</td>
+        </tr>
+      </tbody>
+    </table>
+   
+    <p>Data notes:</p>
+    <ul>
+      <li>When calling <code translate="No">detailsPageRemoveCustomButton</code>, the only required field is the <code translate="No">element_id</code>.</li>
+    </ul>
+  </section>
 
   <section class="bcls-section">
-    <h2 id="Implementation_architecture">Implementation architecture</h2>
-    <p>The following gives a look "under the hood" of how OneTrust Cookie Compliance integrates with your Beacon app.</p>
-    <p>The key to integrating OneTrust into your Beacon web app is the <strong>data-domain-script</strong> (generated in the steps above) that is used to tie each domain name with the SDK that will perform all the functionalities OneTrust provides. In a nutshell, the <strong>data-domain-script</strong> is used to identify each domain name that is using the SDK. Your Beacon web app needs to know the <em>data-domain-script <strong>id</strong></em> assigned to a certain customer(domain name). Beacon Classic provides the <em>data-domain-script id</em> into the <strong>privacy_management_platform</strong> field by hitting the <strong>api/settings</strong> endpoint. The actual implementation is performed by Brightcove's OTT Delivery Team.</p>
-    <p>Here is an architecture diagram of the implementation:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/references/managing-cookie-consent/architecture-diagram.png" alt="architecture diagram">
-    </figure>
+    <h2 id="Module_implementation">Module implementation</h2>
+    <p>The following shows how functions using the side panel are implemented using JavaScript modules. Of course, you may implement your JavaScript in the manner of your choice. Further details on this module implementation can be found in the <a href="">Implementing Beacon Plugin Code Using Modules</a> document.</p>
+    
+    <h3><code translate="No">index.js</code></h3>
+    <p>Here is our example code:</p>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">import { addCustomButtonDetails, addCustomButtonDetailsParams, handleButtonClick } from './button-module.js';
+
+window.addEventListener(&quot;message&quot;, (event) =&gt; {
+  const originsAllowed = [
+    '<span class="bcls-input">your Beacon app URL</span>'
+  ];
+  if (originsAllowed.includes(event.origin)) {
+    switch (event.data.event) {
+      
+      case 'detailsPageExternalButtonWasClicked':
+        if (event.data.data.element_id == 'download-button') {
+          handleButtonClick('Download button'); 
+        };
+        if (event.data.data.element_id == 'location-button') {
+          handleButtonClick('Location button');
+        };
+        break;
+        
+      case 'onBeaconPageLoad':
+        addCustomButtonDetailsParams('Download', 'fa fa-info-circle', 'download-button');
+        addCustomButtonDetailsParams('Location', 'fa fa-info-circle', 'location-button');
+      break;
+
+    }
+  }
+},
+  false
+);</code></pre>
+
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Event</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">detailsPageExternalButtonWasClicked</code></td> 
+          <td>Listen for this event. When triggered, do the following:
+            <ul>
+              <li>Check the code translate="No">event.data.data.element_id</code> to determine which button was clicked</li>
+              <li>Call the <strong>handleButtonClick</strong> function with the button value.</li>
+            </ul> 
+          </td>
+        </tr>
+        <tr>
+          <td><code translate="No">onBeaconPageLoad</code></td>
+          <td>Listen for this event. When triggered, do the following:
+            <ul>
+              <li>Call the <strong>addCustomButtonDetailsParams</strong> function to add the Download button.</li>
+              <li>Call the <strong>addCustomButtonDetailsParams</strong> function to add the Location button.</li>
+            </ul> 
+          </td>
+        </tr>
+       
+      </tbody>
+    </table>
+
+    <h3><code translate="No">button-module.js</code></h3>
+    <p>Here is our example code:</p>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">const addCustomButtonDetails = () =&gt; {
+  
+      window.postMessage({
+        event: 'detailsPageAddCustomButton',
+        data: {
+          title: 'Test Button',
+          font_awesome_icon: 'fa fa-info-circle',
+          element_id: 'TEST_BTN_ID'
+        }
+      }, window.location.origin);
+    
+    };
+    
+    const addCustomButtonDetailsParams = (pTitle, pFont, pID) =&gt; {
+      
+      window.postMessage({
+        event: 'detailsPageAddCustomButton',
+        data: {
+          title: pTitle,
+          font_awesome_icon: pFont,
+          element_id: pID
+        }
+      }, window.location.origin);
+    
+    };
+    
+    const handleButtonClick = (buttonString) =&gt; {
+    
+      alert('button was clicked ' + buttonString);
+    
+    };
+    
+    export { addCustomButtonDetails, addCustomButtonDetailsParams, handleButtonClick };</code></pre>
+
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Function</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">addCustomButtonDetails</code></td>
+          <td>Dispatches the <code translate="No">detailsPageAddCustomButton</code> event to create a custom button on the details page, at the end of the buttons list.<br/>
+             The <code translate="No">title</code>, <code translate="No">font_awesome_icon</code> and <code translate="No">element_id</code> values are passed into this function as strings, using the <code translate="No">data</code> object.</td>
+        </tr>
+        <tr>
+          <td><code translate="No">addCustomButtonDetailsParams</code></td>
+          <td>Dispatches the <code translate="No">detailsPageAddCustomButton</code> event to create a custom button on the details page, at the end of the buttons list.<br/>
+             This function uses the <code translate="No">pTitle</code>, <code translate="No">pFont</code> and <code translate="No">pID</code> parameters to populate the <code translate="No">title</code>, <code translate="No">font_awesome_icon</code> and <code translate="No">element_id</code> values in the <code translate="No">data</code> object.</td>
+        </tr>
+        <tr>
+          <td><code translate="No">handleButtonClick</code></td>
+          <td>Displays an alert box with a message identifying the button that was clicked.</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
 

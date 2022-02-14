@@ -424,7 +424,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                           
                         
                           
-                            <li><a href="/using-brightcove-beacon/config-live-ssai-beacon.html">Configuring Live SSAI with Beacon Channels</a></li>
+                            <li><a href="/monetization/ssai/config-live-ssai-beacon-channel.html">Configuring Live SSAI with Beacon Channels</a></li>
                           
                         
                           
@@ -825,7 +825,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="configuring-ssai">Configuring Server-Side Ad Settings</h2>
+    <h2 id="Configuring_Server-Side_Ad_Settings">Configuring Server-Side Ad Settings</h2>
     <p>
       Here you will create an SSAI Ad Configuration to be used as your set of ads that will be displayed in your Brightcove Beacon Live event.
     </p>
@@ -886,7 +886,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="configuring-slate">Configuring a Fill Slate</h2>
+    <h2 id="Configuring_a_Fill_Slate">Configuring a Fill Slate</h2>
     <p>
       Fill slates are videos that will be displayed when there are gaps in a Live stream ad break that cannot be filled with a dynamically-served ad. If the requested ad is shorter
       than the Ad break time, the fill slate will be displayed so viewers don't see a blank player.
@@ -917,7 +917,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </section>
 
   <section class="bcls-section">
-    <h2 id="creating-live-ssai">Creating a Live event that supports SSAI</h2>
+    <h2 id="Creating_a_Live_event_that_supports_SSAI">Creating a Live event that supports SSAI</h2>
     <p>
       In order for a live event to use SSAI (Server-side Ad Insertion), the
       <strong>Enable Server-Side Ad Insertion (SSAI)</strong> setting must be selected when the event is created, and a previously created fill slate should be chosen for playback.
@@ -987,7 +987,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="creating-live-ssai">Requesting an ad</h2>
+    <h2 id="Requesting_an_ad">Requesting an ad</h2>
     <p>
       Follow these steps to request an ad in the Live
       <strong>Control Room</strong>:
@@ -1013,7 +1013,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </figure>
   </section>
   <section class="bcls-section">
-    <h2 id="requesting-ssai">Publishing a Live event in Brightcove Beacon</h2>
+    <h2 id="Publishing_a_Live_event">Publishing a Live event in Brightcove Beacon</h2>
     <p>
       To publish your Live event with server-side ads in Brightcove Beacon, follow these steps:
     </p>
@@ -1063,6 +1063,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Give your new advertisement configuration a <strong>Name</strong>.</li>
       <li id="Live_Ad_Config_ID">
         In the <strong>Live Ad Config ID</strong>, paste your <strong>Ad Configuration ID</strong> that you created in a <a href="#Ad_Configuration_ID">previous step</a>.
+        <aside class="bcls-aside bcls-aside--information">When using Live events, the Beacon <strong>Live Ad Config ID</strong> value is the  Ad Configuration ID instead of the Live playback token.</aside>
       </li>
       <li>From the <strong>Provider</strong> menu select <strong>Brightcove SSAI</strong>.</li>
       <li>Click the <strong>Create New Advertisement</strong> button.</li>

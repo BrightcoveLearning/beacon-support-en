@@ -4,9 +4,6 @@ description: 'In this topic, you will learn how to set Live SSAI Ads to a Bright
 parent: Using Brightcove Beacon
 ---
 
-<!-- The location of this document has changed. Please update your bookmark. You should be redirected to the new document location. 
-      DO NOT UPDATE THIS DOCUMENT. Instead, find the new location and update there. 
-      There is redirect code at the bottom of this document. -->
 <h1>{{ page.title }}</h1>
 <article class="bcls-article">
     <summary>{{ page.description }}</summary>
@@ -26,7 +23,7 @@ parent: Using Brightcove Beacon
   </section>
 
   <section class="bcls-section">
-    <h2 id="Prerequisites">Configuring the Video Cloud Ad with Brightcove Beacon </h2>
+    <h2 id="Configuring_the_Video_Cloud_Ad">Configuring the Video Cloud Ad</h2>
 
     <ol class="bcls-tasklist-restart">
       <li>In Video Cloud Studio select the <strong>LIVE</strong> module.</li>
@@ -49,7 +46,7 @@ parent: Using Brightcove Beacon
   </section>
 
   <section class="bcls-section">
-    <h2 id="Prerequisites">Create the Advertisement in Brightcove Beacon</h2>
+    <h2 id="Create_the_Advertisement">Create the Advertisement in Brightcove Beacon</h2>
 
     <ol class="bcls-tasklist-restart">
       <li>Return to the Brightcove Beacon platform.</li>
@@ -61,7 +58,9 @@ parent: Using Brightcove Beacon
       <li>Create or select the Ad configuration you want to set. </li>
       <li>For a new Advertisement, give it a <strong>Name</strong>.</li>
       <li>Be sure that the <strong>Provider</strong> is set to <strong>Brightcove SSAI</strong>.</li>
-      <li>In the <strong>Live Config ID</strong> field, paste the <strong>adConfigId</strong> URL you copied in the previous section of this document.</li>
+      <li>In the <strong>Live Ad Config ID</strong> field, paste the <strong>adConfigId</strong> URL you copied in the previous section of this document.
+        <aside class="bcls-aside bcls-aside--information">When using Beacon Channels, the <strong>Live Ad Config ID</strong> value is the Live playback token, instead of the Ad Configuration ID.</aside>
+      </li>
       <li>Click <strong>Create New Advertisement</strong>.</li>
 
     </ol>
@@ -69,7 +68,7 @@ parent: Using Brightcove Beacon
   </section>
 
   <section class="bcls-section">
-    <h2 id="Prerequisites">Setting Rights & Scheduling in Brightcove Beacon</h2>
+    <h2 id="Setting_Rights_&_Scheduling">Setting Rights & Scheduling in Brightcove Beacon</h2>
     <ol class="bcls-tasklist-restart">
       <li>On the top navigation, click <strong>Channels</strong>.
         <figure class="bcls-figure">
@@ -90,23 +89,3 @@ parent: Using Brightcove Beacon
   </section>
 
 </article>
-
-<script>
-  var h1 = document.querySelector('h1'),
-      path = location.pathname,
-      new_location = 'https://beacon.support.brightcove.com/monetization/ssai/config-live-ssai-beacon-channel.html',
-      message = '<h3>This page has moved to <a href="' + new_location + '">' + new_location + '</a>. Please update your bookmark! You will be redirected in 5 seconds.<h3>';
-
-      console.log('new_location', new_location);
-
-      h1.insertAdjacentHTML('afterend', message);
-      redirect();
-
-      function redirect() {
-        var t = window.setTimeout(go_to_new_location, 5000);
-      }
-
-      function go_to_new_location() {
-        window.location.href = new_location;
-      }
-</script>

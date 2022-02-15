@@ -46,7 +46,7 @@ layout: "staging"
         </tr>
         <tr>
           <td><code translate="No">onBeaconPageChange</code></td>
-          <td>Called when there are changes in the Beacon web app page, and the component stays the same. Applicable to cases when the main asset changes and an episode is selected in the details page. For the Live TV page, it is also called when the selected linear channel changes.</td>
+          <td>Called when there is a change on the Beacon web app page. For example, when you are watching a video on the details page, and select a new series, season or episode, For the Live TV page, it is also called when the selected linear channel changes.</td>
         </tr>
         <tr>
           <td><code translate="No">loadedBeaconVideoMetadata</code></td>
@@ -64,6 +64,73 @@ layout: "staging"
   <section class="bcls-section">
     <h2 id="Event_data">Event data</h2>
     <p>When listening to page events, you can display the event data which is available for use in your custom code. Here are some examples of this data:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Data element</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td><code translate="No">page_type</code></td>
+          <td>enum</td>
+          <td>A unique page type for the current page being viewed. Values: [screen|playlist_view_all|details|
+            player_vod|player_live|epg|livetv|search|settings|my_account|favourites|bookmarks|purchased|
+            static_page|manage_subscriptions|device_management|parental_controls|profiles_list|live_event_details|
+            live_event_player|about|change_language|edit_profile|transactions|payments|landing_page|custom_screen]</td>
+        </tr>
+        <tr>
+          <td><code translate="No">slug</code></td> 
+          <td>string</td>
+          <td>A unique id for your custom page</td>
+        </tr>
+        <tr>
+          <td><code translate="No">asset_id</code></td>
+          <td>integer</td>
+          <td>Sent in details|player_vod|player_live event</td>
+        </tr>
+        <tr>
+          <td><code translate="No">playlist_id</code></td>
+          <td>integer</td>
+          <td>Sent in playlist_view_all event</td>
+        </tr>
+        <tr>
+          <td><code translate="No">page_id</code></td>
+          <td>integer</td>
+          <td>Sent in home event</td>
+        </tr>
+        <tr>
+          <td><code translate="No">bc_account_id</code></td>
+          <td>integer</td>
+          <td>Sent in loadedBeaconVideoMetadata event</td>
+        </tr>
+        <tr>
+          <td><code translate="No">device</code></td>
+          <td>string</td>
+          <td>'web'</td>
+        </tr>
+        <tr>
+          <td><code translate="No">video_id</code></td>
+          <td>integer</td>
+          <td>Sent in loadedBeaconVideoMetadata events</td>
+        </tr>
+        <tr>
+          <td><code translate="No">user_language</code></td>
+          <td>string</td>
+          <td>Language code of the currently in use language from Beacon API</td>
+        </tr>
+        <tr>
+          <td><code translate="No">entitlements</code></td>
+          <td>boolean</td>
+          <td>Displays whether the user is entitled to see the content, or it’s free</td>
+        </tr>
+        
+      </tbody>
+    </table>
+    <h3>Examples</h3>
+    <p>Here are some examples of actual page event data:</p>
     <h3><code translate="No">beforeBeaconPageLoad</code></h3>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Before Beacon page load" src="/assets/images/ott-plugins/page-events/before-beacon-page-load.png" />
       <figcaption class="bcls-caption--image">Before Beacon page load</figcaption>
@@ -89,52 +156,6 @@ layout: "staging"
       <figcaption class="bcls-caption--image">Beacon page unloaded</figcaption> 
     </figure>
     
-  </section>
-
-
-  <section class="bcls-section">
-    <h2 id="Code_syntax">Code syntax</h2>
-    <p>Here is the JavaScript code syntax used for creating a custom button:</p>
-    <pre class="line-numbers"><code class="language-javascript" translate="No">window.postMessage({
-  event: 'detailsPageAddCustomButton',
-  data: {
-    title: 'Test Button',
-    font_awesome_icon: 'fa fa-info-circle',
-    element_id: 'TEST_BTN_ID'
-  }
-}, window.location.origin);</code></pre>
-    <p>The following data can be passed with the button event:</p>
-    <table class="bcls-table">
-      <thead class="bcls-table__head">
-        <tr>
-          <th>Data element</th>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody class="bcls-table__body">
-        <tr>
-          <td><code translate="No">title</code></td>
-          <td>string</td>
-          <td>The name displayed in the button</td>
-        </tr>
-        <tr>
-          <td><code translate="No">font_awesome_icon</code></td>
-          <td>string</td>
-          <td>The Font Awesome ID for the icon; leave empty if no icon is to be applied</td>
-        </tr>
-        <tr>
-          <td><code translate="No">element_id</code></td>
-          <td>string</td>
-          <td>The HTML ID to be applied to this button</td>
-        </tr>
-      </tbody>
-    </table>
-   
-    <p>Data notes:</p>
-    <ul>
-      <li>When calling <code translate="No">detailsPageRemoveCustomButton</code>, the only required field is the <code translate="No">element_id</code>.</li>
-    </ul>
   </section>
 
   <section class="bcls-section">

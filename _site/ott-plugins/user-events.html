@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic, you will learn how to listen and work with page events when using a custom plugin for your Brightcove Beacon web apps.">
+  <meta name="description" content="In this topic, you will learn how to implement the user events using a plugin in your Brightcove Beacon web apps.">
   
-  <title>Working with Page Events</title>
+  <title>Implementing User Events</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -65,7 +65,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
     
       
-        <li class="breadcrumb-item active" aria-current="page">Working with Page Events</li>
+        <li class="breadcrumb-item active" aria-current="page">Implementing User Events</li>
       
     
   </nav>
@@ -752,267 +752,173 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<h1>Working with Page Events</h1>
+<h1>Implementing User Events</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn how to listen and work with page events when using a custom plugin for your Brightcove Beacon web apps.</summary>
+    <summary>In this topic, you will learn how to implement the user events using a plugin in your Brightcove Beacon web apps.</summary>
 
-  <section class="bcls-section">
-    <h2 id="Handling_page_events">Handling page events</h2>
-    <p>When using web customization with your Beacon web apps, you can listen for page events and process custom code based on your requirements.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Page events" src="/assets/images/ott-plugins/page-events/page-event-diagram.svg" />
-      <figcaption class="bcls-caption--image">Page events</figcaption>
-    </figure>
-    <!-- <div style="position: relative; display: block; max-width: 960px;">
-      <div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/1507807800001/default_default/index.html?videoId=6293553909001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
-    </div> -->
-    <h3>Use cases</h3>  
-    <p>Here are some use cases when listening to page events:</p>
-    <ul>
-      <li>A <strong>Download</strong> button to allow users to download a copy of the video</li>
-      <li>A <strong>Location</strong> button to allow users to tag their location on videos</li>
-    </ul>
-  </section>
+    <section class="bcls-section">
+        <h2 id="Using_the_user_events">Using the user events</h2>
+        <p>There are three types of user events in your Beacon application that you can use.</p>
+        <h3>User did sign in</h3>
+        <p>
+            The following image shows an example of the data retrieved with the
+            <code>userDidSignIn</code> event:
+        </p>
 
-  <section class="bcls-section">
-    <h2 id="Event_listeners">Event listeners</h2>
-    <p>The following page events can be listened for by your Beacon plugin code:</p>
-    <table class="bcls-table">
-      <thead class="bcls-table__head">
-        <tr>
-          <th>Event</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody class="bcls-table__body">
-        <tr>
-          <td><code translate="No">beforeBeaconPageLoad</code></td>
-          <td>Called before the page starts to load all of the required elements. This includes the API calls to fetch asset and playlist details</td>
-        </tr>
-        <tr>
-          <td><code translate="No">onBeaconPageLoad</code></td>
-          <td>Called when all of the required elements to render the page are available and all checks are complete (entitlements, episodes list, etc)</td>
-        </tr>
-        <tr>
-          <td><code translate="No">onBeaconPageChange</code></td>
-          <td>Called when there are changes in the Beacon web app page, and the component stays the same. Applicable to cases when the main asset changes and an episode is selected in the details page. For the Live TV page, it is also called when the selected linear channel changes.</td>
-        </tr>
-        <tr>
-          <td><code translate="No">loadedBeaconVideoMetadata</code></td>
-          <td>Called when the metadata for the current video has been loaded</td>
-        </tr>
-        <tr>
-          <td><code translate="No">onBeaconPageUnload</code></td>
-          <td>Called after the <code translate="No">destroy()</code> from the superclass finishes</td>
-        </tr>
-      </tbody>
-    </table>
-    <!-- <aside class="bcls-aside bcls-aside--information">When a user has a details page for a series open, and a new season/episode is selected, the previously added button will not be removed. </aside> -->
-  </section>
+        <figure class="bcls-figure">
+            <img class="bcls-image" width="450" src="/assets/images/ott-plugins/user-events/userDidSignIn.png" alt="Add carousel layout">
+            <figcaption class="bcls-caption--image">User did sign in event.</figcaption>
+        </figure>
+        <h3>User did register</h3>
+        <p>The following image shows an example of the data retrieved with the
+            <code>userDidRegister</code> event:
+        </p>
+        <figure class="bcls-figure">
+            <img class="bcls-image" width="450" src="/assets/images/ott-plugins/user-events/userDidRegister.png"
+                alt="Add carousel layout">
+            <figcaption class="bcls-caption--image">User did register event</figcaption>
+        </figure>
+        <h3>User did sign out</h3>
+        <p>The following image shows an example of the data retrieved with the
+            <code>userDidSignOut</code> event:
+        </p>
+        <figure class="bcls-figure">
+            <img class="bcls-image" width="450" src="/assets/images/ott-plugins/user-events/userDidSignOut.png"
+                alt="Add carousel layout">
+            <figcaption class="bcls-caption--image">User did sign out event</figcaption>
+        </figure>
 
-  <section class="bcls-section">
-    <h2 id="Event_data">Event data</h2>
-    <p>When listening to page events, you can display the event data which is available for use in your custom code. Here are some examples of this data:</p>
-    <h3><code translate="No">beforeBeaconPageLoad</code></h3>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Before Beacon page load" src="/assets/images/ott-plugins/page-events/before-beacon-page-load.png" />
-      <figcaption class="bcls-caption--image">Before Beacon page load</figcaption>
-    </figure>
+        <h3>Use cases</h3>
+        <p>The following are appropriate use cases for the user events.</p>
+        <ul>
+            <li>With the help of the user events, you can retrieve claims of the account tokens.</li>
+            <li>You can also use the user events to save login or registration data so your user can log into other applications such as PigeonHole.</li>
+        </ul>
+    </section>
 
-    <h3><code translate="No">onBeaconPageLoad</code></h3>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="On Beacon page load" src="/assets/images/ott-plugins/page-events/beacon-page-load.png" />
-      <figcaption class="bcls-caption--image">On Beacon page load</figcaption>
-    </figure>
+    <section class="bcls-section">
+        <h2 id="events">Events</h2>
+        <p>The following events can be used in your plugin code to control the user events.</p>
+        <table class="bcls-table">
+            <thead class="bcls-table__head">
+                <tr>
+                    <th>Event</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody class="bcls-table__body">
+                <tr>
+                    <td><code>userDidSignIn</code></td>
+                    <td>
+                        <ul>
+                            Called when the sign in process is complete with success.
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>userDidRegister</code></td>
+                    <td>
+                        <ul>
+                            Called when the register process is complete with success.
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>userDidSignOut</code></td>
+                    <td>
+                        <ul>
+                            Called before the logout request is done to Beacon APIs.
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-    <h3><code translate="No">loadedBeaconVideoMetadata</code></h3>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Loaded Beacon page load" src="/assets/images/ott-plugins/page-events/beacon-video-metadata.png" />
-      <figcaption class="bcls-caption--image">Loaded Beacon page load</figcaption>
-    </figure>
-
-    <h3><code translate="No">onBeaconPageChange</code></h3>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Beacon page change" src="/assets/images/ott-plugins/page-events/beacon-page-change.png" /> 
-      <figcaption class="bcls-caption--image">Beacon page change</figcaption>
-    </figure>
-
-    <h3><code translate="No">onBeaconPageUnload</code></h3>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Beacon page unloaded" src="/assets/images/ott-plugins/page-events/beacon-page-unload.png" />
-      <figcaption class="bcls-caption--image">Beacon page unloaded</figcaption> 
-    </figure>
-    
-  </section>
-
-
-  <section class="bcls-section">
-    <h2 id="Code_syntax">Code syntax</h2>
-    <p>Here is the JavaScript code syntax used for creating a custom button:</p>
-    <pre class="line-numbers"><code class="language-javascript" translate="No">window.postMessage({
-  event: 'detailsPageAddCustomButton',
-  data: {
-    title: 'Test Button',
-    font_awesome_icon: 'fa fa-info-circle',
-    element_id: 'TEST_BTN_ID'
-  }
-}, window.location.origin);</code></pre>
-    <p>The following data can be passed with the button event:</p>
-    <table class="bcls-table">
-      <thead class="bcls-table__head">
-        <tr>
-          <th>Data element</th>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody class="bcls-table__body">
-        <tr>
-          <td><code translate="No">title</code></td>
-          <td>string</td>
-          <td>The name displayed in the button</td>
-        </tr>
-        <tr>
-          <td><code translate="No">font_awesome_icon</code></td>
-          <td>string</td>
-          <td>The Font Awesome ID for the icon; leave empty if no icon is to be applied</td>
-        </tr>
-        <tr>
-          <td><code translate="No">element_id</code></td>
-          <td>string</td>
-          <td>The HTML ID to be applied to this button</td>
-        </tr>
-      </tbody>
-    </table>
-   
-    <p>Data notes:</p>
-    <ul>
-      <li>When calling <code translate="No">detailsPageRemoveCustomButton</code>, the only required field is the <code translate="No">element_id</code>.</li>
-    </ul>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Module_implementation">Module implementation</h2>
-    <p>The following shows how functions using the side panel are implemented using JavaScript modules. Of course, you may implement your JavaScript in the manner of your choice. Further details on this module implementation can be found in the <a href="">Implementing Beacon Plugin Code Using Modules</a> document.</p>
-    
-    <h3><code translate="No">index.js</code></h3>
-    <p>Here is our example code:</p>
-    <pre class="line-numbers"><code class="language-javascript" translate="No">import { addCustomButtonDetails, addCustomButtonDetailsParams, handleButtonClick } from './button-module.js';
-
-window.addEventListener(&quot;message&quot;, (event) =&gt; {
-  const originsAllowed = [
-    '<span class="bcls-input">your Beacon app URL</span>'
-  ];
-  if (originsAllowed.includes(event.origin)) {
+        <section class="bcls-section">
+            <h2 id="Module_implementation">Module implementation</h2>
+            <p>The following shows how the user events are implemented using JavaScript modules. Of course, you may implement your JavaScript in the manner of your choice. Further details on this module implementation can be found in the <a href="">Implementing Beacon Plugin Code Using Modules</a> document.</p>
+            <p>The following code contains these functions. A brief descriptions is provided for each:</p>
+            <h3><code>index.js</code></h3>
+            <p>Below is the JavaScript code used for <code>userDidSignIn</code> event example:</p>
+            <!-- <ul>
+                <li><code>populateMidPageDiv</code>: This function creates a paragraph inside the
+                    <code>&lt;div&gt;</code> and places some information text.</li>
+            </ul> -->
+            <pre class="line-numbers"><code class="language-javascript" translate="No">window.addEventListener("message", (event) => {
     switch (event.data.event) {
-      
-      case 'detailsPageExternalButtonWasClicked':
-        if (event.data.data.element_id == 'download-button') {
-          handleButtonClick('Download button'); 
-        };
-        if (event.data.data.element_id == 'location-button') {
-          handleButtonClick('Location button');
-        };
+        case 'userDidSignIn':
+            console.log(event.data)
         break;
-        
-      case 'onBeaconPageLoad':
-        addCustomButtonDetailsParams('Download', 'fa fa-info-circle', 'download-button');
-        addCustomButtonDetailsParams('Location', 'fa fa-info-circle', 'location-button');
-      break;
-
     }
-  }
-},
-  false
-);</code></pre>
+});</code></pre>
+            <!-- <table class="bcls-table">
+                <thead class="bcls-table__head">
+                    <tr>
+                        <th>ID Selector</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody class="bcls-table__body">
+                    <tr>
+                        <td><code>populateMidPageDiv()</code></td>
+                        <td>
+                            This function creates an HTML <code>&lt;p&gt;</code> tag, and then add text to be
+                                displayed on <code>beacon_details_mid_page_section</code> section.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>clearMidPageDiv()</code></td>
+                        <td>
+                            This function clears the elements inside the <code>beacon_details_mid_page_section</code>
+                            section.
+                        </td>
+                    </tr>
+                </tbody>
+            </table> -->
 
-    <table class="bcls-table">
-      <thead class="bcls-table__head">
+            <h3><code>index.js</code></h3>
+            <p>Below is the JavaScript code used for <code>userDidRegister</code> event example:</p>
+            <pre class="line-numbers"><code class="language-javascript" translate="No">window.addEventListener("message", (event) => {
+    switch (event.data.event) {
+        case 'userDidRegister':
+            console.log(event.data)
+        break;
+    }
+});</code></pre>
+<!-- <table class="bcls-table">
+    <thead class="bcls-table__head">
         <tr>
-          <th>Event</th>
-          <th>Description</th>
+            <th>ID Selector</th>
+            <th>Details</th>
         </tr>
-      </thead>
-      <tbody class="bcls-table__body">
+    </thead>
+    <tbody class="bcls-table__body">
         <tr>
-          <td><code translate="No">detailsPageExternalButtonWasClicked</code></td> 
-          <td>Listen for this event. When triggered, do the following:
-            <ul>
-              <li>Check the code translate="No">event.data.data.element_id</code> to determine which button was clicked</li>
-              <li>Call the <strong>handleButtonClick</strong> function with the button value.</li>
-            </ul> 
-          </td>
-        </tr>
-        <tr>
-          <td><code translate="No">onBeaconPageLoad</code></td>
-          <td>Listen for this event. When triggered, do the following:
-            <ul>
-              <li>Call the <strong>addCustomButtonDetailsParams</strong> function to add the Download button.</li>
-              <li>Call the <strong>addCustomButtonDetailsParams</strong> function to add the Location button.</li>
-            </ul> 
-          </td>
-        </tr>
-       
-      </tbody>
-    </table>
-
-    <h3><code translate="No">button-module.js</code></h3>
-    <p>Here is our example code:</p>
-    <pre class="line-numbers"><code class="language-javascript" translate="No">const addCustomButtonDetails = () =&gt; {
-  
-      window.postMessage({
-        event: 'detailsPageAddCustomButton',
-        data: {
-          title: 'Test Button',
-          font_awesome_icon: 'fa fa-info-circle',
-          element_id: 'TEST_BTN_ID'
-        }
-      }, window.location.origin);
-    
-    };
-    
-    const addCustomButtonDetailsParams = (pTitle, pFont, pID) =&gt; {
-      
-      window.postMessage({
-        event: 'detailsPageAddCustomButton',
-        data: {
-          title: pTitle,
-          font_awesome_icon: pFont,
-          element_id: pID
-        }
-      }, window.location.origin);
-    
-    };
-    
-    const handleButtonClick = (buttonString) =&gt; {
-    
-      alert('button was clicked ' + buttonString);
-    
-    };
-    
-    export { addCustomButtonDetails, addCustomButtonDetailsParams, handleButtonClick };</code></pre>
-
-    <table class="bcls-table">
-      <thead class="bcls-table__head">
-        <tr>
-          <th>Function</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody class="bcls-table__body">
-        <tr>
-          <td><code translate="No">addCustomButtonDetails</code></td>
-          <td>Dispatches the <code translate="No">detailsPageAddCustomButton</code> event to create a custom button on the details page, at the end of the buttons list.<br/>
-             The <code translate="No">title</code>, <code translate="No">font_awesome_icon</code> and <code translate="No">element_id</code> values are passed into this function as strings, using the <code translate="No">data</code> object.</td>
+            <td><code>populateAppOverflowDiv()</code></td>
+            <td>
+                This function creates an HTML <code>&lt;p&gt;</code> tag, and then add text to be
+                    displayed on <code>beacon-web-app-overflow</code> section.
+            </td>
         </tr>
         <tr>
-          <td><code translate="No">addCustomButtonDetailsParams</code></td>
-          <td>Dispatches the <code translate="No">detailsPageAddCustomButton</code> event to create a custom button on the details page, at the end of the buttons list.<br/>
-             This function uses the <code translate="No">pTitle</code>, <code translate="No">pFont</code> and <code translate="No">pID</code> parameters to populate the <code translate="No">title</code>, <code translate="No">font_awesome_icon</code> and <code translate="No">element_id</code> values in the <code translate="No">data</code> object.</td>
+            <td><code>clearAppOverflowDiv()</code></td>
+            <td>
+                This function clears the elements inside the <code>beacon-web-app-overflow</code>
+                section.
+            </td>
         </tr>
-        <tr>
-          <td><code translate="No">handleButtonClick</code></td>
-          <td>Displays an alert box with a message identifying the button that was clicked.</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-
+    </tbody>
+</table> -->
+<h3><code>index.js</code></h3>
+            <p>Below is the JavaScript code used for <code>userDidSignOut</code> event example:</p>
+            <pre class="line-numbers"><code class="language-javascript" translate="No">window.addEventListener("message", (event) => {
+    switch (event.data.event) {
+        case 'userDidSignOut':
+            console.log(event.data)
+        break;
+    }
+});</code></pre>
+        </section>
 </article>
 <!-- complete bootstrap layout -->
     </div>

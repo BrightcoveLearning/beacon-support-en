@@ -9,8 +9,9 @@ layout: "staging"
   <summary>{{ page.description }}</summary>
 
   <section class="bcls-section">
-    <h2 id="Handling_page_events">Handling page events</h2>
-    <p>When using web customization with your Beacon web apps, you can listen for page events and process custom code based on your requirements.</p>
+    <h2 id="Introduction">Introduction</h2>
+    <p>The Beacon web apps allow you to add some of your own customizations. For example, your plugin code can listen for web page events and process custom code based on your requirements. </p>
+    <p>The page events are triggered by user interactions with the Beacon app. This diagram shows the relationship between the user, your Beacon web app and your plugin code.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Page events" src="/assets/images/ott-plugins/page-events/page-event-diagram.svg" />
       <figcaption class="bcls-caption--image">Page events</figcaption>
     </figure>
@@ -160,40 +161,44 @@ layout: "staging"
 
   <section class="bcls-section">
     <h2 id="Module_implementation">Module implementation</h2>
-    <p>The following shows how functions using the side panel are implemented using JavaScript modules. Of course, you may implement your JavaScript in the manner of your choice. Further details on this module implementation can be found in the <a href="">Implementing Beacon Plugin Code Using Modules</a> document.</p>
+    <p>The following shows how to listen to Beacon web page events. For some customization examples, see the <a href="https://beacon.support.brightcove.com/ott-plugins/index.html">Beacon Plugins</a> documents.</p>
+    <p>While our examples use JavaScript modules, you may implement your JavaScript in the manner of your choice. Further details on this module implementation can be found in the <a href="">Implementing Beacon Plugin Code Using Modules</a> document.</p>
     
     <h3><code translate="No">index.js</code></h3>
     <p>Here is our example code:</p>
-    <pre class="line-numbers"><code class="language-javascript" translate="No">import { addCustomButtonDetails, addCustomButtonDetailsParams, handleButtonClick } from './button-module.js';
-
-window.addEventListener(&quot;message&quot;, (event) =&gt; {
+    <pre class="line-numbers"><code class="language-javascript" translate="No">window.addEventListener(&quot;message&quot;, (event) =&gt; {
   const originsAllowed = [
-    '<span class="bcls-input">your Beacon app URL</span>'
+    &apos;<span class="bcls-input">your Beacon app URL</span>&apos;
   ];
   if (originsAllowed.includes(event.origin)) {
+
     switch (event.data.event) {
-      
-      case 'detailsPageExternalButtonWasClicked':
-        if (event.data.data.element_id == 'download-button') {
-          handleButtonClick('Download button'); 
-        };
-        if (event.data.data.element_id == 'location-button') {
-          handleButtonClick('Location button');
-        };
+      case &apos;beforeBeaconPageLoad&apos;:
+        console.log(&apos;beforeBeaconPageLoad Event data: &apos;, event.data.data);
         break;
+
+      case &apos;onBeaconPageLoad&apos;:
+        console.log(&apos;onBeaconPageLoad Event data: &apos;, event.data.data);
+        break;   
         
-      case 'onBeaconPageLoad':
-        addCustomButtonDetailsParams('Download', 'fa fa-info-circle', 'download-button');
-        addCustomButtonDetailsParams('Location', 'fa fa-info-circle', 'location-button');
+      case &apos;loadedBeaconVideoMetadata&apos;:
+        console.log(&apos;loadedBeaconVideoMetadata Event data: &apos;, event.data.data);
       break;
 
+      case &apos;onBeaconPageChange&apos;:
+        console.log(&apos;onBeaconPageChange Event data: &apos;, event.data.data);
+      break;
+
+      case &apos;onBeaconPageUnload&apos;:
+        console.log(&apos;onBeaconPageUnload Event data: &apos;, event.data.data);
+      break;
     }
   }
 },
-  false
+false
 );</code></pre>
 
-    <table class="bcls-table">
+    <!-- <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
           <th>Event</th>
@@ -221,69 +226,7 @@ window.addEventListener(&quot;message&quot;, (event) =&gt; {
         </tr>
        
       </tbody>
-    </table>
-
-    <h3><code translate="No">button-module.js</code></h3>
-    <p>Here is our example code:</p>
-    <pre class="line-numbers"><code class="language-javascript" translate="No">const addCustomButtonDetails = () =&gt; {
-  
-      window.postMessage({
-        event: 'detailsPageAddCustomButton',
-        data: {
-          title: 'Test Button',
-          font_awesome_icon: 'fa fa-info-circle',
-          element_id: 'TEST_BTN_ID'
-        }
-      }, window.location.origin);
-    
-    };
-    
-    const addCustomButtonDetailsParams = (pTitle, pFont, pID) =&gt; {
-      
-      window.postMessage({
-        event: 'detailsPageAddCustomButton',
-        data: {
-          title: pTitle,
-          font_awesome_icon: pFont,
-          element_id: pID
-        }
-      }, window.location.origin);
-    
-    };
-    
-    const handleButtonClick = (buttonString) =&gt; {
-    
-      alert('button was clicked ' + buttonString);
-    
-    };
-    
-    export { addCustomButtonDetails, addCustomButtonDetailsParams, handleButtonClick };</code></pre>
-
-    <table class="bcls-table">
-      <thead class="bcls-table__head">
-        <tr>
-          <th>Function</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody class="bcls-table__body">
-        <tr>
-          <td><code translate="No">addCustomButtonDetails</code></td>
-          <td>Dispatches the <code translate="No">detailsPageAddCustomButton</code> event to create a custom button on the details page, at the end of the buttons list.<br/>
-             The <code translate="No">title</code>, <code translate="No">font_awesome_icon</code> and <code translate="No">element_id</code> values are passed into this function as strings, using the <code translate="No">data</code> object.</td>
-        </tr>
-        <tr>
-          <td><code translate="No">addCustomButtonDetailsParams</code></td>
-          <td>Dispatches the <code translate="No">detailsPageAddCustomButton</code> event to create a custom button on the details page, at the end of the buttons list.<br/>
-             This function uses the <code translate="No">pTitle</code>, <code translate="No">pFont</code> and <code translate="No">pID</code> parameters to populate the <code translate="No">title</code>, <code translate="No">font_awesome_icon</code> and <code translate="No">element_id</code> values in the <code translate="No">data</code> object.</td>
-        </tr>
-        <tr>
-          <td><code translate="No">handleButtonClick</code></td>
-          <td>Displays an alert box with a message identifying the button that was clicked.</td>
-        </tr>
-      </tbody>
-    </table>
+    </table> -->
   </section>
-
 
 </article>

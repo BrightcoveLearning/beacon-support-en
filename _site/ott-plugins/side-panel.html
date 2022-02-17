@@ -869,10 +869,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 const populateSidePanel = () => {
 
   var panelArea = document.getElementById('player_side_panel_hook');
-  var para2 = document.createElement("P");
-  var t2 = document.createTextNode("This is in the panel.");
-  para2.appendChild(t2);
-  panelArea.appendChild(para2);
+  var content = &apos;&lt;h2&gt;This is in the panel.&lt;/h2&gt;&apos;);
+  panelArea.insertAdjacentHTML('afterbegin', content);
 
 };
 
@@ -880,11 +878,14 @@ const populateSidePanel = () => {
 const clearSidePanel = () => {
 
   var panelArea = document.getElementById('player_side_panel_hook');
-  panelArea.innerHTML = '';
+  panelArea.insertAdjacentHTML('afterbegin', ' ');
 
 };
 
 export { openSidePanel, populateSidePanel, clearSidePanel };</code></pre>
+
+    <aside class="bcls-aside bcls-aside--tip language-editable">The <code>insertAdjacentHTML()</code> method is used because it does not reparse the element it is being used on, and thus it does not corrupt the existing elements inside that element. This avoids the extra step of serialization, making it much faster than direct <code>innerHTML</code> manipulation.</aside>
+
   </section>
 
 

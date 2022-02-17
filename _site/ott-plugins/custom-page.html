@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="In this topic, you will learn how to create a custom page in your Beacon app.">
+  <meta name="description" content="In this topic, you will learn how to use a JavaScript plugin to create a custom page in your Beacon web app.">
   
   <title>Creating a Custom Page</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -754,14 +754,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <h1>Creating a Custom Page</h1>
 <article class="bcls-article">
-  <summary>In this topic, you will learn how to create a custom page in your Beacon app.</summary>
+  <summary>In this topic, you will learn how to use a JavaScript plugin to create a custom page in your Beacon web app.</summary>
 
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>You can add free form pages to your Beacon app by using the <em>Custom Pages</em> element. To create and populate the page with content you:</p>
-    <ol>
+    <p>With JavaScript plugin code, you can add free-form pages to your Beacon web app by using the <em>Custom Pages</em> element. To create and populate the page with content, you will:</p>
+    <ol class="bcls-tasklist">
       <li>Create the page in Beacon Classic.</li>
-      <li>Use an <code>if</code> statement to check if the page loaded is your custom page. The condition of the <code>if</code> statement uses the name (slug as it is referred to) of the page.</li>
+      <li>Use an <code>if</code> statement to check if the loaded page is your custom page. The condition of the <code>if</code> statement uses the name (slug as it is referred to) of the page.</li>
       <li>Populate and style the page as desired.</li>
     </ol>
     <p>Here is a very simple custom page with the page name <strong>Plugin Custom</strong> with some textual content and one image. The font color and background color are set through the <code>index.css</code> file.</p>
@@ -769,17 +769,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <img class="bcls-image" src="/assets/images/ott-plugins/custom-pages/page-in-app.png" alt="">
     </figure>
     <h3>Use cases</h3>
-    <p>The use cases for a custom page are numerous, but basically anytime you want to have a page that is not one of the page types you can choose in the UI, you can use a custom page. For instance:</p>
+    <p>The use cases for a custom page are numerous, but basically, anytime you want to have a page that is not one of the page types you can choose in the UI, you can use a custom page. For instance:</p>
     <ul>
       <li>A Beacon app centered around a conference uses a custom page to display the schedule of conference attendees.</li>
-      <li></li>
     </ul>
   </section>
 
   <section class="bcls-section">
     <h2 id="Creating_the_custom_page">Creating the custom page</h2>
-    <p>You must create the custom page in Beacon Classic. </p>
-    <ol class="bcls-tasklist">
+    <p>First, you must create the custom page in Beacon Classic. </p>
+    <ol class="bcls-tasklist-restart">
       <li>In Beacon Classic:
         <ol type="a">
           <li>In the top navigation click <strong>Pages</strong>.</li>
@@ -789,7 +788,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <img class="bcls-image" src="/assets/images/ott-plugins/custom-pages/add-new-page-button.png" alt="add new page">
         </figure>
       </li>
-      <li>Complete the <em>Basic Data</em> form. You must choose <strong>custom-screen</strong> for the <em>Navigation Type</em>.
+      <li>Complete the <em>Basic Data</em> form. For the <em>Navigation Type</em>, you must choose <strong>custom-screen</strong>.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/ott-plugins/custom-pages/ui-basic-data.png" alt="basic data">
         </figure>
@@ -805,7 +804,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
   <section class="bcls-section">
     <h2 id="Events">Events</h2>
-    <p>The key event action taken when using custom pages is listening for <code>onBeaconPageLoad</code>. The reason is that you want to listen for that event, then check to see if the page loaded is your custom page. If it is, you then populate the page with content. The code below shows the implementation of that logic.</p>
+    <p>The key event action taken when using custom pages is listening for <code>onBeaconPageLoad</code>. The reason is that you want to listen for that event, then check to see if the page loaded is your custom page. If it is, populate the page with your content. The code below shows the implementation of that logic.</p>
     <pre class="line-numbers"><code class="language-javascript" translate="No">window.addEventListener("message", (event) => {
   const originsAllowed = [
     'https://beacon-web.ott.us-east-1.qa.deploys.brightcove.com'

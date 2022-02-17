@@ -758,10 +758,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>The Beacon web apps allow you to add some of your own customizations. For example, your plugin code can listen for web page events and process custom code based on your requirements. </p>
-    <p>The page events are triggered by user interactions with the Beacon app. This diagram shows the relationship between the user, your Beacon web app and your plugin code.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Page events" src="/assets/images/ott-plugins/page-events/page-event-diagram.svg" />
-      <figcaption class="bcls-caption--image">Page events</figcaption>
+    <p>The Beacon web apps allow you to add some of your own customizations. For example, you can create a JavaScript plugin to listen for web page events and process custom code based on your requirements. For details, see the <a href="https://beacon.support.brightcove.com/ott-plugins/index.html">Beacon Plugins</a> documents.</p>
+    <p>Beacon page events are triggered by user interactions with the Beacon app. This diagram shows the relationship between the user, your Beacon web app and your plugin code.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Beacon page events" src="/assets/images/ott-plugins/page-events/page-event-diagram.svg" />
+      <figcaption class="bcls-caption--image">Beacon page events</figcaption>
     </figure>
     <!-- <div style="position: relative; display: block; max-width: 960px;">
       <div style="padding-top: 56.25%;"><iframe src="https://players.brightcove.net/1507807800001/default_default/index.html?videoId=6293553909001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
@@ -769,8 +769,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h3>Use cases</h3>  
     <p>Here are some use cases when listening to page events:</p>
     <ul>
-      <li>A <strong>Download</strong> button to allow users to download a copy of the video</li>
-      <li>A <strong>Location</strong> button to allow users to tag their location on videos</li>
+      <li><code translate="No">onBeaconPageLoad</code> - When this event is triggered, you can add custom buttons, populate custom sections, and create custom pages for your Beacon web app</li>
+      <li><code translate="No">loadedBeaconVideoMetadata</code> - When this event is triggered, you can display data for the current video in your Beacon web app</li>
     </ul>
   </section>
 
@@ -795,7 +795,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </tr>
         <tr>
           <td><code translate="No">onBeaconPageChange</code></td>
-          <td>Called when there is a change on the Beacon web app page. For example, when you are watching a video on the details page, and select a new series, season or episode, For the Live TV page, it is also called when the selected linear channel changes.</td>
+          <td>Called when there is a change on the Beacon web app page. For example, when you are watching a video on the details page, and select a new series, season or episode. For the Live TV page, it is also called when the selected linear channel changes.</td>
         </tr>
         <tr>
           <td><code translate="No">loadedBeaconVideoMetadata</code></td>
@@ -812,7 +812,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
   <section class="bcls-section">
     <h2 id="Event_data">Event data</h2>
-    <p>When listening to page events, you can display the event data which is available for use in your custom code. Here are some examples of this data:</p>
+    <p>When listening to page events, you can display the event data which is available for use in your custom code.</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
@@ -827,80 +827,88 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <td>enum</td>
           <td>A unique page type for the current page being viewed. Values:
             <ul>
-              <li><code translate="No">screen</code></li>
-              <li><code translate="No">playlist_view_all</code></li>
-              <li><code translate="No">details</code></li>
-              <li><code translate="No">player_vod</code></li>
-              <li><code translate="No">player_live</code></li>
-              <li><code translate="No">epg</code></li>
-              <li><code translate="No">livetv</code></li>
-              <li><code translate="No">search</code></li>
-              <li><code translate="No">settings</code></li>
-              <li><code translate="No">my_account</code></li>
-              <li><code translate="No">favorites</code></li>
+              <li><code translate="No">about</code></li>
               <li><code translate="No">bookmarks</code></li>
-              <li><code translate="No">purchased</code></li>
-              <li><code translate="No">static_page</code></li>
-              <li><code translate="No">manage_subscriptions</code></li>
+              <li><code translate="No">change_language</code></li>
+              <li><code translate="No">custom_screen</code></li>
+              <li><code translate="No">details</code></li>
               <li><code translate="No">device_management</code></li>
-              <li><code translate="No">parental_controls</code></li>
-              <li><code translate="No">profiles_list</code></li>
+              <li><code translate="No">edit_profile</code></li>
+              <li><code translate="No">epg</code></li>
+              <li><code translate="No">favorites</code></li>
+              <li><code translate="No">landing_page</code></li>
               <li><code translate="No">live_event_details</code></li>
               <li><code translate="No">live_event_player</code></li>
-              <li><code translate="No">about</code></li>
-              <li><code translate="No">change_language</code></li>
-              <li><code translate="No">edit_profile</code></li>
-              <li><code translate="No">transactions</code></li>
+              <li><code translate="No">livetv</code></li>
+              <li><code translate="No">manage_subscriptions</code></li>
+              <li><code translate="No">my_account</code></li>
+              <li><code translate="No">parental_controls</code></li>
               <li><code translate="No">payments</code></li>
-              <li><code translate="No">landing_page</code></li>
-              <li><code translate="No">custom_screen</code></li>
+              <li><code translate="No">player_live</code></li>
+              <li><code translate="No">playlist_view_all</code></li>
+              <li><code translate="No">player_vod</code></li>
+              <li><code translate="No">profiles_list</code></li>
+              <li><code translate="No">purchased</code></li>
+              <li><code translate="No">screen</code></li>
+              <li><code translate="No">search</code></li>
+              <li><code translate="No">settings</code></li>
+              <li><code translate="No">static_page</code></li>
+              <li><code translate="No">transactions</code></li>
             </ul> 
           </td>
         </tr>
         <tr>
-          <td><code translate="No">slug</code></td> 
+          <td><code translate="No">slug</code></td>  
           <td>string</td>
           <td>A unique id for your custom page</td>
         </tr>
         <tr>
           <td><code translate="No">asset_id</code></td>
           <td>integer</td>
-          <td>Sent in details|player_vod|player_live event</td>
+          <td>Sent in the event object for these pages: 
+            <ul>
+              <li><code translate="No">details</code></li>
+              <li><code translate="No">player_vod</code></li>
+              <li><code translate="No">player_live</code></li>
+            </ul>
+          </td>
         </tr>
         <tr>
           <td><code translate="No">playlist_id</code></td>
           <td>integer</td>
-          <td>Sent in playlist_view_all event</td>
+          <td>Sent in the event object for the <code translate="No">playlist_view_all</code> page
+          </td>
         </tr>
         <tr>
           <td><code translate="No">page_id</code></td>
           <td>integer</td>
-          <td>Sent in home event</td>
+          <td>Sent in the event object for the <code translate="No">home</code> page
+          </td>
         </tr>
         <tr>
           <td><code translate="No">bc_account_id</code></td>
           <td>integer</td>
-          <td>Sent in loadedBeaconVideoMetadata event</td>
+          <td>Sent in the <code translate="No">loadedBeaconVideoMetadata</code> event</td>
         </tr>
         <tr>
           <td><code translate="No">device</code></td>
           <td>string</td>
-          <td>'web'</td>
+          <td><code translate="No">'web'</code></td>
         </tr>
         <tr>
           <td><code translate="No">video_id</code></td>
           <td>integer</td>
-          <td>Sent in loadedBeaconVideoMetadata events</td>
+          <td>Sent in the <code translate="No">loadedBeaconVideoMetadata</code> event</td>
         </tr>
         <tr>
           <td><code translate="No">user_language</code></td>
           <td>string</td>
-          <td>Language code of the currently in use language from Beacon API</td>
+          <td>The language code for the current language from the Beacon API</td>
         </tr>
         <tr>
           <td><code translate="No">entitlements</code></td>
           <td>boolean</td>
-          <td>Displays whether the user is entitled to see the content, or it’s free</td>
+          <td>Displays whether the content is free or if the user is entitled to see the content</td>
         </tr>
         
       </tbody>

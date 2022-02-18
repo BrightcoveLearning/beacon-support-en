@@ -21,8 +21,8 @@ layout: "staging"
 
   <section class="bcls-section">
     <h2 id="Examining_the_code">Examining the code</h2>
-    <p>The use case shown in the following code examples is creating the HTML as a variable in the data module then passing it to a custom page to be displayed.</p>
-    <p>The first code block shows the contents of the data module. A single variable is created and exported for use by the controller. For details on this code see the <a href="/ott-plugins/custom-page.html#Adding_HTML_content">Adding HTML content</a> section of the <strong>Creating a Custom Page</strong> document. Of course multiple data variable may be created in the data module.</p>
+    <p>The use case shown in the following code examples is creating the HTML as a variable in the data module then passing it to a custom page to be displayed. For line-by-line details on the actual code used see the <a href="/ott-plugins/custom-page.html">Creating a Custom Page</a> document. The emphasis in this document is to see how the data is created and distributed for use.</p>
+    <p>The first code block shows the contents of the data module. A single variable is created and exported for use by the controller. Of course multiple data variables may be created in the data module.</p>
     <pre class="line-numbers"><code class="language-javascript" translate="No">var pageContent = &apos;&lt;h2&gt; This is content in the &lt;em&gt;custom page&lt;/em&gt; passed as a parameter from a data file&lt;/h2&gt;&lt;br&gt;&apos;
   + &apos;&lt;p&gt;You can build your HTML in many ways and the page can contain the content you choose. You are NOT limited to the page types shown in the page layout UI.&lt;/p&gt;&lt;br&gt;&apos;
   + &apos;&lt;p&gt;Even use images!&lt;/p&gt;&apos;
@@ -30,7 +30,7 @@ layout: "staging"
   
 export { pageContent };</code></pre>
 
-    <p>This code shows how the custom page element's module will display the data. In this case it gets the <code>&lt;div&gt;</code> element designated for the custom pages HTML and then places that HTML into the <code>&lt;div&gt;</code>.</p>
+    <p>This code shows how the custom page element's module will display the data. In this case it gets the <code>&lt;div&gt;</code> element designated for the custom page's HTML and then places that HTML into the <code>&lt;div&gt;</code>.</p>
 
     <pre class="line-numbers"><code class="language-javascript" translate="No">const populateCustomPage = (pageContent) => {
 
@@ -41,13 +41,13 @@ export { pageContent };</code></pre>
 
 export { populateCustomPage };</code></pre>
 
-    <p></p>
-    <pre class="line-numbers"><code class="language-javascript" translate="No">import { pageContent } from './data.js';
+    <p>The last task is for the controller to utilize the data by passing it to the function to display the data. The variable defined in the data module is imported, along with the function that displays the content. In this use case, the code checks to see if the page just loaded is the created custom page, and if yes calls the function to display the data while passing the data variable to the function.</p>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">import { <span class="bcls-highlight">pageContent</span> } from './data.js';
 import { populateCustomPage } from './custom-page-module.js';
 ...
 case 'onBeaconPageLoad':
   if (event.data.data.slug == '24849-custom-for-plugin') {
-    populateCustomPage(pageContent);
+    populateCustomPage(<span class="bcls-highlight">pageContent</span>);
   }
 break;</code></pre>
   </section>

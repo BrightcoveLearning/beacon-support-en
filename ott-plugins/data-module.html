@@ -9,8 +9,42 @@ layout: "staging"
   <summary>{{ page.description }}</summary>
 
   <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
+    <h2 id="section-name">section-title</h2>
     <p></p>
+  </section>
+
+
+  <section class="bcls-section">
+    <h2 id="Introduction">Examining the code</h2>
+    <p></p>
+    <pre class="line-numbers"><code class="language-javascript" translate="No">var pageContent = &apos;&lt;h2&gt; This is content in the &lt;em&gt;custom page&lt;/em&gt; passed as a parameter from a data file&lt;/h2&gt;&lt;br&gt;&apos;
+  + &apos;&lt;p&gt;You can build your HTML in many ways and the page can contain the content you choose. You are NOT limited to the page types shown in the page layout UI.&lt;/p&gt;&lt;br&gt;&apos;
+  + &apos;&lt;p&gt;Even use images!&lt;/p&gt;&apos;
+  + &apos;&lt;img src=&quot;https://solutions.brightcove.com/bcls/beacon-plugins/yachats-far.png&quot;&gt;&apos;;
+  
+export { pageContent };</code></pre>
+
+
+
+    <pre class="line-numbers"><code class="language-javascript" translate="No">const populateCustomPage = (pageContent) => {
+
+  var customPageArea = document.getElementById('custom_page_area');
+  customPageArea.insertAdjacentHTML('afterbegin', pageContent);
+
+};
+
+export { populateCustomPage };</code></pre>
+
+    <pre class="line-numbers"><code class="language-javascript" translate="No">import { pageContent } from './data.js';
+import { populateCustomPage } from './custom-page-module.js';
+...
+case 'onBeaconPageLoad':
+  if (event.data.data.slug == '24849-custom-for-plugin') {
+    populateCustomPage(pageContent);
+  }
+break;</code></pre>
+
+
   </section>
 
   <section class="bcls-section">

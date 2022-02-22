@@ -26,7 +26,7 @@ layout: "staging"
   </section>
 
   <section class="bcls-section">
-    <h2 id="Button_events">Button events</h2>
+    <h2 id="Triggering_events">Triggering events</h2>
     <p>The following events can be used in your plugin code to control custom buttons:</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
@@ -93,7 +93,7 @@ layout: "staging"
   </section>
 
   <section class="bcls-section">
-    <h2 id="Event_listeners">Event listeners</h2>
+    <h2 id="Listening_for_events">Listening for events</h2>
     <p>The following events are listened for by the player when button events are dispatched in your Beacon plugin code:</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
@@ -234,26 +234,26 @@ window.addEventListener(&quot;message&quot;, (event) =&gt; {
     
     };
     
-    const addCustomButtonDetailsParams = (pTitle, pFont, pID) =&gt; {
-      
-      window.postMessage({
-        event: 'detailsPageAddCustomButton',
-        data: {
-          title: pTitle,
-          font_awesome_icon: pFont,
-          element_id: pID
-        }
-      }, window.location.origin);
-    
-    };
-    
-    const handleButtonClick = (buttonString) =&gt; {
-    
-      alert('button was clicked ' + buttonString);
-    
-    };
-    
-    export { addCustomButtonDetails, addCustomButtonDetailsParams, handleButtonClick };</code></pre>
+const addCustomButtonDetailsParams = (pTitle, pFont, pID) =&gt; {
+  
+  window.postMessage({
+    event: 'detailsPageAddCustomButton',
+    data: {
+      title: pTitle,
+      font_awesome_icon: pFont,
+      element_id: pID
+    }
+  }, window.location.origin);
+
+};
+
+const handleButtonClick = (buttonString) =&gt; {
+
+  alert('button was clicked ' + buttonString);
+
+};
+
+export { addCustomButtonDetails, addCustomButtonDetailsParams, handleButtonClick };</code></pre> 
 
     <table class="bcls-table">
       <thead class="bcls-table__head">

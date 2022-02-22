@@ -759,6 +759,18 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
     <p>When getting started implementing Beacon plugins it is imperative to understand these plugins use an event based framework. Essential to the process is using <code>window.postMessage</code> which provides easy cross domain functionality.</p>
+    <p>The following diagram provides an overview of plugin functionality:</p>
+    <ul>
+      <li>First, you see there are three entities involved in plugin implementation, those being:
+        <ul>
+          <li>The user of the Beacon app</li>
+          <li>The Beacon app itself</li>
+          <li>The Beacon plugin functionality</li>
+        </ul>
+      </li>
+      <li>When the user performs an action, the Beacon app dispatches an event for which the plugin listens.</li>
+      <li>You can write code to perform actions in the event listener, and if needed access data in the event object data. For some events you will never or rarely code actions to perform, while other events are repeatedly utilized.</li>
+    </ul>
     <figure class="bcls-figure">
       <img class="bcls-image" src="/assets/images/ott-plugins/dispatching-handling-events/OTT Plugin Intro Events (2).svg" alt="" width="800px  s">
     </figure>
@@ -869,7 +881,7 @@ false
 
 <hr>
 <div class="last-updated">
-  Page last updated on 04 Feb 2022
+  Page last updated on 22 Feb 2022
 </div>
 
 

@@ -825,11 +825,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
   <section class="bcls-section">
     <h2 id="Adding_HTML_content">Adding HTML content</h2>
-    <p>The custom page is populated with HTML. The question then becomes, how should the content be generated? There are numerous approaches, two of which are:
+    <p>The custom page is populated with HTML. The question then becomes, how should the content be generated? There are numerous approaches, two of which are:</p>
     <ul>
       <li>Build your HTML as a long, concatenated string, then assign it to the page.</li>
-      <li>Use a templating engine built for dynamically generating HTML, like <a href="https://handlebarsjs.com/">handlebars.js</a>. For alternatives to <em>handlebars.js</em> search for <em>JavaScript templating engines</em>.</p>
-      </li>
+      <li>Use a templating engine built for dynamically generating HTML, like <a href="https://handlebarsjs.com/">handlebars.js</a>. For alternatives to <em>handlebars.js</em> search for <em>JavaScript templating engines</em>.</li>
     </ul>
 
     <p>In this document and other examples in the <em>Beacon Plugins</em> documentation on this site, the first approach is taken. This works fine for the simple, short examples shown, but for more complex HTML of greater length a templating engine would most likely be a better fit.</p>
@@ -864,7 +863,7 @@ customPageArea.insertAdjacentHTML(&apos;afterbegin&apos;, pageContent);</code></
 
   <section class="bcls-section">
     <h2 id="Module_implementation">Module implementation</h2>
-    <p>The following module shows a very simple way to build your HTML and place it in your custom page. This module could also be used to implement your <em>handlebars.js</em> templates to build more sophisticated pages.
+    <p>The following module shows a very simple way to build your HTML and place it in your custom page. This module could also be used to implement your <em>handlebars.js</em> templates to build more sophisticated pages.</p>
     <pre class="line-numbers"><code class="language-javascript" translate="No">const populateCustomPage = () =&gt; {
     
   var customPageArea = document.getElementById(&apos;custom_page_area&apos;),

@@ -1,5 +1,5 @@
 ---
-title: "Implementing Buttons and Event Handlers"
+title: "Implementing Custom Buttons"
 description: "In this topic, you will learn how to implement custom buttons using a plugin in your Brightcove Beacon web apps."
 parent: "OTT Plugins"
 layout: "staging"
@@ -9,7 +9,7 @@ layout: "staging"
   <summary>{{ page.description }}</summary>
 
   <section class="bcls-section">
-    <h2 id="Creating_custom_buttons">Creating custom buttons</h2>
+    <h2 id="Introduction">Introduction</h2>
     <p>Custom buttons can be added to your app's details page. For example, you can add a Download button and/or a Location button. You are responsible for programming the button functionality.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Custom buttons" src="/assets/images/ott-plugins/buttons/custom-buttons.png" />
       <figcaption class="bcls-caption--image">Custom buttons</figcaption>
@@ -23,6 +23,14 @@ layout: "staging"
       <li>A <strong>Download</strong> button to allow users to download a copy of the video</li>
       <li>A <strong>Location</strong> button to allow users to tag their location on videos</li>
     </ul>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Event_flow">Event flow</h2>
+    <p>This diagram shows the event flow for a custom button:</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Custom button event flow" src="/assets/images/ott-plugins/buttons/button-flow-diagram.svg" />
+      <figcaption class="bcls-caption--image">Custom button event flow</figcaption>
+    </figure>
   </section>
 
   <section class="bcls-section">

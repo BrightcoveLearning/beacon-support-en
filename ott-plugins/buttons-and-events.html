@@ -9,6 +9,7 @@ layout: "staging"
   <summary>{{ page.description }}</summary>
 
   <section class="bcls-section">
+    <aside class="bcls-aside bcls-aside--information language-editable">This document is one part of the Beacon Plugins document collection. Since Beacon Plugins are implemented using JavaScript and CSS, the target audience for this document is developers with some experience with both of those technologies. To learn more about Beacon Plugins see the <a href="/ott-plugins/index.html">Beacon Plugins documentation home page</a>.</aside>
     <h2 id="Introduction">Introduction</h2>
     <p>Custom buttons can be added to your app's details page. For example, you can add a Download button and/or a Location button. You are responsible for programming the button functionality.</p>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Custom buttons" src="/assets/images/ott-plugins/buttons/custom-buttons.png" />
@@ -56,7 +57,7 @@ layout: "staging"
     </table>
     <aside class="bcls-aside bcls-aside--information">When a user has a details page for a series open, and a new season/episode is selected, the previously added button will not be removed. </aside>
 
-    <h3 id="Event_data">Event data</h3>
+    <h3 id="Event_data2">Event data</h3>
     <p>The following data can be passed with the button event:</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
@@ -73,12 +74,12 @@ layout: "staging"
           <td>The button title displayed in your Beacon app</td>
         </tr>
         <tr>
-          <td><code translate="No">font_awesome_icon</code></td>  
+          <td><code translate="No">font_awesome_icon</code></td>
           <td>string</td>
           <td>The Font Awesome ID for the icon displayed in your custom button; leave blank if no icon is to be applied</td>
         </tr>
         <tr>
-          <td><code translate="No">element_id</code></td>  
+          <td><code translate="No">element_id</code></td>
           <td>string</td>
           <td>The HTML ID to be applied to your custom button; when calling the remove event, this is the only required field</td>
         </tr>
@@ -117,7 +118,7 @@ layout: "staging"
         </tr>
       </tbody>
     </table>
-    <h3 id="Event_data">Event data</h3>
+    <h3 id="Event_data1">Event data</h3>
     <p>The following data is returned when the button clicked event is triggered:</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
@@ -134,13 +135,13 @@ layout: "staging"
           <td>The ID for the asset (episode/movie/event) associated with the current details page in your Beacon app</td>
         </tr>
         <tr>
-          <td><code translate="No">element_id</code></td>  
+          <td><code translate="No">element_id</code></td>
           <td>string</td>
           <td>The HTML ID of the button that was clicked</td>
         </tr>
       </tbody>
     </table>
-    <h3 id="Code_example">Code example</h3>
+    <h3 id="Code_example1">Code example</h3>
     <p>Here is the JavaScript code syntax used to listen for a button click event:</p>
     <pre class="line-numbers"><code class="language-javascript" translate="No">switch (event.data.event) {
       
@@ -158,7 +159,7 @@ layout: "staging"
     <p>Here is an example of the data object for a button clicked event:</p>
     <h3><code translate="No">detailsPageExternalButtonWasClicked</code></h3>
     <figure class="bcls-figure"><img class="bcls-image--no-border" alt="Data object for button clicked event" src="/assets/images/ott-plugins/buttons/button-data.png" />
-      <figcaption class="bcls-caption--image">Data object for button clicked event</figcaption> 
+      <figcaption class="bcls-caption--image">Data object for button clicked event</figcaption>
     </figure>
   </section>
 
@@ -261,7 +262,7 @@ const handleButtonClick = (buttonString) =&gt; {
 
 };
 
-export { addCustomButtonDetails, addCustomButtonDetailsParams, handleButtonClick };</code></pre> 
+export { addCustomButtonDetails, addCustomButtonDetailsParams, handleButtonClick };</code></pre>
 
     <table class="bcls-table">
       <thead class="bcls-table__head">

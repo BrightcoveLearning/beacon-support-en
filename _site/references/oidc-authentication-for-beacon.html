@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="In this topic, you will learn how to configure your OIDC based identity provider to authenticate Beacon users.">
   
-  <title>OIDC Authentication for Brightcove Beacon</title>
+  <title>OIDC Authentication Configuration and Testing for Brightcove Beacon</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -65,7 +65,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
     
       
-        <li class="breadcrumb-item active" aria-current="page">OIDC Authentication for Brightcove Beacon</li>
+        <li class="breadcrumb-item active" aria-current="page">OIDC Authentication Configuration and Testing for Brightcove Beacon</li>
       
     
   </nav>
@@ -799,7 +799,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="open in new tab" style="margin-top:4em;width: 1.5em;"></a>
 
 
-<h1>OIDC Authentication for Brightcove Beacon</h1>
+<h1>OIDC Authentication Configuration and Testing for Brightcove Beacon</h1>
 <article class="bcls-article">
   <summary>In this topic, you will learn how to configure your OIDC based identity provider to authenticate Beacon users.</summary>
 
@@ -838,8 +838,35 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
   <section class="bcls-section">
-    <h2 id="section-name">section-title</h2>
-    <p></p>
+    <h2 id="section-name">Setting up and testing authentication</h2>
+    <p>Perform the following tasks to configure and test your OIDC identity provider with Beacon:</p>
+    <ol class="bcls-tasklist">
+      <li>Obtain from Brightcove the callback URLs to be added to the OIDC provider as allowed redirect URIs. The identity provider uses these URIs to redirect viewers with their authorization code Sign-in URL to QA and Test environments. Both environments specify the redirect URIs to redirect the User with their authorization code.</li>
+      <li>Implement and provide API endpoints to the OTT Delivery Team for the following responses:
+        <ul>
+          <li>Access Token (JWT)</li>
+          <li>ID Token (JWT)</li>
+          <li>Refresh Token</li>
+          <li>User Info</li>
+          <li>Authorize</li>
+          <li>Pairing codes - required only if Smart TV, Android TV, Fire TV or Apple TV are in scope; see notes for Roku</li>
+          <li>JWKS</li>
+          <li>Logout</li>
+          <li>OpenID Connect Discovery (/.well-known/openid-configuration) - If this is configured properly and provided, the OTT Delivery Team can discover the endpoints and provide Beacon engineering ticket as noted in step f. Below</li>
+        </ul>
+      </li>
+      <li>Configure redirect URLs for login and logout as allowed redirect URLs, if required by by your identity provider.</li>
+      <li>Create a client ID for all apps in scope and provides them to the OTT Delivery Team.</li>
+      <li>Creates test users in your identity provider and supply test credentials to the OTT Delivery Team.</li>
+    </ol>
+    <p>Brightcove entities will then:</p>
+    <ol class="bcls-tasklist">
+      <li>OTT Delivery Team creates a ticket with data from step d. and e. above for Beacon apps in OTT board</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
   </section>
 
 

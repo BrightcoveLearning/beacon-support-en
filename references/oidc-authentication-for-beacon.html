@@ -1,5 +1,5 @@
 ---
-title: "OIDC Authentication for Brightcove Beacon"
+title: "OIDC Authentication Configuration and Testing for Brightcove Beacon"
 description: "In this topic, you will learn how to configure your OIDC based identity provider to authenticate Beacon users."
 parent: "References"
 layout: "staging"
@@ -43,8 +43,35 @@ layout: "staging"
 
 
   <section class="bcls-section">
-    <h2 id="section-name">section-title</h2>
-    <p></p>
+    <h2 id="section-name">Setting up and testing authentication</h2>
+    <p>Perform the following tasks to configure and test your OIDC identity provider with Beacon:</p>
+    <ol class="bcls-tasklist">
+      <li>Obtain from Brightcove the callback URLs to be added to the OIDC provider as allowed redirect URIs. The identity provider uses these URIs to redirect viewers with their authorization code Sign-in URL to QA and Test environments. Both environments specify the redirect URIs to redirect the User with their authorization code.</li>
+      <li>Implement and provide API endpoints to the OTT Delivery Team for the following responses:
+        <ul>
+          <li>Access Token (JWT)</li>
+          <li>ID Token (JWT)</li>
+          <li>Refresh Token</li>
+          <li>User Info</li>
+          <li>Authorize</li>
+          <li>Pairing codes - required only if Smart TV, Android TV, Fire TV or Apple TV are in scope; see notes for Roku</li>
+          <li>JWKS</li>
+          <li>Logout</li>
+          <li>OpenID Connect Discovery (/.well-known/openid-configuration) - If this is configured properly and provided, the OTT Delivery Team can discover the endpoints and provide Beacon engineering ticket as noted in step f. Below</li>
+        </ul>
+      </li>
+      <li>Configure redirect URLs for login and logout as allowed redirect URLs, if required by by your identity provider.</li>
+      <li>Create a client ID for all apps in scope and provides them to the OTT Delivery Team.</li>
+      <li>Creates test users in your identity provider and supply test credentials to the OTT Delivery Team.</li>
+    </ol>
+    <p>Brightcove entities will then:</p>
+    <ol class="bcls-tasklist">
+      <li>OTT Delivery Team creates a ticket with data from step d. and e. above for Beacon apps in OTT board</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
   </section>
 
 

@@ -2,6 +2,7 @@
 title: "OIDC Authentication for Brightcove Beacon"
 description: "In this topic, you will learn how to configure your OIDC based identity provider to authenticate Beacon users."
 parent: "References"
+layout: "staging"
 ---
 <h1>{{ page.title }}</h1>
 <article class="bcls-article">
@@ -9,8 +10,35 @@ parent: "References"
 
 
   <section class="bcls-section">
-    <h2 id="section-name">section-title</h2>
-    <p></p>
+    <h2 id="Introduction">Introduction</h2>
+    <p>This document details the configuration of how your can use your OIDC based identity provider for authenticating my users in Brightcove Beacon apps. Before you jump into details, big picture of the process is helpful. Think of your Beacon app as a bank ATM machine. What the user needs is a bank card to access the money oin the ATM. Likewise, your viewer needs an ID to access the videos in your Beacon app. Now here's a table relating entities in the analogy:</p>
+    <table class="bcls-table">
+      <thead class="bcls-table__head">
+        <tr>
+          <th>ATM/Bank Card</th>
+          <th>Beacon App</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>ATM</td>
+          <td>Beacon App</td>
+        </tr>
+        <tr>
+          <td>Functionality/connectivity ATM to authorize transaction</td>
+          <td>OAuth 2.0</td>
+        </tr>
+        <tr>
+          <td>Bank card</td>
+          <td>Token from OIDC</td>
+        </tr>
+        <tr>
+          <td>Process to issue bank card</td>
+          <td>OIDC</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Just as the bank card must have the ATM and underlying function of that device, so OIDC must have OAuth to function. It is often stated that OIDC "sits on top of" OAuth.</p>
   </section>
 
 

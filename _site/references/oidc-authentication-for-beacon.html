@@ -806,7 +806,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>This document details the configuration of how you can use your OIDC based identity provider to authenticate your users in Brightcove Beacon apps. Before you jump into details, a big picture of the process is helpful. Think of your Beacon app as a bank ATM machine. What the user needs is a bank card to access the money in the ATM. Likewise, your viewer needs an ID to access the videos in your Beacon app. Here's a table relating entities in the analogy:</p>
+    <p>This document details the configuration of how you can use your OIDC based identity provider to authenticate your viewers in Brightcove Beacon apps. Before you jump into details, a big picture of the process is helpful. Think of your Beacon app as a bank ATM machine. What the user needs is a bank card to access the money in the ATM. Likewise, your viewer needs an ID to access the videos in your Beacon app. Here's a table relating entities in the analogy:</p>
     <table class="bcls-table">
       <thead class="bcls-table__head">
         <tr>
@@ -871,8 +871,58 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 
   <section class="bcls-section">
-    <h2 id="section-name">section-title</h2>
-    <p></p>
+    <h2 id="Tokens">Tokens and user response</h2>
+    <p>Three tokens are involved in having your OIDC based identity provider authenticate your viewers, those being:</p>
+    <ul>
+      <li>access_token</li>
+      <li>id_token</li>
+      <li>refresh_token</li>
+    </ul>
+
+    <h3>Access token</h3>
+    <p>The access token must have the following claims for authentication support alone:</p>
+    <ul>
+      <li>sub</li>
+      <li>iss</li>
+      <li>exp</li>
+      <li>iat</li>
+      <li>aud (only if requested)</li>
+    </ul>
+    <p>Here is an example access token response that your OIDC provider token endpoint may provide:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/references/oidc-authentication/access-token-raw.png" alt="access token raw">
+    </figure>
+    <p>Here is the access token decoded:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/references/oidc-authentication/access-token-decoded.png" alt="access token decoded">
+    </figure>
+
+    <h3>ID Token</h3>
+    <p>The id token must have the following claims for authentication support alone:</p>
+    <ul>
+      <li>sub</li>
+      <li>iss</li>
+      <li>exp</li>
+      <li>iat</li>
+      <li>aud</li>
+      <li>nonce</li>
+    </ul>
+    <p>Here is an example ID token response that your OIDC provider token endpoint may provide:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/references/oidc-authentication/id-token-raw.png" alt="id token raw">
+    </figure>
+    <p>Here is the ID token decoded:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/references/oidc-authentication/id-token-decoded.png" alt="id token decoded">
+    </figure>
+
+    <h3>User response</h3>
+    <p>The user info response is a JSON object and must have the following fields for authentication support alone:</p>
+    <ul>
+      <li>sub</li>
+      <li>name/nickname/full_name/displayName (one or more of)</li>
+      <li>email</li>
+    </ul>
   </section>
 
 

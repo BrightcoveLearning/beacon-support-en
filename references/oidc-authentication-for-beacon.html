@@ -64,7 +64,7 @@ layout: "staging"
       <li>Create a client ID for all apps in scope and provides them to the OTT Delivery Team.</li>
       <li>Creates test users in your identity provider and supply test credentials to the OTT Delivery Team.</li>
     </ol>
-    <p>Brightcove entities will then:</p>
+    <p>For your information, Brightcove entities will then:</p>
     <ol class="bcls-tasklist">
       <li>OTT Delivery Team creates a ticket with data from steps 2 and 5 above for Beacon CMS in OTT board.</li>
       <li>OTT Delivery Team creates a ticket with data from steps 4 and 5 above for Beacon Beacon apps in OTT board.</li>
@@ -121,12 +121,23 @@ layout: "staging"
       <img class="bcls-image" src="/assets/images/references/oidc-authentication/id-token-decoded.png" alt="id token decoded">
     </figure>
 
-    <h3>User response</h3>
+    <h3>User info response</h3>
     <p>The user info response is a JSON object and must have the following fields for authentication support alone:</p>
     <ul>
       <li>sub</li>
-      <li>name/nickname/full_name/displayName (one or more of)</li>
+      <li>name/nickname/full_name/displayName (one or more)</li>
       <li>email</li>
+    </ul>
+    <p>Here is an example user info response:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/references/oidc-authentication/user-info-response.png" alt="user info response">
+    </figure>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Known issues">Known issues</h2>
+    <ul>
+      <li>For Roku implementations, a custom engagement with Brightcove Global Services is required. This is due to Roku's certification requirements. Failure to do this will result in Roku rejecting the channel from being published in the Roku store. For more information see Roku's <a href="https://developer.roku.com/docs/developer-program/authentication/on-device-authentication.md">On-device authentication</a> document.</li>
     </ul>
   </section>
 

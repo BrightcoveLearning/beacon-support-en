@@ -39,6 +39,10 @@
       url: /using-brightcove-beacon/cloud-playout/cloud-playout-overview.html
     - name: Creating a Cloud Playout Channel
       url: /using-brightcove-beacon/cloud-playout/cloud-playout-stream-vod.html
+    - name: Using Live Redundancy with Channels
+      url: /using-brightcove-beacon/cloud-playout/channel-live-redundancy.html
+    - name: Configuring S3 Buckets
+      url: /using-brightcove-beacon/cloud-playout/configuring-s3-buckets.html
     - name: Managing the Channel Program
       url: /using-brightcove-beacon/cloud-playout/cloud-playout-add-content.html
     - name: Adding Static Image Overlays

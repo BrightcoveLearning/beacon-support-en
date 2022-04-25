@@ -865,11 +865,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <summary>In this topic, you will learn how to implement the user events using a plugin in your Brightcove Beacon web apps.</summary>
 
   <section class="bcls-section">
-    <aside class="bcls-aside bcls-aside--information language-editable">This document is one part of the Beacon Plugins document collection. Since Beacon Plugins are implemented using JavaScript and CSS, the target audience for this document is developers with some experience with both of those technologies. To learn more about Beacon Plugins see the <a href="/ott-plugins/index.html">Beacon Plugins documentation home page</a>.</aside>
+    <aside class="bcls-aside bcls-aside--information language-editable">This document is one part of the OTT Plugins document collection. Since OTT Plugins are implemented using JavaScript and CSS, the target audience for this document is developers with some experience with both of those technologies. To learn more about OTT Plugins see the <a href="/ott-plugins/index.html">OTT Plugins documentation home page</a>.</aside>
     <h2 id="Introduction">Introduction</h2>
-    <p>The Beacon web apps allow you to add some of your customizations. For example, your plugin code can listen to
+    <p>The  web apps allow you to add some of your customizations. For example, your plugin code can listen to
       user events and process custom code based on your requirements.</p>
-    <p>The user events are triggered by user interactions with the Beacon app each time a user sign in, register, or
+    <p>The user events are triggered by user interactions with the  app each time a user sign in, register, or
       sign out.</p>
     <h3>Use cases</h3>
     <p>The following are appropriate use cases for the user events.</p>
@@ -945,7 +945,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
   <section class="bcls-section">
     <h2 id="Using_the_user_events">Using the user events</h2>
-    <p>There are three types of user events in your Beacon application that you can use. User events are implemented
+    <p>There are three types of user events in your  application that you can use. User events are implemented
       to retrieve users' data when signing in, registering, or signing out.</p>
     <h3>User did sign in</h3>
     <p>
@@ -953,7 +953,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <code>userDidSignIn</code> event:
     </p>
     <figure class="bcls-figure">
-      <img class="bcls-image" width='700' src="/assets/images/ott-plugins/user-events/User Did Sign In.svg" alt="Add carousel layout">
+      <img class="bcls-image" width='700' src="/assets/images/s-ott-plugins-img/user-events/User Did Sign In.svg" alt="Add carousel layout">
       <figcaption class="bcls-caption--image">User did sign in workflow.</figcaption>
     </figure>
     <p>
@@ -961,7 +961,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <code>userDidSignIn</code> event:
     </p>
     <figure class="bcls-figure">
-      <img class="bcls-image" width="450" src="/assets/images/ott-plugins/user-events/userDidSignIn.png" alt="Add carousel layout">
+      <img class="bcls-image" width="450" src="/assets/images/s-ott-plugins-img/user-events/userDidSignIn.png" alt="Add carousel layout">
       <figcaption class="bcls-caption--image">User did sign in event.</figcaption>
     </figure>
     <h3>User did register</h3>
@@ -970,14 +970,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <code>userDidRegister</code> event:
     </p>
     <figure class="bcls-figure">
-      <img class="bcls-image" width='700' src="/assets/images/ott-plugins/user-events/User Did Register.svg" alt="Add carousel layout">
+      <img class="bcls-image" width='700' src="/assets/images/s-ott-plugins-img/user-events/User Did Register.svg" alt="Add carousel layout">
       <figcaption class="bcls-caption--image">User did register workflow.</figcaption>
     </figure>
     <p>The following image shows an example of the data retrieved with the
       <code>userDidRegister</code> event:
     </p>
     <figure class="bcls-figure">
-      <img class="bcls-image" width="450" src="/assets/images/ott-plugins/user-events/userDidRegister.png" alt="Add carousel layout">
+      <img class="bcls-image" width="450" src="/assets/images/s-ott-plugins-img/user-events/userDidRegister.png" alt="Add carousel layout">
       <figcaption class="bcls-caption--image">User did register event</figcaption>
     </figure>
     <h3>User did sign out</h3>
@@ -986,14 +986,14 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <code>userDidSignOut</code> event:
     </p>
     <figure class="bcls-figure">
-      <img class="bcls-image" width='700' src="/assets/images/ott-plugins/user-events/User Did Sign Out.svg" alt="Add carousel layout">
+      <img class="bcls-image" width='700' src="/assets/images/s-ott-plugins-img/user-events/User Did Sign Out.svg" alt="Add carousel layout">
       <figcaption class="bcls-caption--image">User did sign out workflow.</figcaption>
     </figure>
     <p>The following image shows an example of the data retrieved with the
       <code>userDidSignOut</code> event:
     </p>
     <figure class="bcls-figure">
-      <img class="bcls-image" width="450" src="/assets/images/ott-plugins/user-events/userDidSignOut.png" alt="Add carousel layout">
+      <img class="bcls-image" width="450" src="/assets/images/s-ott-plugins-img/user-events/userDidSignOut.png" alt="Add carousel layout">
       <figcaption class="bcls-caption--image">User did sign out event</figcaption>
     </figure>
   </section>
@@ -1002,7 +1002,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Module_implementation">Module implementation</h2>
     <p>The following shows how the user events are implemented using JavaScript modules. Of course, you may
       implement your JavaScript in the manner of your choice. Further details on this module implementation can be
-      found in the <a href="/ott-plugins/javascript-modules-beacon-plugins.html">Using JavaScript Modules for Beacon Plugins</a> document.</p>
+      found in the <a href="">Implementing OTT Plugin Code Using Modules</a> document.</p>
     <!-- <p>The following code contains these functions. A brief descriptions is provided for each:</p> -->
     <h3><code>index.js</code></h3>
     <p>Below is the JavaScript code used for the user events example:</p>

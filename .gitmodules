@@ -1,12 +1,7 @@
 [submodule "_includes/s-ott-plugins"]
 	path = _includes/s-ott-plugins
 	url = https://github.com/BrightcoveLearning/s-ott-plugins
-<<<<<<< HEAD
-[submodule "assets/images/s-ott-plugins-img"]
-	path = assets/images/s-ott-plugins-img
-	url = https://github.com/BrightcoveLearning/s-ott-plugins-img
-=======
-  	branch = main
+  branch = main
 [submodule "_includes/s-cloudplayout"]
 	path = _includes/s-cloudplayout
 	url = https://github.com/BrightcoveLearning/s-cloudplayout
@@ -19,4 +14,3 @@
 	path = assets/images/s-cloudplayout-img
 	url = https://github.com/BrightcoveLearning/s-cloudplayout-img
 	branch = main
->>>>>>> 0ded3e861bfe3b58e5b1fee8e10fc182aabbce5f

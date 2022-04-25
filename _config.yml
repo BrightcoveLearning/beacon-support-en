@@ -29,10 +29,10 @@ site_domain: "beacon.support.brightcove.com"
 # Build settings
 # theme: minima
 
-product: Brightcove Beacon
-product_short: Beacon
-product_short_lc: beacon
-product_underscore: Brightcove_Beacon
+product: Brightcove Beacon Classic
+product_short: Beacon Classic
+product_short_lc: beacon classic
+product_underscore: Brightcove_Beacon_Classic
 cloudplayout_path: /using-brightcove-beacon/cloudplayout/
 color: rgb(51, 51, 51)
 product_color: rgb(28, 185, 213)

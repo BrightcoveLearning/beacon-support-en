@@ -30,6 +30,9 @@ site_domain: "beacon.support.brightcove.com"
 # theme: minima
 
 product: Brightcove Beacon
+product_short: Beacon
+product_short_lc: beacon
+product_underscore: Brightcove_Beacon
 color: rgb(51, 51, 51)
 product_color: rgb(28, 185, 213)
 product_icon: "COVE004_Brightcove_Beacon_Logo_RGB_K.svg"

@@ -1,3 +1,6 @@
+git pull
+bundle update
+bundle exec jekyll build --trace --incremental
 setopt localoptions rmstarsilent
 rm -f _site/feed.xml
 bold=`tput bold`

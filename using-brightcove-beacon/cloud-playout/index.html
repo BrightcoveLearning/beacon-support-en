@@ -1,22 +1,7 @@
 ---
-title: Using Cloud Playout
-parent: Home
+title: Cloud Playout Channels
+parent: Using Brightcove Beacon
 description: Cloud Playout allows you to compile and schedule a combination of videos-on-demand and live feeds as a live linear channel.
 ---
 
-<article class="bcls-article">
-  <h1>{{ page.title }}</h1>
-  <summary>{{ page.description }}</summary>
-  <h2>Topics</h2>
-  <section>
-    {% for item in site.data.navigation %}
-      {% if item.name == page.title %}
-        {% for doc in item.docs %}
-        <ul>
-          <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
-        </ul>
-        {% endfor %}
-      {% endif %}
-    {% endfor %}
-  </section>
-</article>
+{% include s-cloudplayout/index.html %}

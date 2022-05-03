@@ -6,24 +6,8 @@ description: This section provides guidance on submitting your apps to the app s
 
 <h1>{{ page.title }}</h1>
 <article class="bcls-article">
-  <summary>{{ page.description }}</summary>
 
-  <section class="card-wrapper">
-    {% for item in site.data.navigation %} {% if item.name == page.title %} {%
-    for subsection in item.docs %}
-    <section
-      class="bcls-card-small"
-      onclick="window.location.href='{{subsection.url}}'"
-    >
-      <div class="card-content">
-        <h2>{{ subsection.name }}</h2>
-        <ul class="bcls-topic-list">
-          {% for doc in subsection.docs %}
-          <li><a href="{{ doc.url }}">{{ doc.name }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-    </section>
-    {% endfor %} {% endif %} {% endfor %}
-  </section>
+  In 5 seconds you will be redirected to a new location for this content. Please update any links you have saved. If you are not redirected automatically, follow this link: <a href="https://beacon.support.brightcove.com/publishing-apps/index.html">Redirect</a>
+
+  <meta http-equiv="refresh" content="5; https://beacon.support.brightcove.com/publishing-apps/index.html" />
 </article>

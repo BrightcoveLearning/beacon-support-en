@@ -9,7 +9,7 @@ echo "Enter your ${bold}COMMIT MESSAGE${normal}:"
 read COMMITMESSAGE 
 git pull
 git add .
-git commit -m '$COMMITMESSAGE'
+git commit -m $COMMITMESSAGE
 git push
 git submodule foreach "git fetch origin main"
 git submodule foreach "git checkout main ; git pull ; git add . ; git commit -m '$COMMITMESSAGE' ; git push"

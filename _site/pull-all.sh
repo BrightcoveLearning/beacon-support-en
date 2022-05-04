@@ -1,2 +1,2 @@
 cd scripts
-zsh push-all.sh
+zsh pull-all.sh

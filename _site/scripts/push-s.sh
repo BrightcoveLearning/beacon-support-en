@@ -1,3 +1,4 @@
+cd ..
 bold=`tput bold`
 normal=`tput sgr0`
 echo "Enter your ${bold}COMMIT MESSAGE${normal}:"

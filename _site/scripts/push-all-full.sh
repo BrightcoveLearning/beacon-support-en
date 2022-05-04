@@ -1,3 +1,4 @@
+cd ..
 git pull
 bundle update
 bundle exec jekyll build --trace

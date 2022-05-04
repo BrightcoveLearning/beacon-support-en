@@ -1,1 +1,1 @@
-# beacon-support repo - testing new script
+# beacon-support repo

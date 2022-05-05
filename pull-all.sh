@@ -1,2 +1,2 @@
-cd scripts
+cd s-scripts
 zsh pull-all.sh

@@ -30,3 +30,7 @@
 	path = assets/images/s-general-img
 	url = https://github.com/BrightcoveLearning/s-general-img
   branch= main
+[submodule "s-scripts"]
+	path = s-scripts
+	url = https://github.com/BrightcoveLearning/s-scripts
+  branch = main

@@ -1,2 +1,2 @@
-cd scripts
+cd s-scripts
 zsh push-all-quick.sh

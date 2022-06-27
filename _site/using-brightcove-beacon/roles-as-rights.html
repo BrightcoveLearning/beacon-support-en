@@ -890,18 +890,25 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <summary>In this topic, you will learn how to present content to viewers based on their assigned roles.</summary>
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>To help you reach a vast new market and significantly grow your e-commerce opportunity, Brightcove is excited to introduce the ability to deliver video into China through a partnership with global e-commerce giant Alibaba.</p>
-    <p>Delivering video to China from outside the country is challenging due to regulations and controls. Historically, we provided a solution that allowed Brightcove services to distribute video content through a content delivery network within the country. However, essential communications, including Playback API requests and responses, and Analytics beacons were unreliable, and at times non-functional.</p>
-    <p>Brightcove’s China Delivery solution addresses these problems and consists of two parts:</p>
+    <p>Using the Roles as Rights feature, you can present specific content to viewers based on their assigned roles. The following content types can be shown or hidden based on the viewer's role:</p>
     <ul>
-      <li>A proxy server hosted within China</li>
-      <li>A connected China-specific CDN</li>
+      <li>Movies</li>
+      <li>Programs</li>
+      <li>Seasons</li>
+      <li>Series</li>
+      <li>Episodes</li>
+      <li>Channels</li>
+      <li>Live Events</li>
+      <li>Playlists</li>
+      <li>Pages</li>
     </ul>
-    <p>The proxy routes non-video traffic (Playback API requests, Analytics beacons, and the web player itself) to and from viewers in China to Brightcove infrastructure located outside.</p>
-    <p>The CDN is connected to the proxy and handles the video and image content.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="China Delivery Architecture" src="/assets/images/s-general-img/china-delivery.png" /> </figure>
+    <p>In the Beacon CMS, you are able to create roles and assign them to each each content type listed above.</p>
+    <p>You will then use your OIDC roles claim URL to associate viewers with roles. OpenID Connect (OIDC) is an authentication protocol used to verify the identity of a user to a client service.</p>
+    <p> For details about using OIDC, see the <a href="/references/oidc-authentication-for-beacon.html">OIDC Authentication Configuration and Testing</a> document.</p>
+    
+    <!-- <figure class="bcls-figure"><img class="bcls-image--no-border" alt="China Delivery Architecture" src="/assets/images/s-general-img/china-delivery.png" /> </figure> -->
   </section>
-  <section class="bcls-section">
+  <!-- <section class="bcls-section">
     <h2 id="Setup">Setup</h2>
     <p>The following setup is needed to support Brightcove's China Delivery solution:</p>
     <ol class="bcls-tasklist-restart">
@@ -925,8 +932,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </ul>
       </li>
     </ol>
-  </section>
-  <section class="bcls-section">
+  </section> -->
+  <!-- <section class="bcls-section">
     <h2 id="FAQ">FAQ</h2>
     <p>Here are some common questions:</p>
     <ul>
@@ -939,8 +946,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>No, Brightcove can't legally act as an intermediary to help you acquire the license.</p>
       </li>
     </ul>
-  </section>
-  <section class="bcls-section">
+  </section> -->
+  <!-- <section class="bcls-section">
     <h2 id="Limitations">Limitations</h2>
     <p>The following are known limitations with China Delivery:</p>
     <h3>Current limitations</h3>
@@ -960,7 +967,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Advertising (CSAI + SSAI)</li>
       <li>Third-party Analytics services</li>
     </ul>
-  </section>
+  </section> -->
 </article>
 
 <!-- complete bootstrap layout -->

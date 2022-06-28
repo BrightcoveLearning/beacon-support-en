@@ -890,7 +890,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <summary>In this topic, you will learn how to present content to viewers based on their assigned roles.</summary>
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>Using the Roles as Rights feature, you can present specific content to viewers based on their assigned roles. The following content types can be shown or hidden based on the viewer's role:</p>
+    <p>The Roles as Rights feature ensures that content metadata is only viewable by viewers whose role matches the role set on the content.</p>
+    <p>With this feature, you can present specific content to viewers based on their assigned roles. The following content types can be shown or hidden based on the viewer's role:</p>
     <ul>
       <li>Movies</li>
       <li>Programs</li>
@@ -903,15 +904,54 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Pages</li>
     </ul>
     <p>In the Beacon CMS, you are able to create roles and assign them to each each content type listed above.</p>
-    <p>You will then use your OIDC roles claim URL to associate viewers with roles. OpenID Connect (OIDC) is an authentication protocol used to verify the identity of a user to a client service.</p>
+    <p>You will use your OIDC roles claim URL to associate viewers with roles. OpenID Connect (OIDC) is an authentication protocol used to verify the identity of a user to a client service.</p>
     <p> For details about using OIDC, see the <a href="/references/oidc-authentication-for-beacon.html">OIDC Authentication Configuration and Testing</a> document.</p>
     
     <!-- <figure class="bcls-figure"><img class="bcls-image--no-border" alt="China Delivery Architecture" src="/assets/images/s-general-img/china-delivery.png" /> </figure> -->
   </section>
-  <!-- <section class="bcls-section">
-    <h2 id="Setup">Setup</h2>
+
+  <section class="bcls-section">
+    <h2 id="Adding_a_role">Adding a role</h2>
+    <p>You can add roles in the Brightcove Beacon CMS.</p>
+    <ol class="bcls-tasklist">
+      <li>
+        <p>Login to the Brightcove Beacon CMS and click <img class="bcls-image--no-border" alt="Gear icon" src="/assets/images/s-general-img/roles/gear-icon.png" />.</p> 
+        <figure class="bcls-figure">
+          <img class="bcls-image" alt="Top navigation" src="/assets/images/s-general-img/roles/gear-header.png" />
+        </figure> 
+      </li>
+      <li>
+        <p>In the left navigation, select <strong>Roles</strong>.</p> 
+        <figure class="bcls-figure">
+          <img class="bcls-image" alt="Roles navigation" src="/assets/images/s-general-img/roles/roles-navigation.png" />
+        </figure> 
+      </li>
+      <li>
+        <p>Click <strong>Add new role</strong>.</p> 
+      </li>
+      <li>
+        <p>In the <strong>Create New Role</strong> dialog, enter a name for the role and click <strong>Save</strong>.</p> 
+        <figure class="bcls-figure">
+          <img class="bcls-image" alt="New role dialog" src="/assets/images/s-general-img/roles/new-role-dialog.png" />
+        </figure> 
+      </li>
+      <li>
+        <p>To edit an existing role, click it's corresponding role <strong>ID</strong>.</p> 
+      </li>
+      <li>
+        <p>In the <strong>Edit</strong> role dialog, update the role name and click <strong>Update</strong>.</p> 
+        <figure class="bcls-figure">
+          <img class="bcls-image" alt="Edit role dialog" src="/assets/images/s-general-img/roles/edit-role-dialog.png" />
+        </figure> 
+      </li>
+     
+    </ol>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Assigning_roles_to_viewers">Assigning roles to viewers</h2>
     <p>The following setup is needed to support Brightcove's China Delivery solution:</p>
-    <ol class="bcls-tasklist-restart">
+    <ol class="bcls-tasklist">
       <li>Contact your account manager:
         <ul>
           <li>Make sure you have a Brightcove Enterprise account</li>
@@ -919,20 +959,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </ul>
         <aside class="bcls-aside bcls-aside--information">This account can deliver inside and outside of China. A separate account is optional, but not required.</aside>
       </li>
-      <li>Configure a player for China Delivery. You can use either the Brightcove web player or the Native SDK players:
-        <ul>
-          <li><a href="https://player.support.brightcove.com/playback/china-delivery-with-bcp.html">China Delivery with Brightcove Player</a></li>
-          <li><a href="https://sdks.support.brightcove.com/features/china-delivery-sdks.html">China Delivery with the Native SDKs</a></li>
-        </ul>
-      </li>
-      <li>Acquire a valid <a href="https://en.wikipedia.org/wiki/ICP_license">Internet Content Provider (ICP) license</a>
-        <ul>
-          <li>An approved domain or subdomain name listed on the ICP license</li>
-          <li>A website for publishing players, hosted on the approved domain</li>
-        </ul>
-      </li>
+     
     </ol>
-  </section> -->
+  </section>
+  
   <!-- <section class="bcls-section">
     <h2 id="FAQ">FAQ</h2>
     <p>Here are some common questions:</p>

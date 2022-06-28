@@ -891,7 +891,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
     <p>The Roles as Rights feature ensures that content metadata is only viewable by viewers whose role matches the role set on the content.</p>
-    <p>With this feature, you can present specific content to viewers based on their assigned roles. The following content types can be shown or hidden based on the viewer's role:</p>
+    <p>Roles allow you to filter content and experience elements for groups of specific viewers. You can expose content for viewers within a group and hide it from all other viewers.</p>
+    <p>The following content types can be shown or hidden based on the viewer's role:</p>
     <ul>
       <li>Movies</li>
       <li>Programs</li>
@@ -903,8 +904,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Playlists</li>
       <li>Pages</li>
     </ul>
-    <p>In the Beacon CMS, you are able to create roles and assign them to each each content type listed above.</p>
-    <p>You will use your OIDC roles claim URL to associate viewers with roles. OpenID Connect (OIDC) is an authentication protocol used to verify the identity of a user to a client service.</p>
+    <p>In the Beacon CMS, you are able to create roles and assign them to most of the content type listed above. For movies and episodes, you should use Video Cloud custom fields to assign roles.</p>
+    <p>To associate viewers with roles, you will use your external user management system or LDAP (Lightweight Directory Access Protocol) system. You will connect these user role definitions to Brightcove Beacon using OpenID Connect (OIDC) tokens. OIDC is an authentication protocol used to verify the identity of a user to a client service.</p>
     <p> For details about using OIDC, see the <a href="/references/oidc-authentication-for-beacon.html">OIDC Authentication Configuration and Testing</a> document.</p>
     
     <!-- <figure class="bcls-figure"><img class="bcls-image--no-border" alt="China Delivery Architecture" src="/assets/images/s-general-img/china-delivery.png" /> </figure> -->
@@ -978,14 +979,20 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <img class="bcls-image" alt="Select a role" src="/assets/images/s-general-img/roles/select-a-role.png" />
         </figure> 
       </li>
-      
-     
+      <li>You can assign roles to other content types in the <strong>Rights & Scheduling</strong> tab. The other content types include seasons, channels, live events, playlists, and pages.</li>
     </ol>
   </section>
 
   <section class="bcls-section">
+    <h2 id="Assigning_roles_to_movies_and_episodes">Assigning roles to movies and episodes</h2>
+    <p>For movies and episodes, you will add roles as custom fields in Video Cloud Studio.</p>
+    <p>Even though you can assign roles to movies and episodes in Beacon CMS, the information contained within the Video Cloud custom fields will overwrite the settings for movies and episodes in Beacon CMS.</p>
+    
+  </section>
+
+  <section class="bcls-section">
     <h2 id="Assigning_roles_to_viewers">Assigning roles to viewers</h2>
-    <p>The following setup is needed to support Brightcove's China Delivery solution:</p>
+    <p></p>
     <ol class="bcls-tasklist">
       <li>Contact your account manager:
         <ul>

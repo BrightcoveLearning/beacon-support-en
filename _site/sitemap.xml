@@ -530,6 +530,15 @@
         
           <url>
             
+              <loc>https://beacon.support.brightcove.com/monetization/general/stripe-custom-metadata.html</loc>
+            
+            <lastmod>2022-07-12</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
               <loc>https://beacon.support.brightcove.com/monetization/general/monetization-options.html</loc>
             
             <lastmod>2022-07-12</lastmod>

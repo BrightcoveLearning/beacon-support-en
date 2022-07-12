@@ -3,18 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="In this topic, you will learn the requirements for implementing an endpoint to receive in-app purchase notifications.">
   
   <title>Receiving In-App Purchase Notifications</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/landing-page.css">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/tabs.css">
   <link rel="stylesheet" href="/assets/css/local.css">
@@ -31,9 +33,8 @@
   gtag('config', 'UA-2728311-17');
 </script>
   <script src="/assets/js/sajari-head.js"></script>
-	<script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
-
 
 <body class="body">
 
@@ -909,7 +910,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="How_notifications_are_implemented">How notifications are implemented</h2>
     <p>Here is a high-level diagram of the process:</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/monetization/receive-iap-notifications/beacon-in-app-purchase v4.png" alt="overview beacon in app purchase">
+      <img class="bcls-image" src="/assets/images/s-monetization-img/receive-iap-notifications/beacon-in-app-purchase v4.png" alt="overview beacon in app purchase">
     </figure>
     <p>Clarification details for the diagram:</p>
     <ul>
@@ -968,9 +969,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <ul>
         <li>It is possible to generate an infinite loop of notifications. For instance, Beacon sends the IAP notification to the end point, the receiver creates a user and sends a <em>create entitlement</em> message to Beacon, which in turn sends an IAP notification to the receiver, and an infinite loop is started. When implementing your endpoint you must be sure not to allow this to happen.</li>
         <li>SNS queues do not have a retention period. We have a 3x 20s retry policy and then the message is moved to a dead letter queue. The dead-letter queue has a retention period of 14 days. However, the customer can force the sync either via beacon admin UI or via the API.
-        <p>Brightcove can provide a file you can use to force the sync for all users, or you can use the API directly.</p>
+          <p>Brightcove can provide a file you can use to force the sync for all users, or you can use the API directly.</p>
       </ul>
-      </aside>
+    </aside>
   </section>
 
   <section class="bcls-section">

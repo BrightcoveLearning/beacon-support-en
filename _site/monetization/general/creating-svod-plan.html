@@ -14,11 +14,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/styles.css">
   <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/landing-page.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/tabs.css">
   <link rel="stylesheet" href="/assets/css/local.css">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
 
 <header>
   <div class="div-header">
-    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/SVG/COVE004_Brightcove_Beacon_Logo_RGB_K.svg" alt="Brightcove" style="max-width: 200px;"></a>
+    <a href="/"><img class="product-logo" src="/assets/s-site-assets-images/COVE004_Brightcove_Beacon_Logo_RGB_K.svg" alt="Brightcove" style="max-width: 200px;"></a>
 <!-- GTranslate: https://gtranslate.io/ -->
 <select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
 
@@ -229,6 +229,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
+                    <li><a href="/using-brightcove-beacon/roles-as-rights.html">Controlling Viewer Access with Roles</a></li>
+                  
+                
+                  
                     <li class="submenu-header">
                       <a href="/using-brightcove-beacon/cloud-playout/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Cloud Playout Channels</a>
                       <ul class="sidenav-subsubmenu" style="display:none;">
@@ -402,6 +406,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                           
                         
                           
+                            <li><a href="/monetization/general/stripe-custom-metadata.html">Subscription Info with Stripe Metadata</a></li>
+                          
+                        
+                          
                             <li><a href="/monetization/general/monetization-options.html">Understanding Monetization Options</a></li>
                           
                         
@@ -469,7 +477,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
-              <h5 class="submenu-header"><a href="/publishing-apps/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Publishing Apps</a></h5>
+              <h5 class="submenu-header"><a href="/publishing-apps/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;App Publishing and Behavior</a></h5>
               <ul class="sidenav-submenu" style="display:none;">
                 
                   
@@ -491,6 +499,23 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                         
                           
                             <li><a href="/publishing-apps/general/schedule-apps.html">Scheduling App Releases in the App Stores</a></li>
+                          
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/publishing-apps/app-behavior/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;App Behavior</a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                          
+                            <li><a href="/publishing-apps/app-behavior/account-deletion.html">Account Deletion</a></li>
+                          
+                        
+                          
+                            <li><a href="/publishing-apps/app-behavior/parental-controls.html">Parental Controls</a></li>
                           
                         
                       </ul>
@@ -886,7 +911,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Start and end dates when the package can be purchased</li>
       <li>Permitted devices and geo-locations to view videos in the package</li>
     </ul>
+    
     <aside class="bcls-aside bcls-aside--warning language-editable">If prices are changed anywhere in Beacon, you must <a href="/using-brightcove-beacon/tools.html#Cache">clear the app cache</a> to be sure prices are consistent in all parts of the Beacon app.</aside>
+    
   </section>
   <section class="bcls-section">
     <h2 id="Steps to create a package">Steps to create a package</h2>
@@ -895,7 +922,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>
         In Brightcove Beacon, select the <strong>Commerce</strong> tab, be sure <strong>SVOD/AuthVOD Plans</strong> is selected in the left navigation, then click <strong>Add New Package</strong> .
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/creating-subscription-package/initial-menu-selections.png" alt="initial menu selections" />
+          <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/initial-menu-selections.png" alt="initial menu selections" />
         </figure>
       </li>
       <li>
@@ -924,7 +951,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <li>
             <strong>Payment methods to use</strong> : Select the payment methods you want to use with this package. Note that for each method selected a section will open below the list of payment methods, which you must complete for each selected method. The screenshot below shows <strong>Stripe (in yellow)</strong> and <strong>Apple Store (in red)</strong> are selected.
             <figure class="bcls-figure">
-              <img class="bcls-image" src="/assets/images/using-bcb/creating-subscription-package/payment-method-details.png" alt="payment method details" />
+              <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/payment-method-details.png" alt="payment method details" />
             </figure>
           </li>
         </ul>
@@ -966,7 +993,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           <li>
             <strong>Advanced Streams</strong> : Set this to <strong>Yes</strong> if you wish to customize the rights this package sets. The available changes are shown in the following screenshot:
             <figure class="bcls-figure">
-              <img class="bcls-image" src="/assets/images/using-bcb/creating-subscription-package/advanced-stream-rights.png" alt="advanced stream rights" />
+              <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/advanced-stream-rights.png" alt="advanced stream rights" />
             </figure>
           </li>
         </ul>
@@ -992,12 +1019,12 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>There are two places you can unpublish/delete a package:</p>
     <ul>
       <li>From the <strong>SVOD/AuthVOD Plans</strong> section check the package(s) you wish to unpublish/delete then click the appropriate button.<figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/monetization/general/unpublish-delete.png" alt="unpublish delete">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/implementing-authvod/unpublish-delete.png" alt="unpublish delete">
         </figure>
       </li>
       <li>If you are editing the package, from the <strong>Package</strong> tab you can both unpublish and delete. Use the <strong>Status</strong> to unpublish or the <strong>Delete</strong> button to delete.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/monetization/general/unpublish-delete-edit.png" alt="unpublish delete when editing">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/implementing-authvod/unpublish-delete-edit.png" alt="unpublish delete when editing">
         </figure>
       </li>
     </ul>
@@ -1012,7 +1039,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>
         In Brightcove Beacon, select the <strong>Commerce</strong> tab, then click <strong>Coupons by Stripe</strong> and finally click <strong>Add New Voucher</strong>.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/creating-subscription-package/coupon-menu-selection.png" alt="coupon menu selections" />
+          <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/coupon-menu-selection.png" alt="coupon menu selections" />
         </figure>
       </li>
       <li>
@@ -1052,7 +1079,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </li>
         </ul>
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/creating-subscription-package/new-coupon-form.png" alt="coupon form" />
+          <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/new-coupon-form.png" alt="coupon form" />
         </figure>
       </li>
       <li>
@@ -1064,16 +1091,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>
       In the Brightcove Beacon app when a package purchase takes place, viewers will be able to enter the coupon <strong>Id</strong>: </p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/creating-subscription-package/use-coupon.png" alt="use coupon form" />
+      <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/use-coupon.png" alt="use coupon form" />
     </figure>
     <p>
       Alternatively, you can create coupons directly in your Stripe account, and then use them in Brightcove Beacon.
     </p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/creating-subscription-package/stripe-coupon-form.png" alt="use coupon form" />
+      <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/stripe-coupon-form.png" alt="use coupon form" />
     </figure>
   </section>
-</article>
+</article>'
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -1089,7 +1116,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 07 Feb 2022
+  Page last updated on 12 Jul 2022
 </div>
 
 
@@ -1171,41 +1198,24 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </footer>
 </div>
 
-<script translate="no">
-      
-  var searchBox = sajari.init({
-    mode: "search-box",
-    project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documentation", // Set this to your collection.
-    instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder
-    maxSuggestions: 5, // Maximum number of suggestions to show
-    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-  });
-  
-    searchBox("sub", "pipeline.search-sent", function (_, query) {
-      window.location = "/search.html?q=" + encodeURIComponent(query.q);
-    });
-  
-
-</script>
+<script src="/assets/s-site-assets-scripts/sajari-search-box.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
   
-  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
   
-  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
   <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
-  <!-- <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script> -->
-  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  <script src="/assets/s-site-assets-scripts/toc.js"></script>
   <script src="/assets/js/sites_nav.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/sajari-reindex.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
   <script src="/assets/js/feedback.js"></script>
   
   <script src="/assets/js/sajari-search-foot.js"></script>
@@ -1214,7 +1224,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     feather.replace()
   </script>
   <!-- <script src="/assets/js/sajari-index.js"></script> -->
-  <script src="https://support.brightcove.com/site-assets/js/site/in-app.js"></script>
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
   <style translate="no">
     a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
       background-color: lightblue;

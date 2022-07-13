@@ -14,11 +14,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/styles.css">
   <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/landing-page.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/tabs.css">
   <link rel="stylesheet" href="/assets/css/local.css">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
 
 <header>
   <div class="div-header">
-    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/SVG/COVE004_Brightcove_Beacon_Logo_RGB_K.svg" alt="Brightcove" style="max-width: 200px;"></a>
+    <a href="/"><img class="product-logo" src="/assets/s-site-assets-images/COVE004_Brightcove_Beacon_Logo_RGB_K.svg" alt="Brightcove" style="max-width: 200px;"></a>
 <!-- GTranslate: https://gtranslate.io/ -->
 <select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
 
@@ -229,6 +229,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                   
                 
                   
+                    <li><a href="/using-brightcove-beacon/roles-as-rights.html">Controlling Viewer Access with Roles</a></li>
+                  
+                
+                  
                     <li class="submenu-header">
                       <a href="/using-brightcove-beacon/cloud-playout/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Cloud Playout Channels</a>
                       <ul class="sidenav-subsubmenu" style="display:none;">
@@ -402,6 +406,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                           
                         
                           
+                            <li><a href="/monetization/general/stripe-custom-metadata.html">Subscription Info with Stripe Metadata</a></li>
+                          
+                        
+                          
                             <li><a href="/monetization/general/monetization-options.html">Understanding Monetization Options</a></li>
                           
                         
@@ -469,7 +477,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
-              <h5 class="submenu-header"><a href="/publishing-apps/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Publishing Apps</a></h5>
+              <h5 class="submenu-header"><a href="/publishing-apps/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;App Publishing and Behavior</a></h5>
               <ul class="sidenav-submenu" style="display:none;">
                 
                   
@@ -491,6 +499,23 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                         
                           
                             <li><a href="/publishing-apps/general/schedule-apps.html">Scheduling App Releases in the App Stores</a></li>
+                          
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/publishing-apps/app-behavior/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;App Behavior</a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                          
+                            <li><a href="/publishing-apps/app-behavior/account-deletion.html">Account Deletion</a></li>
+                          
+                        
+                          
+                            <li><a href="/publishing-apps/app-behavior/parental-controls.html">Parental Controls</a></li>
                           
                         
                       </ul>
@@ -872,14 +897,15 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h1>Creating an Advertisement</h1>
 <article class="bcls-article">
   <summary>In this topic, you will learn how to create an advertisement configuration to which you can add video content.</summary>
+  
 
   <section class="bcls-section">
     <h2 id="Overview">Overview</h2>
     <p>To create an advertisement configuration you will need to do the following:</p>
     <ul>
       <li>Obtain an ad tag server URL from your ad service provider. This will be used in Video Cloud Studio to create your SSAI ad configuration.</li>
-      <li>In Video Cloud Studio, create your SSAI ad configuration. At completion of the task you will copy the ad server ID to create your advertisement configuration in Brightcove Beacon Classic.</li>
-      <li>In Brightcove Beacon Classic create your advertisement configuration, which you will then be able to apply to your video content.</li>
+      <li>In Video Cloud Studio, create your SSAI ad configuration. At completion of the task you will copy the ad server ID to create your advertisement configuration in Beacon Classic.</li>
+      <li>In Beacon Classic create your advertisement configuration, which you will then be able to apply to your video content.</li>
     </ul>
   </section>
 
@@ -887,17 +913,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="section-name">Create an SSAI ad configuration ID</h2>
     <p>Follow these steps to create an SSAI ad configuration:</p>
     <ol class="bcls-tasklist-restart">
-      <li>In Video Cloud Studio, navigate to <strong>Admin → Server-Side Ad Settings</strong>.</li>
+      <li>In 
+        Video Cloud Studio
+        , navigate to <strong>Admin → Server-Side Ad Settings</strong>.</li>
       <li>
         From the <span class="blue-button">Create Ad Configuration</span> dropdown, select <strong>VOD</strong>
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/create-vod-ad-config.png" alt="Create VOD Ad Config">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/create-advertisement/create-vod-ad-config.png" alt="Create VOD Ad Config">
           <figcaption class="bcls-caption--image">Create VOD Ad Config</figcaption>
         </figure>
       </li>
       <li>Add a name for the ad config.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/advertisement/ssai-config-vod.png" alt="SSAI Configuration VOD">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/create-advertisement/ssai-config-vod.png" alt="SSAI Configuration VOD">
           <figcaption class="bcls-caption--image">SSAI Configuration VOD</figcaption>
         </figure>
       </li>
@@ -906,7 +934,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Click <strong>Save</strong>.</li>
       <li>Find your new ad configuration in the table and copy your ad config ID. You will need this value for the Beacon advertising configuration.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/ad-targeting/copy-ad-config-id.png" alt="copy ad config ID">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/create-advertisement/copy-ad-config-id.png" alt="copy ad config ID">
           <figcaption class="bcls-caption--image">Copy ad config ID</figcaption>
         </figure>
       </li>
@@ -918,8 +946,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Advertisement">Create an advertisement configuration</h2>
     <p>To create an advertisement configuration, follow these steps:</p>
     <ol class="bcls-tasklist">
-      <li>In Brightcove Beacon Classic, in the top navigation select <strong>Advertisement</strong> .
-        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/using-bcb/advertisement/new-advertisement.png" alt="New advertisement" />
+      <li>In Beacon Classic, in the top navigation select <strong>Advertisement</strong> .
+        <figure class="bcls-figure"> <img class="bcls-image" src="/assets/images/s-monetization-img/create-advertisement/new-advertisement.png" alt="New advertisement" />
           <figcaption class="bcls-caption--image">New advertisement</figcaption>
         </figure>
       </li>
@@ -928,7 +956,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       </li>
       <li>Name the Ad Configuration.</li>
       <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/using-bcb/advertisement/advertising-configuration.png" alt="Beacon Ad Configuration Live">
+        <img class="bcls-image" src="/assets/images/s-monetization-img/create-advertisement/advertising-configuration.png" alt="Beacon Ad Configuration Live">
         <figcaption class="bcls-caption--image">Beacon Ad Configuration Live</figcaption>
       </figure>
       <li>For the <strong>Provider</strong> select <strong>Brightcove SSAI</strong></li>
@@ -952,7 +980,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 15 May 2021
+  Page last updated on 12 Jul 2022
 </div>
 
 
@@ -1034,41 +1062,24 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </footer>
 </div>
 
-<script translate="no">
-      
-  var searchBox = sajari.init({
-    mode: "search-box",
-    project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documentation", // Set this to your collection.
-    instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder
-    maxSuggestions: 5, // Maximum number of suggestions to show
-    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-  });
-  
-    searchBox("sub", "pipeline.search-sent", function (_, query) {
-      window.location = "/search.html?q=" + encodeURIComponent(query.q);
-    });
-  
-
-</script>
+<script src="/assets/s-site-assets-scripts/sajari-search-box.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
   
-  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
   
-  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
   <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
-  <!-- <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script> -->
-  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  <script src="/assets/s-site-assets-scripts/toc.js"></script>
   <script src="/assets/js/sites_nav.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/sajari-reindex.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
   <script src="/assets/js/feedback.js"></script>
   
   <script src="/assets/js/sajari-search-foot.js"></script>
@@ -1077,7 +1088,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     feather.replace()
   </script>
   <!-- <script src="/assets/js/sajari-index.js"></script> -->
-  <script src="https://support.brightcove.com/site-assets/js/site/in-app.js"></script>
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
   <style translate="no">
     a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
       background-color: lightblue;

@@ -35,6 +35,8 @@
       url: /using-brightcove-beacon/adding-to-page.html
     - name: Authentication Using OAuth
       url: /using-brightcove-beacon/authentication-using-oauth.html
+    - name: Controlling Viewer Access with Roles
+      url: /using-brightcove-beacon/roles-as-rights.html
     - name: Cloud Playout Channels
       url: /using-brightcove-beacon/cloud-playout/index.html
       docs:
@@ -121,6 +123,8 @@
           url: /monetization/general/receive-iap-notifications.html
         - name: Resources for Monetization
           url: /monetization/general/resources.html
+        - name: Subscription Info with Stripe Metadata
+          url: /monetization/general/stripe-custom-metadata.html
         - name: Understanding Monetization Options
           url: /monetization/general/monetization-options.html
         - name: Using an SVOD Plan
@@ -151,7 +155,7 @@
     - name: 'Beacon Store Webhook Reference'
       url: '/beacon-web-store/beacon-store-webhook-reference.html'
 - section:
-  name: 'Publishing Apps'
+  name: 'App Publishing and Behavior'
   url: '/publishing-apps/index.html'
   docs:
     - name: 'General Information'
@@ -165,6 +169,13 @@
           url: '/publishing-apps/general/in-app-subscription-resources.html'
         - name: 'Scheduling App Releases in the App Stores'
           url: '/publishing-apps/general/schedule-apps.html'
+    - name: 'App Behavior'
+      url: '/publishing-apps/app-behavior/index.html'
+      docs:
+        - name: 'Account Deletion'
+          url: '/publishing-apps/app-behavior/account-deletion.html'
+        - name: 'Parental Controls'
+          url: '/publishing-apps/app-behavior/parental-controls.html'
     - name: 'Android'
       url: '/publishing-apps/android/index.html'
       docs:

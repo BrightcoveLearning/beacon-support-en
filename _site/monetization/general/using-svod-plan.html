@@ -14,11 +14,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/styles.css">
   <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/landing-page.css">
+  <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/tabs.css">
   <link rel="stylesheet" href="/assets/css/local.css">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
 
 <header>
   <div class="div-header">
-    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/SVG/COVE004_Brightcove_Beacon_Logo_RGB_K.svg" alt="Brightcove" style="max-width: 200px;"></a>
+    <a href="/"><img class="product-logo" src="/assets/s-site-assets-images/COVE004_Brightcove_Beacon_Logo_RGB_K.svg" alt="Brightcove" style="max-width: 200px;"></a>
 <!-- GTranslate: https://gtranslate.io/ -->
 <select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
 
@@ -63,7 +63,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/monetization/general/">General</a></li>
+      <li class="breadcrumb-item"><a href="/monetization/general/">Monetization</a></li>
       
       <li class="breadcrumb-item active" aria-current="page">Using an SVOD Plan</li>
     </ol>
@@ -226,6 +226,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/using-brightcove-beacon/authentication-using-oauth.html">Authentication Using OAuth</a></li>
+                  
+                
+                  
+                    <li><a href="/using-brightcove-beacon/roles-as-rights.html">Controlling Viewer Access with Roles</a></li>
                   
                 
                   
@@ -402,6 +406,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                           
                         
                           
+                            <li><a href="/monetization/general/stripe-custom-metadata.html">Subscription Info with Stripe Metadata</a></li>
+                          
+                        
+                          
                             <li><a href="/monetization/general/monetization-options.html">Understanding Monetization Options</a></li>
                           
                         
@@ -469,7 +477,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
             
           
             
-              <h5 class="submenu-header"><a href="/publishing-apps/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;Publishing Apps</a></h5>
+              <h5 class="submenu-header"><a href="/publishing-apps/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;App Publishing and Behavior</a></h5>
               <ul class="sidenav-submenu" style="display:none;">
                 
                   
@@ -491,6 +499,23 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                         
                           
                             <li><a href="/publishing-apps/general/schedule-apps.html">Scheduling App Releases in the App Stores</a></li>
+                          
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/publishing-apps/app-behavior/index.html"><span style="color:#8E9093">+</span>&nbsp;&nbsp;App Behavior</a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                          
+                            <li><a href="/publishing-apps/app-behavior/account-deletion.html">Account Deletion</a></li>
+                          
+                        
+                          
+                            <li><a href="/publishing-apps/app-behavior/parental-controls.html">Parental Controls</a></li>
                           
                         
                       </ul>
@@ -877,10 +902,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Overview">Overview</h2>
     <p>
       An SVOD Plan defines how a particular set of videos can be purchased by your apps' customers. The SVOD plan must be created in Brightcove Beacon, and is detailed in the <a href="/monetization/general/creating-svod-plan.html">Creating an SVOD Plan</a> document. Also crucial in the use of the SVOD plan are the Video Cloud custom fields created for videos in a Video Cloud account, as detailed in the
-      <a href="/syncing-with-video-cloud/vc-custom-fields.html"> Creating Video Cloud Custom Fields
-      </a>
-      document. Specifically, the
-      <a href="/syncing-with-video-cloud/vc-custom-fields.html#Rights_Management_fields"> Rights Management fields
+      <a href="/monetization/general/vc-custom-fields.html"> Creating Video Cloud Custom Fields
+      </a> document. Specifically, the <a href="/monetization/general/vc-custom-fields.html#Rights_Management_fields"> Rights Management fields
       </a>
       will be used.
     </p>
@@ -914,7 +937,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       You must go into Video Cloud and create three sets of rights management fields, using counter values of 0-2 (or 1-3 if you prefer) that would appear as shown here:
     </p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/using-subscription-package/index-of-rights-fields.png" alt="index of rights fields" />
+      <img class="bcls-image" src="/assets/images/s-monetization-img/using-subscription-package/index-of-rights-fields.png" alt="index of rights fields" />
     </figure>
     <p>
       To summarize, for each package you wish to use you will need to create a "counter" set of rights management fields.
@@ -1020,7 +1043,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>
         Scroll down until you see the <strong>Custom Fields</strong> section on the right hand side and click the <strong>Edit</strong> button.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/using-subscription-package/single-video-edit-fields.png" alt="index of rights fields" />
+          <img class="bcls-image" src="/assets/images/s-monetization-img/using-subscription-package/single-video-edit-fields.png" alt="index of rights fields" />
         </figure>
       </li>
       <li>
@@ -1030,7 +1053,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>
         Since you are using a package, you MUST set the <code translate="No">beacon.rights.&lt;counter&gt;.type</code> to <strong>SVOD</strong>.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/using-subscription-package/custom-fields.png" alt="index of rights fields" />
+          <img class="bcls-image" src="/assets/images/s-monetization-img/using-subscription-package/custom-fields.png" alt="index of rights fields" />
         </figure>
       </li>
       <li>
@@ -1044,7 +1067,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       To assign multiple videos to a package you must use Video Cloud Studio.
       The following screenshot is helpful when performing the steps:
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/using-bcb/using-subscription-package/multiple-video-edit.png" alt="index of rights fields" />
+      <img class="bcls-image" src="/assets/images/s-monetization-img/using-subscription-package/multiple-video-edit.png" alt="index of rights fields" />
     </figure>
     </p>
     <ol class="bcls-tasklist-restart">
@@ -1063,14 +1086,17 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         At the bottom of the <strong>Quick Edit</strong> section, click the <strong>Save</strong> button.
       </li>
     </ol>
+    
   </section>
+
+  
   <section class="bcls-section">
     <h2 id="Ingesting_the_videos_into_Brightcove_Beacon"> Ingesting the videos into Brightcove Beacon </h2>
     <p>
-      You now have associated one or more videos with your SVOD plan. Now those associations have to be ingested into Brightcove Beacon. The updates should be pulled into Brightcove Beacon automatically, as detailed in the <a href="/syncing-with-video-cloud/syncing-video-cloud-catalog.html">Syncing with the Video Cloud Catalog</a> document. If this does not happen quickly enough for you, you can manually start the process as shown here:
+      You now have associated one or videos with your SVOD plan. You now have to ingest those associations into Brightcove Beacon. To do this, follow these steps:
     </p>
     <ol class="bcls-tasklist-restart">
-      <li>Log in to Brightcove Beacon Classic.</li>
+      <li>Log in to Brightcove Beacon.</li>
       <li>Click on the wrench icon (Tools).</li>
       <li>From the left side navigation click <strong>Ingestion</strong>.</li>
       <li>Click the <strong>Update Brightcove Videos</strong> button.</li>
@@ -1085,6 +1111,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       For more details on the actions taken in this section, see the <a href="/using-brightcove-beacon/tools.html">Using the Tools</a> document.
     </p>
   </section>
+  
 </article>
 <!-- complete bootstrap layout -->
     </div>
@@ -1101,7 +1128,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 28 Jul 2021
+  Page last updated on 12 Jul 2022
 </div>
 
 
@@ -1183,41 +1210,24 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
   </footer>
 </div>
 
-<script translate="no">
-      
-  var searchBox = sajari.init({
-    mode: "search-box",
-    project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documentation", // Set this to your collection.
-    instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder
-    maxSuggestions: 5, // Maximum number of suggestions to show
-    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-  });
-  
-    searchBox("sub", "pipeline.search-sent", function (_, query) {
-      window.location = "/search.html?q=" + encodeURIComponent(query.q);
-    });
-  
-
-</script>
+<script src="/assets/s-site-assets-scripts/sajari-search-box.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
   
-  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
   
-  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
   <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
-  <!-- <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script> -->
-  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  <script src="/assets/s-site-assets-scripts/toc.js"></script>
   <script src="/assets/js/sites_nav.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/sajari-reindex.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
   <script src="/assets/js/feedback.js"></script>
   
   <script src="/assets/js/sajari-search-foot.js"></script>
@@ -1226,7 +1236,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     feather.replace()
   </script>
   <!-- <script src="/assets/js/sajari-index.js"></script> -->
-  <script src="https://support.brightcove.com/site-assets/js/site/in-app.js"></script>
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
   <style translate="no">
     a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
       background-color: lightblue;

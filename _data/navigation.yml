@@ -35,6 +35,8 @@
       url: /using-brightcove-beacon/adding-to-page.html
     - name: Authentication Using OAuth
       url: /using-brightcove-beacon/authentication-using-oauth.html
+    - name: Controlling Viewer Access with Roles
+      url: /using-brightcove-beacon/roles-as-rights.html
     - name: Cloud Playout Channels
       url: /using-brightcove-beacon/cloud-playout/index.html
       docs:

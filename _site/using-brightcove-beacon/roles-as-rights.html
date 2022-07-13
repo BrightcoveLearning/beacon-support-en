@@ -3,18 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="robots" content="noindex,nofollow"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="In this topic, you will learn how to present content to viewers based on their assigned roles.">
   
   <title>Controlling Viewer Access with Roles</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">  
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/s-site-assets-favicons/site.webmanifest">  
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/learning-paths/learning-paths.css">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/landing-page.css">
   <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/tabs.css">
   <link rel="stylesheet" href="/assets/css/local.css">
@@ -31,9 +33,8 @@
   gtag('config', 'UA-2728311-17');
 </script>
   <script src="/assets/js/sajari-head.js"></script>
-	<script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
-
 
 <body class="body">
 
@@ -225,6 +226,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                 
                   
                     <li><a href="/using-brightcove-beacon/authentication-using-oauth.html">Authentication Using OAuth</a></li>
+                  
+                
+                  
+                    <li><a href="/using-brightcove-beacon/roles-as-rights.html">Controlling Viewer Access with Roles</a></li>
                   
                 
                   
@@ -1086,6 +1091,19 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </figure> 
       </li>
       <li>Since the user has a role associated with the asset, then the user can view this asset.</li>
+      <li>
+        <p>Now, let's log into the Beacon app as a different user. Notice that this user does not see the <strong>Mom and Fawn</strong> movie in the playlist.</p> 
+        <figure class="bcls-figure">
+          <img class="bcls-image" alt="BCLS playlist page" src="/assets/images/s-general-img/roles/bcls-page-app.png" />
+        </figure> 
+      </li>
+      <li>
+        <p>If we look at the roles for this app user, we see that <strong>docs_admin</strong> is not included in their roles.</p> 
+        <figure class="bcls-figure">
+          <img class="bcls-image" alt="App user2 roles" src="/assets/images/s-general-img/roles/mboles-roles.png" />
+        </figure> 
+      </li>
+      <li>Remember, if an asset has no <strong>Asset roles</strong>, then all users can see that asset.</li>
     </ol>
 
    

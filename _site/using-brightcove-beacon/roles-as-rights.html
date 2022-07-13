@@ -1054,11 +1054,42 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Even though you can assign roles to movies and episodes in Beacon CMS, the information contained within the Video Cloud custom fields will overwrite the settings for movies and episodes in Beacon CMS.</p>
   </section> -->
 
-  <!-- <section class="bcls-section">
+  <section class="bcls-section">
     <h2 id="Understanding_the_viewer_experience">Understanding the viewer experience</h2>
     <p>The viewer will only see content in the Beacon app if their user account is has any of the roles associated with the content.</p>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        <p>In the Beacon app, I have logged in as <strong>jdoktor</strong>. Notice the movies that display in the playlist for the <strong>BCLS</strong> page include <strong>Mom and Fawn</strong>.</p> 
+        <figure class="bcls-figure">
+          <img class="bcls-image" alt="BCLS playlist page" src="/assets/images/s-general-img/roles/mom-and-fawn-app.png" />
+        </figure> 
+      </li>
+      <li><p>Let's see why this video appears for this user while logged in. In the Beacon CMS, the <strong>Mom and Fawn</strong> movie has a <strong>Asset role</strong> of <strong>docs_admin</strong>.</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image" alt="Beacon cms for movie" src="/assets/images/s-general-img/roles/beacon-cms-mom-and-fawn.png" />
+        </figure>
+      </li>
+      <li>
+        <p>Next, let's look at the roles for this app user.</p> 
+        <ol>
+          <li>In the top navigation, select <strong>Commerce</strong>.</li>
+          <li>In the left navigation, select <strong>App Users</strong>.</li>
+          <li>Select the app user ID.</li>
+        </ol>
+        <p>Notice the roles assigned to this user:</p>
+        <ul>
+          <li><strong>docs_admin</strong></li>
+          <li><strong>docs_reviewer</strong></li>
+        </ul>
+        <figure class="bcls-figure">
+          <img class="bcls-image" alt="App user roles" src="/assets/images/s-general-img/roles/jdoktor-roles.png" />
+        </figure> 
+      </li>
+      <li>Since the user has a role associated with the asset, then the user can view this asset.</li>
+    </ol>
+
    
-  </section> -->
+  </section>
   
   
   <!-- <section class="bcls-section">

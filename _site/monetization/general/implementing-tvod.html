@@ -921,13 +921,70 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
   <section class="bcls-section">
     <h2 id="section-name">Creating a package in Brightcove Beacon</h2>
-    <p>Follow these steps to create a TVOD package in Brightcove Beacon:</p>
+    <p>To create a TVOD package in Brightcove Beacon, follow these steps:</p>
     <ol class="bcls-tasklist">
-      <li>Click the <strong>Commerce</strong> tab along the top of Brightcove Beacon.
+      <li>
+        <p>Login to Brightcove Beacon. In the top navigation, select <strong>Commerce</strong>.</p>
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/using-bcb/implementing-authvod/navigation-to-add.png" alt="get to add new package button">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/implementing-tvod/commerce.png" alt="Commerce top navigation">
         </figure>
       </li>
+      <li>
+        <p>In the left navigation, select <strong>TVOD Plans</strong>. Then, click Add <strong>New TVOD Plan</strong>.</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/implementing-tvod/tvod-plans.png" alt="TVOD plans">
+        </figure> 
+      </li>
+      <li>
+        <p>For the Package tab, enter details for your TVOD Plan.</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/implementing-tvod/tvod-package.png" alt="Package tab">
+        </figure> 
+        <p>
+          This table contains the fields you will find in the <strong>Package</strong> tab: </p>
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th>Field</th>
+              <th>Required</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td>Yes</td>
+              <td>Name of the TVOD package</td>
+            </tr>
+            <tr>
+              <td><strong>TVOD Plan Type</strong></td>
+              <td>Yes</td>
+              <td>
+                Select one:
+                <ul>
+                  <li><strong>Multiple Assets</strong> - Associate a bundle of assets with this plan; for example, viewers can purchase/rent a full series or season</li>
+                  <li><strong>Individual Assets</strong> - Viewers can buy or rent 1 asset</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Purchase Type</strong></td>
+              <td>Yes</td>
+              <td>
+                Select one:
+                <ul>
+                  <li><strong>Buy</strong> - Allow viewers to purchase an asset or bundle of assets</li>
+                  <li><strong>Rent</strong> - Allow viewers to rent an asset or bundle of assets for a period of time</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+
+
+
+
       <li>Select <strong>Packages</strong> from the left navigation.</li>
       <li>Click the <strong>Add New Package</strong> button.</li>
       <li>On the <strong>Package</strong> tab supply the internal name and be sure to leave the <strong>Status</strong> as <strong>Unpublished</strong>.

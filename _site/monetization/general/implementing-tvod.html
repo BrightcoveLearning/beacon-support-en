@@ -935,7 +935,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </figure>
       </li>
       <li>
-        <p>For the Package tab, enter details for your TVOD Plan.</p>
+        <p>For the <strong>Package</strong> tab, enter details for your TVOD Plan.</p>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/s-monetization-img/implementing-tvod/package-tab-rent.png" alt="Package tab">
         </figure> 
@@ -1010,14 +1010,70 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
               <td><strong>Payment methods to use</strong></td>
               <td>Yes</td>
               <td>
-                
+                Select one of the following types:
+                  <ul>
+                      <li>
+                          Stripe
+                      </li>
+                      <li>
+                          Beacon Store
+                      </li>
+                  </ul> 
               </td>
             </tr>
           </tbody>
         </table>
       </li>
       <li>
-        <p>Enter the textual data for your plan.</p>
+        <p>In the <strong>Package</strong> tab, select <strong>Stripe</strong> to see <strong>Payment methods details</strong>.</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/implementing-tvod/stripe-details.png" alt="Stripe payment details">
+        </figure> 
+        <p>
+          This table contains the fields Stripe payment details: </p>
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th>Field</th>
+              <th>Required</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td><strong>Package Image</strong></td>
+              <td>No</td>
+              <td>Supply an image for use next to the package name</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <p>In the <strong>Package</strong> tab, select <strong>Beacon Store</strong> to see <strong>Payment methods details</strong>.</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/implementing-tvod/beacon-store-details.png" alt="Beacon Store payment details">
+        </figure> 
+        <p>
+          This table contains the fields Beacon Store payment details: </p>
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th>Field</th>
+              <th>Required</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td><strong>Package Image</strong></td>
+              <td>No</td>
+              <td>Supply an image for use next to the package name</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <p>For the <strong>Textual Data</strong> tab, enter details for your plan.</p>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/s-monetization-img/implementing-tvod/textual-data.png" alt="Textual Data tab">
         </figure> 
@@ -1033,16 +1089,20 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </thead>
           <tbody class="bcls-table__body">
             <tr>
-              <td><strong>Name</strong></td>
+              <td><strong>Pack Name</strong></td>
               <td>Yes</td>
-              <td>Name of the TVOD package</td>
+              <td>Display name shown to viewers</td>
             </tr>
-            
+            <tr>
+              <td><strong>Headline</strong></td>
+              <td>Yes</td>
+              <td>Description shown to viewers, for example <em>Holiday Special!</em></td>
+            </tr>
           </tbody>
         </table>
       </li>
       <li>
-        <p>Enter the non-textual data for your plan.</p>
+        <p>For the <strong>Non-Textual Data</strong> tab, enter details for your plan.</p>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/s-monetization-img/implementing-tvod/non-textual-data.png" alt="Non-Textual Data tab">
         </figure> 
@@ -1058,20 +1118,20 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
           </thead>
           <tbody class="bcls-table__body">
             <tr>
-              <td><strong>Name</strong></td>
-              <td>Yes</td>
-              <td>Name of the TVOD package</td>
+              <td><strong>Package Image</strong></td>
+              <td>No</td>
+              <td>Supply an image for use next to the package name</td>
             </tr>
-            
           </tbody>
         </table>
       </li>
+      <li>Click <strong>Create Package</strong>.</li>
 
     </ol>
   </section>
 
   <section class="bcls-section">
-    <h2 id="section-name">Add videos to the package in Studio</h2>
+    <h2 id="Assigning_TVOD_packages_to_content">Assigning TVOD packages to content</h2>
     <p>To add content to the package, you need to use Video Cloud Studio to assign values to custom fields. The two custom fields that you must assign values to for an AuthVOD package are:</p>
     <ul>
       <li>beacon.rights.&lt;counter&gt;.packageName</li>

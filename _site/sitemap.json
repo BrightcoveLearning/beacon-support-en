@@ -40,12 +40,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/android/adding-subscriptions-in-android.html",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/adding-subscriptions-in-android.html",
       "oldURL": "/adding-subscriptions-in-android"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/adding-subscriptions-in-android.html",
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/android/adding-subscriptions-in-android.html",
       "oldURL": "/adding-subscriptions-in-android"
   },
 
@@ -150,12 +150,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/general/common-required-info.html",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/general/common-required-info.html",
       "oldURL": "/common-required-info"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/general/common-required-info.html",
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/general/common-required-info.html",
       "oldURL": "/common-required-info"
   },
 
@@ -175,12 +175,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/configuring-inchannel-products.html",
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/roku/configuring-inchannel-products.html",
       "oldURL": "/configuring-inchannel-products"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/roku/configuring-inchannel-products.html",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/configuring-inchannel-products.html",
       "oldURL": "/configuring-inchannel-products"
   },
 
@@ -225,12 +225,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/monetization/creating-stripe-account.html",
+      "newURL": "https://beacon.support.brightcove.com/monetization/general/creating-stripe-account.html",
       "oldURL": "/creating-stripe-account"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/monetization/general/creating-stripe-account.html",
+      "newURL": "https://beacon.support.brightcove.com/monetization/creating-stripe-account.html",
       "oldURL": "/creating-stripe-account"
   },
 
@@ -280,17 +280,22 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/general/demo-apps-access.html",
+      "oldURL": "/demo-apps-access"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/getting-started/design-best-practices.html",
       "oldURL": "/design-best-practices"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/general/device-apps-validation-guide.html",
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/general/device-apps-validation-guide.html",
       "oldURL": "/device-apps-validation-guide"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/general/device-apps-validation-guide.html",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/general/device-apps-validation-guide.html",
       "oldURL": "/device-apps-validation-guide"
   },
 
@@ -405,12 +410,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/monetization/general/implementing-authvod.html",
+      "newURL": "https://beacon.support.brightcove.com/monetization/implementing-authvod.html",
       "oldURL": "/implementing-authvod"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/monetization/implementing-authvod.html",
+      "newURL": "https://beacon.support.brightcove.com/monetization/general/implementing-authvod.html",
       "oldURL": "/implementing-authvod"
   },
 

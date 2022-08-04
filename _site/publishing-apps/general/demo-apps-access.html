@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This topic provides an overview of Cloud Playout, which allows you to compile and schedule a combination of videos-on-demand and live feeds as a live linear channel.">
+  <meta name="description" content="In this topic, you will learn how to access demo apps that have been setup for testing.">
   
-  <title>Overview: Cloud Playout</title>
+  <title>Demo Apps Access</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
@@ -63,9 +63,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
       
       
-      <li class="breadcrumb-item"><a href="/using-brightcove-beacon/cloud-playout/">Cloud Playout</a></li>
+      <li class="breadcrumb-item"><a href="/publishing-apps/general/">publishing-apps</a></li>
       
-      <li class="breadcrumb-item active" aria-current="page">Overview: Cloud Playout</li>
+      <li class="breadcrumb-item active" aria-current="page">Demo Apps Access</li>
     </ol>
   </nav>
 </header>
@@ -902,84 +902,94 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Overview: Cloud Playout</h1>
+<h1>Demo Apps Access</h1>
 <article class="bcls-article">
-  <summary>This topic provides an overview of Cloud Playout, which allows you to compile and schedule a combination of videos-on-demand and live feeds as a live linear channel.</summary>
+  <summary>In this topic, you will learn how to access demo apps that have been setup for testing.</summary>
+
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>Brightcove Cloud Playout is a Studio module that enables you to program a scheduled playout of items from your VOD catalogue, combined with live feeds, and stream it as a Linear Channel all with the reliability and scalability of Brightcove Live.</p>
-    
-		<p>You can then use the Cloud Playout channel as a Beacon Classic Channel by entering information about it in creating a <a href="/channels/Beacon Classic-channels/creating-a-channel.html">Beacon Classic Channel</a>. One major advantage to using Cloud Playout channels is that you will not need to find and integrate a 3rd party EPG provider, since an EPG service is built into Cloud Playout.</p>
-    
-    <p>Cloud Playout offers a powerful, end-to-end solution for channels of scheduled programming, including:</p>
-    <ul>
-      <li>24x7 Linear Channels</li>
-      <li>Pop-Up / Virtual Channels</li>
-      <li>Simulated Live Events</li>
-    </ul>
-    <p>Cloud Playout helps you increase audience engagement and create new revenue opportunities through a broadcast-like, Live TV experience leveraging pre-recorded content. Use existing VOD assets and add live events (optionally) to create scheduled live channels.</p>
+    <p>It is possible that Brightcove personnel to setup demonstration apps for you to use for a limited amount of time. This document provides details for how you can access those apps.</p>
+    <p>For all platforms, your Brightcove contact will provide you with an access code for which you will be prompted when accessing the app.</p>
   </section>
-  <section class="bcls-section">
-    <h2 id="Features">Features</h2>
-    <p>Features of Cloud Playout include:</p>
-    <ul>
-      <li>Import VOD assets from your Video Cloud Media library.</li>
-      <li>Switch between VOD assets and scheduled live feeds.</li>
-      <li>React in real time to last minute schedule changes in an easy, quick, and reliable manner.</li>
-      <li>Monetize your channel content with server-side ad insertion (SSAI).</li>
-      <li>Configure your channel to loop your program.</li>
-      <li>Optimize playout by device.</li>
-      <li>Drag and drop to re-order the program schedule at any moment, even in Running state.</li>
-      <!-- <li>Push a channel to your owned and operated properties via Brightcove Live, an Amazon S3 bucket, or a 3rd party destination via RTMP output.</li> -->
-      <li>API to retrieve the EPG (electronic program guide) for a channel</li>
-    </ul>
-  </section>
-  
-	<section class="bcls-section">
-		<h2 id="workflow_overview">Workflow overview</h2>
-		<p>There are four parts to creating a Cloud Playout channel and adding it to your Beacon Classic app:</p>
-		<ol class="bcls-tasklist-restart">
-			<li>In <strong>Video Cloud Studio</strong>, create the channel.</li>
-			<li>In <strong>Beacon Classic</strong>, create a new Beacon Classic channel that uses the Cloud Playout channel as its source.</li>
-      <li>In <strong>Beacon Classic</strong>, add the channel to a playlist.</li>
-      <li>In <strong>Beacon Classic</strong>, add the playlist to page.</li>
-		</ol>
-		<p>These tasks are detailed in the <a href="#Related_topics">Related topics</a></p>
-	</section>
-  
-  <section class="bcls-section">
-    <h2 id="limitations">Limitations</h2>
-    <p>The following assumptions and limitations apply.</p>
-    <ul>
-      <li>Your videos must be ingested or re-transcoded using a Dynamic Delivery profile and <strong>must have an MP4 rendition</strong>:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/mp4-in-ingest-profile.png" alt="Ingest Profiles with MP4">
-          <figcaption class="bcls-caption--image">Ingest Profiles with MP4</figcaption>
-        </figure>
-      </li>
-      <li>For channels to work in Beacon Classic, you need to <strong>specify Brightcove Live as the destination</strong>.</li>
-      <li>The maximum input bitrate and resolution supported for Cloud Playout is 20MBPS/1080p for VOD and live inputs.</li>
-      <li>Brightcove recommends using videos with at least a 2 minute duration to ensure a correct transition between videos and electronic program guide accuracy</li>
-      <li>Captions (text tracks) added to videos currently will display in Cloud Playout channels if you have <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">requested closed captions</a> for MP4 renditions.</li>
-      <li>The minimum length for Live events is 5 minutes.</li>
-      <li>Every Live Event in Cloud Playout shares an 1:1 relation with a Video Cloud remote asset. This remote asset cannot be re-used in other channels. If the live event is removed from the channel, the associated remote asset will be automatically deleted. When a channel is deleted, any associated remote assets will also be deleted automatically.</li>
-      <li>Videos <strong>shared</strong> to the account from another account currently cannot be added to a Cloud Playout channel.</li>
-      <li>When a live event is currently playing, but no active feed is available, the slate content will be played in a loop until the live feed resumes or the event ends. There will be a delay of approximately 30 seconds before the slate MP4 starts playing.</li>
-      <!--<li><strong>Input Looper : if the asset URL is duplicated, then input looper rely on order for switching; if the order is changes during the course of the switching , then subsequent N+1 switch it attempt to create would rely on the order. </strong></li>-->
-      <li>If the Video Cloud account is configured for geo-restriction, then the channel <strong>Output Region</strong> should be created in a  region compatible with the Video Cloud geo-restriction policy.</li>
-      <li>For the best experience, Brightcove recommends using the Google Chrome browser.</li>
-      <li>
-        For SSAI-enabled channels, the destination must be set to an ad-enabled RTP live event:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/advanced-options-for-live-job.png" alt="Live Settings for SSAI Channel">
-          <figcaption class="bcls-caption--image">Live Settings for SSAI Channel</figcaption>
-        </figure>
-      </li>
-    </ul>
-  </section>
-  
-</article>
 
+  <section class="bcls-section">
+    <h2 id="Viewing_the_app_on_the_web">Viewing the app on the web</h2>
+    <p>Browse to <a href="https://brightcove-ott.ott.us-west-2.stage.deploys.brightcove.com/">https://brightcove-ott.ott.us-west-2.stage.deploys.brightcove.com/</a>. When prompted for your access code, enter the one provided and click <strong>Submit</strong>.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-publishing-apps-img/general/demo-apps-access/web-prompt-for-access-code.png" alt="enter access code">
+    </figure>
+
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Viewing_the_app_with_iOS">Viewing the app with iOS</h2>
+    <ol>
+      <li>Access <a href="https://testflight.apple.com/join/tVPjt9HM">Join the Brightcove OTT beta</a> with your Apple account (same as in your Apple device)</li>
+      <li>Install Testflight App on your iPhone / iPad</li>
+      <li>Open Testflight</li>
+      <li><strong>Brightcove OTT</strong> app should be there available to download</li>
+      <li>Open <strong>Brightcove OTT</strong> app and use the provided code</li>
+    </ol>
+
+    <section class="bcls-section">
+      <h2 id="Viewing_the_app_with_Apple_TV">Viewing the app with Apple TV</h2>
+      <ol>
+        <li>Access <a href="https://testflight.apple.com/join/tVPjt9HM">Join the Brightcove OTT beta</a> with your Apple account (same as in your Apple TV)</li>
+        <li>Install Testflight App on your Apple TV</li>
+        <li>Open Testflight</li>
+        <li><strong>Brightcove OTT</strong> app should be there available to download</li>
+        <li>Open <strong>Brightcove OTT</strong> app and use the provided code</li>
+      </ol>
+    </section>
+
+    <section class="bcls-section">
+      <h2 id="Viewing_the_app_with_Android">Viewing the app with Android</h2>
+      <ol>
+        <li>Create and login with a Google Account in your device</li>
+        <li>Open the following link: <a href="https://play.google.com/store/apps/details?id=com.brightcove.ott">https://play.google.com/store/apps/details?id=com.brightcove.ott</a> </li>
+      </ol>
+      <p>Notes:</p>
+      <ul>
+        <li>On Android the theme used will always be the default Beacon Theme.</li>
+      </ul>
+    </section>
+
+    <section class="bcls-section">
+      <h2 id="Viewing the app with Roku">Viewing the app with Roku</h2>
+      <ul>
+        <li>Option 1
+          <ol>
+            <li>Add this channel to your Roku device channels list using the following link <a href="https://my.roku.com/account/add/5KVZNZT">https://my.roku.com/account/add/5KVZNZT</a></li>
+            <li>Follow the instructions displayed</li>
+          </ol>
+        </li>
+        <li>Option 2
+          <ol>
+            <li>Login on <a href="www.roku.com">www.roku.com</a></li>
+            <li>Select <strong>My Account</strong> menu</li>
+            <li>Select <strong>Add Channel with a Code</strong></li>
+            <li>Insert the following code when requested: <code>5KVZNZT</code></li>
+            <li>Follow all the steps</li>
+          </ol>
+      </ul>
+      <p>Notes:</p>
+      <ul>
+        <li>The channel can take up to 24 hours to appear on your device channels list, but normally is added instantaneously.</li>
+        <li>Tip: You can run system update to force Roku to recheck for updates on the system/installed channels.</li>
+      </ul>
+    </section>
+
+    <section class="bcls-section">
+      <h2 id="Known_issues">Known issues</h2>
+      <ul>
+        <li>Purchases are not available in these demos.</li>
+        <li>Authentication through OIDC standard is not available, only Beacon Authorization.</li>
+        <li>Not available on Smart TV platforms.</li>
+        <li>SSAI parameters might be slightly different from the ones used in production environment (app id’s for example).</li>
+      </ul>
+    </section>
+
+</article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">
@@ -995,7 +1005,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 26 Apr 2022
+  Page last updated on 01 Aug 2022
 </div>
 
 

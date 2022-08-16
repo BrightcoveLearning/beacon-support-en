@@ -905,22 +905,26 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 <h1>Controlling Viewer Access with Roles</h1>
 <article class="bcls-article">
   <summary>In this topic, you will learn how to present content to viewers based on their assigned roles. You will manage roles in your external VMS and the Brightcove Beacon CMS.</summary>
+
+  
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
     <p>The Roles as Rights feature ensures that content is only viewable by viewers whose role matches the role set on the content.</p>
     <p>Roles allow you to filter content and experience elements for groups of specific viewers. You can expose content for viewers within a group and hide it from all other viewers.</p>
-    <p>Content types can be shown or hidden based on the viewer's role. In the Beacon CMS, you are able to create roles and assign them to the following content types:</p>
+    <p>Content types can be shown or hidden based on the viewer's role. In Beacon Studio, you can create roles and assign them to the following content types:</p>
     <ul>
       <li>Movies</li>
       <!-- <li>Programs</li> -->
       <li>Series, Seasons, and Episodes</li>
-      <li>Channels and Live Events</li>
+      <li>Channels and Live events</li>
       <li>Playlists and Pages</li>
     </ul>
-    
-    <p>To associate viewers with roles, you will use your external Viewer Management System (VMS). You will connect these user role definitions to Brightcove Beacon using OpenID Connect (OIDC) tokens. OIDC is an authentication protocol used to verify the identity of a user to a client service.</p>
-    
+    <!-- <p>For movies and episodes, you should use Video Cloud custom fields to assign roles.</p> -->
+    <p>To associate viewers with roles, use your external Viewer Management System (VMS). You will connect these user role definitions to Brightcove Beacon using OpenID Connect (OIDC) tokens. OIDC is an authentication protocol used to verify the identity of a user to a client service.</p>
+    <!-- <p>To associate viewers with roles, you will use your external user management system or LDAP (Lightweight Directory Access Protocol) system. You will connect these user role definitions to Brightcove Beacon using OpenID Connect (OIDC) tokens. OIDC is an authentication protocol used to verify the identity of a user to a client service.</p> -->
     <p> For details about using OIDC, see the <a href="/references/oidc-authentication-for-beacon.html">OIDC Authentication Configuration and Testing</a> document.</p>
+    
+    <!-- <figure class="bcls-figure"><img class="bcls-image--no-border" alt="China Delivery Architecture" src="/assets/images/s-general-img/china-delivery.png" /> </figure> -->
   </section>
 
   <section class="bcls-section">
@@ -933,7 +937,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         <p>Viewers will exist in your external Viewer Management System (VMS) and may have one or more roles assigned to them.</p> 
         <aside class="bcls-aside bcls-aside--tip">Viewers with no roles will have access to all content with no associated roles.</aside>
       </li>
-      <li>During viewer authentication with OIDC, a token is passed to the Beacon CMS with the viewer's role(s).</li>
+      <li>During viewer authentication with OIDC, a token is passed to Brightcove Beacon with the viewer's role(s).</li>
       <li>Viewers have access to assets/pages that match any of the viewer's roles.</li>
     </ol>
     <figure class="bcls-figure">
@@ -945,10 +949,10 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <ol class="bcls-tasklist-restart">
      <li>Assign roles to viewers in your external VMS (or sets up rules to assign roles)</li>
      <li>
-      <p>Connect external VMS to Beacon CMS</p>
-      <aside class="bcls-aside bcls-aside--information">Contact your account manager to connect your VMS to the Brightcove Beacon CMS.</aside>
+      <p>Connect external VMS to Brightcove Beacon</p>
+      <aside class="bcls-aside bcls-aside--information">Contact your account manager to connect your VMS to the Brightcove Beacon.</aside>
     </li>
-     <li>Add the roles to the Beacon CMS (these roles must match what is defined in your VMS)</li>
+     <li>Add the roles to Brightcove Beacon (these roles must match what is defined in your VMS)</li>
      <li>Assign roles to assets/pages</li>
     </ol>
     <figure class="bcls-figure">
@@ -956,6 +960,8 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </figure>
   </section>
 
+
+ 
   <section class="bcls-section">
     <h2 id="Assigning_roles_to_viewers">Assigning roles to viewers</h2>
     <p>You will use your external Viewer Management System (VMS) to assign viewers with specific roles. For example, you might want your employees and partners to have access to the latest training videos, but not your prospects and customers.</p>
@@ -1146,8 +1152,9 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Third-party Analytics services</li>
     </ul>
   </section> -->
-</article>
 
+
+</article>
 <!-- complete bootstrap layout -->
     </div>
     <div class="col-sm-2 right-side-bar">

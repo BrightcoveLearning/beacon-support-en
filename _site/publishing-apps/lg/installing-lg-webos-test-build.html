@@ -924,7 +924,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     </ol>
   </section>
   <section class="bcls-section">
-    <h2 id="Creating_a_development_account">Creating a development account</h2>
+    <h2 id="Creating_a_developer_account">Creating a developer account</h2>
     <p>To use the Developer Mode app, you will need a development account on the LG developer portal site. </p>
     <ol class="bcls-tasklist">
       <li>
@@ -936,44 +936,52 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>
         In the top right, click <strong>Sign In</strong>.
       </li>
-      
+      <li>Either sign in or select <strong>Create Account</strong>. When creating a new account, a Select Country dialog will appear.</li>
+      <li>After you have created an account, install the Developer mode app on your TV.</li>
     </ol>
   </section>
+
   <section class="bcls-section">
-    <h2 id="connecting-adb">Connecting through Android Debug Bridge (adb)</h2>
-    <p>
-      You need to use Android Debug Bridge (adb) to connect your computer to an Amazon Fire TV device for installing, testing and debugging your apps. For more information on how to enable adb please follow the <a href="https://developer.amazon.com/docs/fire-tv/connecting-adb-to-device.html" target="_blank">Amazon</a> and
-      <a href="https://developer.android.com/studio/command-line/adb.html" target="_blank">Android</a> documentation.
-    </p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="installing-firetv">Installing your Brightcove Beacon Classic App</h2>
-    <p>
-      To install and test your Brightcove Beacon Classic app before submitting it to the Amazon Appstore, you need to use the Android Debug Bridge (adb).
-    </p>
-    <p>
-      Installing your own app (outside of the Appstore) is sometimes referred to as sideloading an app.
-    </p>
-    <aside class="bcls-aside bcls-aside--information"> To follow these steps, you must have already used <em>adb</em> to connect your development computer to your Fire TV device.
-    </aside>
+    <h2 id="Configuring_your_account">Configuring your account</h2>
+    <p>With the Developer Mode app installed on your TV, you will sign in and customize some settings. </p>
     <ol class="bcls-tasklist">
-      <li>Open your terminal or command line.</li>
       <li>
-        Type the following command, where <code translate="No">path-to-apk-file</code> is the file system path to your app's APK.
-        <pre class="line-numbers"><code class=“language-bash”>adb install path-to-apk-file</code></pre>
+        <p>Launch the Developer mode app on your TV. Enter your credentials from your account created on the LG Developer site.</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="Developer mode app signin" src="/assets/images/s-publishing-apps-img/lg/webos-test-build/developer-app-signin.png" />
+        </figure>
       </li>
       <li>
-        If your installation was successful, adb will respond with a message similar to this one:
-        <pre class="line-numbers"><code class=“language-bash”> 764 KB/s (217246 bytes in 0.277s)
- pkg: /data/local/tmp/HelloWorld.apk
- Success</code></pre>
+        Turn on the following properties:
+        <ul>
+          <li><strong>Dev Mode Status</strong> - to turn this option on, you will need to reboot the TV</li>
+          <li><strong>Key Server</strong></li>
+          <li><strong>Clear Cache Data</strong> - this is optional</li>
+        </ul>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="Developer app settings" src="/assets/images/s-publishing-apps-img/lg/webos-test-build/developer-app-settings.png" />
+        </figure>
       </li>
-      <li>
-        To re-install an app that already exists on the device, you can use the <code translate="No">-r</code> option to reinstall it.
-        <pre class="line-numbers"><code class=“language-bash”> adb install -r path-to-apk-file</code></pre>
-      </li>
+      <li>Leave the TV on because you will need the IP Adress and Passphrase to connect to the TV.</li>
     </ol>
   </section>
+
+  <section class="bcls-section">
+    <h2 id="Installing_the_webOS_IDE">Installing the webOS IDE</h2>
+    <p>Now, you are ready to install the webOS IDE on your computer. </p>
+    <ol class="bcls-tasklist">
+      <!-- <li>
+        <p>Launch the Developer mode app on your TV. Enter your credentials from your account created on the LG Developer site.</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="Developer mode app signin" src="/assets/images/s-publishing-apps-img/lg/webos-test-build/developer-app-signin.png" />
+        </figure>
+      </li> -->
+     
+    </ol>
+  </section>
+
+
+ 
   <section class="bcls-section">
     <h2 id="running-firetv">Running your Brightcove Beacon Classic App</h2>
     <p>
@@ -988,40 +996,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <li>Select <strong>Launch application</strong>.</li>
     </ol>
   </section>
-  <section class="bcls-section">
-    <h2 id="install-with-live-service">Installing the Fire TV app with Amazon Live App Testing service</h2>
-    <p>In this section, you will learn how to install and test the Fire TV app with the Amazon Live App Testing service.</p>
-    <aside class="bcls-aside bcls-aside--information">Use this installation procedure in case you want to test the App internal payment methods, such as subscriptions or event payments.</aside>
-    <p>To be able to install the Fire TV app in your device, you will need a Live App Testing email invitation from Brightcove.</p>
-    <aside class="bcls-aside bcls-aside--information">In the case you are not receiving the invitation email for the Live App Testing, please follow this <a href="https://www.amazon.com/gp/gss/ccp/" target="_blank">link</a> and enable marketing communication for Appstore by selecting the option labeled <strong>Send me marketing email from the following categories</strong> and click <strong>Save</strong>.
-      <p>After setting the marketing communication preferences, the change will start with the next and all subsequent email invitation tests.</p>
-    </aside>
-    <p>Once you receive the email invitation to participate in the Live App Testing, please perform the following steps:</p>
-    <ol class="bcls-tasklist-restart">
-      <li>In your email invitation, click the link for the marketplace that you will be testing <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/s-publishing-apps-img/firetv-installation/1-install-email.png" />
-        </figure>
-        <p>The link will open the retail page for the Brightcove Beacon Classic App in the specified marketplace.</p>
-      </li>
-      <li>On the app retail page, from the <strong>Deliver To:</strong> drop-down menu, select the device where you want to install the Brightcove Beacon Classic app.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" width="" height="" src="/assets/images/s-publishing-apps-img/firetv-installation/2-app-installation.png" />
-        </figure>
-      </li>
-      <li>If a particular device is not available in the tester's current marketplace, that device will not appear in the drop-down menu. If none of the devices that your app targets are available in a given marketplace, the drop-down menu will be replaced with a <strong>Continue</strong> button on the app's retail page.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="" width="200" height="200" src="/assets/images/s-publishing-apps-img/firetv-installation/3-continue-button.png" />
-        </figure>
-      </li>
-      <li>Install the Brightcove Beacon Classic app to the specified device. You can test on as many devices as you have associated with your Amazon account that the app targets.</li>
-      <li>
-        From the Amazon Fire TV main screen, select <strong>Settings</strong> > <strong>Applications</strong> >
-        <strong>Manage Installed Applications</strong>.
-      </li>
-      <li>Select the Brightcove Beacon Classic app.</li>
-      <li>Select <strong>Launch application</strong>.</li>
-    </ol>
-  </section>
+ 
   <section class="bcls-section">
     <h2 id="running-firetv">Uninstalling your Brightcove Beacon Classic App</h2>
     <p>To uninstall your app from the Fire TV device follow these steps:</p>

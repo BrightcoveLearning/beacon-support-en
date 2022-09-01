@@ -916,6 +916,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>A high-level view of the process is:</p>
     <ol>
       <li>Create a development account on the LG developer site.</li>
+      <li>Configure the setting for your development account.</li>
       <li>
         Connect to your LG WebOS device through the Android Debug Bridge (adb).
       </li>
@@ -970,12 +971,59 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <h2 id="Installing_the_webOS_IDE">Installing the webOS IDE</h2>
     <p>Now, you are ready to install the webOS IDE on your computer. </p>
     <ol class="bcls-tasklist">
-      <!-- <li>
-        <p>Launch the Developer mode app on your TV. Enter your credentials from your account created on the LG Developer site.</p>
+      <li>Install the webOS IDE on your computer.</li>
+      <li>Launch the webOS IDE.</li>
+      <li>
+        <p>Create a new target connection.</p>
+        <ol type="A">
+          <li>Open the <strong>Target Configuration Menu</strong></li>
+          <li><p>Create a new target configuration</p></li>
+        </ol>
         <figure class="bcls-figure">
-          <img class="bcls-image--no-border" alt="Developer mode app signin" src="/assets/images/s-publishing-apps-img/lg/webos-test-build/developer-app-signin.png" />
+          <img class="bcls-image--no-border" alt="Target configuration menu" src="/assets/images/s-publishing-apps-img/lg/webos-test-build/target-config-menu.png" />
         </figure>
-      </li> -->
+      </li>
+      <li>
+        In the <strong>New Target Connection</strong> dialog, enter the following:
+        <ul>
+          <li><strong>Device Name</strong> - name of the device</li>
+          <li><strong>IP Address</strong> - from the TV Developer mode app</li>
+        </ul>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="New Target Connection dialog" src="/assets/images/s-publishing-apps-img/lg/webos-test-build/new-target-dialog.png" />
+        </figure>
+      </li>
+      <li>Click <strong>Finish</strong>.</li>
+      <li>
+        The new target will appear in the <strong>Target Configuration</strong> list.
+        <ol>
+          <li>Right click on the new target</li>
+          <li><p>Select <strong>Properties</strong></p></li>
+        </ol>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="New Target list" src="/assets/images/s-publishing-apps-img/lg/webos-test-build/new-target-list.png" />
+        </figure>
+      </li>
+      <li>
+        <p>Do the following:</p>
+        <ol>
+          <li>Enter the IP Address from the TV Developer mode app</li>
+          <li>Enter the Passphrase from the TV Developer mode app</li>
+          <li>Click <strong>Apply</strong></li>
+          <li>Click <strong>OK</strong></li>
+        </ol>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="Enter New Target values" src="/assets/images/s-publishing-apps-img/lg/webos-test-build/new-target-passphrase.png" />
+        </figure>
+      </li>
+      <li>
+        <p>A private key will be generated for the new target. </p>
+        <figure class="bcls-figure">
+          <img class="bcls-image--no-border" alt="Generate private key" src="/assets/images/s-publishing-apps-img/lg/webos-test-build/generate-key.png" />
+        </figure>
+      </li>
+      <li>Once the private key is generated, you can just right click on the new target and click <strong>Connect</strong>.</li>
+
      
     </ol>
   </section>

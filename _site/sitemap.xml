@@ -935,6 +935,15 @@
         
           <url>
             
+              <loc>https://beacon.support.brightcove.com/publishing-apps/lg/installing-lg-webos-test-build.html</loc>
+            
+            <lastmod>2022-09-06</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+        
+          <url>
+            
               <loc>https://beacon.support.brightcove.com/publishing-apps/lg/submitting-to-lg.html</loc>
             
             <lastmod>2022-09-06</lastmod>

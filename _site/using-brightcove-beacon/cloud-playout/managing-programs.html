@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This topic covers adding mid-roll ads to VOD content in Cloud Playout channels.">
+  <meta name="description" content="For non-looping channels, you add new programs to the channel as needed, or re-link a program to update its contents.">
   
-  <title>Adding Mid-Roll Ads to a Channel</title>
+  <title>Managing Multiple Programs</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/s-site-assets-favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/s-site-assets-favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/s-site-assets-favicons/favicon-16x16.png">
@@ -167,7 +167,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       
     
       
-        <li class="breadcrumb-item active" aria-current="page">Adding Mid-Roll Ads to a Channel</li>
+        <li class="breadcrumb-item active" aria-current="page">Managing Multiple Programs</li>
       
     
   </nav>
@@ -320,7 +320,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                         
                           
                             
-                            <li><a href="/using-brightcove-beacon/cloud-playout/managing-programs.html">Managing Multiple Programs</a></li>
+                            <li><a href="/using-brightcove-beacon/cloud-playout/managing-programs.html" aria-current="page">Managing Multiple Programs</a></li>
                             
                           
                         
@@ -380,7 +380,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
                         
                           
                             
-                            <li><a href="/using-brightcove-beacon/cloud-playout/mid-roll-ad-insertion.html" aria-current="page">Adding Mid-Roll Ads to a Channel</a></li>
+                            <li><a href="/using-brightcove-beacon/cloud-playout/mid-roll-ad-insertion.html">Adding Mid-Roll Ads to a Channel</a></li>
                             
                           
                         
@@ -1234,86 +1234,156 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     
 
 
-<h1>Adding Mid-Roll Ads to a Channel</h1>
+<h1>Managing Multiple Programs</h1>
 <article class="bcls-article">
-  <summary>This topic covers adding mid-roll ads to VOD content in Cloud Playout channels.</summary>
+  <summary>For non-looping channels, you add new programs to the channel as needed, or re-link a program to update its contents.</summary>
   <section class="bcls-section">
-    <h2 id="introduction">Introduction</h2>
-    <p>Before reading this topic, you should look at <a href="enabling-server-side-ads.html">Monetizing Cloud Playout</a>, which covers enabling a Cloud Playout channel for SSAI and setting up pre-roll and post-roll ad insertion.</p>
-    <p>As you will see below, mid-roll ads work a bit differently.</p>
+    <h2 id="Introduction">Introduction</h2>
+    <p>Many channel providers need to add new content to the channel on a regular basis. The <strong>Add Program</strong> and <strong>Link Program</strong> features of Cloud Playout allow you to easily add a whole program (playlist) of new content, or relink an existing program to the channel to update the program items or simply play it again.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that changes made to a program will be applied to all instances of the program that are linked to the channel.</aside>
+    <p>This feature is available to all accounts that have Cloud Playout. It works on non-looped channels only.</p>
   </section>
   <section class="bcls-section">
-    <h2 id="overview">Overview</h2>
-    <p>Mid-roll ad insertions depend on cuepoints created for the video either through Studio or the CMS API. Cloud Playout imports the cuepoint data for the videos in the channel and sets mid-roll ad insertion points based on them.
-        For information on how to add cuepoints, see <a href="/media/working-cue-points-media-module.html">Working with Cue Points</a>.</p>
+    <h2 id="Features">Features</h2>
+    <ul>
+      <li>Multiple programs can be created and associated with a Cloud Playout channel.</li>
+      <li>A channel can have 30 active programs at any point in time,  but once a program has completed, it is automatically archived and make space for an additional program, so there is no true limit to the number of programs linked to a channel.</li>
+      <li><a href="cloud-playout/managing-slates.html">Slate</a> content will be looped during any gaps in the schedule. A default slate is provided, but you can add a custom slate <strong>only while the channel is in a DRAFT state.</strong></li>
+    </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="Enabling_mid-roll_ad_cuepoints">Enabling mid-roll ad cuepoints</h2>
-    <p>Import of cuepoints for mid-roll ads can be enabled or disabled when you create the channel, or any time after that, regardless of the state of the channel:</p>
+    <h2 id="Viewing_channel_programs">Viewing channel programs</h2>
+    <p>To see the programs currently linked to a non-looping channel, select the channel in the channel list to see the channel details, and select the Program tab to see the program list:</p>
     <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/new-channel-with-ssai.webp" alt="Enable Mid-Roll Ads">
-      <figcaption class="bcls-caption--image">Enable Mid-Roll Ads</figcaption>
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-tab.webp" alt="Program Limitations">
+      <figcaption class="bcls-caption--image">Program List</figcaption>
     </figure>
   </section>
   <section class="bcls-section">
-    <h2 id="How_mid-rolls_work_in_Cloud_Playout">How mid-rolls work in Cloud Playout</h2>
+    <h2 id="Create_a_new_program">Create a new program</h2>
+    <p>To create a new program for the channel, click <strong>New Program</strong>:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-add-program-button.webp" alt="New Program Button">
+      <figcaption class="bcls-caption--image">New Program Button</figcaption>
+    </figure>
+    <p>A dialog will open where you can enter a name for the program. Note that <code translate="No">cloudplayout_</code> will be automatically prepended to your name to identify this as a program created for Cloud Playout. An empty playlist with this name will be automatically created and appear in the Media module.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-add-program-button.webp" alt="New Program Dialog">
+      <figcaption class="bcls-caption--image">New Program Dialog</figcaption>
+    </figure>
+    <p>The new program will be added at the end of the list, but you can <a href="#Reorder_programs">Reorder programs</a> to change the order.</p>
+    <p>To complete the addition of this new program to your channel, you must click the <strong>Save</strong> button on the Programs tab.</p>
+    <p>To add content to the program see <a href="#Managing_program_items">Managing program items</a>.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Link_an_existing_program_again">Link an existing program again</h2>
+    <p>To add an existing program to the channel to play it again, click <strong>Link Program</strong>:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-link-program-button.webp" alt="Link Program Button">
+      <figcaption class="bcls-caption--image">Link Program Button</figcaption>
+    </figure>
+    <p>A dialog will open, allowing you to select an existing program to add it again:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-relink-program.webp" alt="Link Program Dialog">
+      <figcaption class="bcls-caption--image">Link Program Dialog</figcaption>
+    </figure>
+    <aside class="bcls-aside bcls-aside--information language-editable">Note that only programs created for this channel will appear in the list - this is deliberate, because any changes made to a program will affect all instances of it. If you want to reuse a program in a different channel, create a new program for that channel, and when you add content to it, import the playlist for the program you want.</aside>
+    <p>The program will be added at the end of the list, but you can <a href="#Reorder_programs">Reorder programs</a> to change the order.</p>
+    <p>To complete the addition of the program to your channel, you must click the <strong>Save</strong> button on the Programs tab.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Selecting_a_filler_slate">Selecting a filler slate</h2>
+    <p>By default, the default slate is looped to fill any gaps in the channel schedule. You can add your own custom slates <strong>while the channel is in a DRAFT state</strong>, and if you do, you can select a custom slate to use by clicking the <strong>Filler Slate</strong> button:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-filler-slate-button.webp" alt="Filler Slate Button">
+      <figcaption class="bcls-caption--image">Filler Slate Button</figcaption>
+    </figure>
+    <p>A dialog will open that allows you to select a slate that has been added to the account:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-filler-slate-dialog.webp" alt="Filler Slate Dialog">
+      <figcaption class="bcls-caption--image">Filler Slate Dialog</figcaption>
+    </figure>
+    <p>Click <strong>Save</strong> to save your changes.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Setting_Hard_Start_for_a_program">Setting Hard Start for a program</h2>
+    <p>The first 5 items in the program list will display the computed start time for the program. If you wish to set a Hard Start time for a program, click the calendar icon beside the computed start time:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-hard-start-time.webp" alt="Hard Start Icon">
+      <figcaption class="bcls-caption--image">Hard Start Icon</figcaption>
+    </figure>
+    <p>A dialog will open where can set the start time for the program:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-hard-start.webp" alt="Hard Start Dialog">
+      <figcaption class="bcls-caption--image">Hard Start Dialog</figcaption>
+    </figure>
+    <p>Any gaps in the channel schedule that are created by a Hard Start time will be filled by the slate content.</p>
+    <p>Programs that have a Hard Start time will have an indicator in the program list:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-hard-start-time-indicator.webp" alt="Hard Start Indicator">
+      <figcaption class="bcls-caption--image">Hard Start Indicator</figcaption>
+    </figure>
+    <p>Click <strong>Save</strong> to save your changes.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Reorder_programs">Reorder programs</h2>
+    <p>You can change the position of a program in the list by clicking and dragging the icon beside the program name:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-reorder-programs.webp" alt="Reorder Programs">
+      <figcaption class="bcls-caption--image">Reorder Programs</figcaption>
+    </figure>
+    <p>Click <strong>Save</strong> to save your changes.</p>
+    <aside class="bcls-aside bcls-aside--warning language-editable">Note that if a program has a hard start, then re-ordering the program will carry over the hard start time attached to that program. This might lead to overlapping schedules or this may even cause certain programs in between to get skipped for playback. The system will always honor the hard start time attached to a program. Please look for warning messages when you save the changes.</aside>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Managing_program_items">Managing program items</h2>
+    <p>To manage program items, go to the <strong>Program Items</strong> tab and select a program in the selector at the top to see its items:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-manage-program-items.webp" alt="Program Items">
+      <figcaption class="bcls-caption--image">Program Items</figcaption>
+    </figure>
+    <p>Here you can add (or remove) items of different kinds (depending on what features are enabled for the channel). You can also reorder items by clicking and dragging the icon beside the item name.</p>
+    <p>See <a href="cloud-playout/cloud-playout-add-content.html">Adding Content</a> for more detailed information.</p>
+    <p>Click <strong>Save</strong> to save your changes.</p>
+    <p>Note that if the program is currently playing, there will be an indicator of which item is playing:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-program-items-running-state.webp" alt="Currently Playing Item">
+      <figcaption class="bcls-caption--image">Currently Playing Item</figcaption>
+    </figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Program_status">Program status</h2>
+    <p>In the Programs view, programs that have finished will show <strong>Completed</strong> in the Status column, and the currently running program will show the status <strong>Active</strong>:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-program-status.webp" alt="Program Status">
+      <figcaption class="bcls-caption--image">Program Status</figcaption>
+    </figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Programs_in_the_Schedule_View">Programs in the Schedule View</h2>
+    <p>In the Schedule view, demarcations between programs are shown by dotted lines:</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/link-program-schedule-view.webp" alt="Program Indicators in Schedule">
+      <figcaption class="bcls-caption--image">Program Indicators in Schedule</figcaption>
+    </figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="Recommendations">Recommendations</h2>
     <ul>
-      <li>Cloud Playout only sets ad positions based on ad cuepoints (code cuepoints are ignored).</li>
-      <li>The pre-roll and post-roll ad cuepoints automatically created by Video Cloud are ignored as pre-roll and post-roll ads are managed differently in Cloud Playout - see <a href="enabling-server-side-ads.html#ads">Enabling Server-Side Ads</a>.</li>
-      <li>Only the timestamps for the ad cuepoints are used to determine mid-roll ad timings. Cuepoint metadata is ignored.</li>
-      <li>
-        The default duration for mid-roll is 30 seconds. This can be changed in the channel settings: minimum duration: 30 seconds; maximum duration: 10 minutes.
-        <p>The duration of mid-roll slots can be changed at any time, regardless of the channel state:</p>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-cuepoints-running-state.webp" alt="Edit Mid-Roll Slot Duration (RUNNING State)">
-          <figcaption class="bcls-caption--image">Edit Mid-Roll Slot Duration (RUNNING State)</figcaption>
-        </figure>
-        <aside class="bcls-aside bcls-aside--information">Notes:
-          <ul>
-            <li>The modified duration will not be applicable for the currently playing Ad slot. Subsequent Ad slots (within the same and subsequent videos) will use the modified Ad slot duration.</li>
-            <li>The Cloud Playout EPG is generated dynamically and as close to reality as possible. Changing the mid-roll duration may cause the EPG to show inaccurate schedules for a while, but it will auto-correct itself after a short period.</li>
-            <li>When Cloud Playout is currently playing an Ad (mid-roll or post-roll) and if a user attempts to use <strong>Play Now</strong> option to skip to another asset, the Ad will still continue to play until the programmed ad slot duration. During this time, the video that the user attempted to Play Now will be overwritten with the Ad for the remainder of the Ad slot duration. We recommend waiting for the completion of Ad before using the <strong>Play Now</strong> switch.</li>
-          </ul>
-          </aside>
-      </li>
-      <li>Mid-roll ads can only be inserted in VOD content, not in ad placeholders for <a href="adding-bumpers-to-vod.html">bumpers</a> or <a href="enabling-server-side-ads.html">pre-roll and post-roll ads</a>.</li>
-      <li>The start and end times, and the duration of assets in the program in the Cloud Playout UI and in the EPG, will reflect the mid-roll ad content.</li>
-      <li>
-        Importing cuepoint data for mid-roll ads can be enabled or disabled at any time, regardless of the current state of the channel.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-cuepoints-running-state.webp" alt="Enable/Disable Mid-Rolls while Running">
-          <figcaption class="bcls-caption--image">Enable/Disable Mid-Rolls while Running</figcaption>
-        </figure>
-        <p><strong>Notes</strong></p>
-        <ol>
-          <li>
-            When a channel has mid-roll import option disabled and asset A is currently playing and it has mid-roll cue-points, and if the mid-roll import option is turned ON now on channel settings - the Ad slots in the current playing asset will not be honoured for the current iteration. However, mid-rolls for subsequent assets will be imported.
-          </li>
-          <li>
-            When a channel has mid-roll import option enabled and asset A is currently playing and it has mid-roll cue-points, and if the mid-roll import option is turned off now - the Ad slots in the current playing asset will be honoured on a best effort basis. Some Ad slots which are so nearly located to the playtime of the current playing asset might still play Ads.
-          </li>
-          <li>Adding/removing cue-points to a currently playing asset is handled based on various factors. Factors such as current playtime position, existence of other mid-roll cue points etc., will influence the way Cloud Playout handles dynamic addition/removal of cue points of currently playing asset.</li>
-        </ol>
+      <li><a href="#Setting_Hard_Start_for_a_program">Hard start</a> can be used at the program level or <a href="cloud-playout/hard-start.html">channel level</a>, but these may conflict, and they use different instances of the slate. We recommend using one or the other, but not both. If both are set for a channel, the program-level hard start is given the highest priority and the channel will start playback on the program hard start time.</li>
+      <li>The <strong>Play Now</strong> option can be used on any video in the channel, but we recommend that you use it only on videos within the current program.</li>
+      <li>When the channel is playing, if you need to add or update a <a href="#Setting_Hard_Start_for_a_program">Hard Start</a> on a program that will be playing next, you should do so at least 30 seconds before the currently scheduled start time.</li>
+      <li>Existing active channels (channels in the scheduled or running state during the release of the Managing Programs features), will not have filler slates associated with them. For them to use this feature, they need to be re-activated (stopped and started again).
       </li>
     </ul>
   </section>
   <section class="bcls-section">
-    <h2 id="Identify assets with mid-rolls">Identify assets with mid-rolls</h2>
-    <p>If mid-roll cuepoint import has been enabled, videos with valid mid-roll cuepoints will have a green dotted icon next to the video title in the program:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-assets-with-midroll.webp" alt="Videos with Mid-Roll Cuepoints">
-      <figcaption class="bcls-caption--image">Videos with Mid-Roll Cuepoints</figcaption>
-    </figure>
-    <p>If the channel is in a <strong>DRAFT</strong> state, you can hover the mouse over the green dotted icon to reveal the mid-roll details:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-draft-state.webp" alt="Reveal Mid-Roll Details - DRAFT State">
-      <figcaption class="bcls-caption--image">Reveal Mid-Roll Details - DRAFT State</figcaption>
-    </figure>
-    <p>If the channel is in a <strong>RUNNING</strong> state, you can click the green dotted icon to reveal the mid-roll details:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-running-state.webp" alt="Reveal Mid-Roll Details - RUNNING State">
-      <figcaption class="bcls-caption--image">Reveal Mid-Roll Details - DRAFT State</figcaption>
-    </figure>
+    <h2 id="Limitations">Limitations</h2>
+    <ul>
+      <li>Multiple programs are allowed only for channels where looping is disabled. Looping channels are allowed to have only a single program/playlist.</li>
+      <li>The start time and end time for a program are shown only for the first 5 programs in the list. As the channel starts running and programs get completed, the next set of 5 programs is populated with the start time/end time.</li>
+      <li>Videos should not be added or removed before the currently playing video - this impacts the playback order and may disrupt playback.</li>
+    </ul>
   </section>
 </article>
 
@@ -1332,7 +1402,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
 <hr>
 <div class="last-updated">
-  Page last updated on 26 Apr 2022
+  Page last updated on 13 Nov 2022
 </div>
 
 

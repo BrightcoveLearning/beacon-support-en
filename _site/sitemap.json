@@ -455,7 +455,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/support/",
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/general/",
       "oldURL": "/index"
   },
 
@@ -575,7 +575,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/general/",
+      "newURL": "https://beacon.support.brightcove.com/support/",
       "oldURL": "/index"
   },
 
@@ -635,12 +635,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/android/installing-android-test-build.html",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/installing-android-test-build.html",
       "oldURL": "/installing-android-test-build"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/installing-android-test-build.html",
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/android/installing-android-test-build.html",
       "oldURL": "/installing-android-test-build"
   },
 
@@ -655,12 +655,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/ios-tvos/installing-ios-test-build.html",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/installing-ios-test-build.html",
       "oldURL": "/installing-ios-test-build"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/installing-ios-test-build.html",
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/ios-tvos/installing-ios-test-build.html",
       "oldURL": "/installing-ios-test-build"
   },
 
@@ -725,22 +725,22 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/general/links-subscriptions.html",
-      "oldURL": "/links-subscriptions"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/general/links-subscriptions.html",
       "oldURL": "/links-subscriptions"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/monetization/ssai/live-ssai.html",
-      "oldURL": "/live-ssai"
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/general/links-subscriptions.html",
+      "oldURL": "/links-subscriptions"
   },
 
   {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/live-ssai.html",
+      "oldURL": "/live-ssai"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/monetization/ssai/live-ssai.html",
       "oldURL": "/live-ssai"
   },
 
@@ -775,6 +775,11 @@
   },
 
   {
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/managing-programs.html",
+      "oldURL": "/managing-programs"
+  },
+
+  {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/managing-slates.html",
       "oldURL": "/managing-slates"
   },
@@ -785,12 +790,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/monetization/general/monetization-options.html",
+      "newURL": "https://beacon.support.brightcove.com/monetization/monetization-options.html",
       "oldURL": "/monetization-options"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/monetization/monetization-options.html",
+      "newURL": "https://beacon.support.brightcove.com/monetization/general/monetization-options.html",
       "oldURL": "/monetization-options"
   },
 
@@ -880,7 +885,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/analytics/resources.html",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/resources.html",
       "oldURL": "/resources"
   },
 
@@ -890,7 +895,7 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/ios-tvos/resources.html",
+      "newURL": "https://beacon.support.brightcove.com/analytics/resources.html",
       "oldURL": "/resources"
   },
 
@@ -915,12 +920,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/general/schedule-apps.html",
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/general/schedule-apps.html",
       "oldURL": "/schedule-apps"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/general/schedule-apps.html",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/general/schedule-apps.html",
       "oldURL": "/schedule-apps"
   },
 
@@ -965,12 +970,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/streaming-vods-to-a-channel.html",
+      "newURL": "https://beacon.support.brightcove.com/assets/images/channels/streaming-vods-to-a-channel.html",
       "oldURL": "/streaming-vods-to-a-channel"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/assets/images/channels/streaming-vods-to-a-channel.html",
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/streaming-vods-to-a-channel.html",
       "oldURL": "/streaming-vods-to-a-channel"
   },
 
@@ -980,12 +985,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/fire-tv/submitting-to-amazon.html",
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/fire-tv/submitting-to-amazon.html",
       "oldURL": "/submitting-to-amazon"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/fire-tv/submitting-to-amazon.html",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/fire-tv/submitting-to-amazon.html",
       "oldURL": "/submitting-to-amazon"
   },
 
@@ -995,12 +1000,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/submitting-to-android.html",
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/android/submitting-to-android.html",
       "oldURL": "/submitting-to-android"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/android/submitting-to-android.html",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/submitting-to-android.html",
       "oldURL": "/submitting-to-android"
   },
 
@@ -1015,22 +1020,22 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/lg/submitting-to-lg.html",
-      "oldURL": "/submitting-to-lg"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/lg/submitting-to-lg.html",
       "oldURL": "/submitting-to-lg"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/panasonic/submitting-to-panasonic.html",
-      "oldURL": "/submitting-to-panasonic"
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/lg/submitting-to-lg.html",
+      "oldURL": "/submitting-to-lg"
   },
 
   {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/panasonic/submitting-to-panasonic.html",
+      "oldURL": "/submitting-to-panasonic"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/panasonic/submitting-to-panasonic.html",
       "oldURL": "/submitting-to-panasonic"
   },
 

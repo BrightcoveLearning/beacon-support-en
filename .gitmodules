@@ -1,87 +1,88 @@
 [submodule "_includes/s-ott-plugins"]
-	path = _includes/s-ott-plugins
-	url = https://github.com/BrightcoveLearning/s-ott-plugins
+  path = _includes/s-ott-plugins
+  url = https://github.com/BrightcoveLearning/s-ott-plugins
   branch = main
 [submodule "_includes/s-cloudplayout"]
-	path = _includes/s-cloudplayout
-	url = https://github.com/BrightcoveLearning/s-cloudplayout
-	branch = main
+  path = _includes/s-cloudplayout
+  url = https://github.com/BrightcoveLearning/s-cloudplayout
+  branch = main
 [submodule "assets/images/s-ott-plugins-img"]
-	path = assets/images/s-ott-plugins-img
-	url = https://github.com/BrightcoveLearning/s-ott-plugins-img
-	branch = main
+  path = assets/images/s-ott-plugins-img
+  url = https://github.com/BrightcoveLearning/s-ott-plugins-img
+  branch = main
 [submodule "assets/images/s-cloudplayout-img"]
-	path = assets/images/s-cloudplayout-img
-	url = https://github.com/BrightcoveLearning/s-cloudplayout-img
-	branch = main
+  path = assets/images/s-cloudplayout-img
+  url = https://github.com/BrightcoveLearning/s-cloudplayout-img
+  branch = main
 [submodule "_includes/s-publishing-apps"]
-	path = _includes/s-publishing-apps
-	url = https://github.com/BrightcoveLearning/s-publishing-apps
+  path = _includes/s-publishing-apps
+  url = https://github.com/BrightcoveLearning/s-publishing-apps
   branch = main
 [submodule "assets/images/s-publishing-apps-img"]
-	path = assets/images/s-publishing-apps-img
-	url = https://github.com/BrightcoveLearning/s-publishing-apps-img
+  path = assets/images/s-publishing-apps-img
+  url = https://github.com/BrightcoveLearning/s-publishing-apps-img
   branch = main
 [submodule "_includes/s-general"]
-	path = _includes/s-general
-	url = https://github.com/BrightcoveLearning/s-general
+  path = _includes/s-general
+  url = https://github.com/BrightcoveLearning/s-general
   branch = main
 [submodule "assets/images/s-general-img"]
-	path = assets/images/s-general-img
-	url = https://github.com/BrightcoveLearning/s-general-img
+  path = assets/images/s-general-img
+  url = https://github.com/BrightcoveLearning/s-general-img
   branch= main
 [submodule "s-scripts"]
-	path = s-scripts
-	url = https://github.com/BrightcoveLearning/s-scripts
+  path = s-scripts
+  url = https://github.com/BrightcoveLearning/s-scripts
   branch = main
 [submodule "_includes/s-jekyll-page-includes"]
-	path = _includes/s-jekyll-page-includes
-	url = https://github.com/BrightcoveLearning/s-jekyll-page-includes
+  path = _includes/s-jekyll-page-includes
+  url = https://github.com/BrightcoveLearning/s-jekyll-page-includes
   branch = main
 [submodule "_includes/s-support"]
-	path = _includes/s-support
-	url = https://github.com/BrightcoveLearning/s-support
+  path = _includes/s-support
+  url = https://github.com/BrightcoveLearning/s-support
   branch = main
 [submodule "assets/images/s-support-img"]
-	path = assets/images/s-support-img
-	url = https://github.com/BrightcoveLearning/s-support-img
+  path = assets/images/s-support-img
+  url = https://github.com/BrightcoveLearning/s-support-img
   branch = main
 [submodule "assets/images/s-feather-img"]
-	path = assets/images/s-feather-img
-	url = https://github.com/BrightcoveLearning/s-feather-img
+  path = assets/images/s-feather-img
+  url = https://github.com/BrightcoveLearning/s-feather-img
   branch = main
 [submodule "assets/s-site-assets-favicons"]
-	path = assets/s-site-assets-favicons
-	url = https://github.com/BrightcoveLearning/s-site-assets-favicons
+  path = assets/s-site-assets-favicons
+  url = https://github.com/BrightcoveLearning/s-site-assets-favicons
   branch = main
 [submodule "assets/s-site-assets-stylesheets"]
-	path = assets/s-site-assets-stylesheets
-	url = https://github.com/BrightcoveLearning/s-site-assets-stylesheets
+  path = assets/s-site-assets-stylesheets
+  url = https://github.com/BrightcoveLearning/s-site-assets-stylesheets
   branch = main
 [submodule "assets/s-site-assets-scripts"]
-	path = assets/s-site-assets-scripts
-	url = https://github.com/BrightcoveLearning/s-site-assets-scripts
+  path = assets/s-site-assets-scripts
+  url = https://github.com/BrightcoveLearning/s-site-assets-scripts
   branch = main
 [submodule "assets/s-site-assets-images"]
-	path = assets/s-site-assets-images
-	url = https://github.com/BrightcoveLearning/s-site-assets-images
+  path = assets/s-site-assets-images
+  url = https://github.com/BrightcoveLearning/s-site-assets-images
   branch = main
 [submodule "_includes/s-training"]
-	path = _includes/s-training
-	url = https://github.com/BrightcoveLearning/s-training
+  path = _includes/s-training
+  url = https://github.com/BrightcoveLearning/s-training
   branch = main
 [submodule "assets/images/s-training-img"]
-	path = assets/images/s-training-img
-	url = https://github.com/BrightcoveLearning/s-training-img
+  path = assets/images/s-training-img
+  url = https://github.com/BrightcoveLearning/s-training-img
   branch = main
 [submodule "_includes/s-monetization"]
-	path = _includes/s-monetization
-	url = https://github.com/BrightcoveLearning/s-monetization
+  path = _includes/s-monetization
+  url = https://github.com/BrightcoveLearning/s-monetization
   branch = main
 [submodule "assets/images/s-monetization-img"]
-	path = assets/images/s-monetization-img
-	url = https://github.com/BrightcoveLearning/s-monetization-img
+  path = assets/images/s-monetization-img
+  url = https://github.com/BrightcoveLearning/s-monetization-img
   branch = main
 [submodule "_data/s-site-assets-data"]
-	path = _data/s-site-assets-data
-	url = https://github.com/BrightcoveLearning/s-site-assets-data
+  path = _data/s-site-assets-data
+  url = https://github.com/BrightcoveLearning/s-site-assets-data
+  branch = main

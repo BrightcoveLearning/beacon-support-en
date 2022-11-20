@@ -82,3 +82,6 @@
 	path = assets/images/s-monetization-img
 	url = https://github.com/BrightcoveLearning/s-monetization-img
   branch = main
+[submodule "_data/s-site-assets-data"]
+	path = _data/s-site-assets-data
+	url = https://github.com/BrightcoveLearning/s-site-assets-data

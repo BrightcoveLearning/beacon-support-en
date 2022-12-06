@@ -11,6 +11,7 @@ git submodule add https://github.com/BrightcoveLearning/s-general
 git submodule add https://github.com/BrightcoveLearning/s-support
 git submodule add https://github.com/BrightcoveLearning/s-training
 git submodule add https://github.com/BrightcoveLearning/s-monetization
+git submodule add https://github.com/BrightcoveLearning/s-template-page-includes
 cd ..
 cd assets/images
 git submodule add https://github.com/BrightcoveLearning/s-ott-plugins-img

@@ -1249,13 +1249,16 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
   <section class="bcls-section">
     <h2 id="Introduction">Introduction</h2>
-    <p>3-Domain Secure (3D Secure or 3DS) authentication provides an extra level of security with online purchases by requiring customers to complete an addititional verification step.  This authentication is based on a three-domain model:</p>
+    <p>3-Domain Secure (3D Secure or 3DS) authentication provides an extra level of security with online purchases by requiring customers to complete an addititional verification step.  This authentication is based on a three-domain model. Each domain refers to a party in the authentication process:</p>
     <ul>
-      <li>Acquirer domain - the bank and merchant to which the money is being paid</li>
-      <li>Issuer domain - the card issuer</li>
-      <li>Interoperability Domain - the infrastructure provided by the payment card to support the 3D Secure protocol</li>
+      <li>Acquirer domain - The bank or merchant to which the money is being paid</li>
+      <li>Issuer domain - The cardholder's issuing bank</li>
+      <li>Interoperability Domain - The underlying systems that support 3DS</li>
     </ul>
     <p>3D Secure incorporates a one-time passcode sent as part of an SMS text message to the user's mobile phone or email for authentication.</p>
+    <figure class="bcls-figure">
+      <img class="bcls-image--no-border" src="/assets/images/s-monetization-img/3d-secure/3D Secure Authentication.svg" alt="3D Secure authentication diagram">
+    </figure>
 
     <h3>Platform</h3>
     <p>Beacon viewers will be able to purchase content through Stripe using cards that support 3D secure protection on the following platform:</p>

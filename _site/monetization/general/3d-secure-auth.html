@@ -1269,7 +1269,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
       <img class="bcls-image--no-border" src="/assets/images/s-monetization-img/3d-secure/3D Secure Authentication.svg" alt="3D Secure authentication diagram">
     </figure>
     
-    <p>The following steps occur outside of the Beacon app:</p>
+    <p>The credit card verification steps occur outside of the Beacon app:</p>
     <ol class="bcls-tasklist">
       <li>Viewers are directed to a 3DS page and asked to verify that they are the rightful card owner by supplying a password or PIN</li>
       <li>The PIN is a one-time value that they receive via phone or SMS</li>
@@ -1286,10 +1286,11 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
   <section class="bcls-section">
     <h2 id="Configuration">Configuration</h2>
-    <p>To use 3D Secure authentication, you need to login to the Stripe dashboard and configure the following: </p>
-    <ul>
-      <li><a href="https://dashboard.stripe.com/login?redirect=%2Fsettings%2Fradar%2Frules">3D Secure Radar rules</a></li>
-    </ul>
+    <p>To use 3D Secure authentication, do the following: </p>
+    <ol class="bcls-tasklist-restart">
+      <li>Contact your Brightcove OTT Delivery Team to enable this feature.</li>
+      <li>Login to the Stripe dashboard and configure your <a href="https://dashboard.stripe.com/login?redirect=%2Fsettings%2Fradar%2Frules">3D Secure Radar rules</a></li>
+    </ol>
   </section>
 
   <section class="bcls-section">
@@ -1321,7 +1322,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
         </figure>
       </li>
       <li>
-        <p>Enter the verification code.</p>
+        <p>If the credit card is 3D supported, then the bank associated with the card will handle the verification steps. This test page allows the Brightcove developers to test the response from the verification.</p>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/s-monetization-img/3d-secure/verification-code.webp" alt="Verification code">
         </figure>

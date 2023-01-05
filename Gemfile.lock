@@ -12,7 +12,6 @@ GEM
     ffi (1.15.5)
     forwardable-extended (2.6.0)
     google-protobuf (3.21.12)
-    google-protobuf (3.21.12-x86_64-darwin)
     http_parser.rb (0.8.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
@@ -79,12 +78,13 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2022.7)
       tzinfo (>= 1.0.0)
-    unicode-display_width (2.4.1)
+    unicode-display_width (2.4.2)
     wdm (0.1.1)
     webrick (1.7.0)
 
 PLATFORMS
   arm64-darwin-21
+  arm64-darwin-22
   x86_64-darwin-19
   x86_64-darwin-21
   x86_64-darwin-22
@@ -102,4 +102,4 @@ DEPENDENCIES
   webrick
 
 BUNDLED WITH
-   2.3.13
+   2.4.2

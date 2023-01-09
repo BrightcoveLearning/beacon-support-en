@@ -111,6 +111,8 @@
     - name: General
       url: '/monetization/general/index.html'
       docs:
+        - name: 3D Secure Authentication
+          url: /monetization/general/3d-secure-auth.html
         - name: Creating a Stripe Account
           url: /monetization/general/creating-stripe-account.html
         - name: Creating an SVOD Plan

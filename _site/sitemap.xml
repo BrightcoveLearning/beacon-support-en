@@ -166,7 +166,7 @@
         
           <url>
             
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/cloud-playout-overview.html</loc>
+              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/getting-started/index.html</loc>
             
             <lastmod>2023-01-21</lastmod>
             <changefreq>daily</changefreq>
@@ -175,7 +175,7 @@
         
           <url>
             
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/cloud-playout-stream-vod.html</loc>
+              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/general/index.html</loc>
             
             <lastmod>2023-01-21</lastmod>
             <changefreq>daily</changefreq>
@@ -184,7 +184,7 @@
         
           <url>
             
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/channel-live-redundancy.html</loc>
+              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/managing-content/index.html</loc>
             
             <lastmod>2023-01-21</lastmod>
             <changefreq>daily</changefreq>
@@ -193,7 +193,7 @@
         
           <url>
             
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/configuring-s3-buckets.html</loc>
+              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/monetization/index.html</loc>
             
             <lastmod>2023-01-21</lastmod>
             <changefreq>daily</changefreq>
@@ -202,124 +202,7 @@
         
           <url>
             
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/cloud-playout-add-content.html</loc>
-            
-            <lastmod>2023-01-21</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/managing-programs.html</loc>
-            
-            <lastmod>2023-01-21</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/managing-slates.html</loc>
-            
-            <lastmod>2023-01-21</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/static-image-overlays.html</loc>
-            
-            <lastmod>2023-01-21</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/dynamic-overlays.html</loc>
-            
-            <lastmod>2023-01-21</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/import-captions.html</loc>
-            
-            <lastmod>2023-01-21</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/hard-start.html</loc>
-            
-            <lastmod>2023-01-21</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/searching-for-channels.html</loc>
-            
-            <lastmod>2023-01-21</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/using-channel-actions.html</loc>
-            
-            <lastmod>2023-01-21</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/adding-bumpers-to-vod.html</loc>
-            
-            <lastmod>2023-01-21</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/enabling-server-side-ads.html</loc>
-            
-            <lastmod>2023-01-21</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/mid-roll-ad-insertion.html</loc>
-            
-            <lastmod>2023-01-21</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/publish-channel-beacon.html</loc>
-            
-            <lastmod>2023-01-21</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-        
-          <url>
-            
-              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/viewing-channel-output-and-analytics.html</loc>
+              <loc>https://beacon.support.brightcove.com/using-brightcove-beacon/cloud-playout/publishing/index.html</loc>
             
             <lastmod>2023-01-21</lastmod>
             <changefreq>daily</changefreq>

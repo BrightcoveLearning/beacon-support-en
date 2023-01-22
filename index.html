@@ -1,7 +1,41 @@
 ---
 title: Brightcove Beacon Home
+layout: landing_page
 ---
-<article class="landing-page-wrapper">
+<!-- main content -->
+<div class="page-content">
+  <div class="container">
+    <div class="docs-overview py-5">
+      <div class="row justify-content-center">
+
+
+        {% for section in site.data.navigation offset:1 %}
+        <div class="col-12 col-lg-4 py-3">
+          <div class="card card-hover shadow-sm">
+
+            <div class="card-body">
+              <h5 class="card-title mb-3">
+                <span class="span-icon card-icon-holder icon-theme me-2">
+                  <i class="{{ section.icon }}"></i>
+                </span><!--//card-icon-holder-->
+                <span class="card-title-text">{{ section.name }}</span>
+              </h5>
+              <div class="card-text">
+                {{ section.description }}
+              </div>
+              <a class="card-link-mask" href="{{ section.url }}"></a>
+            </div><!--//card-body-->
+          </div><!--//card-->
+        </div><!--//col-->
+        {% endfor %}
+      </div><!--//row-->
+    </div><!--//container-->
+  </div><!--//container-->
+</div><!--//page-content-->
+
+
+
+<!-- <article class="landing-page-wrapper">
   <h1 style="font-weight: bold;">{{ page.title }}</h1>
   <section class="landing-page-header" id="landing_page_header">
     <p>{{ site.description }}</p>
@@ -16,11 +50,11 @@ title: Brightcove Beacon Home
         <ul class="bcls-topic-list">
           {% for entry in item.docs %}
           <li><a href="{{ entry.url }}">{{ entry.name }}</a></li>
-					{% if entry.docs != nil %}
-					{% for subentry in entry.docs %}
+          {% if entry.docs != nil %}
+          {% for subentry in entry.docs %}
           <li>- <a href="{{ subentry.url }}">{{ subentry.name }}</a></li>
-					{% endfor %}
-					{% endif %}
+          {% endfor %}
+          {% endif %}
           {% endfor %}
         </ul>
       </div>
@@ -28,4 +62,4 @@ title: Brightcove Beacon Home
     {% endif %}
     {% endfor %}
   </section>
-</article>
+</article> -->

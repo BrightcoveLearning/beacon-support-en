@@ -6,6 +6,7 @@ var BCLS = (function (window, document) {
     writePropsButton = document.getElementById('writePropsButton'),
     rokuRadioButtons = document.getElementById('rokuRadioButtons'),
     notRokuRadioButtons = document.getElementById('notRokuRadioButtons'),
+    summaryResponse = document.getElementById('summaryResponse'),
     proxyURL = 'https://solutions.brightcove.com/bcls/bcls-proxy/live-proxy.php',
     regions = ['us-west-2', 'us-east-1', 'ap-northeast-1', 'ap-southeast-1', 'ap-southeast-2', 'ap-south-1', 'eu-central-1', 'eu-west-1', 'sa-east-1'],
     apiKey = '',
@@ -48,7 +49,7 @@ var BCLS = (function (window, document) {
     } else {
       console.log('Changing not Roku');
       adConfig.application_ad_configuration.enable_roku_workarounds = false;
-      adConfig.application_ad_configuration.ad_configuration_client_sdk_enabled = false;
+      adConfig.application_ad_configuration.ad_configuration_client_sdk_enabled = true;
       delete adConfig.application_type;
   }
     urlWithID = 'https://api.bcovlive.io/v1/ssai/applications/application/' + IDValue;
@@ -61,8 +62,10 @@ var BCLS = (function (window, document) {
     makeRequest(options, function(response) {
       if (isJson(response)) {
         responseDecodedUpdate = JSON.parse(response);
-        console.log('responseDecodedUpdate', responseDecodedUpdate);
-        apiResponse.textContent = JSON.stringify(responseDecodedUpdate, null, '  ');
+        //console.log('responseDecodedUpdate', responseDecodedUpdate);
+        summaryResponse.innerHTML +=
+          responseDecodedUpdate.application.application_description + ": " + responseDecodedUpdate.action + "<br>";
+        //apiResponse.textContent += JSON.stringify(responseDecodedUpdate, null, '  ') + '<br>';
       } else {
         apiResponse.textContent = response;
       }

@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <title>Creating an SVOD Plan - Updated</title>
+        
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="In this topic, you will learn how to configure a video SVOD (subscription video on demand) plan using the Commerce tab of Brightcove Beacon. The SVOD plan implements monetization. To learn how to apply the SVOD plan to videos see the Using an SVOD Plan document.">
+        
+        <!-- Google Font -->
+        <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+        <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+        
+        <!-- FontAwesome JS-->
+        <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
+        
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
+
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/css/theme.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/custom-css/styles.css">
+
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+        <script translate="no">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XBJC11HF8Z');
+        </script>
+        <script src="/assets/s-site-assets-scripts/sixth-sense.js"></script>
+        <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
+        <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
+
+    </head> 
+
+    <body class="docs-page">
+
+
+<header class="header fixed-top">
+  <div class="branding docs-branding">
+    <div class="container-fluid position-relative py-2">
+      <div class="docs-logo-wrapper">
+        <button id="docs-sidebar-toggler" class="docs-sidebar-toggler"
+          type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="site-logo"><a class="navbar-brand"
+            href="https://support.brightcove.com/"
+            style="margin-left: 15px;">
+            <img class="logo-icon me-2"
+              src="/assets/s-site-assets-template-stylesheets/images/bc_logo_black_1@1x.png"
+              alt="logo" style="margin-bottom: 9px;">
+            <!-- <span class="logo-text">BRIGHTCOVE</span> -->
+          </a></div>
+      </div><!--//docs-logo-wrapper-->
+
+      <div class="docs-top-utilities d-flex justify-content-end
+        align-items-center">
+        
+        <!-- Search bar -->
+        <div id="nav-search-box" class="top-search-box d-none d-lg-flex" style="margin-right: 10px ;"></div>
+
+<select id="site_select" class="form-select select-focus" style="width:
+          20%; margin-right: 10px;" translate="no">
+          <option value="">Other Brightcove Docs</option>
+          
+          
+          <option value="https://support.brightcove.com" translate="no">Documentation Home</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD --</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+          
+          
+          
+          <option value="https://mstudio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+          
+          
+          
+          <option value="https://player.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+          
+          
+          
+          <option value="https://apis.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+          
+          
+          
+          <option value="https://sdks.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+          
+          
+          
+          <option value="https://integrations.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+          
+          
+          
+          <option value="https://general.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO ESSENTIALS --</option>
+          
+          
+          
+          <option value="https://audience-insights.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+          
+          
+          
+          <option value="https://beacon-help.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+          
+          
+          
+          <option value="https://beacon.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+          
+          
+          
+          <option value="https://corptv.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+          
+          
+          
+          <option value="https://live.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+          
+          
+          
+          <option value="https://zencoder.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD ADD-ONS --</option>
+          
+          
+          
+          <option value="https://gallery.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com/social/index.html" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+          
+          
+          
+          <option value="https://interactivity.support.brightcove.com/index.html" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Interactivity</option>
+          
+          
+          
+          <option value="https://ssai.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+          
+          
+          
+          <option value="https://campaign.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Campaign</option>
+          
+          
+        </select>
+
+        <select id="language_select" class="form-select select-focus" style="width: 10%;"
+          onchange="doGTranslate(this);" translate="no">
+          <!-- <option value="">Select Language</option> -->
+          <option value="en|en" translate="No">English</option>
+          <option value="en|zh-TW" translate="No">繁體中文</option>
+          <option value="en|fr" translate="No">Français</option>
+          <option value="en|de" translate="No">Deutsche</option>
+          <option value="en|ja" translate="No">日本語</option>
+          <option value="en|ko" translate="No">한국어</option>
+          <option value="en|es" translate="No">Español</option>
+        </select>
+
+        <script translate="no">
+          /* <![CDATA[ */
+          function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+          /* ]]> */
+        </script>
+      </div>
+    </div>
+  </div>
+</header><!--//header-->
+
+<div class="docs-wrapper">
+  <div id="docs-sidebar" class="docs-sidebar" style="padding-right: 15px;">
+    <div id="nav-search-box" class="top-search-box d-lg-none p-3"></div>
+    <div class="row">
+      
+        <div id="side_nav" style="margin-left: 1em; display: inline-block; border-right: 1px solid #e5e5e6; padding-right: 1em;">
+          
+          <nav class="docs-nav sidenav" aria-label="Main">
+            <ul class="site-nav" style="list-style-type: none;">
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/index.html">Home</a></li>
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/getting-started/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Getting Started</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/learning-guide-bc-beacon.html">Learning Guide</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/implementation-phases.html">Implementation Phases</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/app-design-considerations.html">Application Design Considerations</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/creating-your-app-design-info-architecture.html">App Design - Info Architecture</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/creating-your-app-design-layout-options.html">App Design - Layout Options</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/design-best-practices.html">Design Best Practices</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/syncing-with-video-cloud/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Syncing with Video Cloud</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/syncing-with-video-cloud/syncing-video-cloud-catalog.html">Syncing with the Video Cloud Catalog</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/using-brightcove-beacon/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Using Brightcove Beacon</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/adding-trailer-movie.html">Adding a Trailer to a Movie</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/adding-to-page.html">Adding a Carousel to a Page</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/authentication-using-oauth.html">Authentication Using OAuth</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/roles-as-rights.html">Controlling Viewer Access with Roles</a></li>
+              
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Cloud Playout Channels</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/getting-started/index.html"><span class="theme-icon-holder me-2">
+                      <i class="fa-solid fa-minus"></i><span>&nbsp;Getting Started</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/getting-started/cloud-playout-overview.html">Overview: Cloud Playout</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/getting-started/cloud-playout-stream-vod.html">Creating a Cloud Playout Channel</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/general/index.html"><span class="theme-icon-holder me-2">
+                      <i class="fa-solid fa-minus"></i><span>&nbsp;General Information</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/general/configuring-s3-buckets.html">Configuring S3 Buckets</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/general/channel-live-redundancy.html">Using Live Redundancy with Channels</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/general/managing-slates.html">Managing Slates</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/general/searching-for-channels.html">Searching for Channels</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/managing-content/index.html"><span class="theme-icon-holder me-2">
+                      <i class="fa-solid fa-minus"></i><span>&nbsp;Managing Channel Content</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/managing-content/cloud-playout-add-content.html">Managing the Channel Program</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/managing-content/managing-programs.html">Managing Multiple Programs</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/managing-content/static-image-overlays.html">Adding Static Image Overlays</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/managing-content/dynamic-overlays.html">Adding Dynamic Overlays</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/managing-content/adding-bumpers-to-vod.html">Adding Bumpers to Cloud Playout</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/managing-content/import-captions.html">Importing Captions</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/monetization/index.html"><span class="theme-icon-holder me-2">
+                      <i class="fa-solid fa-minus"></i><span>&nbsp;Monetizing Channels</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/monetization/enabling-server-side-ads.html">Monetizing Cloud Playout</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/monetization/mid-roll-ad-insertion.html">Adding Mid-Roll Ads to a Channel</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/publishing/index.html"><span class="theme-icon-holder me-2">
+                      <i class="fa-solid fa-minus"></i><span>&nbsp;Publishing Channels</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/publishing/hard-start.html">Setting a Hard Start for a Channel</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/publishing/publish-channel-beacon.html">Publishing a Cloud Playout Channel</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/publishing/using-channel-actions.html">Using Channel Actions</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/publishing/viewing-channel-output-and-analytics.html">Viewing Channel Output and Analytics</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/creating-a-channel.html">Creating a Beacon Channel</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/electronic-program-guides.html">Creating an Electronic Program Guide (EPG)</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/creating-a-page.html">Creating a New Page</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/creating-a-playlist.html">Creating a Playlist</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/series-seasons-episodes.html">Creating Series/Seasons/Episodes</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/setup-beacon-web-app.html">Setup for the Beacon Web App</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/including-non-configurable-pages.html">Including Non-Configurable Pages</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/introducing-pages.html">Introducing Pages</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/forensic-watermarking-with-beacon.html">Protecting Content with Forensic Watermarking</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/sending-app-notifications.html">Sending App Notifications</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/streaming-live-event.html">Streaming a Live Event</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/streaming-vods-to-a-channel.html">Streaming VODs to a Channel</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/using-multiple-languages.html">Using Multiple Languages</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/tools.html">Using the Tools</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/monetization/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Monetization</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/monetization/general/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;General</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/3d-secure-auth.html">3D Secure Authentication</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/creating-stripe-account.html">Creating a Stripe Account</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/creating-svod-plan.html">Creating an SVOD Plan</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/creating-tvod-plan.html">Creating a TVOD Plan</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/promo-codes.html">Creating Promo Coupons</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/vc-custom-fields.html">Custom Fields for Monetization</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/implementing-authvod.html">Implementing AuthVOD</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/receive-iap-notifications.html">Receiving In-App Purchase Notifications</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/resources.html">Resources for Monetization</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/stripe-custom-metadata.html">Subscription Info with Stripe Metadata</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/monetization-options.html">Understanding Monetization Options</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/using-svod-plan.html">Using an SVOD Plan</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/using-tvod-plan.html">Using a TVOD Plan</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/monetization/ssai/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;SSAI</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/ssai/advertisement.html">Creating an Advertisement</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/ssai/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/ssai/config-live-ssai-beacon-channel.html">Configuring Live SSAI with Beacon Channels</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/ssai/live-ssai.html">Implementing Live SSAI Events</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/ssai/vod-ssai.html">Implementing VOD SSAI</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/ssai/beacon-apps-ad-targeting.html">Beacon Apps Ad Targeting</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/beacon-web-store/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Beacon Web Store</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/beacon-web-store/beacon-webstore-overview.html">Overview: Brightcove Beacon Web Store</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/beacon-web-store/integration-details.html">Integrating with the Beacon Web Store</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/beacon-web-store/beacon-store-webhook-reference.html">Beacon Store Webhook Reference</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/publishing-apps/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;App Publishing and Behavior</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/general/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;General Information</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/general/common-required-info.html">Common Required Information for Submitting Apps</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/general/demo-apps-access.html">Demo Apps Access</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/general/device-apps-validation-guide.html">Device Apps Validation Guide</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/general/in-app-subscription-resources.html">In-App Subscription Resources</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/general/schedule-apps.html">Scheduling App Releases in the App Stores</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/app-behavior/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;App Behavior</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/app-behavior/account-deletion.html">Account Deletion</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/app-behavior/parental-controls.html">Parental Controls</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/android/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Android</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/android/submitting-to-android.html">Submitting New Apps to the Android Store</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/android/updating-android-apps-to-bcb.html">Updating Android Apps to Brightcove Beacon</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/android/adding-subscriptions-in-android.html">Adding Subscriptions to Android</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/android/improving-relevance-android.html">Improving Search Relevance in the Android Play Store</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/android/installing-android-test-build.html">Installing an Android Test Build</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/android/managing-google-subscriptions-1.html">Managing Google Subscriptions Part 1</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/android/managing-google-subscriptions-2.html">Managing Google Subscriptions Part 2</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/fire-tv/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Fire TV</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/fire-tv/add-bc-email.html">Add Brightcove Email to Amazon Account</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/fire-tv/installing-fire-tv-test-build.html">Installing a Fire TV Test Build</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/fire-tv/submitting-to-amazon.html">Submitting to the Amazon Store</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/ios-tvos/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;iOS/tvOS</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/ios-tvos/account-deletion.html">Account Deletion</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/ios-tvos/fairplay-certificate.html">FairPlay Certificate Registration</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/ios-tvos/installing-ios-test-build.html">Installing an iOS/tvOS Test Build</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/ios-tvos/resources.html">Resources</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/ios-tvos/submitting-to-apple.html">Submitting to the Apple Store</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/lg/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;LG</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/lg/installing-lg-webos-test-build.html">Installing a Test Build for LG (webOS)</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/lg/submitting-to-lg.html">Submitting to the LG (webOS) Store</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/roku/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Roku</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/roku/add-bc-user.html">Add Brightcove User to Roku Account</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/roku/configuring-inchannel-products.html">Configuring In-Channel Products in Roku</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/roku/installing-roku-test-build.html">Installing a Roku Test Build</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/roku/submitting-to-roku.html">Submitting to the Roku Store</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/samsung/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Samsung</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/samsung/samsung-partner.html">Becoming a Samsung Partner</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/samsung/installing-samsung-test-build.html">Installing the Samsung Test Build</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/samsung/submitting-to-samsung.html">Submitting to the Samsung Store</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/analytics/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Analytics</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/analytics/analytics-overview.html">Analytics Overview</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/analytics/analytics-business-metrics.html">Beacon Analytics Business Metrics</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/analytics/ga-self-configuration.html">Google Analytics Self Configuration</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/analytics/resources.html">Resources for Analytics</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/analytics/viewing-analytics-data.html">Viewing Analytics Data</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/ott-plugins/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Beacon Plugins</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/learning-guide-beacon-plugins.html">Learning Guide: Beacon Plugins</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/javascript-modules-beacon-plugins.html">Use JavaScript Modules for Plugins</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/dispatching-handling-events.html">Dispatch & Handle Events in Plugins</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/custom-page.html">Creating a Custom Page</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/buttons-and-events.html">Implement Buttons and Event Handlers</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/custom-divs.html">Implement Custom Sections</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/side-panel.html">Implement the Side Panel</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/user-events.html">Implement User Events</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/data-module.html">Storing Data in a Separate Module</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/working-with-page-events.html">Working with Page Events</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/references/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;References</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/branding-beacon-apps.html">Branding Brightcove Beacon Apps</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/common-configuration-settings.html">Common Configuration Settings</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/managing-cookie-consent.html">Cookie Consent Using OneTrust</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/delete-app-user.html">Deleting an App User</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/glossary.html">Glossary</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/how-beacon-gets-data.html">How Brightcove Beacon Gets Data</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/image-requirements.html">Images and Their Specifications</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/known-issues.html">Known Issues</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/login-durations.html">Login Durations</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/oidc-authentication-for-beacon.html">OIDC Configuration and Testing</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/product-updates.html">Product Updates</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/related-content.html">Related Content</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/remote-asset-limitations.html">Remote Asset Limitations</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/beacon-tasks-in-vc.html">Tasks Performed in Video Cloud</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/training/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Training</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-custom-fields.html">Using Video Cloud Videos/Custom Fields</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-design-layout.html">Designing the Application Layout</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-playlists.html">Creating and Using Playlists</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-series-seasons-episodes.html">Creating Series, Seasons and Episodes</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-vod-ssai.html">Implementing VOD Server-Side Ads</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-publish-android-app.html">Publishing the Android App on the Play Store</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-viewing-analytics.html">Viewing Analytics Data</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-streaming-live-bc-beacon.html">Streaming a Live event to Brightcove Beacon</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/support/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Support</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/contact-sales.html">Contact Sales</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/reset-support-portal-password.html">Reset Your Support Portal Password</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+          </ul>
+          </nav>
+        </div>
+      </div>
+    </div><!--//docs-sidebar-->
+  </div>
+</div>
+
+<div style="margin-top: 20px;">
+  <div class="docs-content" style="padding-bottom: 0px;">
+    <div class="container">
+      <div class="docs-overview">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/monetization/">Monetization</a></li>
+            
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/monetization/general/">General</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Creating an SVOD Plan - Updated</li>
+            
+            
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="docs-content">
+  <div class="container">
+    <div class="docs-overview py-5">
+      
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
+      </div>
+      <br>
+      
+      
+<h1>Creating an SVOD Plan - Updated</h1>
+<article class="bcls-article">
+  <summary>In this topic, you will learn how to configure a video SVOD (subscription video on demand) plan using the <strong>Commerce</strong> tab of Brightcove Beacon. The SVOD plan implements monetization. To learn how to apply the SVOD plan to videos see the <a href="/monetization/general/using-svod-plan.html">Using an SVOD Plan</a> document.</summary>
+
+  <section class="bcls-section">
+    <h2 id="Overview">Overview</h2>
+    <p>
+      An SVOD plan defines how a particular set of videos can be purchased by your apps' customers. When creating the package you can, for example, configure the following:
+    </p>
+    <ul>
+      <li>The billing frequency</li>
+      <li>Set if ad supported, and the advertising configuration to use</li>
+      <li>Payment methods</li>
+      <li>Maximum number of streams that can be played simultaneously by a user with the package</li>
+      <li>Start and end dates when the package can be purchased</li>
+      <li>Permitted devices and geo-locations to view videos in the package</li>
+    </ul>
+    
+    <aside class="bcls-aside bcls-aside--warning language-editable">If prices are changed anywhere in Beacon, you must <a href="/using-brightcove-beacon/tools.html#Cache">clear the app cache</a> to be sure prices are consistent in all parts of the Beacon app.</aside>
+    
+  </section>
+  <section class="bcls-section">
+    <h2 id="Creating_SVOD_plans_in_Beacon_Classic">Creating SVOD plans in Beacon Classic</h2>
+    <p>Step through the following steps to create a new package:</p>
+    <ol class="bcls-tasklist">
+      <li>
+        In Brightcove Beacon, select the <strong>Commerce</strong> tab, be sure <strong>SVOD/AuthVOD Plans</strong> is selected in the left navigation, then click <strong>Add New Plan</strong> .
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/initial-menu-selections.png" alt="initial menu selections" />
+        </figure>
+      </li>
+      <!-- Begin Evergent SVOD -->
+      <li>
+        <p>For the <strong>Package</strong> tab, enter details for your SVOD Plan.</p>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/new-svod-plan.webp" alt="New SVOD plan" />
+        </figure>
+
+        <p>This table contains the fields you will find in the <strong>Package</strong> tab: </p>
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th>Field</th>
+              <th>Required</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td><strong>Name</strong></td>
+              <td>Yes</td>
+              <td>Name of the SVOD package</td>
+            </tr>
+            <tr>
+              <td><strong>Billing Frequency</strong></td>
+              <td>Yes</td>
+              <td>
+                Choose the billing frequency for this package
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Trial Period</strong></td>
+              <td>Yes</td>
+              <td>
+                The trial period for this package.
+                Enter <strong>0</strong> for no trial period.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Status</strong></td>
+              <td>Yes</td>
+              <td>
+                Chose if you wish to have the package published so it is available for use. Note that you cannot publish the package until at least one payment method is selected.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Allow Downloads</strong></td>
+              <td>Yes</td>
+              <td>
+                  Set to <strong>Yes</strong> to allow content associated with this plan to be downloaded by the user for offline playback. For details, see the <a href="https://beacon-help.support.brightcove.com/media/offline-playback-beacon.html">Offline Playback with Brightcove Beacon Apps</a> document.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Advertisement</strong></td>
+              <td>Yes</td>
+              <td>
+                Choose if you wish to use advertisements with this package.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Ads Providers</strong></td>
+              <td>No</td>
+              <td>
+                If you have chosen to use ads in the previous step, choose the ad provider. This dropdown is populated with the advertisement configurations listed in the <strong>Advertisement</strong> section of Brightcove Beacon.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Auto Renewal</strong></td>
+              <td>Yes</td>
+              <td>
+                <p>Select <strong>Yes</strong> if you want the subscription to automatically renew.</p>
+                Select <strong>No</strong> if you do NOT want the subscription to automatically renew.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Payment methods to use</strong></td>
+              <td>Yes</td>
+              <td>
+                <p>Note that for each method selected a section opens below the list of payment methods, which you must complete for each selected method.</p>
+                Select one or more of the following types:
+                  <ul>
+                    <li>Amazon</li>
+                    <li>Apple Store</li>
+                    <li>Beacon Store</li>
+                    <li>Evergent</li>
+                    <li>Google Play Store</li>
+                    <li>Roku Store</li>
+                    <li>Stripe</li>
+                  </ul> 
+                <aside class="bcls-aside bcls-aside--information">Brightcove apps can be set up to use either Stripe or Evergent, but not both.</aside>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <p>If you are using Evergent, select <strong>Evergent</strong> to see <strong>Payment methods details</strong>.</p>
+        <aside class="bcls-aside bcls-aside--tip">Availability is for the SVOD package. For example, if the <strong>Permitted locations</strong> is set for the US, then all viewers will be able play a movie or asset associated with this package, but only viewers in the US can subscribe to the asset.</aside>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/evergent-payment-details.webp" alt="Evergent payment details">
+        </figure> 
+        <p>
+          Most of the detail fields are the same across the payment methods, except for the ID (Amazon ID, Apple Store ID, Evergent ID, etc). This table contains the fields for Evergent payment details: </p>
+        <table class="bcls-table">
+          <thead class="bcls-table__head">
+            <tr>
+              <th>Field</th>
+              <th>Required</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody class="bcls-table__body">
+            <tr>
+              <td><strong>Start Time</strong></td>
+              <td>Yes</td>
+              <td>Schedule a starting date this package will be available</td>
+            </tr>
+            <tr>
+                <td><strong>End Time</strong></td>
+                <td>Yes</td>
+                <td>
+                    Schedule an ending date when this package will no longer be available
+                </td>
+            </tr>
+            <tr>
+              <td><strong>Devices to publish</strong></td>
+              <td>Yes</td>
+              <td>
+                  <p>Add the devices you wish to publish to. Select the <strong>Select / Unselect All Devices</strong> to see a list of available devices.</p>
+                  <aside class="bcls-aside bcls-aside--information">
+                    Currenty, the only device supported for TVOD is <strong>web</strong>.
+                </aside>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Permitted locations</strong></td>
+              <td>Yes</td>
+              <td>
+                <p>Select the locations where you want to stream your content, if no restrictions enter <strong>World</strong>.</p>
+                <aside class="bcls-aside bcls-aside--information">
+                    <p>If you don't specify at least 1 permitted location, then you may see this message from your app:</p>
+                    <figure class="bcls-figure">
+                        <img class="bcls-image" src="/assets/images/s-general-img/series-seasons-episodes/no-content.jpg" alt="No content" /> </figure>
+                </aside>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Denied locations</strong></td>
+              <td>No</td>
+              <td>
+                  Select the locations where you DO NOT want to stream your content. Enter <strong>World</strong> if you have no restrictions.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Price</strong></td>
+              <td>Yes</td>
+              <td>
+                  Specify the price that users must pay to view content associated with this package.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Currency</strong></td>
+              <td>Yes</td>
+              <td>
+                  Specify the currency type for the package price.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Evergent ID</strong></td>
+              <td>Yes</td>
+              <td>
+                Evergent ID is sent to Evergent so that you can identify the package.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+       <!-- End Evergent SVOD -->
+      <!-- <li>
+        On the <strong>Package</strong> tab (screenshot below), complete the following:
+        <ul>
+          <li>
+            <strong>Name</strong> : The name of the package that is used in the Video Cloud custom fields for a video.
+          </li>
+          <li>
+            <strong>Billing Frequency</strong> : Choose the billing frequency for this package.
+          </li>
+          <li>
+            <strong>Trial Period</strong> : The trial period for this package.
+            Enter <strong>0</strong> for no trial period.
+          </li>
+          <li>
+            <strong>Status</strong> : Chose if you wish to have the package published so it is available for use. Note that you cannot publish the package until at least one payment method is selected.
+          </li>
+          <li>
+            <strong>Advertisement</strong> : Choose if you wish to use advertisements with this package.
+          </li>
+          <li>
+            <strong>Ads Providers</strong> : If you have chosen to use ads in the previous step, choose the ad provider. This dropdown is populated with the advertisement configurations listed in the <strong>Advertisement</strong> section of Brightcove Beacon.
+          </li>
+          <li>
+            <strong>Payment methods to use</strong> : Select the payment methods you want to use with this package. Note that for each method selected a section opens below the list of payment methods, which you must complete for each selected method. The screenshot below shows <strong>Stripe (in yellow)</strong> and <strong>Apple Store (in red)</strong> are selected.
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/payment-method-details.png" alt="payment method details" />
+            </figure>
+          </li>
+        </ul>     
+      </li> -->
+      <li>
+        Click the <strong>Create Package</strong> button to save your current package configuration.
+      </li>
+      <li>
+        On the <strong>Textual Data</strong> tab, complete the following: <ul>
+          <li><strong>Pack Name</strong> : Name shown to users.</li>
+          <li>
+            <strong>Headline</strong> : Headline shown to users, for example <em>Holiday Special!</em> .
+          </li>
+        </ul>
+      </li>
+      <li>
+        Click the <strong>Create Package</strong> button to save your current package configuration.
+      </li>
+      <li>
+        On the <strong>Non-Textual Data</strong> tab, supply an image for use next to the package name.
+        <!-- The size of the image should be !!!!!!!!!!!!!!!!. -->
+      </li>
+      <li>
+        Click the <strong>Create Package</strong> button to save your current package configuration.
+      </li>
+      <li>
+        The <strong>Content</strong> tab is not for use at the current time.
+      </li>
+      <li>
+        On the <strong>Streams</strong> tab, complete the following: <ul>
+          <li>
+            <strong>Max Streams</strong> : Maximum number of connected devices that can be streaming at the same time.
+          </li>
+          <li>
+            <strong>Max Devices</strong> : Maximum number of connected devices that can have active connections.
+            <aside class="bcls-aside bcls-aside--information"> The two settings above are also set globally, so use these settings ONLY IF you wish to override the global settings in this package.
+            </aside>
+          </li>
+          <li>
+            <strong>Advanced Streams</strong> : Set this to <strong>Yes</strong> if you wish to customize the rights this package sets. The available changes are shown in the following screenshot:
+            <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/advanced-stream-rights.png" alt="advanced stream rights" />
+            </figure>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Click the <strong>Add new Right</strong> button to save your newly configured, customized rights.
+      </li>
+      <li>
+        Click the <strong>Create Package</strong> button to save your current package configuration.
+      </li>
+    </ol>
+    <p>That's it for the package creation!</p>
+  </section>
+  <!-- <section class="bcls-section"> <h2 id="Using_the_package_in_Video_Cloud"> Using the package in Video Cloud </h2> <p> Although the package is created in Brightcove Beacon, it is not applied to content in there. To use the package, and apply it to video content you use Video Cloud custom fields. </p> </section> -->
+
+  <section class="bcls-section">
+    <h2 id="Unpublishing">Unpublishing or deleting a package</h2>
+    <p>If a package is no longer needed you have two options:</p>
+    <ul>
+      <li><strong>Unpublish</strong>: You can unpublish a package that is needed again. For instance, you have a special package associated with a holiday that you use year after year. This is a good use case for unpublish.</li>
+      <li><strong>Delete</strong>: You can delete a package and it is not recoverable. For instance, you have an introductory package for a new set of content, but that content will not be new again, so you will not need the package again. This is a good use case for delete.</li>
+    </ul>
+    <p>There are two places you can unpublish/delete a package:</p>
+    <ul>
+      <li>From the <strong>SVOD/AuthVOD Plans</strong> section check the package(s) you wish to unpublish/delete then click the appropriate button.<figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/implementing-authvod/unpublish-delete.png" alt="unpublish delete">
+        </figure>
+      </li>
+      <li>If you are editing the package, from the <strong>Package</strong> tab you can both unpublish and delete. Use the <strong>Status</strong> to unpublish or the <strong>Delete</strong> button to delete.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/implementing-authvod/unpublish-delete-edit.png" alt="unpublish delete when editing">
+        </figure>
+      </li>
+    </ul>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="Creating_a_Stripe_Coupon">Creating a Stripe Coupon</h2>
+    <p>
+      Coupons can be created to provide a discount, either a fixed monetary discount or a percentage discount, that can be applied when purchasing a package.
+    </p>
+    <ol class="bcls-tasklist-restart">
+      <li>
+        In Brightcove Beacon, select the <strong>Commerce</strong> tab, then click <strong>Coupons by Stripe</strong> and finally click <strong>Add New Voucher</strong>.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/coupon-menu-selection.png" alt="coupon menu selections" />
+        </figure>
+      </li>
+      <li>
+        On the <strong>Create New Coupons</strong> form (screenshot below), complete the following:
+        <ul>
+          <li>
+            <strong>Id</strong> : Code that viewers enter in the Brightcove Beacon app to use the coupon
+          </li>
+          <li><strong>Name</strong> : A friendly name for the coupon that can be displayed in invoices</li>
+          <li>
+            <strong>Duration</strong> : Choose from <strong>Once</strong>, <strong>Forever</strong> or <strong>Repeating</strong>;<br /> If <strong>Repeating</strong> is selected, then set the number of months it can repeatedly be used.
+          </li>
+          <li>
+            For
+            <strong>Discount type</strong>
+            select one of the following:
+            <ul>
+              <li>
+                <strong>Monetary Amount</strong>: Enter the value of, and currency for, the coupon
+              </li>
+              <li>
+                <strong>Percentage</strong>: Enter the percentage of discount the coupon carries
+              </li>
+            </ul>
+            <p>
+              Example: If the discount is 3 months free, then set the <strong>Duration</strong> to <strong>Repeating</strong> with 3 months and set the <strong>Discount type</strong> with <strong>Percentage</strong> of 100% </p>
+          </li>
+          <li>
+            <strong>Limit Date (UTC)</strong> : Select the last date the coupon can be used
+          </li>
+          <li>
+            <strong>Max redemption</strong> : Enter the maximum number of redemptions for the coupon; for instance only 50 customers can redeem the coupon
+          </li>
+          <li>
+            <strong>Select Packages</strong> : Select the packages to which the coupon can be applied; if you do not select a package the coupon can be applied to all packages<br />
+            Example: The coupon is only valid if you purchase the yearly subscription
+          </li>
+        </ul>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/new-coupon-form.png" alt="coupon form" />
+        </figure>
+      </li>
+      <li>
+        <p>
+          Be sure to click the <strong>Save</strong> button to save your new coupon.
+        </p>
+      </li>
+    </ol>
+    <p>
+      In the Brightcove Beacon app when a package purchase takes place, viewers are able to enter the coupon <strong>Id</strong>: </p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/use-coupon.png" alt="use coupon form" />
+    </figure>
+    <p>
+      Alternatively, you can create coupons directly in your Stripe account, and then use them in Brightcove Beacon.
+    </p>
+    <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-monetization-img/creating-subscription-package/stripe-coupon-form.png" alt="use coupon form" />
+    </figure>
+  </section>
+</article>'
+<!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
+  
+  <nav class="right-side-nav" id="right_side_nav">
+    <h6 class="toc">Page Contents</h6>
+    <ul id="in_page_nav" class="list-none"></ul>
+  </nav>
+  
+<!-- </div> -->
+</div>
+</div>
+</div>
+<div class="page-content" style="background-color: rgb(1, 5, 14);">
+  <div class="container" style="width: 50%;">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Brightcove Support</h5>
+          <ul class="list-unstyled text-small" style="color: white ;">
+            <li><a class="a-text" href="https://status.brightcove.com">System Status</a></li>
+            <li><a class="a-text" href="https://supportportal.brightcove.com">Contact Support</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/search.html">Search all documentation</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Training</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li>
+            <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/register-training.html">Register for a course</a></li>
+            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove Academy</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Brightcove</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
+            <li><a class="a-text" href="https://community.brightcove.com/s/">Bright Spot Community Forum</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">Product release notes</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">Documentation updates</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© Brightcove Inc. All rights reserved.</p>
+      <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">Privacy</a> 
+      <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a>
+
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
+        title="LinkedIn" target="_blank" class="gf-social-linkedin"
+        style="margin-right: 1rem;"><i data-feather="linkedin"
+          style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a
+        href="https://twitter.com/brightcove" title="Twitter" target="_blank"
+        class="gf-social-twitter" style="margin-right: 1rem;"><i
+          data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a
+        href="https://www.facebook.com/Brightcove" title="Facebook"
+        target="_blank" class="gf-social-facebook"><i data-feather="facebook"
+          style="color:#8E9093;height: 1.25rem;"></i></a></li>
+      </ul>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+<script translate="no">
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documentation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder,
+    styling: {
+      components: {
+        
+        input: {
+          container: {
+          backgroundColor: 'white',
+          }
+        
+        }
+      }
+    },
+    maxSuggestions: 5, // Maximum number of suggestions to show
+      attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+
+  
+
+
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+    window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+  </script>
+  
+  <!-- Javascript -->          
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+
+
+  <!-- Page Specific JS -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+  <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+  <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
+
+  <!-- original footer components -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  <script src="/assets/s-site-assets-scripts/selector.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  
+  <script translate="no">
+    feather.replace()
+  </script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+  <style translate="no">
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+  </body>
+</html> 

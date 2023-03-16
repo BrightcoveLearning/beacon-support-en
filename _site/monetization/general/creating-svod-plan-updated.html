@@ -1706,8 +1706,14 @@
     <h2 id="Unpublishing">Unpublishing or deleting a package</h2>
     <p>If a package is no longer needed you have two options:</p>
     <ul>
-      <li><strong>Unpublish</strong>: You can unpublish a package that is needed again. For instance, you have a special package associated with a holiday that you use year after year. This is a good use case for unpublish.</li>
-      <li><strong>Delete</strong>: You can delete a package and it is not recoverable. For instance, you have an introductory package for a new set of content, but that content will not be new again, so you will not need the package again. This is a good use case for delete.</li>
+      <li><p><strong>Unpublish</strong>: You can unpublish a package that is needed again. For instance, you have a special package associated with a holiday that you use year after year. This is a good use case for unpublish.</p>
+        <aside class="bcls-aside bcls-aside--information">Unpublishing a package means viewers cannot subscribe to it anymore, but all the current subscriptions will continue. 
+          Subscriptions will STILL renew on the store until the viewer cancels it.</aside>
+      </li>
+      <li><p><strong>Delete</strong>: Deleting a package is not recoverable. Deleting a package means that ALL viewers with subscriptions will lose entitlements, even if the store says they have a subscription or if it just renewed on the store. </p>
+        <!-- <p><strong>Delete</strong>: You can delete a package and it is not recoverable. For instance, you have an introductory package for a new set of content, but that content will not be new again, so you will not need the package again.</p> -->
+        <aside class="bcls-aside bcls-aside--information">Brightcove DOES NOT allow you to delete a package that contains viewers with active subscriptions. In most cases, Brightcove DOES NOT recommend deleting a package.</aside>
+      </li>
     </ul>
     <p>There are two places you can unpublish/delete a package:</p>
     <ul>

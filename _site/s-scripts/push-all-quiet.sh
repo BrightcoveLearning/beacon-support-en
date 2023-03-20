@@ -10,7 +10,9 @@ bold=`tput bold`
 normal=`tput sgr0`
 git pull --quiet
 git add . > /dev/null
-git commit --quiet -m $COMMITMESSAGE 
+echo '13'
+git commit --quiet -m $COMMITMESSAGE
+echo '15'
 git push --quiet
 git submodule --quiet foreach "git fetch origin main --quiet"
 git submodule --quiet foreach "git checkout main --quiet ; git pull --quiet; git add . > /dev/null; git commit --quiet -m '$COMMITMESSAGE'; git push --quiet"

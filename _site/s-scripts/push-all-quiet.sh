@@ -14,8 +14,13 @@ echo '13'
 git commit --quiet -m $COMMITMESSAGE
 echo '15'
 git push --quiet
+echo '17'
 git submodule --quiet foreach "git fetch origin main --quiet"
+echo '19'
 git submodule --quiet foreach "git checkout main --quiet ; git pull --quiet; git add . > /dev/null; git commit --quiet -m '$COMMITMESSAGE'; git push --quiet"
+echo '21'
 git add . > /dev/null
+echo '23'
 git commit --quiet -m '$COMMITMESSAGE'
+echo '25'
 git push --quiet

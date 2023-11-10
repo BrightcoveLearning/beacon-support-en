@@ -1,0 +1,3328 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <title>Roku SDK Developer Guide</title>
+        
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="In this topic, you will learn how to set the Brightcove Roku SDK">
+        
+        <!-- Google Font -->
+        <link href="/assets/s-site-assets-stylesheets/fonts/poppins.css" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/fonts/articulat-site.css">
+        <link href="/assets/s-site-assets-stylesheets/fonts/source-code-pro.css" rel="stylesheet">
+        
+        <!-- FontAwesome JS-->
+        <script src="https://kit.fontawesome.com/d67c74a882.js" crossorigin="anonymous"></script>  
+        
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.css">
+
+        <!-- Theme CSS -->  
+        <link id="theme-style" rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/css/theme.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-stylesheets/prism.css">
+        <link rel="stylesheet" href="/assets/s-site-assets-template-stylesheets/custom-css/styles.css">
+
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XBJC11HF8Z"></script>
+        <script translate="no">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XBJC11HF8Z');
+        </script>
+        <script src="/assets/s-site-assets-scripts/sixth-sense.js"></script>
+        <script src="/assets/s-site-assets-scripts/sajari-head.js"></script>
+        <script src="/assets/s-site-assets-scripts/feather.min.js"></script>
+
+    </head> 
+
+    <body class="docs-page">
+
+
+<header class="header fixed-top">
+  <div class="branding docs-branding">
+    <div class="container-fluid position-relative py-2">
+      <div class="docs-logo-wrapper">
+        <button id="docs-sidebar-toggler" class="docs-sidebar-toggler"
+          type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="site-logo"><a class="navbar-brand"
+            href="https://support.brightcove.com/"
+            style="margin-left: 15px;">
+            <img class="logo-icon me-2"
+              src="/assets/s-site-assets-template-stylesheets/images/bc_logo_black_1@1x.png"
+              alt="logo" style="margin-bottom: 9px;">
+            <!-- <span class="logo-text">BRIGHTCOVE</span> -->
+          </a></div>
+      </div><!--//docs-logo-wrapper-->
+
+      <div class="docs-top-utilities d-flex justify-content-end
+        align-items-center">
+        
+        <!-- Search bar -->
+        <div id="nav-search-box" class="top-search-box d-none d-lg-flex" style="margin-right: 10px ;"></div>
+
+<select id="site_select" class="form-select select-focus" style="width:
+          20%; margin-right: 10px;" translate="no">
+          <option value="">Other Brightcove Docs</option>
+          
+          
+          <option value="https://support.brightcove.com" translate="no">Documentation Home</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD --</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Studio</option>
+          
+          
+          
+          <option value="https://mstudio.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Marketing Studio</option>
+          
+          
+          
+          <option value="https://player.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Player Development</option>
+          
+          
+          
+          <option value="https://apis.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Platform APIs</option>
+          
+          
+          
+          <option value="https://sdks.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud Device SDKs</option>
+          
+          
+          
+          <option value="https://integrations.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Integrations and CMS Connectors</option>
+          
+          
+          
+          <option value="https://general.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Video Cloud General Information</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO ESSENTIALS --</option>
+          
+          
+          
+          <option value="https://audience-insights.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Audience Insights</option>
+          
+          
+          
+          <option value="https://beacon-help.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Studio</option>
+          
+          
+          
+          <option value="https://beacon.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Beacon Classic</option>
+          
+          
+          
+          <option value="https://corptv.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;CorpTV</option>
+          
+          
+          
+          <option value="https://live.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Live</option>
+          
+          
+          
+          <option value="https://zencoder.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Zencoder</option>
+          
+          
+          
+          <option value="https://support.brightcove.com/" translate="no">-- VIDEO CLOUD ADD-ONS --</option>
+          
+          
+          
+          <option value="https://gallery.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Gallery</option>
+          
+          
+          
+          <option value="https://studio.support.brightcove.com/social/index.html" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove Social</option>
+          
+          
+          
+          <option value="https://ssai.support.brightcove.com" translate="no">&nbsp;&nbsp;&nbsp;&nbsp;Brightcove SSAI</option>
+          
+          
+        </select>
+
+        <select id="language_select" class="form-select select-focus" style="width: 10%;"
+          onchange="doGTranslate(this);" translate="no">
+          <!-- <option value="">Select Language</option> -->
+          <option value="en|en" translate="No">English</option>
+          <option value="en|zh-TW" translate="No">繁體中文</option>
+          <option value="en|fr" translate="No">Français</option>
+          <option value="en|de" translate="No">Deutsch</option>
+          <option value="en|ja" translate="No">日本語</option>
+          <option value="en|ko" translate="No">한국어</option>
+          <option value="en|es" translate="No">Español</option>
+        </select>
+
+        <script translate="no">
+          /* <![CDATA[ */
+          function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+          /* ]]> */
+        </script>
+      </div>
+    </div>
+  </div>
+</header><!--//header-->
+
+<div class="docs-wrapper">
+  <div id="docs-sidebar" class="docs-sidebar" style="padding-right: 15px;">
+    <div id="nav-search-box" class="top-search-box d-lg-none p-3"></div>
+    <div class="row">
+      
+        <div id="side_nav" style="margin-left: 1em; display: inline-block; border-right: 1px solid #e5e5e6; padding-right: 1em;">
+          
+          <nav class="docs-nav sidenav" aria-label="Main">
+            <ul class="site-nav" style="list-style-type: none;">
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/index.html">Home</a></li>
+            
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/getting-started/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Getting Started</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/learning-guide-bc-beacon.html">Learning Guide</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/implementation-phases.html">Implementation Phases</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/app-design-considerations.html">Application Design Considerations</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/creating-your-app-design-info-architecture.html">App Design - Info Architecture</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/creating-your-app-design-layout-options.html">App Design - Layout Options</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/getting-started/design-best-practices.html">Design Best Practices</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/syncing-with-video-cloud/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Syncing with Video Cloud</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/syncing-with-video-cloud/vc-custom-fields.html">Creating Video Cloud Custom Fields</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/syncing-with-video-cloud/syncing-video-cloud-catalog.html">Syncing with the Video Cloud Catalog</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/using-brightcove-beacon/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Using Brightcove Beacon</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/adding-trailer-movie.html">Adding a Trailer to a Movie</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/adding-to-page.html">Adding a Carousel to a Page</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/authentication-using-oauth.html">Authentication Using OAuth</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/roles-as-rights.html">Controlling Viewer Access with Roles</a></li>
+              
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Cloud Playout Channels</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/getting-started/index.html"><span class="theme-icon-holder me-2">
+                      <i class="fa-solid fa-minus"></i><span>&nbsp;Getting Started</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/getting-started/cloud-playout-overview.html">Overview: Cloud Playout</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/getting-started/cloud-playout-stream-vod.html">Creating a Cloud Playout Channel</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/general/index.html"><span class="theme-icon-holder me-2">
+                      <i class="fa-solid fa-minus"></i><span>&nbsp;General Information</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/general/configuring-s3-buckets.html">Configuring S3 Buckets</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/general/channel-live-redundancy.html">Using Live Redundancy with Channels</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/general/managing-slates.html">Managing Slates</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/general/searching-for-channels.html">Searching for Channels</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/managing-content/index.html"><span class="theme-icon-holder me-2">
+                      <i class="fa-solid fa-minus"></i><span>&nbsp;Managing Channel Content</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/managing-content/cloud-playout-add-content.html">Managing the Channel Program</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/managing-content/managing-programs.html">Managing Multiple Programs</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/managing-content/static-image-overlays.html">Adding Static Image Overlays</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/managing-content/dynamic-overlays.html">Adding Dynamic Overlays</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/managing-content/adding-bumpers-to-vod.html">Adding Bumpers to Cloud Playout</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/managing-content/import-captions.html">Importing Captions</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/monetization/index.html"><span class="theme-icon-holder me-2">
+                      <i class="fa-solid fa-minus"></i><span>&nbsp;Monetizing Channels</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/monetization/enabling-server-side-ads.html">Monetizing Cloud Playout</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/monetization/mid-roll-ad-insertion.html">Adding Mid-Roll Ads to a Channel</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/publishing/index.html"><span class="theme-icon-holder me-2">
+                      <i class="fa-solid fa-minus"></i><span>&nbsp;Publishing Channels</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/publishing/hard-start.html">Setting a Hard Start for a Channel</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/publishing/publish-channel-beacon.html">Publishing a Cloud Playout Channel</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/publishing/using-channel-actions.html">Using Channel Actions</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/using-brightcove-beacon/cloud-playout/publishing/viewing-channel-output-and-analytics.html">Viewing Channel Output and Analytics</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/creating-a-channel.html">Creating a Beacon Channel</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/electronic-program-guides.html">Creating an Electronic Program Guide (EPG)</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/creating-a-page.html">Creating a New Page</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/creating-a-playlist.html">Creating a Playlist</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/series-seasons-episodes.html">Creating Series/Seasons/Episodes</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/setup-beacon-web-app.html">Setup for the Beacon Web App</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/including-non-configurable-pages.html">Including Non-Configurable Pages</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/introducing-pages.html">Introducing Pages</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/forensic-watermarking-with-beacon.html">Protecting Content with Forensic Watermarking</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/sending-app-notifications.html">Sending App Notifications</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/streaming-live-event.html">Streaming a Live Event</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/streaming-vods-to-a-channel.html">Streaming VODs to a Channel</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/using-multiple-languages.html">Using Multiple Languages</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/using-brightcove-beacon/tools.html">Using the Tools</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/monetization/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Monetization</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/monetization/general/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;General</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/3d-secure-auth.html">3D Secure Authentication</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/creating-stripe-account.html">Creating a Stripe Account</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/creating-svod-plan.html">Creating an SVOD Plan</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/creating-tvod-plan.html">Creating a TVOD Plan</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/promo-codes.html">Creating Promo Coupons</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/vc-custom-fields.html">Custom Fields for Monetization</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/implementing-authvod.html">Implementing AuthVOD</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/receive-iap-notifications.html">Receiving In-App Purchase Notifications</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/resources.html">Resources for Monetization</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/stripe-custom-metadata.html">Subscription Info with Stripe Metadata</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/monetization-options.html">Understanding Monetization Options</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/using-svod-plan.html">Using an SVOD Plan</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/general/using-tvod-plan.html">Using a TVOD Plan</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/monetization/ssai/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;SSAI</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/ssai/advertisement.html">Creating an Advertisement</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/ssai/configuring-server-side-ad-settings.html">Configuring Server-Side Ad Settings</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/ssai/config-live-ssai-beacon-channel.html">Configuring Live SSAI with Beacon Channels</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/ssai/live-ssai.html">Implementing Live SSAI Events</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/ssai/vod-ssai.html">Implementing VOD SSAI</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/monetization/ssai/beacon-apps-ad-targeting.html">Beacon Apps Ad Targeting</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/beacon-web-store/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Beacon Web Store</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/beacon-web-store/beacon-webstore-overview.html">Overview: Brightcove Beacon Web Store</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/beacon-web-store/integration-details.html">Integrating with the Beacon Web Store</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/beacon-web-store/beacon-store-webhook-reference.html">Beacon Store Webhook Reference</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/publishing-apps/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;App Publishing and Behavior</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/general/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;General Information</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/general/common-required-info.html">Common Required Information for Submitting Apps</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/general/demo-apps-access.html">Demo Apps Access</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/general/device-apps-validation-guide.html">Device Apps Validation Guide</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/general/in-app-subscription-resources.html">In-App Subscription Resources</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/general/schedule-apps.html">Scheduling App Releases in the App Stores</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/app-behavior/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;App Behavior</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/app-behavior/account-deletion.html">Account Deletion</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/app-behavior/continue-watching.html">Continue Watching</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/app-behavior/parental-controls.html">Parental Controls</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/android/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Android</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/android/submitting-to-android.html">Submitting New Apps to the Android Store</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/android/updating-android-apps-to-bcb.html">Updating Android Apps to Brightcove Beacon</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/android/adding-subscriptions-in-android.html">Adding Subscriptions to Android</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/android/improving-relevance-android.html">Improving Search Relevance in the Android Play Store</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/android/installing-android-test-build.html">Installing an Android Test Build</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/android/managing-google-subscriptions-1.html">Managing Google Subscriptions Part 1</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/android/managing-google-subscriptions-2.html">Managing Google Subscriptions Part 2</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/fire-tv/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Fire TV</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/fire-tv/add-bc-email.html">Add Brightcove Email to Amazon Account</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/fire-tv/installing-fire-tv-test-build.html">Installing a Fire TV Test Build</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/fire-tv/submitting-to-amazon.html">Submitting to the Amazon Store</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/ios-tvos/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;iOS/tvOS</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/ios-tvos/account-deletion.html">Account Deletion</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/ios-tvos/fairplay-certificate.html">FairPlay Certificate Registration</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/ios-tvos/installing-ios-test-build.html">Installing an iOS/tvOS Test Build</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/ios-tvos/resources.html">Resources</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/ios-tvos/submitting-to-apple.html">Submitting to the Apple Store</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/lg/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;LG</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/lg/installing-lg-webos-test-build.html">Installing a Test Build for LG (webOS)</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/lg/submitting-to-lg.html">Submitting to the LG (webOS) Store</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/roku/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Roku</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/roku/add-bc-user.html">Add Brightcove User to Roku Account</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/roku/configuring-inchannel-products.html">Configuring In-Channel Products in Roku</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/roku/installing-roku-test-build.html">Installing a Roku Test Build</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/roku/submitting-to-roku.html">Submitting to the Roku Store</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/publishing-apps/samsung/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Samsung</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/samsung/samsung-partner.html">Becoming a Samsung Partner</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/samsung/installing-samsung-test-build.html">Installing the Samsung Test Build</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/publishing-apps/samsung/submitting-to-samsung.html">Submitting to the Samsung Store</a></li>
+                  
+                  
+                  
+                </ul>
+              </li>
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/analytics/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Analytics</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/analytics/analytics-overview.html">Analytics Overview</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/analytics/analytics-business-metrics.html">Beacon Analytics Business Metrics</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/analytics/ga-self-configuration.html">Google Analytics Self Configuration</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/analytics/resources.html">Resources for Analytics</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/analytics/viewing-analytics-data.html">Viewing Analytics Data</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/ott-plugins/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Beacon Plugins</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/learning-guide-beacon-plugins.html">Learning Guide: Beacon Plugins</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/javascript-modules-beacon-plugins.html">Use JavaScript Modules for Plugins</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/dispatching-handling-events.html">Dispatch & Handle Events in Plugins</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/custom-page.html">Creating a Custom Page</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/buttons-and-events.html">Implement Buttons and Event Handlers</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/custom-divs.html">Implement Custom Sections</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/side-panel.html">Implement the Side Panel</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/user-events.html">Implement User Events</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/data-module.html">Storing Data in a Separate Module</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/ott-plugins/working-with-page-events.html">Working with Page Events</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/references/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;References</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/branding-beacon-apps.html">Branding Brightcove Beacon Apps</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/common-configuration-settings.html">Common Configuration Settings</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/managing-cookie-consent.html">Cookie Consent Using OneTrust</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/delete-app-user.html">Deleting an App User</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/glossary.html">Glossary</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/how-beacon-gets-data.html">How Brightcove Beacon Gets Data</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/image-requirements.html">Images and Their Specifications</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/known-issues.html">Known Issues</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/login-durations.html">Login Durations</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/oidc-authentication-for-beacon.html">OIDC Configuration and Testing</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/product-updates.html">Product Updates</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/related-content.html">Related Content</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/remote-asset-limitations.html">Remote Asset Limitations</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/references/beacon-tasks-in-vc.html">Tasks Performed in Video Cloud</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/training/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Training</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-custom-fields.html">Using Video Cloud Videos/Custom Fields</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-design-layout.html">Designing the Application Layout</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-playlists.html">Creating and Using Playlists</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-series-seasons-episodes.html">Creating Series, Seasons and Episodes</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-vod-ssai.html">Implementing VOD Server-Side Ads</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-publish-android-app.html">Publishing the Android App on the Play Store</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-viewing-analytics.html">Viewing Analytics Data</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/training/training-demand-streaming-live-bc-beacon.html">Streaming a Live event to Brightcove Beacon</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+            
+            <li class="nav-item section-title"><a class="nav-link" href="/support/index.html"><span class="theme-icon-holder me-2">
+              <i class="fa-solid fa-plus"></i></span>&nbsp;Support</a>
+              <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/viewing-brightcove-system-status-page.html">Viewing the Brightcove System Status Page</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/contact-sales.html">Contact Sales</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/opening-case-with-brightcove-support.html">Opening a Support Case</a></li>
+              
+              
+              
+              
+              
+              <li class="nav-item"><a class="nav-link" href="/support/reset-support-portal-password.html">Reset Your Support Portal Password</a></li>
+              
+              
+              
+            </ul>
+            </li>
+            
+            
+          </ul>
+          </nav>
+        </div>
+      </div>
+    </div><!--//docs-sidebar-->
+  </div>
+</div>
+
+<div style="margin-top: 20px;">
+  <div class="docs-content" style="padding-bottom: 0px;">
+    <div class="container">
+      <div class="docs-overview">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/">Home</a></li>
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/publishing-apps/">Publishing apps</a></li>
+            
+            
+            
+            <li class="breadcrumb-item"><a class="theme-link" href="/publishing-apps/roku/">Roku</a></li>
+            
+            
+            
+            <li class="breadcrumb-item active" aria-current="page">Roku SDK Developer Guide</li>
+            
+            
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="docs-content">
+  <div class="container">
+    <div class="docs-overview py-5">
+      
+      <div class="centered-inpage-nav" id="centered_inpage_nav">
+        <nav id="centered_toc">
+          <select id="centered_in_page_toc" class="form-select select-focus"></select>
+        </nav>
+      </div>
+      <br>
+      
+      <h3 style="color:#990000;border:#990000 solid 1px; padding:10px;width: fit-content;">Limited Availability - Do not share this document</h3>
+<h1>Roku SDK Developer Guide</h1>
+<article class="bcls-article">
+  <summary>In this topic, you will learn how to set the Brightcove Roku SDK</summary>
+
+  <section class="bcls-section">
+    <h2 id="overview">Overview</h2>
+    <p>The Brightcove Roku SDK is a Roku <a href="https://developer.roku.com/en-gb/docs/references/scenegraph/control-nodes/componentlibrary.md">ComponentLibrary</a> package that can be imported and loaded into a Roku channel, allowing easy access to Brightcove’s Playback services.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="components">Components</h2>
+    <p>The Brightcove Roku SDK package contains the following components:</p>
+    <ul>
+        <li><strong>bcPlayer</strong> - Allows for Brightcove and external sources video playback using Roku’s Video node.</li>
+        <li><strong>bcAPI</strong> - Provides independent access to Brightcove’s Playback API and an interface for general HTTP requests.</li>
+        <li><strong>Dialog</strong> - Customizable <a href="https://developer.roku.com/en-gb/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md">StandardDialog</a> node.</li>
+        <li><strong>Logger</strong> - Customizable logger node.</li>
+        <li><strong>Utils</strong> - Provides general Brightscript helping functions.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="features">Features</h2>
+    <p>The Brightcove Roku SDK package has the following features:</p>
+    <ul>
+        <li>OOTB UI/UX.</li>
+        <li>VOD and Live streams playback support.</li>
+        <li>Native <a href="https://developer.roku.com/en-gb/docs/developer-program/media-playback/trick-mode/hls-and-dash.md">HLS/DASH</a> seek thumbnails support.</li>
+        <li>Widevine and Playready <a href="https://developer.roku.com/en-gb/docs/specs/media/content-protection.md">DRM</a> support.</li>
+        <li>HLS, DASH and MP4 <a href="https://developer.roku.com/en-gb/docs/specs/media/streaming-specifications.md">stream formats</a> support.</li>
+        <li>HLSe (HLS + AES-128 encryption) playback support (v4 manifests only)</li>
+        <li>Multichannel Audio on supported devices (5.1 AC3, 5.1 E-AC3, Dolby Atmos)
+        </li>
+        <li><a href="https://developer.roku.com/en-gb/docs/developer-program/media-playback/voice-controls/transport-controls.md">Voice Controls</a>.</li>
+        <li>Forensic Watermarking</li>
+        <li>Configurable sources and DRM systems prioritization.</li>
+        <li>Multiple Audio Tracks support.</li>
+        <li>Configurable stream buffering timeout.</li>
+        <li>Expired sources refresh (on previous and next playlist functions only).</li>
+        <li>Playback retry on stream error.</li>
+        <li>Brightcove Playback API interfaces
+            <ul>
+                <li>Play or <a href="https://apis.support.brightcove.com/playback/references/reference_v2.html#tag/Videos/operation/Get_Video_by_ID_or_Reference_ID">retrieve a video by video ID</a> or reference.</li>
+                <li>Play or <a href="https://apis.support.brightcove.com/playback/references/reference_v2.html#tag/Videos/operation/Get_Videos">retrieve videos by search query</a>.</li>
+                <li>Play or <a href="https://apis.support.brightcove.com/playback/references/reference_v2.html#tag/Videos/operation/Get_Related_Videos_by_ID_or_Reference_ID">retrieve related videos by video ID</a> or reference.</li>
+                <li>Play or <a href="https://apis.support.brightcove.com/playback/references/reference_v2.html#tag/Playlists/operation/Get_Playlists_by_ID_or_Reference_ID">retrieve videos by playlist ID</a> or reference.</li>
+            </ul>
+        </li>
+        <li>External video and playlist sources support.</li>
+        <li>Utilities
+            <ul>
+                <li>Brightscript general utilities</li>
+                <li>Logging component</li>
+                <li>Dialog component</li>
+            </ul>
+        </li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="setup">Setup</h2>
+    <p>To setup Brightcove Roku SDK in a Roku channel, you must request access to the SDK package file. Brightcove provides two ways for developers to access the SDK package file.</p>
+    <aside class="bcls-aside bcls-aside--information">Note that in the following examples, <strong>bcLib.pkg</strong> is the Brightcove SDK library package provided by Brightcove.</aside>
+
+    <h3>Loading the library from a remote location</h3>
+    <p>Brightcove provides the SDK package URL in this case, as the package file is hosted in Brightcove servers. The library package is downloaded at runtime by following these simple steps:</p>
+    <ol class="bcls-tasklist">
+        <li><p>In the scene XML component, create the ComponentLibrary child node and set its <code translate="No">id</code> and <code translate="No">uri</code> fields. </p>
+            <ul>
+                <li><p>The <code translate="No">uri</code> field contains the SDK package URL.</p></li>
+                <li><p>The <code translate="No">id</code> field is used during the library components initialization.</p></li>
+            </ul>
+            <pre class="line-numbers">
+                <code class="language-xml" translate="No">&#60;?xml version="1.0" encoding="utf-8" ?&#62; 
+                    &#60;component name="MainScene" extends="Scene"&#62;
+                        &#60;interface&#62;
+                            &#60;!-- your mainscene fields here --&#62;
+                        &#60;/interface&#62;
+                        &#60;script type="text/brightscript" uri="MainScene.brs"/&#62;
+                        &#60;children&#62;
+                            &#60;ComponentLibrary id="bcLib" uri="&#60;https://brightcove/sdk/remote/url/here/bcLib.pkg&#62;" /&#62;
+                        &#60;/children&#62;
+                    &#60;/component&#62;
+                </code></pre>
+        </li>
+        <li>In the <code translate="no">init()</code> function of the Scene's brightscript file, set up the ComponentLibrary reference and an observer for the <code translate="no">loadStatus</code> field so you can detect when the SDK library is successfully downloaded. 
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">sub init()
+                    m.bcLib = m.top.findNode("bcLib")
+                    m.bcLib.observeField("loadStatus", "onLoadStatus")
+                end sub
+                
+                sub onLoadStatus(ev)
+                    status = ev.getData()
+                    if status = "ready" then
+                    
+                        ' bcLib was successfully downloaded and all its components are now accessible
+                    
+                    else if status = "loading" then
+                    
+                        ' bcLib package is currently being downloaded
+                    
+                    else if status = "failed" then
+                    
+                        ' Something went wrong with the bcLib download/load process. 
+                        ' Please check if the package URL was properly set.
+                    
+                    end if
+                end sub
+                </code></pre>
+        </li>
+    </ol>
+    <h3>Loading the library locally</h3>
+    <p>In this case, Brightcove provides the actual SDK package file, which, once downloaded, can be added to the Roku channel file structure. The library is loaded from the internal structure at runtime. Here’s an example:</p>
+    <ol class="bcls-tasklist-restart">
+        <li>Place the SDK package in the Roku channel file structure (in this case, we named it <strong>bcLib.pkg</strong>). The exact location doesn't matter. In the following example, it was placed in the lib directory.
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-publishing-apps-img/roku/roku-library/ruku-library-locally.webp" alt="Loading the roku library locally">
+              </figure>
+        </li>
+        <li>In the scene XML component, create the ComponentLibrary child and set the <code translate="No">id</code> and <code translate="No">uri</code> fields. 
+            <ul>
+                <li>The <code translate="No">uri</code> field contains the <strong>bcLib.pkg</strong> file local path.</li>
+                <li>The <code translate="No">id</code> field is used during the library components initialization.</li>
+            </ul>
+            <pre class="line-numbers">
+                <code class="language-xml" translate="No">&#60;?xml version="1.0" encoding="utf-8" ?&#62; 
+                    &#60;component name="MainScene" extends="Scene"&#62;
+                        &#60;interface&#62;
+                            &#60;!-- your mainscene fields here --&#62;
+                        &#60;/interface&#62;
+                        &#60;script type="text/brightscript" uri="MainScene.brs"/&#62;
+                        &#60;children&#62;
+                            &#60;ComponentLibrary id="bcLib" uri="pkg:/lib/bcLib.pkg" /&#62;
+                        &#60;/children&#62;
+                    &#60;/component&#62;
+                </code></pre>
+        </li>
+        <li>In the <code translate="no">init()</code> function of the Scene's brightscript file, set up the ComponentLibrary reference and an observer for the <code translate="no">loadStatus</code> field so you can detect when the SDK library is successfully downloaded. 
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">sub init()
+                    m.bcLib = m.top.findNode("bcLib")
+                    m.bcLib.observeField("loadStatus", "onLoadStatus")
+                end sub
+                
+                sub onLoadStatus(ev)
+                    status = ev.getData()
+                    if status = "ready" then
+                    
+                        ' bcLib was successfully downloaded and all its components are now accessible
+                    
+                    else if status = "loading" then
+                    
+                        ' bcLib package is currently being downloaded
+                    
+                    else if status = "failed" then
+                    
+                        ' Something went wrong with the bcLib download/load process. 
+                        ' Please check if the package URL was properly set.
+                    
+                    end if
+                end sub
+                </code></pre>
+        </li>
+    </ol>
+    <aside class="bcls-aside bcls-aside--information"><ul>
+        <li>Be careful not to reference any library components before the library is completely loaded.</li>
+    </ul></aside>
+    <h3>Loading the library dynamically</h3>
+    <p>It’s recommended to set the ComponentLibrary in the scene’s children section with the proper package URL so that the library loading process starts immediately during the Scene initialization, but depending on the use case, it could also be useful to be able to dynamically load the library anywhere in the channel. This can be done by initializing the ComponentLibrary node in the brightscript code as such:</p>
+    <pre class="line-numbers">
+        <code class="language-basic" translate="No">sub init()
+            ' this can be placed anywhere in the Scene node code, 
+            ' although usually we want it to load as soon as possible so we can immediately access its components
+
+            m.bcLib = createObject("roSGNode", "ComponentLibrary")
+            m.bcLib.observeField("loadStatus", "onLoadStatus")
+            m.bcLib.id = "bcLib"
+            m.bcLib.uri = "&#60;path_or_url_to_the_pkg_file&#62;"
+        end sub
+        </code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="accessing-components">Accessing Components</h2>
+    <p>Once the SDK library is successfully loaded, an instance of any of its components can be created like so:</p>
+    <pre class="line-numbers">
+        <code class="language-basic" translate="No">
+            ' 1 - create an instance of the bcPlayer node
+            ' This won't make the bcPlayer node visible in the app, it still needs to be added to the node tree list after this step
+
+            m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+
+            ' 2 - create an instance of the bcPlayer node and append it to the parentNode node.
+            ' If parentNode is already in the node tree list and is visible, this will also make the bcPlayer node visible in the app
+
+            m.bcPlayer = parentNode.createChild("bcLib:bcPlayer")
+        </code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="bcPlayer">bcPlayer component</h2>
+    <p>The <strong>bcPlayer</strong> component is the main SDK node as it enables both Brightcove sources and external sources video playback in Roku channels. This node essentially extends Roku’s native <a href="https://developer.roku.com/en-gb/docs/references/scenegraph/media-playback-nodes/video.md">Video</a> node, allowing all its fields to be easily accessed for further customization options. It is possible to configure the appearance of some elements in the node as well as some behaviors and flows by customizing the node fields values.</p>
+    <p>An instance of this node can be created like so:</p>
+    <pre class="line-numbers">
+    <code class="language-basic" translate="No">
+        m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+    </code></pre>
+    <p>Once an instance of the node is available, it’s possible to customize it by setting up its fields. All the fields default values are listed below.</p>
+    <pre class="line-numbers">
+        <code class="language-basic" translate="No">m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+            m.bcPlayer.setFields({
+              streamPreference: ["hls", "dash", "mp4"],
+              drmPreference: ["widevine", "playready", "none"],
+              logLevel: 4,
+              credentials: {
+                account_id: "...",
+                policy_key: "..."
+              },
+              env: "production",
+              watermarkToken: "",
+              spinnerConfig: {},
+              closeOnBack: true,
+              retryOnError: true,
+              enableDialogs: true,
+              bufferTimeout: 0,
+              dialogTheme: {
+                DialogBackgroundColor: "#00000000",
+                DialogSecondaryItemColor: "#00000000"
+              }
+            })
+        </code></pre>
+        <h3>Fields</h3>
+        <p>The bcPlayer node is configured through a set of fields.  Since it extends the native Video node, all native fields are also accessible; these can be checked out in <a href="https://developer.roku.com/en-gb/docs/references/scenegraph/media-playback-nodes/video.md">Roku documentation</a>.</p>
+        <p>The following tags are used in this section to make the identification of the different types of fields easier.</p>
+        <ul>
+            <li><p><code class="text-secondary" translate="No">&#60;VALUE_TYPE&#62;
+            </code> Specifies the expected type of a field value or ASSOCIATIVE ARRAY key value (e.g., string, float, integer…).</p></li>
+            <li><p><code class="text-success" translate="No">OPTIONAL
+            </code> Specifies an optional field or ASSOCIATIVE ARRAY key. If an optional field isn’t specifically set, the <code class="text-warning" translate="no">DEFAULT</code> value is be used.</p></li>
+            <li><p><code class="text-danger" translate="no">REQUIRED</code> Specifies that a field or ASSOCIATIVE ARRAY key is required (write-only properties) or is always present (read-only properties). If a required field is not set, an error message will be presented in the built-in logger.</p></li>
+            <li><p><code class="text-warning" translate="no">DEFAULT</code> Specifies the default value of a field or ASSOCIATIVE ARRAY key.</p></li>
+            <li><p><code class="text-dark" translate="no">NATIVE</code> Identifies a native field. These fields are aliases or references of a native Roku node fields. Roku documentation should be consulted for a more detailed description of these fields.</p></li>
+            <li><p><code class="text-info" translate="no">CONTROL</code> Identifies fields that can control the video playback in any way.</p></li>
+        </ul>
+        <hr>
+        <section>
+            <h3>Credentials</h3>
+            <p><code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+            <p>Configures Brightcove API credentials. It should contain the account ID as well as the policy key. These are used to retrieve video’s metadata from Brightcove’s Playback API. </p>
+            <p>If the credentials aren’t provided, the bcPlayer node will only be able to playback videos from external sources through <code translate="no">bcPlayer.setSources</code> and <code translate="no">bcPlayer.addSource</code> functions.</p>
+            <h4>Possible Values</h4>
+            <p>An ASSOCIATIVE ARRAY containing the following keys:</p>
+            <ul>
+                <li><p><code translate="no">account_id</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                <ul>
+                    <li><p>Specifies Brightcove API user account ID.</p></li>
+                </ul>
+                </li>
+                <li>
+                    <p><code translate="no">policy_key</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                <ul>
+                    <li><p>Specifies the user policy key required to access the <a href="https://apis.support.brightcove.com/playback/getting-started/overview-playback-api.html">Playback API</a>.</p></li>
+                </ul>
+                </li>
+                <li>
+                    <p><code translate="no">auth_token</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                <ul>
+                    <li><p>Specifies the JSON Web Token required to:</p>
+                    <ul>
+                        <li>Provide Playback Restriction rules (Playback Rights) through Edge Playback Authorization (EPA).</li>
+                        <li>To specify License Keys Protection for HLSe content playback.</li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>
+            </ul>
+            <p>Code Snipped</p>
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                    m.bcPlayer.credentials = {
+                      account_id: "&#60;brightcove_user_account_id&#62;"
+                      policy_key: "&#60;brightcove_user_policy_key&#62;"
+                    }
+                    
+                    ' or
+                    
+                    m.bcPlayer.setFields({
+                      ' ...other fields here...
+                      credentials: {
+                        account_id: "&#60;brightcove_user_account_id&#62;"
+                        policy_key: "&#60;brightcove_user_policy_key&#62;"
+                      }
+                    })
+                </code></pre>
+                <aside class="bcls-aside bcls-aside--information">
+                    <p>The <strong>policy_key</strong> and <strong>auth_token</strong> properties will specify which Playback API service is used to retrieve Brightcove catalog metadata (through the <strong>bcPlayer.getVideo</strong>, <strong>bcPlayer.getVideos</strong>, <strong>bcPlayer.getPlaylist</strong> and <strong>bcPlayer.getRelated</strong> functions):</p>
+                    <ul>
+                        <li><p><strong>policy_key</strong> set / <strong>auth_token</strong> not set: </p>
+                        <ul>
+                            <li><p>The Edge Playback API service is used to retrieve Brightcove catalog metadata.</p></li>
+                            <li><p>Access to Playback Restrictions and Playback Rights is not available.</p></li>
+                            <li><p>HLSe content playback is not possible.</p></li>
+                        </ul>
+                        </li>
+                        <li><p><strong>policy_key</strong> not set / <strong>auth_token</strong> set: </p>
+                        <ul>
+                            <li><p>The Edge Playback Authorization service is used to retrieve Brightcove catalog metadata.</p></li>
+                            <li><p>Access to Playback Restrictions and Playback Rights is available.</p></li>
+                            <li><p>HLSe content playback is possible.</p></li>
+                        </ul>
+                        </li>
+                        <li><p>both <strong>policy_key</strong> set and <strong>auth_token</strong>  set: </p>
+                        <ul>
+                            <li><p>The Edge Playback API service is used to retrieve Brightcove catalog metadata.</p></li>
+                            <li><p>Access to Playback Restrictions and Playback Rights is not available.</p></li>
+                            <li><p>HLSe content playback is possible.</p></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    <p>Brightcove JSON <a href="https://general.support.brightcove.com/developer/create-json-web-token.html">Web Token</a> reference.</p>
+                    <p>Brightcove <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Playback Restrictions</a> reference.</p>
+                </aside>
+        </section>
+        <hr>
+        <section>
+            <h3>env</h3>
+            <p><code class="text-secondary" translate="no">STRING</code>    <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+            <p>Configures Brightcove Playback API environment. If not specified, the production base URL will be used.</p>
+            
+            <h4>Possible Values</h4>
+            <ul>
+                <li><p><code translate="no">production</code> <code class="text-warning" translate="no">DEFAULT</code> API requests are made to:</p>
+                    <ul>
+                        <li><p>Playback API: <code translate="no">https://edge.api.brightcove.com</code></p></li>
+                        <li><p>EPA:  <code translate="no">https://edge-auth.api.brightcove.com</code></p></li>
+                    </ul>
+                </li>
+                <li><p><code translate="no">staging</code> API requests are made to:</p>
+                    <ul>
+                        <li><p>Playback API: <code translate="no">https://edge.api.staging.brightcove.com</code></p></li>
+                        <li><p>EPA:  <code translate="no">https://edge-auth.api.staging.brightcove.com</code></p></li>
+                    </ul>
+                </li>
+                <li><p><code translate="no">qa</code> API requests are made to:</p>
+                    <ul>
+                        <li><p>Playback API: <code translate="no">https://edge.api.qa.brightcove.com</code></p></li>
+                        <li><p>EPA:  <code translate="no">https://edge-auth.api.qa.brightcove.com</code></p></li>
+                    </ul>
+                </li>
+                
+            </ul>
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                    m.bcPlayer.env = "staging"
+                    
+                    ' or
+                    
+                    m.bcPlayer.setFields({
+                      ' ...other fields here...
+                      env: "staging"
+                    })
+                </code></pre>
+        </section>
+        <hr>
+        <section>
+            <h3>watermarkToken</h3>
+            <p><code class="text-secondary" translate="no">STRING</code>    <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+            <p>Configures the Forensic Watermarking token, which is required when playing watermarked encoded Brightcove sources.</p>
+            <p>Playing a watermarked video without the <code translate="no">watermarkToken</code> field properly set will result in a playback error.</p>
+            <p>Please check <a href="https://apis.support.brightcove.com/general/overview-forensic-watermarking.html#Limitations">Videocloud documentation</a> for more information on Forensic Watermark.</p>
+            
+            <h4>Possible Values</h4>
+            <p>An ASSOCIATIVE ARRAY containing the following keys:</p>
+            <ul>
+                <li><p>A string containing the Forensic Watermarking token.
+                </p>
+                </li>
+                <li><p><code translate="no">""</code> <code class="text-warning" translate="no">DEFAULT</code></p>
+                </li>
+                
+            </ul>
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                    m.bcPlayer.watermarkToken = "&#60;forensic_watermarking_token&#62;"
+                    
+                    ' or
+                    
+                    m.bcPlayer.setFields({
+                      ' ...other fields here...
+                      watermarkToken: "&#60;forensic_watermarking_token&#62;"
+                    })
+                </code></pre>
+        </section>
+        <hr>
+        <section>
+            <h3>streamPreferance</h3>
+            <p><code class="text-secondary" translate="no">ARRAY</code>    <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+            <p>Configures sources types/containers preferences ordered by the priority each type/container will have when filtering the available video sources.</p>
+            <p>This allows you to setup the bcPlayer so that only certain stream types/containers are used or ignored, and the order in those sources will be filtered.</p>
+            <p>Playing a video in which no sources are listed in the <code translate="no">streamPreference</code> field will result in an error.</p>
+            <p>Find more information on how the sources are parsed and filtered in the <a href="#sources-selection">Sources Selection</a> section.</p>
+            
+            <h4>Possible Values</h4>
+            <p>An array containing any combination of the following values:</p>
+            <ul>
+                <li><p><code translate="no">hls</code>
+                </p>
+                </li>
+                <li><p><code translate="no">dash</code>
+                </p>
+                </li>
+                <li><p><code translate="no">mp4</code>
+                </p>
+                </li>
+                <li><p><code class="text-warning" translate="no">DEFAULT</code> <code translate="no">["hls", "dash", "mp4"]</code>
+                </p>
+                </li>
+            </ul>
+            <p>Code Snippet</p>
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                    m.bcPlayer.streamPreference = ["dash"]  ' will only playback DASH sources
+                    
+                    ' or
+                    
+                    m.bcPlayer.setFields({
+                      ' ...other fields here...
+                      streamPreference: ["dash", "mp4"] ' will play DASH sources. If no DASH source is availble, will play MP4 sources
+                    })
+                </code></pre>
+        </section>
+        <hr>
+        <section>
+            <h3>drmPreference</h3>
+            <p><code class="text-secondary" translate="no">ARRAY</code>    <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+            <p>Configures DRM encryption systems preferences ordered by the priority each DRM system will have when filtering the available video sources.</p>
+            <p>This allows developers to setup the bcPlayer so that only certain DRM encrypted sources are used or ignored and the order in which the sources will be filtered through.</p>
+            <p>Playing a video in which no DRM encrypted sources are listed in the <code translate="no">drmPreference</code> field will result in an error. The <code>none</code> value forces the selection of sources with no DRM encryption.</p>
+            <p>Find more information on how the sources are parsed and filtered in the <a href="#sources-selection">Sources Selection</a> section.
+
+            </p>
+            <p><a href="https://developer.roku.com/en-gb/docs/specs/media/content-protection.md">Roku DRM reference</a></p>
+            <p><a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-content-drm.html">Videocloud DRM reference</a></p>
+            
+            <h4>Possible Values</h4>
+            <p>An array containing any combination of the following values:</p>
+            <ul>
+                <li><p><code translate="no">widevine</code> Supported on HLS and DASH sources only.
+                </p>
+                </li>
+                <li><p><code translate="no">playready</code> Supported on DASH sources only, ignored on HLS sources.
+                </p>
+                </li>
+                <li><p><code translate="no">none</code>
+                </p>
+                </li>
+                <li><p><code class="text-warning" translate="no">DEFAULT</code> <code translate="no">["widevine", "playready", "none"]</code>
+                </p>
+                </li>
+            </ul>
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                    m.bcPlayer.streamPreference = ["none"]  ' play sources with no DRM encryption only
+                    
+                    ' or
+                    
+                    m.bcPlayer.setFields({
+                      ' ...other fields here...
+                      streamPreference: ["playready", "widevine"] ' play a DASH source encrypted with Playready DRM and, if not available, play a Widevine encrypted source instead
+                    })
+                </code></pre>
+        </section>
+        <hr>
+        <section>
+            <h3>logLevel</h3>
+            <p><code class="text-secondary" translate="no">INTEGER</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+            <p>Configures the logging level on the bcPlayer node. Only the specified messages will be triggered.</p>
+            <p>If set to <code translate="no">-1</code> no logging messages will be triggered. In a production environment it's recommended to set it to <code>-1</code> to avoid the execution of the logging internal functions.</p>
+            <aside class="bcls-aside bcls-aside--information">When enabled, bcPlayer logs can be captured through the <code translate="no">bcPlayer.on.logOutput</code> event listener.
+            </aside>
+            
+            <h4>Possible Values</h4>
+            <p>An array containing any combination of the following values:</p>
+            <ul>
+                <li><p><code translate="no">-1</code> disable all the logging.
+                </p>
+                </li>
+                <li><p><code translate="no">0</code> log error messages only.
+                </p>
+                </li>
+                <li><p><code translate="no">1</code> log error and warning messages.
+                </p>
+                </li>
+                <li><p><code translate="no">2</code> log error, warning and info messages.
+                </p>
+                </li>
+                <li><p><code translate="no">3</code> log error, warning, info and verbose messages.
+                </p>
+                </li>
+                <li><p><code translate="no">4</code> <code class="text-warning" translate="no">DEFAULT</code> log error, warning, info, verbose and debug messages.
+                </p>
+                </li>
+            </ul>
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                    m.bcPlayer.logLevel = 3
+                    
+                    ' or
+                    
+                    m.bcPlayer.setFields({
+                      ' ...other fields here...
+                      logLevel: 3
+                    })
+                </code></pre>
+        </section>
+        <hr>
+        <section>
+            <h3 id="spinner-config">spinnerConfig</h3>
+            <p><code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+            <p>Configures the custom loading spinner appearance.</p>
+            <p>When using Roku’s native Video node UI/UX, this spinner is only visible during the execution of API requests, as the native Video node contains its non-customizable loading spinner, which is visible during buffering operations.</p>
+            
+            <h4>Possible Values</h4>
+            <p>An ASSOCIATIVE ARRAY with the following optional keys:</p>
+            <ul>
+                <li><p><code translate="no">URL</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-success" translate="No">OPTIONAL
+            </code>
+                </p> <ul>
+                    <li><p>Specifies the spinner image path</p></li>
+                    <li><p><code class="text-warning" translate="no">DEFAULT</code> Internal PNG image path which looks like so:</p>
+                        <figure class="bcls-figure">
+                            <img class="bcls-image" src="/assets/images/s-publishing-apps-img/roku/roku-library/loading-img.webp" alt="Loading the roku library locally">
+                          </figure>
+                    </li>
+                </ul>
+                </li>
+                <li><p><code translate="no">size</code> <code class="text-secondary" translate="no">INTEGER/FLOAT</code> <code class="text-success" translate="No">OPTIONAL
+            </code>
+                </p> <ul>
+                    <li><p>Specifies the size (width and height values) of the spinner image.</p></li>
+                    <li><p><code class="text-warning" translate="no">DEFAULT</code> 120</p>
+                    
+                    </li>
+                </ul>
+                </li>
+                <li><p><code translate="no">color</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-success" translate="No">OPTIONAL
+            </code>
+                </p> <ul>
+                    <li><p>Specifies the color of the spinner image, which is set through the <code translate="no">blendColor</code> Poster field.</p></li>
+                    <li><p><code class="text-warning" translate="no">DEFAULT</code> <code translate="no">""</code></p>
+                    
+                    </li>
+                </ul>
+                </li>
+                <li><p><code translate="no">clockwise</code> <code class="text-secondary" translate="no">BOOLEAN</code> <code class="text-success" translate="No">OPTIONAL
+            </code>
+                </p> <ul>
+                    <li><p>Specifies the image spinning direction, <code translate="no">true</code> for clockwise rotation and <code translate="no">false</code> for counter-clockwise rotation.</p></li>
+                    <li><p><code class="text-warning" translate="no">DEFAULT</code> <code translate="no">true</code></p>
+                    
+                    </li>
+                </ul>
+                </li>
+                <li><p><code translate="no">interval</code> <code class="text-secondary" translate="no">INTEGER/FLOAT</code> <code class="text-success" translate="No">OPTIONAL
+            </code>
+                </p> <ul>
+                    <li><p>Specifies the number of seconds to complete a 360-degree rotation of the spinner image. A value of 0 will cause the spinner to remain stationary and not spin.</p></li>
+                    <li><p><code class="text-warning" translate="no">DEFAULT</code> <code translate="no">1</code></p>
+                    
+                    </li>
+                </ul>
+                </li>
+                <li><p><code translate="no">opacity</code> <code class="text-secondary" translate="no">INTEGER/FLOAT</code> <code class="text-success" translate="No">OPTIONAL
+            </code>
+                </p> <ul>
+                    <li><p>Specifies the spinner image opacity with a value between <code translate="no">0</code> and <code translate="no">1</code>.</p></li>
+                    <li><p><code class="text-warning" translate="no">DEFAULT</code> <code translate="no">1</code></p>
+                    
+                    </li>
+                </ul>
+                </li>
+                
+            </ul>
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                    m.bcPlayer.spinnerConfig = {
+                      url: "pkg:/my/spinner/image.png"
+                      size: 200
+                      color: "#d32228"
+                      clockwise: false  ' counterclockwise rotation
+                      interval: 0.8     ' completes a 360 rotation in 800 miliseconds
+                      opacity: 0.8      ' sets an opacity of 80%
+                    }
+                    
+                    ' or
+                    
+                    m.bcPlayer.setFields({
+                      ' ...other fields here...
+                      spinnerConfig: {
+                        url: "pkg:/my/spinner/image.png"
+                        size: 200
+                        color: "#d32228"
+                        clockwise: false  ' counterclockwise rotation
+                        interval: 0.8     ' completes a 360 rotation in 800 miliseconds
+                        opacity: 0.8      ' sets an opacity of 80%
+                      }
+                    })
+                </code></pre>
+        </section>
+        <hr>
+        <section>
+            <h3>loading</h3>
+            <p><code class="text-secondary" translate="no">BOOLEAN</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+            <p>Controls the custom loading spinner visibility. This field is used by internal functions but it also allows the custom spinner to be controller externally if needed.</p>
+            <p>Keep in mind that the OOTB UI has its loading spinner. This field is independent from the OOTB UI built in loading spinner.
+            </p>
+            <p>The appearance of the loading spinner can be customized through the <a href="#spinner-config">spinnerConfig</a> field.</p>
+            
+            <h4>Possible Values</h4>
+            <p>An array containing any combination of the following values:</p>
+            <ul>
+                <li><p><code translate="no">false</code> <code class="text-warning" translate="no">DEFAULT</code> Hide the custom loading spinner.</p></li>
+                <li><p><code translate="no">true</code> Show the custom loading spinner.</p></li>
+            </ul>
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                    m.bcPlayer.loading = true
+                    
+                    ' or
+                    
+                    m.bcPlayer.setFields({
+                      ' ...other fields here...
+                      loading: true
+                    })
+                </code></pre>
+        </section>
+        <hr>
+        <section>
+            <h3 id="retry-error">retryOnError</h3>
+            <p><code class="text-secondary" translate="no">BOOLEAN</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+            <p>Configures the activation of the retry on error flow. This flow allows bcPlayer to automatically retry the video playback with another video source when a specific source results in a playback error during the initial buffering process.</p>
+            <p>If all the available video sources fail to play an error will be triggered.
+            </p>
+            <p>The retry on error flow follows the sources type and DRM encryption preferences/priorities set in the streamPreference and drmPreference fields.</p>
+
+            <p>This flow is only relevant at the initial source loading, ie, a playback error triggered mid-playback will not trigger the retry on error flow.</p>
+            
+            <h4>Possible Values</h4>
+            <ul>
+                <li><p><code translate="no">false</code> Disables the retry on error flow.</p></li>
+                <li><p><code translate="no">true</code> <code class="text-warning" translate="no">DEFAULT</code> Enables the retry on error flow.</p></li>
+            </ul>
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                    m.bcPlayer.retryOnError = false
+                    
+                    ' or
+                    
+                    m.bcPlayer.setFields({
+                      ' ...other fields here...
+                      retryOnError: false
+                    })
+                </code></pre>
+        </section>
+        <hr>
+        <section>
+            <h3>closeOnBack</h3>
+            <p><code class="text-secondary" translate="no">BOOLEAN</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+            <p>Configures the back remote control button action to terminate the bcPlayer node when pressed.</p>
+            <p>It’s enabled by default, when you press the back button, the bcPlayer node will be terminated (to bring it back, it needs to be reinitialized from scratch).
+            </p>
+            <p>This behavior can be disabled, in which case developers can capture the back button press through a <code translate="no">bcPlayer.on.keyEvent</code> event listener and handle it as they see fit without having to terminate the bcPlayer node.</p>
+            
+            <h4>Possible Values</h4>
+            <ul>
+                <li><p><code translate="no">false</code> Disables the close on error behavior.</p></li>
+                <li><p><code translate="no">true</code> <code class="text-warning" translate="no">DEFAULT</code> Enables the close on error behavior.</p></li>
+            </ul>
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                    m.bcPlayer.closeOnBack = false
+                    
+                    ' or
+                    
+                    m.bcPlayer.setFields({
+                      ' ...other fields here...
+                      closeOnBack: false
+                    })
+                </code></pre>
+        </section>
+        <hr>
+        <section>
+            <h3>enableDialogs</h3>
+            <p><code class="text-secondary" translate="no">BOOLEAN</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+            <p>Configures bcPlayer to show error dialogs when an error occurs.</p>
+            <p>It’s enabled by default; you can disable it and capture the errors through the <code translate="no">bcPlayer.on.error</code> event.
+            </p>
+            <p>These dialogs appearance can be customized through the <a href="#dialog-theme">dialogTheme</a> field.
+            </p>
+            
+            <h4>Possible Values</h4>
+            <ul>
+                <li><p><code translate="no">false</code> Disables error dialogs.</p></li>
+                <li><p><code translate="no">true</code> <code class="text-warning" translate="no">DEFAULT</code> Enables error dialogs.</p></li>
+            </ul>
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                    m.bcPlayer.enableDialogs = false
+                    
+                    ' or
+                    
+                    m.bcPlayer.setFields({
+                      ' ...other fields here...
+                      enableDialogs: false
+                    })
+                </code></pre>
+        </section>
+        <hr>
+        <section>
+            <h3 id="dialog-theme">dialogTheme</h3>
+            <p><code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+            <p>Configures error dialogs appearance when enableDialogs is enabled.</p>
+            <p>The expected properties are the same as the native StandardDialog <code translate="no">palette</code> field properties, except for <code translate="no">DialogItemColor</code>, <code translate="no">DialogInputFieldColor</code>, <code translate="no">DialogSecondaryTextColor</code>, and <code translate="no">DialogKeyboardColor</code> properties, which do not apply.
+            </p>
+            <p>Check below how the error dialogs look like in the default configuration.</p>
+            <figure class="bcls-figure">
+                <img class="bcls-image" src="/assets/images/s-publishing-apps-img/roku/roku-library/error-img.webp" alt="error image example">
+              </figure>
+
+            <h4>Possible Values</h4>
+            <p>An ASSOCIATIVE ARRAY with the following optional keys:</p>
+            <ul>
+                <li><p><code translate="no">DialogBackgroundColor</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                <ul>
+                    <li><p>Specifies the blend color for dialog's background bitmap.</p></li>
+                    <li><p><code class="text-warning" translate="no">DEFAULT</code> <code translate="no">"#00000000"</code></p></li>
+                </ul>
+                </li>
+                <li><p><code translate="no">DialogTextColor</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                <ul>
+                    <li><p>Specifies the title and content text color.</p></li>
+                    <li><p><code class="text-warning" translate="no">DEFAULT</code> Default Roku native color.</p></li>
+                </ul>
+                </li>
+                <li><p><code translate="no">DialogFocusColor</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                <ul>
+                    <li><p>Specifies the focused button and scrollbar thumb colors.</p></li>
+                    <li><p><code class="text-warning" translate="no">DEFAULT</code> Default Roku native color.</p></li>
+                </ul>
+                </li>
+                <li><p><code translate="no">DialogFocusItemColor</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                <ul>
+                    <li><p>Specifies the focused button text color.</p></li>
+                    <li><p><code class="text-warning" translate="no">DEFAULT</code> Default Roku native color.</p></li>
+                </ul>
+                </li>
+                <li><p><code translate="no">DialogSecondaryItemColor</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                <ul>
+                    <li><p>Specifies the title divider color.</p></li>
+                    <li><p><code class="text-warning" translate="no">DEFAULT</code> <code translate="no">"#00000000"</code></p></li>
+                </ul>
+                </li>
+                <li><p><code translate="no">DialogFootprintColor</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                <ul>
+                    <li><p>Specifies the button focus footprint color as well as the unfocused scrollbar thumb and track color.</p></li>
+                    <li><p><code class="text-warning" translate="no">DEFAULT</code> Default Roku native color.</p></li>
+                </ul>
+                </li>
+                
+            </ul>
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                    m.bcPlayer.dialogTheme = {
+                      DialogBackgroundColor: "#00000000"
+                      DialogTextColor: "#dbdbdb"
+                      DialogFocusColor: "#d32228"
+                      DialogFocusItemColor: "#ab2125"
+                      DialogSecondaryItemColor: "#dbdbdb"
+                      DialogFootprintColor: "#dbdbdb"
+                    }
+                    
+                    ' or
+                    
+                    m.bcPlayer.setFields({
+                      ' ...other fields here...
+                      dialogTheme: {
+                        DialogBackgroundColor: "#00000000"
+                        DialogTextColor: "#dbdbdb"
+                        DialogFocusColor: "#d32228"
+                        DialogFocusItemColor: "#ab2125"
+                        DialogSecondaryItemColor: "#dbdbdb"
+                        DialogFootprintColor: "#dbdbdb"
+                      }
+                    })
+                </code></pre>
+        </section>
+        <hr>
+        <section>
+            <h3>bufferTimeout</h3>
+            <p><code class="text-secondary" translate="no">INTEGER</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+            <p>Configures the buffering timeout error timer period in seconds. This configuration allows to setup a timer which is initiated once the initial video buffering begins and at the end of which a timeout error will trigger if the video playback hasn’t yet been initiated.
+            </p>
+            <p>Setting it to 0 disables the buffering timeout timer.
+            </p>
+            <p>If the <a href="#retry-error">retryOnError</a> config is enabled, if a buffering timeout error is trigger it’ll retry playing other available sources with no visual interruption to the user. Although an error will still be triggered through the <code translate="no">bcPlayer.on.error</code> event.</p>
+            
+            <h4>Possible Values</h4>
+            <ul>
+                <li>A positive integer value (seconds).</li>
+                <li><code class="text-warning" translate="no">DEFAULT</code> <code translate="no">0</code> buffering timeout disabled.</li>
+            </ul>
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                    m.bcPlayer.bufferTimeout = 20
+                    
+                    ' or
+                    
+                    m.bcPlayer.setFields({
+                      ' ...other fields here...
+                      bufferTimeout: 20
+                    })
+                </code></pre>
+        </section>
+        <hr>
+        <section>
+            <h3>on</h3>
+            <p><code translate="no" class="text-secondary">ROSGNODE</code> <code translate="no">READ-ONLY</code></p>
+            <p>Allows access to all the bcPlayer events. Developers should setup event listeners to capture the events data through the observeField() or observeFieldScoped() functions. Check the table below for all the available events and the data they provide. Check the code snippet to understand how to setup event listeners to capture these events.
+            </p>
+        </section>
+        <section class="bcls-section">
+            <h2 id="event-list">Event List</h2>
+            <div class="table-responsive">
+            <table class="bcls-table">
+                <caption class="bcls-caption--table">Events</caption>
+                <thead class="bcls-table__head">
+                    <tr>
+                        <th class="sticky-top">Event</th>
+                        <th class="sticky-top">Data</th>
+                        <th class="sticky-top">Description</th>
+                    </tr>
+                </thead>
+                <tbody class="bcls-table__body">
+                    <tr>    
+                        <td>sdkReady</td>
+                        <td><p><code translate="no" class="text-secondary">BOOLEAN</code></p>
+                        <ul>
+                            <li><p><code translate="no">true</code> bcPlayer features are "live" and ready to use.</p></li>
+                            <li><p><code translate="no">false</code> bcPlayer features are not available.</p></li>
+                        </ul></td>
+                        <td><p>Indicates if the bcPlayer internal components have been completely initiated. If the <code translate="no">sdkReady</code> value is <code translate="no">false</code>, the bcPlayer features won’t be available to use.</p></td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">load</td>
+                        <td><p><code translate="no" class="text-secondary">ASSOCOATIVE ARRAY</code></p>
+                        <p>Provides an ASSOCIATIVE ARRAY object with the following keys:</p>
+                        <ul>
+                            <li><p><code translate="no">event</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <ul><p>Posible Values:</p>
+                                <li><p><code translate="no">error</code>: an error has occurred while loading Brightcove metadata.</p></li>
+                                <li><p><code translate="no">start</code>: Brightcove metadata loading has started.</p></li>
+                                <li><p><code translate="no">end</code>: Brightcove metadata loading has completed successfully. This event indicates that the <code translate="no">bcPlayer.content</code> field has been successfully updated with the new catalog metadata.</p></li>
+                            </ul>
+                            </li>
+                            <li><p><code translate="no">type</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+            <p>Metadata type. Available in <code translate="no">start</code> and <code translate="no">end</code> events. Possible values:</p>
+                            <ul>
+                                <li><p><code translate="no">video</code>: specifies that a single video metadata is being  loaded.</p></li>
+                                <li><p><code translate="no">playlist</code>: specifies that a playlist metadata is being loaded (applies to Brightcove playlists as well as search results and related videos metadata).</p></li>
+                            </ul>
+                            </li>
+                            <li><p><code translate="no">id</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                            <p>Specifies the video or playlist Videocloud ID. Available in <code translate="no">start</code> and <code translate="no">end</code> events. It’s set to <code translate=""></code>invalid when loading multiple videos (video search and related metadata).</p>  
+                            </li>
+                            <li><p><code translate="no">videos</code> <code class="text-secondary" translate="no">INTEGER</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                            <p>Specifies the number of videos being loaded. Available in <code translate="no">start</code> and <code translate="no">end</code> events.</p>  
+                            </li>
+                            <li><p><code translate="no">name</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                            <p>Specifies the name of the video or playlist being loaded. Available in <code translate="no">start</code> and <code translate="no">end</code> events. It’s set to <code translate="no">invalid</code> when loading multiple videos (video search and related metadata).</p>  
+                            </li>
+                            <li><p><code translate="no">message</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                            <p>Specifies an error message. Only present when <code translate="no">event</code>event is <code translate="no">error</code>.</p>  
+                            </li>
+                        </ul>
+                        </td>
+                        <td class="align-top"><p>The load event is triggered when metadata load process starts, when it ends and when an error occurs during the loading process.</p></td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">start</td>
+                        <td><p><code translate="no" class="text-secondary">ASSOCOATIVE ARRAY</code></p>
+                            <p>Provides an ASSOCIATIVE ARRAY object with the following keys:</p>
+                            <ul>
+                                <li><p><code translate="no">contentIndex</code> <code class="text-secondary" translate="no">INTEGER</code> <code class="text-dark" translate="no">NATIVE</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                <p>Reference to the native <code translate="no">Video.contentIndex</code> field. Specifies the index of the video that is currently playing in the playlist. It’s set to <code translate="no">0</code> if only a single video is playing.</p>
+                                </li>
+                                <li><p><code translate="no">timeToStartStreaming</code> <code class="text-secondary" translate="no">INTEGER/FLOAT</code> <code class="text-dark" translate="no">NATIVE</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                <p>Reference to the native <code translate="no">Video.timeToStartStreaming</code> field. Specifies the time in seconds from playback being started until the video actually began playing.</p>
+                                </li>
+                                <li><p><code translate="no">playStartInfo</code> <code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code> <code class="text-dark" translate="no">NATIVE</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                <p>Reference to the native <code translate="no">Video.playStartInfo</code> field. Provides timing measurements related to the start of video playback. All measurements are in seconds. Provides the following keys:</p>
+                                <ul>
+                                    <li><p><code translate="no">total_dur</code> <code translate="no" class="text-secondary">FLOAT</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                        <p>Total video start duration.</p>
+                                    </li>
+                                    <li><p><code translate="no">manifest_dur</code> <code translate="no" class="text-secondary">FLOAT</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                        <p>Manifest download and parsing.</p>
+                                    </li>
+                                    <li><p><code translate="no">drm_load_dur</code> <code translate="no" class="text-secondary">FLOAT</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                        <p>DRM system initialization.</p>
+                                    </li>
+                                    <li><p><code translate="no">drm_lic_acq_dur</code> <code translate="no" class="text-secondary">FLOAT</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                        <p>License acquisition. This typically includes interactions with the license server.</p>
+                                    </li>
+                                    <li><p><code translate="no">prebuf_dur</code> <code translate="no" class="text-secondary">FLOAT</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                        <p>Prebuffer content.</p>
+                                    </li>
+                                    <li><p><code translate="no">manifest_start</code> <code translate="no" class="text-secondary">FLOAT</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                        <p>Point at which manifest download and parsing begins.</p>
+                                    </li>
+                                    <li><p><code translate="no">drm_load_start</code> <code translate="no" class="text-secondary">FLOAT</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                        <p>Point at which DRM system initialization begins.</p>
+                                    </li>
+                                    <li><p><code translate="no">drm_lic_acq_start</code> <code translate="no" class="text-secondary">FLOAT</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                        <p>Point at which license acquisition begins.</p>
+                                    </li>
+                                    <li><p><code translate="no">prebuf_start</code> <code translate="no" class="text-secondary">FLOAT</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                        <p>Point at which content pre-buffering begins.</p>
+                                    </li>
+                                </ul>
+                                </li>
+                                <li><p><code translate="no">videoFormat</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-dark" translate="no">NATIVE</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                <p>Reference to the native <code translate="no">Video.videoFormat</code> field. Contains the format of the currently playing video stream. Possible values:</p>
+                                <ul>
+                                    <li><p><code translate="no">""</code> No stream playing.</p>
+                                    </li>
+                                    <li><p><code translate="no">none</code> Stream contains no playable video.</p>
+                                    </li>
+                                    <li><p><code translate="no">unknown</code> Stream contains unknown video.</p>
+                                    </li>
+                                    <li><p><code translate="no">hevc</code> ISO/IEC 23008-2, H.265, HEVC.</p>
+                                    </li>
+                                    </li>
+                                    <li><p><code translate="no">hevc_b</code> ISO/IEC 23008-2 Annex-B, H.265, HEVC.</p>
+                                    </li>
+                                    <li><p><code translate="no">mpeg1</code> ISO/IEC 11172-2, MPEG-1 part 2, H.261.</p>
+                                    </li>
+                                    <li><p><code translate="no">mpeg2</code> ISO/IEC 13818-2, MPEG-2 part 2, H.262.</p>
+                                    </li>
+                                    <li><p><code translate="no">mpeg4_2</code> ISO/IEC 14496-2, MPEG-4 part 2, H.263.</p>
+                                    </li>
+                                    <li><p><code translate="no">mpeg4_10b</code> ISO/IEC 14496-10, MPEG-4 part 10 Annex-B, H.264, vc-1.</p>
+                                    </li>
+                                    <li><p><code translate="no">mpeg4_15</code> ISO/IEC 14496-15, MPEG-4 part 15, H.264, vc-1.</p>
+                                    </li>
+                                    <li><p><code translate="no">AVC vc1</code> vc-1.</p>
+                                    </li>
+                                    <li><p><code translate="no">wmv</code> Microsoft Windows Media Video.</p>
+                                    </li>
+                                    <li><p><code translate="no">vp8</code> VP8 codec.</p>
+                                    </li>
+                                    <li><p><code translate="no">vp9</code> VP9 codec.</p>
+                                    </li>
+                                </ul>
+                                </li>
+                                <li><p><code translate="no">audioFormat</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-dark" translate="no">NATIVE</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                <p>Reference to the native <code translate="no">Video.audioFormat</code> field. Contains the format of the currently playing audio. Possible values:</p>
+                                <ul>
+                                    <li><p><code translate="no">""</code> No stream playing.</p>
+                                    </li>
+                                    <li><p><code translate="no">none</code> Stream contains no playable audio.</p>
+                                    </li>
+                                    <li><p><code translate="no">unknown</code> Stream contains unknown audio.</p>
+                                    </li>
+                                    <li><p><code translate="no">acc</code> ISO/IEC 14496-3, Advanced Audio Coding.</p>
+                                    </li>
+                                    </li>
+                                    <li><p><code translate="no">acc_adif</code> ISO/IEC 14496-3, Advanced Audio Coding, ADIF container.</p>
+                                    </li>
+                                    <li><p><code translate="no">acc_adts</code> ISO/IEC 14496-3, Advanced Audio Coding, ADTS container.</p>
+                                    </li>
+                                    <li><p><code translate="no">acc_latm</code> ISO/IEC 14496-3, Advanced Audio Coding, LATM container.</p>
+                                    </li>
+                                    <li><p><code translate="no">ac3</code> Dolby Digital.</p>
+                                    </li>
+                                    <li><p><code translate="no">ac4</code> Dolby Audio - AC-4.</p>
+                                    </li>
+                                    <li><p><code translate="no">eac3</code> Dolby Digital Plus.</p>
+                                    </li>
+                                    <li><p><code translate="no">alac</code> Apple Lossless.</p>
+                                    </li>
+                                    <li><p><code translate="no">dts</code> DTS Coherent Acoustics.</p>
+                                    </li>
+                                    <li><p><code translate="no">flac</code> Free Lossless Audio Codec.</p>
+                                    </li>
+                                    <li><p><code translate="no">mat</code> Dolby Audio - TrueHD.</p>
+                                    </li>
+                                    <li><p><code translate="no">mp3</code> ISO/IEC 11172-3, MPEG Audio Layer III.</p>
+                                    </li>
+                                    <li><p><code translate="no">pcm</code> linear PCM.</p>
+                                    </li>
+                                    <li><p><code translate="no">vorbis</code> Ogg Vorbis.</p>
+                                    </li>
+                                </ul>
+                                </li>
+                                <li><p><code translate="no">currentAudioTrack</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-dark" translate="no">NATIVE</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                <p>Reference to the native <code translate="no">Video.currentAudioTrack</code> field. Specifies the track identifier of the audio being played. Reading this field returns the track that is being played, which may be different than the track being selected (for example, when the Roku media player cannot play a certain format). Roku automatically selects a track based on the preferred audio language setting if no audio track is specifically selected.</p>
+                                </li>
+                                <li><p><code translate="no">availableAudioTracks</code> <code class="text-secondary" translate="no">ARRAY</code> <code class="text-dark" translate="no">NATIVE</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                    <p>Reference to the native <code translate="no">Video.availableAudioTracks</code> field. Lists all the available audio tracks on the currently playing stream. Every array element consists of an ASSOCIATIVE ARRAY containing the following keys:</p>
+                                    <ul>
+                                        <li><p><code translate="no">Language</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                            <p>ISO 639-2 three-letter language code.</p>
+                                        </li>
+                                        <li><p><code translate="no">Name</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                            <p>Descriptive name of the audio track.</p>
+                                        </li>
+                                        <li><p><code translate="no">Track</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                            <p>The track identifier. The value of this field may be used to select the audio track through the <code translate="no">bcPlayer.video.audioTrack</code> field.</p>
+                                        </li>
+                                    </ul>
+                                    </li>
+                                    <li><p><code translate="no">currentSubtitleTrack</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-dark" translate="no">NATIVE</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                        <p>Reference to the native <code translate="no">Video.currentSubtitleTrack</code> field. Specifies the identifier of the selected subtitle track that is currently playing. Subtitles may or may not be visible on the screen, depending upon the user's caption mode setting. When the user has not selected a track, the Roku media player will select a track based on the preferred caption language system setting.</p>
+                                        </li>
+                                    <li><p><code translate="no">availableSubtitleTracks</code> <code class="text-secondary" translate="no">ARRAY</code> <code class="text-dark" translate="no">NATIVE</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                            <p>Reference to the native <code translate="no">Video.availableSubtitleTracks</code> field. Specifies the list of subtitle tracks available in the video stream. Every array element consists on an ASSOCIATIVE ARRAY containing the following keys:</p>
+                                            <ul>
+                                                <li><p><code translate="no">Description</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                                    <p>Descriptive name of the subtitle track.</p>
+                                                </li>
+                                                <li><p><code translate="no">Language</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                                    <p>ISO 639-2 three-letter language code.</p>
+                                                </li>
+                                                <li><p><code translate="no">TrackName</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                                    <p>The track identifier. The value of this field may be used to select the subtitle track through the <code translate="no">bcPlayer.video.subtitleTrack</code> field.</p>
+                                                </li>
+                                            </ul>
+                                    </li>
+                                    <li><p><code translate="no">retries</code> <code class="text-secondary" translate="no">INTEGER</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                        <p>Available when playing Brightcove sources only. Specifies the number of playback retries when <a href="#retry-error">retryOnError</a> is enabled. If it’s disabled, this property is set to <code translate="no">1</code>.</p>
+                                    </li>
+                                
+                            </ul>
+                            </td>
+                        <td class="align-top"><p>The start event is triggered at the start of every video playback. It triggers only once per video asset, and it provides a set of useful information about the video that just started playing. Most of the information provided is retrieved from the native <a href="https://developer.roku.com/en-gb/docs/references/scenegraph/media-playback-nodes/video.md">Video</a> node.</p></td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">play</td>
+                        <td>WIP</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">pause</td>
+                        <td>WIP</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">resume</td>
+                        <td>WIP</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">play</td>
+                        <td>WIP</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">previous</td>
+                        <td><p><code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code></p>
+                        <p>Provides an ASSOCIATIVE ARRAY object with the following keys:</p>
+                        <ul>
+                            <li><p><code translate="no">fromIndex</code> <code translate="no" class="text-secondary">INTEGER</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>The index of the currently playing video in the playlist.</p>
+                            </li>
+                            <li><p><code translate="no">toIndex</code> <code translate="no" class="text-secondary">INTEGER</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>The index of the previous video in the playlist that will start playing.</p>
+                            </li>
+                        </ul>
+                        </td>
+                        <td class="align-top"><p>The play previous video action has been triggered. This event is only available when playing a playlist structure.</p></td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">next</td>
+                        <td><p><code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code></p>
+                        <p>Provides an ASSOCIATIVE ARRAY object with the following keys:</p>
+                        <ul>
+                            <li><p><code translate="no">fromIndex</code> <code translate="no" class="text-secondary">INTEGER</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>The index of the currently playing video in the playlist.</p>
+                            </li>
+                            <li><p><code translate="no">toIndex</code> <code translate="no" class="text-secondary">INTEGER</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>The index of the next video in the playlist that will start playing.</p>
+                            </li>
+                        </ul>
+                        </td>
+                        <td class="align-top"><p>The play next video action has been triggered. This event is only available when playing a playlist structure.</p></td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">finished</td>
+                        <td><p><code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code></p>
+                        <p>Provides an ASSOCIATIVE ARRAY object with the following keys:</p>
+                        <ul>
+                            <li><p><code translate="no">completedStreamInfo</code> <code>ASSOCIATIVE</code> <code>NATIVE</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>Reference to the native <code translate="no">Video.completedStreamInfo</code> field. Provides information about the video stream that most recently completed playing, due to an error, user action, or end of the stream. The following keys are available through this property:</p>
+                            <ul>
+                                <li>
+                                    <p>
+                                    <code>isUnderrun</code> <code class="text-secondary" translate="no">BOOLEAN</code> <code class="text-danger" translate="no">REQUIRED</code>
+                                    </p>
+                                    <p>If true, the stream was downloaded due to an underrun.</p>
+                                </li>
+                                <li>
+                                    <p>
+                                    <code>isResume</code> <code class="text-secondary" translate="no">BOOLEAN</code> <code class="text-danger" translate="no">REQUIRED</code>
+                                    </p>
+                                    <p>If true, playback was resumed after a trickplay seek action.</p>
+                                </li>
+                                <li>
+                                    <p>
+                                    <code>measureBitrate</code> <code class="text-secondary" translate="no">INTEGER</code> <code class="text-danger" translate="no">REQUIRED</code>
+                                    </p>
+                                    <p>The measured bitrate (bps) of the network when the stream was selected.</p>
+                                </li>
+                                <li>
+                                    <p>
+                                    <code>streamBitrate</code> <code class="text-secondary" translate="no">INTEGER</code> <code class="text-danger" translate="no">REQUIRED</code>
+                                    </p>
+                                    <p>The bitrate of the stream.</p>
+                                </li>
+                                <li>
+                                    <p>
+                                    <code>streamUrl</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code>
+                                    </p>
+                                    <p>The URL of the stream.</p>
+                                </li>
+                                <li>
+                                    <p>
+                                    <code>isFullResult</code> <code class="text-secondary" translate="no">BOOLEAN</code> <code class="text-danger" translate="no">REQUIRED</code>
+                                    </p>
+                                    <p>If true indicates the stream played to completion, if false, the stream was interrupted by an error or user action.</p>
+                                </li>
+                            </ul>
+                            </li>
+                            <li><p><code translate="no">contentIndex</code> <code translate="no" class="text-secondary">INTEGER</code> <code>NATIVE</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>Reference to the native <code translate="no">Video.contentIndex</code> field. Specifies the index of the video that is currently playing in the playlist. It’s set to <code translate="no">0</code> if only a single video is playing.</p>
+                            </li>
+                            <li><p><code translate="no">errorCode</code> <code translate="no" class="text-secondary">INTEGER</code> <code>NATIVE</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>Reference to the native <code translate="no">Video.errorCode</code> field. Specifies the error code if the stream has ended due to an error. Further details on the error can be retrieved through the <code translate="no">error</code>error event. Possible values:</p>
+                            <ul>
+                                <li><code translate="no">0</code> no error</li>
+                                <li><code translate="no">-1</code> network error (server down or unresponsive, server is unreachable, network setup problem on the client).</li>
+                                <li><code translate="no">-2</code> connection timed out.</li>
+                                <li><code translate="no">-3</code> unknown/unspecified or generic Error.</li>
+                                <li><code translate="no">-4</code> empty list; no streams were specified to play.</li>
+                                <li><code translate="no">-5</code> media error; the media format is unknown or unsupported.</li>
+                                <li><code translate="no">-6</code> DRM error.</li>
+                            </ul>
+                            </li>
+                            
+                        </ul>
+                        </td>
+                        <td class="align-top"><p>Triggered at the end of a video playback. The following situations will trigger a <code translate="no">finished</code> event:</p>
+                        <ul>
+                            <li><p>The video has played until the end of the stream.</p></li>
+                            <li><p>A playback error occurs, either while loading the stream or mid-stream. Keep in mind that an <code translate="no">error</code>error event will trigger before the <code translate="no">finished</code> event in this case.</p></li>
+                            <li><p>A retrial error occurs, when it’s not possible to play any of the video available sources. Valid when <a href="#retry-error">retryOnError</a> is enabled.</p></li>
+                            <li><p>The video playback is stopped by an external action.</p></li>
+                        </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">playlistIndex</td>
+                        <td class="align-top"><p><code translate="no" class="text-secondary">INTEGER</code> <code class="text-dark" translate="no">NATIVE</code></p>
+                        <ul>
+                            <li>Integer number</li>
+                        </ul></td>
+                        <td class="align-top"><p>Triggered right before starting video playback. Provides the index of the video that will start playing in the playlist.</p>
+                        <p>This event reflects the native <code translate="no">Video.contentIndex</code> field and its generally useful when playing video playlists. </p>
+                        <p>When playing a single video this event sends <code translate="no">0</code>0.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">disconnect</td>
+                        <td class="align-top"><p><code class="text-secondary" translate="no">BOOLEAN</code></p>
+                        <ul>
+                            <li><p><code translate="no">true</code> Network connection was lost.</p></li>
+                            <li><p><code translate="no">false</code> Network connection resumed.</p></li>
+                        </ul>
+                        </td>
+                        <td class="align-top"><p>Triggered when loss of internet connection is detected.</p>
+                        <p>This specific situation is handled by the native Video node. A native message triggered by RokuOS is presented to the app user informing that the network connection was lost.</p>
+                        <p>An error is eventually triggered but it’s not immediate as the player waits for the conditions to resume video playback.</p>
+                        <p>We provide this event in case developers need to implement custom behaviors/workflows to handle this situation.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">error</td>
+                        <td><p><code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code></p>
+                        <p>Provides an ASSOCIATIVE ARRAY object with the following keys:</p>
+                        <ul>
+                            <li>
+                                <p><code translate="no">source</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                <p>Provides an indication of the source of the error. This allows errors to be filtered and individually handled depending on their source. Possible values:</p>
+                                <ul>
+                                    <li><p><code translate="no">playback</code> an error occurred during video playback. This error is triggered when the native <code translate="no">Video.state</code> field value is set to <code translate="no">error</code>. More info on the error can be found in the <code translate="no">data</code> key object.</p></li>
+                                    <li><p><code translate="no">playback-retrial</code>  triggered when retryOnError is enabled. Lets developers know that there are no more valid video sources to retry.</p></li>
+                                    <li><p><code translate="no">playback-buffering</code>  triggered when bufferTimeout is enabled (ie, set to a value higher than 0) and indicates that the buffering timeout has been reached. Keep in mind that if retryOnError is enabled, it’ll still try to playback another source, otherwise the playback will stop.</p></li>
+                                    <li><p><code translate="no">load</code> triggered when an error occurs within the load function.</p></li>
+                                    <li><p><code translate="no">playVideo</code> triggered when an error occurs within the playVideo function.</p></li>
+                                    <li><p><code translate="no">playVideos</code> triggered when an error occurs within the playVideos function.</p></li>
+                                    <li><p><code translate="no">playPlaylist</code> triggered when an error occurs within the playPlaylist function.</p></li>
+                                    <li><p><code translate="no">playRelated</code> triggered when an error occurs within the playRelated function.</p></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><code translate="no">path</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                <p>Provides a more detailed indication on where exactly the error occurred. For example:</p>
+                                <ul>
+                                    <li><p><code translate="no">bcPlayer/bcPlayerTask</code> the error occurred in the bcPlayer internal task.</p></li>
+                                    <li><p><code translate="no">bcPlayer/bcPlayerTask/playPlaylist</code> the error occurred in the bcPlayer task playPlaylist function.</p></li>
+                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <p><code translate="no">message</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                <p>Provides the error message. The exact value of this property depends on the error <code translate="no">source</code>:</p>
+                                <ul>
+                                    <li><p><code translate="no">playback</code>: contains the value of the native <code translate="no">Video.errorMsg</code> field.</p></li>
+                                    <li><p><code translate="no">playback-retrial/playback-buffering</code>: provides a description of the error.</p></li>
+                                    <li><p><code translate="no">playVideo/playVideos/playPlaylist/playRelated</code>:</p>
+                                    <ul>
+                                        <li>In case of a Playback API request failure this property contains either the error message provided in the response body or, if that’s not available, the associated roUrlEvent GetFailureReason value.</li>
+                                        <li>In all other cases (validation errors), provides a description of the error.</li>
+                                    </ul>
+                                    </li>
+                                    
+                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <p><code translate="no">data</code> <code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                                <p>Provides more details about the error. This property is available in the <code translate="no">playback</code>, <code translate="no">playback-retrial</code>, <code translate="no">playback-buffering</code> and some of the other errors that might contain data on a failed API request. Provides the following properties:</p>
+                                <ul>
+                                    <li><p><code translate="no">errorCode</code> <code class="text-secondary" translate="no">INTEGER</code> <code class="text-dark" translate="no">NATIVE</code> <code>REQUIRED</code></p>
+                                    <p>The value of this property depends on the error <code translate="no">source</code>:</p>
+                                    <ul>
+                                        <li><p><code translate="no">playback</code>: contains the value of the native <code translate="no">Video.errorCode</code> field. Check the Roku documentation for all the possible values in this field.</p></li>
+                                        <li><p><code translate="no">playback-retrial</code>: contains the value of the native <code translate="no">Video.errorCode</code> field set by the latest source playback retry error.</p></li>
+                                        <li><p><code translate="no">playback-buffering</code>: contains the value of the native <code translate="no">Video.errorCode</code> field. It should be <code translate="no">0</code> in this case as the buffering timeout usually triggers before the Video playback error.</p></li>
+                                        <li><p><code translate="no">playVideo/playVideos/playPlaylist/playRelated</code>: contains the Playback API request response code.</p></li>
+                                    </ul>
+                                    </li>
+                                    <li><p><code translate="no">contentIndex</code> <code class="text-secondary" translate="no">INTEGER</code> <code class="text-dark" translate="no">NATIVE</code> <code>OPTIONAL</code></p>
+                                    <p>Value of the native <code translate="no">Video.contentIndex</code> field. It’s set to <code translate="no">0</code> when playing a single video. Only present on <code translate="no">playback</code>, <code translate="no">playback-retrial</code> and <code translate="no">playback-buffering</code> error sources.</p>
+                                    </li>
+                                    <li>
+                                    <p><code translate="no">completedStreamInfo</code> <code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code> <code class="text-dark" translate="no">NATIVE</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                                    <p> Value of the native Video.completedStreamInfo field. Useful on playback errors. Only present on playback, playback-retrial and playback-buffering error sources.</p></li>
+                                    <li>
+                                    <p><code translate="no">errorMsg</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-dark" translate="no">NATIVE</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                                    <p>The value of this property depends on the error source:</p>
+                                    <ul>
+                                        <li><p><code translate="no">playback/playback-retrial/playback-buffering</code>: contains the value of the native <code translate="no">Video.errorMsg</code> field. Only present if errorCode is not <code translate="no">0</code>.</p></li>
+                                        <li><p><code translate="no">playVideo/playVideos/playPlaylist/playRelated</code>: contains the return value of the Playback API request associated <code translate="no">roUrlEvent</code> GetFailureReason function.</p></li>
+                                    </ul>
+                                </li>
+                                    <li>
+                                    <p><code translate="no">errorStr</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-dark" translate="no">NATIVE</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                                    <p>Value of the native <code translate="no">Video.errorStr</code> field. Only present if <code translate="no">errorCode</code> is not <code translate="no">0</code> on <code translate="no">playback</code>, <code translate="no">playback-retrial</code> and <code translate="no">playback-buffering</code> error sources.</p>
+                                </li>
+                                    <li>
+                                    <p><code translate="no">errorInfo</code> <code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code> <code class="text-dark" translate="no">NATIVE</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                                    <p>The value of this property depends on the error <code translate="no">source</code>:</p>
+                                    <ul>
+                                        <li><p><code translate="no">playback/playback-retrial/playback-buffering</code>: contains the value of the native Video.errorInfo field. Only present if errorCode is not 0.</p></li>
+                                        <li><p><code translate="no">playVideo/playVideos/playPlaylist/playRelated</code>: contains the Playback API request error response body. The expected value is an ASSOCIATIVE ARRAY object containing the following properties (for more detailed information on these please check the Playback API documentation page):</p>
+                                        <ul>
+                                            <li><p><code translate="no">error_code</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p></li>
+                                            <li><p><code translate="no">message</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p></li>
+                                        </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><p><code translate="no">retry</code> <code class="text-secondary" translate="no">BOOLEAN</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                                <p>If <code translate="no">true</code> specifies that it wasn't possible to playback a specific video source and the player will retry with a different source. If all the available video sources fail to play, a <code translate="no">playback-retrial</code> error will be triggered (and in that case, retry value is reset to <code translate="no">false</code>). Only present if retryOnError is enabled on <code translate="no">playback</code>, <code translate="no">playback-retrial</code> and <code translate="no">playback-buffering</code> error sources.</p>
+                                </li>
+                                <li><p><code translate="no">retries</code> <code class="text-secondary" translate="no">INTEGER</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                                <p>Specifies the number of source playback retries that were executed. Only present if retryOnError is enabled on <code translate="no">playback</code>, <code translate="no">playback-retrial</code> and <code translate="no">playback-buffering</code> error sources.</p>
+                                </li>
+                                <li><p><code translate="no">source</code> <code translate="no">ASSOCIATIVE</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                                <p>Specifies an invalid video source which bcPlayer wasn’t able to properly parse into the expected Video ContentNode fields. Only present in a specific <code translate="no">playback-retrial</code> error.</p>
+                                </li>
+                                        
+                                    
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        </td>
+                        <td class="align-top"><p>Triggered when an error occurs within bcPlayer. The possible errors include video playback errors as well as data parsing, API request errors and other validation related errors.</p></td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">buffering</td>
+                        <td><p><code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code></p>
+                        <p>Provides an ASSOCIATIVE ARRAY object with the following keys:</p>
+                        <ul>
+                            <li><p><code translate="no">contentIndex</code> <code class="text-secondary" translate="no">INTEGER</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>Reflects the value of the native <code translate="no">Video.contentIndex</code> field.</p></li>
+                            <li><p><code translate="no">position</code> <code translate="no" class="text-secondary">FLOAT</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>Reflects the value of the native <code translate="no">Video.position</code> field.</p></li>
+                            <li><p><code translate="no">bufferingStatus</code> <code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>Reflects the value of the native Video.bufferingStatus field.
+                                The following properties are available:</p>
+                            <ul>
+                                <li><p><code translate="no">percentage</code> <code translate="no" class="text-secondary">FLOAT</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                <p>Percent buffering complete as an integer.</p>
+                                </li>
+                                <li><p><code translate="no">isUnderrun</code> <code class="text-secondary" translate="no">BOOLEAN</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                <p>Indicates if a stream underrun occurred.</p>
+                                </li>
+                                <li><p><code translate="no">isUnderrun</code> <code class="text-secondary" translate="no">BOOLEAN</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                <p>Indicates whether the player has buffered enough data to allow the player to begin playing immediately should "control" be set to "play."</p>
+                                </li>
+                                <li><p><code translate="no">actualStart</code> <code translate="no" class="text-secondary">FLOAT</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                                <p>A time value that is automatically set when <code translate="no">prebufferDone</code> becomes <code translate="no">true</code>, specifying the actual time from which playback will resume. This may vary from the time requested in the content node's <code translate="no">playStart</code> field, depending on the capabilities of the player and the <code translate="no">seekMode</code> setting.</p>
+                                </li>
+                            </ul>
+                            </li>
+                        </ul>
+                        </td>
+                        <td class="align-top"><p>Reflects the buffering value of the Video.state field and specifies that stream buffering is in progress. To capture the buffering progress in real-time, an event listener should be set into the Video.bufferingStatus like so:</p>
+
+                            <div class="row overflow-scroll">
+                                <div class="col overflow-scroll" style="max-width: 250px;">
+                                    <pre class="line-numbers">
+                                        <code class="language-basic" translate="No">sub init()
+        
+                                            m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                                            m.bcPlayer.video.observeField("bufferingStatus", "onBufferingStatus")
+                                          
+                                          end sub
+                                          
+                                          ' ...
+                                          
+                                          sub onBufferingStatus(ev)
+                                            data = ev.getData()
+                                          
+                                            ' data is an ASSOCIATIVE ARRAY object containing the following properties:
+                                            ' percentage, isUnderrun, prebufferDone, actualStart
+                                            ' any change to any of those properties value will trigger the execution of this function, so the percentage property can be used to track the buffering progress
+                                          
+                                          end sub
+                                        </code></pre>
+                               
+                
+                        
+                        </td>
+                    </tr>
+                    <tr>    
+                        <td class="align-top">duration</td>
+                        <td>WIP</td>
+                        <td></td>
+                    </tr>
+                    <tr >    
+                        <td class="align-top">timedMetaData</td>
+                        <td>WIP</td>
+                        <td></td>
+                    </tr>
+                    <tr>    
+                        <td class="align-top">dialogClose</td>
+                        <td><p><code class="text-secondary" translate="no">BOOLEAN</code></p>
+                        <ul>
+                            <li><p><code translate="no">true</code> an error dialog has been closed by a user action.</p></li>
+                            <li><p><code translate="no">false</code> not used.</p></li>
+                        </ul>
+                        </td>
+                        <td class="align-top"><p>Triggered when an error dialog is closed by a user action, usually pressing the Dialog Close button.</p></td>
+                    </tr>
+                    <tr>    
+                        <td class="align-top">mute</td>
+                        <td>WIP</td>
+                        <td></td>
+                    </tr>
+                    <tr>    
+                        <td class="align-top">size</td>
+                        <td><p><code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code></p>
+                        <ul>
+                            <li><p><code translate="no">width</code></p></li>
+                            <li><p><code translate="no">height</code></p></li>
+                        </ul>
+                        </td>
+                        <td class="align-top"><p>Triggered when the <code translate="no">width</code> or <code translate="no">height</code> bcPlayer native fields change, although it will only trigger if both values are higher than zero.</p></td>
+                    </tr>
+                    <tr>    
+                        <td class="align-top">close</td>
+                        <td><p><code class="text-secondary" translate="no">BOOLEAN</code></p>
+                        <ul>
+                            <li><p><code translate="no">true</code> the bcPlayer node has been completely terminated.</p></li>
+                            <li><p><code translate="no">false</code> not used.</p></li>
+                        </ul>
+                        </td>
+                        <td class="align-top"><p>Triggered when the bcPlayer is completely terminated. Keep in mind that when the close function is called, the bcPlayer is not terminated immediately as it still waits for any task that might still be in progress. Once all tasks complete, the <code translate="no">close</code> event is triggered.</p>
+                        <p>This event can be used to clean up any remaining bcPlayer references and observers.</p>
+                        </td>
+                    </tr>
+                    <tr>    
+                        <td class="align-top">logOutput</td>
+                        <td><p><code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code></p>
+                        <p>Provides an ASSOCIATIVE ARRAY object with the following keys:</p>
+                        <ul>
+                            <li><p><code translate="no">level</code> <code class="text-secondary" translate="no">INTEGER</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>Specifies the log level:</p>
+                            <ul>
+                                <li><p><code translate="no">0</code>: error.</p></li>
+                                <li><p><code translate="no">1</code>: warning.</p></li>
+                                <li><p><code translate="no">2</code>: info.</p></li>
+                                <li><p><code translate="no">3</code>: verbose.</p></li>
+                                <li><p><code translate="no">4</code>: debug.</p></li>
+                            </ul>
+                            </li>
+                            <li><p><code translate="no">time</code> <code class="text-secondary" translate="no">INTEGER</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>Provides the date/time as the number of seconds from the Unix epoch (00:00:00 1/1/1970 GMT).</p>
+                            </li>
+                            <li><p><code translate="no">message</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>Provides the log message.</p>
+                            </li>
+                            <li><p><code translate="no">params</code> <code translate="no">ANY</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>Provides other helpful data. This can be any value, including invalid when no data is set.</p>
+                            </li>
+                        </ul>
+                        </td>
+                        <td class="align-top"><p>Allows access to the internal bcPlayer logs, which are triggered by an internal Logger node.</p>
+                        <p>The log level can be configured through the logLevel field, allowing to control the amount of logs coming through the <code translate="no">logOutput</code> event.</p>
+                        </td>
+                    </tr>
+                    <tr>    
+                        <td class="align-top">keyEvent</td>
+                        <td><p><code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code></p>
+                        <p>Provides an ASSOCIATIVE ARRAY object with the following keys:</p>
+                        <ul>
+                            <li><p><code translate="no">key</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>Specifies the button that was pressed/released.</p>
+                            </li>
+                            <li><p><code translate="no">press</code> <code class="text-secondary" translate="no">BOOLEAN</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <ul>
+                                <li><p><code translate="no">true</code>: the button was pressed.</p></li>
+                                <li><p><code translate="no">false</code>: the button was released.</p></li>
+                            </ul>
+                            </li>
+                            <li><p><code translate="no">handled</code> <code class="text-secondary" translate="no">BOOLEAN</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>Indicates if the event was handled internally by bcPlayer.</p>
+                            </li>
+                        </ul>
+                        </td>
+                        <td class="align-top"><p>Triggered when the user presses and releases a remote control button and the button event is captured in the bcPlayer node.</p>
+                        <p>Keep in mind that some button events are captured by the native Video node, in which case bcPlayer won’t be able to capture it and make it available in this event.</p>
+                        </td>
+                    </tr>
+                    <tr>    
+                        <td class="align-top">voiceComand</td>
+                        <td><p><code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code></p>
+                        <p>Provides an ASSOCIATIVE ARRAY object with the following keys:</p>
+                        <ul>
+                            <li><p><code translate="no">handled</code> <code class="text-secondary" translate="no">BOOLEAN</code> <code class="text-danger" translate="no">REQUIRED</code></p>
+                            <p>Indicates if the event was handled internally by bcPlayer.</p>
+                            </li>
+                            <li><p>event specific properties</p></li>
+                        </ul>
+                        </td>
+                        <td class="align-top"><p>Provides voice commands events data. The contents of the ASSOCIATIVE ARRAY will vary depend of the voice command event. It contains the native event properties plus the handled property which indicates if the event was handled internally by bcPlayer.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </section>
+        <section>
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">sub init()
+
+                    m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                  
+                    ' setup an event listener specifically for the "finished" event
+                    m.bcPlayer.on.observeField("finished", "onFinished")
+                    
+                    ' its also possible to handle all the events in a single event listener function
+                    m.bcPlayer.on.observeField("finished", "onPlayerEvent")
+                    m.bcPlayer.on.observeField("error", "onPlayerEvent")
+                  
+                  end sub
+                  
+                  ' create the event listener function where the event data can be accessed
+                  sub onFinished(ev)
+                    
+                    data = ev.getData()   ' data contains the "finished" event data
+                    
+                    ' handle the "finished" event here...
+                    
+                  end sub
+                  
+                  ' create a universal event listener function where all the events can be handled
+                  sub onPlayerEvent(ev)
+                    
+                    data = ev.getData()   ' "data" contains the event data
+                    event = ev.getField() ' "event" contains the event name ("finished" or "error" in this example)
+                    
+                    ' handle the event here... 
+                    ' typically there should be an if or switch structure to filter the events
+                    
+                  end sub
+                </code></pre>
+
+        </section>
+        <section class="bcls-section">
+            <h2 id="functions">Functions</h2>
+            <p>The bcPlayer node also provides some functions to interact with the Video content and playback.</p>
+
+            <h3>Load</h3>
+            <p>Asynchronously loads Playback API contents (a video or a playlist) into the bcPlayer and starts the playback. Usually the data entered in the load function comes from the bcAPI component available in the Brightcove SDK which retrieves videos data from the Playback API.</p>
+            <p>The load function may trigger two bcPlayer.on.load events:</p>
+            <ul>
+                <li>A start event when the load process begins.</li>
+                <li>An end event when the load process is completed and the new Video content is set.</li>
+            </ul>
+
+            <h5>Parameters</h5>
+            <ul>
+                <li><p><code translate="no">data</code> <code translate="no">DYNAMIC</code> <code class="text-danger" translate="no">REQUIRED</code> Brightcove videos data to load into the bcPlayer for playback. This data can represent a single video or multiple videos. The possible values are:</p>
+                <ul>
+                    <li><p>A single video object 
+                        <code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code>
+                         <a href="https://apis.support.brightcove.com/playback/references/reference_v2.html#tag/Videos/operation/Get_Video_by_ID_or_Reference_ID">Video by ID/Reference</a></p></li>
+                    <li><p>A playlist 
+                        <code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code>
+                         <a href="https://apis.support.brightcove.com/playback/references/reference_v2.html#tag/Playlists/operation/Get_Playlists_by_ID_or_Reference_ID">Playlist by ID/Reference</a></p></li>
+                    <li><p>An array of videos
+                        <code class="text-secondary" translate="no">ARRAY</code>
+                         <a href="https://apis.support.brightcove.com/playback/references/reference_v2.html#tag/Videos/operation/Get_Related_Videos_by_ID_or_Reference_ID">Related Videos</a> or <a href="https://apis.support.brightcove.com/playback/references/reference_v2.html#tag/Videos/operation/Get_Videos">Video Search</a></p></li>
+                </ul>
+                </li>
+                <li><p><code translate="no">options</code> <code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code> <code class="text-success" translate="No">OPTIONAL
+            </code></p>
+                <ul>
+                    <li><p> 
+                        <code translate="no">autoplay</code> <code class="text-secondary" translate="no">INTEGER</code> <code class="text-success" translate="No">OPTIONAL
+            </code> [WIP] Specifies the index of the video that should start playing when the load process ends (in case of a playlist).</p></li>
+                    <li><p> 
+                        <code translate="no">position</code> <code class="text-secondary" translate="no">STRING</code> <code class="text-success" translate="No">OPTIONAL
+            </code> [WIP] Specifies where the new data should be loaded if bcPlayer already has content. Ie, should the data replace the old content, should it be added to the end or start of the current content. Possible values:</p>
+                        <ul>
+                            <li><p><code translate="no">replace</code></p></li>
+                            <li><p><code translate="no">end</code></p></li>
+                            <li><p><code translate="no">start</code></p></li>
+                        </ul>
+                    </li>
+                </ul>
+                </li>
+            </ul>
+
+            <h5>Return Value</h5>
+            <p><code class="text-secondary" translate="no">BOOLEAN</code> Indicates if the load process was initiated successfully.</p>
+
+            <h5>Code snippet</h5>
+            <pre class="line-numbers">
+                <code class="language-basic" translate="No">sub init()
+
+                    m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
+                  
+                    ' load video data returned by the Playback API
+                    m.bcPlayer.callFunc("load", videoData)
+                    
+                    ' OR
+                  
+                    ' [WIP] Set some options to customize the playlist loading behavior
+                    m.bcPlayer.callFunc("load", playlistData, {
+                      autoplay: 3 ' start playing the video in the index 3 of the playlist
+                      position: "end" ' append the playlist to the current contents
+                    })
+                  
+                  end sub
+                </code></pre>
+
+                <h3>playVideo</h3>
+                <h3>playVideos</h3>
+                <h3>playPlaylist</h3>
+                <h3>playRelated</h3>
+                <h3>setSources</h3>
+                <h3>addSource</h3>
+                <h3>playback</h3>
+                <h3>playlist</h3>
+                <h3>close</h3>
+        </section>
+        <section class="bcls-section">
+            <h2 id="sources-selection">Video Sources Selection</h2>
+            <p>When playing a Videocloud video or playlist in the bcPlayer node through the load, playVideo, playVideos, playPlaylist and playRelated functions, the video/videos metadata is parsed and the video sources are filtered through the following stages:</p>
+
+            <table class="bcls-table">
+                <caption class="bcls-caption--table">Video Sources</caption>
+                <thead class="bcls-table__head">
+                    <tr>
+                        <th>Step</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody class="bcls-table__body">
+                    <tr>
+                        <td class="align-top">1</td>
+                        <td><p>Sources go through an initial filtering process where one source is selected per stream type (HLS and DASH), DRM system (Widevine, Playready and no DRM) and protocol (HTTP/HTTPS). </p>
+                        <p>Sources are added to the mapping object according to the following prioritization rules:</p>
+                        <ul>
+                            <li><p>MP4 sources (per protocol)</p>
+                            <ul>
+                                <li><p>All MP4 sources that contain the <code translate="no">avg_bitrate</code>, <code translate="no">width</code> and <code translate="no">height</code> properties are added to the mapping object.</p></li>
+                                <li><p>The native Roku Video node automatically handles non-adaptive fixed-bitrate stream formats, so providing multiple MP4 sources with different bitrates/size allows the Video node to automatically switch between them depending on the streaming conditions (Roku device, network connection, screen size, etc).</p></li>
+                            </ul>
+                            </li>
+                            <li><p>HLS sources (per DRM system and protocol)</p>
+                            <ul>
+                                <li><p>The source contains the <code translate="no">codecs</code> property.</p></li>
+                                <li><p>The source contains the <code translate="no">has_joc</code> property set to <code translate="no">true</code>.</p></li>
+                                <li><p>Encryption dependent:</p>
+                                <ul>
+                                    <li><p>HLSe: The source with a <code translate="no">ext_x_version</code> property value different than 7.</p></li>
+                                    <li><p>HLS: The source with the highest <code translate="no">ext_x_version</code> property value.</p></li>
+                                </ul>
+                                </li>
+                            </ul>
+                            </li>
+                            <li><p>DASH sources (per DRM system and protocol)</p>
+                            <ul>
+                                <li><p>The source contains the <code translate="no">codecs</code> property.</p></li>
+                                <li><p>The source contains the <code translate="no">has_joc</code> property set to <code translate="no">true</code>.</p></li>
+                            </ul>
+                            </li>
+                        </ul>
+                        <h5>Sources mapping object</h5>
+                        <pre class="line-numbers">
+                            <code class="language-basic" translate="No">{ 
+                                mp4: { 
+                                  http: [&#60;video-source&#62;, ...], 
+                                  https: [<video-source>, ...] 
+                                },
+                                hls: {
+                                  widevine: { 
+                                    http: &#60;video-source&#62;, 
+                                    https: &#60;video-source&#62;
+                                  },
+                                  none: { 
+                                    http: &#60;video-source&#62;, 
+                                    https: &#60;video-source&#62;
+                                  }
+                                },
+                                dash: {
+                                  widevine: { 
+                                    http: &#60;video-source&#62;, 
+                                    https: &#60;video-source&#62;
+                                  },
+                                  playready: { 
+                                    http: &#60;video-source&#62;, 
+                                    https: &#60;video-source&#62;
+                                  },
+                                  none: { 
+                                    http: &#60;video-source&#62;, 
+                                    https: &#60;video-source&#62;
+                                  }
+                                }
+                              }
+                            </code></pre>
+            
+                    </td>
+                    </tr>
+                    <tr>
+                        <td class="align-top">2</td>
+                        <td><p>Once the sources mapping object is set, a single source is selected based on the values of the streamPreference and drmPreference bcPlayer config fields. </p>
+                        <p>This process iterates through the streamPreference array and for each stream type/container the following steps are executed until one source is selected:</p>
+                        <ol>
+                            <li><p>MP4 stream preference:</p>
+                            <ol>
+                                <li><p>If the HTTPS source is available, select that one.</p></li>
+                                <li><p>If not, select the HTTP source.</p></li>
+                            </ol>
+                            </li>
+                            <li><p>HLS and DASH stream preferences:</p>
+                            <ol>
+                                <li><p>Iterates through the drmPreference array and for each DRM system (Widevine, Playready, none):</p>
+                                <ol>
+                                    <li><p>If the HTTPS source is available, select that one.</p></li>
+                                    <li><p>If not, select the HTTP source.</p></li>
+                                </ol>
+                                </li>
+                                
+                            </ol>
+                            </li>
+                        </ol>
+
+                        <aside class="bcls-aside bcls-aside--tip"><p>There is a possibility that no audio playback is available in a video if all the following factors apply:</p>
+                        <ul>
+                            <li>A Dolby Atmos source is selected.</li>
+                            <li>The selected source contains only Dolby Atmos audio streams in its manifest.</li>
+                            <li>The Roku device doesn’t support Dolby Atmos audio playback.</li>
+                        </ul>
+                        <p>Since the algorithm prioritizes Dolby Atmos audio sources in <strong>HLS</strong> and <strong>DASH</strong> containers, a warning log message will be triggered if all the factors listed above are valid for the source that was selected in this stage.</p>
+                        </aside>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td class="align-top">3</td>
+                        <td><p>Once a Videocloud video source has been selected, it’s then converted into the required Video ContentNode fields.</p>
+                        <p>At this stage the selected source URL is also verified for any supported query parameters we might need to set, such as the Forensic Watermarking token.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <aside class="bcls-aside bcls-aside--information"><ul>
+                <li><p>Since the source mapping object is stored internally, If retryOnError is enabled, every time a source fails to play, the stages 2 and 3 are executed once again so that another source is selected for playback. In this case, the source that failed to play is removed from the source mapping object so it isn’t repeatedly selected. This process is repeated until a source starts playing or no source is left to retry (in which case an error will occur).</p></li>
+                <li><p>This process is transparent to app users and app developers. It’s an internal process so the only way to partially controlling it is through the streamPreference and drmPreference bcPlayer config fields.</p></li>
+                <li><p>Roku does not support HLSe (AES-128 encrypted HLS sources) with v7 manifests so the SDK forces the selection of v4 manifests instead. If v4 manifest aren’t available, HLSe sources will be ignored and if no other sources are available, the SDK won’t be able to playback the video.</p></li>
+                <li><p>This process doesn’t apply for external sources.</p></li>
+            </ul></aside>
+          
+        </section>
+  </section>
+</article>
+<!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->
+  
+  <nav class="right-side-nav" id="right_side_nav">
+    <h6 class="toc">Page Contents</h6>
+    <ul id="in_page_nav" class="list-none"></ul>
+  </nav>
+  
+<!-- </div> -->
+</div>
+</div>
+</div>
+<div class="page-content" style="background-color: rgb(1, 5, 14);">
+  <div class="container" style="width: 50%;">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Brightcove Support</h5>
+          <ul class="list-unstyled text-small" style="color: white ;">
+            <li><a class="a-text" href="https://status.brightcove.com">System Status</a></li>
+            <li><a class="a-text" href="https://supportportal.brightcove.com">Contact Support</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/search.html">Search all documentation</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Training</h5>
+          <ul class="list-unstyled text-small">
+            <!-- <li><a class="a-text" href="https://studio.support.brightcove.com/get-started/training/online-training-courses.html">Online courses</a></li> -->
+            <li><a class="a-text" href="https://academy.brightcove.com/">Brightcove Academy</a></li>
+          </ul>
+        </div>
+      
+        <div class="col-6 col-md">
+          <h5 class="h5-text">Brightcove</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="a-text" href="https://www.brightcove.com">Brightcove.com</a></li>
+            <li><a class="a-text" href="https://www.linkedin.com/groups/3229573/">Bright Spot Community</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/product-updates.html">Product release notes</a></li>
+            <li><a class="a-text" href="https://support.brightcove.com/doc-updates.html">Documentation updates</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© Brightcove Inc. All rights reserved.</p>
+      <a class="a-text" href="https://www.brightcove.com/en/legal/privacy">Privacy</a> 
+      <a class="a-text" href="https://www.brightcove.com/en/terms-and-conditions">Terms &amp; Conditions</a>
+
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a href="https://www.linkedin.com/company/16439"
+        title="LinkedIn" target="_blank" class="gf-social-linkedin"
+        style="margin-right: 1rem;"><i data-feather="linkedin"
+          style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a
+        href="https://twitter.com/brightcove" title="Twitter" target="_blank"
+        class="gf-social-twitter" style="margin-right: 1rem;"><i
+          data-feather="twitter" style="color:#8E9093;height: 1.25rem;"></i></a></li>
+
+        <li class="ms-3"><a
+        href="https://www.facebook.com/Brightcove" title="Facebook"
+        target="_blank" class="gf-social-facebook"><i data-feather="facebook"
+          style="color:#8E9093;height: 1.25rem;"></i></a></li>
+      </ul>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+<script translate="no">
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documentation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder,
+    styling: {
+      components: {
+        
+        input: {
+          container: {
+          backgroundColor: 'white',
+          }
+        
+        }
+      }
+    },
+    maxSuggestions: 5, // Maximum number of suggestions to show
+      attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+
+  
+
+
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+    window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+  </script>
+  
+  <!-- Javascript -->          
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/popper.min.js"></script>
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+
+
+  <!-- Page Specific JS -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/smoothscroll.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script> -->
+  <!-- <script src="/assets/s-site-assets-template-stylesheets/js/highlight-custom.js"></script>  -->
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+  <script src="/assets/s-site-assets-template-stylesheets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+  <script src="/assets/s-site-assets-template-stylesheets/js/docs.js"></script> 
+
+  <!-- original footer components -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="/assets/s-site-assets-scripts/https-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/setDate.js"></script>
+  <script src="/assets/s-site-assets-scripts/selector.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/prism.js"></script>
+  <script src="/assets/s-site-assets-scripts/prism-normalize.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/learning-paths/learning-paths.js"></script>
+  <!-- <script src="/assets/s-site-assets-scripts/site.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/tabs.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/toc-new-template.js"></script>
+  
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="/assets/s-site-assets-scripts/bcls-utils.js"></script>
+  <script src="/assets/s-site-assets-scripts/local-link-fix.js"></script>
+  <script src="/assets/s-site-assets-scripts/sajari-reindex.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/s-site-assets-scripts/sajari-search-foot.js"></script>
+  
+  <script translate="no">
+    feather.replace()
+  </script>
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="/assets/s-site-assets-scripts/in-app.js"></script>
+  <style translate="no">
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+  </body>
+</html> 

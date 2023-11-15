@@ -700,22 +700,22 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/android/installing-android-test-build.html",
-      "oldURL": "/installing-android-test-build"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/android/installing-android-test-build.html",
       "oldURL": "/installing-android-test-build"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/fire-tv/installing-fire-tv-test-build.html",
-      "oldURL": "/installing-fire-tv-test-build"
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/android/installing-android-test-build.html",
+      "oldURL": "/installing-android-test-build"
   },
 
   {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/fire-tv/installing-fire-tv-test-build.html",
+      "oldURL": "/installing-fire-tv-test-build"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/fire-tv/installing-fire-tv-test-build.html",
       "oldURL": "/installing-fire-tv-test-build"
   },
 
@@ -735,12 +735,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/roku/installing-roku-test-build.html",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/installing-roku-test-build.html",
       "oldURL": "/installing-roku-test-build"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/installing-roku-test-build.html",
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/roku/installing-roku-test-build.html",
       "oldURL": "/installing-roku-test-build"
   },
 
@@ -1020,8 +1020,8 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/series-seasons-episodes-v2.html",
-      "oldURL": "/series-seasons-episodes-v2"
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/series-seasons-episodes-original.html",
+      "oldURL": "/series-seasons-episodes-original"
   },
 
   {

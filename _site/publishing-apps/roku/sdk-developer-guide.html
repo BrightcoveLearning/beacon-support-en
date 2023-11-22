@@ -1423,7 +1423,7 @@
     <h2 id="features">Features</h2>
     <p>The Brightcove Roku SDK package has the following features:</p>
     <ul>
-        <li>OOTB UI/UX.</li>
+        <li>Standard Roku UI/UX".</li>
         <li>VOD and Live streams playback support.</li>
         <li>Native <a href="https://developer.roku.com/en-gb/docs/developer-program/media-playback/trick-mode/hls-and-dash.md">HLS/DASH</a> seek thumbnails support.</li>
         <li>Widevine and Playready <a href="https://developer.roku.com/en-gb/docs/specs/media/content-protection.md">DRM</a> support.</li>
@@ -1463,6 +1463,7 @@
     <aside class="bcls-aside bcls-aside--information">Note that in the following examples, <strong>bcLib.pkg</strong> is the Brightcove SDK library package provided by Brightcove.</aside>
 
     <h3>Loading the library from a remote location</h3>
+    <aside class="bcls-aside bcls-aside--information">Brightcove updates the Roku SDK regularly, and loading the SDK from the remote location makes it easier to stay up-to-date with the latest fixes and features.</aside>
     <p>Brightcove provides the SDK package URL in this case, as the package file is hosted in Brightcove servers. The library package is downloaded at runtime by following these simple steps:</p>
     <ol class="bcls-tasklist">
         <li><p>In the scene XML component, create the ComponentLibrary child node and set its <code translate="No">id</code> and <code translate="No">uri</code> fields. </p>
@@ -1614,7 +1615,7 @@
               drmPreference: ["widevine", "playready", "none"],
               logLevel: 4,
               credentials: invalid,           
-              env: "production",
+              <!-- env: "production", -->
               watermarkToken: "",
               spinnerConfig: {},
               closeOnBack: true,
@@ -1646,7 +1647,7 @@
             <h3>Credentials</h3>
             <p><code class="text-secondary" translate="no">ASSOCIATIVE ARRAY</code> <code class="text-success" translate="No">OPTIONAL
             </code></p>
-            <p>Configures Brightcove API credentials. It should contain the account ID as well as the policy key. These are used to retrieve video’s metadata from Brightcove’s Playback API. </p>
+            <p>Configures Brightcove API credentials. It should contain the account ID as well as the policy key. These are used to retrieve video metadata from the Brightcove Playback API.</p>
             <p>If the credentials aren’t provided, the bcPlayer node will only be able to playback videos from external sources through <code translate="no">bcPlayer.setSources</code> and <code translate="no">bcPlayer.addSource</code> functions.</p>
             <p><strong>Possible Values:</strong></p>
             <p>An ASSOCIATIVE ARRAY containing the following keys:</p>
@@ -1701,7 +1702,8 @@
                         <ul>
                             <li><p>The Edge Playback API service is used to retrieve Brightcove catalog metadata.</p></li>
                             <li><p>Access to Playback Restrictions and Playback Rights is not available.</p></li>
-                            <li><p>HLSe content playback is not possible.</p></li>
+                            <li><p>HLSe content is playable via the standard Playback API.</p></li>
+                            <li><p>HLSe with License Key protection needs Playback Auth.</p></li>
                         </ul>
                         </li>
                         <li><p><strong>policy_key</strong> not set / <strong>auth_token</strong> set: </p>
@@ -1723,7 +1725,7 @@
                     <p>Brightcove <a href="https://apis.support.brightcove.com/playback-restrictions/getting-started/overview-playback-restrictions.html">Playback Restrictions</a> reference.</p>
                 </aside>
         </section>
-        <hr>
+        <!-- <hr>
         <section>
             <h3>env</h3>
             <p><code class="text-secondary" translate="no">STRING</code>    <code class="text-success" translate="No">OPTIONAL
@@ -1763,7 +1765,7 @@
                       env: "staging"
                     })
                 </code></pre>
-        </section>
+        </section> -->
         <hr>
         <section>
             <h3>watermarkToken</h3>
@@ -1797,7 +1799,7 @@
         </section>
         <hr>
         <section>
-            <h3>streamPreferance</h3>
+            <h3>streamPreference</h3>
             <p><code class="text-secondary" translate="no">ARRAY</code>    <code class="text-success" translate="No">OPTIONAL
             </code></p>
             <p>Configures sources types/containers preferences ordered by the priority each type/container will have when filtering the available video sources.</p>
@@ -2961,7 +2963,7 @@
             <p>The bcPlayer node also provides some functions to interact with the Video content and playback.</p>
 
             <h3 id="load">Load</h3>
-            <p>Asynchronously loads Playback API contents (a video or a playlist) into the bcPlayer and starts the playback. Usually the data entered in the load function comes from the bcAPI component available in the Brightcove SDK which retrieves videos data from the Playback API, but it’s also used internally by the getVideo, getVideos, getPlaylist and getRelated functions.</p>
+            <p>Asynchronously loads Playback API contents (a video or a playlist) into the bcPlayer and starts the playback. Usually the data entered in the load function comes from the bcAPI component available in the Brightcove SDK which retrieves videos data from the Playback API, but it’s also used internally by the <a href="#get-video">getVideo</a>, <a href="#get-videos">getVideos</a>, <a href="#get-playlist">getPlaylist</a> and <a href="#get-related">getRelated</a> functions.</p>
             <p>The load function may trigger two bcPlayer.on.load events:</p>
             <ul>
                 <li>A start event when the load process begins.</li>
@@ -3140,7 +3142,7 @@
                   end sub
                 </code></pre>
                 <hr>
-                <h3>getVideo</h3>
+                <h3 id="get-video">getVideo</h3>
                 <p>Retrieves a specific Brightcove video through Playback API, loads its metadata into bcPlayer, and starts playback.</p>
                 <p><a href="https://apis.support.brightcove.com/playback/references/reference_v2.html#tag/Videos/operation/Get_Video_by_ID_or_Reference_ID">Playback API reference</a>.</p>
                 <p>Parameters:</p>
@@ -3257,7 +3259,7 @@
                     </code></pre>
     
                     <hr>
-                <h3>getVideos</h3>
+                <h3 id="get-videos">getVideos</h3>
                 <p>Retrieves a set of Brightcove videos through Playback API and, if configured to do so, loads its metadata into bcPlayer and starts playback. </p>
                 <p>This option is commonly used to programmatically search for Brightcove videos.</p>
                 <p><a href="https://apis.support.brightcove.com/playback/references/reference_v2.html#tag/Videos/operation/Get_Videos">Playback API reference</a>.</p>
@@ -3382,7 +3384,7 @@
                       end sub                      
                     </code></pre>
                     <hr>
-                <h3>getPlaylist</h3>
+                <h3 id="get-playlist">getPlaylist</h3>
                 <p>Retrieves a Brightcove playlist through Playback API and, if configured to do so, loads its metadata into bcPlayer and starts playback.</p>
 
                 <p><a href="https://apis.support.brightcove.com/playback/references/reference_v2.html#tag/Playlists/operation/Get_Playlists_by_ID_or_Reference_ID">Playback API reference</a>.</p>
@@ -3508,7 +3510,7 @@
                                            
                     </code></pre>
                     <hr>
-                <h3>getRelated</h3>
+                <h3 id="get-related">getRelated</h3>
                 <p>Retrieves a set of Brightcove videos that are related to the specified video through Playback API and, if configured to do so, loads its metadata into bcPlayer and starts playback. </p>
                 <p>Using the name and short description of the specified video, the Playback API searches for videos with any partial matches in the following fields: <code translate="no">name</code>, <code translate="no">short description</code>, <code translate="no">long_description</code>, <code translate="no">tags</code>.</p>
 
@@ -4127,7 +4129,7 @@
             ' configure bcAPI node fields
             m.bcAPI.setFields({
               credentials: invalid,
-              env: "production",
+              <!-- env: "production", -->
               logger: invalid, ' optional: provide a bcLib:Logger reference to capture logs from the bcAPI node
               maxRequests: 5,
               kill: false,
@@ -4199,7 +4201,7 @@
                     })
                 </code></pre>
         </section>
-        <hr>
+        <!-- <hr>
         <section>
             <h3>env</h3>
             <p><code class="text-secondary" translate="no">STRING</code>    <code class="text-success" translate="No">OPTIONAL
@@ -4240,7 +4242,7 @@
                       ' ...    
                     })
                 </code></pre>
-        </section>
+        </section> -->
         <hr>
         <section>
             <h3>maxRequests</h3>
@@ -5014,7 +5016,7 @@
         </section>
         <hr>
         <section>
-            <h3 id="buffer-timeout">ready</h3>
+            <h3>ready</h3>
             <p><code translate="no" class="text-secondary">BOOLEAN</code></p>
             <p>Indicates if the bcAPI Task is ready to receive request commands, Because of the asynchronous nature of Roku Task nodes, it’s recommended to observe for the <code translate="no">ready</code> field and only make use of it once <code translate="no">ready</code> is <code translate="no">true</code>. It can then be observed for the <code translate="no">false</code> value to confirm that the Task was completely terminated, if needed.</p>
 
@@ -6319,7 +6321,7 @@
                         </code></pre>
                         <p>The code snippet above produces the following Dialog content:</p>
                         <figure class="bcls-figure">
-                            <img class="bcls-image" src="/assets/images/s-publishing-apps-img/roku/roku-library/">
+                            <img class="bcls-image" src="/assets/images/s-publishing-apps-img/roku/roku-library/roku-content.webp">
                         </figure>
                         
             
@@ -6405,7 +6407,7 @@
                         </code></pre>
                         <p>The code snippet above produces the following Dialog content:</p>
                         <figure class="bcls-figure">
-                            <img class="bcls-image" src="/assets/images/s-publishing-apps-img/roku/roku-library/">
+                            <img class="bcls-image" src="/assets/images/s-publishing-apps-img/roku/roku-library/roku-sidecard.webp">
                         </figure>
             
 
@@ -6494,7 +6496,7 @@
                         </code></pre>
                         <p>The code snippet above produces the following Dialog content:</p>
                         <figure class="bcls-figure">
-                            <img class="bcls-image" src="/assets/images/s-publishing-apps-img/roku/roku-library/">
+                            <img class="bcls-image" src="/assets/images/s-publishing-apps-img/roku/roku-library/roku-buttons.webp">
                         </figure>
             
 

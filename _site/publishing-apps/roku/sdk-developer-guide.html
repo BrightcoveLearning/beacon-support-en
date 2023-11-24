@@ -1460,10 +1460,10 @@
   <section class="bcls-section">
     <h2 id="setup">Setup</h2>
     <p>To setup Brightcove Roku SDK in a Roku channel, you must request access to the SDK package file. Brightcove provides two ways for developers to access the SDK package file.</p>
-    <aside class="bcls-aside bcls-aside--information">Note that in the following examples, <strong>bcLib.pkg</strong> is the Brightcove SDK library package provided by Brightcove.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: In the following examples, <strong>bcLib.pkg</strong> is the Brightcove SDK library package provided by Brightcove.</aside>
 
     <h3>Loading the library from a remote location</h3>
-    <aside class="bcls-aside bcls-aside--information">Brightcove updates the Roku SDK regularly, and loading the SDK from the remote location makes it easier to stay up-to-date with the latest fixes and features.</aside>
+    <aside class="bcls-aside bcls-aside--information">Note: Brightcove updates the Roku SDK regularly, and loading the SDK from the remote location makes it easier to stay up-to-date with the latest fixes and features.</aside>
     <p>Brightcove provides the SDK package URL in this case, as the package file is hosted in Brightcove servers. The library package is downloaded at runtime by following these simple steps:</p>
     <ol class="bcls-tasklist">
         <li><p>In the scene XML component, create the ComponentLibrary child node and set its <code translate="No">id</code> and <code translate="No">uri</code> fields. </p>
@@ -1564,9 +1564,9 @@
                 </code></pre>
         </li>
     </ol>
-    <aside class="bcls-aside bcls-aside--information"><ul>
-        <li>Be careful not to reference any library components before the library is completely loaded.</li>
-    </ul></aside>
+    <aside class="bcls-aside bcls-aside--information">
+        <p>Note: Be careful not to reference any library components before the library is completely loaded.</p>
+    </aside>
     <hr>
     <h3>Loading the library dynamically</h3>
     <p>It’s recommended to set the ComponentLibrary in the scene’s children section with the proper package URL so that the library loading process starts immediately during the Scene initialization, but depending on the use case, it could also be useful to be able to dynamically load the library anywhere in the channel. This can be done by initializing the ComponentLibrary node in the brightscript code as such:</p>
@@ -1597,7 +1597,7 @@
 
             m.bcPlayer = parentNode.createChild("bcLib:bcPlayer")
         </code></pre>
-        <aside class="bcls-aside bcls-aside--information">To reference a component from an external library, the following nomenclature should be use: <code translate="no">“&#60;ComponentLibrary-id&#62;:&#60;component-name&#62;"</code>.</aside>
+        <aside class="bcls-aside bcls-aside--information">Note: To reference a component from an external library, the following nomenclature should be use: <code translate="no">“&#60;ComponentLibrary-id&#62;:&#60;component-name&#62;"</code>.</aside>
   </section>
   <section class="bcls-section">
     <h2 id="bcPlayer">bcPlayer component</h2>
@@ -1675,7 +1675,7 @@
                 </ul>
                 </li>
             </ul>
-            <p>Code Snipped</p>
+            <p>Code Snippet</p>
             <pre class="line-numbers">
                 <code class="language-basic" translate="No">m.bcPlayer = createObject("roSGNode", "bcLib:bcPlayer")
                     m.bcPlayer.credentials = {
@@ -1696,7 +1696,7 @@
                     })
                 </code></pre>
                 <aside class="bcls-aside bcls-aside--information">
-                    <p>The <strong>policy_key</strong> and <strong>auth_token</strong> properties specify which Playback API service is used to retrieve Brightcove catalog metadata (through the <strong>bcPlayer.getVideo</strong>, <strong>bcPlayer.getVideos</strong>, <strong>bcPlayer.getPlaylist</strong> and <strong>bcPlayer.getRelated</strong> functions):</p>
+                    <p>Notes: The <strong>policy_key</strong> and <strong>auth_token</strong> properties specify which Playback API service is used to retrieve Brightcove catalog metadata (through the <strong>bcPlayer.getVideo</strong>, <strong>bcPlayer.getVideos</strong>, <strong>bcPlayer.getPlaylist</strong> and <strong>bcPlayer.getRelated</strong> functions):</p>
                     <ul>
                         <li><p><strong>policy_key</strong> set / <strong>auth_token</strong> not set: </p>
                         <ul>
@@ -1886,7 +1886,7 @@
             </code></p>
             <p>Configures the logging level on the bcPlayer node. Only the specified messages will be triggered.</p>
             <p>If set to <code translate="no">-1</code> no logging messages will be triggered. In a production environment it's recommended to set it to <code>-1</code> to avoid the execution of the logging internal functions.</p>
-            <aside class="bcls-aside bcls-aside--information">When enabled, bcPlayer logs can be captured through the <code translate="no">bcPlayer.on.logOutput</code> event listener.
+            <aside class="bcls-aside bcls-aside--information">Note: When enabled, bcPlayer logs can be captured through the <code translate="no">bcPlayer.on.logOutput</code> event listener.
             </aside>
             
             <p><strong>Possible Values:</strong></p>
@@ -3076,6 +3076,7 @@
                 </li>
             </ul>
             <aside class="bcls-aside bcls-aside--information"><ul>
+                <p>Notes:</p>
                 <li><p>Developers can change/customize the Playback API video or videos objects structure to fit their specific use cases, but the videos sources property is required, so that bcPlayer can parse the <code translate="no">sources</code> and select the most appropriate ones. </p></li>
                 <li><p>The <code translate="no">sources</code> object can be manually customized, for example, to remove specific sources before loading it into the bcPlayer node through this function.</p></li>
                 <li><p>All the other properties in the video metadata object are automatically turned into.                </p></li>
@@ -3205,7 +3206,7 @@
                 </li>
                 </ul>
                 
-                <p>Code Snipped</p>
+                <p>Code Snippet</p>
 
                 <pre class="line-numbers">
                     <code class="language-basic" translate="No">sub init()
@@ -3331,7 +3332,7 @@
                     <p>Returns a <code translate="no">Node</code> object if <code translate="no">autoload</code> is disabled. This <code translate="no">Node</code> contains a response field which can be used to setup an observer function where the request response can be captured.</p>
                 </li>
                 </ul>
-                <p>Code Snipped</p>
+                <p>Code Snippet</p>
 
                 <pre class="line-numbers">
                     <code class="language-basic" translate="No">sub init()
@@ -3456,7 +3457,7 @@
                     <p>Returns a <code translate="no">Node</code> object if <code translate="no">autoload</code> is disabled. This <code translate="no">Node</code> contains a response field which can be used to setup an observer function where the request response can be captured.</p>
                 </li>
                 </ul>
-                <p>Code Snipped</p>
+                <p>Code Snippet</p>
 
                 <pre class="line-numbers">
                     <code class="language-basic" translate="No">sub init()
@@ -3583,7 +3584,7 @@
                     <p>Returns a <code translate="no">Node</code> object if <code translate="no">autoload</code> is disabled. This <code translate="no">Node</code> contains a response field which can be used to setup an observer function where the request response can be captured.</p>
                 </li>
                 </ul>
-                <p>Code Snipped</p>
+                <p>Code Snippet</p>
 
                 <pre class="line-numbers">
                     <code class="language-basic" translate="No">sub init()
@@ -3640,7 +3641,7 @@
                 <p>Allows custom video metadata (non-Brightcove videos) to be loaded into bcPlayer for playback.</p>
                 <p>If present, current content of bcPlayer will be replaced. <code translate="no">setSources</code> parses an array of associative arrays, each one representing the properties of a single video, into fields of a ContentNode and loads it into bcPlayer content.</p>
 
-                <aside class="bcls-aside bcls-aside--information">Developers must take into account the required <a href="https://developer.roku.com/en-gb/docs/developer-program/getting-started/architecture/content-metadata.md">Content Node fields</a> for proper video playback in a Roku Video component. setSources does not alter the provided metadata in any way, all the provided properties and its values are set into ContentNode fields as is.</aside>
+                <aside class="bcls-aside bcls-aside--information">Note: Developers must take into account the required <a href="https://developer.roku.com/en-gb/docs/developer-program/getting-started/architecture/content-metadata.md">Content Node fields</a> for proper video playback in a Roku Video component. setSources does not alter the provided metadata in any way, all the provided properties and its values are set into ContentNode fields as is.</aside>
 
                 <p>Parameters:</p>
                 <ul>
@@ -3679,7 +3680,7 @@
                     <p>It is not possible to load the provided metadata. Check the <code translate="no">bcPlayer.on.error</code> event for details about what went wrong.</p>
                 </li>
                 </ul>
-                <p>Code Snipped</p>
+                <p>Code Snippet</p>
 
                 <pre class="line-numbers">
                     <code class="language-basic" translate="No">sub init()
@@ -3762,7 +3763,7 @@
                     <p>It is not possible to load the provided metadata. Check the <code translate="no">bcPlayer.on.error</code> event for details about what went wrong.</p>
                 </li>
                 </ul>
-                <p>Code Snipped</p>
+                <p>Code Snippet</p>
 
                 <pre class="line-numbers">
                     <code class="language-basic" translate="No">sub init()
@@ -3824,7 +3825,7 @@
                 </ul>
                 
             
-                <p>Code Snipped</p>
+                <p>Code Snippet</p>
 
                 <pre class="line-numbers">
                     <code class="language-basic" translate="No">sub init()
@@ -3928,7 +3929,7 @@
                     <li><p><code translate="no">shuffle</code> <code translate="no" class="text-secondary">INVALID</code></p></li>
                 </ul>
 
-                <p>Code Snipped</p>
+                <p>Code Snippet</p>
 
                 <pre class="line-numbers">
                     <code class="language-basic" translate="No">sub init()
@@ -4097,6 +4098,7 @@
             </table>
 
             <aside class="bcls-aside bcls-aside--information"><ul>
+                <p>Notes:</p>
                 <li><p>Since the source mapping object is stored internally, If retryOnError is enabled, every time a source fails to play, the stages 2 and 3 are executed once again so that another source is selected for playback. In this case, the source that failed to play is removed from the source mapping object so it isn’t repeatedly selected. This process is repeated until a source starts playing or no source is left to retry (in which case an error will occur).</p></li>
                 <li><p>This process is transparent to app users and app developers. It’s an internal process so the only way to partially controlling it is through the streamPreference and drmPreference bcPlayer config fields.</p></li>
                 <li><p>Roku does not support HLSe (AES-128 encrypted HLS sources) with v7 manifests so the SDK forces the selection of v4 manifests instead. If v4 manifest aren’t available, HLSe sources will be ignored and if no other sources are available, the SDK won’t be able to playback the video.</p></li>
@@ -4188,7 +4190,7 @@
                 </ul>
                 </li>
             </ul>
-            <p>Code Snipped</p>
+            <p>Code Snippet</p>
             <pre class="line-numbers">
                 <code class="language-basic" translate="No">m.bcAPI.credentials = {account_id: "my-account-id", policy_key: "my-policy-key"}
 

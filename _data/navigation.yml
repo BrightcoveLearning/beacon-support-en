@@ -341,7 +341,7 @@
     - name: Cookie Consent Using OneTrust
       url: /references/managing-cookie-consent.html
     - name: 'Deleting an App User'
-      url: '/references/delete-app-user.html'
+      url: '/references/add-delete-app-user.html'
     - name: 'Glossary'
       url: '/references/glossary.html'
     - name: 'How Brightcove Beacon Gets Data'

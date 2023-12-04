@@ -20,22 +20,22 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/fire-tv/add-bc-email.html",
-      "oldURL": "/add-bc-email"
-  },
-
-  {
       "newURL": "https://beacon.support.brightcove.com/creating-your-apps/fire-tv/add-bc-email.html",
       "oldURL": "/add-bc-email"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/add-bc-user.html",
-      "oldURL": "/add-bc-user"
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/fire-tv/add-bc-email.html",
+      "oldURL": "/add-bc-email"
   },
 
   {
       "newURL": "https://beacon.support.brightcove.com/publishing-apps/roku/add-bc-user.html",
+      "oldURL": "/add-bc-user"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/add-bc-user.html",
       "oldURL": "/add-bc-user"
   },
 
@@ -80,12 +80,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/analytics/analytics-business-metrics.html",
+      "newURL": "https://beacon.support.brightcove.com/references/analytics-business-metrics.html",
       "oldURL": "/analytics-business-metrics"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/references/analytics-business-metrics.html",
+      "newURL": "https://beacon.support.brightcove.com/analytics/analytics-business-metrics.html",
       "oldURL": "/analytics-business-metrics"
   },
 
@@ -102,6 +102,11 @@
   {
       "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/authentication-using-oauth.html",
       "oldURL": "/authentication-using-oauth"
+  },
+
+  {
+      "newURL": "https://beacon.support.brightcove.com/references/bcls-managing-cookie-consent.html",
+      "oldURL": "/bcls-managing-cookie-consent"
   },
 
   {
@@ -170,12 +175,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/general/common-required-info.html",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/general/common-required-info.html",
       "oldURL": "/common-required-info"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/general/common-required-info.html",
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/general/common-required-info.html",
       "oldURL": "/common-required-info"
   },
 
@@ -195,12 +200,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/configuring-inchannel-products.html",
+      "newURL": "https://beacon.support.brightcove.com/publishing-apps/roku/configuring-inchannel-products.html",
       "oldURL": "/configuring-inchannel-products"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/publishing-apps/roku/configuring-inchannel-products.html",
+      "newURL": "https://beacon.support.brightcove.com/creating-your-apps/roku/configuring-inchannel-products.html",
       "oldURL": "/configuring-inchannel-products"
   },
 
@@ -230,12 +235,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/assets/images/channels/creating-a-channel.html",
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/creating-a-channel.html",
       "oldURL": "/creating-a-channel"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/creating-a-channel.html",
+      "newURL": "https://beacon.support.brightcove.com/assets/images/channels/creating-a-channel.html",
       "oldURL": "/creating-a-channel"
   },
 
@@ -400,12 +405,12 @@
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/ga-self-configuration.html",
+      "newURL": "https://beacon.support.brightcove.com/analytics/ga-self-configuration.html",
       "oldURL": "/ga-self-configuration"
   },
 
   {
-      "newURL": "https://beacon.support.brightcove.com/analytics/ga-self-configuration.html",
+      "newURL": "https://beacon.support.brightcove.com/using-brightcove-beacon/ga-self-configuration.html",
       "oldURL": "/ga-self-configuration"
   },
 

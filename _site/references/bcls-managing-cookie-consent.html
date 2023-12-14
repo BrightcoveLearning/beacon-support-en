@@ -1407,7 +1407,7 @@
     <aside class="bcls-aside bcls-aside--warning language-editable">The first step in an implementation of cookie compliance is checking with your legal team and determine rules and regulations for all geographies you are targeting with your content.</aside>
     <p>Cookies are used to store data on a visitor's computer or mobile device. Cookies are commonly used and sometimes critical to a website's functionality. Cookies can be used to store large amounts of data, store personal data and track online activity so advertisers can target ads. Because of the negatives that are associated with cookies, regulations have evolved around them. The three most common are:</p>
     <ul>
-      <li>California Consumer Privacy Act (CCPA) used in California, Colorado, Utah and Virginia.</li>
+      <li>California Consumer Privacy Act (CCPA) used in California, Colorado, Utah, Connecticut and Virginia.</li>
       <li>General Data Protection Regulation (GDPR) used in the EU and United Kingdom.</li>
       <li>Quebec Law 25 used in Quebec.</li>
     </ul>
@@ -1488,7 +1488,7 @@
   <section class="bcls-section">
     <h2 id="Create_two_templates">Create templates</h2>
     <p>A template defines how your banner and preferences dialog appear, and function, for your users. In the following steps you will create four templates, one for CCPA, one for GDPR, one for Law 25 and a generic one for all other regions.</p>
-    <aside class="bcls-aside bcls-aside--tip language-editable">You may not need all templates. As stated earlier, generally CCPA is used for California, Colorado, Utah and Virginia, GDPR for EU and UK and Law 25 for Quebec. If you are not targeting one of these regions the corresponding template may not be needed. You should investigate your targeted geographies to check on cookie compliance regulations. The step-by-step instructions will cover creating all four templates.</aside>
+    <aside class="bcls-aside bcls-aside--tip language-editable">You may not need all templates. As stated earlier, generally CCPA is used for California, Colorado, Utah, Connecticut and Virginia, GDPR for EU and UK and Law 25 for Quebec. If you are not targeting one of these regions the corresponding template may not be needed. You should investigate your targeted geographies to check on cookie compliance regulations. The step-by-step instructions will cover creating all four templates.</aside>
     <ul>
       <li><a href="#ccpa-template">CCPA</a></li>
       <li><a href="#gdpr-template">IAB TCF 2.2</a></li>
@@ -1722,22 +1722,36 @@
     <ol class="bcls-tasklist-restart">
       <li>Select a TCF 2.0 template from your list of existing templates. A modal appears.</li>
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/assign-to-domains.webp" alt="rule group assign to domains">
+          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/iab-2-2-update.webp" alt="iab 2.2 update">
         </figure>
       </li>
       <li>Click the Update button. The existing template is copied to create a new template with the name “Existing Template Name (TCF 2.2 Update)”.
       </li>
       <li>Add a new TCF 2.2 template.</li>
       <li>Because the purpose names and their descriptions have changed, please review internally the legal basis used and the addition of any new purposes or special features. <a href="https://my.onetrust.com/s/article/UUID-d8cd9272-4dcd-eab9-2d39-41ddd85b3589">See purpuses updates</a>.</li>
-      <li>On your TCF 2.2 template, go to the Preference Center tab.</li>
-      <li><p>a. Expand the Advanced Configuration section. The categories and purposes appear.</p>
-      <p>b. Click the Context Menu icon on any of the IAB purposes. The Context menu appears.</p>
-      <p>c. Select Settings. The Purpose Details pane appears.</p>
+      <li><p>a. On your TCF 2.2 template, go to the Preference Center tab.</p>
+      <p>b. Expand the Advanced Configuration section. The categories and purposes appear.</p>
+      <p>c. Click the Context Menu icon on any of the IAB purposes. The Context menu appears.</p>
+      <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/iab-2-2-settings.webp" alt="iab 2.2 settings">
+      </figure>
+      </li>
+      <li>d. Select Settings. The Purpose Details pane appears.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/ilustrations2-2.webp" alt="iab ilustrations">
+        </figure>
+
+      </li>
     
     </li>
       <aside class="bcls-aside bcls-aside--information">Note: <ol>
         <li>Illustration 1 is provided by IAB and cannot be changed.</li>
-        <li>Illustration 2 can be edited and supplied by publishers by clicking the Edit icon. Enter your text in the modal and click the Save button. Please work with your legal team to provide custom illustrations that best suit best your business.</li>
+        <li>Illustration 2 can be edited and supplied by publishers by clicking the Edit icon. Enter your text in the modal and click the Save button. Please work with your legal team to provide custom illustrations that best suit best your business.
+          <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/iab-ilustration-opt.webp" alt="iab ilustrations options">
+          </figure>
+
+        </li>
       </ol></aside>
       <li><strong>Save Template</strong></li>
       <li>Publish a new script version after the OneTrust 202308.2.0 release.</li>
@@ -1812,7 +1826,7 @@
             </tr>
             <tr>
               <td>Regions</td>
-              <td>For CCPA, you would most likely want to include <em>California</em>, then any other desired regions like <em>Colorado</em>, <em>Utah</em> and <em>Virginia</em> .</td>
+              <td>For CCPA, you would most likely want to include <em>California</em>, then any other desired regions like <em>Colorado</em>, <em>Utah</em>, <em>Connecticut</em> and <em>Virginia</em> .</td>
             </tr>
             <tr>
               <td>Template</td>
@@ -2015,6 +2029,25 @@
       </li>
       <li>Provide the scripts to Brightcove's OTT Delivery Team for proper deployment.</li>
     </ol>
+  </section>
+
+  <section class="bcls-section">
+    <h2 id="supported-languages">Supported Languages</h2>
+    <p>The multi-language capabilities of Brightcove provide you with the ability to present your content and apps in the native language of your viewers.</p>
+    <p>The possible languages are:</p>
+    <ul>
+      <li>English (en)</li>
+      <li>Spanish (es)</li>
+      <li>Italian (it)</li>
+      <li>French (fr)</li>
+      <li>German (de)</li>
+      <li>Mongolian (mn)</li>
+      <li>Japanese (ja)</li>
+      <li>Korean (ko)</li>
+      <li>Chinese (zh)</li>
+      <li>Russian (ru)</li> 
+    </ul>
+    <p>For more details see: <a href="https://beacon.support.brightcove.com/using-brightcove-beacon/using-multiple-languages.html#Choose_the_languages_for_your_apps">Using Multiple Languages</a></p>
   </section>
 
   <section class="bcls-section">

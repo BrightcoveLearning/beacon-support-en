@@ -1413,14 +1413,13 @@
     </ul>
     <p>This document is an introduction to get you started using OneTrust's Cookie Consent tool with Brightcove Beacon. Brightcove recommends using OneTrust for your Beacon cookie compliance needs.</p>
     <aside class="bcls-aside bcls-aside--tip language-editable">
-      <p>For further general information on cookies, regulation, rules and cookie compliance see OneTrust's <a href="https://www.cookiepro.com/knowledgebase/">CookiePro Knowledge Base</a> document. For complete details on OneTrust's tools see the <a href="https://my.onetrust.com/s/topic/0TO1Q000000ItRyWAK/cookie-compliance">Cookie Compliance</a> section of the documentation at OneTrust.</p>
+      <p>For further general information on cookies, regulation, rules and cookie compliance see OneTrust's <a href="chrome-extension://mhnlakgilnojmhinhkckjpncpbhabphi/pages/pdf/web/viewer.html?file=file%3A%2F%2F%2FUsers%2Fmmendoza%2FDownloads%2FOneTrust%2520Mobile%2520%26%2520OTT-CTV%2520Consent%2520User%2520Guide.pdf">One Trust Mobile & OTT/CTV Consent</a> document. For complete details on OneTrust's tools see the <a href="https://my.onetrust.com/s/topic/0TO1Q000000ItRyWAK/cookie-compliance">Cookie Compliance</a> section of the documentation at OneTrust.</p>
     </aside>
     <p>The main sections in this document are:</p>
     <ul>
-      <li>How OneTrust Cookie Consent works</li>
-      <li>Implementation steps (comprised of four sections)</li>
+      <li>How OneTrust Cookie Consent works.</li>
+      <li>Implementation steps.</li>
       <li>What data is collected?</li>
-      <li>Implementation architecture</li>
     </ul>
   </section>
 
@@ -1450,7 +1449,7 @@
           <li>Define other specifications, like how often re-consent will need to be done.</li>
         </ul>
       </li>
-      <li>Assign geolocation rules to the domains from which your Beacon app is served.</li>
+      <li>Assign geolocation rules to the apps created.</li>
       <li>Publish the Mobile App Consent SDK that provide the actual cookie compliance in your Beacon app.</li>
       <li>Supply published SDK to Brightcove's OTT Delivery Team for implementation.</li>
     </ol>
@@ -1471,7 +1470,7 @@
       <li>To start the process:
         <ol type="a">
           <li>In the left navigation, click <strong>Mobile apps</strong> or <strong>OTT & CTV apps</strong> according to the case.</li>
-          <li>Click <strong>Add Mobile App</strong> or <strong>Add CTV Apps</strong> according to the case. he Add App modal appears.</li>
+          <li>Click <strong>Add Mobile App</strong> or <strong>Add CTV Apps</strong> according to the case.</li>
         </ol>
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/create-mobile.webp" alt="create mobile app">
@@ -1481,14 +1480,14 @@
           <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/create-ctv.webp" alt="create ctv app">
         </figure>
       </li>
-      <li>Complete the fields. For more info, see <a href="chrome-extension://mhnlakgilnojmhinhkckjpncpbhabphi/pages/pdf/web/viewer.html?file=file%3A%2F%2F%2FUsers%2Fmmendoza%2FDownloads%2FOneTrust%2520Mobile%2520%26%2520OTT-CTV%2520Consent%2520User%2520Guide.pdf">Adding Mobile Applications</a>.
+      <li>Complete the fields.
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/fill-create-mobile.webp" alt="fill fields to create the app">
         </figure>
       </li>
       <li>Click <strong>Create</strong></li>
     </ol>
-    <aside class="bcls-aside bcls-aside--tip">Note: It is not necessary to upload an ipa or apk since scanning and auto categorization of One Trust does not work properly for our needs.</aside>
+    <aside class="bcls-aside bcls-aside--tip">Note: Scanning and Auto categorization of One Trust are not necessary for our needs.</aside>
   </section>
 
   <section class="bcls-section">
@@ -1505,10 +1504,11 @@
         </figure>
       </li>
 
-      <li>Complete the fields.
+      <li>Complete the fields. 
         <figure class="bcls-figure">
           <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/create-C0002-sdk.webp" alt="fill the sdk fields">
         </figure>
+        <aside class="bcls-aside bcls-aside--tip">Note: Ensure to select the correct Default Category (Performance Cookie or Targeting Cookie).</aside>
       </li>
       <li>Select the check boxes for the applications to which you want to assign the SDK.
         <figure class="bcls-figure">
@@ -1523,7 +1523,7 @@
       </li>
       <li>Repit the process to create the Targeting Cookie SDK.</li>
     </ol>
-    <aside class="bcls-aside bcls-aside--tip">Note: You do not need to upload an ipa or apk because the scanning and auto categorization of One Trust does not work properly for our needs.</aside>
+    <aside class="bcls-aside bcls-aside--tip">Note: Scanning and Auto Categorization of One Trust are not necessary for our needs.</aside>
   </section>
 
   <section class="bcls-section">
@@ -2155,52 +2155,43 @@
   </section>
 
   <section class="bcls-section">
-    <h2 id="Create and copy scripts">Create and copy scripts</h2>
-    <p>You will go through the process of generating the scripts twice. Once for test scripts, which are used in the non-production test CDN. Then once for the production CDN.</p>
-    <ol class="bcls-tasklist">
-      <li>From the Cookie Compliance index page:
+    <h2 id="Publishing-SDKs">Publishing OneTrust SDKs</h2>
+    <ol class="bcls-tasklist-restart">
+      <li>On the <strong>Cookies Compliance</strong> menu.
         <ol type="a">
-          <li>In the left navigation, click <strong>Scripts</strong>.</li>
-          <li>Click the domain where your cookie compliance will be implemented.</li>
+          <li>select <strong>SDKs</strong>.</li>
+          <li><p>Click the link in the <strong>Name</strong> column for the application you want to edit.</p>
+          </li>
           <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/scripts-domain.webp" alt="scripts index">
+            <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/publish-select-app.webp" alt="select app">
           </figure>
         </ol>
       </li>
-      <li>In the details screen for your domain, click <strong>Publish Test</strong>.
+      <li>On the app detail page you can see the SDKs you created earlier and associated with this app and you also can see the ids you will need to provide for the App to function correctly : “Mobile/CTV App ID” and “CDN Location”.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/script-publish-test.webp" alt="publish test">
+          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/publish-details.webp" alt="app details">
         </figure>
       </li>
-      <li>In the <em>Test Website</em> dialog:
-        <ol type="a">
-          <li>Set the script version to <strong>6.32.0</strong> (or the latest version).</li>
-          <li>Click <strong>Confirm</strong>.</li>
-        </ol>
+      <li>Select the <strong>SDK</strong> tab.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/test-dialog.webp" alt="test website confirm">
+          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/publish-sdk-tab.webp" alt="select sdk tab">
         </figure>
       </li>
-      <li>Ensure the settings are those in the following screenshot, then click <strong>Publish Test Scripts</strong>.
+      <li><p>Click <strong>Publish</strong>.</p>
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/settings-test.webp" alt="publish test scripts dialog">
+          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/publish-publish.webp" alt="publish app">
         </figure>
+        <aside class="bcls-aside bcls-aside--tip">Note: The SDK on the App, needs to support the version selected here to work properly.</aside>
       </li>
-      <li>If a <em>Live Preview</em> dialog displays, click <strong>Cancel</strong>.</li>
-      <li>Now in the top-right of the screen, click <strong>Publish Production</strong>.</li>
-      <li>Update the script version to the latest, and click <strong>Confirm</strong>.</li>
-      <li>Confirm settings as show in step 56, then click <strong>Publish.</strong></li>
-      <li>Click the <strong>Test Scripts</strong> tab, if not already selected.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/test-scripts.webp" alt="test scripts">
-        </figure>
-      </li>
-      <li>Click <strong>Copy Scripts</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/copy-scripts.webp" alt="copy scripts">
-        </figure>
-      </li>
-      <li>Provide the scripts to Brightcove's OTT Delivery Team for proper deployment.</li>
+      <li>Select the SDK type <strong>Native SDK</strong>.</li>
+      <li>Enable the Publish individual languages setting to publish them separately. If left
+        disabled, all languages will be published.</li>
+      <li>Check the box next to Do you require users to re-consent? setting if you wish to allow
+        users to re-consent.</li>
+      <li>Click the View Details link to review any release note updates before publishing to your
+        live production SDK.</li>
+      <li>Click either the Publish Test SDK button or Publish Production SDK button to complete
+        the action.</li>
     </ol>
   </section>
 

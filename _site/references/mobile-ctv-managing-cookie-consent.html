@@ -1465,7 +1465,7 @@
       <li>Log in to your OneTrust account.</li>
       <li>From the <em>Welcome</em> page, click the <strong>Mobile app Consent</strong> or <strong>OTT & CTV Consent</strong> option according to the case.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/cookie-compliance.webp" alt="cookie compliance">
+          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/mobile-or-ctv.webp" alt="select mobile or ctv">
         </figure>
       </li>
       <li>To start the process:
@@ -1474,40 +1474,54 @@
           <li>Click <strong>Add Mobile App</strong> or <strong>Add CTV Apps</strong> according to the case. he Add App modal appears.</li>
         </ol>
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/add-website.webp" alt="add website">
+          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/create-mobile.webp" alt="create mobile app">
         </figure>
         <p>or</p>
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/add-website.webp" alt="add website">
+          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/create-ctv.webp" alt="create ctv app">
         </figure>
       </li>
       <li>Complete the fields. For more info, see <a href="chrome-extension://mhnlakgilnojmhinhkckjpncpbhabphi/pages/pdf/web/viewer.html?file=file%3A%2F%2F%2FUsers%2Fmmendoza%2FDownloads%2FOneTrust%2520Mobile%2520%26%2520OTT-CTV%2520Consent%2520User%2520Guide.pdf">Adding Mobile Applications</a>.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/scan-only.webp" alt="scan website">
+          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/fill-create-mobile.webp" alt="fill fields to create the app">
         </figure>
       </li>
       <li>Click <strong>Create</strong></li>
     </ol>
-    <aside class="bcls-aside bcls-aside--tip">Note: You do not need to upload an ipa or apk because the scanning and auto categorization of One Trust does not work properly for our needs.</aside>
+    <aside class="bcls-aside bcls-aside--tip">Note: It is not necessary to upload an ipa or apk since scanning and auto categorization of One Trust does not work properly for our needs.</aside>
   </section>
 
   <section class="bcls-section">
     <h2 id="Associate-SDKs-to-the-app">Associate SDKs to the App</h2>
-    <p>You have to create at least one “SDK” with the categorizations we need consent on the app. for this example we create the C0002 (Performance Cookies) and the C0004 (Targeting Cookies) SDKs</p>
+    <p>We are now going to create two SDKs, a performance cookie and a targeting cookie.</p>
     <ol class="bcls-tasklist">
-      <li>From the <em>Welcome</em> page, click the <strong>Categorizations</strong>. The Categorizations screen
-        appears.
+      <li>From the <em>Welcome</em> page, click the <strong>Categorizations</strong>.
+        
+      </li>
+      <li>Select the <strong>SDKs</strong> tab.</li>
+      <li>Click <strong>Add SDK</strong>.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/cookie-compliance.webp" alt="cookie compliance">
+          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/add-sdk-first.webp" alt="create sdk">
         </figure>
       </li>
-      <li>Select the <strong>SDKs</strong> tab. The SDKs screen appears.</li>
-      <li>Create the C0002 (Performance Cookies) SDK.
+
+      <li>Complete the fields.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/scan-only.webp" alt="scan website">
+          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/create-C0002-sdk.webp" alt="fill the sdk fields">
         </figure>
       </li>
-      <li>Click <strong>Create</strong></li>
+      <li>Select the check boxes for the applications to which you want to assign the SDK.
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/link-sdk-to-apps.webp" alt="select apps to apply the sdk">
+        </figure>
+
+      </li>
+      <li>Confirm and <strong>Create</strong>
+        <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/confirm-sdk-c0002.webp" alt="confirm sdk">
+        </figure>
+      </li>
+      <li>Repit the process to create the Targeting Cookie SDK.</li>
     </ol>
     <aside class="bcls-aside bcls-aside--tip">Note: You do not need to upload an ipa or apk because the scanning and auto categorization of One Trust does not work properly for our needs.</aside>
   </section>
@@ -2121,20 +2135,22 @@
   </section>
 
   <section class="bcls-section">
-    <h2 id="Assign_geolocation_rules_to_domains">Assign geolocation rules to domains</h2>
+    <h2 id="Assign_geolocation_rules_to_applications">Assigning Geolocation Rule Groups to
+      Applications</h2>
     <p></p>
     <ol class="bcls-tasklist-restart">
       <li>In the left navigation, click <strong>Geolocation Rules</strong>.</li>
-      <li>For the <em>Geolocation Rule Group</em> you created, click the ellipses icon and select <strong>Assign to Domains</strong>.
+      <li>For the <em>Geolocation Rule Group</em> you created, click the ellipses icon and select <strong>Assign to Mobile Apps</strong> or <strong>Assign to CTV Apps</strong> according to the case.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/assign-to-domains.webp" alt="rule group assign to domains">
+          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/geolocalization-mobile-1.webp" alt="geolocalization mobile">
         </figure>
       </li>
-      <li>Select the appropriate domains, then click <strong>Assign</strong>. These domains should match the URLs supplied by your DNS provider.
+      <li>Select the appropriate apps you would like to assign this policy to.
         <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/assign-domains-geo.webp" alt="rule group assign to domains confirm">
+          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/geolocalization-assign-mobile.webp" alt="geolocalization assign mobile">
         </figure>
       </li>
+      <li>click <strong>Assign</strong>.</li>
     </ol>
   </section>
 

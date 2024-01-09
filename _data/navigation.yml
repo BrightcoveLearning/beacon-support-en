@@ -338,8 +338,24 @@
       url: /references/branding-beacon-apps.html
     - name: Common Configuration Settings
       url: /references/common-configuration-settings.html
-    - name: Cookie Consent Using OneTrust
-      url: /references/managing-cookie-consent.html
+    - name: Consent Management using OneTrust
+      url: /references/consent-management-using-onetrust/index.html
+      docs:
+        - name: 'Consent management in beacon web'
+          url: /references/consent-management-using-onetrust/consent-management-in-beacon-web.html
+        - name: 'Consent management in CTV/Mobile beacon apps'
+          url: /references/consent-management-using-onetrust/consent-management-in-ctv-mobile-beacon-apps.html
+        - name: 'Template creation'
+          url: /references/consent-management-using-onetrust/template-creation/index.html
+          docs:
+          - name: 'GDPR'
+            url: /references/consent-management-using-onetrust/template-creation/gdpr-template.html
+          - name: 'Law 25'
+            url: /references/consent-management-using-onetrust/template-creation/law-25-template.html
+          - name: 'CCPA'
+            url: /references/consent-management-using-onetrust/template-creation/ccpa-template.html
+          - name: 'Global'
+            url: /references/consent-management-using-onetrust/template-creation/global-template.html
     - name: 'Adding/Deleting an App User'
       url: '/references/add-delete-app-user.html'
     - name: 'Glossary'

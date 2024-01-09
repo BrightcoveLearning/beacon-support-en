@@ -1189,9 +1189,67 @@
               
               
               
-              
-              <li class="nav-item"><a class="nav-link" href="/references/managing-cookie-consent.html">Cookie Consent Using OneTrust</a></li>
-              
+
+              <li class="nav-item subsection-title">
+                
+                <a class="nav-link" href="/references/consent-management-using-onetrust/index.html">
+                  <span class="theme-icon-holder me-2"><i class="fa-solid fa-minus"></i></span>&nbsp;Consent Management using OneTrust</a>
+                
+
+                <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                  
+                  
+                  
+                  <li class="nav-item"><a class="nav-link" href="/references/consent-management-using-onetrust/consent-management-in-beacon-web.html">Consent management in beacon web</a></li>
+                  
+                  
+                  
+                  
+                  
+                  <li class="nav-item section-doc"><a class="nav-link" href="/references/consent-management-using-onetrust/consent-management-in-ctv-mobile-beacon-apps.html" aria-current="page">Consent management in CTV/Mobile beacon apps</a></li>
+                  
+                  
+                  
+                  
+
+                  <li class="nav-item section-title">
+                    
+                    <a class="nav-link" href="/references/consent-management-using-onetrust/template-creation/index.html"><span class="theme-icon-holder me-2">
+                      <i class="fa-solid fa-minus"></i><span>&nbsp;Template creation</a>
+                    
+                    
+                    <ul role="list" class="section-items list-unstyled nav flex-column pb-3" style="display:none;">
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/references/consent-management-using-onetrust/template-creation/gdpr-template.html">GDPR</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/references/consent-management-using-onetrust/template-creation/law-25-template.html">Law 25</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/references/consent-management-using-onetrust/template-creation/ccpa-template.html">CCPA</a>
+                      </li>
+                      
+                      
+                      
+                      <li class="nav-item subsection-doc">
+                        <a class="nav-link" href="/references/consent-management-using-onetrust/template-creation/global-template.html">Global</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </li>
+                  
+                  
+                </ul>
+              </li>
               
               
               
@@ -1376,6 +1434,10 @@
             
             
             
+            <li class="breadcrumb-item"><a class="theme-link" href="/references/consent-management-using-onetrust/">Consent management using onetrust</a></li>
+            
+            
+            
             <li class="breadcrumb-item active" aria-current="page">Managing Cookie Compliance for Mobile/CTVs Using OneTrust Cookie Consent</li>
             
             
@@ -1434,7 +1496,7 @@
     <figure class="bcls-figure">
       <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/one-trust-preference-center.png" alt="one trust preference center">
     </figure>
-    <p>OneTrust welcomes Beacon customers to contact them about the <a href="https://www.onetrust.com/products/cookie-consent/">Cookie Consent</a> product.</p>
+    <p>OneTrust welcomes Beacon customers to contact them about the <a href="https://www.onetrust.com/products/ott-and-ctv-consent/">Cookie Consent</a> product.</p>
     <h3>Overview of implementation process</h3>
     <p>There are a number of steps to implement OneTrust's cookie compliance with your Beacon app. Here is an overview of that process:</p>
     <ol>
@@ -1521,304 +1583,10 @@
           <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/confirm-sdk-c0002.webp" alt="confirm sdk">
         </figure>
       </li>
-      <li>Repit the process to create the Targeting Cookie SDK.</li>
+      <li>Repeat the process to create the Targeting Cookie SDK.</li>
     </ol>
   </section>
-
-  <section class="bcls-section">
-    <h2 id="Create_two_templates">Create templates</h2>
-    <p>A template defines how your banner and preferences dialog appear, and function, for your users. In the following steps you will create four templates, one for CCPA, one for GDPR, one for Law 25 and a generic one for all other regions.</p>
-    <aside class="bcls-aside bcls-aside--tip language-editable">You may not need all templates. As stated earlier, generally CCPA is used for California, Colorado, Utah, Connecticut and Virginia, GDPR for EU and UK and Law 25 for Quebec. If you are not targeting one of these regions the corresponding template may not be needed. You should investigate your targeted geographies to check on cookie compliance regulations. The step-by-step instructions will cover creating all four templates.</aside>
-    <ul>
-      <li><a href="#ccpa-template">CCPA</a></li>
-      <li><a href="#gdpr-template">IAB TCF 2.2</a></li>
-      <li><a href="#law-25-template">Quebec Law 25</a></li>
-      <li><a href="#generic-template">Generic Cookie Banner</a></li>
-    </ul>
-    <hr>
-    <p id="ccpa-template"><strong>Create the CCPA template</strong></p>
-    <ol class="bcls-tasklist-restart">
-      <li>In the left navigation, click <strong>Templates</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/select-templates.webp" alt="click templates">
-        </figure>
-      </li>
-      <li>Click <strong>Add New</strong>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/add-new-template.webp" alt="add new template">
-        </figure>
-      </li>
-      <li>Select the <strong>CCPA Template (California)</strong> for the <strong>Framework</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/select-ccpa-template.webp" alt="select ccpa template">
-        </figure>
-      </li>
-      <li>Click <strong>Next</strong>.</li>
-      <li>Complete the form then click <strong>Create</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/create-ccpa-template.webp" alt="create the ccpa template">
-        </figure>
-      </li>
-      <li>The <em>Template Details</em> page opens to the <em>Banner</em> tab. Click <strong>Preference Center</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/preference-center-ccpa-1.webp" alt="details banner tab">
-        </figure>
-      </li>
-      <li><a href="#customizing-the-ctv-template">Customize CTV Template</a>, <a href="#customizing-the-mobile-template">Customize Mobile Template</a>.</li>
-      <li>Click <strong>Save Template</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/save-template-ccpa.webp" alt="Save template">
-        </figure>
-      </li>
-      </ol>
-      <hr>
-      <p id="gdpr-template"><strong>Create the IAB Transparency and Consent Framework 2.2</strong></p>
-      <ol class="bcls-tasklist-restart">
-      <li>Click <strong>Templates</strong> in the left navigation.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/select-templates.webp" alt="click templates">
-        </figure>
-      </li>
-      <li>Click <strong>Add New</strong> to start creation of your second template.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/add-new-template.webp" alt="add new template">
-        </figure>
-      </li>
-      <li>Select the <strong>IAB Transparency and Consent Framework 2.2</strong> for the <em>Framework</em>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/select-IAB-2-2.webp" alt="new iab framework">
-        </figure>
-      </li>
-      <li>Click <strong>Next</strong>.</li>
-      <li>Read the <em>IAB TCF</em> information then click <strong>I Agree</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/IAB-agreement.webp" alt="IAB Agree">
-        </figure>
-      </li>
-      <li>Complete the form then click <strong>Create Template</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/create-IAB-template.webp" alt="gdpr form">
-        </figure>
-        <aside class="bcls-aside bcls-aside--information language-editable">Note that using <strong>GDPR</strong> in the template name makes sense as IAB standards are GDPR compliant.</aside>
-      </li>
-      <li><a href="#customizing-the-ctv-template">Customize CTV Template</a>, <a href="#customizing-the-mobile-template">Customize Mobile Template</a>.</li>
-      <li>While still in the <em>Preference Center</em>, open the <strong>Advanced Configuration</strong> options.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/IAB-advanced-configurations.webp" alt="advanced configuration">
-        </figure>
-      </li>
-      <li>A number of changes must be made here for use with Brightcove Beacon. The changes are listed, then a video follows showing the process how to implement those changes.
-        <ol>
-          <li>Move <strong>Social Media Cookies</strong> to the <strong>Strictly Necessary Cookies</strong> subgroup.</li>
-          <li>Move <strong>Targeting Cookies</strong> to the <strong>Strictly Necessary Cookies</strong> subgroup.</li>
-          <li>Move <strong>Functional Cookies</strong> to the <strong>Strictly Necessary Cookies</strong> subgroup.</li>
-          <li>Move <strong>Performance Cookies</strong> to the <strong>Strictly Necessary Cookies</strong> subgroup.</li>
-          <li>From the <strong>Personalised ads and content, ad and content measurement, audience insights and product development</strong> group, perform the following:
-            <ol type="a">
-              <li>Remove <strong>Create profiles to personalize content</strong> as a subgroup, then choose <strong>Disable IAB Purpose</strong>.</li>
-              <li>Remove <strong>use profiles to select personalized content</strong> as a subgroup, then choose <strong>Disable IAB Purpose</strong>.</li>
-              <li>Remove <strong>Measure content performance</strong> as a subgroup, but do NOT disable.</li>
-              <li>Remove <strong>Understand audiences through statistics or combinations of data from different sources</strong> as a subgroup, then choose <strong>Disable IAB Purpose</strong>.</li>
-              <li>Remove <strong>Develop and improve services</strong> as a subgroup, then choose <strong>Disable IAB Purpose</strong>.</li>
-            </ol>
-          </li>
-          <li>For <strong>Use precise geolocation data</strong>, choose <strong>Disable IAB Purpose</strong>.</li>
-          <li>For <strong>Actively scan device characteristics for identification</strong>, choose <strong>Disable IAB Purpose</strong>.</li>
-          <li>For <strong>Match and combine data from other data sources</strong>, choose <strong>Disable IAB Purpose</strong>.</li>
-          <li>For <strong>Link different devices</strong>, choose <strong>Disable IAB Purpose</strong>.</li>
-          <li>For <strong>Identify devices based on information transmitted automatically</strong>, choose <strong>Disable IAB Purpose</strong></li>
-        </ol>
-        <div style="position: relative; display: block; max-width: 1728px;">
-          <div style="padding-top: 63%;"><iframe src="https://players.brightcove.net/20318290001/default_default/index.html?videoId=1785934987117130534" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
-        </div>
-      </li>
-      <li>Check your configuration by comparing your results to the following, making corrections as needed:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/IAB-cookie-config-highlight.webp" alt="advanced gdpr configuration changes">
-        </figure>
-      </li>
-      <li>Click <strong>Save Template</strong>.</li>
-      </ol>
-      <hr>
-      <p id="law-25-template"><strong>Create the Quebec Law 25 Template</strong></p>
-      <ol class="bcls-tasklist-restart">
-      <li>Click <strong>Templates</strong> in the left navigation.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/select-templates.webp" alt="click templates">
-        </figure>
-      </li>
-      <li>Click <strong>Add New</strong> to start creation of your third template.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/add-new-template.webp" alt="add new template">
-        </figure>
-      </li>
-      <li>Select the <strong>Quebec Law 25</strong> for the <em>Framework</em>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/qubec-law-25.webp" alt="quebec law 25">
-        </figure>
-      </li>
-      <li>Click <strong>Next</strong>.</li>
-      <li>Complete the form then click <strong>Create Template</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/quebec-create-template.webp" alt="quebec confirm template">
-        </figure>
-      </li>
-      <li><a href="#customizing-the-ctv-template">Customize CTV Template</a>, <a href="#customizing-the-mobile-template">Customize Mobile Template</a>.</li>
-      <li>Click <strong>Save Template</strong>.</li>
-      </ol>
-      <hr>
-      <p id="generic-template"><strong>Create Generic Cokie Banner</strong></p>
-      <ol class="bcls-tasklist-restart">
-      <li>Click <strong>Templates</strong> in the left navigation.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/select-templates.webp" alt="click templates">
-        </figure>
-      </li>
-      <li>Click <strong>Add New</strong> to start creation of your third template.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/add-new-template.webp" alt="add new template">
-        </figure>
-      </li>
-      <li>Select the <strong>Generic Cookie Banner</strong> for the <em>Framework</em>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/generic-banner.webp" alt="new iab framework">
-        </figure>
-      </li>
-      <li>Click <strong>Next</strong>.</li>
-      <li>Complete the form then click <strong>Create Template</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/create-generic-template.webp" alt="name generic template">
-        </figure>
-      </li>
-      <li><a href="#customizing-the-ctv-template">Customize CTV Template</a>, <a href="#customizing-the-mobile-template">Customize Mobile Template</a>.</li>
-      <li>Note that your banner now contains three buttons.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/general-three-buttons.webp" alt="three buttons">
-        </figure>
-      </li>
-      <li>You will now alter the look of your banner:
-        <ol type="a">
-          <li>Click the <strong>Banner</strong> tab</li>
-          <li>Click <strong>Content</strong></li>
-          <li>Click <strong>Button Set</strong></li>
-        </ol>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/banner-look.webp" alt="banner content buttonset">
-        </figure>
-      </li>
-      <li>In the <em>Button Set</em> dialog, <strong>disable</strong> the following buttons:
-        <ul>
-          <li>Show Cookie Setting Button</li>
-          <li>Show Reject All Button</li>
-        </ul>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/disable-buttons.webp" alt="button set dialog">
-        </figure>
-      </li>
-      <li>Click <strong>Save</strong>.</li>
-      <li>Note that the banner contains only the <em>Accept All Cookies</em> button and the close button (<strong>X</strong>).
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/note-one-button.webp" alt="banner two buttons">
-        </figure>
-      </li>
-      <li>Click <strong>Save Template</strong>.</li>
-    </ol>
-    <p>You have now created your four templates. Note that your Generic Global template will be used in regions NOT assigned to other templates.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="customizing-the-ctv-template">Customizing The CTV Template</h2>
-    <p>You can customize the layout, styling, content, and behavior of your banner template. This allows you to create a look and feel that matches your organization's branding style and behavior preferences.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>On the <strong>COOKIE CONSENT</strong> menu, select <strong>Templates</strong>.</li>
-      <li>Click on the name of the template you want to customize.</li>
-      <li>
-        <ol type="a">
-          <li>Select the <strong>Details</strong> tab.</li>
-          <li>Enable <strong>CTV App Template</strong>.</li>
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/enable-ctv-banner.webp" alt="enable ctv template">
-          </figure>
-        </ol>
-      </li>
-      <li>
-        <ol type="a">
-          <li>Select the <strong>Banner</strong> tab.</li>
-          <li>On Platform select <strong>CTV App</strong>.</li>
-          <li>On <strong>design</strong>, Edit the <strong>Button Sets</strong> with the colors of your <strong>Brightcove Beacon Design Guide</strong>.   
-          </li>
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/ctv-banner-style.webp" alt="ctv banner style">
-          </figure>
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/beacon-design-guide-ctv-2.webp" alt="ctv banner button sets">
-          </figure>
-        </ol>
-      </li>
-        <li><strong>Save and Close</strong></li>
-        <li>
-          <ol type="a">
-            <li>Select the <strong>Preference Center</strong> tab</li>
-            <li>On Platform select <strong>CTV App</strong>.</li>
-            <li>On <strong>Design</strong>, Edit <strong>General</strong> with the colors of your <strong>Brightcove Beacon Design Guide</strong>.
-            <figure class="bcls-figure">
-              <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/ctv-preference-center.webp" alt="preference center">
-            </figure>    
-            <figure class="bcls-figure">
-              <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/beacon-design-guide-ctv-pc-general.webp" alt="preference center general styling">
-            </figure>    
-            </li>
-            <li>On <strong>Design</strong>, Edit <strong>Button Sets</strong> with the colors of your <strong>Brightcove Beacon Design Guide</strong>.
-            <figure class="bcls-figure">
-              <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent/beacon-design-guide-ctv-pc-button-set.webp" alt="preference center button sets styling">
-            </figure>    
-            </li>
-          </ol>
-        </li>
-        
-        
-        <li><strong>Save and Close</strong></li>
-        <li><strong>Save Template</strong></li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--tip">Note: Every time you make changes to the styling of a template within One Trust, you have to <a href="#Publishing-SDKs">publish the SDK</a> to ensure that all changes are properly implemented and accessible for seamless integration.</aside>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="customizing-the-mobile-template">Customizing The Mobile Template</h2>
-    <p>You can customize the layout, styling, content, and behavior of your banner template. This allows you to create a look and feel that matches your organization's branding style and behavior preferences.</p>
-    <ol class="bcls-tasklist-restart">
-      <li>On the <strong>COOKIE CONSENT</strong> menu, select <strong>Templates</strong>.</li>
-      <li>Click on the name of the template you want to customize.</li>
-      <li>
-        <ol type="a">
-          <li>Select the <strong>Details</strong> tab.</li>
-          <li>Enable <strong>Mobile App Template</strong>.</li>
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/enable-mobile-template.webp" alt="enable mobile template">
-          </figure>
-        </ol>
-      </li>
-      <li>
-        <ol type="a">
-          <li>Select the <strong>Preference Center</strong> tab</li>
-          <li>On Platform select <strong>Mobile App</strong>.</li>
-          <li>On <strong>Design</strong>, Edit <strong>General</strong> with the colors of your <strong>Brightcove Beacon Design Guide</strong>.
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/mobile-prefence-center.webp" alt="preference center general">
-          </figure>    
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/s-general-img/managing-cookie-consent-mobile-ctv/beacon-design-guide-mobile.webp" alt="preference center general styling">
-          </figure>    
-          </li>
-        </ol>
-      </li>
-        
-        
-        <li><strong>Save and Close</strong></li>
-        <li><strong>Save Template</strong></li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--tip">Note: Every time you make changes to the styling of a template within One Trust, you have to <a href="#Publishing-SDKs">publish the SDK</a> to ensure that all changes are properly implemented and accessible for seamless integration.</aside>
-  </section>
-
+  
   <section class="bcls-section">
     <h2 id="manage-languages">Manage Languages</h2>
     <ol class="bcls-tasklist-restart">
@@ -1839,7 +1607,7 @@
     </ol>
 
     <p>The multi-language capabilities of Brightcove provide you with the ability to present your content and apps in the native language of your viewers.</p>
-    <p>Languages soported by Brightcove</p>
+    <p>Languages supported by Brightcove</p>
     <ul>
       <li>English (en)</li>
       <li>Spanish (es)</li>
@@ -2248,6 +2016,20 @@
         </tr>
       </tbody>
     </table>
+  </section>
+  <section class="bcls-section">
+    <h2 id="related-documentation">Related Documentation</h2>
+    <ul>
+      <li><a href="/references/consent-management-using-onetrust/consent-management-in-beacon-web.html">Consent management in beacon web</a>.</li>
+      <li>Create templates
+        <ul>
+          <li><a href="/references/consent-management-using-onetrust/template-creation/gdpr-template.html">GDPR</a></li>
+          <li><a href="/references/consent-management-using-onetrust/template-creation/law-25-template.html">Law 25</a></li>
+          <li><a href="/references/consent-management-using-onetrust/template-creation/ccpa-template.html">CCPA</a></li>
+          <li><a href="/references/consent-management-using-onetrust/template-creation/global-template.html">Global</a></li>
+        </ul>
+      </li>
+    </ul>
   </section>
 
 </article>

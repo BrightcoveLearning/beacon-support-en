@@ -1,38 +1,31 @@
 ---
 title: Consent Management using OneTrust
+parent: Home
+section: References
 description: Consent Management allows you to implement OneTrust Cookie Consent with Brightcove Beacon.
 ---
+<article class="landing-page-wrapper">
+  <h1>{{ page.title }}</h1>
+  <p>{{page.description}}</p>
+  <section>
+    <table width="100%" border="0">
+      <tbody>
+        <tr>
+          <th width="50%" scope="col">
+          </th>
 
-<!-- Template for sub-section that just has its own sub-sections -->
-{% for item in site.data.navigation %}
-  {% if item.name == page.parent %}
-    {% for section in item.docs %}
-      {% if section.name == page.title %}
-        <h1><i class="{{ item.icon }}"></i> {{ page.title }}</h1>
-        <article class="bcls-article">
-        <summary>{{ page.description }}</summary>
-        <div class="row">
-          {% for entry in section.docs %}
-            <div class="col-12 col-lg-4 py-3">
-              <div class="card shadow-sm" style="background: white" onclick="window.location.href = '{{ entry.url }}'">
-                <div class="card-body">
-                  <div>
-                    {% if entry.docs %}
-                    <h5 class="card-title text-center m-2">{{ entry.name }}</h5>
-                    <ul class="list-group list-group-flush">
-                      {% for subdoc in entry.docs %}
-                      <li class="list-group-item"><a href="{{ subdoc.url }}" style="text-decoration: none;">{{ subdoc.name }}</a></li>
-                      {% endfor %}
-                    </ul>
-                    {% endif %}
-                </div>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </article>
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-{% endfor %}
+        </tr>
+        <tr>
+          <td valign="top">
+            <ul>
+              <li><a href="/references/consent-management-using-onetrust/consent-management-in-beacon-web.html">Consent management in beacon web</a></li>
+              <li><a href="/references/consent-management-using-onetrust/consent-management-in-ctv-mobile-beacon-apps.html">Consent management in CTV/Mobile beacon apps</a></li>
+              <li><a href="/references/consent-management-using-onetrust/template-creation/index.html">Template creation</a></li>
+              
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>

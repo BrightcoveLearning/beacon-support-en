@@ -1,0 +1,64 @@
+---
+title: Scheduled Channels with Beacon Classic
+description: In this topic, you will learn how to use scheduled channels in Beacon Classic.
+parent: Getting Started
+---
+
+<h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+<p>To learn how to start in Scheduled Channels, sees</p>
+  <section class="bcls-section">
+    <h2 id="section-name">Prerequisites</h2>
+    <h3>In Beacon Studio:</h3>
+    <ul>
+    <li>Navigate to the Cloud Playout module. Then, fill the schedule with content and make sure it is in a <strong>start/running</strong> status.</li>
+        <p></p>
+    <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/using-bcb/running-status.webp" alt="running-status">
+        <figcaption class="bcls-caption--image">running-status</figcaption>
+      </figure>
+    <li>It is necessary to have the <strong>Channel ID</strong>.</li>
+    <p></p>
+    <p>Navigate to the <strong> Live Module</strong> for the channel. You will need:
+    <ul>
+        <li><strong>Video ID </strong> (via standard embed code).</li>
+        <li><strong>Ad Config ID </strong>.</li>
+        <aside class="bcls-aside bcls-aside--information language-editable">Note: You can find this information by clicking the Live <Sect></Sect>streaming.</aside>
+    </ul>
+    </p>
+</ul>
+<h2 id="section-name">In Beacon Classic:</h2>
+<ol class="bcls-tasklist-restart">
+    <li>Login to Beacon Classic.</li>
+    <li>Navigate to <strong>Advertisement</strong>.</li>
+    <li>Click <strong>Add New Configuration</strong>.</li>
+    <li>Create Advertisement as SSAI with Live Ad Config ID. 
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/using-bcb/ad-conf-id.webp" alt="ad-conf-id">
+            <figcaption class="bcls-caption--image">ad-conf-id</figcaption>
+          </figure> 
+          <p>Click <strong>Create New Advertisement</strong>.</p> 
+    </li>
+    <li>Navigate to <strong>Channels</strong>.</li>
+    <li>Click the Channel. It's sent to <strong>Basic Data</strong>. Localize <strong>CloudPlayOut Channel ID</strong> and fill it with the Channel ID. Click <strong>Update Channel</strong>.        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/using-bcb/channel-id.webp" alt="channel-ID">
+            <figcaption class="bcls-caption--image">channel-ID</figcaption>
+          </figure>
+    </li>
+    <li>Navigate to <strong>streams</strong> and add the Stream Video ID. In <strong>Stream Type</strong> select <strong>Live</strong>.
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/using-bcb/streams.webp" alt="streams">
+            <figcaption class="bcls-caption--image">streams</figcaption>
+          </figure>
+    <p>Click <strong> Add new stream</strong>.</p></li>
+    <li>Navigate to <strong> Rights & Scheduling</strong>. Set the AVOD and Advertisement Configuration created.</li>
+    <li>Click to configuration and fetch EPG.
+        <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/using-bcb/fetch.webp" alt="ferch-epf">
+            <figcaption class="bcls-caption--image">ferch-epf</figcaption>
+          </figure>
+    </li>
+    <li>Go back to <strong> Channels</strong>, click <strong> EPG</strong> and click action to add the items.</li>
+</ol>
+</section>

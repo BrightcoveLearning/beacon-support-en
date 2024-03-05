@@ -53,6 +53,8 @@
             url: /using-brightcove-beacon/cloud-playout/getting-started/cloud-playout-overview.html
           - name: Creating a Cloud Playout Channel
             url: /using-brightcove-beacon/cloud-playout/getting-started/cloud-playout-stream-vod.html
+          - name: 'Scheduled Channels with Beacon Classic'
+            url: /using-brightcove-beacon/cloud-playout/getting-started/scheduled-channels-beacon.html
         - name: General Information
           url: /using-brightcove-beacon/cloud-playout/general/index.html
           docs:

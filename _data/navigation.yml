@@ -4,7 +4,7 @@
 - section:
   name: 'Getting Started'
   url: '/getting-started/index.html'
-  icon: fa-regular fa-map-pin
+  icon: fa-solid fa-map-pin
   description: This section provides guides to help you get started with Brightcove Beacon.
   docs:
     - name: 'Learning Guide'
@@ -23,7 +23,7 @@
   name: Syncing with Video Cloud
   url: /syncing-with-video-cloud/index.html
   icon: fa-solid fa-rotate
-  description: 
+  description: This section cover synchronizing Video Cloud with the Brightcove Beacon Experience.
   docs:
     - name: Creating Video Cloud Custom Fields
       url: /syncing-with-video-cloud/vc-custom-fields.html
@@ -32,7 +32,7 @@
 - section:
   name: Using Brightcove Beacon
   url: /using-brightcove-beacon/index.html
-  icon: fa-regular fa-toolbox
+  icon: fa-solid fa-toolbox
   description: Topics on using Beacon to build your OTT apps.
   docs:
     - name: Adding a Trailer to a Movie
@@ -130,7 +130,7 @@
 - section:
   name: 'Monetization'
   url: '/monetization/index.html'
-  icon: fa-regular fa-money-bills
+  icon: fa-solid fa-money-bills
   description: Documents to help you implement monetizing your content.
   docs:
     - name: General
@@ -180,7 +180,7 @@
 - section:
   name: 'Beacon Web Store'
   url: '/beacon-web-store/index.html'
-  icon: fa-regular fa-store
+  icon: fa-solid fa-store
   description: The Beacon Web Store is a service that enables Beacon licensees to implement subscriptions in Bring Your Own (BYO) web stores.
   docs:
   - name: 'Overview: Brightcove Beacon Web Store'
@@ -192,7 +192,7 @@
 - section:
   name: 'App Publishing and Behavior'
   url: '/publishing-apps/index.html'
-  icon: fa-regular fa-display-code
+  icon: fa-solid fa-square-caret-up
   description: This section provides guidance on submitting your apps to the app stores and behaviors of your OTT apps.
   docs:
     - name: 'General Information'
@@ -291,7 +291,7 @@
 - section:
   name: Analytics
   url: /analytics/index.html
-  icon: fa-regular fa-chart-line-up
+  icon: fa-solid fa-chart-line
   description: Learn how to use video analytics to check the performance and engagement of your videos.
   docs:
     - name: Analytics Overview
@@ -307,7 +307,7 @@
 - section:
   name: Beacon Plugins
   url: /ott-plugins/index.html
-  icon: a-regular fa-plug
+  icon: fa-solid fa-plug
   description: This section contains topics on Beacon plugins.
   docs:
     - name: 'Learning Guide: Beacon Plugins'
@@ -334,7 +334,7 @@
   name: References
   url: /references/index.html
   description: 'Reference docs for Brightcove Beacon.'
-  icon: fa-light fa-books
+  icon: fa-solid fa-bookmark
   docs:
     - name: Branding Brightcove Beacon Apps
       url: /references/branding-beacon-apps.html
@@ -383,7 +383,7 @@
 - section:
   name: Training
   url: /training/index.html
-  icon: fa-regular fa-chalkboard-user
+  icon: fa-solid fa-chalkboard-user
   description: Get training on Brightcove products.
   docs:
     - name: Using Video Cloud Videos/Custom Fields
@@ -405,7 +405,7 @@
 - section:
   name: 'Support'
   url: '/support/index.html'
-  icon: fa-regular fa-comments-question-check
+  icon: fa-regular fa-comments
   description: Learn how to get help from Brightcove Support
   docs:
     - name: 'Viewing the Brightcove System Status Page'

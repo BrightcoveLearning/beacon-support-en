@@ -1491,7 +1491,7 @@
   </section>
   <section class="bcls-section">
     <h2 id="real-time-search">Real-Time Search from the First Keystroke</h2>
-    <p>Real-time search provides users with immediate search results as they type their queries.</p>
+    <p>Real-time search provides you with immediate search results as you type.</p>
     <p>The search engine anticipates potential search queries based on the initial letters or words entered.</p>
     <p><strong>Example</strong></p>
     <p>Search for: <code translate="no">rom</code></p>
@@ -1499,6 +1499,111 @@
     <p>Suggestions: <code translate="no">Romantic Comedies</code> <code translate="no">Rome Travel Guides</code> <code translate="no">Romance Movies</code></p>
     <p>With each additional character you input, the search results and suggestions are refined to better match the intended query.</p>
   </section>
+  <section class="bcls-section">
+    <h2 id="typo-tolerance">Typo Tolerance</h2>
+    <p>Typo tolerance ensures that you can still find relevant content even if you make small spelling mistakes in your search query. This feature improves the search experience by allowing minor errors without completely altering the search results.</p>
+    <p>The search engine automatically corrects common misspellings and returns the closest matches based on relevance.</p>
+  
+    <strong>Example:</strong>
+    <p>Search for: <code translate="no">advanture movies</code></p>
+    <p><strong>Results:</strong></p>
+    <ul>
+      <li><code translate="no">Adventure Movies</code></li>
+      <li><code translate="no">Action-Adventure Films</code></li>
+      <li><code translate="no">Top Rated Adventure Films</code></li>
+    </ul>
+  
+    <p>Typo tolerance applies to different types of spelling mistakes, including:</p>
+    <ul>
+      <li>Single-letter errors (e.g., <code translate="no">adventure</code> instead of <code translate="no">advanture</code>).</li>
+      <li>Missing or extra letters (e.g., <code translate="no">superheros</code> instead of <code translate="no">superheroes</code>).</li>
+      <li>Swapped letters (e.g., <code translate="no">mvoie</code> instead of <code translate="no">movie</code>).</li>
+    </ul>
+  
+    <p>By default, typo tolerance allows for up to two character mistakes in a query. However, exact matches are ranked higher, ensuring the most relevant results appear first.</p>
+  </section>
+
+You're welcome! Here’s the Metadata Search section in the same HTML format as your existing document:
+
+html
+Copy
+Edit
+<section class="bcls-section">
+  <h2 id="metadata-search">Metadata Search</h2>
+  <p>Metadata search allows you to find content based on additional information beyond just the title. This includes attributes such as descriptions, genres, cast names, and tags, making it easier to locate relevant content.</p>
+  <p>With metadata search, even if you don’t remember the exact title of a movie or show, you can still find it by searching for related details.</p>
+
+  <strong>Example:</strong>
+  <p>Search for: <code translate="no">Christopher Nolan</code></p>
+  <p><strong>Results:</strong></p>
+  <ul>
+    <li><code translate="no">Inception</code> (Director: Christopher Nolan)</li>
+    <li><code translate="no">Dunkirk</code> (Director: Christopher Nolan)</li>
+    <li><code translate="no">Interstellar</code> (Director: Christopher Nolan)</li>
+  </ul>
+
+  <p>Metadata search can retrieve results based on:</p>
+  <ul>
+    <li><strong>Descriptions:</strong> Searching for "<code translate="no">spy thriller</code>" can return action-spy movies even if the title doesn’t contain those words.</li>
+    <li><strong>Genres:</strong> Searching for "<code translate="no">romantic comedy</code>" will return all movies categorized under this genre.</li>
+    <li><strong>Cast Names:</strong> Searching for "<code translate="no">Leonardo DiCaprio</code>" will return all movies featuring the actor.</li>
+    <li><strong>Tags and Keywords:</strong> Custom tags added to content can be used to refine searches.</li>
+  </ul>
+
+  <p>Metadata search ensures a richer search experience, allowing users to discover content in multiple ways beyond just the title. This makes content discovery faster and more intuitive in Brightcove Beacon OTT apps.</p>
+</section>
+<section class="bcls-section">
+    <h2 id="words-segmentation">Words Segmentation</h2>
+    <p>Words segmentation ensures that search queries in languages without clear word boundaries, such as Japanese, Chinese, and Korean, are properly processed for accurate search results. Unlike Latin-based languages, where spaces separate words, logographic languages rely on context to distinguish words.</p>
+    
+    <p>Brightcove Beacon’s enhanced search now supports intelligent segmentation, allowing for better recognition of words in languages like Japanese.</p>
+  
+    <strong>Example:</strong>
+    <p>Search for: <code translate="no">長い赤いドレス</code> (Japanese for "long red dress")</p>
+    <p><strong>Results:</strong></p>
+    <ul>
+      <li>"長い" (Nagai) – "Long"</li>
+      <li>"赤い" (Akai)– "Red"</li>
+      <li>"ドレス" (Doresu) – "Dress"</li>
+    </ul>
+  
+    <p>With proper segmentation, the search engine correctly identifies each word within the phrase, improving search relevance.</p>
+
+  </section>
+  <section class="bcls-section">
+    <h2 id="japanese-transliteration">Japanese Transliteration and Type-Ahead</h2>
+    <p>The Japanese language has three writing systems: <strong>Kanji</strong>, <strong>Hiragana</strong>, and <strong>Katakana</strong>. When typing a search query in Japanese, users typically enter words phonetically in <strong>Hiragana</strong> before converting them into <strong>Kanji</strong> or <strong>Katakana</strong>.</p>
+    
+    <p>To enhance search accuracy, Brightcove Beacon supports <strong>Japanese transliteration and type-ahead</strong>, allowing the search engine to recognize and match words in both their original Kanji form and their phonetic Hiragana representation.</p>
+  
+  
+    <strong>Example:</strong>
+    <p>Search for: <code translate="no">さくら</code> (Hiragana for "Sakura")</p>
+    <p><strong>Results:</strong></p>
+    <ul>
+      <li><code translate="no">さくら</code> (Hiragana form)</li>
+      <li><code translate="no">桜</code> (Kanji form)</li>
+      <li><code translate="no">サクラ</code> (Katakana form)</li>
+    </ul>
+  
+  </section>
+  
+  <section class="bcls-section">
+    <h2 id="search-limitations">Search Limitations</h2>
+    <p>While the enhanced search functionality in Brightcove Beacon significantly improves content discovery, there are some limitations to be aware of. Understanding these constraints can help optimize search queries and ensure the best user experience.</p>
+  
+    <h3>Pagination Limits</h3>
+    <p>By default, the search engine returns up to 1,000 hits per query. This limit can be increased up to a maximum of 20,000 hits. However, increasing this limit may impact performance.</p>
+  
+    <h3>Rate Limiting for Indexing Operations</h3>
+    <p>To maintain performance and stability, the search engine enforces rate limits on indexing operations. Applications have a limit of 10,000 indexing operations per unit. If this limit is exceeded, the API may return an HTTP 429 error indicating too many requests.</p>
+
+    <h3>Query Length Limitation</h3>
+  <p>The maximum allowed search query length is 512 characters.</p>
+  
+  
+  </section>
+  
 
 </article>
 <!-- <div class="col-sm-2 right-side-bar" style="display: inline-block;max-width: 20%;"> -->

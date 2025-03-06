@@ -1697,6 +1697,9 @@
     <p>
       The next three sections of this document cover custom fields that you may need to create based on your particular implementation use case. Each custom field has both a <strong>Display Name</strong> and an <strong>Internal Name</strong>. If you feel you have a more meaningful name for the <strong>Display Name</strong> option you can use that, but the <strong>Internal Name</strong> <code translate="No">MUST</code> match exactly.
     </p>
+    <aside class="bcls-aside bcls-aside--tip"><p>Note: When using the <strong>Edge API</strong>, please be aware that all custom field names are returned in <strong>lowercase</strong>, regardless of how they were created. For example, if you create a custom field named <code>booleanCustomField</code>, the Edge API will return it as <code>booleancustomfield</code></p>
+    <p>Ensure that you use lowercase versions of custom field names when parsing API responses to avoid errors.</p>
+    </aside>
   </section>
   <section class="bcls-section">
     <h2 id="General_custom_fields">General, custom fields</h2>
